@@ -1,0 +1,623 @@
+{
+ "title": "Tricky words",
+ "note": "The Year 1 common exception words from the national curriculum. Each is split into its sounds; the tricky part (the bit that doesn't follow the usual sounds) is marked.",
+ "words": [
+  {
+   "id": "the",
+   "word": "the",
+   "g": [
+    "th",
+    "e"
+   ],
+   "tricky": [
+    1
+   ],
+   "why": "e says “uh”",
+   "sentence": "The cat sat on the mat."
+  },
+  {
+   "id": "a",
+   "word": "a",
+   "g": [
+    "a"
+   ],
+   "tricky": [
+    0
+   ],
+   "why": "a says “uh”",
+   "sentence": "I have a red hat."
+  },
+  {
+   "id": "do",
+   "word": "do",
+   "g": [
+    "d",
+    "o"
+   ],
+   "tricky": [
+    1
+   ],
+   "why": "o says “oo”",
+   "sentence": "What do you like?"
+  },
+  {
+   "id": "to",
+   "word": "to",
+   "g": [
+    "t",
+    "o"
+   ],
+   "tricky": [
+    1
+   ],
+   "why": "o says “oo”",
+   "sentence": "We go to the park."
+  },
+  {
+   "id": "today",
+   "word": "today",
+   "g": [
+    "t",
+    "o",
+    "d",
+    "ay"
+   ],
+   "tricky": [
+    1
+   ],
+   "why": "o says “oo”",
+   "sentence": "It is sunny today."
+  },
+  {
+   "id": "of",
+   "word": "of",
+   "g": [
+    "o",
+    "f"
+   ],
+   "tricky": [
+    0,
+    1
+   ],
+   "why": "o says “u” and f says “v”",
+   "sentence": "A cup of milk."
+  },
+  {
+   "id": "said",
+   "word": "said",
+   "g": [
+    "s",
+    "ai",
+    "d"
+   ],
+   "tricky": [
+    1
+   ],
+   "why": "ai says “e”",
+   "sentence": "“Hello,” said Mum."
+  },
+  {
+   "id": "says",
+   "word": "says",
+   "g": [
+    "s",
+    "ay",
+    "s"
+   ],
+   "tricky": [
+    1,
+    2
+   ],
+   "why": "ay says “e” and s says “z”",
+   "sentence": "Dad says it is time for bed."
+  },
+  {
+   "id": "are",
+   "word": "are",
+   "g": [
+    "ar",
+    "e"
+   ],
+   "tricky": [
+    1
+   ],
+   "why": "the e is silent",
+   "sentence": "We are going home."
+  },
+  {
+   "id": "were",
+   "word": "were",
+   "g": [
+    "w",
+    "er",
+    "e"
+   ],
+   "tricky": [
+    2
+   ],
+   "why": "the e is silent",
+   "sentence": "They were at school."
+  },
+  {
+   "id": "was",
+   "word": "was",
+   "g": [
+    "w",
+    "a",
+    "s"
+   ],
+   "tricky": [
+    1,
+    2
+   ],
+   "why": "a says “o” and s says “z”",
+   "sentence": "The dog was wet."
+  },
+  {
+   "id": "is",
+   "word": "is",
+   "g": [
+    "i",
+    "s"
+   ],
+   "tricky": [
+    1
+   ],
+   "why": "s says “z”",
+   "sentence": "This is my cat."
+  },
+  {
+   "id": "his",
+   "word": "his",
+   "g": [
+    "h",
+    "i",
+    "s"
+   ],
+   "tricky": [
+    2
+   ],
+   "why": "s says “z”",
+   "sentence": "He lost his hat."
+  },
+  {
+   "id": "has",
+   "word": "has",
+   "g": [
+    "h",
+    "a",
+    "s"
+   ],
+   "tricky": [
+    2
+   ],
+   "why": "s says “z”",
+   "sentence": "She has a pet fish."
+  },
+  {
+   "id": "i",
+   "word": "I",
+   "g": [
+    "I"
+   ],
+   "tricky": [
+    0
+   ],
+   "why": "I says its name, and is always a capital letter",
+   "sentence": "I can run fast."
+  },
+  {
+   "id": "you",
+   "word": "you",
+   "g": [
+    "y",
+    "ou"
+   ],
+   "tricky": [
+    1
+   ],
+   "why": "ou says “oo”",
+   "sentence": "Can you see me?"
+  },
+  {
+   "id": "your",
+   "word": "your",
+   "g": [
+    "y",
+    "our"
+   ],
+   "tricky": [
+    1
+   ],
+   "why": "our says “or”",
+   "sentence": "Put on your coat."
+  },
+  {
+   "id": "they",
+   "word": "they",
+   "g": [
+    "th",
+    "ey"
+   ],
+   "tricky": [
+    1
+   ],
+   "why": "ey says “ay”",
+   "sentence": "They like to play."
+  },
+  {
+   "id": "be",
+   "word": "be",
+   "g": [
+    "b",
+    "e"
+   ],
+   "tricky": [
+    1
+   ],
+   "why": "e says its name “ee”",
+   "sentence": "I will be good."
+  },
+  {
+   "id": "he",
+   "word": "he",
+   "g": [
+    "h",
+    "e"
+   ],
+   "tricky": [
+    1
+   ],
+   "why": "e says its name “ee”",
+   "sentence": "He is my brother."
+  },
+  {
+   "id": "me",
+   "word": "me",
+   "g": [
+    "m",
+    "e"
+   ],
+   "tricky": [
+    1
+   ],
+   "why": "e says its name “ee”",
+   "sentence": "Look at me!"
+  },
+  {
+   "id": "she",
+   "word": "she",
+   "g": [
+    "sh",
+    "e"
+   ],
+   "tricky": [
+    1
+   ],
+   "why": "e says its name “ee”",
+   "sentence": "She can swim."
+  },
+  {
+   "id": "we",
+   "word": "we",
+   "g": [
+    "w",
+    "e"
+   ],
+   "tricky": [
+    1
+   ],
+   "why": "e says its name “ee”",
+   "sentence": "We like cake."
+  },
+  {
+   "id": "no",
+   "word": "no",
+   "g": [
+    "n",
+    "o"
+   ],
+   "tricky": [
+    1
+   ],
+   "why": "o says its name “oa”",
+   "sentence": "No, thank you."
+  },
+  {
+   "id": "go",
+   "word": "go",
+   "g": [
+    "g",
+    "o"
+   ],
+   "tricky": [
+    1
+   ],
+   "why": "o says its name “oa”",
+   "sentence": "Ready, steady, go!"
+  },
+  {
+   "id": "so",
+   "word": "so",
+   "g": [
+    "s",
+    "o"
+   ],
+   "tricky": [
+    1
+   ],
+   "why": "o says its name “oa”",
+   "sentence": "I am so happy."
+  },
+  {
+   "id": "by",
+   "word": "by",
+   "g": [
+    "b",
+    "y"
+   ],
+   "tricky": [
+    1
+   ],
+   "why": "y says “igh”",
+   "sentence": "The cat sat by the door."
+  },
+  {
+   "id": "my",
+   "word": "my",
+   "g": [
+    "m",
+    "y"
+   ],
+   "tricky": [
+    1
+   ],
+   "why": "y says “igh”",
+   "sentence": "This is my book."
+  },
+  {
+   "id": "here",
+   "word": "here",
+   "g": [
+    "h",
+    "ere"
+   ],
+   "tricky": [
+    1
+   ],
+   "why": "ere says “ear”",
+   "sentence": "Come here, please."
+  },
+  {
+   "id": "there",
+   "word": "there",
+   "g": [
+    "th",
+    "ere"
+   ],
+   "tricky": [
+    1
+   ],
+   "why": "ere says “air”",
+   "sentence": "There is a frog!"
+  },
+  {
+   "id": "where",
+   "word": "where",
+   "g": [
+    "wh",
+    "ere"
+   ],
+   "tricky": [
+    1
+   ],
+   "why": "ere says “air”",
+   "sentence": "Where is my sock?"
+  },
+  {
+   "id": "love",
+   "word": "love",
+   "g": [
+    "l",
+    "o",
+    "v",
+    "e"
+   ],
+   "tricky": [
+    1,
+    3
+   ],
+   "why": "o says “u” and the e is silent",
+   "sentence": "I love my family."
+  },
+  {
+   "id": "come",
+   "word": "come",
+   "g": [
+    "c",
+    "o",
+    "m",
+    "e"
+   ],
+   "tricky": [
+    1,
+    3
+   ],
+   "why": "o says “u” and the e is silent",
+   "sentence": "Come and play."
+  },
+  {
+   "id": "some",
+   "word": "some",
+   "g": [
+    "s",
+    "o",
+    "m",
+    "e"
+   ],
+   "tricky": [
+    1,
+    3
+   ],
+   "why": "o says “u” and the e is silent",
+   "sentence": "Can I have some milk?"
+  },
+  {
+   "id": "one",
+   "word": "one",
+   "g": [
+    "o",
+    "n",
+    "e"
+   ],
+   "tricky": [
+    0,
+    2
+   ],
+   "why": "it sounds like “wun”",
+   "sentence": "I have one sister."
+  },
+  {
+   "id": "once",
+   "word": "once",
+   "g": [
+    "o",
+    "n",
+    "ce"
+   ],
+   "tricky": [
+    0,
+    2
+   ],
+   "why": "it sounds like “wunce”",
+   "sentence": "Once upon a time…"
+  },
+  {
+   "id": "ask",
+   "word": "ask",
+   "g": [
+    "a",
+    "s",
+    "k"
+   ],
+   "tricky": [
+    0
+   ],
+   "why": "a can say “ar”",
+   "sentence": "Ask your teacher."
+  },
+  {
+   "id": "friend",
+   "word": "friend",
+   "g": [
+    "f",
+    "r",
+    "ie",
+    "n",
+    "d"
+   ],
+   "tricky": [
+    2
+   ],
+   "why": "ie says “e”",
+   "sentence": "Sam is my friend."
+  },
+  {
+   "id": "school",
+   "word": "school",
+   "g": [
+    "s",
+    "ch",
+    "oo",
+    "l"
+   ],
+   "tricky": [
+    1
+   ],
+   "why": "ch says “k”",
+   "sentence": "We walk to school."
+  },
+  {
+   "id": "put",
+   "word": "put",
+   "g": [
+    "p",
+    "u",
+    "t"
+   ],
+   "tricky": [
+    1
+   ],
+   "why": "u says “oo” (as in look)",
+   "sentence": "Put it on the table."
+  },
+  {
+   "id": "push",
+   "word": "push",
+   "g": [
+    "p",
+    "u",
+    "sh"
+   ],
+   "tricky": [
+    1
+   ],
+   "why": "u says “oo” (as in look)",
+   "sentence": "Push the door."
+  },
+  {
+   "id": "pull",
+   "word": "pull",
+   "g": [
+    "p",
+    "u",
+    "ll"
+   ],
+   "tricky": [
+    1
+   ],
+   "why": "u says “oo” (as in look)",
+   "sentence": "Pull the rope."
+  },
+  {
+   "id": "full",
+   "word": "full",
+   "g": [
+    "f",
+    "u",
+    "ll"
+   ],
+   "tricky": [
+    1
+   ],
+   "why": "u says “oo” (as in look)",
+   "sentence": "My cup is full."
+  },
+  {
+   "id": "house",
+   "word": "house",
+   "g": [
+    "h",
+    "ou",
+    "se"
+   ],
+   "tricky": [
+    2
+   ],
+   "why": "se says “s”",
+   "sentence": "This is my house."
+  },
+  {
+   "id": "our",
+   "word": "our",
+   "g": [
+    "our"
+   ],
+   "tricky": [
+    0
+   ],
+   "why": "our says “ow-er”",
+   "sentence": "Our dog is big."
+  }
+ ]
+}

@@ -1,39 +1,32 @@
-/* Start screen: choose Primary (KS2 SATs) or Secondary (languages). Remembered in settings.level. */
+/* Start screen: who is practising? Each child has their own progress
+   and stage (core/profiles.js); the choice is remembered on this device. */
 
-import { getStore, setLevel } from "../core/store.js";
+import { setProfile, getProfile } from "../core/store.js";
+import { PROFILES } from "../core/profiles.js";
+import { esc } from "../core/utils.js";
 
-const LEVELS = [
-  {
-    id: "primary", href: "#/home", label: "Primary",
-    sub: "Year 6 SATs — reading, grammar, spelling and maths",
-    subject: "maths"
-  },
-  {
-    id: "secondary", href: "#/secondary", label: "Secondary",
-    sub: "Year 7 — German and French vocabulary, science revision",
-    subject: "german"
-  }
-];
+const HOME = { year1: "#/year1", primary: "#/home", secondary: "#/secondary" };
 
 export function renderStart(el) {
-  const current = getStore().settings.level;
+  const current = getProfile()?.id;
   el.innerHTML = `
     <div class="start">
-      <h2>Which school are you practising for?</h2>
-      <p class="muted">You can switch at any time from the top of the page.</p>
+      <h2>Who's practising?</h2>
+      <p class="muted">Tap your name. You can switch at any time from the top of the page.</p>
       <div class="level-grid">
-        ${LEVELS.map(l => `
-          <a class="level-card${l.id === current ? " current" : ""}" href="${l.href}" data-level="${l.id}" data-subject="${l.subject}">
+        ${PROFILES.map(p => `
+          <a class="level-card${p.id === current ? " current" : ""}" href="${HOME[p.stage]}" data-profile="${p.id}" data-subject="${p.subject}">
             <span class="level-card-band"></span>
             <span class="level-card-body">
-              <strong>${l.label}</strong>
-              <span>${l.sub}</span>
+              <strong>${esc(p.name)}</strong>
+              <span>${esc(p.year)} — ${esc(p.sub)}</span>
             </span>
           </a>`).join("")}
       </div>
+      <p class="muted start-grownups"><a href="#/grown-ups">Grown-ups</a></p>
     </div>`;
 
-  el.querySelectorAll("[data-level]").forEach(a => {
-    a.addEventListener("click", () => setLevel(a.dataset.level));
+  el.querySelectorAll("[data-profile]").forEach(a => {
+    a.addEventListener("click", () => setProfile(a.dataset.profile));
   });
 }

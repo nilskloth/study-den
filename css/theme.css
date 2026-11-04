@@ -1,5 +1,5 @@
 /* =========================================================
-   KS2 SATs Trainer v2 — design tokens
+   Study Den — design tokens
    Direction: the material world of real STA test booklets.
    White-ish paper, black ink, flat subject-colour bands
    (like the real booklet covers), dotted answer rules.
@@ -28,6 +28,8 @@
   --c-german: #8a2f2a;        /* brick */
   --c-french: #3b4f8f;        /* indigo */
   --c-science: #2f7d4f;       /* leaf green */
+  --c-phonics: #c2571a;       /* orange */
+  --c-tricky: #8e3b8a;        /* plum */
 
   /* Action accent (chrome only, never on the paper) */
   --accent: #33518e;

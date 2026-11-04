@@ -9,6 +9,16 @@
 import { getStore, saveStore } from "../core/store.js";
 import { esc } from "../core/utils.js";
 import { AREAS, pendingCount } from "../core/activity.js";
+import { PROFILES, profileById } from "../core/profiles.js";
+
+/* Records from before profiles carry no child: they were Finn's. */
+const childOf = r => r.child || "finn";
+const childName = r => profileById(childOf(r))?.name || childOf(r);
+const forChild = (data, child) => (!child ? data : {
+  ...data,
+  sessions: data.sessions.filter(r => childOf(r) === child),
+  results: data.results.filter(r => childOf(r) === child)
+});
 
 const PERIODS = [7, 30, 90];
 const AREA_ORDER = Object.keys(AREAS);            // fixed colour order: --viz-1 … , menus grey
@@ -83,7 +93,9 @@ export function renderActivity(el) {
       el.querySelector("[data-locked]").classList.add("hidden");
       prefs.days = days;
       saveStore();
-      drawReport(report, data, days, show, () => fetchReport(password, 400, 30000));
+      const draw = () => drawReport(report, forChild(data, prefs.child), days, show, () => fetchReport(password, 400, 30000),
+        prefs.child || "", child => { prefs.child = child; saveStore(); draw(); });
+      draw();
     } catch (err) {
       el.querySelector("[data-locked]").classList.remove("hidden");
       status.textContent = errText(err);
@@ -161,12 +173,15 @@ function summarise(data, days) {
     daysUsed, streak, answered, right };
 }
 
-function drawReport(box, data, days, reload, fetchAll) {
+function drawReport(box, data, days, reload, fetchAll, child, setChild) {
   const s = summarise(data, days);
   const devices = [...new Set(s.sessions.map(x => x.dev).filter(Boolean))];
 
   box.innerHTML = `
     <div class="act-period">
+      <div class="seg" role="radiogroup" aria-label="Whose activity">
+        ${[["", "Everyone"], ...PROFILES.map(p => [p.id, p.name])].map(([id, name]) => `<label class="seg-opt"><input type="radio" name="act-child" value="${id}"${id === child ? " checked" : ""}><span>${esc(name)}</span></label>`).join("")}
+      </div>
       <div class="seg" role="radiogroup" aria-label="Period">
         ${PERIODS.map(p => `<label class="seg-opt"><input type="radio" name="act-days" value="${p}"${p === days ? " checked" : ""}><span>${p} days</span></label>`).join("")}
       </div>
@@ -210,6 +225,7 @@ function drawReport(box, data, days, reload, fetchAll) {
 
     <p class="muted act-foot">${devices.length ? `Devices: ${esc(devices.join(", "))}. ` : ""}<strong>Learning</strong> counts only while the page is in use (touched, typed or scrolled in the last 1½ minutes). <strong>On screen</strong> is time the page was in front, up to 15 minutes without input. <strong>Length</strong> is the clock time from a session's first to last activity, short breaks included. A day counts as used from 1 minute of learning.</p>`;
 
+  box.querySelectorAll('input[name="act-child"]').forEach(r => r.addEventListener("change", () => setChild(r.value)));
   box.querySelectorAll('input[name="act-days"]').forEach(r => r.addEventListener("change", () => reload(Number(r.value))));
   box.querySelector("[data-refresh]").addEventListener("click", () => reload(days));
   box.querySelectorAll("[data-download]").forEach(b => b.addEventListener("click", async () => {
@@ -379,7 +395,7 @@ function sessionList(s) {
           <td>${fmt(sessionLength(x))}</td>
           <td>${fmt(openTime(x))}</td>
           <td><strong>${fmt(x.active)}</strong></td>
-          <td>${acts}${runs ? `<br><span class="muted">Scores:</span> ${runs}` : ""}</td>
+          <td><strong>${esc(childName(x))}</strong> · ${acts}${runs ? `<br><span class="muted">Scores:</span> ${runs}` : ""}</td>
         </tr>`;
       }).join("")}</tbody>
     </table>`;
@@ -408,10 +424,10 @@ function sessionsCsv(data) {
     const scores = results.filter(r => r.marks && r.ts >= x.start - 60000 && r.ts <= x.end + 15 * 60000)
       .map(r => `${r.label} ${r.earned}/${r.marks}`).join("; ");
     return [iso(x.start), timeLabel(x.start), timeLabel(x.end), min(sessionLength(x)), min(openTime(x)), min(x.active),
-      x.dev || "",
+      x.dev || "", childName(x),
       Object.entries(x.parts || {}).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${k.split("|")[1]} ${min(v)}`).join("; "),
       tally.reduce((n, t) => n + t[0], 0), tally.reduce((n, t) => n + t[1], 0), scores];
   });
-  const head = ["date", "start", "end", "length_min", "on_screen_min", "learning_min", "device", "activities_min", "answers", "right", "scores"];
+  const head = ["date", "start", "end", "length_min", "on_screen_min", "learning_min", "device", "child", "activities_min", "answers", "right", "scores"];
   return [head, ...rows].map(r => r.map(cell).join(",")).join("\n") + "\n";
 }

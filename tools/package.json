@@ -1,9 +1,9 @@
 {
-  "name": "sats-trainer-authoring",
+  "name": "study-den-authoring",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Offline content-authoring pipeline for the KS2 SATs trainer (not part of the deployed static site).",
+  "description": "Offline content-authoring pipeline for Study Den (not part of the deployed static site).",
   "scripts": {
     "validate": "node validate.mjs all",
     "generate": "node generate.mjs"

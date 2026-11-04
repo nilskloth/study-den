@@ -1,13 +1,19 @@
 /* =========================================================
-   v2 state — localStorage key ks2_sats_v2.
+   State, one saved copy per child (core/profiles.js): Finn's is
+   the original key ks2_sats_v2, Oskar's studyden_oskar. Settings
+   that belong to the device (the shared key) are copied to every
+   child's copy.
    On first boot, imports what it can from the v1 keys
    (ks2_sats_runner_v1) without touching them, so the old
    site keeps working until switchover.
    ========================================================= */
 
 import { noteAttempt } from "./activity.js";
+import { PROFILES, profileById, activeProfileId, rememberProfile } from "./profiles.js";
 
-const KEY = "ks2_sats_v2";
+const FIRST_KEY = "ks2_sats_v2";          // Finn's — everything from before profiles
+let KEY = FIRST_KEY;
+let profile = null;
 const V1_KEY = "ks2_sats_runner_v1";
 
 let store = null;
@@ -19,7 +25,7 @@ function defaultStore() {
       proxyToken: "",
       dailyMinutes: 15,
       examDate: "2027-05-11",
-      level: null          // "primary" | "secondary" — chosen on the start screen
+      level: null          // stage in use: "year1" | "primary" | "secondary" (profile's own by default)
     },
     attempts: [],        // { id, ts, mode, paperId?, seconds, items:[{qid, domain, subject, marks, earned, marking}] }
     domainStats: {},     // "reading.2d" -> { attempts, marksSeen, marksEarned, ewma, lastSeen }
@@ -60,12 +66,27 @@ function importFromV1(fresh) {
   return fresh;
 }
 
+function readKey(key) {
+  try { return JSON.parse(localStorage.getItem(key) || "null"); } catch { return null; }
+}
+
+/* Load the active child's copy (Finn's when nobody is chosen yet). */
 export function initStore() {
+  profile = profileById(activeProfileId());
+  KEY = profile ? profile.key : FIRST_KEY;
   let raw = null;
   try {
     raw = JSON.parse(localStorage.getItem(KEY) || "null");
   } catch {
     raw = null;
+  }
+  if (KEY !== FIRST_KEY && !(raw && raw.version === 2)) {
+    /* a new child: fresh progress, the device's shared key */
+    store = defaultStore();
+    store.settings.proxyToken = readKey(FIRST_KEY)?.settings?.proxyToken || "";
+    store.settings.level = profile.stage;
+    saveStore();
+    return store;
   }
   if (raw && raw.version === 2) {
     store = raw;
@@ -83,6 +104,39 @@ export function getStore() {
   return store;
 }
 
+export const getProfile = () => profile;
+
+/* Switch child: remember it on this device and load their copy. */
+export function setProfile(id) {
+  const p = profileById(id);
+  if (!p) return;
+  rememberProfile(p.id);
+  initStore();
+  if (!store.settings.level) { store.settings.level = p.stage; saveStore(); }
+}
+
+/* Another child's saved progress, read-only (Grown-ups). */
+export function peekStore(id) {
+  const p = profileById(id);
+  if (!p) return null;
+  if (p.key === KEY) return store;
+  const raw = readKey(p.key);
+  return raw && raw.version === 2 ? raw : defaultStore();
+}
+
+/* The shared key belongs to the device: write it into every child's copy. */
+export function setProxyToken(token) {
+  store.settings.proxyToken = token;
+  saveStore();
+  PROFILES.forEach(p => {
+    if (p.key === KEY) return;
+    const raw = readKey(p.key);
+    if (!raw || raw.version !== 2) return;
+    raw.settings.proxyToken = token;
+    try { localStorage.setItem(p.key, JSON.stringify(raw)); } catch { /* full */ }
+  });
+}
+
 export function saveStore() {
   localStorage.setItem(KEY, JSON.stringify(store));
 }
@@ -94,8 +148,17 @@ export function setLevel(level) {
 
 export function resetStore() {
   store = defaultStore();
+  if (profile) store.settings.level = profile.stage;
   saveStore();
   return store;
+}
+
+/* Delete one child's progress on this device (keeps the shared key). */
+export function resetProfile(id) {
+  const p = profileById(id);
+  if (!p) return;
+  if (p.key === KEY) { const token = store.settings.proxyToken; resetStore(); store.settings.proxyToken = token; saveStore(); return; }
+  try { localStorage.removeItem(p.key); } catch { /* blocked */ }
 }
 
 /* Record a finished run and fold each item into per-domain stats.

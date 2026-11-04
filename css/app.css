@@ -35,6 +35,7 @@ body {
   letter-spacing: -0.01em;
 }
 
+.app-title a { color: inherit; text-decoration: none; }
 .app-nav { display: flex; gap: var(--sp-1); flex-wrap: wrap; }
 
 .app-nav a {
@@ -348,7 +349,8 @@ button.hear { padding: var(--sp-1) var(--sp-2); font-size: var(--fs-3); line-hei
 /* Grown-ups → Activity. Chart colours: validated categorical palette
    (dataviz reference, light), fixed order = AREAS in core/activity.js. */
 :root { --viz-1: #2a78d6; --viz-2: #eb6834; --viz-3: #1baf7a; --viz-4: #eda100;
-  --viz-5: #e87ba4; --viz-6: #008300; --viz-7: #7a4fb5; --viz-other: #a3a39c; }
+  --viz-5: #e87ba4; --viz-6: #008300; --viz-7: #7a4fb5;
+  --viz-8: #0f8b8d; --viz-9: #9c6b30; --viz-other: #a3a39c; }
 .act-period { display: flex; align-items: center; gap: var(--sp-3); margin-bottom: var(--sp-4); flex-wrap: wrap; }
 .act-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--sp-3); margin-bottom: var(--sp-4); }
 .act-tile { background: var(--surface); border: 1px solid var(--line-soft); border-radius: 8px; padding: var(--sp-3); display: flex; flex-direction: column; gap: 2px; }
@@ -481,3 +483,72 @@ button.hear { padding: var(--sp-1) var(--sp-2); font-size: var(--fs-3); line-hei
 .sci-source { font-size: var(--fs-0); background: var(--surface); border-left: 3px solid var(--subject); padding: var(--sp-2) var(--sp-3); margin: 0 0 var(--sp-3); }
 .sci-table th { text-align: left; font-size: var(--fs-0); }
 .sci-table td { vertical-align: top; font-size: var(--fs-0); line-height: 1.45; }
+
+/* Grown-ups: whose progress */
+.child-tabs { display: flex; align-items: center; gap: var(--sp-2); flex-wrap: wrap; margin-bottom: var(--sp-4); }
+.child-tabs a { padding: var(--sp-1) var(--sp-3); border: 1px solid var(--line); border-radius: 999px; color: var(--ink); text-decoration: none; background: var(--surface); }
+.child-tabs a.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+.child-tabs a.active .muted { color: #d8d8d4; }
+.start-grownups { text-align: center; margin-top: var(--sp-5); }
+
+/* =========================================================
+   Year 1: phonics and tricky words (views/year1/)
+   ========================================================= */
+.y1-word { font-family: var(--font-paper); display: inline-flex; align-items: flex-start; line-height: 1.1; color: var(--ink); white-space: nowrap; }
+.y1-word.big { font-size: clamp(48px, 15vw, 84px); }
+.y1-word .gr { position: relative; display: inline-block; padding: 0 .03em .42em; }
+.y1-word .gr.tricky { color: #c0392b; }
+/* sound buttons: dot = one letter, line = special friend, joined line = split friend */
+.y1-word.buttons .gr.single::after { content: ""; position: absolute; left: 50%; bottom: .08em; width: .17em; height: .17em; border-radius: 50%; background: currentColor; transform: translateX(-50%); }
+.y1-word.buttons .gr.friend::after { content: ""; position: absolute; left: .1em; right: .1em; bottom: .13em; height: .08em; border-radius: .04em; background: currentColor; }
+.y1-word .gr-split { position: relative; display: inline-flex; padding-bottom: .3em; }
+.y1-word.buttons .gr.split-part::after { display: none; }
+.y1-word.buttons .gr-split::after { content: ""; position: absolute; left: .15em; right: .15em; bottom: .02em; height: .32em; border: .07em solid currentColor; border-top: 0; border-radius: 0 0 .35em .35em; }
+.y1-red { color: #c0392b; }
+
+.y1-card { text-align: center; min-height: 340px; }
+.y1-ask { font-family: var(--font-paper); font-size: var(--fs-3); margin: 0 0 var(--sp-4); }
+.y1-show { margin: var(--sp-4) 0; }
+.y1-hint { margin: var(--sp-3) 0; display: flex; gap: var(--sp-2); justify-content: center; flex-wrap: wrap; }
+.y1-listen { font-size: var(--fs-3); padding: var(--sp-3) var(--sp-5); }
+.y1-big-sound { margin: var(--sp-4) 0; }
+.y1-sound { font-family: var(--font-paper); font-size: clamp(72px, 22vw, 120px); line-height: 1; display: inline-block; padding: var(--sp-3) var(--sp-5); border: 3px solid var(--subject); border-radius: 18px; background: #fff; }
+.y1-example { font-size: var(--fs-3); font-family: var(--font-paper); }
+.y1-example .y1-word { font-size: 1.6em; vertical-align: middle; }
+.y1-self, .y1-two { display: flex; gap: var(--sp-3); justify-content: center; flex-wrap: wrap; margin-top: var(--sp-4); }
+.y1-self-btn, .y1-choice { font-family: var(--font-paper); font-size: var(--fs-3); min-height: 64px; min-width: 140px; padding: var(--sp-3) var(--sp-4); border-radius: 14px; }
+.y1-self-btn.yes { background: var(--correct, #2e7d32); color: #fff; border-color: transparent; }
+.y1-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-3); max-width: 560px; margin: var(--sp-4) auto 0; }
+.y1-options.four { grid-template-columns: repeat(2, 1fr); max-width: 420px; }
+.y1-options .y1-word { font-size: clamp(30px, 8vw, 44px); }
+.y1-choice.is-correct, .y1-slots.is-correct .y1-slot { background: #e3f4e6; border-color: #2e7d32; }
+.y1-choice.is-wrong, .y1-slots.is-wrong .y1-slot { background: #fbe4e2; border-color: #c0392b; }
+.y1-yes { font-family: var(--font-paper); font-size: var(--fs-4, 32px); color: #2e7d32; margin: var(--sp-4) 0 0; }
+.y1-no { margin-top: var(--sp-4); padding: var(--sp-3); border-radius: 12px; background: #fff7e8; }
+.y1-no p { margin: 0 0 var(--sp-2); }
+.y1-no .y1-word { font-size: clamp(40px, 12vw, 64px); }
+.y1-why { display: block; font-size: var(--fs-0); color: var(--ink-muted); margin-top: var(--sp-1); }
+.y1-stars { color: #e0a100; font-size: var(--fs-2); letter-spacing: 1px; }
+.y1-finish-stars { font-size: 44px; color: #e0a100; word-break: break-all; }
+.y1-finish-text { font-family: var(--font-paper); font-size: var(--fs-3); }
+.y1-alien { white-space: nowrap; }
+.y1-sound-grid { display: flex; flex-wrap: wrap; gap: var(--sp-2); }
+.y1-sound-btn { font-family: var(--font-paper); font-size: var(--fs-3); min-width: 56px; min-height: 52px; border-radius: 10px; }
+.y1-set-picks { display: flex; flex-wrap: wrap; gap: var(--sp-2); }
+.y1-chip { display: inline-flex; align-items: center; gap: var(--sp-2); padding: var(--sp-2) var(--sp-3); border: 1px solid var(--line); border-radius: 999px; background: #fff; cursor: pointer; }
+.y1-tricky-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: var(--sp-3); margin-top: var(--sp-4); }
+.y1-tricky-card { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--sp-1); padding: var(--sp-3) var(--sp-2); min-height: 120px; background: #fff; border-radius: 12px; }
+.y1-tricky-card .y1-word { font-size: 40px; }
+.y1-tricky-card.known { border-color: #2e7d32; box-shadow: inset 0 0 0 2px #cfe9d3; }
+.y1-slots { display: flex; justify-content: center; gap: var(--sp-2); margin: var(--sp-4) 0; }
+.y1-slot { font-family: var(--font-paper); font-size: 40px; min-width: 64px; height: 72px; display: inline-flex; align-items: center; justify-content: center; border: 2px dashed var(--line); border-radius: 12px; background: #fff; }
+.y1-slot.filled { border-style: solid; }
+.y1-tiles { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--sp-2); }
+.y1-tile { font-family: var(--font-paper); font-size: 34px; min-width: 64px; min-height: 64px; border-radius: 12px; background: #fff; }
+.y1-tile.friend { border-bottom: 5px solid var(--subject); }
+.y1-tile:disabled { opacity: .3; }
+@media (max-width: 600px) {
+  .y1-options { grid-template-columns: 1fr; max-width: 260px; }
+  .y1-options.four { grid-template-columns: 1fr 1fr; }
+  .y1-self-btn, .y1-choice { min-width: 0; flex: 1; }
+}

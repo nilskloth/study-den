@@ -1,6 +1,6 @@
 #!/bin/sh
 # Deploy the v2 app to Strato over SFTP.
-#   tools/deploy.sh <remote-dir>      e.g. sats-trainer-new  or  sats-trainer
+#   tools/deploy.sh <remote-dir>      e.g. study-den-new  or  study-den
 # Credentials: LFTP_PASSWORD env var if set, else ~/.netrc — never stored in this script.
 # Uploads only the deploy set; api/config.php is included when present locally.
 set -e

@@ -4,7 +4,7 @@
  * Run in your own Terminal from the repo root (the password is typed hidden
  * and only its hash is stored):
  *     php tools/set-upload-password.php
- * Then deploy (tools/deploy.sh sats-trainer) — that uploads config.php.
+ * Then deploy (tools/deploy.sh study-den) — that uploads config.php.
  */
 
 if (PHP_SAPI !== 'cli') exit(1);
@@ -48,4 +48,4 @@ if (!is_array($parsed) || !password_verify($pw, $parsed['upload_password_hash'] 
   fwrite(STDERR, "Something went wrong editing config.php — nothing changed.\n"); exit(1);
 }
 file_put_contents($path, $src);
-echo "Saved. Now deploy: tools/deploy.sh sats-trainer\n";
+echo "Saved. Now deploy: tools/deploy.sh study-den\n";

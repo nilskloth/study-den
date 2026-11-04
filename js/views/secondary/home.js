@@ -23,7 +23,7 @@ export function renderSecondary(el, params = []) {
 async function renderHub(el) {
   el.innerHTML = `
     <div class="card" style="margin-bottom:var(--sp-4);">
-      <h2 style="margin-top:0;">Languages and science</h2>
+      <h2 style="margin-top:0;">Year 7</h2>
       <p class="muted" style="margin-bottom:0;">Learn the words and phrases from each chapter, or revise a science topic, then test yourself.</p>
     </div>
     <div class="subject-grid" data-cards></div>`;
@@ -70,4 +70,17 @@ async function renderHub(el) {
       </div>`;
     grid.appendChild(card);
   }
+
+  /* Year 6 SATs papers and practice stay available */
+  const sats = document.createElement("a");
+  sats.className = "subject-card";
+  sats.dataset.subject = "maths";
+  sats.href = "#/home";
+  sats.innerHTML = `
+    <div class="subject-card-band"></div>
+    <div class="subject-card-body">
+      <strong>Year 6 SATs</strong>
+      <span>Papers and practice from primary school</span>
+    </div>`;
+  grid.appendChild(sats);
 }

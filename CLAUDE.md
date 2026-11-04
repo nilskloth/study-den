@@ -1,15 +1,19 @@
-# KS2 SATs Trainer (v2) — CLAUDE.md
+# Study Den — CLAUDE.md
+(formerly "KS2 SATs Trainer"; repo folder still `sats-trainer`)
 
 ## What this project is
-A web app for school practice with two levels, chosen on the start screen (`#/start`,
-remembered in `settings.level`, switchable from the header):
-- **Primary** — Year 6 (KS2) SATs preparation (everything under Papers / Practice)
-- **Secondary** — languages: vocabulary trainer for German and French; Year 7 science revision
+A family web app for school practice that grows with whatever school material is fed in.
+The start screen (`#/start`) asks **who is practising** (`core/profiles.js`); each child has
+their own saved progress and a stage with its own home and nav:
+- **Oskar — Year 1** (`year1`): phonics (sounds, read real/alien words, real or alien?, which
+  word?) and tricky words, with sound buttons (below)
+- **Finn — Year 7** (`secondary`): German and French vocabulary, verb tables, science revision;
+  Finn can also open **Primary** (`primary`): Year 6 (KS2) SATs papers and practice
 
 Child-first, calm, paper-like design: the child drives sessions on their own; a parent checks
 progress afterwards in "Grown-ups" (shared by both levels), including Grown-ups → Activity: how long,
 when and on what the site is used, from every device (usage monitor, below).
-Live at **https://6oclock.net/sats-trainer/**.
+Live at **https://6oclock.net/study-den/** (`/sats-trainer/` forwards there).
 
 v2 is a full rebuild (plan and SATs standards: `docs/REBUILD_PLAN.md`). v1 is archived as git
 tag `v1-final` / branch `v1-archive`, and on the server at `/sats-trainer-old/` after switchover.
@@ -18,8 +22,9 @@ tag `v1-final` / branch `v1-archive`, and on the server at `/sats-trainer-old/` 
 
 ## Tech stack / hard constraints
 - Vanilla JS ES modules, HTML, CSS — **no framework, no build step**
-- Content is static JSON in `data/content/`; state in `localStorage` key `ks2_sats_v2`
-  (one-time import of spelling history + paper attempts from v1 key `ks2_sats_runner_v1`)
+- Content is static JSON in `data/content/`; state in `localStorage`, one key per child:
+  Finn `ks2_sats_v2` (everything from before profiles; one-time v1 import from `ks2_sats_runner_v1`),
+  Oskar `studyden_oskar`; active child per device in `studyden_profile`
 - AI (marking + reading-test generation) goes through a small **PHP proxy** in `api/` —
   the API key lives server-side only. The app must stay fully usable without the proxy
   (free-text answers fall back to self-marking with a mark-scheme checklist).
@@ -37,9 +42,10 @@ tag `v1-final` / branch `v1-archive`, and on the server at `/sats-trainer-old/` 
 index.html              # app shell (hash router mounts views into #view)
 css/theme.css           # design tokens   css/app.css  # chrome   css/paper.css  # SATs-paper look
 js/core/
-  app.js                # boot + hash router; level-aware nav (start, primary routes, secondary, grown-ups)
+  app.js                # boot + hash router; per-child stages and nav (year1, primary, secondary, grown-ups)
   loader.js             # fetches data/content/*.json, merges generated banks (additive by id)
-  store.js              # ks2_sats_v2 state, v1 import, recordAttempt() → domainStats EWMA
+  profiles.js           # the children: id, name, year, stage(s), storage key
+  store.js              # per-child state (setProfile, peekStore, setProxyToken → all children), v1 import, recordAttempt()
   schema.js             # browser schema checks (mirror of tools/lib/schema-v2.mjs)
   marking.js            # mark(q, answer) — deterministic markers, DOM-free
   ai.js                 # proxy client: ping, usage, markAI
@@ -52,7 +58,10 @@ js/render/
   question.js           # paper-style renderer per question type; collectAnswer/showResult
   selfmark.js           # self-mark checklist (AI fallback)
 js/views/
-  start.js              # Primary / Secondary choice
+  start.js              # "Who's practising?" — one card per child
+  year1/home.js         # Year 1 hub + phonics: sounds, read words, real or alien?, which word?
+  year1/tricky.js       # tricky words: list, find it, build it (sound tiles)
+  year1/word.js         # loader, wordHtml (sound buttons), adaptive state, round runner, self-check
   secondary/home.js     # languages hub + routes #/secondary/<lang>[/list/<sectionId>]
   secondary/langs.js    # language registry (voice, special keys, available flag), bank loader
   secondary/vocab.js    # vocab trainer: setup, word lists, practise + test runs
@@ -71,6 +80,7 @@ js/gen/
   arithmetic.js         # random arithmetic paper/drill
   generate.js           # runtime reading-test generation via proxy
 data/content/           # reading.json gps.json maths.json spelling.json papers.json manifest.json
+data/content/year1/     # phonics.json (sound sets + real/alien words) tricky.json (Y1 common exception words)
 data/content/secondary/ # de.json (tools/import-vocab.mjs), fr.json (hand-written), science.json (hand-written)
   verbs/                # de.json fr.json — present-tense verb tables (hand-written)
   science/              # *.svg diagrams, generated by tools/build-science-art.mjs — edit the script, not the SVGs
@@ -82,6 +92,33 @@ docs/REBUILD_PLAN.md    # v2 decisions, SATs standards, schema, phases
 ```
 
 ---
+
+## Profiles (`core/profiles.js`)
+- `PROFILES`: `{ id, name, year, stage, key, sub, subject, stages? }`. Adding a child = one entry
+  (+ a new stage in `core/app.js` `ROUTES`/`NAV`/`HOME` and `views/start.js` if theirs is new).
+- The router sends a child only to their own `stages`; another stage's URL goes to their home.
+  Grown-ups works without a child chosen.
+- The shared key (`settings.proxyToken`) belongs to the device: `setProxyToken` writes it into
+  every child's copy; a new child's copy starts with Finn's key.
+- Grown-ups shows one child at a time (`#/grown-ups/<id>`, tabs): mastery, export, reset per child.
+- The site is public, so the children's first names are visible on the start screen (agreed).
+
+## Year 1 (`views/year1/`, `#/year1[/sounds|read|alien|listen|tricky[/find|build]]`)
+- **Words are stored as their sounds:** `"g": ["sh","i","p"]`; a split friend is `"a-" … "-e"`
+  (`m|a-|k|-e`). `wordHtml()` draws **sound buttons** as taught in class: a dot under a one-letter
+  sound, a line under a special friend, a joined line under a split friend; `tricky` indices in red.
+- **phonics.json:** `sets` (Letters, First / More / Even more special friends — usual Year 1 order;
+  `oo`/`oo2`, `ow`/`ow2` are the two sounds of one spelling) and `words` `{ id, word, g, real, set }`;
+  alien words (`a-…`) are made up, like the Year 1 phonics screening check — make sure new ones
+  aren't real or rude words.
+- **tricky.json:** the 45 Year 1 common exception words: `{ id, word, g, tricky[], why, sentence }`.
+- **Speech:** the en-GB voice reads real words and sentences only — never single sounds or alien
+  words (it says them wrongly); those are self-checked ("✓ I got it" / "Not yet", or a grown-up listens).
+- **Rounds:** 10 per go, a star per right answer, adaptive per item in `store.year1.stats`
+  (`s:` sound, `w:` read, `ra:` real-or-alien, `l:` listen, `t:` find, `tb:` build); recorded as
+  subject `phonics` / `tricky`, mode `y1-…`.
+- All content is ours (no school sheets yet) — when Oskar's school sends sheets or its scheme's
+  order (e.g. Read Write Inc.), follow it and mark additions as extra.
 
 ## Papers (`data/content/papers.json`, runner in `views/paper.js`)
 - **reading** — one passage + its questions picked at random (the shipped bank has one
@@ -265,7 +302,9 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
 - `core/activity.js` (started in `app.js` boot) records three times per session: **length** (first to
   last activity, breaks under 15 min included), **open** (page visible, until 15 min without input) and
   **active** = learning time (visible and touched/typed/scrolled in the last 90 s), the last per screen, mapped by `activityFor(hash)` to an area (reading, gps, maths,
-  spelling, german, french, menus) + label. Start screen and Grown-ups don't count; a 15-min gap starts a
+  spelling, german, french, science, phonics, tricky, menus) + label. Every record carries `child`
+  (profile id; none = from before profiles, shown as Finn's); the dashboard filters Everyone / per child,
+  the CSV has a child column, and a session ends when another child takes over the device. Start screen and Grown-ups don't count; a 15-min gap starts a
   new session. `recordAttempt()` calls `noteAttempt()` (answer tally + a named result); the spelling
   trainer calls `noteAnswer()`. Records queue in localStorage `ks2_activity` and go to `api/track.php`
   (op `log`, **no key** — every device counts without setup) about once a minute and when the page is
@@ -285,8 +324,9 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
 
 ## Deployment
 SFTP to Strato (`5186167.ssh.w1.strato.hosting`, user `stu698771234`, remote root `/`
-contains `sats-trainer/`). Upload changed files with `lftp` (`put local -o sats-trainer/…`).
-Run `tools/deploy.sh <remote-dir>` (lftp, password from `~/.netrc`). Deploy set:
+contains `study-den/`; `sats-trainer/` holds only a forward to it — `tools/redirect-old/`, set up once
+by `tools/move-to-study-den.sh`, which also moved `api/state/` and `data/uploads/` over).
+Run `tools/deploy.sh study-den` (lftp, password from `~/.netrc`). Deploy set:
 `index.html css/{theme,app,paper}.css js/{core,render,views,gen}/ data/content/
 api/{proxy,prompts,ratelimit,vocab,activity,track}.php api/.htaccess api/state/.htaccess` + local `api/config.php`
 — never `tools/`, `docs/`, `_res/`, and never touch the server's `data/uploads/` or `api/state/`

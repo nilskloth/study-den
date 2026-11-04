@@ -159,13 +159,13 @@ function sec_alert(array $config, string $kind, string $ip, int $count, bool $lo
   if ($to === '' || !filter_var($to, FILTER_VALIDATE_EMAIL)) return;
   $from = (string) ($config['alert_from'] ?? '');
   $what = $kind === 'upload-password' ? 'a wrong upload password' : 'a wrong shared key';
-  $body = "The SATs / Language Trainer server rejected {$what} from {$ip} at " . gmdate('H:i') . " UTC.\n"
+  $body = "The Study Den server rejected {$what} from {$ip} at " . gmdate('H:i') . " UTC.\n"
     . "Failed attempts since the last alert: {$count}.\n"
     . ($locked ? "Uploading is locked for an hour.\n" : '')
     . "\nIf this wasn't you, change the upload password (upload_password_hash) and/or the shared key in api/config.php.\n"
     . "Details: Grown-ups → AI marking.\n";
   $headers = $from !== '' && filter_var($from, FILTER_VALIDATE_EMAIL) ? "From: {$from}\r\n" : '';
-  @mail($to, 'Trainer: failed sign-in attempt', $body, $headers . "Content-Type: text/plain; charset=utf-8\r\n");
+  @mail($to, 'Study Den: failed sign-in attempt', $body, $headers . "Content-Type: text/plain; charset=utf-8\r\n");
 }
 
 /* null when the password is right; otherwise [status, code, message]. */

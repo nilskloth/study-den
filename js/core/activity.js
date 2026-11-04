@@ -17,6 +17,8 @@
    as it grows (the server keeps the newest copy).
    ========================================================= */
 
+import { activeProfileId } from "./profiles.js";
+
 const KEY = "ks2_activity";
 const TICK_MS = 5000;
 const IDLE_MS = 90 * 1000;
@@ -28,7 +30,8 @@ const TRACK_URL = "api/track.php";
 /* Areas, in the fixed order the dashboard colours them. */
 export const AREAS = {
   reading: "Reading", gps: "Grammar & punctuation", maths: "Maths", spelling: "Spelling",
-  german: "German", french: "French", science: "Science", menus: "Menus"
+  german: "German", french: "French", science: "Science",
+  phonics: "Phonics", tricky: "Tricky words", menus: "Menus"
 };
 
 const PAPERS = {
@@ -42,6 +45,14 @@ export function activityFor(hash) {
   const [path, ...p] = String(hash).replace(/^#\/?/, "").split("/").filter(Boolean);
   if (!path || path === "start" || path === "grown-ups") return null;
   if (path === "home") return ["menus", "SATs home"];
+  if (path === "year1") {
+    if (p[0] === "sounds") return ["phonics", "Sounds"];
+    if (p[0] === "read") return ["phonics", "Read words"];
+    if (p[0] === "listen") return ["phonics", "Which word?"];
+    if (p[0] === "alien") return ["phonics", "Real or alien?"];
+    if (p[0] === "tricky") return ["tricky", "Tricky words"];
+    return ["menus", "Year 1 home"];
+  }
   if (path === "papers") {
     if (!p[0]) return ["menus", "Papers menu"];
     const [area, label] = PAPERS[p[0]] || ["menus", "Paper"];
@@ -101,12 +112,14 @@ function deviceName() {
   return "Browser";
 }
 
-/* The open session, starting a new one after a long gap. */
+/* The open session, starting a new one after a long gap or when
+   another child takes over the device. */
 function currentSession(now) {
   let s = state.session;
-  if (!s || now - s.end > SESSION_GAP_MS) {
+  const child = activeProfileId() || "";
+  if (!s || now - s.end > SESSION_GAP_MS || (s.child || "") !== child) {
     s = state.session = {
-      kind: "session", id: `s-${state.dev}-${now.toString(36)}`, dev: deviceName(),
+      kind: "session", id: `s-${state.dev}-${now.toString(36)}`, dev: deviceName(), child,
       start: now, end: now, active: 0, open: 0, parts: {}, tally: {}
     };
   }
@@ -188,7 +201,7 @@ export function noteAttempt({ mode, paperId, items }) {
   const area = Object.keys(byArea)[0];
   const act = activityFor(location.hash);
   queue({
-    kind: "result", id: `r-${state.dev}-${now.toString(36)}`, ts: now, area,
+    kind: "result", id: `r-${state.dev}-${now.toString(36)}`, ts: now, area, child: s.child || "",
     mode: String(mode || ""), label: resultLabel(mode, paperId, area, act),
     earned: Object.values(byArea).reduce((x, t) => x + t[1], 0),
     marks: Object.values(byArea).reduce((x, t) => x + t[0], 0)

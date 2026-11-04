@@ -3,7 +3,8 @@
    AI usage/spend, settings (proxy token), data management.
    ========================================================= */
 
-import { getStore, saveStore, resetStore } from "../core/store.js";
+import { getStore, resetProfile, setProxyToken, peekStore, getProfile } from "../core/store.js";
+import { PROFILES, profileById } from "../core/profiles.js";
 import { loadContent } from "../core/loader.js";
 import { ping, usage } from "../core/ai.js";
 import { generateReadingTest } from "../gen/generate.js";
@@ -13,7 +14,8 @@ import { renderWordLists } from "./wordlists.js";
 import { renderActivity } from "./activity.js";
 
 const SUBJECT_LABELS = { reading: "Reading", gps: "Grammar & punctuation", maths: "Maths", spelling: "Spelling",
-  german: "German vocabulary", french: "French vocabulary", science: "Science revision" };
+  german: "German vocabulary", french: "French vocabulary", science: "Science revision",
+  phonics: "Phonics", tricky: "Tricky words" };
 
 /* Sonnet 5 pricing (per MTok): in $3 / out $15 — rough spend estimate. */
 function estimateSpend(log) {
@@ -42,8 +44,11 @@ function securityHtml(sec, uploads) {
 export function renderProgress(el, params = []) {
   if (params[0] === "word-lists") return renderWordLists(el);
   if (params[0] === "activity") return renderActivity(el);
-  const store = getStore();
+  /* #/grown-ups/<child>: whose progress to show (this device's copy) */
+  const shown = profileById(params[0]) || getProfile() || PROFILES[PROFILES.length - 1];
+  const store = peekStore(shown.id);
   const stats = store.domainStats;
+  const sats = (shown.stages || [shown.stage]).includes("primary");
 
   /* Domain mastery grouped by subject */
   const bySubject = {};
@@ -79,20 +84,24 @@ export function renderProgress(el, params = []) {
   }).join(" · ") || `<span class="muted">No papers completed yet.</span>`;
 
   el.innerHTML = `
+    <div class="child-tabs" role="tablist" aria-label="Whose progress">
+      <span class="muted">Progress for</span>
+      ${PROFILES.map(p => `<a href="#/grown-ups/${p.id}" role="tab" class="${p.id === shown.id ? "active" : ""}" aria-selected="${p.id === shown.id}">${esc(p.name)} <span class="muted">${esc(p.year)}</span></a>`).join("")}
+    </div>
     <a class="card verb-link" href="#/grown-ups/activity">
       <strong>Activity →</strong>
       <span class="muted">How long and how often the trainer is used, on what, and how well — from all devices.</span>
     </a>
 
-    <div class="card" style="margin-bottom:var(--sp-4);">
+    ${sats ? `<div class="card" style="margin-bottom:var(--sp-4);">
       <h2 style="margin-top:0;">Run-up to the SATs</h2>
       <p><strong>${weeks} weeks</strong> until ${examDate.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}.
         ${attempts.length} practice ${attempts.length === 1 ? "session" : "sessions"} recorded.</p>
       <p style="margin-bottom:0;">Recent papers: ${trend}</p>
-    </div>
+    </div>` : ""}
 
     <div class="card" style="margin-bottom:var(--sp-4);">
-      <h2 style="margin-top:0;">Mastery by topic</h2>
+      <h2 style="margin-top:0;">${esc(shown.name)}: mastery by topic</h2>
       ${masteryHtml}
       <p class="muted" style="margin-bottom:0;">Bars show a recency-weighted average of marks earned. Self-marked answers count too.</p>
     </div>
@@ -131,10 +140,10 @@ export function renderProgress(el, params = []) {
     <div class="card">
       <h2 style="margin-top:0;">Data</h2>
       <p>
-        <button data-export>Export progress</button>
-        <button data-reset style="color:var(--wrong);">Reset all progress…</button>
+        <button data-export>Export ${esc(shown.name)}'s progress</button>
+        <button data-reset style="color:var(--wrong);">Reset ${esc(shown.name)}'s progress…</button>
       </p>
-      <p class="muted" style="margin-bottom:0;">Progress lives in this browser only. Export before switching devices.</p>
+      <p class="muted" style="margin-bottom:0;">Progress lives in this browser only, separately for each child. Export before switching devices.</p>
     </div>
   `;
 
@@ -167,8 +176,7 @@ export function renderProgress(el, params = []) {
   }
 
   el.querySelector("[data-save-token]").addEventListener("click", () => {
-    getStore().settings.proxyToken = el.querySelector("[data-token]").value.trim();
-    saveStore();
+    setProxyToken(el.querySelector("[data-token]").value.trim());
     refreshUsage();
   });
 
@@ -192,19 +200,19 @@ export function renderProgress(el, params = []) {
 
   el.querySelector("[data-export]").addEventListener("click", () => {
     /* never the shared key — the file may be passed on */
-    const data = { ...getStore(), settings: { ...getStore().settings, proxyToken: "" } };
+    const data = { ...store, child: shown.id, settings: { ...store.settings, proxyToken: "" } };
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
-    a.download = `sats-progress-${new Date().toISOString().slice(0, 10)}.json`;
+    a.download = `study-den-${shown.id}-${new Date().toISOString().slice(0, 10)}.json`;
     a.click();
     URL.revokeObjectURL(a.href);
   });
 
   el.querySelector("[data-reset]").addEventListener("click", () => {
-    if (window.confirm("Really delete all practice history and settings on this device?")) {
-      resetStore();
-      renderProgress(el);
+    if (window.confirm(`Really delete all of ${shown.name}'s practice history on this device?`)) {
+      resetProfile(shown.id);
+      renderProgress(el, [shown.id]);
     }
   });
 

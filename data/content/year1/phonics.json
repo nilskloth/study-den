@@ -1,0 +1,1757 @@
+{
+ "title": "Phonics",
+ "note": "Sounds in the usual Year 1 teaching order (single letters, then special friends). Words are split into their sounds: | between sounds, a- … -e for a split friend. Alien words are made up, like the Year 1 phonics screening check.",
+ "sets": [
+  {
+   "id": "set1",
+   "title": "Letters",
+   "sounds": [
+    {
+     "id": "m",
+     "g": "m",
+     "word": "mum"
+    },
+    {
+     "id": "a",
+     "g": "a",
+     "word": "ant"
+    },
+    {
+     "id": "s",
+     "g": "s",
+     "word": "sun"
+    },
+    {
+     "id": "d",
+     "g": "d",
+     "word": "dog"
+    },
+    {
+     "id": "t",
+     "g": "t",
+     "word": "tap"
+    },
+    {
+     "id": "i",
+     "g": "i",
+     "word": "in"
+    },
+    {
+     "id": "n",
+     "g": "n",
+     "word": "net"
+    },
+    {
+     "id": "p",
+     "g": "p",
+     "word": "pig"
+    },
+    {
+     "id": "g",
+     "g": "g",
+     "word": "got"
+    },
+    {
+     "id": "o",
+     "g": "o",
+     "word": "on"
+    },
+    {
+     "id": "c",
+     "g": "c",
+     "word": "cat"
+    },
+    {
+     "id": "k",
+     "g": "k",
+     "word": "kit"
+    },
+    {
+     "id": "u",
+     "g": "u",
+     "word": "up"
+    },
+    {
+     "id": "b",
+     "g": "b",
+     "word": "bed"
+    },
+    {
+     "id": "f",
+     "g": "f",
+     "word": "fun"
+    },
+    {
+     "id": "e",
+     "g": "e",
+     "word": "egg"
+    },
+    {
+     "id": "l",
+     "g": "l",
+     "word": "leg"
+    },
+    {
+     "id": "h",
+     "g": "h",
+     "word": "hat"
+    },
+    {
+     "id": "r",
+     "g": "r",
+     "word": "red"
+    },
+    {
+     "id": "j",
+     "g": "j",
+     "word": "jam"
+    },
+    {
+     "id": "v",
+     "g": "v",
+     "word": "van"
+    },
+    {
+     "id": "y",
+     "g": "y",
+     "word": "yes"
+    },
+    {
+     "id": "w",
+     "g": "w",
+     "word": "web"
+    },
+    {
+     "id": "z",
+     "g": "z",
+     "word": "zip"
+    },
+    {
+     "id": "x",
+     "g": "x",
+     "word": "box"
+    }
+   ]
+  },
+  {
+   "id": "set1f",
+   "title": "First special friends",
+   "sounds": [
+    {
+     "id": "sh",
+     "g": "sh",
+     "word": "ship"
+    },
+    {
+     "id": "th",
+     "g": "th",
+     "word": "thin"
+    },
+    {
+     "id": "ch",
+     "g": "ch",
+     "word": "chip"
+    },
+    {
+     "id": "qu",
+     "g": "qu",
+     "word": "quick"
+    },
+    {
+     "id": "ng",
+     "g": "ng",
+     "word": "ring"
+    },
+    {
+     "id": "nk",
+     "g": "nk",
+     "word": "pink"
+    },
+    {
+     "id": "ck",
+     "g": "ck",
+     "word": "duck"
+    },
+    {
+     "id": "ff",
+     "g": "ff",
+     "word": "off"
+    },
+    {
+     "id": "ll",
+     "g": "ll",
+     "word": "bell"
+    },
+    {
+     "id": "ss",
+     "g": "ss",
+     "word": "kiss"
+    }
+   ]
+  },
+  {
+   "id": "set2",
+   "title": "More special friends",
+   "sounds": [
+    {
+     "id": "ay",
+     "g": "ay",
+     "word": "play"
+    },
+    {
+     "id": "ee",
+     "g": "ee",
+     "word": "see"
+    },
+    {
+     "id": "igh",
+     "g": "igh",
+     "word": "high"
+    },
+    {
+     "id": "ow",
+     "g": "ow",
+     "word": "blow"
+    },
+    {
+     "id": "oo",
+     "g": "oo",
+     "word": "zoo"
+    },
+    {
+     "id": "oo2",
+     "g": "oo",
+     "word": "look"
+    },
+    {
+     "id": "ar",
+     "g": "ar",
+     "word": "car"
+    },
+    {
+     "id": "or",
+     "g": "or",
+     "word": "for"
+    },
+    {
+     "id": "air",
+     "g": "air",
+     "word": "fair"
+    },
+    {
+     "id": "ir",
+     "g": "ir",
+     "word": "bird"
+    },
+    {
+     "id": "ou",
+     "g": "ou",
+     "word": "out"
+    },
+    {
+     "id": "oy",
+     "g": "oy",
+     "word": "boy"
+    }
+   ]
+  },
+  {
+   "id": "set3",
+   "title": "Even more special friends",
+   "sounds": [
+    {
+     "id": "ea",
+     "g": "ea",
+     "word": "tea"
+    },
+    {
+     "id": "oi",
+     "g": "oi",
+     "word": "coin"
+    },
+    {
+     "id": "a-e",
+     "g": "a-e",
+     "word": "make"
+    },
+    {
+     "id": "i-e",
+     "g": "i-e",
+     "word": "like"
+    },
+    {
+     "id": "o-e",
+     "g": "o-e",
+     "word": "home"
+    },
+    {
+     "id": "u-e",
+     "g": "u-e",
+     "word": "tune"
+    },
+    {
+     "id": "aw",
+     "g": "aw",
+     "word": "saw"
+    },
+    {
+     "id": "are",
+     "g": "are",
+     "word": "care"
+    },
+    {
+     "id": "ur",
+     "g": "ur",
+     "word": "nurse"
+    },
+    {
+     "id": "er",
+     "g": "er",
+     "word": "her"
+    },
+    {
+     "id": "ow2",
+     "g": "ow",
+     "word": "cow"
+    },
+    {
+     "id": "ai",
+     "g": "ai",
+     "word": "rain"
+    },
+    {
+     "id": "oa",
+     "g": "oa",
+     "word": "boat"
+    },
+    {
+     "id": "ew",
+     "g": "ew",
+     "word": "new"
+    },
+    {
+     "id": "ire",
+     "g": "ire",
+     "word": "fire"
+    },
+    {
+     "id": "ear",
+     "g": "ear",
+     "word": "near"
+    },
+    {
+     "id": "ure",
+     "g": "ure",
+     "word": "pure"
+    }
+   ]
+  }
+ ],
+ "words": [
+  {
+   "id": "r-cat",
+   "word": "cat",
+   "g": [
+    "c",
+    "a",
+    "t"
+   ],
+   "real": true,
+   "set": "set1"
+  },
+  {
+   "id": "r-dog",
+   "word": "dog",
+   "g": [
+    "d",
+    "o",
+    "g"
+   ],
+   "real": true,
+   "set": "set1"
+  },
+  {
+   "id": "r-sun",
+   "word": "sun",
+   "g": [
+    "s",
+    "u",
+    "n"
+   ],
+   "real": true,
+   "set": "set1"
+  },
+  {
+   "id": "r-pig",
+   "word": "pig",
+   "g": [
+    "p",
+    "i",
+    "g"
+   ],
+   "real": true,
+   "set": "set1"
+  },
+  {
+   "id": "r-bed",
+   "word": "bed",
+   "g": [
+    "b",
+    "e",
+    "d"
+   ],
+   "real": true,
+   "set": "set1"
+  },
+  {
+   "id": "r-hat",
+   "word": "hat",
+   "g": [
+    "h",
+    "a",
+    "t"
+   ],
+   "real": true,
+   "set": "set1"
+  },
+  {
+   "id": "r-map",
+   "word": "map",
+   "g": [
+    "m",
+    "a",
+    "p"
+   ],
+   "real": true,
+   "set": "set1"
+  },
+  {
+   "id": "r-fox",
+   "word": "fox",
+   "g": [
+    "f",
+    "o",
+    "x"
+   ],
+   "real": true,
+   "set": "set1"
+  },
+  {
+   "id": "r-jam",
+   "word": "jam",
+   "g": [
+    "j",
+    "a",
+    "m"
+   ],
+   "real": true,
+   "set": "set1"
+  },
+  {
+   "id": "r-web",
+   "word": "web",
+   "g": [
+    "w",
+    "e",
+    "b"
+   ],
+   "real": true,
+   "set": "set1"
+  },
+  {
+   "id": "r-zip",
+   "word": "zip",
+   "g": [
+    "z",
+    "i",
+    "p"
+   ],
+   "real": true,
+   "set": "set1"
+  },
+  {
+   "id": "r-van",
+   "word": "van",
+   "g": [
+    "v",
+    "a",
+    "n"
+   ],
+   "real": true,
+   "set": "set1"
+  },
+  {
+   "id": "r-yes",
+   "word": "yes",
+   "g": [
+    "y",
+    "e",
+    "s"
+   ],
+   "real": true,
+   "set": "set1"
+  },
+  {
+   "id": "r-leg",
+   "word": "leg",
+   "g": [
+    "l",
+    "e",
+    "g"
+   ],
+   "real": true,
+   "set": "set1"
+  },
+  {
+   "id": "r-mud",
+   "word": "mud",
+   "g": [
+    "m",
+    "u",
+    "d"
+   ],
+   "real": true,
+   "set": "set1"
+  },
+  {
+   "id": "r-rug",
+   "word": "rug",
+   "g": [
+    "r",
+    "u",
+    "g"
+   ],
+   "real": true,
+   "set": "set1"
+  },
+  {
+   "id": "r-tin",
+   "word": "tin",
+   "g": [
+    "t",
+    "i",
+    "n"
+   ],
+   "real": true,
+   "set": "set1"
+  },
+  {
+   "id": "r-hop",
+   "word": "hop",
+   "g": [
+    "h",
+    "o",
+    "p"
+   ],
+   "real": true,
+   "set": "set1"
+  },
+  {
+   "id": "r-bus",
+   "word": "bus",
+   "g": [
+    "b",
+    "u",
+    "s"
+   ],
+   "real": true,
+   "set": "set1"
+  },
+  {
+   "id": "r-net",
+   "word": "net",
+   "g": [
+    "n",
+    "e",
+    "t"
+   ],
+   "real": true,
+   "set": "set1"
+  },
+  {
+   "id": "r-cot",
+   "word": "cot",
+   "g": [
+    "c",
+    "o",
+    "t"
+   ],
+   "real": true,
+   "set": "set1"
+  },
+  {
+   "id": "r-pen",
+   "word": "pen",
+   "g": [
+    "p",
+    "e",
+    "n"
+   ],
+   "real": true,
+   "set": "set1"
+  },
+  {
+   "id": "r-sit",
+   "word": "sit",
+   "g": [
+    "s",
+    "i",
+    "t"
+   ],
+   "real": true,
+   "set": "set1"
+  },
+  {
+   "id": "r-top",
+   "word": "top",
+   "g": [
+    "t",
+    "o",
+    "p"
+   ],
+   "real": true,
+   "set": "set1"
+  },
+  {
+   "id": "r-ship",
+   "word": "ship",
+   "g": [
+    "sh",
+    "i",
+    "p"
+   ],
+   "real": true,
+   "set": "set1f"
+  },
+  {
+   "id": "r-shop",
+   "word": "shop",
+   "g": [
+    "sh",
+    "o",
+    "p"
+   ],
+   "real": true,
+   "set": "set1f"
+  },
+  {
+   "id": "r-fish",
+   "word": "fish",
+   "g": [
+    "f",
+    "i",
+    "sh"
+   ],
+   "real": true,
+   "set": "set1f"
+  },
+  {
+   "id": "r-chip",
+   "word": "chip",
+   "g": [
+    "ch",
+    "i",
+    "p"
+   ],
+   "real": true,
+   "set": "set1f"
+  },
+  {
+   "id": "r-chop",
+   "word": "chop",
+   "g": [
+    "ch",
+    "o",
+    "p"
+   ],
+   "real": true,
+   "set": "set1f"
+  },
+  {
+   "id": "r-rich",
+   "word": "rich",
+   "g": [
+    "r",
+    "i",
+    "ch"
+   ],
+   "real": true,
+   "set": "set1f"
+  },
+  {
+   "id": "r-thin",
+   "word": "thin",
+   "g": [
+    "th",
+    "i",
+    "n"
+   ],
+   "real": true,
+   "set": "set1f"
+  },
+  {
+   "id": "r-moth",
+   "word": "moth",
+   "g": [
+    "m",
+    "o",
+    "th"
+   ],
+   "real": true,
+   "set": "set1f"
+  },
+  {
+   "id": "r-ring",
+   "word": "ring",
+   "g": [
+    "r",
+    "i",
+    "ng"
+   ],
+   "real": true,
+   "set": "set1f"
+  },
+  {
+   "id": "r-song",
+   "word": "song",
+   "g": [
+    "s",
+    "o",
+    "ng"
+   ],
+   "real": true,
+   "set": "set1f"
+  },
+  {
+   "id": "r-pink",
+   "word": "pink",
+   "g": [
+    "p",
+    "i",
+    "nk"
+   ],
+   "real": true,
+   "set": "set1f"
+  },
+  {
+   "id": "r-bank",
+   "word": "bank",
+   "g": [
+    "b",
+    "a",
+    "nk"
+   ],
+   "real": true,
+   "set": "set1f"
+  },
+  {
+   "id": "r-duck",
+   "word": "duck",
+   "g": [
+    "d",
+    "u",
+    "ck"
+   ],
+   "real": true,
+   "set": "set1f"
+  },
+  {
+   "id": "r-sock",
+   "word": "sock",
+   "g": [
+    "s",
+    "o",
+    "ck"
+   ],
+   "real": true,
+   "set": "set1f"
+  },
+  {
+   "id": "r-quiz",
+   "word": "quiz",
+   "g": [
+    "qu",
+    "i",
+    "z"
+   ],
+   "real": true,
+   "set": "set1f"
+  },
+  {
+   "id": "r-quick",
+   "word": "quick",
+   "g": [
+    "qu",
+    "i",
+    "ck"
+   ],
+   "real": true,
+   "set": "set1f"
+  },
+  {
+   "id": "r-bell",
+   "word": "bell",
+   "g": [
+    "b",
+    "e",
+    "ll"
+   ],
+   "real": true,
+   "set": "set1f"
+  },
+  {
+   "id": "r-hill",
+   "word": "hill",
+   "g": [
+    "h",
+    "i",
+    "ll"
+   ],
+   "real": true,
+   "set": "set1f"
+  },
+  {
+   "id": "r-off",
+   "word": "off",
+   "g": [
+    "o",
+    "ff"
+   ],
+   "real": true,
+   "set": "set1f"
+  },
+  {
+   "id": "r-kiss",
+   "word": "kiss",
+   "g": [
+    "k",
+    "i",
+    "ss"
+   ],
+   "real": true,
+   "set": "set1f"
+  },
+  {
+   "id": "r-shell",
+   "word": "shell",
+   "g": [
+    "sh",
+    "e",
+    "ll"
+   ],
+   "real": true,
+   "set": "set1f"
+  },
+  {
+   "id": "r-that",
+   "word": "that",
+   "g": [
+    "th",
+    "a",
+    "t"
+   ],
+   "real": true,
+   "set": "set1f"
+  },
+  {
+   "id": "r-play",
+   "word": "play",
+   "g": [
+    "p",
+    "l",
+    "ay"
+   ],
+   "real": true,
+   "set": "set2"
+  },
+  {
+   "id": "r-day",
+   "word": "day",
+   "g": [
+    "d",
+    "ay"
+   ],
+   "real": true,
+   "set": "set2"
+  },
+  {
+   "id": "r-see",
+   "word": "see",
+   "g": [
+    "s",
+    "ee"
+   ],
+   "real": true,
+   "set": "set2"
+  },
+  {
+   "id": "r-tree",
+   "word": "tree",
+   "g": [
+    "t",
+    "r",
+    "ee"
+   ],
+   "real": true,
+   "set": "set2"
+  },
+  {
+   "id": "r-high",
+   "word": "high",
+   "g": [
+    "h",
+    "igh"
+   ],
+   "real": true,
+   "set": "set2"
+  },
+  {
+   "id": "r-night",
+   "word": "night",
+   "g": [
+    "n",
+    "igh",
+    "t"
+   ],
+   "real": true,
+   "set": "set2"
+  },
+  {
+   "id": "r-blow",
+   "word": "blow",
+   "g": [
+    "b",
+    "l",
+    "ow"
+   ],
+   "real": true,
+   "set": "set2"
+  },
+  {
+   "id": "r-snow",
+   "word": "snow",
+   "g": [
+    "s",
+    "n",
+    "ow"
+   ],
+   "real": true,
+   "set": "set2"
+  },
+  {
+   "id": "r-zoo",
+   "word": "zoo",
+   "g": [
+    "z",
+    "oo"
+   ],
+   "real": true,
+   "set": "set2"
+  },
+  {
+   "id": "r-moon",
+   "word": "moon",
+   "g": [
+    "m",
+    "oo",
+    "n"
+   ],
+   "real": true,
+   "set": "set2"
+  },
+  {
+   "id": "r-look",
+   "word": "look",
+   "g": [
+    "l",
+    "oo",
+    "k"
+   ],
+   "real": true,
+   "set": "set2"
+  },
+  {
+   "id": "r-book",
+   "word": "book",
+   "g": [
+    "b",
+    "oo",
+    "k"
+   ],
+   "real": true,
+   "set": "set2"
+  },
+  {
+   "id": "r-car",
+   "word": "car",
+   "g": [
+    "c",
+    "ar"
+   ],
+   "real": true,
+   "set": "set2"
+  },
+  {
+   "id": "r-star",
+   "word": "star",
+   "g": [
+    "s",
+    "t",
+    "ar"
+   ],
+   "real": true,
+   "set": "set2"
+  },
+  {
+   "id": "r-for",
+   "word": "for",
+   "g": [
+    "f",
+    "or"
+   ],
+   "real": true,
+   "set": "set2"
+  },
+  {
+   "id": "r-sport",
+   "word": "sport",
+   "g": [
+    "s",
+    "p",
+    "or",
+    "t"
+   ],
+   "real": true,
+   "set": "set2"
+  },
+  {
+   "id": "r-fair",
+   "word": "fair",
+   "g": [
+    "f",
+    "air"
+   ],
+   "real": true,
+   "set": "set2"
+  },
+  {
+   "id": "r-hair",
+   "word": "hair",
+   "g": [
+    "h",
+    "air"
+   ],
+   "real": true,
+   "set": "set2"
+  },
+  {
+   "id": "r-bird",
+   "word": "bird",
+   "g": [
+    "b",
+    "ir",
+    "d"
+   ],
+   "real": true,
+   "set": "set2"
+  },
+  {
+   "id": "r-girl",
+   "word": "girl",
+   "g": [
+    "g",
+    "ir",
+    "l"
+   ],
+   "real": true,
+   "set": "set2"
+  },
+  {
+   "id": "r-out",
+   "word": "out",
+   "g": [
+    "ou",
+    "t"
+   ],
+   "real": true,
+   "set": "set2"
+  },
+  {
+   "id": "r-shout",
+   "word": "shout",
+   "g": [
+    "sh",
+    "ou",
+    "t"
+   ],
+   "real": true,
+   "set": "set2"
+  },
+  {
+   "id": "r-boy",
+   "word": "boy",
+   "g": [
+    "b",
+    "oy"
+   ],
+   "real": true,
+   "set": "set2"
+  },
+  {
+   "id": "r-toy",
+   "word": "toy",
+   "g": [
+    "t",
+    "oy"
+   ],
+   "real": true,
+   "set": "set2"
+  },
+  {
+   "id": "r-tea",
+   "word": "tea",
+   "g": [
+    "t",
+    "ea"
+   ],
+   "real": true,
+   "set": "set3"
+  },
+  {
+   "id": "r-dream",
+   "word": "dream",
+   "g": [
+    "d",
+    "r",
+    "ea",
+    "m"
+   ],
+   "real": true,
+   "set": "set3"
+  },
+  {
+   "id": "r-coin",
+   "word": "coin",
+   "g": [
+    "c",
+    "oi",
+    "n"
+   ],
+   "real": true,
+   "set": "set3"
+  },
+  {
+   "id": "r-make",
+   "word": "make",
+   "g": [
+    "m",
+    "a-",
+    "k",
+    "-e"
+   ],
+   "real": true,
+   "set": "set3"
+  },
+  {
+   "id": "r-cake",
+   "word": "cake",
+   "g": [
+    "c",
+    "a-",
+    "k",
+    "-e"
+   ],
+   "real": true,
+   "set": "set3"
+  },
+  {
+   "id": "r-like",
+   "word": "like",
+   "g": [
+    "l",
+    "i-",
+    "k",
+    "-e"
+   ],
+   "real": true,
+   "set": "set3"
+  },
+  {
+   "id": "r-bike",
+   "word": "bike",
+   "g": [
+    "b",
+    "i-",
+    "k",
+    "-e"
+   ],
+   "real": true,
+   "set": "set3"
+  },
+  {
+   "id": "r-home",
+   "word": "home",
+   "g": [
+    "h",
+    "o-",
+    "m",
+    "-e"
+   ],
+   "real": true,
+   "set": "set3"
+  },
+  {
+   "id": "r-bone",
+   "word": "bone",
+   "g": [
+    "b",
+    "o-",
+    "n",
+    "-e"
+   ],
+   "real": true,
+   "set": "set3"
+  },
+  {
+   "id": "r-tune",
+   "word": "tune",
+   "g": [
+    "t",
+    "u-",
+    "n",
+    "-e"
+   ],
+   "real": true,
+   "set": "set3"
+  },
+  {
+   "id": "r-saw",
+   "word": "saw",
+   "g": [
+    "s",
+    "aw"
+   ],
+   "real": true,
+   "set": "set3"
+  },
+  {
+   "id": "r-care",
+   "word": "care",
+   "g": [
+    "c",
+    "are"
+   ],
+   "real": true,
+   "set": "set3"
+  },
+  {
+   "id": "r-nurse",
+   "word": "nurse",
+   "g": [
+    "n",
+    "ur",
+    "se"
+   ],
+   "real": true,
+   "set": "set3"
+  },
+  {
+   "id": "r-her",
+   "word": "her",
+   "g": [
+    "h",
+    "er"
+   ],
+   "real": true,
+   "set": "set3"
+  },
+  {
+   "id": "r-cow",
+   "word": "cow",
+   "g": [
+    "c",
+    "ow"
+   ],
+   "real": true,
+   "set": "set3"
+  },
+  {
+   "id": "r-rain",
+   "word": "rain",
+   "g": [
+    "r",
+    "ai",
+    "n"
+   ],
+   "real": true,
+   "set": "set3"
+  },
+  {
+   "id": "r-boat",
+   "word": "boat",
+   "g": [
+    "b",
+    "oa",
+    "t"
+   ],
+   "real": true,
+   "set": "set3"
+  },
+  {
+   "id": "r-new",
+   "word": "new",
+   "g": [
+    "n",
+    "ew"
+   ],
+   "real": true,
+   "set": "set3"
+  },
+  {
+   "id": "r-fire",
+   "word": "fire",
+   "g": [
+    "f",
+    "ire"
+   ],
+   "real": true,
+   "set": "set3"
+  },
+  {
+   "id": "r-near",
+   "word": "near",
+   "g": [
+    "n",
+    "ear"
+   ],
+   "real": true,
+   "set": "set3"
+  },
+  {
+   "id": "r-pure",
+   "word": "pure",
+   "g": [
+    "p",
+    "ure"
+   ],
+   "real": true,
+   "set": "set3"
+  },
+  {
+   "id": "a-vap",
+   "word": "vap",
+   "g": [
+    "v",
+    "a",
+    "p"
+   ],
+   "real": false,
+   "set": "set1"
+  },
+  {
+   "id": "a-jex",
+   "word": "jex",
+   "g": [
+    "j",
+    "e",
+    "x"
+   ],
+   "real": false,
+   "set": "set1"
+  },
+  {
+   "id": "a-zub",
+   "word": "zub",
+   "g": [
+    "z",
+    "u",
+    "b"
+   ],
+   "real": false,
+   "set": "set1"
+  },
+  {
+   "id": "a-kif",
+   "word": "kif",
+   "g": [
+    "k",
+    "i",
+    "f"
+   ],
+   "real": false,
+   "set": "set1"
+  },
+  {
+   "id": "a-yod",
+   "word": "yod",
+   "g": [
+    "y",
+    "o",
+    "d"
+   ],
+   "real": false,
+   "set": "set1"
+  },
+  {
+   "id": "a-fep",
+   "word": "fep",
+   "g": [
+    "f",
+    "e",
+    "p"
+   ],
+   "real": false,
+   "set": "set1"
+  },
+  {
+   "id": "a-mib",
+   "word": "mib",
+   "g": [
+    "m",
+    "i",
+    "b"
+   ],
+   "real": false,
+   "set": "set1"
+  },
+  {
+   "id": "a-rux",
+   "word": "rux",
+   "g": [
+    "r",
+    "u",
+    "x"
+   ],
+   "real": false,
+   "set": "set1"
+  },
+  {
+   "id": "a-lun",
+   "word": "lun",
+   "g": [
+    "l",
+    "u",
+    "n"
+   ],
+   "real": false,
+   "set": "set1"
+  },
+  {
+   "id": "a-shob",
+   "word": "shob",
+   "g": [
+    "sh",
+    "o",
+    "b"
+   ],
+   "real": false,
+   "set": "set1f"
+  },
+  {
+   "id": "a-chep",
+   "word": "chep",
+   "g": [
+    "ch",
+    "e",
+    "p"
+   ],
+   "real": false,
+   "set": "set1f"
+  },
+  {
+   "id": "a-thip",
+   "word": "thip",
+   "g": [
+    "th",
+    "i",
+    "p"
+   ],
+   "real": false,
+   "set": "set1f"
+  },
+  {
+   "id": "a-quab",
+   "word": "quab",
+   "g": [
+    "qu",
+    "a",
+    "b"
+   ],
+   "real": false,
+   "set": "set1f"
+  },
+  {
+   "id": "a-yink",
+   "word": "yink",
+   "g": [
+    "y",
+    "i",
+    "nk"
+   ],
+   "real": false,
+   "set": "set1f"
+  },
+  {
+   "id": "a-gock",
+   "word": "gock",
+   "g": [
+    "g",
+    "o",
+    "ck"
+   ],
+   "real": false,
+   "set": "set1f"
+  },
+  {
+   "id": "a-wong",
+   "word": "wong",
+   "g": [
+    "w",
+    "o",
+    "ng"
+   ],
+   "real": false,
+   "set": "set1f"
+  },
+  {
+   "id": "a-vay",
+   "word": "vay",
+   "g": [
+    "v",
+    "ay"
+   ],
+   "real": false,
+   "set": "set2"
+  },
+  {
+   "id": "a-feep",
+   "word": "feep",
+   "g": [
+    "f",
+    "ee",
+    "p"
+   ],
+   "real": false,
+   "set": "set2"
+  },
+  {
+   "id": "a-vight",
+   "word": "vight",
+   "g": [
+    "v",
+    "igh",
+    "t"
+   ],
+   "real": false,
+   "set": "set2"
+  },
+  {
+   "id": "a-doob",
+   "word": "doob",
+   "g": [
+    "d",
+    "oo",
+    "b"
+   ],
+   "real": false,
+   "set": "set2"
+  },
+  {
+   "id": "a-farb",
+   "word": "farb",
+   "g": [
+    "f",
+    "ar",
+    "b"
+   ],
+   "real": false,
+   "set": "set2"
+  },
+  {
+   "id": "a-torb",
+   "word": "torb",
+   "g": [
+    "t",
+    "or",
+    "b"
+   ],
+   "real": false,
+   "set": "set2"
+  },
+  {
+   "id": "a-dair",
+   "word": "dair",
+   "g": [
+    "d",
+    "air"
+   ],
+   "real": false,
+   "set": "set2"
+  },
+  {
+   "id": "a-virb",
+   "word": "virb",
+   "g": [
+    "v",
+    "ir",
+    "b"
+   ],
+   "real": false,
+   "set": "set2"
+  },
+  {
+   "id": "a-goud",
+   "word": "goud",
+   "g": [
+    "g",
+    "ou",
+    "d"
+   ],
+   "real": false,
+   "set": "set2"
+  },
+  {
+   "id": "a-foy",
+   "word": "foy",
+   "g": [
+    "f",
+    "oy"
+   ],
+   "real": false,
+   "set": "set2"
+  },
+  {
+   "id": "a-jeam",
+   "word": "jeam",
+   "g": [
+    "j",
+    "ea",
+    "m"
+   ],
+   "real": false,
+   "set": "set3"
+  },
+  {
+   "id": "a-voin",
+   "word": "voin",
+   "g": [
+    "v",
+    "oi",
+    "n"
+   ],
+   "real": false,
+   "set": "set3"
+  },
+  {
+   "id": "a-dake",
+   "word": "dake",
+   "g": [
+    "d",
+    "a-",
+    "k",
+    "-e"
+   ],
+   "real": false,
+   "set": "set3"
+  },
+  {
+   "id": "a-bime",
+   "word": "bime",
+   "g": [
+    "b",
+    "i-",
+    "m",
+    "-e"
+   ],
+   "real": false,
+   "set": "set3"
+  },
+  {
+   "id": "a-rone",
+   "word": "rone",
+   "g": [
+    "r",
+    "o-",
+    "n",
+    "-e"
+   ],
+   "real": false,
+   "set": "set3"
+  },
+  {
+   "id": "a-fute",
+   "word": "fute",
+   "g": [
+    "f",
+    "u-",
+    "t",
+    "-e"
+   ],
+   "real": false,
+   "set": "set3"
+  },
+  {
+   "id": "a-zaw",
+   "word": "zaw",
+   "g": [
+    "z",
+    "aw"
+   ],
+   "real": false,
+   "set": "set3"
+  },
+  {
+   "id": "a-lurp",
+   "word": "lurp",
+   "g": [
+    "l",
+    "ur",
+    "p"
+   ],
+   "real": false,
+   "set": "set3"
+  },
+  {
+   "id": "a-sain",
+   "word": "sain",
+   "g": [
+    "s",
+    "ai",
+    "n"
+   ],
+   "real": false,
+   "set": "set3"
+  },
+  {
+   "id": "a-joak",
+   "word": "joak",
+   "g": [
+    "j",
+    "oa",
+    "k"
+   ],
+   "real": false,
+   "set": "set3"
+  },
+  {
+   "id": "a-jire",
+   "word": "jire",
+   "g": [
+    "j",
+    "ire"
+   ],
+   "real": false,
+   "set": "set3"
+  },
+  {
+   "id": "a-vear",
+   "word": "vear",
+   "g": [
+    "v",
+    "ear"
+   ],
+   "real": false,
+   "set": "set3"
+  }
+ ]
+}
