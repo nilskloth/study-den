@@ -15,6 +15,7 @@ import { renderProgress } from "../views/progress.js";
 import { renderStart } from "../views/start.js";
 import { renderSecondary } from "../views/secondary/home.js";
 import { availableLangs } from "../views/secondary/langs.js";
+import { loadScience } from "../views/secondary/science.js";
 
 const ROUTES = [
   { path: "start", render: renderStart },
@@ -39,19 +40,22 @@ const NAV = {
   ]
 };
 
-/* Languages appear in the nav once they have word lists (built in or uploaded). */
+/* Languages appear in the nav once they have word lists (built in or uploaded);
+   Science once its question file is there. */
 async function refreshLanguageNav() {
   const langs = await availableLangs();
+  const science = await loadScience().then(() => true).catch(() => false);
   NAV.secondary = [
     NAV.secondary[0],
     ...langs.map(l => ({ href: `#/secondary/${l.code}`, label: l.label, match: `secondary/${l.code}` })),
+    ...(science ? [{ href: "#/secondary/science", label: "Science", match: "secondary/science" }] : []),
     NAV.secondary[NAV.secondary.length - 1]
   ];
   const { path, params } = parseHash();
   if (getStore().settings.level === "secondary") buildChrome("secondary", path, params);
 }
 
-const TITLES = { primary: "SATs Trainer", secondary: "Language Trainer" };
+const TITLES = { primary: "SATs Trainer", secondary: "Secondary Trainer" };
 const HOME = { primary: "#/home", secondary: "#/secondary" };
 
 function parseHash() {

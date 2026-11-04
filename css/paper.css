@@ -12,6 +12,7 @@
 [data-subject="spelling"] { --subject: var(--c-spelling); }
 [data-subject="german"]   { --subject: var(--c-german); }
 [data-subject="french"]   { --subject: var(--c-french); }
+[data-subject="science"]  { --subject: var(--c-science); }
 
 /* Booklet cover */
 .paper-cover {

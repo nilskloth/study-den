@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+
+    <text x="150" y="26" text-anchor="middle" class="title">Arm bends (flexes)</text>
+    <text x="470" y="26" text-anchor="middle" class="title">Arm straightens (extends)</text>
+    <line x1="100" y1="50" x2="120" y2="150" stroke="#7d7466" stroke-width="14.5" stroke-linecap="round"/>
+   <line x1="100" y1="50" x2="120" y2="150" stroke="#f4efe3" stroke-width="12" stroke-linecap="round"/><line x1="120" y1="150" x2="210" y2="70" stroke="#7d7466" stroke-width="11.5" stroke-linecap="round"/>
+   <line x1="120" y1="150" x2="210" y2="70" stroke="#f4efe3" stroke-width="9" stroke-linecap="round"/><ellipse cx="128" cy="100" rx="26" ry="44" fill="#c9534f" stroke="#8f2f2c" stroke-width="2" transform="rotate(-11.309932474020215 128 100)"/><ellipse cx="92" cy="100" rx="12" ry="44" fill="#c9534f" stroke="#8f2f2c" stroke-width="2" transform="rotate(-11.309932474020215 92 100)"/><line x1="128" y1="140" x2="132" y2="160" stroke="#ddd" stroke-width="3"/><circle cx="210" cy="70" r="12" fill="#efe0d0" stroke="#b89d86"/> <line x1="420" y1="50" x2="440" y2="150" stroke="#7d7466" stroke-width="14.5" stroke-linecap="round"/>
+   <line x1="420" y1="50" x2="440" y2="150" stroke="#f4efe3" stroke-width="12" stroke-linecap="round"/><line x1="440" y1="150" x2="470" y2="250" stroke="#7d7466" stroke-width="11.5" stroke-linecap="round"/>
+   <line x1="440" y1="150" x2="470" y2="250" stroke="#f4efe3" stroke-width="9" stroke-linecap="round"/><ellipse cx="448" cy="100" rx="14" ry="44" fill="#c9534f" stroke="#8f2f2c" stroke-width="2" transform="rotate(-11.309932474020215 448 100)"/><ellipse cx="412" cy="100" rx="24" ry="44" fill="#c9534f" stroke="#8f2f2c" stroke-width="2" transform="rotate(-11.309932474020215 412 100)"/><line x1="448" y1="140" x2="452" y2="160" stroke="#ddd" stroke-width="3"/><circle cx="470" cy="250" r="12" fill="#efe0d0" stroke="#b89d86"/>
+    <text x="150" y="200" class="cap"><tspan font-weight="700" fill="#8f2f2c">Biceps contracts</tspan></text><text x="150" y="216" class="cap">(shorter and fatter)</text>
+    <text x="20" y="120" class="cap"><tspan font-weight="700">Triceps</tspan></text><text x="20" y="136" class="cap">relaxes</text>
+    <text x="500" y="120" class="cap"><tspan font-weight="700">Biceps</tspan> relaxes</text>
+    <text x="320" y="120" class="cap"><tspan font-weight="700" fill="#8f2f2c">Triceps</tspan></text><text x="320" y="136" class="cap" fill="#8f2f2c">contracts</text>
+    <text x="320" y="290" text-anchor="middle" class="cap">Muscles can only pull. One contracts while its partner relaxes — an antagonistic pair.</text>
+</svg>

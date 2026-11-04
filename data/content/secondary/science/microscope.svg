@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+
+    <!-- base -->
+    <path d="M170 400 h210 a14 14 0 0 1 14 14 v12 h-238 v-12 a14 14 0 0 1 14 -14Z" fill="#3b3f45"/>
+    <!-- arm -->
+    <path d="M358 400 v-120 c0 -60 -20 -110 -50 -150 l-10 -14 c-10 -14 -28 -14 -36 0 l-6 10 c-6 10 4 14 10 22 l12 14 c22 30 36 70 36 118 v120Z" fill="#555b63"/>
+    <!-- focus wheels -->
+    <circle cx="336" cy="300" r="24" fill="#2d3035"/><circle cx="336" cy="300" r="12" fill="#6b7078"/>
+    <!-- stage -->
+    <rect x="180" y="236" width="156" height="12" rx="3" fill="#2d3035"/>
+    <rect x="204" y="232" width="90" height="5" fill="#9fd3f0" opacity=".9"/>
+    <path d="M194 230 h20 v4 h-20Z M284 230 h20 v4 h-20Z" fill="#8a8f96"/>
+    <!-- light under stage -->
+    <circle cx="240" cy="270" r="12" fill="#ffe08a" stroke="#c89a1c" stroke-width="2"/>
+    <path d="M226 256 l6 -10 M254 256 l-6 -10 M240 250 v-8" stroke="#c89a1c" stroke-width="2"/>
+    <rect x="230" y="282" width="20" height="118" fill="#555b63"/>
+    <!-- tube, nosepiece, objectives -->
+    <rect x="226" y="64" width="28" height="120" rx="4" fill="#3b3f45"/>
+    <rect x="222" y="36" width="36" height="34" rx="6" fill="#2d3035"/>
+    <rect x="230" y="30" width="20" height="8" rx="2" fill="#6b7078"/>
+    <path d="M206 184 h68 l-10 18 h-48Z" fill="#2d3035"/>
+    <rect x="210" y="200" width="11" height="22" fill="#3b3f45"/>
+    <rect x="234" y="200" width="12" height="30" fill="#3b3f45"/>
+    <rect x="258" y="200" width="11" height="22" fill="#3b3f45"/>
+    
+  <g class="lbl" data-part="eyepiece">
+    <line class="leader" x1="354" y1="40" x2="240" y2="40"/>
+    <circle class="dot" cx="240" cy="40" r="3.5"/>
+    <text class="name" x="360" y="44.5" text-anchor="start">Eyepiece lens</text>
+    <g class="letter"><circle cx="369" cy="40" r="9.5"/><text x="369" y="44.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="objective">
+    <line class="leader" x1="126" y1="200" x2="264" y2="216"/>
+    <circle class="dot" cx="264" cy="216" r="3.5"/>
+    <text class="name" x="120" y="204.5" text-anchor="end">Objective lenses</text>
+    <g class="letter"><circle cx="111" cy="200" r="9.5"/><text x="111" y="204.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="nosepiece">
+    <line class="leader" x1="126" y1="170" x2="210" y2="190"/>
+    <circle class="dot" cx="210" cy="190" r="3.5"/>
+    <text class="name" x="120" y="174.5" text-anchor="end">Nosepiece (turns)</text>
+    <g class="letter"><circle cx="111" cy="170" r="9.5"/><text x="111" y="174.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="clips">
+    <line class="leader" x1="126" y1="246" x2="204" y2="232"/>
+    <circle class="dot" cx="204" cy="232" r="3.5"/>
+    <text class="name" x="120" y="250.5" text-anchor="end">Stage clips</text>
+    <g class="letter"><circle cx="111" cy="246" r="9.5"/><text x="111" y="250.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="stage">
+    <line class="leader" x1="384" y1="242" x2="316" y2="242"/>
+    <circle class="dot" cx="316" cy="242" r="3.5"/>
+    <text class="name" x="390" y="246.5" text-anchor="start">Stage</text>
+    <g class="letter"><circle cx="399" cy="242" r="9.5"/><text x="399" y="246.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="light">
+    <line class="leader" x1="126" y1="290" x2="240" y2="270"/>
+    <circle class="dot" cx="240" cy="270" r="3.5"/>
+    <text class="name" x="120" y="294.5" text-anchor="end">Light</text>
+    <g class="letter"><circle cx="111" cy="290" r="9.5"/><text x="111" y="294.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="coarse">
+    <line class="leader" x1="384" y1="278" x2="356" y2="288"/>
+    <circle class="dot" cx="356" cy="288" r="3.5"/>
+    <text class="name" x="390" y="282.5" text-anchor="start">Coarse focusing wheel</text>
+    <g class="letter"><circle cx="399" cy="278" r="9.5"/><text x="399" y="282.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="fine">
+    <line class="leader" x1="384" y1="314" x2="348" y2="300"/>
+    <circle class="dot" cx="348" cy="300" r="3.5"/>
+    <text class="name" x="390" y="318.5" text-anchor="start">Fine focusing wheel</text>
+    <g class="letter"><circle cx="399" cy="314" r="9.5"/><text x="399" y="318.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="arm">
+    <line class="leader" x1="384" y1="150" x2="312" y2="150"/>
+    <circle class="dot" cx="312" cy="150" r="3.5"/>
+    <text class="name" x="390" y="154.5" text-anchor="start">Arm</text>
+    <g class="letter"><circle cx="399" cy="150" r="9.5"/><text x="399" y="154.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="base">
+    <line class="leader" x1="126" y1="400" x2="190" y2="412"/>
+    <circle class="dot" cx="190" cy="412" r="3.5"/>
+    <text class="name" x="120" y="404.5" text-anchor="end">Base</text>
+    <g class="letter"><circle cx="111" cy="400" r="9.5"/><text x="111" y="404.5" text-anchor="middle"></text></g>
+  </g>
+</svg>

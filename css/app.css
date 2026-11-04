@@ -348,7 +348,7 @@ button.hear { padding: var(--sp-1) var(--sp-2); font-size: var(--fs-3); line-hei
 /* Grown-ups → Activity. Chart colours: validated categorical palette
    (dataviz reference, light), fixed order = AREAS in core/activity.js. */
 :root { --viz-1: #2a78d6; --viz-2: #eb6834; --viz-3: #1baf7a; --viz-4: #eda100;
-  --viz-5: #e87ba4; --viz-6: #008300; --viz-other: #a3a39c; }
+  --viz-5: #e87ba4; --viz-6: #008300; --viz-7: #7a4fb5; --viz-other: #a3a39c; }
 .act-period { display: flex; align-items: center; gap: var(--sp-3); margin-bottom: var(--sp-4); flex-wrap: wrap; }
 .act-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--sp-3); margin-bottom: var(--sp-4); }
 .act-tile { background: var(--surface); border: 1px solid var(--line-soft); border-radius: 8px; padding: var(--sp-3); display: flex; flex-direction: column; gap: 2px; }
@@ -441,3 +441,31 @@ button.hear { padding: var(--sp-1) var(--sp-2); font-size: var(--fs-3); line-hei
 }
 .wl-history { margin-top: var(--sp-4); }
 .wl-history summary { cursor: pointer; }
+
+/* =========================================================
+   Secondary science revision trainer
+   ========================================================= */
+.sci-notes h3 { margin: var(--sp-5) 0 var(--sp-2); font-size: var(--fs-2); }
+.sci-figure { margin: var(--sp-3) 0; }
+.sci-figure figcaption { font-size: var(--fs-0); margin-top: var(--sp-2); }
+.sci-figure-host svg { display: block; width: 100%; height: auto; max-width: 720px; margin: 0 auto; }
+.sci-figure-host .lbl { cursor: default; }
+.sci-fig.quiz .lbl { cursor: pointer; }
+.sci-fig.quiz .lbl.reveal .name { display: block; }
+.sci-fig.quiz .lbl.reveal .letter { display: none; }
+.sci-selftest { padding: var(--sp-1) var(--sp-2); font-size: var(--fs-0); }
+.fact-list { padding-left: 1.3em; margin: 0; }
+.fact-list li { margin: var(--sp-2) 0; line-height: 1.5; }
+.keyword-list td[lang] { width: 36%; }
+.sci-quiz-figure { max-width: 640px; margin: 0 auto var(--sp-3); }
+.sci-quiz-figure svg { max-width: 100%; }
+.sci-prompt { font-family: var(--font-paper); font-size: var(--fs-3); margin: var(--sp-3) auto var(--sp-4); max-width: 640px; }
+.tf-grid { max-width: 360px; }
+@media (max-width: 600px) {
+  .sci-prompt { font-size: var(--fs-2); }
+}
+@media (max-width: 600px) {
+  /* keep the labels readable: the diagram scrolls sideways rather than shrinking */
+  .sci-figure-host { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .sci-figure-host svg { min-width: 560px; }
+}

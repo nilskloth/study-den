@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 794 240" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+
+    <rect x="10" y="14" width="186" height="210" rx="12" fill="#fff" stroke="#c9c9c4"/>
+    <text x="103" y="38" text-anchor="middle" class="title">Amoeba</text>
+    <path d="M53 108 C43 68 93 58 113 78 C133 62 163 88 147 112 C169 124 153 158 123 148 C113 174 73 168 77 142 C43 148 41 122 53 108Z" fill="#fff3d6" stroke="#b5651d" stroke-width="2.5"/>
+    <circle cx="97" cy="114" r="12" fill="#9b59b6"/><circle cx="127" cy="128" r="8" fill="#d6ecf7" stroke="#7fb3d5"/>
+    
+    <text x="103" y="190" text-anchor="middle" class="cap">moves and feeds</text>
+    <text x="103" y="206" text-anchor="middle" class="cap">with pseudopodia</text>
+    <rect x="206" y="14" width="186" height="210" rx="12" fill="#fff" stroke="#c9c9c4"/>
+    <text x="299" y="38" text-anchor="middle" class="title">Euglena</text>
+    <ellipse cx="299" cy="118" rx="22" ry="52" fill="#fff3d6" stroke="#b5651d" stroke-width="2.5"/>
+    <ellipse cx="305" cy="88" rx="8" ry="5" fill="#2e8b57" stroke="#1e5e3a"/><ellipse cx="305" cy="108" rx="8" ry="5" fill="#2e8b57" stroke="#1e5e3a"/><ellipse cx="305" cy="128" rx="8" ry="5" fill="#2e8b57" stroke="#1e5e3a"/><ellipse cx="305" cy="148" rx="8" ry="5" fill="#2e8b57" stroke="#1e5e3a"/>
+    <circle cx="299" cy="120" r="8" fill="#9b59b6"/><circle cx="291" cy="78" r="4" fill="#c0392b"/>
+    <path d="M299 66 c-5 -6 5 -10 0 -16 c-3 -4 3 -7 2 -10" fill="none" stroke="#b5651d" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="309" y="58" class="cap" font-size="10">flagellum</text><text x="227" y="82" class="cap" font-size="10">eyespot</text>
+    <text x="299" y="190" text-anchor="middle" class="cap">chloroplasts</text>
+    <text x="299" y="206" text-anchor="middle" class="cap">and a flagellum</text>
+    <rect x="402" y="14" width="186" height="210" rx="12" fill="#fff" stroke="#c9c9c4"/>
+    <text x="495" y="38" text-anchor="middle" class="title">Bacterium</text>
+    <rect x="445" y="96" width="100" height="44" rx="22" fill="#d7f0d0" stroke="#4e9a4e" stroke-width="3"/>
+    <path d="M475 118 c-6 -12 12 -16 10 -6 c-2 10 20 12 20 0 c0 -10 -14 -12 -12 -2" fill="none" stroke="#6c3483" stroke-width="2.5"/>
+    <path d="M545 118 c12 -8 14 12 26 4 c8 -6 14 4 20 0" fill="none" stroke="#4e9a4e" stroke-width="2" stroke-linecap="round"/>
+    <text x="435" y="160" class="cap" font-size="10">loop of DNA, no nucleus</text>
+    <text x="495" y="190" text-anchor="middle" class="cap">no nucleus</text>
+    <text x="495" y="206" text-anchor="middle" class="cap">splits in two</text>
+    <rect x="598" y="14" width="186" height="210" rx="12" fill="#fff" stroke="#c9c9c4"/>
+    <text x="691" y="38" text-anchor="middle" class="title">Yeast</text>
+    <circle cx="683" cy="118" r="30" fill="#fff3d6" stroke="#b58a00" stroke-width="3"/><circle cx="681" cy="120" r="9" fill="#9b59b6"/>
+    <circle cx="719" cy="96" r="14" fill="#fff3d6" stroke="#b58a00" stroke-width="3"/><circle cx="719" cy="96" r="5" fill="#9b59b6"/>
+    <text x="711" y="74" class="cap" font-size="10">bud</text>
+    <text x="691" y="190" text-anchor="middle" class="cap">a fungus</text>
+    <text x="691" y="206" text-anchor="middle" class="cap">reproduces by budding</text>
+</svg>

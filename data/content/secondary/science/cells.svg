@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+
+    <text x="170" y="24" text-anchor="middle" class="title">Animal cell</text>
+    <text x="520" y="24" text-anchor="middle" class="title">Plant cell</text>
+    <!-- animal -->
+    <path d="M80 150 C70 90 120 50 180 56 C240 60 280 100 266 160 C254 220 200 250 140 240 C90 232 86 190 80 150Z" fill="#fff3d6" stroke="#b5651d" stroke-width="4"/>
+    <circle cx="180" cy="140" r="32" fill="#9b59b6" stroke="#6c3483" stroke-width="2"/><circle cx="184" cy="137" r="9.6" fill="#6c3483"/> <g transform="rotate(-30 122 110)"><ellipse cx="122" cy="110" rx="20" ry="9" fill="#e67e22" stroke="#a85a10" stroke-width="1.5"/><path d="M108 110 q4 -6 8 0 t8 0 t8 0" fill="none" stroke="#a85a10" stroke-width="1.2"/></g> <g transform="rotate(20 230 200)"><ellipse cx="230" cy="200" rx="20" ry="9" fill="#e67e22" stroke="#a85a10" stroke-width="1.5"/><path d="M216 200 q4 -6 8 0 t8 0 t8 0" fill="none" stroke="#a85a10" stroke-width="1.2"/></g> <g transform="rotate(10 130 196)"><ellipse cx="130" cy="196" rx="20" ry="9" fill="#e67e22" stroke="#a85a10" stroke-width="1.5"/><path d="M116 196 q4 -6 8 0 t8 0 t8 0" fill="none" stroke="#a85a10" stroke-width="1.2"/></g>
+    <!-- plant -->
+    <rect x="410" y="46" width="220" height="210" rx="10" fill="#4e9a4e" stroke="#2f6b2f" stroke-width="2"/>
+    <rect x="422" y="58" width="196" height="186" rx="8" fill="#fff3d6" stroke="#b5651d" stroke-width="3"/>
+    <path d="M460 100 C480 70 580 70 594 110 C606 160 580 220 530 226 C470 230 440 180 460 100Z" fill="#d6ecf7" stroke="#7fb3d5" stroke-width="2"/>
+    <circle cx="454" cy="212" r="22" fill="#9b59b6" stroke="#6c3483" stroke-width="2"/><circle cx="458" cy="209" r="6.6" fill="#6c3483"/> <g transform="rotate(-20 448 80)"><ellipse cx="448" cy="80" rx="16" ry="9" fill="#2e8b57" stroke="#1e5e3a" stroke-width="1.5"/><path d="M440 78 h16 M440 82 h16" stroke="#8ee0a8" stroke-width="1.2"/></g> <g transform="rotate(0 560 72)"><ellipse cx="560" cy="72" rx="16" ry="9" fill="#2e8b57" stroke="#1e5e3a" stroke-width="1.5"/><path d="M552 70 h16 M552 74 h16" stroke="#8ee0a8" stroke-width="1.2"/></g> <g transform="rotate(80 600 170)"><ellipse cx="600" cy="170" rx="16" ry="9" fill="#2e8b57" stroke="#1e5e3a" stroke-width="1.5"/><path d="M592 168 h16 M592 172 h16" stroke="#8ee0a8" stroke-width="1.2"/></g> <g transform="rotate(70 440 150)"><ellipse cx="440" cy="150" rx="16" ry="9" fill="#2e8b57" stroke="#1e5e3a" stroke-width="1.5"/><path d="M432 148 h16 M432 152 h16" stroke="#8ee0a8" stroke-width="1.2"/></g> <g transform="rotate(-10 580 232)"><ellipse cx="580" cy="232" rx="20" ry="9" fill="#e67e22" stroke="#a85a10" stroke-width="1.5"/><path d="M566 232 q4 -6 8 0 t8 0 t8 0" fill="none" stroke="#a85a10" stroke-width="1.2"/></g>
+    
+  <g class="lbl" data-part="nucleus">
+    <line class="leader" x1="66" y1="150" x2="180" y2="140"/>
+    <circle class="dot" cx="180" cy="140" r="3.5"/>
+    <text class="name" x="60" y="154.5" text-anchor="end">Nucleus</text>
+    <g class="letter"><circle cx="51" cy="150" r="9.5"/><text x="51" y="154.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="cytoplasm">
+    <line class="leader" x1="279" y1="70" x2="240" y2="110"/>
+    <circle class="dot" cx="240" cy="110" r="3.5"/>
+    <text class="name" x="285" y="74.5" text-anchor="start">Cytoplasm</text>
+    <g class="letter"><circle cx="294" cy="70" r="9.5"/><text x="294" y="74.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="membrane">
+    <line class="leader" x1="124" y1="282" x2="110" y2="222"/>
+    <circle class="dot" cx="110" cy="222" r="3.5"/>
+    <text class="name" x="130" y="286.5" text-anchor="start">Cell membrane</text>
+    <g class="letter"><circle cx="139" cy="282" r="9.5"/><text x="139" y="286.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="mitochondria">
+    <line class="leader" x1="279" y1="230" x2="230" y2="200"/>
+    <circle class="dot" cx="230" cy="200" r="3.5"/>
+    <text class="name" x="285" y="234.5" text-anchor="start">Mitochondria</text>
+    <g class="letter"><circle cx="294" cy="230" r="9.5"/><text x="294" y="234.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="wall">
+    <line class="leader" x1="644" y1="70" x2="630" y2="90"/>
+    <circle class="dot" cx="630" cy="90" r="3.5"/>
+    <text class="name" x="650" y="74.5" text-anchor="start">Cell wall</text>
+    <g class="letter"><circle cx="659" cy="70" r="9.5"/><text x="659" y="74.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="chloroplast">
+    <line class="leader" x1="644" y1="190" x2="600" y2="170"/>
+    <circle class="dot" cx="600" cy="170" r="3.5"/>
+    <text class="name" x="650" y="194.5" text-anchor="start">Chloroplast</text>
+    <g class="letter"><circle cx="659" cy="190" r="9.5"/><text x="659" y="194.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="vacuole">
+    <line class="leader" x1="644" y1="130" x2="540" y2="150"/>
+    <circle class="dot" cx="540" cy="150" r="3.5"/>
+    <text class="name" x="650" y="134.5" text-anchor="start">Permanent vacuole</text>
+    <g class="letter"><circle cx="659" cy="130" r="9.5"/><text x="659" y="134.5" text-anchor="middle"></text></g>
+  </g>
+</svg>

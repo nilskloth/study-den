@@ -13,7 +13,7 @@ import { renderWordLists } from "./wordlists.js";
 import { renderActivity } from "./activity.js";
 
 const SUBJECT_LABELS = { reading: "Reading", gps: "Grammar & punctuation", maths: "Maths", spelling: "Spelling",
-  german: "German vocabulary", french: "French vocabulary" };
+  german: "German vocabulary", french: "French vocabulary", science: "Science revision" };
 
 /* Sonnet 5 pricing (per MTok): in $3 / out $15 — rough spend estimate. */
 function estimateSpend(log) {

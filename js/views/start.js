@@ -10,7 +10,7 @@ const LEVELS = [
   },
   {
     id: "secondary", href: "#/secondary", label: "Secondary",
-    sub: "Languages — German and French vocabulary",
+    sub: "Year 7 — German and French vocabulary, science revision",
     subject: "german"
   }
 ];

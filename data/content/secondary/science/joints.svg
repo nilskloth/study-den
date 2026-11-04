@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 270" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+
+    <rect x="14" y="16" width="146" height="196" rx="12" fill="#fff" stroke="#c9c9c4"/>
+    <text x="87" y="40" text-anchor="middle" class="title">Hinge</text>
+    <text x="87" y="58" text-anchor="middle" class="cap">knee, elbow</text>
+    
+    <line x1="77" y1="80" x2="83" y2="130" stroke="#7d7466" stroke-width="16.5" stroke-linecap="round"/>
+   <line x1="77" y1="80" x2="83" y2="130" stroke="#f4efe3" stroke-width="14" stroke-linecap="round"/>
+    <line x1="89" y1="138" x2="135" y2="174" stroke="#7d7466" stroke-width="14.5" stroke-linecap="round"/>
+   <line x1="89" y1="138" x2="135" y2="174" stroke="#f4efe3" stroke-width="12" stroke-linecap="round"/>
+    <ellipse cx="85" cy="134" rx="12" ry="9" fill="#bfe0f0" stroke="#7d7466" stroke-width="1.5"/>
+    <path d="M107 176 a26 26 0 0 1 -34 -22" fill="none" stroke="#17181a" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <path d="M71 152 l2 -6 l6 2" fill="none" stroke="#17181a" stroke-width="1.5"/>
+    <rect x="170" y="16" width="146" height="196" rx="12" fill="#fff" stroke="#c9c9c4"/>
+    <text x="243" y="40" text-anchor="middle" class="title">Ball and socket</text>
+    <text x="243" y="58" text-anchor="middle" class="cap">hip, shoulder</text>
+    
+    <path d="M193 90 h40 a28 28 0 0 0 0 56 h-40Z" fill="#f4efe3" stroke="#7d7466" stroke-width="2"/>
+    <circle cx="241" cy="118" r="20" fill="#bfe0f0" stroke="#7d7466" stroke-width="2"/>
+    <line x1="251" y1="132" x2="287" y2="180" stroke="#7d7466" stroke-width="14.5" stroke-linecap="round"/>
+   <line x1="251" y1="132" x2="287" y2="180" stroke="#f4efe3" stroke-width="12" stroke-linecap="round"/>
+    <path d="M263 94 a30 30 0 0 1 30 10" fill="none" stroke="#17181a" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <path d="M289 98 l4 6 l-7 2" fill="none" stroke="#17181a" stroke-width="1.5"/>
+    <rect x="326" y="16" width="146" height="196" rx="12" fill="#fff" stroke="#c9c9c4"/>
+    <text x="399" y="40" text-anchor="middle" class="title">Pivot</text>
+    <text x="399" y="58" text-anchor="middle" class="cap">neck</text>
+    
+    <ellipse cx="399" cy="94" rx="30" ry="22" fill="#f4efe3" stroke="#7d7466" stroke-width="2"/>
+    <rect x="392" y="114" width="14" height="22" rx="3" fill="#bfe0f0" stroke="#7d7466" stroke-width="1.5"/>
+    <rect x="375" y="130" width="48" height="20" rx="6" fill="#f4efe3" stroke="#7d7466" stroke-width="2"/>
+    <rect x="381" y="154" width="36" height="16" rx="5" fill="#f4efe3" stroke="#7d7466" stroke-width="2"/>
+    <path d="M363 90 a40 14 0 0 0 72 0" fill="none" stroke="#17181a" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <path d="M431 84 l4 6 l-7 1" fill="none" stroke="#17181a" stroke-width="1.5"/>
+    <rect x="482" y="16" width="146" height="196" rx="12" fill="#fff" stroke="#c9c9c4"/>
+    <text x="555" y="40" text-anchor="middle" class="title">Fixed</text>
+    <text x="555" y="58" text-anchor="middle" class="cap">skull</text>
+    
+    <ellipse cx="555" cy="122" rx="42" ry="46" fill="#f4efe3" stroke="#7d7466" stroke-width="2.5"/>
+    <path d="M515 110 l8 -4 l6 6 l8 -5 l6 6 l8 -5 l6 6 l8 -5 l8 4 M555 78 l3 8 l-5 7 l5 8 l-4 8 l4 8" fill="none" stroke="#7d7466" stroke-width="1.8"/><text x="320" y="240" text-anchor="middle" class="cap">Ligaments join bone to bone · tendons join muscle to bone</text>
+     <text x="320" y="258" text-anchor="middle" class="cap">Cartilage cushions the bone ends · synovial fluid oils the joint</text>
+</svg>
