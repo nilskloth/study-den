@@ -319,7 +319,7 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
   colour order, `--viz-N` in app.css — validated dataviz palette, not the subject colours).
 
 ## Version control
-- GitHub: `git@github.com:nilskloth/SAT_Trainer.git`, branch `main`
+- GitHub: `git@github.com:nilskloth/study-den.git`, branch `main`
 - SSH key: `~/.ssh/id_ed25519`
 
 ## Deployment
