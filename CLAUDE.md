@@ -184,8 +184,16 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
 - **Source:** the revision list the school sets on Arbor (Year 7, Nov 2026: organisation, skeleton, joints,
   muscles, microscope, cells, specialised cells, unicellular organisms, diffusion). Facts are written to KS3
   level in our own words — the site is public.
-- **Data (`science.json`):** `{ subject, label, unit, topics: [{ id, number, title, summary,
-  images: [{ file, caption }], facts: ["**bold** allowed"], keywords: [[term, meaning]], questions }] }`.
+- **Class sheets** come first, as topics with `sheet: true` (no `number`; shown by title, grouped
+  "From your class sheets", button "Just the class sheets") and a `source` line on the notes page:
+  `sheet-rev` = the revision sheet (Q1/Q2, past-paper style; stems as printed, prefixed "Q1 (a)(i)",
+  diagrams redrawn as `sheet-arm-ab`, `sheet-arm`, `sheet-leg` with the sheet's fixed letters — plain
+  text, not `.lbl`, so never shuffled); `sheet-skel` = the blank "Skeletal System" handout (bones,
+  functions table Function / Explanation / Benefit to performance as `table`, connective tissue).
+  Neither sheet prints answers — ours, flagged in `source`. The numbered topics are "our notes".
+- **Data (`science.json`):** `{ subject, label, unit, topics: [{ id, number, sheet?, source?, title, summary,
+  images: [{ file, caption }], table?: { title, head[], rows[][] }, facts: ["**bold** allowed"],
+  keywords: [[term, meaning]], questions }] }`.
   Question types: `short` (typed: `answer` + `accept[]`; in pick mode `answer` + 3 `choices`), `mcq`
   (pick only, `answer` + 3 `choices`), `tf` (`answer: true|false`). Every question has `explain`.
   A `short` question may ask about a diagram: `image` (file under `science/`) + `part` (the label key)
@@ -194,8 +202,11 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
   `<g class="lbl" data-part="…">` with a leader, a dot, the name and an empty letter badge; the view fills
   letters A, B, C… (shuffled in quizzes, so letters can't be memorised), toggles root class `quiz`
   (letters instead of names) and `ask` (highlight the asked part). On the notes page "Hide the names"
-  turns a diagram into a self-test (tap a letter to reveal). Phones: the diagram scrolls sideways
-  rather than shrinking. All drawings live in `tools/build-science-art.mjs`; re-run it after editing.
+  turns a diagram into a self-test (tap a letter to reveal). Quiz diagrams are cropped to the drawing
+  (`fitView`, hidden names don't count) so they fill a phone. Phones (host < 520 px): the notes diagram
+  shows letters with a key list underneath (names there; "Hide the names" hides the key). The test
+  review shows question + both answers in one cell (the vocab review hides column 2 on phones).
+  All drawings live in `tools/build-science-art.mjs`; re-run it after editing.
 - **Marking:** typed answers normalised (`the`/`a` dropped, punctuation/× stripped); exact match to
   `answer`/`accept` is right; a spelling slip (edit distance 1, or 2 for long words) counts as right
   with the correct spelling shown; numbers must be exact. "I was right" overrule as in vocab.

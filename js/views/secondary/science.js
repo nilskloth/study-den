@@ -73,11 +73,31 @@ async function mountFigure(host, file, { quiz = false, ask = null, reveal = fals
     /* self-test on the notes page: tap a letter to see its name */
     labels.forEach(g => g.addEventListener("click", () => g.classList.toggle("reveal")));
   }
+  fitView(svgEl);
   return asked;
 }
 
+/* Crop the viewBox to what is drawn (hidden names don't count), so a
+   letters-only diagram fills a phone screen instead of shrinking. */
+function fitView(svgEl) {
+  if (!svgEl.dataset.box) svgEl.dataset.box = svgEl.getAttribute("viewBox");
+  svgEl.setAttribute("viewBox", svgEl.dataset.box);
+  let b;
+  try { b = svgEl.getBBox(); } catch { return; }
+  if (!b || !b.width || !b.height) return;
+  const pad = 6;
+  svgEl.setAttribute("viewBox", `${b.x - pad} ${b.y - pad} ${b.width + 2 * pad} ${b.height + 2 * pad}`);
+}
+
+/* Phones: names on the drawing would be too small to read, so the
+   diagram shows letters and a key underneath gives the names. */
+const NARROW = 520;
+
 /* **bold** in facts → <strong> (everything else escaped). */
 const rich = s => esc(s).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+
+/* Class-sheet topics have no number; the rest are "N. Title". */
+const topicLabel = t => (t.sheet ? t.title : `${t.number}. ${t.title}`);
 
 const mastered = stat => (stat?.mastery || 0) >= 0.8;
 
@@ -116,10 +136,11 @@ async function renderLearn({ el, bank }, topicId) {
 
   el.innerHTML = `
     <div class="run-bar">
-      <h2>${topic.number}. ${esc(topic.title)}</h2>
+      <h2>${esc(topicLabel(topic))}</h2>
       <a class="btn quiet" href="#/secondary/science">Back</a>
     </div>
     <div class="paper-sheet sci-notes" data-subject="science">
+      ${topic.source ? `<p class="sci-source">${esc(topic.source)}</p>` : ""}
       <p class="muted" style="margin-top:0;">${esc(topic.summary)}</p>
       ${topic.images.map((im, i) => `
         <figure class="sci-figure" data-fig="${i}">
@@ -128,6 +149,12 @@ async function renderLearn({ el, bank }, topicId) {
             <button type="button" class="quiet sci-selftest hidden" data-selftest="${i}">Hide the names</button>
           </figcaption>
         </figure>`).join("")}
+      ${topic.table ? `
+        <h3>${esc(topic.table.title)}</h3>
+        <table class="word-list sci-table">
+          <thead><tr>${topic.table.head.map(h => `<th>${esc(h)}</th>`).join("")}</tr></thead>
+          <tbody>${topic.table.rows.map(r => `<tr>${r.map((c, j) => j ? `<td>${esc(c)}</td>` : `<td><strong>${esc(c)}</strong></td>`).join("")}</tr>`).join("")}</tbody>
+        </table>` : ""}
       <h3>Key facts</h3>
       <ul class="fact-list">${topic.facts.map(f => `<li>${rich(f)}</li>`).join("")}</ul>
       <h3>Key words</h3>
@@ -142,19 +169,50 @@ async function renderLearn({ el, bank }, topicId) {
 
   topic.images.forEach(async (im, i) => {
     const host = el.querySelector(`[data-host="${i}"]`);
-    await mountFigure(host, im.file, { reveal: true });
+    const narrow = host.clientWidth < NARROW;
+    await mountFigure(host, im.file, { quiz: narrow, reveal: !narrow });
     const svgEl = host.querySelector("svg");
     if (!svgEl?.querySelector(".lbl")) return;
     const btn = el.querySelector(`[data-selftest="${i}"]`);
     btn.classList.remove("hidden");
+    if (narrow) return mountKey(host, svgEl, btn);
     btn.addEventListener("click", () => {
       const quiz = svgEl.classList.toggle("quiz");
       svgEl.querySelectorAll(".lbl.reveal").forEach(g => g.classList.remove("reveal"));
       btn.textContent = quiz ? "Show the names" : "Hide the names";
       host.nextElementSibling.querySelector("[data-hint]")?.remove();
       if (quiz) btn.insertAdjacentHTML("beforebegin", `<span data-hint> Tap a letter to check it. </span>`);
+      /* no refit: the frame keeps room for names revealed by a tap */
     });
   });
+
+  /* Key under a letters-only diagram (phones). "Hide the names" hides the
+     key's names; tapping a row or a letter shows that one name again. */
+  function mountKey(host, svgEl, btn) {
+    const labels = [...svgEl.querySelectorAll(".lbl")]
+      .map(g => ({ g, letter: g.querySelector(".letter text")?.textContent || "", name: g.querySelector(".name")?.textContent || "" }))
+      .sort((a, b) => a.letter.localeCompare(b.letter));
+    const key = document.createElement("ol");
+    key.className = "sci-key";
+    key.innerHTML = labels.map(l => `<li data-part="${esc(l.g.dataset.part)}"><span class="sci-key-letter">${esc(l.letter)}</span><span class="sci-key-name">${esc(l.name)}</span></li>`).join("");
+    host.after(key);
+    const rowOf = part => key.querySelector(`[data-part="${CSS.escape(part)}"]`);
+    const toggle = part => {
+      const row = rowOf(part);
+      const on = row.classList.toggle("reveal");
+      labels.forEach(l => l.g.classList.toggle("ask", on && l.g.dataset.part === part && key.classList.contains("hide-names")));
+    };
+    key.querySelectorAll("li").forEach(li => li.addEventListener("click", () => toggle(li.dataset.part)));
+    labels.forEach(l => l.g.addEventListener("click", () => toggle(l.g.dataset.part)));
+    btn.addEventListener("click", () => {
+      const hide = key.classList.toggle("hide-names");
+      key.querySelectorAll(".reveal").forEach(li => li.classList.remove("reveal"));
+      labels.forEach(l => l.g.classList.remove("ask"));
+      btn.textContent = hide ? "Show the names" : "Hide the names";
+      btn.parentElement.querySelector("[data-hint]")?.remove();
+      if (hide) btn.insertAdjacentHTML("beforebegin", `<span data-hint> Tap a letter to check it. </span>`);
+    });
+  }
 
   el.querySelector("[data-practise]").addEventListener("click", () => {
     const prefs = stateOf().prefs;
@@ -187,11 +245,13 @@ function renderSetup(ctx) {
       <h3>1. Choose your topics</h3>
       <p class="muted" style="margin-top:calc(-1 * var(--sp-2));">Read the notes first, then practise. Each topic has a diagram, key facts and key words.</p>
       <div class="section-grid" style="margin-left:0;">
-        ${bank.topics.map(t => `
+        ${bank.topics.map((t, i) => `
+          ${i === 0 && t.sheet ? `<p class="section-group muted" style="border-top:0;padding-top:0;">From your class sheets</p>` : ""}
+          ${!t.sheet && bank.topics[i - 1]?.sheet ? `<p class="section-group muted">Revision topics — our notes</p>` : ""}
           <div class="section-row">
             <label class="section-pick">
               <input type="checkbox" data-topic="${t.id}" ${selected.has(t.id) ? "checked" : ""}>
-              <span><strong>${t.number}.</strong> ${esc(t.title)}</span>
+              <span>${t.sheet ? esc(t.title) : `<strong>${t.number}.</strong> ${esc(t.title)}`}</span>
             </label>
             <span class="muted section-meta" data-meta="${t.id}">${masteredIn(t)}/${t.questions.length} mastered</span>
             <a class="section-look" href="#/secondary/science/learn/${t.id}">Read the notes</a>
@@ -199,6 +259,7 @@ function renderSetup(ctx) {
       </div>
       <p style="margin-bottom:0;">
         <button type="button" class="quiet" data-all>Select everything</button>
+        ${bank.topics.some(t => t.sheet) ? `<button type="button" class="quiet" data-sheet>Just the class sheets</button>` : ""}
         <button type="button" class="quiet" data-none>Clear</button>
       </p>
     </div>
@@ -263,6 +324,11 @@ function renderSetup(ctx) {
   el.querySelector("[data-all]").addEventListener("click", () => {
     bank.topics.forEach(t => selected.add(t.id));
     el.querySelectorAll("[data-topic]").forEach(b => { b.checked = true; });
+    refresh();
+  });
+  el.querySelector("[data-sheet]")?.addEventListener("click", () => {
+    selected = new Set(bank.topics.filter(t => t.sheet).map(t => t.id));
+    el.querySelectorAll("[data-topic]").forEach(b => { b.checked = selected.has(b.dataset.topic); });
     refresh();
   });
   el.querySelector("[data-none]").addEventListener("click", () => {
@@ -381,7 +447,7 @@ function startRun(ctx, cfg) {
     run.current = q;
     run.lastId = q.id;
     progress();
-    $("[data-context]").textContent = `${q.topic.number}. ${q.topic.title}`;
+    $("[data-context]").textContent = topicLabel(q.topic);
     $("[data-feedback]").innerHTML = "";
     $("[data-answer]").innerHTML = "";
     const fig = $("[data-figure]");
@@ -521,16 +587,20 @@ function startRun(ctx, cfg) {
           <p class="muted" style="margin:0;">Your score</p>
           <div class="result-score">${right} / ${run.results.length}</div>
           <p class="muted">${verdict(right, run.results.length)}</p>
-          <table class="word-list review">
-            <thead><tr><th></th><th>Question</th><th>Your answer</th><th>Answer</th><th></th></tr></thead>
+          <table class="word-list review sci-review">
             <tbody>
               ${run.results.map((r, i) => `
                 <tr class="${r.ok ? "is-correct" : "is-wrong"}">
                   <td class="mark">${r.ok ? "✓" : "✗"}</td>
-                  <td>${esc(r.q.stem.replace("{L}", r.letter || "?"))}${r.q.image ? ` <span class="muted">(diagram)</span>` : ""}</td>
-                  <td>${r.answer !== "" && r.answer != null ? esc(String(r.answer)) : `<span class="muted">—</span>`}</td>
-                  <td>${esc(answerText(r.q))}</td>
-                  <td>${!r.ok && r.answer && r.q.type === "short" && cfg.style === "type" ? `<button type="button" class="quiet" data-overrule="${i}">I was right</button>` : ""}</td>
+                  <td>
+                    <div>${esc(r.q.stem.replace("{L}", r.letter || "?"))}${r.q.image ? ` <span class="muted">(diagram)</span>` : ""}</div>
+                    <div class="sci-review-answers">
+                      ${r.ok ? `<span>${r.answer !== "" && r.answer != null ? esc(String(r.answer)) : ""}</span>`
+                        : `<span class="muted">You:</span> ${r.answer !== "" && r.answer != null ? `<s>${esc(String(r.answer))}</s>` : `<span class="muted">—</span>`}
+                           · <span class="muted">Answer:</span> <strong>${esc(answerText(r.q))}</strong>`}
+                    </div>
+                    ${!r.ok && r.answer && r.q.type === "short" && cfg.style === "type" ? `<button type="button" class="quiet" data-overrule="${i}">I was right</button>` : ""}
+                  </td>
                 </tr>`).join("")}
             </tbody>
           </table>

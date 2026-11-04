@@ -458,14 +458,26 @@ button.hear { padding: var(--sp-1) var(--sp-2); font-size: var(--fs-3); line-hei
 .fact-list li { margin: var(--sp-2) 0; line-height: 1.5; }
 .keyword-list td[lang] { width: 36%; }
 .sci-quiz-figure { max-width: 640px; margin: 0 auto var(--sp-3); }
-.sci-quiz-figure svg { max-width: 100%; }
+/* diagrams are cropped to their drawing (science.js fitView); keep tall ones within the screen */
+.sci-figure-host svg { max-height: 70vh; }
+.sci-quiz-figure svg { max-width: 100%; max-height: 52vh; }
 .sci-prompt { font-family: var(--font-paper); font-size: var(--fs-3); margin: var(--sp-3) auto var(--sp-4); max-width: 640px; }
 .tf-grid { max-width: 360px; }
+/* key under a letters-only diagram (phones) */
+.sci-key { list-style: none; padding: 0; margin: var(--sp-3) 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: var(--sp-1) var(--sp-3); font-size: var(--fs-1); }
+.sci-key li { display: flex; align-items: center; gap: var(--sp-2); cursor: pointer; min-height: 28px; }
+.sci-key-letter { flex: none; width: 22px; height: 22px; border-radius: 50%; background: var(--ink, #17181a); color: #fff; font-weight: 700; font-size: 12px; display: inline-flex; align-items: center; justify-content: center; }
+.sci-key.hide-names li:not(.reveal) .sci-key-name { display: none; }
+.sci-key.hide-names li:not(.reveal)::after { content: "?"; color: var(--ink-faint); }
+.sci-key.hide-names li.reveal .sci-key-letter { background: #c0392b; }
+/* review: question with both answers underneath (no column hiding on phones) */
+.sci-review td { vertical-align: top; }
+.sci-review-answers { margin-top: 2px; font-size: var(--fs-0); }
+.sci-review button { margin-top: var(--sp-1); }
 @media (max-width: 600px) {
   .sci-prompt { font-size: var(--fs-2); }
+  .word-list.review.sci-review td:nth-child(2) { display: table-cell; }
 }
-@media (max-width: 600px) {
-  /* keep the labels readable: the diagram scrolls sideways rather than shrinking */
-  .sci-figure-host { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .sci-figure-host svg { min-width: 560px; }
-}
+.sci-source { font-size: var(--fs-0); background: var(--surface); border-left: 3px solid var(--subject); padding: var(--sp-2) var(--sp-3); margin: 0 0 var(--sp-3); }
+.sci-table th { text-align: left; font-size: var(--fs-0); }
+.sci-table td { vertical-align: top; font-size: var(--fs-0); line-height: 1.45; }

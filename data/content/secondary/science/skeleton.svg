@@ -71,6 +71,12 @@
     <text class="name" x="450" y="44.5" text-anchor="start">Skull (cranium)</text>
     <g class="letter"><circle cx="459" cy="40" r="9.5"/><text x="459" y="44.5" text-anchor="middle"></text></g>
   </g>
+  <g class="lbl" data-part="jaw">
+    <line class="leader" x1="444" y1="86" x2="334" y2="86"/>
+    <circle class="dot" cx="334" cy="86" r="3.5"/>
+    <text class="name" x="450" y="90.5" text-anchor="start">Lower jaw (mandible)</text>
+    <g class="letter"><circle cx="459" cy="86" r="9.5"/><text x="459" y="90.5" text-anchor="middle"></text></g>
+  </g>
   <g class="lbl" data-part="clavicle">
     <line class="leader" x1="186" y1="96" x2="286" y2="116"/>
     <circle class="dot" cx="286" cy="116" r="3.5"/>

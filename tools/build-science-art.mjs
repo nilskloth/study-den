@@ -136,6 +136,7 @@ files.skeleton = (() => {
 
   const L = [
     label("skull", "Skull (cranium)", [cx + 30, 40], [cx + 130, 40]),
+    label("jaw", "Lower jaw (mandible)", [cx + 14, 86], [cx + 130, 86]),
     label("clavicle", "Clavicle (collarbone)", [cx - 34, 116], [cx - 140, 96], "end"),
     label("scapula", "Scapula (shoulder blade)", [cx + 66, 150], [cx + 130, 130]),
     label("sternum", "Sternum (breastbone)", [cx, 168], [cx + 130, 175]),
@@ -408,6 +409,56 @@ files.diffusion = (() => {
     box(370, "After", "evenly spread — no net movement", 22, 22) +
     `<text x="320" y="250" text-anchor="middle" class="cap">Particles move randomly all the time. Overall they drift from high to low concentration, with no energy needed.</text>`;
   return svg(640, 262, body);
+})();
+
+/* ---------------- Class revision sheet: arm and leg ----------------
+   Fixed labels (plain text, not .lbl) because the sheet's questions name
+   them ("part A", "Give the letter"); they are never shuffled. */
+const tag = (text, [px, py], [tx, ty], anchor = "start") => `
+  <line x1="${tx + (anchor === "start" ? -6 : 6)}" y1="${ty}" x2="${px}" y2="${py}" stroke="#6a6d71" stroke-width="1.2"/>
+  <circle cx="${px}" cy="${py}" r="3" fill="#6a6d71"/>
+  <text x="${tx}" y="${ty + 4.5}" text-anchor="${anchor}" font-weight="700">${text}</text>`;
+
+/* Bent arm seen from the side, hand to the left: biceps at the front
+   (left of the humerus), triceps at the back. */
+const sheetArm = names => {
+  const blade = `<path d="M318 64 L440 34 C452 70 440 120 404 168 C380 140 350 104 318 92Z" fill="${BONE}" stroke="${BONE_EDGE}" stroke-width="2"/>`;
+  const bones = bone(312, 76, 312, 240, 16) + bone(306, 250, 120, 258, 10) + bone(306, 262, 124, 270, 7) +
+    `<circle cx="312" cy="250" r="13" fill="${BONE}" stroke="${BONE_EDGE}" stroke-width="2"/>` +
+    [-12, -4, 4, 12].map(d => bone(116, 262 + d, 70, 258 + d * 1.6, 3.5)).join("") + bone(120, 252, 92, 236, 3.5);
+  const muscles = `
+    <path d="M300 92 C272 120 270 200 290 236 L298 236 C306 190 306 130 304 92Z" fill="${MUSCLE}" stroke="${MUSCLE_DARK}" stroke-width="2"/>
+    <path d="M324 92 C350 124 352 200 334 236 L326 236 C320 190 320 130 320 92Z" fill="${MUSCLE}" stroke="${MUSCLE_DARK}" stroke-width="2"/>
+    <path d="M292 236 L282 252" stroke="#cfc8ba" stroke-width="4" stroke-linecap="round"/>
+    <path d="M330 236 L322 262" stroke="#cfc8ba" stroke-width="4" stroke-linecap="round"/>`;
+  return svg(480, 300, blade + bones + muscles +
+    tag(names.front, [286, 170], [220, 160], "end") + tag(names.back, [338, 180], [380, 200]) +
+    tag("shoulder blade", [410, 70], [350, 26], "end") +
+    (names.tendons ? tag("tendon", [287, 245], [220, 236], "end") + tag("tendon", [326, 252], [380, 262])
+      : tag("bones of the lower arm", [220, 258], [200, 292])));
+};
+files["sheet-arm-ab"] = sheetArm({ front: "part A", back: "part B" });
+files["sheet-arm"] = sheetArm({ front: "biceps", back: "triceps", tendons: true });
+
+/* Leg seen from the side, toes to the left: D front of thigh, A back of
+   thigh, C front of shin, B calf; the arrow lifts the toes. */
+files["sheet-leg"] = (() => {
+  const bones = `<path d="M196 40 C180 40 176 70 200 76 L250 70 C262 62 256 40 240 40Z" fill="${BONE}" stroke="${BONE_EDGE}" stroke-width="2"/>` +
+    bone(232, 64, 236, 246, 16) + `<circle cx="236" cy="252" r="13" fill="${BONE}" stroke="${BONE_EDGE}" stroke-width="2"/>` +
+    `<circle cx="218" cy="252" r="7" fill="${BONE}" stroke="${BONE_EDGE}" stroke-width="2"/>` +
+    bone(236, 266, 238, 436, 12) + bone(250, 270, 250, 432, 5) +
+    `<path d="M228 438 h40 c8 0 10 18 0 20 h-120 c-6 0 -6 -10 0 -12 Z" fill="${BONE}" stroke="${BONE_EDGE}" stroke-width="2"/>`;
+  const m = d => `<path d="${d}" fill="${MUSCLE}" stroke="${MUSCLE_DARK}" stroke-width="2"/>`;
+  const muscles = m("M220 80 C196 120 198 200 216 240 L224 238 C226 190 226 120 226 82Z") +   // D front thigh
+    m("M246 80 C272 120 272 200 254 238 L246 236 C244 190 244 120 242 82Z") +                 // A back thigh
+    m("M226 272 C212 310 214 380 226 420 L230 420 C232 370 232 310 230 272Z") +               // C front shin
+    m("M256 270 C284 300 282 360 262 404 L256 404 C256 360 256 310 254 272Z") +               // B calf
+    `<path d="M260 404 L266 440" stroke="#cfc8ba" stroke-width="4" stroke-linecap="round"/>`;
+  const arrow = `<path d="M150 440 C134 430 132 410 144 396" fill="none" stroke="${INK}" stroke-width="2"/><path d="M136 402 l8 -8 l3 11" fill="none" stroke="${INK}" stroke-width="2"/>`;
+  return svg(400, 480, bones + muscles + arrow +
+    tag("D", [208, 160], [140, 150], "end") + tag("A", [262, 160], [320, 170]) +
+    tag("C", [220, 350], [140, 360], "end") + tag("B", [272, 330], [320, 320]) +
+    tag("tendon", [264, 425], [320, 436]));
 })();
 
 for (const [name, content] of Object.entries(files)) {

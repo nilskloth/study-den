@@ -18,6 +18,7 @@ const ok = (cond, msg) => { if (cond) pass++; else { fail++; console.log("✗", 
 /* 1. Self-acceptance across all imported lists */
 for (const f of readdirSync(DIR).filter(f => f.endsWith(".json"))) {
   const bank = JSON.parse(readFileSync(join(DIR, f), "utf8"));
+  if (!Array.isArray(bank.chapters)) continue;   // science.json etc. are not vocab banks
   const lang = bank.language;
   for (const ch of bank.chapters) for (const s of ch.sections) for (const it of s.items) {
     ok(checkAnswer(it.en, it.en, { lang: "en", prompt: it[lang] }).ok, `${f} en self: ${it.en}`);
