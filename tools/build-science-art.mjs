@@ -67,6 +67,7 @@ const bone = (x1, y1, x2, y2, w) =>
    <line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${BONE}" stroke-width="${w}" stroke-linecap="round"/>`;
 
 const files = {};
+let skeletonBody = "";   // the bones without labels, reused for the class sheet's Q1
 
 /* ---------------- 1. Levels of organisation ---------------- */
 files.organisation = (() => {
@@ -134,6 +135,7 @@ files.skeleton = (() => {
   b += `<circle cx="${cx - 47}" cy="477" r="9" fill="${BONE}" stroke="${BONE_EDGE}" stroke-width="2"/><circle cx="${cx + 47}" cy="477" r="9" fill="${BONE}" stroke="${BONE_EDGE}" stroke-width="2"/>`;
   b += `<path d="M${cx - 58} 586 l-26 16 h40 l6 -16Z" fill="${BONE}" stroke="${BONE_EDGE}" stroke-width="2"/><path d="M${cx + 58} 586 l26 16 h-40 l-6 -16Z" fill="${BONE}" stroke="${BONE_EDGE}" stroke-width="2"/>`;
 
+  skeletonBody = b;
   const L = [
     label("skull", "Skull (cranium)", [cx + 30, 40], [cx + 130, 40]),
     label("jaw", "Lower jaw (mandible)", [cx + 14, 86], [cx + 130, 86]),
@@ -439,6 +441,23 @@ const sheetArm = names => {
 };
 files["sheet-arm-ab"] = sheetArm({ front: "part A", back: "part B" });
 files["sheet-arm"] = sheetArm({ front: "biceps", back: "triceps", tendons: true });
+
+/* Q1: the whole skeleton with the sheet's six labels. The sheet asks you to
+   draw a line from J to a joint in the leg, so J stands on its own. */
+files["sheet-skeleton"] = (() => {
+  const cx = 320;
+  const j = `<circle cx="${cx - 150}" cy="500" r="17" fill="#fff" stroke="${INK}" stroke-width="2"/>
+    <text x="${cx - 150}" y="507" text-anchor="middle" font-weight="700" class="sheet-j">J</text>`;
+  /* bigger text than the topic drawings, so it reads like the other sheet diagrams */
+  const big = `<style>.sheet-tags text { font-size: 20px; } .sheet-j { font-size: 19px; }</style>`;
+  return svg(640, 612, big + skeletonBody + j + `<g class="sheet-tags">` +
+    tag("upper jaw", [cx - 16, 72], [cx - 130, 58], "end") +
+    tag("lower jaw", [cx - 8, 90], [cx - 130, 96], "end") +
+    tag("ribs", [cx + 58, 180], [cx + 140, 168]) +
+    tag("humerus", [cx + 86, 200], [cx + 140, 214]) +
+    tag("backbone", [cx, 262], [cx + 140, 262]) +
+    tag("femur", [cx + 42, 420], [cx + 140, 420]) + `</g>`);
+})();
 
 /* Leg seen from the side, toes to the left: D front of thigh, A back of
    thigh, C front of shin, B calf; the arrow lifts the toes. */

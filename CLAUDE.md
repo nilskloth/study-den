@@ -224,7 +224,7 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
 - **Class sheets** come first, as topics with `sheet: true` (no `number`; shown by title, grouped
   "From your class sheets", button "Just the class sheets") and a `source` line on the notes page:
   `sheet-rev` = the revision sheet (Q1/Q2, past-paper style; stems as printed, prefixed "Q1 (a)(i)",
-  diagrams redrawn as `sheet-arm-ab`, `sheet-arm`, `sheet-leg` with the sheet's fixed letters — plain
+  diagrams redrawn as `sheet-skeleton` (Q1: six labels + a lone J), `sheet-arm-ab`, `sheet-arm`, `sheet-leg` with the sheet's fixed letters — plain
   text, not `.lbl`, so never shuffled); `sheet-skel` = the blank "Skeletal System" handout (bones,
   functions table Function / Explanation / Benefit to performance as `table`, connective tissue).
   Neither sheet prints answers — ours, flagged in `source`. The numbered topics are "our notes".

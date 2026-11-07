@@ -13,6 +13,10 @@
    "summary": "The two questions from the class revision sheet: the skeleton and joints (Q1), and muscles, tendons and antagonistic pairs in the arm and leg (Q2).",
    "images": [
     {
+     "file": "sheet-skeleton",
+     "caption": "Q1: the human skeleton, with the labels from the sheet. In (a) you draw a line from J to one joint in the leg."
+    },
+    {
      "file": "sheet-arm-ab",
      "caption": "Q1 (d): part of the arm. Part A is the biceps, part B the triceps."
     },
@@ -77,7 +81,8 @@
       "shoulder",
       "wrist"
      ],
-     "explain": "The leg has three main joints: hip, knee and ankle."
+     "explain": "The leg has three main joints: hip, knee and ankle.",
+     "image": "sheet-skeleton"
     },
     {
      "id": "rs-02",
@@ -94,26 +99,28 @@
     {
      "id": "rs-03",
      "type": "mcq",
-     "stem": "Q1 (b)(i) Which part of our skeleton, labelled in the diagram, moves so that we can breathe? (Labels: upper jaw, lower jaw, humerus, ribs, backbone, femur.)",
+     "stem": "Q1 (b)(i) Which part of our skeleton, labelled in the diagram, moves so that we can breathe?",
      "answer": "ribs",
      "choices": [
       "backbone",
       "humerus",
       "upper jaw"
      ],
-     "explain": "The ribs move up and out when we breathe in, and down and in when we breathe out."
+     "explain": "The ribs move up and out when we breathe in, and down and in when we breathe out.",
+     "image": "sheet-skeleton"
     },
     {
      "id": "rs-04",
      "type": "mcq",
-     "stem": "Q1 (b)(ii) Which part of our skeleton, labelled in the diagram, moves so that we can chew food? (Labels: upper jaw, lower jaw, humerus, ribs, backbone, femur.)",
+     "stem": "Q1 (b)(ii) Which part of our skeleton, labelled in the diagram, moves so that we can chew food?",
      "answer": "lower jaw",
      "choices": [
       "upper jaw",
       "ribs",
       "backbone"
      ],
-     "explain": "Only the lower jaw moves — the upper jaw is fixed to the skull."
+     "explain": "Only the lower jaw moves — the upper jaw is fixed to the skull.",
+     "image": "sheet-skeleton"
     },
     {
      "id": "rs-05",
