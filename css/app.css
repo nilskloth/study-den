@@ -473,6 +473,22 @@ button.hear { padding: var(--sp-1) var(--sp-2); font-size: var(--fs-3); line-hei
 .sci-key.hide-names li:not(.reveal)::after { content: "?"; color: var(--ink-faint); }
 .sci-key.hide-names li.reveal .sci-key-letter { background: #c0392b; }
 /* review: question with both answers underneath (no column hiding on phones) */
+/* Name the parts: every letter of one diagram at once */
+.sci-label-pick { display: flex; flex-wrap: wrap; gap: var(--sp-2); }
+.sci-label-pick .btn { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 2px; text-align: left; }
+.sci-label-pick .btn .muted { font-size: var(--fs-0); font-weight: 400; }
+.sci-label-list { list-style: none; padding: 0; margin: 0 auto var(--sp-3); max-width: 720px; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: var(--sp-1) var(--sp-4); }
+.sci-label-list li { display: flex; align-items: center; gap: var(--sp-2); }
+.sci-label-list .answer-line { flex: 1; min-width: 0; }
+.sci-label-list select { width: 100%; font: inherit; }
+.sci-label-list li.is-correct input, .sci-label-list li.is-correct select { color: var(--correct); border-bottom-color: var(--correct); }
+.sci-label-list li.is-wrong input, .sci-label-list li.is-wrong select { border-bottom: 2px solid var(--wrong); }
+.sci-label-list li.is-wrong .sci-key-letter { background: var(--wrong); }
+.sci-label-more { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-2); margin-top: var(--sp-3); }
+.sci-label-more .btn { white-space: nowrap; }
+.sci-label-fix { flex: none; font-size: var(--fs-0); white-space: nowrap; }
+.sci-label-list li.is-correct .sci-label-fix { color: var(--correct); font-weight: 700; }
+.sci-label-list li.is-wrong .sci-label-fix { color: var(--wrong); font-weight: 700; }
 .sci-review td { vertical-align: top; }
 .sci-review-answers { margin-top: 2px; font-size: var(--fs-0); }
 .sci-review button { margin-top: var(--sp-1); }

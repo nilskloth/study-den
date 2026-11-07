@@ -70,7 +70,7 @@ export function activityFor(hash) {
     return ["menus", "Practice"];
   }
   if (path === "secondary") {
-    if (p[0] === "science") return ["science", p[1] === "learn" ? "Science notes" : "Science revision"];
+    if (p[0] === "science") return ["science", p[1] === "learn" ? "Science notes" : p[1] === "label" ? "Science: name the parts" : "Science revision"];
     const lang = LANG_AREA[p[0]];
     if (!lang) return ["menus", "Languages menu"];
     if (p[1] === "verbs") return [lang[0], `${lang[1]} verbs`];
@@ -216,6 +216,7 @@ function resultLabel(mode, paperId, area, act) {
   if (mode === "verbs") return `${AREAS[area]} verbs`;
   if (mode === "science-test") return "Science test";
   if (mode === "science-practise") return "Science practice";
+  if (mode === "science-label") return "Science: name the parts";
   return act && act[0] === area ? act[1] : `${AREAS[area]} practice`;
 }
 

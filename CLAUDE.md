@@ -217,7 +217,7 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
 
 ---
 
-## Secondary: science revision (`views/secondary/science.js`, `#/secondary/science[/learn/<topicId>]`)
+## Secondary: science revision (`views/secondary/science.js`, `#/secondary/science[/learn/<topicId>|/label/<diagram>]`)
 - **Source:** the revision list the school sets on Arbor (Year 7, Nov 2026: organisation, skeleton, joints,
   muscles, microscope, cells, specialised cells, unicellular organisms, diffusion). Facts are written to KS3
   level in our own words — the site is public.
@@ -250,6 +250,12 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
 - **Modes/state:** Practise (adaptive, `store.vocab.science.stats` keyed by question id, 80 % = mastered)
   and Test 10/20/30 with a review. Runs are `recordAttempt` (subject `science`, domain = topic title,
   mode `science-practise` / `science-test`); area `science` in the usage monitor (`--viz-7`).
+- **Name the parts (`#/secondary/science/label/<diagram>`):** a card at the top of the setup lists every
+  diagram with at least 4 "which part is {L}?" questions (skeleton, muscles, microscope, cells; titles in
+  `LABEL_NAMES`). One letter-shuffled diagram, a box per letter (or a list to choose from when the setup's
+  Answer is "Pick from 4"), Check marks all; red ones can be retried, or "Show the answers" puts the names
+  back on the drawing. Only the first check counts (stats per question, `recordAttempt` mode `science-label`).
+  Typed answers may carry the notes' bracket ("Skull (cranium)").
 - **Adding a topic:** a new entry in `science.json` (and a drawing in the script if it needs one) — nothing
   else to register. To add another unit later, give topics a `unit` field and group the picker by it.
 

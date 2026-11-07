@@ -2,6 +2,8 @@
    Year 7 science revision trainer (Secondary → Science).
      #/secondary/science                 setup: pick topics, mode, start
      #/secondary/science/learn/<topic>   notes: diagram, key facts, key words
+     #/secondary/science/label/<diagram> name the parts: label a whole
+                                         diagram (skeleton, muscles, …) at once
 
    Content: data/content/secondary/science.json — topics with
    facts, key words, one or more diagrams (inline SVG under
@@ -118,6 +120,7 @@ export async function renderScience(el, params = []) {
   }
   const ctx = { el, bank };
   if (params[0] === "learn" && params[1]) return renderLearn(ctx, params[1]);
+  if (params[0] === "label" && params[1]) return renderLabel(ctx, params[1]);
   renderSetup(ctx);
 }
 
@@ -241,6 +244,19 @@ function renderSetup(ctx) {
   el.innerHTML = `<div data-setup>
     <div class="run-bar"><h2>Science revision</h2><span class="muted">${esc(bank.unit)}</span></div>
 
+    ${labelSets(bank).length ? `
+    <div class="card setup-card">
+      <h3>Name the parts</h3>
+      <p class="muted" style="margin-top:calc(-1 * var(--sp-2));">Fill in every label on one diagram, then check them all.</p>
+      <div class="sci-label-pick">
+        ${labelSets(bank).map(set => {
+          const known = set.qs.filter(q => mastered(state.stats[q.id])).length;
+          return `<a class="btn" href="#/secondary/science/label/${esc(set.file)}"><strong>${esc(set.title)}</strong>
+            <span class="muted">${set.qs.length} ${set.noun} · ${known} known</span></a>`;
+        }).join("")}
+      </div>
+    </div>` : ""}
+
     <div class="card setup-card">
       <h3>1. Choose your topics</h3>
       <p class="muted" style="margin-top:calc(-1 * var(--sp-2));">Read the notes first, then practise. Each topic has a diagram, key facts and key words.</p>
@@ -346,6 +362,209 @@ function renderSetup(ctx) {
 }
 
 /* =========================
+   Name the parts: label a whole diagram at once
+========================= */
+
+/* A diagram becomes a "name the parts" set when at least 4 of its
+   labelled parts have a question (the "which part is {L}?" ones).
+   Class-sheet drawings have fixed letters and no `part`, so they don't. */
+const LABEL_NAMES = {
+  skeleton: ["The skeleton", "bones"],
+  muscles: ["Muscles", "muscles"],
+  microscope: ["The microscope", "parts"],
+  cells: ["Plant and animal cells", "parts"]
+};
+
+function labelSets(bank) {
+  const sets = new Map();
+  for (const t of bank.topics) {
+    for (const q of t.questions) {
+      if (!q.image || !q.part || q.type !== "short") continue;
+      if (!sets.has(q.image)) sets.set(q.image, { file: q.image, topic: t, qs: [] });
+      sets.get(q.image).qs.push({ ...q, topic: t });
+    }
+  }
+  return [...sets.values()].filter(s => s.qs.length >= 4).map(s => ({
+    ...s,
+    title: LABEL_NAMES[s.file]?.[0] || s.topic.title,
+    noun: LABEL_NAMES[s.file]?.[1] || "parts"
+  }));
+}
+
+async function renderLabel(ctx, file) {
+  const { el, bank } = ctx;
+  const set = labelSets(bank).find(s => s.file === file);
+  if (!set) { location.hash = "#/secondary/science"; return; }
+  const pick = stateOf().prefs.style === "choose";
+  const names = [...new Set(set.qs.map(q => q.answer))].sort((a, b) => a.localeCompare(b));
+  const byPart = new Map(set.qs.map(q => [q.part, q]));
+
+  el.innerHTML = `
+    <div class="run-bar">
+      <h2>Name the ${esc(set.noun)} <span class="muted" style="font-weight:400;">· ${esc(set.title)}</span></h2>
+      <span class="timer-pill" data-progress></span>
+      <a class="btn quiet" href="#/secondary/science">Back</a>
+    </div>
+    <div class="paper-sheet sci-card" data-subject="science">
+      <p class="muted" style="margin-top:0;">${pick ? "Choose" : "Write"} the name for each letter, then press <strong>Check</strong>. Spelling slips are forgiven.</p>
+      <div class="sci-figure-host sci-quiz-figure" data-figure></div>
+      <ol class="sci-label-list" data-list></ol>
+      <div class="vocab-feedback" data-feedback aria-live="polite"></div>
+      <div class="vocab-actions" data-actions></div>
+    </div>
+    <p class="sci-label-more">
+      <button type="button" class="quiet" data-one>One at a time instead</button>
+      <a class="btn quiet" href="#/secondary/science/learn/${esc(set.topic.id)}">Read the notes</a>
+    </p>`;
+  const $ = s => el.querySelector(s);
+
+  $("[data-one]").addEventListener("click", () => {
+    startRun(ctx, { pool: set.qs, style: pick ? "choose" : "type", test: 0 });
+  });
+
+  let round = 0;
+  async function start() {
+    const my = ++round;
+    const fig = $("[data-figure]");
+    await mountFigure(fig, set.file, { quiz: true });
+    if (my !== round || !fig.isConnected) return;
+    const svgEl = fig.querySelector("svg");
+    const groups = new Map([...fig.querySelectorAll(".lbl")].map(g => [g.dataset.part, g]));
+    /* one row per part that has a question, in letter order */
+    const rows = [...groups.entries()]
+      .filter(([part]) => byPart.has(part))
+      .map(([part, g]) => ({ part, g, q: byPart.get(part), letter: g.querySelector(".letter text")?.textContent || "?", done: false }))
+      .sort((a, b) => a.letter.localeCompare(b.letter));
+    let checked = false;
+
+    const field = r => pick
+      ? `<select aria-label="Part ${esc(r.letter)}"><option value="">Choose…</option>${names.map(n => `<option>${esc(n)}</option>`).join("")}</select>`
+      : `<input type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Part ${esc(r.letter)}">`;
+    $("[data-list]").innerHTML = rows.map((r, i) => `
+      <li data-row="${i}">
+        <span class="sci-key-letter">${esc(r.letter)}</span>
+        <span class="answer-line">${field(r)}</span>
+        <span class="sci-label-fix" data-fix></span>
+      </li>`).join("");
+    const rowEl = i => $(`[data-row="${i}"]`);
+    const inputs = rows.map((_, i) => rowEl(i).querySelector("input, select"));
+
+    /* the part being answered is highlighted on the diagram */
+    inputs.forEach((inp, i) => {
+      inp.addEventListener("focus", () => rows.forEach((r, j) => r.g.classList.toggle("ask", j === i)));
+      inp.addEventListener("blur", () => rows[i].g.classList.remove("ask"));
+      if (!pick) inp.addEventListener("keydown", e => {
+        if (e.key !== "Enter") return;
+        e.preventDefault();
+        const next = inputs.find((x, j) => j > i && !x.disabled);
+        if (next) next.focus(); else check();
+      });
+    });
+    /* tapping a letter on the diagram jumps to its row */
+    rows.forEach((r, i) => r.g.addEventListener("click", () => { if (!inputs[i].disabled) inputs[i].focus(); }));
+
+    function progress() {
+      const right = rows.filter(r => r.done).length;
+      $("[data-progress]").textContent = checked ? `${right} / ${rows.length} right` : `${rows.length} ${set.noun}`;
+    }
+
+    function actions(html) {
+      $("[data-actions]").innerHTML = html;
+      $("[data-check]")?.addEventListener("click", check);
+      $("[data-retry]")?.addEventListener("click", retry);
+      $("[data-show]")?.addEventListener("click", showAnswers);
+      $("[data-new]")?.addEventListener("click", start);
+    }
+
+    function check() {
+      const first = !checked;
+      checked = true;
+      rows.forEach((r, i) => {
+        if (r.done) return;
+        const value = inputs[i].value;
+        const res = pick ? { ok: value === r.q.answer } : judgeTyped(r.q, value);
+        if (first) r.firstOk = res.ok;
+        const li = rowEl(i);
+        li.classList.toggle("is-correct", res.ok);
+        li.classList.toggle("is-wrong", !res.ok);
+        if (res.ok) {
+          r.done = true;
+          inputs[i].disabled = true;
+          li.querySelector("[data-fix]").innerHTML = res.near ? `✓ <span class="muted">“${esc(r.q.answer)}”</span>` : "✓";
+        } else {
+          li.querySelector("[data-fix]").textContent = "✗";
+        }
+      });
+      if (first) record();
+      progress();
+      const wrong = rows.filter(r => !r.done).length;
+      $("[data-feedback]").innerHTML = wrong
+        ? `<div class="mark-note wrong"><strong>${rows.length - wrong} of ${rows.length} right.</strong>
+             <p style="margin:var(--sp-1) 0 0;">Have another go at the red ones, or show the answers.</p></div>`
+        : `<div class="mark-note correct"><strong>All ${rows.length} right — brilliant!</strong>
+             <p style="margin:var(--sp-1) 0 0;">Try again with new letters to be sure.</p></div>`;
+      actions(wrong
+        ? `<button class="primary" data-retry>Try the red ones again</button>
+           <button type="button" class="quiet" data-show>Show the answers</button>`
+        : `<button class="primary" data-new>New letters</button>`);
+    }
+
+    function retry() {
+      rows.forEach((r, i) => {
+        if (r.done) return;
+        const li = rowEl(i);
+        li.classList.remove("is-wrong");
+        li.querySelector("[data-fix]").textContent = "";
+        inputs[i].value = "";
+      });
+      $("[data-feedback]").innerHTML = "";
+      actions(`<button class="primary" data-check>Check</button>`);
+      inputs.find(x => !x.disabled)?.focus();
+    }
+
+    function showAnswers() {
+      rows.forEach((r, i) => {
+        if (r.done) return;
+        inputs[i].disabled = true;
+        rowEl(i).querySelector("[data-fix]").innerHTML = `<span class="vocab-answer">${esc(r.q.answer)}</span>`;
+      });
+      /* names back on the drawing, refitted so they aren't cut off */
+      svgEl.classList.remove("quiz");
+      rows.forEach(r => r.g.classList.remove("ask"));
+      fitView(svgEl);
+      $("[data-feedback]").innerHTML = "";
+      actions(`<button class="primary" data-new>Try again with new letters</button>`);
+    }
+
+    /* Only the first check counts towards mastery and Grown-ups. */
+    function record() {
+      const stats = stateOf().stats;
+      rows.forEach(r => {
+        if (!stats[r.q.id]) stats[r.q.id] = newStat(r.q.id);
+        applyResult(stats[r.q.id], r.firstOk);
+      });
+      saveStore();
+      recordAttempt({
+        mode: "science-label",
+        paperId: "science",
+        seconds: Math.round((Date.now() - startedAt) / 1000),
+        items: rows.map(r => ({
+          qid: r.q.id, domain: r.q.topic.title, subject: SCIENCE.subject,
+          marks: 1, earned: r.firstOk ? 1 : 0, marking: "auto"
+        }))
+      });
+    }
+
+    const startedAt = Date.now();
+    $("[data-feedback]").innerHTML = "";
+    actions(`<button class="primary" data-check>Check</button>`);
+    progress();
+    if (!pick && window.innerWidth >= NARROW) inputs[0]?.focus();
+  }
+  start();
+}
+
+/* =========================
    Marking a typed answer
 ========================= */
 
@@ -370,6 +589,12 @@ function levenshtein(a, b) {
 
 /* ok: right; near: right apart from spelling (counts as right, shown with the spelling) */
 function judgeTyped(q, answer) {
+  /* "Skull (cranium)", as the notes print it: the part before the bracket counts */
+  const plain = String(answer).replace(/\s*\([^)]*\)?\s*$/, "");
+  if (plain.trim() && plain !== answer) {
+    const r = judgeTyped(q, plain);
+    if (r.ok) return r;
+  }
   const given = canon(answer);
   if (!given) return { ok: false };
   const targets = [q.answer, ...(q.accept || [])].map(canon);
