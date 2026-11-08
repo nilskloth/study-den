@@ -236,6 +236,7 @@ files.muscles = (() => {
       s += `<rect x="${cx - 18}" y="110" width="36" height="78" rx="10" fill="${MUSCLE}" stroke="${MUSCLE_DARK}" stroke-width="1.5"/>
             <path d="M${cx} 112 v74 M${cx - 18} 132 h36 M${cx - 18} 154 h36 M${cx - 18} 174 h36" stroke="${MUSCLE_DARK}" stroke-width="1.2" fill="none"/>`;  // abdominals
       s += m(cx - 24, 262, 13, 48, 6) + m(cx + 24, 262, 13, 48, -6);       // quadriceps
+      s += m(cx - 30, 345, 5, 32, 6) + m(cx + 30, 345, 5, 32, -6);         // tibialis anterior
     } else {
       s += `<path d="M${cx - 42} 84 l42 -10 l42 10 l-14 30 l-28 14 l-28 -14Z" fill="${MUSCLE}" stroke="${MUSCLE_DARK}" stroke-width="1.5"/>`; // trapezius
       s += m(cx - 44, 92, 12, 13) + m(cx + 44, 92, 12, 13);                // deltoids
@@ -243,7 +244,8 @@ files.muscles = (() => {
       s += `<path d="M${cx - 34} 118 l34 16 l34 -16 l-6 60 l-28 20 l-28 -20Z" fill="${MUSCLE}" stroke="${MUSCLE_DARK}" stroke-width="1.5"/>`; // latissimus
       s += m(cx - 18, 212, 16, 20) + m(cx + 18, 212, 16, 20);              // gluteals
       s += m(cx - 24, 270, 13, 44, 6) + m(cx + 24, 270, 13, 44, -6);       // hamstrings
-      s += m(cx - 26, 360, 9, 30, 4) + m(cx + 26, 360, 9, 30, -4);         // gastrocnemius
+      s += m(cx - 28, 374, 10, 17, 4) + m(cx + 28, 374, 10, 17, -4);       // soleus (under the gastrocnemius)
+      s += m(cx - 26, 348, 9, 27, 4) + m(cx + 26, 348, 9, 27, -4);         // gastrocnemius
     }
     return s;
   };
@@ -262,7 +264,9 @@ files.muscles = (() => {
     ${label("latissimus", "Latissimus dorsi (back)", [k - 14, 150], [k - 80, 160], "end")}
     ${label("gluteals", "Gluteals (bottom)", [k + 20, 212], [k + 80, 212])}
     ${label("hamstrings", "Hamstrings (back of thigh)", [k - 26, 270], [k - 80, 296], "end")}
-    ${label("gastrocnemius", "Gastrocnemius (calf)", [k + 28, 360], [k + 80, 360])}`;
+    ${label("tibialis", "Tibialis anterior (shin)", [f + 31, 345], [f + 80, 345])}
+    ${label("gastrocnemius", "Gastrocnemius (calf)", [k + 28, 344], [k + 80, 340])}
+    ${label("soleus", "Soleus (lower calf)", [k + 33, 384], [k + 80, 384])}`;
   return svg(800, 420, body);
 })();
 

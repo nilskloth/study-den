@@ -244,8 +244,13 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
   shows letters with a key list underneath (names there; "Hide the names" hides the key). The test
   review shows question + both answers in one cell (the vocab review hides column 2 on phones).
   All drawings live in `tools/build-science-art.mjs`; re-run it after editing.
+- **Everyday names:** the assessment wants scientific names, so a question can list `everyday: []`
+  (shin bone, calf muscle, abs…) — never in `accept`. Typing one gets "Nearly — use the scientific name,
+  have another go" (practise and test); a second everyday answer is wrong with the scientific name shown
+  and no "I was right". In Name the parts the row says "✗ everyday name". Add `everyday` to every new
+  bone/muscle question that has a common name.
 - **Marking:** typed answers normalised (`the`/`a` dropped, punctuation/× stripped); exact match to
-  `answer`/`accept` is right; a spelling slip (edit distance 1, or 2 for long words) counts as right
+  `answer`/`accept` is right (either side of a bracket counts: "Tibia (shin bone)", "shin bone (tibia)"); a spelling slip (edit distance 1, or 2 for long words) counts as right
   with the correct spelling shown; numbers must be exact. "I was right" overrule as in vocab.
 - **Modes/state:** Practise (adaptive, `store.vocab.science.stats` keyed by question id, 80 % = mastered)
   and Test 10/20/30 with a review. Runs are `recordAttempt` (subject `science`, domain = topic title,

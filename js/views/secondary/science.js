@@ -479,6 +479,7 @@ async function renderLabel(ctx, file) {
     function check() {
       const first = !checked;
       checked = true;
+      let everydayCount = 0;
       rows.forEach((r, i) => {
         if (r.done) return;
         const value = inputs[i].value;
@@ -492,7 +493,8 @@ async function renderLabel(ctx, file) {
           inputs[i].disabled = true;
           li.querySelector("[data-fix]").innerHTML = res.near ? `✓ <span class="muted">“${esc(r.q.answer)}”</span>` : "✓";
         } else {
-          li.querySelector("[data-fix]").textContent = "✗";
+          li.querySelector("[data-fix]").textContent = res.everyday ? "✗ everyday name" : "✗";
+          if (res.everyday) everydayCount++;
         }
       });
       if (first) record();
@@ -500,7 +502,7 @@ async function renderLabel(ctx, file) {
       const wrong = rows.filter(r => !r.done).length;
       $("[data-feedback]").innerHTML = wrong
         ? `<div class="mark-note wrong"><strong>${rows.length - wrong} of ${rows.length} right.</strong>
-             <p style="margin:var(--sp-1) 0 0;">Have another go at the red ones, or show the answers.</p></div>`
+             <p style="margin:var(--sp-1) 0 0;">${everydayCount ? `${everydayCount === 1 ? "One answer is an everyday name" : `${everydayCount} answers are everyday names`} — the assessment needs the scientific names. ` : ""}Have another go at the red ones, or show the answers.</p></div>`
         : `<div class="mark-note correct"><strong>All ${rows.length} right — brilliant!</strong>
              <p style="margin:var(--sp-1) 0 0;">Try again with new letters to be sure.</p></div>`;
       actions(wrong
@@ -573,6 +575,9 @@ function canon(s) {
   return normaliseText(s).replace(/^(the|a|an|it is|its|it's) /, "").replace(/\s+/g, " ").trim();
 }
 
+const everydayTip = q => `That's the everyday name — in the assessment you need the scientific name: “${q.answer}”.`;
+const EVERYDAY_ASK = "That's the everyday name. In the assessment you need the <strong>scientific name</strong> — have another go.";
+
 function levenshtein(a, b) {
   if (Math.abs(a.length - b.length) > 2) return 3;
   const prev = Array.from({ length: b.length + 1 }, (_, i) => i);
@@ -587,16 +592,21 @@ function levenshtein(a, b) {
   return prev[b.length];
 }
 
-/* ok: right; near: right apart from spelling (counts as right, shown with the spelling) */
+/* ok: right; near: right apart from spelling (counts as right, shown with the spelling);
+   everyday: an everyday name ("shin bone") where the assessment wants the scientific one
+   ("tibia") — the child is asked again, and it never counts as right */
 function judgeTyped(q, answer) {
-  /* "Skull (cranium)", as the notes print it: the part before the bracket counts */
-  const plain = String(answer).replace(/\s*\([^)]*\)?\s*$/, "");
-  if (plain.trim() && plain !== answer) {
-    const r = judgeTyped(q, plain);
-    if (r.ok) return r;
+  /* "Skull (cranium)", as the notes print it — or "shin bone (tibia)": either part counts */
+  const m = String(answer).match(/^(.*?)\s*\(([^)]*)\)?\s*$/);
+  if (m && m[1].trim()) {
+    for (const part of [m[1], m[2] || ""]) {
+      const r = part.trim() ? judgeTyped(q, part) : { ok: false };
+      if (r.ok) return r;
+    }
   }
   const given = canon(answer);
   if (!given) return { ok: false };
+  if ((q.everyday || []).map(canon).includes(given)) return { ok: false, everyday: true, tip: everydayTip(q) };
   const targets = [q.answer, ...(q.accept || [])].map(canon);
   if (targets.includes(given)) return { ok: true };
   /* numbers must be exact; words may have a slip or two */
@@ -703,11 +713,22 @@ function startRun(ctx, cfg) {
       </div>`;
     const input = $("[data-answer] input");
     input.focus();
+    let asked = false;
     const submit = answer => {
       if (run.current !== q) return;
+      const res = judgeTyped(q, answer);
+      if (res.everyday && !asked) {
+        asked = true;
+        $("[data-feedback]").innerHTML = `<div class="mark-note partial"><strong>Nearly — “${esc(answer.trim())}”</strong>
+          <p style="margin:var(--sp-1) 0 0;">${EVERYDAY_ASK}</p></div>`;
+        input.value = "";
+        input.focus();
+        return;
+      }
+      $("[data-feedback]").innerHTML = "";
       input.disabled = true;
       $("[data-answer]").querySelectorAll("button").forEach(b => { b.disabled = true; });
-      answered(q, answer, judgeTyped(q, answer));
+      answered(q, answer, res);
     };
     $("[data-check]").addEventListener("click", () => input.value.trim() && submit(input.value));
     $("[data-dontknow]")?.addEventListener("click", () => submit(""));
@@ -757,7 +778,7 @@ function startRun(ctx, cfg) {
   }
 
   function answered(q, answer, r) {
-    const result = { q, answer, ok: r.ok, near: r.near, tip: r.tip, letter: q._letter, marking: "auto" };
+    const result = { q, answer, ok: r.ok, near: r.near, tip: r.tip, everyday: r.everyday, letter: q._letter, marking: "auto" };
     run.results.push(result);
     progress();
     if (cfg.test) { setTimeout(ask, q.type === "short" && cfg.style === "type" ? 0 : 350); return; }
@@ -771,16 +792,17 @@ function startRun(ctx, cfg) {
   function showFeedback(result) {
     const { q } = result;
     const cls = result.ok ? "correct" : "wrong";
-    const head = result.ok ? (result.near ? "Right — nearly spelt right!" : "Correct!") : result.answer ? "Not quite." : "Here's the answer.";
+    const head = result.ok ? (result.near ? "Right — nearly spelt right!" : "Correct!") : result.everyday ? "Use the scientific name." : result.answer ? "Not quite." : "Here's the answer.";
     $("[data-feedback]").innerHTML = `
       <div class="mark-note ${cls}">
         <strong>${head}</strong>
         ${result.ok && !result.near ? "" : `<p style="margin:var(--sp-1) 0 0;"><span class="vocab-answer">${esc(answerText(q))}</span></p>`}
+        ${result.everyday ? `<p style="margin:var(--sp-1) 0 0;">“${esc(String(result.answer).trim())}” is the everyday name — it won't get the mark in the assessment.</p>` : ""}
         ${q.explain ? `<p style="margin:var(--sp-1) 0 0;">${esc(q.explain)}</p>` : ""}
       </div>
       <div class="vocab-actions">
         <button class="primary" data-next>Next</button>
-        ${!result.ok && result.answer && q.type === "short" && cfg.style === "type" ? `<button type="button" class="quiet" data-overrule>I was right</button>` : ""}
+        ${!result.ok && !result.everyday && result.answer && q.type === "short" && cfg.style === "type" ? `<button type="button" class="quiet" data-overrule>I was right</button>` : ""}
         <a class="btn quiet" href="#/secondary/science/learn/${q.topic.id}">Read the notes</a>
       </div>`;
     const next = $("[data-next]");
@@ -822,9 +844,10 @@ function startRun(ctx, cfg) {
                     <div class="sci-review-answers">
                       ${r.ok ? `<span>${r.answer !== "" && r.answer != null ? esc(String(r.answer)) : ""}</span>`
                         : `<span class="muted">You:</span> ${r.answer !== "" && r.answer != null ? `<s>${esc(String(r.answer))}</s>` : `<span class="muted">—</span>`}
-                           · <span class="muted">Answer:</span> <strong>${esc(answerText(r.q))}</strong>`}
+                           · <span class="muted">Answer:</span> <strong>${esc(answerText(r.q))}</strong>
+                           ${r.everyday ? `<div class="muted">That's the everyday name — use the scientific name.</div>` : ""}`}
                     </div>
-                    ${!r.ok && r.answer && r.q.type === "short" && cfg.style === "type" ? `<button type="button" class="quiet" data-overrule="${i}">I was right</button>` : ""}
+                    ${!r.ok && !r.everyday && r.answer && r.q.type === "short" && cfg.style === "type" ? `<button type="button" class="quiet" data-overrule="${i}">I was right</button>` : ""}
                   </td>
                 </tr>`).join("")}
             </tbody>

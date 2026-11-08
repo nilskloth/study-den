@@ -26,7 +26,7 @@
     },
     {
      "file": "sheet-leg",
-     "caption": "Q2 (c): muscles and bones of a human leg (toes on the left). D = front of thigh (quadriceps), A = back of thigh (hamstrings), C = front of shin, B = calf."
+     "caption": "Q2 (c): muscles and bones of a human leg (toes on the left). D = quadriceps (front of thigh), A = hamstrings (back of thigh), C = tibialis anterior (front of shin), B = gastrocnemius (calf, with the soleus underneath)."
     }
    ],
    "facts": [
@@ -36,7 +36,7 @@
     "Q1 (d): parts A and B are **muscles**. When part A (the biceps) gets shorter, the lower arm moves **up**.",
     "Q2 (a): tendons must **not stretch**, so that when the muscle contracts its pull moves the bone (none of the pull is lost).",
     "Q2 (b): **antagonistic pair** — the two muscles work against each other: when one **contracts**, the other **relaxes**.",
-    "Q2 (c): **C** (front of the shin) contracts to lift the toes. The antagonistic pairs are **B and C** and **D and A**."
+    "Q2 (c): **C** (the **tibialis anterior**, front of the shin) contracts to lift the toes, while **B** (the **gastrocnemius**, calf) relaxes. The antagonistic pairs are **B and C** and **D and A** (**quadriceps** and **hamstrings**)."
    ],
    "keywords": [
     [
@@ -217,7 +217,7 @@
       "B",
       "D"
      ],
-     "explain": "C is on the front of the shin: it contracts to lift the toes, while B (the calf) relaxes."
+     "explain": "C is the tibialis anterior on the front of the shin: it contracts to lift the toes, while B (the gastrocnemius, calf) relaxes."
     },
     {
      "id": "rs-11",
@@ -230,7 +230,7 @@
       "A and B, and B and C",
       "C and D, and D and A"
      ],
-     "explain": "Each pair works across one joint: D and A move the knee (front and back of the thigh), B and C move the ankle (calf and shin)."
+     "explain": "Each pair works across one joint: D and A (quadriceps and hamstrings) move the knee; B and C (gastrocnemius and tibialis anterior) move the ankle."
     }
    ]
   },
@@ -764,15 +764,19 @@
      "stem": "On the skeleton, which bone is labelled {L}?",
      "answer": "femur",
      "accept": [
-      "the femur",
-      "thigh bone"
+      "the femur"
      ],
      "choices": [
       "tibia",
       "humerus",
       "fibula"
      ],
-     "explain": "The femur is the thigh bone — the longest and strongest bone in the body."
+     "explain": "The femur is the thigh bone — the longest and strongest bone in the body.",
+     "everyday": [
+      "thigh bone",
+      "thighbone",
+      "thigh"
+     ]
     },
     {
      "id": "skel-03",
@@ -782,15 +786,19 @@
      "stem": "On the skeleton, which bone is labelled {L}?",
      "answer": "humerus",
      "accept": [
-      "the humerus",
-      "upper arm bone"
+      "the humerus"
      ],
      "choices": [
       "femur",
       "radius",
       "ulna"
      ],
-     "explain": "The humerus is the upper arm bone."
+     "explain": "The humerus is the upper arm bone.",
+     "everyday": [
+      "upper arm bone",
+      "arm bone",
+      "upper arm"
+     ]
     },
     {
      "id": "skel-04",
@@ -820,17 +828,21 @@
      "stem": "On the skeleton, which bone is labelled {L}?",
      "answer": "pelvis",
      "accept": [
-      "the pelvis",
-      "hip",
-      "hips",
-      "hip bone"
+      "the pelvis"
      ],
      "choices": [
       "scapula",
       "sternum",
       "patella"
      ],
-     "explain": "The pelvis is the hip — it connects the legs to the spine."
+     "explain": "The pelvis is the hip — it connects the legs to the spine.",
+     "everyday": [
+      "hip",
+      "hips",
+      "hip bone",
+      "hipbone",
+      "hip bones"
+     ]
     },
     {
      "id": "skel-06",
@@ -840,16 +852,19 @@
      "stem": "On the skeleton, which bone is labelled {L}?",
      "answer": "tibia",
      "accept": [
-      "the tibia",
-      "shin bone",
-      "shin"
+      "the tibia"
      ],
      "choices": [
       "fibula",
       "femur",
       "ulna"
      ],
-     "explain": "The tibia is the shin bone — the thick lower-leg bone."
+     "explain": "The tibia is the shin bone — the thick lower-leg bone.",
+     "everyday": [
+      "shin bone",
+      "shinbone",
+      "shin"
+     ]
     },
     {
      "id": "skel-07",
@@ -859,16 +874,19 @@
      "stem": "On the skeleton, which bone is labelled {L}?",
      "answer": "patella",
      "accept": [
-      "the patella",
-      "kneecap",
-      "knee cap"
+      "the patella"
      ],
      "choices": [
       "pelvis",
       "tibia",
       "clavicle"
      ],
-     "explain": "The patella is the kneecap."
+     "explain": "The patella is the kneecap.",
+     "everyday": [
+      "kneecap",
+      "knee cap",
+      "knee"
+     ]
     },
     {
      "id": "skel-08",
@@ -914,9 +932,6 @@
      "accept": [
       "the vertebrae",
       "vertebra",
-      "spine",
-      "backbone",
-      "the spine",
       "vertebral column",
       "spinal column"
      ],
@@ -925,7 +940,13 @@
       "sternum",
       "femur"
      ],
-     "explain": "The vertebrae make up the spine and protect the spinal cord."
+     "explain": "The vertebrae make up the spine and protect the spinal cord.",
+     "everyday": [
+      "spine",
+      "backbone",
+      "back bone",
+      "the spine"
+     ]
     },
     {
      "id": "skel-11",
@@ -952,16 +973,19 @@
      "stem": "On the skeleton, which bone is labelled {L}?",
      "answer": "sternum",
      "accept": [
-      "the sternum",
-      "breastbone",
-      "breast bone"
+      "the sternum"
      ],
      "choices": [
       "clavicle",
       "scapula",
       "pelvis"
      ],
-     "explain": "The sternum is the breastbone, where the ribs meet at the front."
+     "explain": "The sternum is the breastbone, where the ribs meet at the front.",
+     "everyday": [
+      "breastbone",
+      "breast bone",
+      "chest bone"
+     ]
     },
     {
      "id": "skel-13",
@@ -971,16 +995,18 @@
      "stem": "On the skeleton, which bone is labelled {L}?",
      "answer": "clavicle",
      "accept": [
-      "the clavicle",
-      "collarbone",
-      "collar bone"
+      "the clavicle"
      ],
      "choices": [
       "scapula",
       "sternum",
       "humerus"
      ],
-     "explain": "The clavicle is the collarbone."
+     "explain": "The clavicle is the collarbone.",
+     "everyday": [
+      "collarbone",
+      "collar bone"
+     ]
     },
     {
      "id": "skel-14",
@@ -990,16 +1016,19 @@
      "stem": "On the skeleton, which bone is labelled {L}?",
      "answer": "scapula",
      "accept": [
-      "the scapula",
-      "shoulder blade",
-      "shoulderblade"
+      "the scapula"
      ],
      "choices": [
       "clavicle",
       "pelvis",
       "sternum"
      ],
-     "explain": "The scapula is the shoulder blade."
+     "explain": "The scapula is the shoulder blade.",
+     "everyday": [
+      "shoulder blade",
+      "shoulderblade",
+      "shoulder bone"
+     ]
     },
     {
      "id": "skel-15",
@@ -1088,15 +1117,19 @@
      "stem": "What is the longest bone in the body?",
      "answer": "femur",
      "accept": [
-      "the femur",
-      "thigh bone"
+      "the femur"
      ],
      "choices": [
       "tibia",
       "humerus",
       "spine"
      ],
-     "explain": "The femur (thigh bone) is the longest and strongest bone."
+     "explain": "The femur (thigh bone) is the longest and strongest bone.",
+     "everyday": [
+      "thigh bone",
+      "thighbone",
+      "thigh"
+     ]
     },
     {
      "id": "skel-21",
@@ -1450,15 +1483,21 @@
     {
      "file": "muscles",
      "caption": "The main muscles of the body."
+    },
+    {
+     "file": "sheet-leg",
+     "caption": "The leg from the revision sheet: D quadriceps, A hamstrings, C tibialis anterior, B gastrocnemius (with the soleus underneath)."
     }
    ],
    "facts": [
     "Muscles move bones by **contracting** (getting shorter and pulling). Muscles can only **pull — they can never push**.",
     "Because they can't push, muscles work in **antagonistic pairs**: one contracts while the other **relaxes**. They pull the bone in opposite directions.",
     "To **bend** (flex) the arm, the **biceps contracts** and the triceps relaxes. To **straighten** (extend) it, the **triceps contracts** and the biceps relaxes.",
-    "Other antagonistic pairs: **quadriceps** (front of thigh) and **hamstrings** (back of thigh) at the knee; **abdominals** and back muscles.",
+    "Other antagonistic pairs: **quadriceps** (front of thigh) and **hamstrings** (back of thigh) at the knee; **tibialis anterior** (front of shin) and **gastrocnemius** (calf) at the ankle; **abdominals** and back muscles.",
     "Muscles are attached to bones by **tendons**.",
-    "Names to know: **deltoids** (shoulders), **pectorals** (chest), **biceps/triceps** (upper arm), **abdominals** (stomach), **trapezius** (upper back/neck), **latissimus dorsi** (back), **gluteals** (bottom), **quadriceps** and **hamstrings** (thigh), **gastrocnemius** (calf)."
+    "Names to know: **deltoids** (shoulders), **pectorals** (chest), **biceps/triceps** (upper arm), **abdominals** (stomach), **trapezius** (upper back/neck), **latissimus dorsi** (back), **gluteals** (bottom), **quadriceps** and **hamstrings** (thigh), **tibialis anterior** (front of shin), **gastrocnemius** and **soleus** (calf).",
+    "The calf has two muscles: the **gastrocnemius** on the outside and the **soleus** underneath it. Both join the **Achilles tendon** and point the toes. The **tibialis anterior** on the front of the shin does the opposite: it lifts the toes.",
+    "**Use the scientific names** in tests: gastrocnemius, not \"calf muscle\"; tibia, not \"shin bone\". The everyday name in brackets is only there to help you remember."
    ],
    "keywords": [
     [
@@ -1486,16 +1525,24 @@
      "the thigh pair"
     ],
     [
-     "gastrocnemius",
-     "calf muscle"
-    ],
-    [
      "deltoids / pectorals",
      "shoulder / chest"
     ],
     [
      "gluteals",
      "bottom (buttock) muscles"
+    ],
+    [
+     "gastrocnemius",
+     "the big calf muscle"
+    ],
+    [
+     "soleus",
+     "the calf muscle under the gastrocnemius"
+    ],
+    [
+     "tibialis anterior",
+     "front of shin muscle; lifts the toes"
     ]
    ],
    "questions": [
@@ -1611,7 +1658,6 @@
      "stem": "On the diagram, which muscle is labelled {L}?",
      "answer": "quadriceps",
      "accept": [
-      "quads",
       "the quadriceps",
       "quadricep"
      ],
@@ -1620,7 +1666,14 @@
       "gastrocnemius",
       "gluteals"
      ],
-     "explain": "The quadriceps are on the front of the thigh — they straighten the knee."
+     "explain": "The quadriceps are on the front of the thigh — they straighten the knee.",
+     "everyday": [
+      "quads",
+      "thigh",
+      "thigh muscle",
+      "front of thigh",
+      "front of the thigh"
+     ]
     },
     {
      "id": "mu-09",
@@ -1638,7 +1691,13 @@
       "gluteals",
       "gastrocnemius"
      ],
-     "explain": "The hamstrings are on the back of the thigh — they bend the knee."
+     "explain": "The hamstrings are on the back of the thigh — they bend the knee.",
+     "everyday": [
+      "back of thigh",
+      "back of the thigh",
+      "thigh",
+      "thigh muscle"
+     ]
     },
     {
      "id": "mu-10",
@@ -1648,8 +1707,6 @@
      "stem": "On the diagram, which muscle is labelled {L}?",
      "answer": "gastrocnemius",
      "accept": [
-      "calf",
-      "calf muscle",
       "the gastrocnemius",
       "gastrocnemious"
      ],
@@ -1658,7 +1715,12 @@
       "quadriceps",
       "gluteals"
      ],
-     "explain": "The gastrocnemius is the calf muscle — it points your toes."
+     "explain": "The gastrocnemius is the calf muscle — it points your toes.",
+     "everyday": [
+      "calf",
+      "calf muscle",
+      "calves"
+     ]
     },
     {
      "id": "mu-11",
@@ -1669,7 +1731,6 @@
      "answer": "pectorals",
      "accept": [
       "pectoral",
-      "pecs",
       "the pectorals",
       "pectoralis"
      ],
@@ -1678,7 +1739,13 @@
       "abdominals",
       "trapezius"
      ],
-     "explain": "The pectorals are the chest muscles."
+     "explain": "The pectorals are the chest muscles.",
+     "everyday": [
+      "pecs",
+      "chest",
+      "chest muscle",
+      "chest muscles"
+     ]
     },
     {
      "id": "mu-12",
@@ -1689,15 +1756,21 @@
      "answer": "deltoids",
      "accept": [
       "deltoid",
-      "the deltoids",
-      "delts"
+      "the deltoids"
      ],
      "choices": [
       "pectorals",
       "biceps",
       "trapezius"
      ],
-     "explain": "The deltoids are the shoulder muscles — they lift the arm."
+     "explain": "The deltoids are the shoulder muscles — they lift the arm.",
+     "everyday": [
+      "delts",
+      "shoulder",
+      "shoulders",
+      "shoulder muscle",
+      "shoulder muscles"
+     ]
     },
     {
      "id": "mu-13",
@@ -1708,7 +1781,6 @@
      "answer": "abdominals",
      "accept": [
       "abdominal",
-      "abs",
       "the abdominals",
       "abdominal muscles"
      ],
@@ -1717,7 +1789,16 @@
       "quadriceps",
       "gluteals"
      ],
-     "explain": "The abdominals are the stomach muscles — they bend you forwards."
+     "explain": "The abdominals are the stomach muscles — they bend you forwards.",
+     "everyday": [
+      "abs",
+      "stomach",
+      "stomach muscles",
+      "tummy",
+      "tummy muscles",
+      "six pack",
+      "sixpack"
+     ]
     },
     {
      "id": "mu-14",
@@ -1764,19 +1845,24 @@
      "answer": "gluteals",
      "accept": [
       "gluteal",
-      "glutes",
       "gluteus",
       "gluteus maximus",
-      "the gluteals",
-      "buttocks",
-      "bottom"
+      "the gluteals"
      ],
      "choices": [
       "hamstrings",
       "abdominals",
       "quadriceps"
      ],
-     "explain": "The gluteals are the muscles of the bottom — they move the hip."
+     "explain": "The gluteals are the muscles of the bottom — they move the hip.",
+     "everyday": [
+      "glutes",
+      "buttocks",
+      "bottom",
+      "bum",
+      "butt",
+      "bottom muscles"
+     ]
     },
     {
      "id": "mu-17",
@@ -1786,15 +1872,19 @@
      "stem": "On the diagram, which muscle is labelled {L}?",
      "answer": "trapezius",
      "accept": [
-      "the trapezius",
-      "traps"
+      "the trapezius"
      ],
      "choices": [
       "deltoids",
       "latissimus dorsi",
       "triceps"
      ],
-     "explain": "The trapezius runs across the upper back and neck — it shrugs the shoulders."
+     "explain": "The trapezius runs across the upper back and neck — it shrugs the shoulders.",
+     "everyday": [
+      "traps",
+      "neck",
+      "upper back"
+     ]
     },
     {
      "id": "mu-18",
@@ -1805,7 +1895,6 @@
      "answer": "latissimus dorsi",
      "accept": [
       "latissimus",
-      "lats",
       "the latissimus dorsi"
      ],
      "choices": [
@@ -1813,7 +1902,13 @@
       "gluteals",
       "triceps"
      ],
-     "explain": "The latissimus dorsi is the big muscle of the back — it pulls the arm down."
+     "explain": "The latissimus dorsi is the big muscle of the back — it pulls the arm down.",
+     "everyday": [
+      "lats",
+      "back",
+      "back muscle",
+      "back muscles"
+     ]
     },
     {
      "id": "mu-19",
@@ -1853,7 +1948,11 @@
       "gastrocnemius",
       "gluteals"
      ],
-     "explain": "Hamstrings at the back, quadriceps at the front."
+     "explain": "Hamstrings at the back, quadriceps at the front.",
+     "everyday": [
+      "back of thigh",
+      "thigh muscle"
+     ]
     },
     {
      "id": "mu-22",
@@ -1869,7 +1968,213 @@
       "quadriceps",
       "tibialis"
      ],
-     "explain": "The gastrocnemius is the calf muscle."
+     "explain": "The gastrocnemius is the calf muscle.",
+     "everyday": [
+      "calf",
+      "calf muscle",
+      "calves"
+     ]
+    },
+    {
+     "id": "mu-23",
+     "type": "short",
+     "image": "muscles",
+     "part": "tibialis",
+     "stem": "On the diagram, which muscle is labelled {L}?",
+     "answer": "tibialis anterior",
+     "accept": [
+      "tibialis",
+      "the tibialis anterior",
+      "tibialis anterior muscle",
+      "tibialis anterier"
+     ],
+     "everyday": [
+      "shin",
+      "shin muscle",
+      "front of shin",
+      "front of the shin"
+     ],
+     "choices": [
+      "gastrocnemius",
+      "soleus",
+      "quadriceps"
+     ],
+     "explain": "The tibialis anterior runs down the front of the shin — it lifts the toes."
+    },
+    {
+     "id": "mu-24",
+     "type": "short",
+     "image": "muscles",
+     "part": "soleus",
+     "stem": "On the diagram, which muscle is labelled {L}?",
+     "answer": "soleus",
+     "accept": [
+      "the soleus",
+      "soleus muscle",
+      "soleous",
+      "solius"
+     ],
+     "everyday": [
+      "calf",
+      "calf muscle",
+      "lower calf"
+     ],
+     "choices": [
+      "gastrocnemius",
+      "tibialis anterior",
+      "hamstrings"
+     ],
+     "explain": "The soleus is the calf muscle under the gastrocnemius — together they point the toes."
+    },
+    {
+     "id": "mu-25",
+     "type": "short",
+     "stem": "What is the scientific name of the muscle on the front of the shin?",
+     "answer": "tibialis anterior",
+     "accept": [
+      "tibialis",
+      "the tibialis anterior",
+      "tibialis anterier"
+     ],
+     "everyday": [
+      "shin",
+      "shin muscle",
+      "front of shin"
+     ],
+     "choices": [
+      "soleus",
+      "gastrocnemius",
+      "quadriceps"
+     ],
+     "explain": "Tibialis anterior — it lifts the toes (on the sheet's leg it is muscle C)."
+    },
+    {
+     "id": "mu-26",
+     "type": "short",
+     "stem": "The calf has two muscles. One is the gastrocnemius. What is the other one, underneath it?",
+     "answer": "soleus",
+     "accept": [
+      "the soleus",
+      "soleous",
+      "solius"
+     ],
+     "everyday": [
+      "calf",
+      "calf muscle"
+     ],
+     "choices": [
+      "tibialis anterior",
+      "hamstrings",
+      "trapezius"
+     ],
+     "explain": "The soleus lies under the gastrocnemius; both join the Achilles tendon."
+    },
+    {
+     "id": "mu-27",
+     "type": "mcq",
+     "stem": "Which muscle is the antagonistic partner of the gastrocnemius at the ankle?",
+     "answer": "tibialis anterior",
+     "choices": [
+      "soleus",
+      "hamstrings",
+      "quadriceps"
+     ],
+     "explain": "The gastrocnemius points the toes; the tibialis anterior lifts them. (The soleus helps the gastrocnemius, so it is not its partner.)"
+    },
+    {
+     "id": "mu-28",
+     "type": "short",
+     "image": "sheet-leg",
+     "stem": "On the revision sheet's leg, what is the scientific name of muscle C?",
+     "answer": "tibialis anterior",
+     "accept": [
+      "tibialis",
+      "the tibialis anterior",
+      "tibialis anterier"
+     ],
+     "everyday": [
+      "shin",
+      "shin muscle",
+      "front of shin",
+      "front of the shin"
+     ],
+     "choices": [
+      "gastrocnemius",
+      "quadriceps",
+      "hamstrings"
+     ],
+     "explain": "C is on the front of the shin: the tibialis anterior."
+    },
+    {
+     "id": "mu-29",
+     "type": "short",
+     "image": "sheet-leg",
+     "stem": "On the revision sheet's leg, what is the scientific name of muscle B?",
+     "answer": "gastrocnemius",
+     "accept": [
+      "the gastrocnemius",
+      "gastrocnemious",
+      "gastrocnemius and soleus",
+      "soleus and gastrocnemius"
+     ],
+     "everyday": [
+      "calf",
+      "calf muscle",
+      "calves"
+     ],
+     "choices": [
+      "tibialis anterior",
+      "quadriceps",
+      "hamstrings"
+     ],
+     "explain": "B is the calf: the gastrocnemius (the soleus lies underneath it)."
+    },
+    {
+     "id": "mu-30",
+     "type": "short",
+     "image": "sheet-leg",
+     "stem": "On the revision sheet's leg, what is the scientific name of muscle D?",
+     "answer": "quadriceps",
+     "accept": [
+      "the quadriceps",
+      "quadricep"
+     ],
+     "everyday": [
+      "quads",
+      "thigh",
+      "thigh muscle",
+      "front of thigh",
+      "front of the thigh"
+     ],
+     "choices": [
+      "hamstrings",
+      "gastrocnemius",
+      "tibialis anterior"
+     ],
+     "explain": "D is on the front of the thigh: the quadriceps."
+    },
+    {
+     "id": "mu-31",
+     "type": "short",
+     "image": "sheet-leg",
+     "stem": "On the revision sheet's leg, what is the scientific name of muscle A?",
+     "answer": "hamstrings",
+     "accept": [
+      "hamstring",
+      "the hamstrings"
+     ],
+     "everyday": [
+      "back of thigh",
+      "back of the thigh",
+      "thigh",
+      "thigh muscle"
+     ],
+     "choices": [
+      "quadriceps",
+      "gastrocnemius",
+      "tibialis anterior"
+     ],
+     "explain": "A is on the back of the thigh: the hamstrings."
     }
    ]
   },
