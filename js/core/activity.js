@@ -70,6 +70,7 @@ export function activityFor(hash) {
     return ["menus", "Practice"];
   }
   if (path === "secondary") {
+    if (p[0] === "maths") return ["maths", p[1] === "learn" ? "Maths notes" : "Maths revision"];
     if (p[0] === "science") return ["science", p[1] === "learn" ? "Science notes" : p[1] === "label" ? "Science: name the parts" : "Science revision"];
     const lang = LANG_AREA[p[0]];
     if (!lang) return ["menus", "Languages menu"];
@@ -81,7 +82,7 @@ export function activityFor(hash) {
 }
 
 /* Area of a recorded run, from its items' subject. */
-const areaOfSubject = s => (AREAS[s] ? s : "menus");
+const areaOfSubject = s => (AREAS[s] ? s : s === "maths7" ? "maths" : "menus");
 
 let state = null;          // { dev, session, outbox: { id: record } }
 let lastInput = 0;
@@ -214,6 +215,8 @@ function resultLabel(mode, paperId, area, act) {
   if (mode === "vocab-test") return `${AREAS[area]} vocabulary test`;
   if (mode === "vocab-practise") return `${AREAS[area]} vocabulary practice`;
   if (mode === "verbs") return `${AREAS[area]} verbs`;
+  if (mode === "maths-test") return "Maths test (Year 7)";
+  if (mode === "maths-practise") return "Maths practice (Year 7)";
   if (mode === "science-test") return "Science test";
   if (mode === "science-practise") return "Science practice";
   if (mode === "science-label") return "Science: name the parts";

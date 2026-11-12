@@ -5,16 +5,18 @@
      #/secondary/<lang>/list/<secId>   word list for one topic
      #/secondary/<lang>/verbs[/<id>]   verb tables: setup, or one table
      #/secondary/science[/learn/<id>]  Year 7 science revision trainer
+     #/secondary/maths[/learn/<id>]    Year 7 maths revision (same trainer)
    ========================================================= */
 
 import { esc } from "../../core/utils.js";
 import { LANGS, loadBank, isKnown, vocabState } from "./langs.js";
 import { renderVocab } from "./vocab.js";
 import { renderVerbs } from "./verbs.js";
-import { renderScience, loadScience, SCIENCE } from "./science.js";
+import { renderScience, renderMaths, loadRevision, SCIENCE, MATHS } from "./revision.js";
 
 export function renderSecondary(el, params = []) {
   if (params[0] === "science") return renderScience(el, params.slice(1));
+  if (params[0] === "maths") return renderMaths(el, params.slice(1));
   if (params[0] && LANGS[params[0]] && params[1] === "verbs") return renderVerbs(el, params[0], params.slice(2));
   if (params[0] && LANGS[params[0]]) return renderVocab(el, params[0], params.slice(1));
   renderHub(el);
@@ -24,7 +26,7 @@ async function renderHub(el) {
   el.innerHTML = `
     <div class="card" style="margin-bottom:var(--sp-4);">
       <h2 style="margin-top:0;">Year 7</h2>
-      <p class="muted" style="margin-bottom:0;">Learn the words and phrases from each chapter, or revise a science topic, then test yourself.</p>
+      <p class="muted" style="margin-bottom:0;">Learn the words and phrases from each chapter, or revise a maths or science topic, then test yourself.</p>
     </div>
     <div class="subject-grid" data-cards></div>`;
   const grid = el.querySelector("[data-cards]");
@@ -51,22 +53,22 @@ async function renderHub(el) {
     grid.appendChild(card);
   }
 
-  /* Science revision: topics with notes, diagrams and questions */
-  let sci = null;
-  try { sci = await loadScience(); } catch { /* not deployed yet */ }
-  if (sci) {
-    const qs = sci.topics.flatMap(t => t.questions);
-    const stats = vocabState(SCIENCE.code).stats;
+  /* Maths and science revision: topics with notes and questions */
+  for (const S of [MATHS, SCIENCE]) {
+    let bank = null;
+    try { bank = await loadRevision(S); } catch { continue; /* not deployed yet */ }
+    const qs = bank.topics.flatMap(t => t.questions);
+    const stats = vocabState(S.code).stats;
     const known = qs.filter(q => (stats[q.id]?.mastery || 0) >= 0.8).length;
     const card = document.createElement("a");
     card.className = "subject-card";
-    card.dataset.subject = SCIENCE.subject;
-    card.href = "#/secondary/science";
+    card.dataset.subject = S.theme;
+    card.href = S.route;
     card.innerHTML = `
       <div class="subject-card-band"></div>
       <div class="subject-card-body">
-        <strong>Science revision</strong>
-        <span>${sci.topics.length} topics · ${known} of ${qs.length} questions mastered</span>
+        <strong>${esc(S.title)}</strong>
+        <span>${bank.topics.length} topics · ${known} of ${qs.length} questions mastered</span>
       </div>`;
     grid.appendChild(card);
   }

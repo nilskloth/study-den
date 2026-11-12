@@ -1,11 +1,16 @@
 /* =========================================================
-   Year 7 science revision trainer (Secondary → Science).
-     #/secondary/science                 setup: pick topics, mode, start
-     #/secondary/science/learn/<topic>   notes: diagram, key facts, key words
+   Year 7 revision trainer (Secondary → Science, Maths).
+   One trainer, one config per subject (SCIENCE, MATHS below):
+     #/secondary/<subj>                 setup: pick topics, mode, start
+     #/secondary/<subj>/learn/<topic>   notes: diagram, key facts, key words
      #/secondary/science/label/<diagram> name the parts: label a whole
                                          diagram (skeleton, muscles, …) at once
 
-   Content: data/content/secondary/science.json — topics with
+   Maths: data/content/secondary/maths.json, same topic format; typed
+   answers are marked by core/maths-match.js, and a question with
+   "gen" gets fresh numbers each time from gen/ks3maths.js.
+
+   Science: data/content/secondary/science.json — topics with
    facts, key words, one or more diagrams (inline SVG under
    data/content/secondary/science/) and questions:
      short  typed answer (answer + accept[]), or pick from 4
@@ -25,23 +30,42 @@ import { esc, pickN, shuffle, normaliseText } from "../../core/utils.js";
 import { newStat, weightedPick, applyResult } from "../../core/adaptive.js";
 import { vocabState } from "./langs.js";
 import { seg } from "./vocab.js";
+import { checkMaths } from "../../core/maths-match.js";
+import { GENERATORS } from "../../gen/ks3maths.js";
 
-export const SCIENCE = { code: "science", label: "Science", subject: "science" };
+/* code: store.vocab key · subject: recorded attempts · theme: colour */
+export const SCIENCE = {
+  code: "science", label: "Science", subject: "science", theme: "science",
+  route: "#/secondary/science", base: "data/content/secondary/science",
+  title: "Science revision", noun: "science", mode: "science", paperId: "science",
+  typeHint: "Type your answers — spelling slips are forgiven, but you'll see the proper spelling."
+};
+export const MATHS = {
+  code: "maths7", label: "Maths", subject: "maths7", theme: "maths",
+  route: "#/secondary/maths", base: "data/content/secondary/maths",
+  title: "Maths revision", noun: "maths", mode: "maths", paperId: "maths7",
+  typeHint: "Type your answers. For a negative number type a minus sign, e.g. -5; for × you can type x.",
+  judge: checkMaths,
+  /* a generated question gets new numbers every time it's asked */
+  expand: q => (q.gen && GENERATORS[q.gen] ? { ...q, ...GENERATORS[q.gen]() } : q)
+};
 const TEST_LENGTHS = [10, 20, 30];
-const BASE = "data/content/secondary/science";
 
-let bankPromise = null;
-export function loadScience() {
-  if (!bankPromise) {
-    bankPromise = fetch(`${BASE}.json`, { cache: "no-cache" })
-      .then(r => { if (!r.ok) throw new Error(`science.json: HTTP ${r.status}`); return r.json(); })
-      .catch(err => { bankPromise = null; throw err; });
+const banks = {};
+export function loadRevision(S) {
+  if (!banks[S.code]) {
+    banks[S.code] = fetch(`${S.base}.json`, { cache: "no-cache" })
+      .then(r => { if (!r.ok) throw new Error(`${S.base.split("/").pop()}.json: HTTP ${r.status}`); return r.json(); })
+      .catch(err => { delete banks[S.code]; throw err; });
   }
-  return bankPromise;
+  return banks[S.code];
 }
+export const loadScience = () => loadRevision(SCIENCE);
+export const loadMaths = () => loadRevision(MATHS);
 
 /* Diagrams are inlined so they use the page font and can be switched
    between names and letters. Cached as text. */
+const BASE = SCIENCE.base;
 const figures = {};
 function loadFigure(file) {
   if (!figures[file]) {
@@ -107,42 +131,46 @@ const mastered = stat => (stat?.mastery || 0) >= 0.8;
    Entry
 ========================= */
 
-export async function renderScience(el, params = []) {
-  el.dataset.subject = SCIENCE.subject;
-  el.innerHTML = `<div class="card"><p class="muted">Loading the science notes…</p></div>`;
+export const renderScience = (el, params) => renderRevision(el, params, SCIENCE);
+export const renderMaths = (el, params) => renderRevision(el, params, MATHS);
+
+async function renderRevision(el, params = [], S) {
+  el.dataset.subject = S.theme;
+  el.innerHTML = `<div class="card"><p class="muted">Loading the ${S.noun} notes…</p></div>`;
   let bank;
   try {
-    bank = await loadScience();
+    bank = await loadRevision(S);
   } catch (err) {
-    el.innerHTML = `<div class="card"><p>The science questions couldn't load. Check your connection and refresh.</p>
+    el.innerHTML = `<div class="card"><p>The ${S.noun} questions couldn't load. Check your connection and refresh.</p>
       <p class="muted">${esc(err.message)}</p></div>`;
     return;
   }
-  const ctx = { el, bank };
+  const ctx = { el, bank, S };
   if (params[0] === "learn" && params[1]) return renderLearn(ctx, params[1]);
   if (params[0] === "label" && params[1]) return renderLabel(ctx, params[1]);
   renderSetup(ctx);
 }
 
 const topicById = (bank, id) => bank.topics.find(t => t.id === id);
-const stateOf = () => vocabState(SCIENCE.code);
+const stateOf = S => vocabState(S.code);
+const judgeOf = S => S.judge || judgeTyped;
 
 /* =========================
    Notes page for one topic
 ========================= */
 
-async function renderLearn({ el, bank }, topicId) {
+async function renderLearn({ el, bank, S }, topicId) {
   const topic = topicById(bank, topicId);
-  if (!topic) { location.hash = "#/secondary/science"; return; }
-  const stats = stateOf().stats;
+  if (!topic) { location.hash = S.route; return; }
+  const stats = stateOf(S).stats;
   const known = topic.questions.filter(q => mastered(stats[q.id])).length;
 
   el.innerHTML = `
     <div class="run-bar">
       <h2>${esc(topicLabel(topic))}</h2>
-      <a class="btn quiet" href="#/secondary/science">Back</a>
+      <a class="btn quiet" href="${S.route}">Back</a>
     </div>
-    <div class="paper-sheet sci-notes" data-subject="science">
+    <div class="paper-sheet sci-notes" data-subject="${S.theme}">
       ${topic.source ? `<p class="sci-source">${esc(topic.source)}</p>` : ""}
       <p class="muted" style="margin-top:0;">${esc(topic.summary)}</p>
       ${topic.images.map((im, i) => `
@@ -158,7 +186,7 @@ async function renderLearn({ el, bank }, topicId) {
           <thead><tr>${topic.table.head.map(h => `<th>${esc(h)}</th>`).join("")}</tr></thead>
           <tbody>${topic.table.rows.map(r => `<tr>${r.map((c, j) => j ? `<td>${esc(c)}</td>` : `<td><strong>${esc(c)}</strong></td>`).join("")}</tr>`).join("")}</tbody>
         </table>` : ""}
-      <h3>Key facts</h3>
+      <h3>${S === MATHS ? "Key facts and methods" : "Key facts"}</h3>
       <ul class="fact-list">${topic.facts.map(f => `<li>${rich(f)}</li>`).join("")}</ul>
       <h3>Key words</h3>
       <table class="word-list keyword-list">
@@ -218,8 +246,8 @@ async function renderLearn({ el, bank }, topicId) {
   }
 
   el.querySelector("[data-practise]").addEventListener("click", () => {
-    const prefs = stateOf().prefs;
-    startRun({ el, bank }, {
+    const prefs = stateOf(S).prefs;
+    startRun({ el, bank, S }, {
       pool: topic.questions.map(q => ({ ...q, topic })),
       style: prefs.style || "type",
       test: 0
@@ -232,8 +260,8 @@ async function renderLearn({ el, bank }, topicId) {
 ========================= */
 
 function renderSetup(ctx) {
-  const { el, bank } = ctx;
-  const state = stateOf();
+  const { el, bank, S } = ctx;
+  const state = stateOf(S);
   const prefs = state.prefs;
   const valid = new Set(bank.topics.map(t => t.id));
   let selected = new Set((prefs.topics || []).filter(id => valid.has(id)));
@@ -242,7 +270,8 @@ function renderSetup(ctx) {
   const masteredIn = t => t.questions.filter(q => mastered(state.stats[q.id])).length;
 
   el.innerHTML = `<div data-setup>
-    <div class="run-bar"><h2>Science revision</h2><span class="muted">${esc(bank.unit)}</span></div>
+    <div class="run-bar"><h2>${esc(S.title)}</h2><span class="muted">${esc(bank.unit)}</span></div>
+    ${bank.source && S === MATHS ? `<p class="sci-source">${esc(bank.source)}</p>` : ""}
 
     ${labelSets(bank).length ? `
     <div class="card setup-card">
@@ -251,7 +280,7 @@ function renderSetup(ctx) {
       <div class="sci-label-pick">
         ${labelSets(bank).map(set => {
           const known = set.qs.filter(q => mastered(state.stats[q.id])).length;
-          return `<a class="btn" href="#/secondary/science/label/${esc(set.file)}"><strong>${esc(set.title)}</strong>
+          return `<a class="btn" href="${S.route}/label/${esc(set.file)}"><strong>${esc(set.title)}</strong>
             <span class="muted">${set.qs.length} ${set.noun} · ${known} known</span></a>`;
         }).join("")}
       </div>
@@ -259,7 +288,7 @@ function renderSetup(ctx) {
 
     <div class="card setup-card">
       <h3>1. Choose your topics</h3>
-      <p class="muted" style="margin-top:calc(-1 * var(--sp-2));">Read the notes first, then practise. Each topic has a diagram, key facts and key words.</p>
+      <p class="muted" style="margin-top:calc(-1 * var(--sp-2));">Read the notes first, then practise. ${S === MATHS ? "Each topic has key facts, methods and key words; many questions get new numbers every time." : "Each topic has a diagram, key facts and key words."}</p>
       <div class="section-grid" style="margin-left:0;">
         ${bank.topics.map((t, i) => `
           ${i === 0 && t.sheet ? `<p class="section-group muted" style="border-top:0;padding-top:0;">From your class sheets</p>` : ""}
@@ -270,7 +299,7 @@ function renderSetup(ctx) {
               <span>${t.sheet ? esc(t.title) : `<strong>${t.number}.</strong> ${esc(t.title)}`}</span>
             </label>
             <span class="muted section-meta" data-meta="${t.id}">${masteredIn(t)}/${t.questions.length} mastered</span>
-            <a class="section-look" href="#/secondary/science/learn/${t.id}">Read the notes</a>
+            <a class="section-look" href="${S.route}/learn/${t.id}">Read the notes</a>
           </div>`).join("")}
       </div>
       <p style="margin-bottom:0;">
@@ -321,9 +350,7 @@ function renderSetup(ctx) {
       ? `${qs.length} question${qs.length === 1 ? "" : "s"} selected${n ? ` · test of ${n}` : ""}`
       : "Choose at least one topic";
     el.querySelector("[data-start]").disabled = !qs.length;
-    const styleText = val("style") === "type"
-      ? "Type your answers — spelling slips are forgiven, but you'll see the proper spelling."
-      : "Pick the right answer from four.";
+    const styleText = val("style") === "type" ? S.typeHint : "Pick the right answer from four.";
     const modeText = mode === "practise"
       ? "Practise: you see the answer after each question, and the ones you find hard come back more often."
       : "Test: no help until the end — then you see your score and every answer.";
@@ -392,10 +419,10 @@ function labelSets(bank) {
 }
 
 async function renderLabel(ctx, file) {
-  const { el, bank } = ctx;
+  const { el, bank, S } = ctx;
   const set = labelSets(bank).find(s => s.file === file);
-  if (!set) { location.hash = "#/secondary/science"; return; }
-  const pick = stateOf().prefs.style === "choose";
+  if (!set) { location.hash = S.route; return; }
+  const pick = stateOf(S).prefs.style === "choose";
   const names = [...new Set(set.qs.map(q => q.answer))].sort((a, b) => a.localeCompare(b));
   const byPart = new Map(set.qs.map(q => [q.part, q]));
 
@@ -403,9 +430,9 @@ async function renderLabel(ctx, file) {
     <div class="run-bar">
       <h2>Name the ${esc(set.noun)} <span class="muted" style="font-weight:400;">· ${esc(set.title)}</span></h2>
       <span class="timer-pill" data-progress></span>
-      <a class="btn quiet" href="#/secondary/science">Back</a>
+      <a class="btn quiet" href="${S.route}">Back</a>
     </div>
-    <div class="paper-sheet sci-card" data-subject="science">
+    <div class="paper-sheet sci-card" data-subject="${S.theme}">
       <p class="muted" style="margin-top:0;">${pick ? "Choose" : "Write"} the name for each letter, then press <strong>Check</strong>. Spelling slips are forgiven.</p>
       <div class="sci-figure-host sci-quiz-figure" data-figure></div>
       <ol class="sci-label-list" data-list></ol>
@@ -414,7 +441,7 @@ async function renderLabel(ctx, file) {
     </div>
     <p class="sci-label-more">
       <button type="button" class="quiet" data-one>One at a time instead</button>
-      <a class="btn quiet" href="#/secondary/science/learn/${esc(set.topic.id)}">Read the notes</a>
+      <a class="btn quiet" href="${S.route}/learn/${esc(set.topic.id)}">Read the notes</a>
     </p>`;
   const $ = s => el.querySelector(s);
 
@@ -483,7 +510,7 @@ async function renderLabel(ctx, file) {
       rows.forEach((r, i) => {
         if (r.done) return;
         const value = inputs[i].value;
-        const res = pick ? { ok: value === r.q.answer } : judgeTyped(r.q, value);
+        const res = pick ? { ok: value === r.q.answer } : judgeOf(S)(r.q, value);
         if (first) r.firstOk = res.ok;
         const li = rowEl(i);
         li.classList.toggle("is-correct", res.ok);
@@ -540,18 +567,18 @@ async function renderLabel(ctx, file) {
 
     /* Only the first check counts towards mastery and Grown-ups. */
     function record() {
-      const stats = stateOf().stats;
+      const stats = stateOf(S).stats;
       rows.forEach(r => {
         if (!stats[r.q.id]) stats[r.q.id] = newStat(r.q.id);
         applyResult(stats[r.q.id], r.firstOk);
       });
       saveStore();
       recordAttempt({
-        mode: "science-label",
-        paperId: "science",
+        mode: `${S.mode}-label`,
+        paperId: S.paperId,
         seconds: Math.round((Date.now() - startedAt) / 1000),
         items: rows.map(r => ({
-          qid: r.q.id, domain: r.q.topic.title, subject: SCIENCE.subject,
+          qid: r.q.id, domain: r.q.topic.title, subject: S.subject,
           marks: 1, earned: r.firstOk ? 1 : 0, marking: "auto"
         }))
       });
@@ -623,8 +650,8 @@ function judgeTyped(q, answer) {
 ========================= */
 
 function startRun(ctx, cfg) {
-  const { el, bank } = ctx;
-  const stats = stateOf().stats;
+  const { el, S } = ctx;
+  const stats = stateOf(S).stats;
   const fresh = new Map();
   const statFor = q => {
     if (stats[q.id]) return stats[q.id];
@@ -647,7 +674,7 @@ function startRun(ctx, cfg) {
       <span class="timer-pill" data-progress></span>
       <button type="button" class="quiet" data-finish>${cfg.test ? "Stop test" : "Finish"}</button>
     </div>
-    <div class="paper-sheet vocab-card sci-card" data-subject="science">
+    <div class="paper-sheet vocab-card sci-card" data-subject="${S.theme}">
       <p class="vocab-context muted" data-context></p>
       <div class="sci-figure-host sci-quiz-figure hidden" data-figure></div>
       <div class="sci-prompt" data-prompt></div>
@@ -677,8 +704,9 @@ function startRun(ctx, cfg) {
   }
 
   async function ask() {
-    const q = nextQuestion();
-    if (!q) return showTestReview();
+    const next = nextQuestion();
+    if (!next) return showTestReview();
+    const q = S.expand ? S.expand(next) : next;
     run.current = q;
     run.lastId = q.id;
     progress();
@@ -716,7 +744,7 @@ function startRun(ctx, cfg) {
     let asked = false;
     const submit = answer => {
       if (run.current !== q) return;
-      const res = judgeTyped(q, answer);
+      const res = judgeOf(S)(q, answer);
       if (res.everyday && !asked) {
         asked = true;
         $("[data-feedback]").innerHTML = `<div class="mark-note partial"><strong>Nearly — “${esc(answer.trim())}”</strong>
@@ -798,12 +826,13 @@ function startRun(ctx, cfg) {
         <strong>${head}</strong>
         ${result.ok && !result.near ? "" : `<p style="margin:var(--sp-1) 0 0;"><span class="vocab-answer">${esc(answerText(q))}</span></p>`}
         ${result.everyday ? `<p style="margin:var(--sp-1) 0 0;">“${esc(String(result.answer).trim())}” is the everyday name — it won't get the mark in the assessment.</p>` : ""}
+        ${!result.ok && !result.everyday && result.tip ? `<p style="margin:var(--sp-1) 0 0;"><strong>${esc(result.tip)}</strong></p>` : ""}
         ${q.explain ? `<p style="margin:var(--sp-1) 0 0;">${esc(q.explain)}</p>` : ""}
       </div>
       <div class="vocab-actions">
         <button class="primary" data-next>Next</button>
         ${!result.ok && !result.everyday && result.answer && q.type === "short" && cfg.style === "type" ? `<button type="button" class="quiet" data-overrule>I was right</button>` : ""}
-        <a class="btn quiet" href="#/secondary/science/learn/${q.topic.id}">Read the notes</a>
+        <a class="btn quiet" href="${S.route}/learn/${q.topic.id}">Read the notes</a>
       </div>`;
     const next = $("[data-next]");
     next.focus();
@@ -884,11 +913,11 @@ function startRun(ctx, cfg) {
     window.removeEventListener("pagehide", onLeave);
     if (cfg.test) run.results.forEach(r => applyResult(keep(r.q), r.ok));
     recordAttempt({
-      mode: cfg.test ? "science-test" : "science-practise",
-      paperId: "science",
+      mode: cfg.test ? `${S.mode}-test` : `${S.mode}-practise`,
+      paperId: S.paperId,
       seconds: Math.round((Date.now() - run.startedAt) / 1000),
       items: run.results.map(r => ({
-        qid: r.q.id, domain: r.q.topic.title, subject: SCIENCE.subject,
+        qid: r.q.id, domain: r.q.topic.title, subject: S.subject,
         marks: 1, earned: r.ok ? 1 : 0, marking: r.marking
       }))
     });
@@ -896,7 +925,7 @@ function startRun(ctx, cfg) {
 
   function goHome() {
     commit();
-    const home = "#/secondary/science";
+    const home = S.route;
     if (location.hash === home) renderSetup(ctx);
     else location.hash = home;
   }
