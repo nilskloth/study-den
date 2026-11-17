@@ -238,24 +238,29 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
   apart from SATs maths), modes `maths-practise` / `maths-test`; usage area `maths`.
 
 ## Secondary: geography revision (`views/secondary/revision.js` with `GEOGRAPHY`, `#/secondary/geography[/learn/<id>|/label/<map>]`)
-- **Source:** the parent's list (Nov 2026): continents and oceans, compass directions, grid references (as in the class
-  homework "Grid refs homework.pdf": 4- and 6-figure, eastings first — New Key Geography sheets, not copied), fantastic
-  places (the teacher describes places), the Great Barrier Reef and why it is disappearing. No class sheet yet — notes
-  and questions are ours (bank `source` says so). Finn's workbook pages: add as `sheet: true` topics when photographed.
+- **Source:** Finn's class workbook and homework (photos, Nov 2026), topics in the order taught: continents, countries and
+  oceans (class map splits North/South Atlantic) · the seven natural wonders (16 Sept: Grand Canyon, Great Barrier Reef,
+  Harbour of Rio, Everest, Northern Lights, Parícutin, Victoria Falls) · the Great Barrier Reef (22 Sept) · Antarctica
+  (30 Sept) · Easter Island / Rapa Nui sketch map (6 Oct) · compass directions (14 Oct) · grid references and OS maps
+  (homework sheets, letter–number squares, 4 Nov OS symbols/roads) · scale and distance · contour lines (20 Oct) ·
+  mental maps and sense of place (10 Nov). The workbook has answers but not the questions, so all questions and notes
+  are ours (bank and topic `source` lines say so); worksheets (New Key Geography) are redrawn, not copied; nothing
+  personal from the workbook (family, home, classmates) goes on the public site. More pages: add to the same topics.
 - **Same trainer and topic format as science.** Maps in `geography/` from `tools/build-geog-art.mjs <geojson>` (Natural
-  Earth 110m countries, public domain — URL in the script; Equal Earth projection, coloured by continent, Russia split
-  at 60°E): `world` (7 continents + 5 oceans as `.lbl` parts), `places` (7 fantastic places), `compass` (8 points),
-  `grid4` / `grid6` (worked examples). `world`, `places`, `compass` are also "Name the …" sets (`LABEL_NAMES`).
-- **Generated map questions** (`gen` → `GEO_GENERATORS` in `gen/geog.js`): a fresh 6 × 6 grid map (random grid numbers,
-  6 OS-style symbols + key, one per square, never in neighbouring squares, at tenths 2–8) as an SVG string in `q.svg`,
-  shown where a diagram goes: `grid4-what`, `grid4-where`, `grid6-what`, `grid6-where`, `dir-map` (only pairs within
-  12° of a compass point).
-- **Marking:** `match: "grid"` (digits, spaces ok), `"grid6"` (one tenth either way counts), `"dir"` (NE / north east /
-  northeast / north-east) in `core/geog-match.js`, with tips (northings first, opposite direction, 4 instead of 6
-  figures); everything else uses the science word matcher. `reject: []` lists wrong answers a spelling slip away from
-  the right one (South America ↔ North America, Iceland ↔ Ireland); the matcher never counts a choice or a reject as a
-  slip (science too). `node tools/test-geog.mjs` checks the bank, the map parts, 400 runs of every generator and that
-  no wrong answer in the bank is a slip away from a right one — run it after any edit.
+  Earth 110m countries, public domain — URL in the script; Equal Earth, coloured by continent, Russia split at 60°E):
+  `world` (continents + oceans), `places` (the 7 natural wonders), `antarctica` (polar view), `easter-island` (sketch),
+  `compass` — all `.lbl` maps, also "Name the …" sets (`LABEL_NAMES`) — and `grid4`, `grid6`, `contours` (fixed letters
+  A–D, questions with `image` but no `part`).
+- **Generated questions** (`gen` → `GEO_GENERATORS` in `gen/geog.js`): a fresh 6 × 6 map (random grid numbers, 6 of 16
+  OS-style symbols + key, one per square, never neighbours, at tenths 2–8) in `q.svg`: `grid4-what/-where`,
+  `grid6-what/-where`, `dir-map` (within 12° of a compass point), `gridAN-what/-where` (letter–number squares, C4);
+  no map: `scale-real`, `scale-map` (1:50,000 / 1:25,000), `scale-squares` (OS square = 1 km).
+- **Marking** (`core/geog-match.js`): `match` `grid` · `grid6` (±1 tenth) · `dir` (NE / north east / north-east) ·
+  `gridAN` (letter first) · `dist` (number in `q.unit` km/cm/m, other units converted), with tips; everything else uses
+  the science word matcher. `reject: []` lists wrong answers a spelling slip from the right one (South/North America,
+  South Pole/North Pole); the matcher never counts a choice or a reject as a slip (science too).
+  `node tools/test-geog.mjs` checks the bank, map parts, that "map of …" questions have an image, 400 runs of every
+  generator, and that no wrong answer is a slip away from a right one — run it after any edit.
 - **State/records:** `store.vocab.geography`; attempts subject `geography`, modes `geography-practise` / `-test` /
   `-label`; usage area `geography` (`--viz-10`); colour `--c-geography`.
 

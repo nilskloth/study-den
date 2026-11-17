@@ -31,46 +31,46 @@
   <line x1="0" y1="252" x2="960" y2="252" stroke="#2c5c80" stroke-width="1" stroke-dasharray="6 4"/>
   <text class="cap" x="9.3" y="247">Equator</text>
   
+  <g class="lbl" data-part="grand-canyon">
+    <line class="leader" x1="195.3" y1="114.6" x2="208.9" y2="126.9"/>
+    <circle class="dot" cx="208.9" cy="126.9" r="3.5"/>
+    <text class="name" x="149.1" y="119.1" text-anchor="middle">Grand Canyon</text>
+    <g class="letter"><circle cx="149.1" cy="114.6" r="10"/><text x="149.1" y="119.1" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="paricutin">
+    <line class="leader" x1="139.5" y1="220.5" x2="214.8" y2="182.7"/>
+    <circle class="dot" cx="214.8" cy="182.7" r="3.5"/>
+    <text class="name" x="139.5" y="235" text-anchor="middle">Parícutin volcano</text>
+    <g class="letter"><circle cx="139.5" cy="230.5" r="10"/><text x="139.5" y="235" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="rio">
+    <line class="leader" x1="451.3" y1="373.1" x2="369.2" y2="333.1"/>
+    <circle class="dot" cx="369.2" cy="333.1" r="3.5"/>
+    <text class="name" x="451.3" y="387.6" text-anchor="middle">Harbour of Rio de Janeiro</text>
+    <g class="letter"><circle cx="451.3" cy="383.1" r="10"/><text x="451.3" y="387.6" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="victoria-falls">
+    <line class="leader" x1="617.7" y1="357.1" x2="547.5" y2="315.8"/>
+    <circle class="dot" cx="547.5" cy="315.8" r="3.5"/>
+    <text class="name" x="617.7" y="371.6" text-anchor="middle">Victoria Falls</text>
+    <g class="letter"><circle cx="617.7" cy="367.1" r="10"/><text x="617.7" y="371.6" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="everest">
+    <line class="leader" x1="747" y1="184.9" x2="698.7" y2="153.5"/>
+    <circle class="dot" cx="698.7" cy="153.5" r="3.5"/>
+    <text class="name" x="747" y="199.4" text-anchor="middle">Mount Everest</text>
+    <g class="letter"><circle cx="747" cy="194.9" r="10"/><text x="747" y="199.4" text-anchor="middle"></text></g>
+  </g>
   <g class="lbl" data-part="great-barrier-reef">
     <line class="leader" x1="860.4" y1="385.5" x2="861.5" y2="316.1"/>
     <circle class="dot" cx="861.5" cy="316.1" r="3.5"/>
     <text class="name" x="860.4" y="400" text-anchor="middle">Great Barrier Reef</text>
     <g class="letter"><circle cx="860.4" cy="395.5" r="10"/><text x="860.4" y="400" text-anchor="middle"></text></g>
   </g>
-  <g class="lbl" data-part="amazon">
-    <line class="leader" x1="228.5" y1="277.8" x2="314.8" y2="266.4"/>
-    <circle class="dot" cx="314.8" cy="266.4" r="3.5"/>
-    <text class="name" x="228.5" y="292.3" text-anchor="middle">Amazon rainforest</text>
-    <g class="letter"><circle cx="228.5" cy="287.8" r="10"/><text x="228.5" y="292.3" text-anchor="middle"></text></g>
-  </g>
-  <g class="lbl" data-part="sahara">
-    <line class="leader" x1="467.7" y1="146.9" x2="505.7" y2="170.5"/>
-    <circle class="dot" cx="505.7" cy="170.5" r="3.5"/>
-    <text class="name" x="467.7" y="141.4" text-anchor="middle">Sahara Desert</text>
-    <g class="letter"><circle cx="467.7" cy="136.9" r="10"/><text x="467.7" y="141.4" text-anchor="middle"></text></g>
-  </g>
-  <g class="lbl" data-part="everest">
-    <line class="leader" x1="740.4" y1="177.9" x2="698.7" y2="153.5"/>
-    <circle class="dot" cx="698.7" cy="153.5" r="3.5"/>
-    <text class="name" x="740.4" y="192.4" text-anchor="middle">Mount Everest</text>
-    <g class="letter"><circle cx="740.4" cy="187.9" r="10"/><text x="740.4" y="192.4" text-anchor="middle"></text></g>
-  </g>
-  <g class="lbl" data-part="grand-canyon">
-    <line class="leader" x1="135.8" y1="136.8" x2="208.9" y2="126.9"/>
-    <circle class="dot" cx="208.9" cy="126.9" r="3.5"/>
-    <text class="name" x="135.8" y="151.3" text-anchor="middle">Grand Canyon</text>
-    <g class="letter"><circle cx="135.8" cy="146.8" r="10"/><text x="135.8" y="151.3" text-anchor="middle"></text></g>
-  </g>
-  <g class="lbl" data-part="victoria-falls">
-    <line class="leader" x1="608.5" y1="353.8" x2="547.5" y2="315.8"/>
-    <circle class="dot" cx="547.5" cy="315.8" r="3.5"/>
-    <text class="name" x="608.5" y="368.3" text-anchor="middle">Victoria Falls</text>
-    <g class="letter"><circle cx="608.5" cy="363.8" r="10"/><text x="608.5" y="368.3" text-anchor="middle"></text></g>
-  </g>
-  <g class="lbl" data-part="iceland">
-    <line class="leader" x1="399.9" y1="61.5" x2="443.7" y2="47.7"/>
-    <circle class="dot" cx="443.7" cy="47.7" r="3.5"/>
-    <text class="name" x="399.9" y="76" text-anchor="middle">Iceland</text>
-    <g class="letter"><circle cx="399.9" cy="71.5" r="10"/><text x="399.9" y="76" text-anchor="middle"></text></g>
+  <g class="lbl" data-part="northern-lights">
+    <line class="leader" x1="577" y1="35.7" x2="514.5" y2="38.6"/>
+    <circle class="dot" cx="514.5" cy="38.6" r="3.5"/>
+    <text class="name" x="577" y="30.2" text-anchor="middle">Northern Lights</text>
+    <g class="letter"><circle cx="577" cy="25.7" r="10"/><text x="577" y="30.2" text-anchor="middle"></text></g>
   </g>
 </svg>

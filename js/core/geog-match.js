@@ -7,6 +7,9 @@
      match "grid6"  6-figure grid reference: one tenth either way counts
      match "dir"    compass direction: NE, north east, north-east,
                     northeast all mean the same
+     match "gridAN" letter–number square: C4, c 4 (letter first)
+     match "dist"   a distance: the number counts in the question's unit
+                    (q.unit, km or cm); another unit is converted (3000 m = 3 km)
    DOM-free (tested by tools/test-geog.mjs).
    ========================================================= */
 
@@ -38,6 +41,23 @@ export function checkGeog(q, typed) {
     if (!d) return { ok: false, tip: String(typed).trim() ? "Give a compass direction, such as north-east (or NE)." : undefined };
     if (d === q.answer) return { ok: true };
     if (OPPOSITE[q.answer] === d) return { ok: false, tip: "That's the opposite way round — start from the place after “from”, then look towards the other one." };
+    return { ok: false };
+  }
+  if (q.match === "gridAN") {
+    const t = String(typed ?? "").toUpperCase().replace(/[\s,.\-]/g, "");
+    if (t === q.answer) return { ok: true };
+    const m = q.answer.match(/^([A-Z])(\d+)$/);
+    if (m && t === `${m[2]}${m[1]}`) return { ok: false, tip: "Letter first: go along the bottom to the letter, then up the side to the number." };
+    return { ok: false };
+  }
+  if (q.match === "dist") {
+    const want = parseFloat(q.answer);
+    const m = String(typed ?? "").toLowerCase().replace(/,/g, ".").match(/^\s*(\d+(?:\.\d+)?)\s*(km|kilometres?|kilometers?|cm|centimetres?|centimeters?|m|metres?|meters?)?\s*$/);
+    if (!m) return { ok: false };
+    const unit = m[2] ? (m[2].startsWith("k") ? "km" : m[2].startsWith("c") ? "cm" : "m") : q.unit;
+    const toCm = { km: 100000, m: 100, cm: 1 };
+    const given = Number(m[1]) * toCm[unit] / toCm[q.unit];
+    if (Math.abs(given - want) < 1e-9) return { ok: true };
     return { ok: false };
   }
   if (q.match === "grid" || q.match === "grid6") {

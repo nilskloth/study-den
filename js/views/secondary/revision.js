@@ -423,7 +423,9 @@ const LABEL_NAMES = {
   microscope: ["The microscope", "parts"],
   cells: ["Plant and animal cells", "parts"],
   world: ["Continents and oceans", "places"],
-  places: ["Fantastic places", "places"],
+  places: ["The 7 natural wonders", "wonders"],
+  antarctica: ["Antarctica", "places"],
+  "easter-island": ["Easter Island", "places"],
   compass: ["The compass", "directions"]
 };
 

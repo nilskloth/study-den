@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 580" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .sea-name { font-style: italic; fill: #2c5c80; }
+    .lbl .leader { stroke: #3d4248; stroke-width: 1.3; fill: none; }
+    .lbl .dot { fill: #3d4248; }
+    .lbl .name { font-weight: 700; paint-order: stroke; stroke: rgba(255,255,255,0.85); stroke-width: 3px; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<rect width="840" height="580" fill="#d4e7f4"/>
+  <path d="M325,186.3C351.8,159.6 401.7,113.1 440,103.6C478.3,94.1 497.5,117.8 555,129.4C612.5,141.1 743.6,155.3 785,173.3C826.4,191.4 811.1,218.6 803.4,237.9C795.7,257.3 757.4,282.3 739,289.6C720.6,296.9 723.7,271.1 693,281.9C662.3,292.6 601,333.1 555,354.2C509,375.3 455.3,391.2 417,408.5C378.7,425.7 348,445.1 325,457.5C302,470 292.8,487.3 279,483.4C265.2,479.5 244.5,458 242.2,434.3C239.9,410.6 259.1,369.7 265.2,341.3C271.3,312.9 269,289.6 279,263.8C289,237.9 298.2,213 325,186.3" fill="#e8e2c9" stroke="#55697a" stroke-width="1.5"/>
+  <path d="M397.5,174.2L405.5,160.2L413.5,174.2Z" fill="#5d4a3a"/><path d="M731,223.3L739,209.3L747,223.3Z" fill="#5d4a3a"/><path d="M282.5,445.5L290.5,431.5L298.5,445.5Z" fill="#5d4a3a"/>
+  <g transform="translate(60,80)">
+    <path d="M0,-30L7,0L0,-6L-7,0Z" fill="#2c3e50"/><path d="M0,30L7,0L0,6L-7,0Z" fill="#fff" stroke="#2c3e50"/>
+    <text x="0" y="-36" text-anchor="middle" font-weight="700">N</text><text x="0" y="48" text-anchor="middle" font-weight="700">S</text>
+    <text x="-14" y="5" text-anchor="end" font-weight="700">W</text><text x="14" y="5" font-weight="700">E</text>
+  </g>
+  <text class="cap" x="830" y="570" text-anchor="end">Sketch map — about 24 km from west to east</text>
+  <text class="sea-name" x="110" y="540" text-anchor="middle">Pacific Ocean</text>
+  
+  <g class="lbl" data-part="terevaka">
+    <line class="leader" x1="371" y1="54.2" x2="405.5" y2="168.2"/>
+    <circle class="dot" cx="405.5" cy="168.2" r="3.5"/>
+    <text class="name" x="371" y="48.7" text-anchor="middle">Maunga Terevaka</text>
+    <g class="letter"><circle cx="371" cy="44.2" r="10"/><text x="371" y="48.7" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="rano-aroi">
+    <line class="leader" x1="496.6" y1="225" x2="435.4" y2="204.3"/>
+    <circle class="dot" cx="435.4" cy="204.3" r="3.5"/>
+    <text class="name" x="532" y="229.5" text-anchor="middle">Rano Aroi</text>
+    <g class="letter"><circle cx="532" cy="225" r="10"/><text x="532" y="229.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="anakena">
+    <line class="leader" x1="624" y1="80" x2="550.4" y2="139.8"/>
+    <circle class="dot" cx="550.4" cy="139.8" r="3.5"/>
+    <text class="name" x="624" y="74.5" text-anchor="middle">Anakena beach</text>
+    <g class="letter"><circle cx="624" cy="70" r="10"/><text x="624" y="74.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="poike">
+    <line class="leader" x1="750.5" y1="144.6" x2="739" y2="217.3"/>
+    <circle class="dot" cx="739" cy="217.3" r="3.5"/>
+    <text class="name" x="750.5" y="139.1" text-anchor="middle">Poike</text>
+    <g class="letter"><circle cx="750.5" cy="134.6" r="10"/><text x="750.5" y="139.1" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="rano-raraku">
+    <line class="leader" x1="578" y1="460.5" x2="626.3" y2="268.9"/>
+    <circle class="dot" cx="626.3" cy="268.9" r="3.5"/>
+    <text class="name" x="578" y="475" text-anchor="middle">Rano Raraku (moai quarry)</text>
+    <g class="letter"><circle cx="578" cy="470.5" r="10"/><text x="578" y="475" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="hotuiti">
+    <line class="leader" x1="773.5" y1="357.1" x2="688.4" y2="287"/>
+    <circle class="dot" cx="688.4" cy="287" r="3.5"/>
+    <text class="name" x="773.5" y="371.6" text-anchor="middle">Hotu'iti Bay</text>
+    <g class="letter"><circle cx="773.5" cy="367.1" r="10"/><text x="773.5" y="371.6" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="vaihu">
+    <line class="leader" x1="463" y1="473.4" x2="421.6" y2="398.1"/>
+    <circle class="dot" cx="421.6" cy="398.1" r="3.5"/>
+    <text class="name" x="463" y="487.9" text-anchor="middle">Vaihu</text>
+    <g class="letter"><circle cx="463" cy="483.4" r="10"/><text x="463" y="487.9" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="rano-kau">
+    <line class="leader" x1="371" y1="525.1" x2="290.5" y2="439.5"/>
+    <circle class="dot" cx="290.5" cy="439.5" r="3.5"/>
+    <text class="name" x="371" y="539.6" text-anchor="middle">Rano Kau</text>
+    <g class="letter"><circle cx="371" cy="535.1" r="10"/><text x="371" y="539.6" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="mataveri">
+    <line class="leader" x1="129.5" y1="421.7" x2="325" y2="377.5"/>
+    <circle class="dot" cx="325" cy="377.5" r="3.5"/>
+    <text class="name" x="129.5" y="436.2" text-anchor="middle">Mataveri Airport</text>
+    <g class="letter"><circle cx="129.5" cy="431.7" r="10"/><text x="129.5" y="436.2" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="hanga-roa">
+    <line class="leader" x1="178.6" y1="328.4" x2="297.4" y2="336.1"/>
+    <circle class="dot" cx="297.4" cy="336.1" r="3.5"/>
+    <text class="name" x="118" y="332.9" text-anchor="middle">Hanga Roa (town)</text>
+    <g class="letter"><circle cx="118" cy="328.4" r="10"/><text x="118" y="332.9" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="ahu-akapu">
+    <line class="leader" x1="141" y1="222.1" x2="306.6" y2="258.6"/>
+    <circle class="dot" cx="306.6" cy="258.6" r="3.5"/>
+    <text class="name" x="141" y="216.6" text-anchor="middle">Ahu Akapu</text>
+    <g class="letter"><circle cx="141" cy="212.1" r="10"/><text x="141" y="216.6" text-anchor="middle"></text></g>
+  </g>
+</svg>

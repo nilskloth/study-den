@@ -50,9 +50,10 @@ for (const t of bank.topics) {
     ok(!ids.has(q.id), `duplicate id ${q.id}`);
     ids.add(q.id);
     if (q.gen) { ok(GEO_GENERATORS[q.gen], `${q.id}: unknown generator ${q.gen}`); continue; }
+    if (/\b(map|diagram) of\b|labelled \{L\}/i.test(q.stem)) ok(q.image, `${q.id}: refers to a map but has no image`);
     if (q.image) {
-      ok(svgOf(q.image)?.includes(`data-part="${q.part}"`), `${q.id}: ${q.image}.svg has no part "${q.part}"`);
-      ok(q.stem.includes("{L}"), `${q.id}: diagram question needs {L}`);
+      ok(q.part ? svgOf(q.image)?.includes(`data-part="${q.part}"`) : svgOf(q.image), `${q.id}: ${q.image}.svg missing or has no part "${q.part}"`);
+      if (q.part) ok(q.stem.includes("{L}"), `${q.id}: diagram question needs {L}`);
     }
     checkQuestion(q, q.id);
   }
@@ -85,8 +86,10 @@ for (const q of shorts) {
 for (const [name, gen] of Object.entries(GEO_GENERATORS)) {
   for (let i = 0; i < 400; i++) {
     const q = { type: "short", ...gen() };
-    ok(/^<svg[\s\S]*<\/svg>$/.test(q.svg), `${name}: no map`);
+    if (/^(grid|dir)/.test(name)) ok(/^<svg[\s\S]*<\/svg>$/.test(q.svg), `${name}: no map`);
     checkQuestion(q, `${name} "${q.stem}"`);
+    /* a feature's name is never one spelling slip from another's */
+    if (!q.match) q.choices.forEach(c => ok(![q.answer, ...(q.accept || [])].some(t => { const a = canon(t), w = canon(c), k = a.length >= 10 ? 2 : a.length >= 5 ? 1 : 0; return k && lev(a, w) <= k; }), `${name}: "${c}" is a slip away from "${q.answer}"`));
     if (q.match === "grid") ok(/^\d{4}$/.test(q.answer), `${name}: 4 figures (${q.answer})`);
     if (q.match === "grid6") ok(/^\d{6}$/.test(q.answer), `${name}: 6 figures (${q.answer})`);
     /* a feature asked about by its reference is the only one in that square / at that point */
@@ -107,7 +110,12 @@ const cases = [
   [G4("0599"), "0599", true], [G4("0599"), "599", false],
   [G6("254437"), "254437", true], [G6("254437"), "254 437", true], [G6("254437"), "255438", true], [G6("254437"), "253436", true],
   [G6("254437"), "256437", false], [G6("254437"), "437254", false], [G6("254437"), "2543", false],
-  [G6("995003"), "004002", false], [G6("999003"), "000003", true]
+  [G6("995003"), "004002", false], [G6("999003"), "000003", true],
+  [{ match: "gridAN", answer: "C4" }, "c4", true], [{ match: "gridAN", answer: "C4" }, "C 4", true], [{ match: "gridAN", answer: "C4" }, "4C", false],
+  [{ match: "dist", unit: "km", answer: "3.5 km" }, "3.5", true], [{ match: "dist", unit: "km", answer: "3.5 km" }, "3,5 km", true],
+  [{ match: "dist", unit: "km", answer: "3.5 km" }, "3500 m", true], [{ match: "dist", unit: "km", answer: "3.5 km" }, "7 km", false],
+  [{ match: "dist", unit: "cm", answer: "8 cm" }, "8cm", true], [{ match: "dist", unit: "cm", answer: "8 cm" }, "8 km", false],
+  [{ match: "dist", unit: "m", answer: "100 m" }, "100", true], [{ match: "dist", unit: "m", answer: "100 m" }, "100 metres", true]
 ];
 cases.forEach(([q, typed, want]) => ok(checkGeog(q, typed).ok === want, `checkGeog(${q.match} "${q.answer}", "${typed}") should be ${want}`));
 ok(/opposite/.test(checkGeog(D("north-east"), "SW").tip || ""), "opposite tip");

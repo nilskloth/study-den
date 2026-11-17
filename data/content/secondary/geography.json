@@ -2,13 +2,13 @@
   "subject": "geography",
   "label": "Geography",
   "unit": "Year 7 — revision",
-  "source": "No class sheet yet — these notes and questions are ours, written to Year 7 level. Grid references follow the class homework (4- and 6-figure, eastings first). When Finn's workbook pages are photographed, they can be added as class-sheet topics.",
+  "source": "Built from the class workbook and homework (Sept–Nov 2026: continents and oceans, the seven natural wonders, the Great Barrier Reef, Antarctica, Easter Island, directions, grid references, scale, contour lines, mental maps). The workbook shows answers but not the questions, so the questions and notes here are ours; diagrams are redrawn.",
   "topics": [
     {
       "id": "continents-oceans",
       "number": 1,
-      "title": "Continents and oceans",
-      "summary": "The seven continents and five oceans, the Equator and the hemispheres — where everything is on a world map.",
+      "title": "Continents, countries and oceans",
+      "summary": "The seven continents and the oceans, what a continent, a country and a county are, the Equator and the hemispheres.",
       "images": [
         {
           "file": "world",
@@ -54,6 +54,8 @@
       },
       "facts": [
         "There are **7 continents** (huge areas of land) and **5 oceans** (huge areas of salt water).",
+        "On the class map the Atlantic is split into the **North Atlantic** and the **South Atlantic** Ocean, and the Pacific appears on both sides of the map.",
+        "**Continent** → **country** → **county**: a continent is a large area of land (and nearby islands) with many countries, e.g. **Europe**. A country is an area of land with its own **government** and people (citizens), e.g. **France**. A county is a **region (part) of a country**, e.g. **Kent**.",
         "Oceans, biggest first: **Pacific**, **Atlantic**, **Indian**, **Southern** (round Antarctica), **Arctic** (round the North Pole).",
         "About **70%** of the Earth's surface is water.",
         "The **Equator** is an imaginary line round the middle of the Earth (0° latitude). It splits the Earth into the **Northern** and **Southern Hemispheres**.",
@@ -65,6 +67,14 @@
         [
           "continent",
           "one of the 7 very large areas of land"
+        ],
+        [
+          "country",
+          "an area of land with its own government and people, e.g. France"
+        ],
+        [
+          "county",
+          "a region or part of a country, e.g. Kent or Essex"
         ],
         [
           "ocean",
@@ -103,9 +113,9 @@
           "answer": "North America",
           "accept": [],
           "choices": [
-            "South America",
             "Asia",
-            "Europe"
+            "Europe",
+            "Oceania"
           ],
           "explain": "North America is in the north-west of the map: Canada, the USA, Mexico — and Greenland.",
           "image": "world",
@@ -122,8 +132,8 @@
           "accept": [],
           "choices": [
             "North America",
-            "Asia",
-            "Africa"
+            "Africa",
+            "Europe"
           ],
           "explain": "South America is below North America, joined to it by a thin strip of land (Central America).",
           "image": "world",
@@ -140,9 +150,9 @@
           "answer": "Europe",
           "accept": [],
           "choices": [
-            "Antarctica",
+            "South America",
             "North America",
-            "Africa"
+            "Asia"
           ],
           "explain": "Europe is the small continent above Africa — the UK is part of it.",
           "image": "world",
@@ -155,9 +165,9 @@
           "answer": "Africa",
           "accept": [],
           "choices": [
-            "South America",
             "Asia",
-            "North America"
+            "North America",
+            "Antarctica"
           ],
           "explain": "Africa is the big continent below Europe; the Equator runs through the middle of it.",
           "image": "world",
@@ -170,9 +180,9 @@
           "answer": "Asia",
           "accept": [],
           "choices": [
-            "Europe",
-            "Africa",
-            "Antarctica"
+            "South America",
+            "North America",
+            "Europe"
           ],
           "explain": "Asia is the biggest continent, to the east of Europe — China, India, most of Russia.",
           "image": "world",
@@ -190,7 +200,7 @@
             "Australia/Oceania"
           ],
           "choices": [
-            "Antarctica",
+            "South America",
             "North America",
             "Europe"
           ],
@@ -205,9 +215,9 @@
           "answer": "Antarctica",
           "accept": [],
           "choices": [
+            "South America",
             "Oceania",
-            "North America",
-            "Europe"
+            "Asia"
           ],
           "explain": "Antarctica is the frozen continent around the South Pole, at the bottom of the map.",
           "image": "world",
@@ -222,9 +232,9 @@
             "Pacific"
           ],
           "choices": [
+            "Southern Ocean",
             "Atlantic Ocean",
-            "Arctic Ocean",
-            "Southern Ocean"
+            "Indian Ocean"
           ],
           "explain": "The Pacific is the biggest ocean, between Asia/Oceania and the Americas. It's on both edges of a flat world map.",
           "image": "world",
@@ -236,12 +246,16 @@
           "stem": "Which ocean is labelled {L}?",
           "answer": "Atlantic Ocean",
           "accept": [
-            "Atlantic"
+            "Atlantic",
+            "North Atlantic",
+            "South Atlantic",
+            "North Atlantic Ocean",
+            "South Atlantic Ocean"
           ],
           "choices": [
-            "Pacific Ocean",
-            "Southern Ocean",
-            "Arctic Ocean"
+            "Arctic Ocean",
+            "Indian Ocean",
+            "Southern Ocean"
           ],
           "explain": "The Atlantic lies between the Americas and Europe/Africa — it's the ocean to the west of the UK.",
           "image": "world",
@@ -256,9 +270,9 @@
             "Indian"
           ],
           "choices": [
-            "Southern Ocean",
-            "Atlantic Ocean",
-            "Arctic Ocean"
+            "Pacific Ocean",
+            "Arctic Ocean",
+            "Southern Ocean"
           ],
           "explain": "The Indian Ocean is between Africa, Asia and Australia, south of India.",
           "image": "world",
@@ -274,8 +288,8 @@
           ],
           "choices": [
             "Southern Ocean",
-            "Pacific Ocean",
-            "Atlantic Ocean"
+            "Atlantic Ocean",
+            "Pacific Ocean"
           ],
           "explain": "The Arctic Ocean is around the North Pole, at the top of the map; much of it is frozen.",
           "image": "world",
@@ -389,7 +403,11 @@
           "stem": "Which ocean lies between the UK and North America?",
           "answer": "Atlantic Ocean",
           "accept": [
-            "Atlantic"
+            "Atlantic",
+            "North Atlantic",
+            "South Atlantic",
+            "North Atlantic Ocean",
+            "South Atlantic Ocean"
           ],
           "choices": [
             "Pacific Ocean",
@@ -565,12 +583,1758 @@
             "only appear on maps of the UK"
           ],
           "explain": "Latitude lines go across like the rungs of a ladder (“ladder-tude”); the Equator is 0°. Longitude lines run from pole to pole."
+        },
+        {
+          "id": "geo-co-101",
+          "type": "short",
+          "stem": "The world is split up into 7 large areas of land called …?",
+          "answer": "continents",
+          "accept": [
+            "continent"
+          ],
+          "choices": [
+            "countries",
+            "counties",
+            "oceans"
+          ],
+          "explain": "Continents: Asia, Africa, North America, South America, Antarctica, Europe and Oceania."
+        },
+        {
+          "id": "geo-co-102",
+          "type": "short",
+          "stem": "Each continent contains many different c…?",
+          "answer": "countries",
+          "accept": [
+            "country"
+          ],
+          "choices": [
+            "counties",
+            "cities",
+            "continents"
+          ],
+          "explain": "Europe, for example, has over 40 countries — the UK, France, Germany, Italy, Spain …"
+        },
+        {
+          "id": "geo-co-103",
+          "type": "mcq",
+          "stem": "What is a county?",
+          "answer": "a region (part) of a country",
+          "choices": [
+            "a very large area of land with many countries",
+            "a country with its own government",
+            "a big city"
+          ],
+          "explain": "Countries are often split into states, counties or regions. Kent, Essex and Devon are counties in England."
+        },
+        {
+          "id": "geo-co-104",
+          "type": "mcq",
+          "stem": "What is a country?",
+          "answer": "an area of land with its own government and people",
+          "choices": [
+            "a part of a county",
+            "one of the seven largest areas of land",
+            "a group of islands with no people"
+          ],
+          "explain": "A country (nation) has its own government, borders and citizens — e.g. the UK, France, Brazil."
+        },
+        {
+          "id": "geo-co-105",
+          "type": "mcq",
+          "stem": "Which of these is a county in Britain?",
+          "answer": "Kent",
+          "choices": [
+            "France",
+            "Europe",
+            "London Bridge"
+          ],
+          "explain": "Kent is a county in south-east England. France is a country; Europe is a continent."
+        },
+        {
+          "id": "geo-co-106",
+          "type": "mcq",
+          "stem": "Which of these is a country in Europe?",
+          "answer": "Italy",
+          "choices": [
+            "Brazil",
+            "Egypt",
+            "Japan"
+          ],
+          "explain": "Italy is in Europe. Brazil is in South America, Egypt in Africa, Japan in Asia."
+        },
+        {
+          "id": "geo-co-107",
+          "type": "mcq",
+          "stem": "Put them in order, biggest first:",
+          "answer": "continent → country → county",
+          "choices": [
+            "country → continent → county",
+            "county → country → continent",
+            "continent → county → country"
+          ],
+          "explain": "A continent contains countries; a country contains counties (or states, regions)."
+        },
+        {
+          "id": "geo-co-108",
+          "type": "short",
+          "stem": "On the class world map, the Atlantic is split into two. What are the two parts called?",
+          "answer": "North Atlantic and South Atlantic",
+          "accept": [
+            "North and South Atlantic",
+            "the North Atlantic and the South Atlantic",
+            "South Atlantic and North Atlantic",
+            "north and south"
+          ],
+          "choices": [
+            "East Atlantic and West Atlantic",
+            "Upper and Lower Atlantic",
+            "Atlantic and Arctic"
+          ],
+          "explain": "The Equator splits the Atlantic into the North Atlantic Ocean and the South Atlantic Ocean."
+        }
+      ],
+      "source": "From the class workbook (Sept): the world map sheet (continents and oceans, with the Atlantic split into North and South Atlantic) and the notes on county, country and continent."
+    },
+    {
+      "id": "wonders",
+      "number": 2,
+      "title": "The seven natural wonders",
+      "summary": "The seven natural wonders of the world — what and where they are — and the difference between physical and human (man-made) geography.",
+      "images": [
+        {
+          "file": "places",
+          "caption": "The seven natural wonders of the world. Can you name the continent each one is in?"
+        }
+      ],
+      "table": {
+        "title": "The seven natural wonders",
+        "head": [
+          "Wonder",
+          "Where",
+          "What makes it a wonder"
+        ],
+        "rows": [
+          [
+            "Grand Canyon",
+            "USA, North America",
+            "A huge canyon carved by the Colorado River: about 446 km long and up to 1.8 km deep"
+          ],
+          [
+            "Great Barrier Reef",
+            "Australia, Oceania",
+            "The world's biggest coral reef, home to thousands of kinds of sea life"
+          ],
+          [
+            "Harbour of Rio de Janeiro",
+            "Brazil, South America",
+            "A giant natural bay ringed by granite mountains like Sugarloaf Mountain"
+          ],
+          [
+            "Mount Everest",
+            "Nepal and China, Asia",
+            "The highest mountain on Earth: 8,849 m, in the Himalayas"
+          ],
+          [
+            "Northern Lights",
+            "Near the Arctic (Norway, Iceland, Canada …)",
+            "Glowing green curtains in the sky: particles from the Sun hitting the air"
+          ],
+          [
+            "Parícutin volcano",
+            "Mexico, North America",
+            "A volcano that grew out of a cornfield in 1943 — people watched it being born"
+          ],
+          [
+            "Victoria Falls",
+            "Zambia and Zimbabwe, Africa",
+            "A giant waterfall on the Zambezi — “the smoke that thunders”"
+          ]
+        ]
+      },
+      "facts": [
+        "The **seven natural wonders of the world**: **Grand Canyon**, **Great Barrier Reef**, **Harbour of Rio de Janeiro**, **Mount Everest**, **Northern Lights**, **Parícutin volcano** and **Victoria Falls**.",
+        "They are all made by **nature** — they are **physical** geography. Things built by people are **human** (man-made) geography.",
+        "To **describe where a place is**, go from big to small: **continent → country → compass direction / nearby sea or city**.",
+        "Then describe its **physical features** (natural: mountains, rivers, climate, plants and animals) and its **human features** (made by people: towns, roads, tourism).",
+        "Use precise geography words: not “a big hill” but “a **mountain range**”; not “a big hole” but “a **canyon**”."
+      ],
+      "keywords": [
+        [
+          "natural wonder",
+          "an amazing place made by nature, not by people"
+        ],
+        [
+          "physical geography",
+          "the natural world: land, water, weather, volcanoes"
+        ],
+        [
+          "human geography",
+          "people and what they build or do: towns, roads, farming, tourism"
+        ],
+        [
+          "canyon",
+          "a deep valley with steep sides, cut by a river"
+        ],
+        [
+          "volcano",
+          "an opening in the Earth's crust where lava, ash and gas come out"
+        ],
+        [
+          "harbour / bay",
+          "an area of sea partly surrounded by land, where ships shelter"
+        ],
+        [
+          "aurora",
+          "glowing lights in the sky near the poles (the Northern or Southern Lights)"
+        ]
+      ],
+      "questions": [
+        {
+          "id": "geo-nw-01",
+          "type": "short",
+          "stem": "Which natural wonder is labelled {L}?",
+          "answer": "Grand Canyon",
+          "accept": [
+            "the Grand Canyon"
+          ],
+          "choices": [
+            "Victoria Falls",
+            "Parícutin volcano",
+            "Great Barrier Reef"
+          ],
+          "explain": "The Grand Canyon is in Arizona, in the south-west of the USA (North America).",
+          "image": "places",
+          "part": "grand-canyon"
+        },
+        {
+          "id": "geo-nw-02",
+          "type": "short",
+          "stem": "Which natural wonder is labelled {L}?",
+          "answer": "Parícutin volcano",
+          "accept": [
+            "Paricutin",
+            "Parícutin",
+            "Paricutin volcano"
+          ],
+          "choices": [
+            "Mount Everest",
+            "Grand Canyon",
+            "Northern Lights"
+          ],
+          "explain": "Parícutin is a volcano in Mexico, in the south of North America.",
+          "image": "places",
+          "part": "paricutin"
+        },
+        {
+          "id": "geo-nw-03",
+          "type": "short",
+          "stem": "Which natural wonder is labelled {L}?",
+          "answer": "Harbour of Rio de Janeiro",
+          "accept": [
+            "Rio de Janeiro",
+            "Rio",
+            "Rio harbour",
+            "harbour of Rio",
+            "Guanabara Bay",
+            "Rio de Janeiro harbour"
+          ],
+          "choices": [
+            "Parícutin volcano",
+            "Northern Lights",
+            "Mount Everest"
+          ],
+          "explain": "Rio de Janeiro is on the south-east coast of Brazil, South America.",
+          "image": "places",
+          "part": "rio"
+        },
+        {
+          "id": "geo-nw-04",
+          "type": "short",
+          "stem": "Which natural wonder is labelled {L}?",
+          "answer": "Victoria Falls",
+          "accept": [
+            "Mosi-oa-Tunya",
+            "Victoria waterfall"
+          ],
+          "choices": [
+            "Parícutin volcano",
+            "Northern Lights",
+            "Mount Everest"
+          ],
+          "explain": "Victoria Falls is in southern Africa, on the border of Zambia and Zimbabwe.",
+          "image": "places",
+          "part": "victoria-falls"
+        },
+        {
+          "id": "geo-nw-05",
+          "type": "short",
+          "stem": "Which natural wonder is labelled {L}?",
+          "answer": "Mount Everest",
+          "accept": [
+            "Everest",
+            "Mt Everest"
+          ],
+          "choices": [
+            "Parícutin volcano",
+            "Northern Lights",
+            "Grand Canyon"
+          ],
+          "explain": "Mount Everest is in the Himalayas in Asia, on the border of Nepal and China.",
+          "image": "places",
+          "part": "everest"
+        },
+        {
+          "id": "geo-nw-06",
+          "type": "short",
+          "stem": "Which natural wonder is labelled {L}?",
+          "answer": "Great Barrier Reef",
+          "accept": [
+            "Barrier Reef"
+          ],
+          "choices": [
+            "Grand Canyon",
+            "Northern Lights",
+            "Victoria Falls"
+          ],
+          "explain": "The Great Barrier Reef is in the sea off the north-east coast of Australia.",
+          "image": "places",
+          "part": "great-barrier-reef"
+        },
+        {
+          "id": "geo-nw-07",
+          "type": "short",
+          "stem": "Which natural wonder is labelled {L}?",
+          "answer": "Northern Lights",
+          "accept": [
+            "aurora borealis",
+            "aurora",
+            "the northern lights"
+          ],
+          "choices": [
+            "Grand Canyon",
+            "Parícutin volcano",
+            "Harbour of Rio de Janeiro"
+          ],
+          "explain": "The Northern Lights are seen in the far north, near the Arctic — e.g. northern Norway, Iceland, Canada.",
+          "image": "places",
+          "part": "northern-lights"
+        },
+        {
+          "id": "geo-nw-08",
+          "type": "short",
+          "stem": "I'm a deep, steep-sided canyon in Arizona, USA, carved by the Colorado River. What am I?",
+          "answer": "Grand Canyon",
+          "accept": [
+            "the Grand Canyon"
+          ],
+          "choices": [
+            "Victoria Falls",
+            "Mount Everest",
+            "Parícutin volcano"
+          ],
+          "explain": "The Colorado River cut the Grand Canyon over millions of years. It is about 446 km long and up to about 1.8 km deep."
+        },
+        {
+          "id": "geo-nw-09",
+          "type": "short",
+          "stem": "I'm a giant waterfall on the River Zambezi, between Zambia and Zimbabwe — “the smoke that thunders”. What am I?",
+          "answer": "Victoria Falls",
+          "accept": [
+            "Mosi-oa-Tunya",
+            "Victoria waterfall"
+          ],
+          "choices": [
+            "Niagara Falls",
+            "Grand Canyon",
+            "Northern Lights"
+          ],
+          "explain": "Victoria Falls' local name, Mosi-oa-Tunya, means “the smoke that thunders” — the spray rises like smoke."
+        },
+        {
+          "id": "geo-nw-10",
+          "type": "short",
+          "stem": "I'm the highest mountain on Earth, on the border of Nepal and China. What am I?",
+          "answer": "Mount Everest",
+          "accept": [
+            "Everest",
+            "Mt Everest"
+          ],
+          "choices": [
+            "Ben Nevis",
+            "Mont Blanc",
+            "Vinson Massif"
+          ],
+          "explain": "Mount Everest is 8,849 m high, in the Himalayas in Asia."
+        },
+        {
+          "id": "geo-nw-11",
+          "type": "short",
+          "stem": "I'm the world's biggest coral reef, off the north-east coast of Australia. What am I?",
+          "answer": "Great Barrier Reef",
+          "accept": [
+            "Barrier Reef"
+          ],
+          "choices": [
+            "Harbour of Rio de Janeiro",
+            "Victoria Falls",
+            "Grand Canyon"
+          ],
+          "explain": "The Great Barrier Reef is in the Coral Sea, off Queensland, Australia."
+        },
+        {
+          "id": "geo-nw-12",
+          "type": "short",
+          "stem": "I'm a huge natural bay in Brazil, ringed by granite mountains such as Sugarloaf Mountain. What am I?",
+          "answer": "Harbour of Rio de Janeiro",
+          "accept": [
+            "Rio de Janeiro",
+            "Rio",
+            "Rio harbour",
+            "harbour of Rio",
+            "Guanabara Bay",
+            "Rio de Janeiro harbour"
+          ],
+          "choices": [
+            "Great Barrier Reef",
+            "Grand Canyon",
+            "Victoria Falls"
+          ],
+          "explain": "The harbour (Guanabara Bay) at Rio de Janeiro is one of the biggest natural bays in the world."
+        },
+        {
+          "id": "geo-nw-13",
+          "type": "short",
+          "stem": "I'm a volcano in Mexico that grew out of a farmer's cornfield in 1943. What am I?",
+          "answer": "Parícutin volcano",
+          "accept": [
+            "Paricutin",
+            "Parícutin",
+            "Paricutin volcano"
+          ],
+          "choices": [
+            "Mount Erebus",
+            "Mount Everest",
+            "Victoria Falls"
+          ],
+          "explain": "Parícutin started as a crack in a cornfield in 1943 and erupted for nine years, growing to over 400 m and burying two villages. Scientists watched a volcano being born."
+        },
+        {
+          "id": "geo-nw-14",
+          "type": "short",
+          "stem": "I'm curtains of green light in the sky near the Arctic, best seen on dark winter nights. What am I?",
+          "answer": "Northern Lights",
+          "accept": [
+            "aurora borealis",
+            "aurora",
+            "the northern lights"
+          ],
+          "choices": [
+            "Great Barrier Reef",
+            "Victoria Falls",
+            "Harbour of Rio de Janeiro"
+          ],
+          "explain": "The Northern Lights (aurora borealis) glow when tiny particles from the Sun hit gases high in the air. Near the South Pole they are the Southern Lights."
+        },
+        {
+          "id": "geo-nw-15",
+          "type": "short",
+          "stem": "How many natural wonders are on the famous list?",
+          "answer": "7",
+          "accept": [
+            "seven"
+          ],
+          "choices": [
+            "5",
+            "3",
+            "10"
+          ],
+          "explain": "The seven natural wonders: Grand Canyon, Great Barrier Reef, Harbour of Rio de Janeiro, Mount Everest, Northern Lights, Parícutin volcano and Victoria Falls."
+        },
+        {
+          "id": "geo-nw-16",
+          "type": "mcq",
+          "stem": "Which of these is NOT one of the seven natural wonders?",
+          "answer": "the Eiffel Tower",
+          "choices": [
+            "Victoria Falls",
+            "the Northern Lights",
+            "Mount Everest"
+          ],
+          "explain": "The Eiffel Tower is man-made (a human feature). The natural wonders are all made by nature."
+        },
+        {
+          "id": "geo-nw-17",
+          "type": "mcq",
+          "stem": "Which continent is the Grand Canyon in?",
+          "answer": "North America",
+          "choices": [
+            "South America",
+            "Africa",
+            "Oceania"
+          ],
+          "explain": "The Grand Canyon is in the USA, in North America."
+        },
+        {
+          "id": "geo-nw-18",
+          "type": "mcq",
+          "stem": "Which continent is Victoria Falls in?",
+          "answer": "Africa",
+          "choices": [
+            "Asia",
+            "South America",
+            "Europe"
+          ],
+          "explain": "Victoria Falls is on the River Zambezi in southern Africa."
+        },
+        {
+          "id": "geo-nw-19",
+          "type": "mcq",
+          "stem": "Which continent is Mount Everest in?",
+          "answer": "Asia",
+          "choices": [
+            "Europe",
+            "South America",
+            "Africa"
+          ],
+          "explain": "Everest is in the Himalayas, in Asia."
+        },
+        {
+          "id": "geo-nw-20",
+          "type": "mcq",
+          "stem": "Which country is Parícutin volcano in?",
+          "answer": "Mexico",
+          "choices": [
+            "Brazil",
+            "Iceland",
+            "Chile"
+          ],
+          "explain": "Parícutin is in Mexico (North America)."
+        },
+        {
+          "id": "geo-nw-21",
+          "type": "mcq",
+          "stem": "Which country is the harbour of Rio de Janeiro in?",
+          "answer": "Brazil",
+          "choices": [
+            "Argentina",
+            "Mexico",
+            "Portugal"
+          ],
+          "explain": "Rio de Janeiro is a big city on the coast of Brazil, South America."
+        },
+        {
+          "id": "geo-nw-22",
+          "type": "mcq",
+          "stem": "Which two countries share Victoria Falls?",
+          "answer": "Zambia and Zimbabwe",
+          "choices": [
+            "Kenya and Tanzania",
+            "Egypt and Sudan",
+            "Nepal and China"
+          ],
+          "explain": "The River Zambezi forms the border between Zambia and Zimbabwe at the falls."
+        },
+        {
+          "id": "geo-nw-23",
+          "type": "mcq",
+          "stem": "Mount Everest is in which mountain range?",
+          "answer": "the Himalayas",
+          "choices": [
+            "the Alps",
+            "the Andes",
+            "the Rockies"
+          ],
+          "explain": "The Himalayas, in Asia, have all the world's highest mountains."
+        },
+        {
+          "id": "geo-nw-24",
+          "type": "mcq",
+          "stem": "About how high is Mount Everest?",
+          "answer": "8,849 m",
+          "choices": [
+            "1,345 m",
+            "4,892 m",
+            "88,490 m"
+          ],
+          "explain": "Everest is 8,849 m. Ben Nevis (the UK's highest) is 1,345 m; Vinson Massif (Antarctica's highest) is 4,892 m."
+        },
+        {
+          "id": "geo-nw-25",
+          "type": "mcq",
+          "stem": "Which river carved the Grand Canyon?",
+          "answer": "the Colorado River",
+          "choices": [
+            "the River Amazon",
+            "the River Nile",
+            "the River Zambezi"
+          ],
+          "explain": "The Colorado River cut down through the rock over millions of years."
+        },
+        {
+          "id": "geo-nw-26",
+          "type": "mcq",
+          "stem": "What causes the Northern Lights?",
+          "answer": "Particles from the Sun hitting gases high in the air",
+          "choices": [
+            "Light reflecting off the snow",
+            "Volcanoes erupting under the ice",
+            "Lightning far away"
+          ],
+          "explain": "Charged particles from the Sun crash into gases in the atmosphere and make them glow — mostly green."
+        },
+        {
+          "id": "geo-nw-27",
+          "type": "tf",
+          "stem": "Physical geography is about the natural world; human geography is about people and what they build.",
+          "answer": true,
+          "explain": "Physical: mountains, rivers, weather, volcanoes. Human (man-made): towns, roads, farms, tourism."
+        },
+        {
+          "id": "geo-nw-28",
+          "type": "tf",
+          "stem": "A physical feature is something made by people.",
+          "answer": false,
+          "explain": "Physical features are natural (mountains, rivers, waterfalls, reefs). Human (man-made) features are built by people (towns, roads, hotels)."
+        },
+        {
+          "id": "geo-nw-29",
+          "type": "mcq",
+          "stem": "Which of these is a human (man-made) feature?",
+          "answer": "a town",
+          "choices": [
+            "a volcano",
+            "a waterfall",
+            "a coral reef"
+          ],
+          "explain": "Human features are made by people — towns, roads, ports, dams. The others are physical (natural) features."
+        },
+        {
+          "id": "geo-nw-30",
+          "type": "mcq",
+          "stem": "When you describe where a place is, what should you say first?",
+          "answer": "its continent and country",
+          "choices": [
+            "what you had for lunch there",
+            "its grid reference on any map",
+            "how many people visit it"
+          ],
+          "explain": "Start big, then get closer: continent → country → compass direction / near which sea or city. Then describe its physical and human features."
+        }
+      ],
+      "source": "From the class workbook (16 Sept): “Where are the 7 natural wonders of the world?”, A–G on a world map, and physical vs man-made geography."
+    },
+    {
+      "id": "reef",
+      "number": 3,
+      "title": "The Great Barrier Reef — why is it disappearing?",
+      "summary": "What the reef is, how coral lives, the threats that are killing it, and what is being done to protect it.",
+      "images": [],
+      "table": {
+        "title": "Why the reef is disappearing",
+        "head": [
+          "Threat",
+          "What happens"
+        ],
+        "rows": [
+          [
+            "Warmer seas (climate change)",
+            "Coral bleaching: hot water makes coral push out its algae. It turns white and starves; if the heat lasts, it dies."
+          ],
+          [
+            "More acidic sea",
+            "The sea absorbs carbon dioxide and becomes more acidic, so coral struggles to build its skeleton."
+          ],
+          [
+            "Farm run-off",
+            "Rain washes soil, fertiliser and pesticide into the sea: cloudy water blocks sunlight and feeds pests."
+          ],
+          [
+            "Crown-of-thorns starfish",
+            "Outbreaks of these starfish eat huge areas of coral."
+          ],
+          [
+            "Stronger storms (cyclones)",
+            "Giant waves smash the coral."
+          ],
+          [
+            "People on the reef",
+            "Boat anchors, careless divers, overfishing and shipping damage the coral and its food chains."
+          ],
+          [
+            "Plastic and rubbish",
+            "Plastic and other rubbish in the sea tangles and harms sea life and coral."
+          ]
+        ]
+      },
+      "facts": [
+        "The **Great Barrier Reef** is off the **north-east coast of Australia** (Queensland), in the **Coral Sea**, part of the Pacific Ocean.",
+        "The nearest big city is **Cairns** in Queensland — the gateway for tourists visiting the reef.",
+        "It is the **world's biggest coral reef system**: about **2,300 km** long, made of about **2,900 reefs** and **900 islands**. You can see it from space.",
+        "Coral is built by tiny animals called **polyps**. Tiny **algae** live inside them, making food from sunlight and giving coral its colours — so reefs need **warm, clear, shallow, sunny** water.",
+        "It is home to thousands of species — over **1,500 kinds of fish**, turtles, sharks, dolphins and dugongs — and it's a **World Heritage Site**.",
+        "The biggest threat is **climate change**: warmer seas cause **coral bleaching**. The reef has had several **mass bleaching** events since 2016.",
+        "**Bleached ≠ dead**: if the water cools quickly the algae can return. If the heat lasts, the coral dies — and a reef takes many years to recover.",
+        "**Protecting it:** marine park zones where fishing is banned, less farm run-off, removing crown-of-thorns starfish, growing and replanting coral — and, most of all, cutting the **greenhouse gases** that warm the planet.",
+        "In class you weighed up what damages the reef most (overfishing? tourists?). They all do harm — but scientists agree the **biggest** threat is **climate change** (warming seas → bleaching)."
+      ],
+      "keywords": [
+        [
+          "coral reef",
+          "a ridge in the sea built from the skeletons of coral polyps"
+        ],
+        [
+          "polyp",
+          "the tiny animal that builds coral"
+        ],
+        [
+          "algae",
+          "tiny living things inside coral that make food from sunlight"
+        ],
+        [
+          "coral bleaching",
+          "coral turning white when the sea is too warm"
+        ],
+        [
+          "climate change",
+          "long-term warming of the Earth, mainly from burning fossil fuels"
+        ],
+        [
+          "ocean acidification",
+          "the sea becoming more acidic as it absorbs carbon dioxide"
+        ],
+        [
+          "run-off",
+          "rainwater flowing off the land into rivers and the sea, carrying soil and chemicals"
+        ],
+        [
+          "biodiversity",
+          "the variety of living things in a place"
+        ]
+      ],
+      "questions": [
+        {
+          "id": "geo-rf-01",
+          "type": "short",
+          "stem": "In which country is the Great Barrier Reef?",
+          "answer": "Australia",
+          "choices": [
+            "New Zealand",
+            "Brazil",
+            "South Africa"
+          ],
+          "explain": "It's off the coast of Queensland, Australia."
+        },
+        {
+          "id": "geo-rf-02",
+          "type": "mcq",
+          "stem": "Off which coast of Australia is the reef?",
+          "answer": "the north-east coast",
+          "choices": [
+            "the south-west coast",
+            "the south coast",
+            "the west coast"
+          ],
+          "explain": "The reef runs along the north-east coast, in the Coral Sea."
+        },
+        {
+          "id": "geo-rf-03",
+          "type": "short",
+          "stem": "Which sea is the Great Barrier Reef in?",
+          "answer": "Coral Sea",
+          "accept": [
+            "the Coral Sea"
+          ],
+          "choices": [
+            "Red Sea",
+            "North Sea",
+            "Caribbean Sea"
+          ],
+          "explain": "The Coral Sea is part of the Pacific Ocean."
+        },
+        {
+          "id": "geo-rf-04",
+          "type": "mcq",
+          "stem": "About how long is the Great Barrier Reef?",
+          "answer": "2,300 km",
+          "choices": [
+            "23 km",
+            "230 km",
+            "23,000 km"
+          ],
+          "explain": "About 2,300 km — further than from London to Moscow. It's the largest coral reef system in the world."
+        },
+        {
+          "id": "geo-rf-05",
+          "type": "short",
+          "stem": "What are the tiny animals that build coral called?",
+          "answer": "polyps",
+          "accept": [
+            "polyp",
+            "coral polyps"
+          ],
+          "choices": [
+            "algae",
+            "plankton",
+            "jellyfish"
+          ],
+          "explain": "Coral polyps build hard limestone skeletons; over thousands of years these build up into a reef."
+        },
+        {
+          "id": "geo-rf-06",
+          "type": "short",
+          "stem": "What tiny living things live inside coral, giving it food and its colours?",
+          "answer": "algae",
+          "accept": [
+            "alga",
+            "zooxanthellae",
+            "algae (zooxanthellae)",
+            "plants"
+          ],
+          "choices": [
+            "polyps",
+            "starfish",
+            "bacteria"
+          ],
+          "explain": "Algae inside the coral use sunlight to make food (photosynthesis) and share it with the coral."
+        },
+        {
+          "id": "geo-rf-07",
+          "type": "short",
+          "stem": "What is it called when coral turns white because the sea is too warm?",
+          "answer": "coral bleaching",
+          "accept": [
+            "bleaching",
+            "bleached coral"
+          ],
+          "choices": [
+            "coral fading",
+            "coral melting",
+            "coral freezing"
+          ],
+          "explain": "In water that's too warm, coral pushes out its algae, loses its colour and turns white — bleaching."
+        },
+        {
+          "id": "geo-rf-08",
+          "type": "mcq",
+          "stem": "What causes coral bleaching?",
+          "answer": "The sea getting too warm",
+          "choices": [
+            "The sea getting too cold",
+            "Too many fish",
+            "Too much rain on the reef"
+          ],
+          "explain": "Rising sea temperatures, caused by climate change, are the main cause of bleaching."
+        },
+        {
+          "id": "geo-rf-09",
+          "type": "short",
+          "stem": "What is the biggest threat to the Great Barrier Reef?",
+          "answer": "climate change",
+          "accept": [
+            "global warming",
+            "rising sea temperatures",
+            "warmer sea",
+            "warming seas",
+            "warming oceans",
+            "warmer water",
+            "the sea getting warmer"
+          ],
+          "choices": [
+            "tourists",
+            "sharks",
+            "too many islands"
+          ],
+          "explain": "Climate change warms the sea (bleaching) and makes it more acidic. Other threats add to the damage."
+        },
+        {
+          "id": "geo-rf-10",
+          "type": "tf",
+          "stem": "Bleached coral is always dead.",
+          "answer": false,
+          "explain": "Bleached coral is starving but alive. If the water cools quickly the algae can return; if the heat lasts too long, it dies."
+        },
+        {
+          "id": "geo-rf-11",
+          "type": "mcq",
+          "stem": "Why does the sea become more acidic?",
+          "answer": "It absorbs carbon dioxide from the air",
+          "choices": [
+            "Fish make it acidic",
+            "Rain washes salt out of it",
+            "The Sun heats it up"
+          ],
+          "explain": "The oceans soak up carbon dioxide from burning fossil fuels. More acidic water makes it harder for coral to build its skeleton."
+        },
+        {
+          "id": "geo-rf-12",
+          "type": "mcq",
+          "stem": "Which animal eats coral and has damaged large parts of the reef?",
+          "answer": "the crown-of-thorns starfish",
+          "choices": [
+            "the clownfish",
+            "the sea turtle",
+            "the dugong"
+          ],
+          "explain": "Outbreaks of crown-of-thorns starfish eat huge areas of coral. Divers remove them to protect the reef."
+        },
+        {
+          "id": "geo-rf-13",
+          "type": "mcq",
+          "stem": "How does run-off from farms harm the reef?",
+          "answer": "Soil and fertiliser wash into the sea, making it cloudy and feeding pests",
+          "choices": [
+            "Farm animals swim out and eat the coral",
+            "Farmers build on the reef",
+            "It makes the sea too cold"
+          ],
+          "explain": "Rain washes soil, fertiliser and pesticides off farms in Queensland into rivers and the sea. Cloudy water blocks sunlight, and fertiliser helps crown-of-thorns starfish."
+        },
+        {
+          "id": "geo-rf-14",
+          "type": "mcq",
+          "stem": "Why do coral reefs need clear, shallow water?",
+          "answer": "The algae inside the coral need sunlight to make food",
+          "choices": [
+            "So that tourists can see them",
+            "Because coral can't swim",
+            "Deep water is too salty"
+          ],
+          "explain": "Sunlight has to reach the algae for photosynthesis — that's why reefs grow in warm, clear, shallow, sunny seas."
+        },
+        {
+          "id": "geo-rf-15",
+          "type": "tf",
+          "stem": "Coral reefs grow best in cold, deep, dark water.",
+          "answer": false,
+          "explain": "Reef-building coral needs warm, clear, shallow water with plenty of sunlight."
+        },
+        {
+          "id": "geo-rf-16",
+          "type": "tf",
+          "stem": "The Great Barrier Reef is so big it can be seen from space.",
+          "answer": true,
+          "explain": "Yes — it's the biggest structure made by living things on Earth."
+        },
+        {
+          "id": "geo-rf-17",
+          "type": "mcq",
+          "stem": "Which of these helps to protect the reef?",
+          "answer": "Banning fishing in some zones of the marine park",
+          "choices": [
+            "Building more ports on the reef",
+            "Using more fertiliser on farms",
+            "Anchoring boats on the coral"
+          ],
+          "explain": "The Great Barrier Reef Marine Park has zones where fishing is banned; there are also rules on farm run-off, starfish culls and coral replanting. Cutting greenhouse gases worldwide helps most of all."
+        },
+        {
+          "id": "geo-rf-18",
+          "type": "mcq",
+          "stem": "Why does the reef matter to people as well as wildlife?",
+          "answer": "Tourism brings money and jobs, and the reef protects the coast from waves",
+          "choices": [
+            "It stops it raining in Australia",
+            "It makes the sea fresh water",
+            "It keeps sharks away from Europe"
+          ],
+          "explain": "Millions of visitors bring money and tens of thousands of jobs; the reef also breaks up big waves before they hit the coast."
+        },
+        {
+          "id": "geo-rf-19",
+          "type": "mcq",
+          "stem": "What does “World Heritage Site” mean?",
+          "answer": "A place so special that the world agrees to protect it",
+          "choices": [
+            "A place where nobody may visit",
+            "A place owned by the United Nations",
+            "A place that is always hot"
+          ],
+          "explain": "UNESCO lists World Heritage Sites — the Great Barrier Reef has been one since 1981."
+        },
+        {
+          "id": "geo-rf-20",
+          "type": "short",
+          "stem": "Burning coal, oil and gas releases which gas that warms the planet and makes the sea more acidic?",
+          "answer": "carbon dioxide",
+          "accept": [
+            "CO2",
+            "co₂",
+            "carbon"
+          ],
+          "choices": [
+            "oxygen",
+            "nitrogen",
+            "helium"
+          ],
+          "explain": "Carbon dioxide (CO₂) is a greenhouse gas: it traps heat (warming the sea) and dissolves in the sea (acidification)."
+        },
+        {
+          "id": "geo-rf-109",
+          "type": "short",
+          "stem": "Which Australian city, on the coast of Queensland, is the gateway for visiting the reef?",
+          "answer": "Cairns",
+          "choices": [
+            "Sydney",
+            "Perth",
+            "Melbourne"
+          ],
+          "explain": "Cairns is the nearest big city; boats take tourists out to the reef from there."
+        },
+        {
+          "id": "geo-rf-110",
+          "type": "mcq",
+          "stem": "How do tourists sometimes damage the reef?",
+          "answer": "Dropping anchors on the coral and breaking bits off as souvenirs",
+          "choices": [
+            "Swimming too slowly",
+            "Taking photos",
+            "Wearing sunglasses"
+          ],
+          "explain": "Anchors, careless divers and souvenir collecting break coral. Rules and mooring buoys help to stop this."
+        },
+        {
+          "id": "geo-rf-111",
+          "type": "mcq",
+          "stem": "How does overfishing harm the reef?",
+          "answer": "Taking too many fish upsets the food chain that keeps the reef healthy",
+          "choices": [
+            "Fish are needed to make the sea salty",
+            "Fishing boats make the water colder",
+            "It doesn't harm the reef at all"
+          ],
+          "explain": "Some fish eat the seaweed that would smother coral, or eat pests — remove them and the reef suffers."
+        },
+        {
+          "id": "geo-rf-112",
+          "type": "tf",
+          "stem": "Coral reefs help to protect the coast from storms.",
+          "answer": true,
+          "explain": "Reefs break up big waves before they reach the shore, protecting beaches and towns."
+        }
+      ],
+      "source": "From the class workbook (22 Sept): “Why is the Great Barrier Reef disappearing?” — where it is (off Cairns), why it matters (jobs, protection from storms) and what damages it (plastic, overfishing, tourists, anchors)."
+    },
+    {
+      "id": "antarctica",
+      "number": 4,
+      "title": "Antarctica",
+      "source": "From the class workbook (30 Sept): the grid map of Antarctica (Snow Hills, Vinson Massif, the South Pole, Mount Erebus) and its physical and human features.",
+      "summary": "The frozen continent around the South Pole: its mountains and volcano, its wildlife, and its physical and human features.",
+      "images": [
+        {
+          "file": "antarctica",
+          "caption": "Antarctica, seen from above the South Pole. The places from the class grid map: Vinson Massif, the South Pole, Mount Erebus and Snow Hill(s)."
+        }
+      ],
+      "table": {
+        "title": "Places on the class map",
+        "head": [
+          "Place",
+          "What it is"
+        ],
+        "rows": [
+          [
+            "South Pole",
+            "The most southerly point on Earth, in the middle of Antarctica. A US research station is there."
+          ],
+          [
+            "Vinson Massif",
+            "Antarctica's highest mountain, 4,892 m."
+          ],
+          [
+            "Mount Erebus",
+            "An active volcano (3,794 m) with a lava lake, on Ross Island."
+          ],
+          [
+            "Snow Hill Island",
+            "Off the Antarctic Peninsula; home to a colony of emperor penguins."
+          ],
+          [
+            "Transantarctic Mountains",
+            "A long mountain range crossing the whole continent."
+          ]
+        ]
+      },
+      "facts": [
+        "Antarctica is the **coldest, windiest and driest** continent — about −89 °C has been measured. It counts as a **desert** because so little snow falls.",
+        "It is covered by an **ice sheet** up to almost 5 km thick, holding about **70% of the world's fresh water**.",
+        "**Physical features**: ice, snow, glaciers, icebergs, mountains (e.g. **Vinson Massif**), volcanoes (e.g. **Mount Erebus**).",
+        "**Human features**: research **stations**, **camps** where scientists sleep, runways. Nobody lives there for good.",
+        "The **Antarctic Treaty** (1959): Antarctica is for **peace and science** only.",
+        "**Roald Amundsen** reached the South Pole first (Dec 1911); Captain **Scott** arrived five weeks later.",
+        "Grid maps can use 2-figure coordinates too, e.g. **(07, 43)**: along first, then up."
+      ],
+      "keywords": [
+        [
+          "ice sheet",
+          "a huge, thick layer of ice covering land"
+        ],
+        [
+          "glacier",
+          "a slow-moving river of ice"
+        ],
+        [
+          "iceberg",
+          "a big piece of ice floating in the sea"
+        ],
+        [
+          "research station",
+          "a base where scientists live and work for a while"
+        ],
+        [
+          "Antarctic Treaty",
+          "the 1959 agreement to use Antarctica only for peace and science"
+        ]
+      ],
+      "questions": [
+        {
+          "id": "geo-an-01",
+          "type": "short",
+          "stem": "Which place is labelled {L} on the map of Antarctica?",
+          "answer": "South Pole",
+          "accept": [
+            "the South Pole",
+            "pole"
+          ],
+          "choices": [
+            "Transantarctic Mountains",
+            "Antarctic Peninsula",
+            "Snow Hill Island"
+          ],
+          "explain": "The South Pole is in the middle of Antarctica.",
+          "image": "antarctica",
+          "part": "south-pole",
+          "reject": [
+            "North Pole"
+          ]
+        },
+        {
+          "id": "geo-an-02",
+          "type": "short",
+          "stem": "Which place is labelled {L} on the map of Antarctica?",
+          "answer": "Vinson Massif",
+          "accept": [
+            "Vinson",
+            "Mount Vinson",
+            "Vinson Massive"
+          ],
+          "choices": [
+            "Mount Erebus",
+            "South Pole",
+            "Transantarctic Mountains"
+          ],
+          "explain": "Vinson Massif is in West Antarctica, not far from the base of the Antarctic Peninsula.",
+          "image": "antarctica",
+          "part": "vinson"
+        },
+        {
+          "id": "geo-an-03",
+          "type": "short",
+          "stem": "Which place is labelled {L} on the map of Antarctica?",
+          "answer": "Mount Erebus",
+          "accept": [
+            "Erebus"
+          ],
+          "choices": [
+            "Vinson Massif",
+            "Antarctic Peninsula",
+            "Snow Hill Island"
+          ],
+          "explain": "Mount Erebus is on Ross Island, by the Ross Sea.",
+          "image": "antarctica",
+          "part": "erebus"
+        },
+        {
+          "id": "geo-an-04",
+          "type": "short",
+          "stem": "Which place is labelled {L} on the map of Antarctica?",
+          "answer": "Snow Hill Island",
+          "accept": [
+            "Snow Hill",
+            "Snow Hills"
+          ],
+          "choices": [
+            "South Pole",
+            "Vinson Massif",
+            "Mount Erebus"
+          ],
+          "explain": "Snow Hill Island is off the Antarctic Peninsula — the long arm pointing towards South America.",
+          "image": "antarctica",
+          "part": "snow-hill"
+        },
+        {
+          "id": "geo-an-05",
+          "type": "short",
+          "stem": "Which place is labelled {L} on the map of Antarctica?",
+          "answer": "Antarctic Peninsula",
+          "accept": [
+            "the Antarctic Peninsula",
+            "peninsula"
+          ],
+          "choices": [
+            "Mount Erebus",
+            "Snow Hill Island",
+            "South Pole"
+          ],
+          "explain": "The Antarctic Peninsula is the long arm of land reaching towards South America.",
+          "image": "antarctica",
+          "part": "peninsula"
+        },
+        {
+          "id": "geo-an-06",
+          "type": "short",
+          "stem": "Which place is labelled {L} on the map of Antarctica?",
+          "answer": "Transantarctic Mountains",
+          "accept": [
+            "Transantarctic",
+            "Trans-Antarctic Mountains"
+          ],
+          "choices": [
+            "South Pole",
+            "Vinson Massif",
+            "Antarctic Peninsula"
+          ],
+          "explain": "The Transantarctic Mountains cross the whole continent, splitting East from West Antarctica.",
+          "image": "antarctica",
+          "part": "transantarctic"
+        },
+        {
+          "id": "geo-an-07",
+          "type": "short",
+          "stem": "What is the highest mountain in Antarctica?",
+          "answer": "Vinson Massif",
+          "accept": [
+            "Vinson",
+            "Mount Vinson",
+            "Vinson Massive"
+          ],
+          "choices": [
+            "Mount Erebus",
+            "Mount Everest",
+            "Snow Hill"
+          ],
+          "explain": "Vinson Massif is 4,892 m high."
+        },
+        {
+          "id": "geo-an-08",
+          "type": "short",
+          "stem": "Which mountain in Antarctica is an active volcano?",
+          "answer": "Mount Erebus",
+          "accept": [
+            "Erebus"
+          ],
+          "choices": [
+            "Vinson Massif",
+            "Mount Everest",
+            "Parícutin"
+          ],
+          "explain": "Mount Erebus (3,794 m) is the most southerly active volcano on Earth — it even has a lake of lava in its crater."
+        },
+        {
+          "id": "geo-an-09",
+          "type": "mcq",
+          "stem": "Which animals breed in a big colony at Snow Hill Island?",
+          "answer": "emperor penguins",
+          "choices": [
+            "polar bears",
+            "camels",
+            "kangaroos"
+          ],
+          "explain": "Emperor penguins breed on the sea ice there. (Polar bears live in the Arctic, not the Antarctic.)"
+        },
+        {
+          "id": "geo-an-10",
+          "type": "mcq",
+          "stem": "Antarctica is the … continent on Earth.",
+          "answer": "coldest, windiest and driest",
+          "choices": [
+            "hottest and wettest",
+            "most crowded",
+            "smallest"
+          ],
+          "explain": "The coldest temperature ever measured, about −89 °C, was in Antarctica. It gets so little snow and rain that it counts as a desert."
+        },
+        {
+          "id": "geo-an-11",
+          "type": "tf",
+          "stem": "People live in Antarctica all year round in towns.",
+          "answer": false,
+          "explain": "Nobody lives there for good. Scientists stay for a while at research stations — about 1,000 in winter and several thousand in summer."
+        },
+        {
+          "id": "geo-an-12",
+          "type": "mcq",
+          "stem": "Which of these is a human feature in Antarctica?",
+          "answer": "a research station or camp",
+          "choices": [
+            "the ice sheet",
+            "Mount Erebus",
+            "a glacier"
+          ],
+          "explain": "Research stations, camps and runways are made by people. Ice, mountains, volcanoes and glaciers are physical features."
+        },
+        {
+          "id": "geo-an-13",
+          "type": "mcq",
+          "stem": "Which of these is a physical feature in Antarctica?",
+          "answer": "the mountains and the ice",
+          "choices": [
+            "a research station",
+            "a runway",
+            "a scientists' camp"
+          ],
+          "explain": "Mountains, ice, snow, glaciers and volcanoes are natural — physical features."
+        },
+        {
+          "id": "geo-an-14",
+          "type": "mcq",
+          "stem": "About how much of the world's fresh water is frozen in Antarctica's ice?",
+          "answer": "about 70%",
+          "choices": [
+            "about 1%",
+            "about 10%",
+            "all of it"
+          ],
+          "explain": "Antarctica's ice sheet is up to almost 5 km thick and holds most of the world's fresh water."
+        },
+        {
+          "id": "geo-an-15",
+          "type": "mcq",
+          "stem": "What does the Antarctic Treaty (1959) say Antarctica may be used for?",
+          "answer": "peace and science",
+          "choices": [
+            "mining and oil",
+            "army bases",
+            "building cities"
+          ],
+          "explain": "Countries agreed to use Antarctica only for peaceful purposes and science."
+        },
+        {
+          "id": "geo-an-16",
+          "type": "mcq",
+          "stem": "Who was first to reach the South Pole, in December 1911?",
+          "answer": "Roald Amundsen",
+          "choices": [
+            "Robert Falcon Scott",
+            "Neil Armstrong",
+            "Christopher Columbus"
+          ],
+          "explain": "Amundsen's Norwegian team got there first; Captain Scott's British team arrived about five weeks later."
+        },
+        {
+          "id": "geo-an-17",
+          "type": "tf",
+          "stem": "Antarctica is bigger than Europe.",
+          "answer": true,
+          "explain": "Antarctica is about 14 million km² — bigger than Europe and almost twice the size of Australia."
+        }
+      ]
+    },
+    {
+      "id": "easter-island",
+      "number": 5,
+      "title": "Easter Island (Rapa Nui)",
+      "source": "From the class workbook (6 Oct): Easter Island sketch with labels (Mount Terevaka, Rano Aroi, Ahu Akapu, Hanga Roa, Mataveri, Vaihu, Hotu'iti Bay, Poike). Map redrawn; facts are ours.",
+      "summary": "A remote Pacific island famous for its giant stone statues — and a sketch map with labels, like the one in class.",
+      "images": [
+        {
+          "file": "easter-island",
+          "caption": "Easter Island sketch map with labels. North is at the top — so east is on the right."
+        }
+      ],
+      "table": {
+        "title": "Easter Island in brief",
+        "head": [
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            "Where",
+            "South-east Pacific Ocean, about 3,500 km west of Chile"
+          ],
+          [
+            "Belongs to",
+            "Chile"
+          ],
+          [
+            "Own name",
+            "Rapa Nui (also the name of its people and language)"
+          ],
+          [
+            "Famous for",
+            "About 900 giant stone statues called moai"
+          ],
+          [
+            "Town",
+            "Hanga Roa (with Mataveri Airport)"
+          ]
+        ]
+      },
+      "facts": [
+        "Easter Island (**Rapa Nui**) is in the **Pacific Ocean** and belongs to **Chile**. It's one of the most remote places on Earth where people live.",
+        "It's a **triangle** of land with an old **volcano** at each corner: **Maunga Terevaka** (north, highest), **Poike** (east) and **Rano Kau** (south-west).",
+        "The Rapa Nui people carved about **900 moai** (giant statues) from volcanic rock at the **Rano Raraku** quarry. Many stand on stone platforms called **ahu**, such as **Ahu Akapu**.",
+        "**Hanga Roa** is the only town; **Mataveri** is the airport. **Anakena** is the sandy beach in the north.",
+        "It's called Easter Island because a Dutch explorer arrived on **Easter Sunday 1722**.",
+        "A **sketch map** shows the main features with **labels** and a **north arrow** — check that E is on the right!"
+      ],
+      "keywords": [
+        [
+          "moai",
+          "the giant stone statues of Easter Island"
+        ],
+        [
+          "ahu",
+          "a stone platform that moai stand on"
+        ],
+        [
+          "quarry",
+          "a place where stone is dug or cut out"
+        ],
+        [
+          "sketch map",
+          "a simple hand-drawn map showing the main features, with labels"
+        ],
+        [
+          "remote",
+          "far away from other places"
+        ]
+      ],
+      "questions": [
+        {
+          "id": "geo-ei-01",
+          "type": "short",
+          "stem": "Which place is labelled {L} on the map of Easter Island?",
+          "answer": "Maunga Terevaka",
+          "accept": [
+            "Terevaka",
+            "Mount Terevaka"
+          ],
+          "choices": [
+            "Rano Aroi",
+            "Vaihu",
+            "Anakena beach"
+          ],
+          "explain": "Terevaka is the highest point, in the north of the island.",
+          "image": "easter-island",
+          "part": "terevaka"
+        },
+        {
+          "id": "geo-ei-02",
+          "type": "short",
+          "stem": "Which place is labelled {L} on the map of Easter Island?",
+          "answer": "Rano Aroi",
+          "accept": [
+            "Rano Aroi volcano"
+          ],
+          "choices": [
+            "Poike",
+            "Rano Raraku (moai quarry)",
+            "Vaihu"
+          ],
+          "explain": "Rano Aroi is a crater lake just south of Terevaka.",
+          "image": "easter-island",
+          "part": "rano-aroi"
+        },
+        {
+          "id": "geo-ei-03",
+          "type": "short",
+          "stem": "Which place is labelled {L} on the map of Easter Island?",
+          "answer": "Anakena beach",
+          "accept": [
+            "Anakena"
+          ],
+          "choices": [
+            "Poike",
+            "Maunga Terevaka",
+            "Mataveri Airport"
+          ],
+          "explain": "Anakena is the white sandy beach on the north coast.",
+          "image": "easter-island",
+          "part": "anakena"
+        },
+        {
+          "id": "geo-ei-04",
+          "type": "short",
+          "stem": "Which place is labelled {L} on the map of Easter Island?",
+          "answer": "Poike",
+          "accept": [
+            "Poike volcano",
+            "Katiki",
+            "Pukatikei"
+          ],
+          "choices": [
+            "Mataveri Airport",
+            "Rano Aroi",
+            "Maunga Terevaka"
+          ],
+          "explain": "Poike is the volcano at the eastern corner of the island.",
+          "image": "easter-island",
+          "part": "poike"
+        },
+        {
+          "id": "geo-ei-05",
+          "type": "short",
+          "stem": "Which place is labelled {L} on the map of Easter Island?",
+          "answer": "Rano Raraku (moai quarry)",
+          "accept": [
+            "Rano Raraku",
+            "moai quarry",
+            "quarry"
+          ],
+          "choices": [
+            "Mataveri Airport",
+            "Maunga Terevaka",
+            "Anakena beach"
+          ],
+          "explain": "Rano Raraku is the volcano where the moai were carved, near the south-east coast.",
+          "image": "easter-island",
+          "part": "rano-raraku"
+        },
+        {
+          "id": "geo-ei-06",
+          "type": "short",
+          "stem": "Which place is labelled {L} on the map of Easter Island?",
+          "answer": "Hotu'iti Bay",
+          "accept": [
+            "Hotuiti Bay",
+            "Hotu iti Bay",
+            "Hotuiti",
+            "Hotu'iti"
+          ],
+          "choices": [
+            "Rano Raraku (moai quarry)",
+            "Poike",
+            "Hanga Roa (town)"
+          ],
+          "explain": "Hotu'iti Bay is on the south-east coast.",
+          "image": "easter-island",
+          "part": "hotuiti"
+        },
+        {
+          "id": "geo-ei-07",
+          "type": "short",
+          "stem": "Which place is labelled {L} on the map of Easter Island?",
+          "answer": "Vaihu",
+          "accept": [],
+          "choices": [
+            "Ahu Akapu",
+            "Hanga Roa (town)",
+            "Maunga Terevaka"
+          ],
+          "explain": "Vaihu is on the south coast.",
+          "image": "easter-island",
+          "part": "vaihu"
+        },
+        {
+          "id": "geo-ei-08",
+          "type": "short",
+          "stem": "Which place is labelled {L} on the map of Easter Island?",
+          "answer": "Rano Kau",
+          "accept": [
+            "Rano Kau volcano"
+          ],
+          "choices": [
+            "Rano Raraku (moai quarry)",
+            "Rano Aroi",
+            "Vaihu"
+          ],
+          "explain": "Rano Kau is the volcano at the south-west corner.",
+          "image": "easter-island",
+          "part": "rano-kau"
+        },
+        {
+          "id": "geo-ei-09",
+          "type": "short",
+          "stem": "Which place is labelled {L} on the map of Easter Island?",
+          "answer": "Mataveri Airport",
+          "accept": [
+            "Mataveri",
+            "the airport",
+            "airport"
+          ],
+          "choices": [
+            "Maunga Terevaka",
+            "Poike",
+            "Rano Kau"
+          ],
+          "explain": "Mataveri is the island's airport, just south of Hanga Roa.",
+          "image": "easter-island",
+          "part": "mataveri"
+        },
+        {
+          "id": "geo-ei-10",
+          "type": "short",
+          "stem": "Which place is labelled {L} on the map of Easter Island?",
+          "answer": "Hanga Roa (town)",
+          "accept": [
+            "Hanga Roa"
+          ],
+          "choices": [
+            "Rano Raraku (moai quarry)",
+            "Rano Kau",
+            "Poike"
+          ],
+          "explain": "Hanga Roa is the only town, on the west coast.",
+          "image": "easter-island",
+          "part": "hanga-roa"
+        },
+        {
+          "id": "geo-ei-11",
+          "type": "short",
+          "stem": "Which place is labelled {L} on the map of Easter Island?",
+          "answer": "Ahu Akapu",
+          "accept": [
+            "Akapu"
+          ],
+          "choices": [
+            "Hotu'iti Bay",
+            "Maunga Terevaka",
+            "Anakena beach"
+          ],
+          "explain": "Ahu Akapu is a moai platform on the west coast, north of Hanga Roa.",
+          "image": "easter-island",
+          "part": "ahu-akapu"
+        },
+        {
+          "id": "geo-ei-12",
+          "type": "short",
+          "stem": "What do the people who live there call Easter Island?",
+          "answer": "Rapa Nui",
+          "accept": [
+            "Rapanui"
+          ],
+          "choices": [
+            "Hanga Roa",
+            "Moai",
+            "Tahiti"
+          ],
+          "explain": "Rapa Nui is the island's own name, and the name of its people and their language."
+        },
+        {
+          "id": "geo-ei-13",
+          "type": "mcq",
+          "stem": "Which country does Easter Island belong to?",
+          "answer": "Chile",
+          "choices": [
+            "Mexico",
+            "Australia",
+            "Peru"
+          ],
+          "explain": "Easter Island has belonged to Chile since 1888, although it is about 3,500 km out in the Pacific."
+        },
+        {
+          "id": "geo-ei-14",
+          "type": "mcq",
+          "stem": "Which ocean is Easter Island in?",
+          "answer": "the Pacific Ocean",
+          "choices": [
+            "the Atlantic Ocean",
+            "the Indian Ocean",
+            "the Southern Ocean"
+          ],
+          "explain": "It is in the south-east Pacific — one of the most remote places on Earth where people live."
+        },
+        {
+          "id": "geo-ei-15",
+          "type": "short",
+          "stem": "What are the giant stone statues on Easter Island called?",
+          "answer": "moai",
+          "accept": [
+            "moais",
+            "the moai"
+          ],
+          "choices": [
+            "ahu",
+            "totems",
+            "tiki"
+          ],
+          "explain": "There are about 900 moai. Most were carved at the Rano Raraku quarry and many stand on stone platforms called ahu."
+        },
+        {
+          "id": "geo-ei-16",
+          "type": "mcq",
+          "stem": "What is an ahu?",
+          "answer": "a stone platform that moai stand on",
+          "choices": [
+            "a kind of volcano",
+            "a fishing boat",
+            "the island's airport"
+          ],
+          "explain": "Ahu are stone platforms; Ahu Akapu, on the west coast, is one of them."
+        },
+        {
+          "id": "geo-ei-17",
+          "type": "mcq",
+          "stem": "Where were most moai carved?",
+          "answer": "at the Rano Raraku quarry, from volcanic rock",
+          "choices": [
+            "in Chile, and shipped over",
+            "from wood in the forest",
+            "from coral on the beach"
+          ],
+          "explain": "The sculptors carved them from the soft volcanic rock of Rano Raraku, then moved them across the island."
+        },
+        {
+          "id": "geo-ei-18",
+          "type": "mcq",
+          "stem": "What shape is Easter Island?",
+          "answer": "a triangle, with a volcano at each corner",
+          "choices": [
+            "a circle",
+            "a long thin line",
+            "a square"
+          ],
+          "explain": "Terevaka (north), Poike (east) and Rano Kau (south-west) make the three corners."
+        },
+        {
+          "id": "geo-ei-19",
+          "type": "mcq",
+          "stem": "What is Hanga Roa?",
+          "answer": "the island's only town",
+          "choices": [
+            "its highest volcano",
+            "a moai platform",
+            "a beach"
+          ],
+          "explain": "Almost everyone on the island lives in Hanga Roa, on the west coast, next to Mataveri Airport."
+        },
+        {
+          "id": "geo-ei-20",
+          "type": "mcq",
+          "stem": "Why is it called Easter Island?",
+          "answer": "A Dutch explorer arrived there on Easter Sunday, 1722",
+          "choices": [
+            "It is shaped like an egg",
+            "Chocolate was invented there",
+            "It is in the east of the Pacific"
+          ],
+          "explain": "Jacob Roggeveen landed on Easter Sunday 1722 and named it after the day."
+        },
+        {
+          "id": "geo-ei-21",
+          "type": "short",
+          "stem": "On a map with north at the top, which side is east?",
+          "answer": "right",
+          "accept": [
+            "the right",
+            "right-hand side",
+            "right side",
+            "on the right"
+          ],
+          "choices": [
+            "left",
+            "top",
+            "bottom"
+          ],
+          "explain": "With north at the top, east is on the right and west is on the left (Never Eat Shredded Wheat, clockwise). Check your compass on sketch maps!"
         }
       ]
     },
     {
       "id": "compass",
-      "number": 2,
+      "number": 6,
       "title": "Compass directions",
       "summary": "The eight points of the compass, opposites, turning, and giving the direction from one place to another on a map.",
       "images": [
@@ -611,7 +2375,9 @@
         "**“Which direction is B from A?”** — put your finger on **A** (the place after “from”) and look towards **B**.",
         "Opposite directions are a **half turn (180°)** apart. A **quarter turn** is **90°**; one step round the 8-point compass is **45°**.",
         "**Clockwise** goes N → NE → E → SE → S …; **anticlockwise** goes the other way.",
-        "The Sun **rises in the east** and **sets in the west**."
+        "The Sun **rises in the east** and **sets in the west**.",
+        "A common slip: drawing **E and W the wrong way round** on a sketch map. With north at the top, **east is on the right**.",
+        "Answer in a full sentence: “The **bike hire** is **south of** the **hostel**.” The place after “of” is where you start."
       ],
       "keywords": [
         [
@@ -982,14 +2748,39 @@
           "id": "geo-cp-28",
           "type": "short",
           "gen": "dir-map"
+        },
+        {
+          "id": "geo-cp-201",
+          "type": "mcq",
+          "stem": "On a compass rose with N at the top, where is E?",
+          "answer": "on the right",
+          "choices": [
+            "on the left",
+            "at the bottom",
+            "next to N"
+          ],
+          "explain": "Clockwise from the top: N, E, S, W. So E is on the right and W on the left."
+        },
+        {
+          "id": "geo-cp-202",
+          "type": "mcq",
+          "stem": "“The bike hire is south of the hostel.” Where do you start?",
+          "answer": "at the hostel",
+          "choices": [
+            "at the bike hire",
+            "at the top of the map",
+            "at the compass"
+          ],
+          "explain": "The place after “of” (the hostel) is where you stand; the bike hire is to the south of it."
         }
-      ]
+      ],
+      "source": "From the class workbook (14 Oct): “Which direction?” — directions between places on a map, written as sentences (“the bike hire is south of the hostel”)."
     },
     {
       "id": "grid-refs",
-      "number": 3,
-      "title": "Grid references",
-      "summary": "Finding places on a map with 4-figure grid references (a square) and 6-figure grid references (an exact point) — as in the class homework.",
+      "number": 7,
+      "title": "Grid references and OS maps",
+      "summary": "Finding places with letter–number squares, 4-figure and 6-figure grid references, and reading OS map symbols and roads.",
       "images": [
         {
           "file": "grid4",
@@ -1032,7 +2823,11 @@
         "A **4-figure** grid reference names a **square**: use the numbers of the lines that meet at its **bottom-left corner**.",
         "A **6-figure** grid reference gives an **exact point**: imagine the square cut into **tenths**. The 3rd figure is tenths **along**, the 6th is tenths **up**.",
         "You estimate the tenths by eye — halfway is 5. Being one tenth out is usually fine.",
-        "The **key** tells you what the **symbols** mean, e.g. a church, **PH** = pub (public house), **P** = post office, **Sch** = school."
+        "The **key** tells you what the **symbols** mean, e.g. a church, **PH** = pub (public house), **P** = post office, **Sch** = school.",
+        "Some maps use **letters and numbers** instead: letters along the bottom, numbers up the side, written **in the middle** of each column and row. Give the **letter first**, e.g. **C4**.",
+        "On an **OS map** every grid square is **1 km** across.",
+        "Roads: **motorways** are blue (e.g. M25), main **A roads** are green or red (e.g. **A12**), **B roads** are orange/yellow. The number is the road's name.",
+        "OS symbols include a church (with a tower or spire, or a plain cross), woods (little trees), a golf course, a hospital, a windmill, a radio mast, a youth hostel and a caravan site — always check the **key**."
       ],
       "keywords": [
         [
@@ -1066,6 +2861,14 @@
         [
           "Ordnance Survey (OS)",
           "the organisation that makes Britain's official maps"
+        ],
+        [
+          "A road",
+          "a main road, shown red or green on OS maps, e.g. the A12"
+        ],
+        [
+          "letter–number grid",
+          "a grid where squares are named like C4: letter along, number up"
         ]
       ],
       "questions": [
@@ -1286,823 +3089,534 @@
             "the Royal Mail"
           ],
           "explain": "Ordnance Survey (OS) has made Britain's maps for over 200 years."
+        },
+        {
+          "id": "geo-gr-an1",
+          "type": "short",
+          "gen": "gridAN-what"
+        },
+        {
+          "id": "geo-gr-an2",
+          "type": "short",
+          "gen": "gridAN-where"
+        },
+        {
+          "id": "geo-gr-an3",
+          "type": "short",
+          "gen": "gridAN-where"
+        },
+        {
+          "id": "geo-gr-101",
+          "type": "mcq",
+          "stem": "On an OS map, what is the A12?",
+          "answer": "a main road (an A road)",
+          "choices": [
+            "a grid square",
+            "a 6-figure grid reference",
+            "a river"
+          ],
+          "explain": "Roads are named by letter and number: M = motorway, A = main road, B = smaller road."
+        },
+        {
+          "id": "geo-gr-102",
+          "type": "mcq",
+          "stem": "On a letter–number grid, which comes first?",
+          "answer": "the letter (along the bottom)",
+          "choices": [
+            "the number (up the side)",
+            "whichever is smaller",
+            "it doesn't matter"
+          ],
+          "explain": "Letter first, then number — e.g. C4. It's the same idea as eastings first."
+        },
+        {
+          "id": "geo-gr-103",
+          "type": "mcq",
+          "stem": "On OS maps, what colour are motorways?",
+          "answer": "blue",
+          "choices": [
+            "red",
+            "brown",
+            "green"
+          ],
+          "explain": "Motorways are blue; main A roads green or red; B roads orange or yellow."
+        },
+        {
+          "id": "geo-gr-104",
+          "type": "mcq",
+          "stem": "How wide is each grid square on an OS map?",
+          "answer": "1 km",
+          "choices": [
+            "1 m",
+            "10 km",
+            "100 km"
+          ],
+          "explain": "Each grid square on an OS map is 1 km by 1 km — handy for measuring distance."
         }
-      ]
+      ],
+      "source": "From the class homework and workbook: the village plan and 6-figure sheets, letter–number squares (14 Oct, “the riding school is at A10”) and “Using OS maps to study places” (4 Nov: roads such as the A12, churches, woods, a golf course, a hospital, a windmill, a radio mast)."
     },
     {
-      "id": "fantastic-places",
-      "number": 4,
-      "title": "Fantastic places",
-      "summary": "Seven fantastic places around the world — where they are, and how to describe a place like a geographer.",
-      "images": [
-        {
-          "file": "places",
-          "caption": "Seven fantastic places. Can you name the continent each one is in?"
-        }
-      ],
-      "table": {
-        "title": "Where are they?",
-        "head": [
-          "Place",
-          "Continent",
-          "What makes it fantastic"
-        ],
-        "rows": [
-          [
-            "Great Barrier Reef",
-            "Oceania (Australia)",
-            "The world's biggest coral reef, home to thousands of kinds of sea life"
-          ],
-          [
-            "Amazon rainforest",
-            "South America (mostly Brazil)",
-            "The biggest tropical rainforest; the River Amazon carries more water than any other river"
-          ],
-          [
-            "Sahara Desert",
-            "Africa",
-            "The biggest hot desert, across north Africa"
-          ],
-          [
-            "Mount Everest",
-            "Asia (Nepal and China)",
-            "The highest mountain on Earth: 8,849 m, in the Himalayas"
-          ],
-          [
-            "Grand Canyon",
-            "North America (USA)",
-            "A huge canyon cut by the Colorado River, more than 1.5 km deep"
-          ],
-          [
-            "Victoria Falls",
-            "Africa (Zambia and Zimbabwe)",
-            "A giant waterfall on the Zambezi — “the smoke that thunders”"
-          ],
-          [
-            "Iceland",
-            "Europe",
-            "Volcanoes, geysers and glaciers — the land of fire and ice"
-          ]
-        ]
-      },
-      "facts": [
-        "To **describe where a place is**, go from big to small: **continent → country → compass direction / nearby sea or city**.",
-        "Then describe its **physical features** (natural: mountains, rivers, climate, plants and animals) and its **human features** (made by people: towns, roads, tourism).",
-        "Use precise geography words: not “a big hill” but “a **mountain range**”; not “a hot sandy place” but “a **hot desert**”.",
-        "The biggest desert of all is **Antarctica** (a cold desert) — the **Sahara** is the biggest **hot** desert.",
-        "Many fantastic places are **World Heritage Sites**: places so special the world agrees to protect them."
-      ],
-      "keywords": [
-        [
-          "location",
-          "where a place is"
-        ],
-        [
-          "physical feature",
-          "a natural feature, e.g. a mountain, river, desert or reef"
-        ],
-        [
-          "human feature",
-          "something made by people, e.g. a town, road or port"
-        ],
-        [
-          "rainforest",
-          "a thick forest with heavy rain all year"
-        ],
-        [
-          "desert",
-          "a place that gets very little rain (hot or cold)"
-        ],
-        [
-          "canyon",
-          "a deep valley with steep sides, cut by a river"
-        ],
-        [
-          "glacier",
-          "a slow-moving river of ice"
-        ],
-        [
-          "World Heritage Site",
-          "a place listed by UNESCO to be protected for everyone"
-        ]
-      ],
-      "questions": [
-        {
-          "id": "geo-fp-01",
-          "type": "short",
-          "stem": "Which fantastic place is labelled {L}?",
-          "answer": "Great Barrier Reef",
-          "accept": [
-            "Barrier Reef",
-            "the Great Barrier Reef"
-          ],
-          "choices": [
-            "Mount Everest",
-            "Amazon rainforest",
-            "Grand Canyon"
-          ],
-          "explain": "The Great Barrier Reef is in the sea off the north-east coast of Australia.",
-          "image": "places",
-          "part": "great-barrier-reef"
-        },
-        {
-          "id": "geo-fp-02",
-          "type": "short",
-          "stem": "Which fantastic place is labelled {L}?",
-          "answer": "Amazon rainforest",
-          "accept": [
-            "Amazon",
-            "Amazon rain forest",
-            "the Amazon",
-            "Amazon jungle",
-            "Amazonia"
-          ],
-          "choices": [
-            "Iceland",
-            "Mount Everest",
-            "Grand Canyon"
-          ],
-          "explain": "The Amazon rainforest covers the north of South America, mostly in Brazil, near the Equator.",
-          "image": "places",
-          "part": "amazon"
-        },
-        {
-          "id": "geo-fp-03",
-          "type": "short",
-          "stem": "Which fantastic place is labelled {L}?",
-          "answer": "Sahara Desert",
-          "accept": [
-            "Sahara",
-            "the Sahara"
-          ],
-          "choices": [
-            "Mount Everest",
-            "Iceland",
-            "Great Barrier Reef"
-          ],
-          "explain": "The Sahara covers most of north Africa.",
-          "image": "places",
-          "part": "sahara"
-        },
-        {
-          "id": "geo-fp-04",
-          "type": "short",
-          "stem": "Which fantastic place is labelled {L}?",
-          "answer": "Mount Everest",
-          "accept": [
-            "Everest",
-            "Mt Everest"
-          ],
-          "choices": [
-            "Sahara Desert",
-            "Great Barrier Reef",
-            "Victoria Falls"
-          ],
-          "explain": "Mount Everest is in the Himalayas in Asia, on the border of Nepal and China.",
-          "image": "places",
-          "part": "everest"
-        },
-        {
-          "id": "geo-fp-05",
-          "type": "short",
-          "stem": "Which fantastic place is labelled {L}?",
-          "answer": "Grand Canyon",
-          "accept": [
-            "the Grand Canyon"
-          ],
-          "choices": [
-            "Great Barrier Reef",
-            "Victoria Falls",
-            "Iceland"
-          ],
-          "explain": "The Grand Canyon is in Arizona, in the south-west of the USA (North America).",
-          "image": "places",
-          "part": "grand-canyon"
-        },
-        {
-          "id": "geo-fp-06",
-          "type": "short",
-          "stem": "Which fantastic place is labelled {L}?",
-          "answer": "Victoria Falls",
-          "accept": [
-            "Victoria Falls",
-            "Mosi-oa-Tunya",
-            "Victoria waterfall"
-          ],
-          "choices": [
-            "Amazon rainforest",
-            "Mount Everest",
-            "Great Barrier Reef"
-          ],
-          "explain": "Victoria Falls is in southern Africa, on the border of Zambia and Zimbabwe.",
-          "image": "places",
-          "part": "victoria-falls"
-        },
-        {
-          "id": "geo-fp-07",
-          "type": "short",
-          "stem": "Which fantastic place is labelled {L}?",
-          "answer": "Iceland",
-          "accept": [],
-          "choices": [
-            "Mount Everest",
-            "Great Barrier Reef",
-            "Victoria Falls"
-          ],
-          "explain": "Iceland is an island in the North Atlantic, between Greenland and Norway — part of Europe.",
-          "image": "places",
-          "part": "iceland",
-          "reject": [
-            "Ireland"
-          ]
-        },
-        {
-          "id": "geo-fp-08",
-          "type": "short",
-          "stem": "I'm the world's biggest tropical rainforest, mostly in Brazil, with a huge river running through me. Where am I?",
-          "answer": "Amazon rainforest",
-          "accept": [
-            "Amazon",
-            "Amazon rain forest",
-            "the Amazon",
-            "Amazon jungle"
-          ],
-          "choices": [
-            "Sahara Desert",
-            "Great Barrier Reef",
-            "Victoria Falls"
-          ],
-          "explain": "The Amazon rainforest covers much of South America; the River Amazon carries more water than any other river."
-        },
-        {
-          "id": "geo-fp-09",
-          "type": "short",
-          "stem": "I'm the highest mountain on Earth, on the border of Nepal and China. What am I?",
-          "answer": "Mount Everest",
-          "accept": [
-            "Everest",
-            "Mt Everest"
-          ],
-          "choices": [
-            "Ben Nevis",
-            "Mont Blanc",
-            "Grand Canyon"
-          ],
-          "explain": "Mount Everest is 8,849 m high, in the Himalayas in Asia."
-        },
-        {
-          "id": "geo-fp-10",
-          "type": "short",
-          "stem": "I'm the biggest hot desert in the world, stretching across north Africa. Where am I?",
-          "answer": "Sahara Desert",
-          "accept": [
-            "Sahara",
-            "the Sahara"
-          ],
-          "choices": [
-            "Amazon rainforest",
-            "Antarctica",
-            "Grand Canyon"
-          ],
-          "explain": "The Sahara is the largest hot desert. (Antarctica is the largest desert of all — a cold one.)"
-        },
-        {
-          "id": "geo-fp-11",
-          "type": "short",
-          "stem": "I'm a deep, steep-sided valley in Arizona, USA, carved by the Colorado River. What am I?",
-          "answer": "Grand Canyon",
-          "accept": [
-            "the Grand Canyon"
-          ],
-          "choices": [
-            "Victoria Falls",
-            "Mount Everest",
-            "Iceland"
-          ],
-          "explain": "The Colorado River cut the Grand Canyon over millions of years; it's more than 1.5 km deep."
-        },
-        {
-          "id": "geo-fp-12",
-          "type": "short",
-          "stem": "I'm a giant waterfall on the River Zambezi, between Zambia and Zimbabwe — “the smoke that thunders”. What am I?",
-          "answer": "Victoria Falls",
-          "accept": [
-            "Mosi-oa-Tunya",
-            "Victoria waterfall"
-          ],
-          "choices": [
-            "Niagara Falls",
-            "Grand Canyon",
-            "Amazon rainforest"
-          ],
-          "explain": "Victoria Falls' local name, Mosi-oa-Tunya, means “the smoke that thunders” — the spray rises like smoke."
-        },
-        {
-          "id": "geo-fp-13",
-          "type": "short",
-          "stem": "I'm an island country in the North Atlantic with volcanoes, geysers and glaciers. Where am I?",
-          "answer": "Iceland",
-          "choices": [
-            "Greenland",
-            "Ireland",
-            "Antarctica"
-          ],
-          "explain": "Iceland is the “land of fire and ice”: it sits where two plates of the Earth's crust pull apart."
-        },
-        {
-          "id": "geo-fp-14",
-          "type": "short",
-          "stem": "I'm the world's biggest coral reef, off the north-east coast of Australia. What am I?",
-          "answer": "Great Barrier Reef",
-          "accept": [
-            "Barrier Reef"
-          ],
-          "choices": [
-            "Amazon rainforest",
-            "Victoria Falls",
-            "Sahara Desert"
-          ],
-          "explain": "The Great Barrier Reef is in the Coral Sea, off Queensland, Australia."
-        },
-        {
-          "id": "geo-fp-15",
-          "type": "mcq",
-          "stem": "Which continent is the Sahara Desert in?",
-          "answer": "Africa",
-          "choices": [
-            "Asia",
-            "South America",
-            "Oceania"
-          ],
-          "explain": "The Sahara covers most of north Africa."
-        },
-        {
-          "id": "geo-fp-16",
-          "type": "mcq",
-          "stem": "Which continent is Mount Everest in?",
-          "answer": "Asia",
-          "choices": [
-            "Europe",
-            "South America",
-            "Africa"
-          ],
-          "explain": "Everest is in the Himalayas, in Asia."
-        },
-        {
-          "id": "geo-fp-17",
-          "type": "mcq",
-          "stem": "Which continent is the Grand Canyon in?",
-          "answer": "North America",
-          "choices": [
-            "South America",
-            "Africa",
-            "Oceania"
-          ],
-          "explain": "The Grand Canyon is in the USA, in North America."
-        },
-        {
-          "id": "geo-fp-18",
-          "type": "mcq",
-          "stem": "Which continent is Iceland part of?",
-          "answer": "Europe",
-          "choices": [
-            "North America",
-            "Asia",
-            "Antarctica"
-          ],
-          "explain": "Iceland is a European country, in the North Atlantic."
-        },
-        {
-          "id": "geo-fp-19",
-          "type": "mcq",
-          "stem": "Which continent is the Amazon rainforest in?",
-          "answer": "South America",
-          "choices": [
-            "Africa",
-            "Asia",
-            "North America"
-          ],
-          "explain": "The Amazon is in South America, mostly in Brazil."
-        },
-        {
-          "id": "geo-fp-20",
-          "type": "mcq",
-          "stem": "Mount Everest is in which mountain range?",
-          "answer": "the Himalayas",
-          "choices": [
-            "the Alps",
-            "the Andes",
-            "the Rockies"
-          ],
-          "explain": "The Himalayas, in Asia, have all the world's highest mountains."
-        },
-        {
-          "id": "geo-fp-21",
-          "type": "mcq",
-          "stem": "About how high is Mount Everest?",
-          "answer": "8,849 m",
-          "choices": [
-            "1,345 m",
-            "4,806 m",
-            "88,490 m"
-          ],
-          "explain": "Everest is 8,849 m. For comparison, Ben Nevis (the UK's highest) is 1,345 m."
-        },
-        {
-          "id": "geo-fp-22",
-          "type": "mcq",
-          "stem": "Which river carved the Grand Canyon?",
-          "answer": "the Colorado River",
-          "choices": [
-            "the River Amazon",
-            "the River Nile",
-            "the River Zambezi"
-          ],
-          "explain": "The Colorado River cut down through the rock over millions of years."
-        },
-        {
-          "id": "geo-fp-23",
-          "type": "short",
-          "stem": "Which country is the Great Barrier Reef next to?",
-          "answer": "Australia",
-          "choices": [
-            "New Zealand",
-            "Brazil",
-            "Indonesia"
-          ],
-          "explain": "The reef runs along the north-east coast of Australia (Queensland)."
-        },
-        {
-          "id": "geo-fp-24",
-          "type": "tf",
-          "stem": "A physical feature is something made by people.",
-          "answer": false,
-          "explain": "Physical features are natural (mountains, rivers, deserts, reefs). Human features are made by people (towns, roads, hotels)."
-        },
-        {
-          "id": "geo-fp-25",
-          "type": "mcq",
-          "stem": "Which of these is a human feature?",
-          "answer": "a town",
-          "choices": [
-            "a volcano",
-            "a river",
-            "a coral reef"
-          ],
-          "explain": "Human features are made by people — towns, roads, ports, dams. The others are physical (natural) features."
-        },
-        {
-          "id": "geo-fp-26",
-          "type": "mcq",
-          "stem": "When you describe where a place is, what should you say first?",
-          "answer": "its continent and country",
-          "choices": [
-            "what you had for lunch there",
-            "its grid reference on any map",
-            "how many people visit it"
-          ],
-          "explain": "Start big, then get closer: continent → country → compass direction / near which sea or city. Then describe its physical and human features."
-        }
-      ]
-    },
-    {
-      "id": "reef",
-      "number": 5,
-      "title": "The Great Barrier Reef — why is it disappearing?",
-      "summary": "What the reef is, how coral lives, the threats that are killing it, and what is being done to protect it.",
+      "id": "scale",
+      "number": 8,
+      "title": "Scale and distance",
+      "source": "From the class workbook (Oct): measuring distances on a map (answers in cm and km). Questions are ours.",
+      "summary": "Using a map's scale to work out real distances — and back again.",
       "images": [],
       "table": {
-        "title": "Why the reef is disappearing",
+        "title": "Common map scales",
         "head": [
-          "Threat",
-          "What happens"
+          "Scale",
+          "1 cm on the map is",
+          "1 km is"
         ],
         "rows": [
           [
-            "Warmer seas (climate change)",
-            "Coral bleaching: hot water makes coral push out its algae. It turns white and starves; if the heat lasts, it dies."
+            "1:50,000",
+            "500 m",
+            "2 cm"
           ],
           [
-            "More acidic sea",
-            "The sea absorbs carbon dioxide and becomes more acidic, so coral struggles to build its skeleton."
+            "1:25,000",
+            "250 m",
+            "4 cm"
           ],
           [
-            "Farm run-off",
-            "Rain washes soil, fertiliser and pesticide into the sea: cloudy water blocks sunlight and feeds pests."
-          ],
-          [
-            "Crown-of-thorns starfish",
-            "Outbreaks of these starfish eat huge areas of coral."
-          ],
-          [
-            "Stronger storms (cyclones)",
-            "Giant waves smash the coral."
-          ],
-          [
-            "People on the reef",
-            "Boat anchors, careless divers, overfishing and shipping damage the coral and its food chains."
+            "OS grid square",
+            "—",
+            "1 square"
           ]
         ]
       },
       "facts": [
-        "The **Great Barrier Reef** is off the **north-east coast of Australia** (Queensland), in the **Coral Sea**, part of the Pacific Ocean.",
-        "It is the **world's biggest coral reef system**: about **2,300 km** long, made of about **2,900 reefs** and **900 islands**. You can see it from space.",
-        "Coral is built by tiny animals called **polyps**. Tiny **algae** live inside them, making food from sunlight and giving coral its colours — so reefs need **warm, clear, shallow, sunny** water.",
-        "It is home to thousands of species — over **1,500 kinds of fish**, turtles, sharks, dolphins and dugongs — and it's a **World Heritage Site**.",
-        "The biggest threat is **climate change**: warmer seas cause **coral bleaching**. The reef has had several **mass bleaching** events since 2016.",
-        "**Bleached ≠ dead**: if the water cools quickly the algae can return. If the heat lasts, the coral dies — and a reef takes many years to recover.",
-        "**Protecting it:** marine park zones where fishing is banned, less farm run-off, removing crown-of-thorns starfish, growing and replanting coral — and, most of all, cutting the **greenhouse gases** that warm the planet."
+        "The **scale** tells you how much smaller the map is than real life.",
+        "**1:50,000**: 1 cm on the map = 50,000 cm = **500 m**, so **2 cm = 1 km**. Map → real: **÷ 2**. Real → map: **× 2**.",
+        "**1:25,000**: 1 cm = 250 m, so **4 cm = 1 km**. Map → real: **÷ 4**.",
+        "Measure **straight-line** distances with a ruler; for **curvy** roads use string or the edge of a sheet of paper.",
+        "On OS maps every grid square is **1 km** across — count squares to estimate distances."
       ],
       "keywords": [
         [
-          "coral reef",
-          "a ridge in the sea built from the skeletons of coral polyps"
+          "scale",
+          "how much smaller the map is than real life"
         ],
         [
-          "polyp",
-          "the tiny animal that builds coral"
+          "ratio scale",
+          "a scale written like 1:50,000"
         ],
         [
-          "algae",
-          "tiny living things inside coral that make food from sunlight"
+          "linear scale (scale bar)",
+          "a line marked in km to measure against"
         ],
         [
-          "coral bleaching",
-          "coral turning white when the sea is too warm"
-        ],
-        [
-          "climate change",
-          "long-term warming of the Earth, mainly from burning fossil fuels"
-        ],
-        [
-          "ocean acidification",
-          "the sea becoming more acidic as it absorbs carbon dioxide"
-        ],
-        [
-          "run-off",
-          "rainwater flowing off the land into rivers and the sea, carrying soil and chemicals"
-        ],
-        [
-          "biodiversity",
-          "the variety of living things in a place"
+          "straight-line distance",
+          "the distance as the crow flies"
         ]
       ],
       "questions": [
         {
-          "id": "geo-rf-01",
+          "id": "geo-sc-g1",
           "type": "short",
-          "stem": "In which country is the Great Barrier Reef?",
-          "answer": "Australia",
-          "choices": [
-            "New Zealand",
-            "Brazil",
-            "South Africa"
-          ],
-          "explain": "It's off the coast of Queensland, Australia."
+          "gen": "scale-real"
         },
         {
-          "id": "geo-rf-02",
+          "id": "geo-sc-g2",
+          "type": "short",
+          "gen": "scale-real"
+        },
+        {
+          "id": "geo-sc-g3",
+          "type": "short",
+          "gen": "scale-map"
+        },
+        {
+          "id": "geo-sc-g4",
+          "type": "short",
+          "gen": "scale-squares"
+        },
+        {
+          "id": "geo-sc-01",
           "type": "mcq",
-          "stem": "Off which coast of Australia is the reef?",
-          "answer": "the north-east coast",
+          "stem": "What does the scale of a map tell you?",
+          "answer": "how much smaller the map is than real life",
           "choices": [
-            "the south-west coast",
-            "the south coast",
-            "the west coast"
+            "which way is north",
+            "what the symbols mean",
+            "how high the land is"
           ],
-          "explain": "The reef runs along the north-east coast, in the Coral Sea."
+          "explain": "The scale lets you work out real distances from the map. The key explains symbols; the north arrow shows north."
         },
         {
-          "id": "geo-rf-03",
-          "type": "short",
-          "stem": "Which sea is the Great Barrier Reef in?",
-          "answer": "Coral Sea",
-          "accept": [
-            "the Coral Sea"
-          ],
-          "choices": [
-            "Red Sea",
-            "North Sea",
-            "Caribbean Sea"
-          ],
-          "explain": "The Coral Sea is part of the Pacific Ocean."
-        },
-        {
-          "id": "geo-rf-04",
+          "id": "geo-sc-02",
           "type": "mcq",
-          "stem": "About how long is the Great Barrier Reef?",
-          "answer": "2,300 km",
+          "stem": "On a 1:50,000 map, how many centimetres stand for 1 km?",
+          "answer": "2 cm",
           "choices": [
-            "23 km",
-            "230 km",
-            "23,000 km"
+            "1 cm",
+            "4 cm",
+            "50 cm"
           ],
-          "explain": "About 2,300 km — further than from London to Moscow. It's the largest coral reef system in the world."
+          "explain": "1:50,000 means 1 cm on the map is 50,000 cm (500 m) in real life — so 2 cm = 1 km."
         },
         {
-          "id": "geo-rf-05",
-          "type": "short",
-          "stem": "What are the tiny animals that build coral called?",
-          "answer": "polyps",
-          "accept": [
-            "polyp",
-            "coral polyps"
-          ],
-          "choices": [
-            "algae",
-            "plankton",
-            "jellyfish"
-          ],
-          "explain": "Coral polyps build hard limestone skeletons; over thousands of years these build up into a reef."
-        },
-        {
-          "id": "geo-rf-06",
-          "type": "short",
-          "stem": "What tiny living things live inside coral, giving it food and its colours?",
-          "answer": "algae",
-          "accept": [
-            "alga",
-            "zooxanthellae",
-            "algae (zooxanthellae)",
-            "plants"
-          ],
-          "choices": [
-            "polyps",
-            "starfish",
-            "bacteria"
-          ],
-          "explain": "Algae inside the coral use sunlight to make food (photosynthesis) and share it with the coral."
-        },
-        {
-          "id": "geo-rf-07",
-          "type": "short",
-          "stem": "What is it called when coral turns white because the sea is too warm?",
-          "answer": "coral bleaching",
-          "accept": [
-            "bleaching",
-            "bleached coral"
-          ],
-          "choices": [
-            "coral fading",
-            "coral melting",
-            "coral freezing"
-          ],
-          "explain": "In water that's too warm, coral pushes out its algae, loses its colour and turns white — bleaching."
-        },
-        {
-          "id": "geo-rf-08",
+          "id": "geo-sc-03",
           "type": "mcq",
-          "stem": "What causes coral bleaching?",
-          "answer": "The sea getting too warm",
+          "stem": "On a 1:25,000 map, how many centimetres stand for 1 km?",
+          "answer": "4 cm",
           "choices": [
-            "The sea getting too cold",
-            "Too many fish",
-            "Too much rain on the reef"
+            "2 cm",
+            "25 cm",
+            "1 cm"
           ],
-          "explain": "Rising sea temperatures, caused by climate change, are the main cause of bleaching."
+          "explain": "1 cm = 25,000 cm = 250 m, so 4 cm = 1 km. A 1:25,000 map shows more detail."
         },
         {
-          "id": "geo-rf-09",
+          "id": "geo-sc-04",
+          "type": "mcq",
+          "stem": "How can you measure a curvy road on a map?",
+          "answer": "lay a piece of string along it, then measure the string",
+          "choices": [
+            "use a protractor",
+            "count the symbols",
+            "look at the contour lines"
+          ],
+          "explain": "String (or the edge of a sheet of paper, turned at each bend) follows the curves; then measure it against the scale."
+        },
+        {
+          "id": "geo-sc-05",
+          "type": "mcq",
+          "stem": "What is a “straight-line distance”?",
+          "answer": "the distance as the crow flies, ignoring bends",
+          "choices": [
+            "the length of the road",
+            "the height of a hill",
+            "the distance to the North Pole"
+          ],
+          "explain": "Straight line = as the crow flies. A route along roads or paths is always longer."
+        },
+        {
+          "id": "geo-sc-06",
+          "type": "mcq",
+          "stem": "Which map shows more detail?",
+          "answer": "1:25,000",
+          "choices": [
+            "1:50,000",
+            "1:1,000,000",
+            "They are all the same"
+          ],
+          "explain": "The smaller the second number, the bigger things are drawn — so 1:25,000 shows more detail than 1:50,000."
+        }
+      ]
+    },
+    {
+      "id": "contours",
+      "number": 9,
+      "title": "Contour lines and height",
+      "source": "From the class workbook (20 Oct): “Using contour lines” — heights, and spotting steep land by lots of orange lines. Diagram and questions are ours.",
+      "summary": "How maps show hills and valleys: contour lines, spot heights, steep and gentle slopes.",
+      "images": [
+        {
+          "file": "contours",
+          "caption": "A hill shown with contour lines every 50 m. The lines are close together on the east side (steep) and far apart on the west (gentle)."
+        }
+      ],
+      "table": {
+        "title": "Reading contour lines",
+        "head": [
+          "You see …",
+          "It means …"
+        ],
+        "rows": [
+          [
+            "lines close together",
+            "steep slope"
+          ],
+          [
+            "lines far apart",
+            "gentle slope"
+          ],
+          [
+            "no lines",
+            "flat land"
+          ],
+          [
+            "rings getting smaller, numbers going up",
+            "a hill; the top is in the middle"
+          ],
+          [
+            "a black dot with a number",
+            "a spot height (exact height there)"
+          ]
+        ]
+      },
+      "facts": [
+        "**Contour lines** join places that are the **same height above sea level**. The number on the line is the height in **metres**.",
+        "**Close together = steep. Far apart = gentle. No lines = flat.**",
+        "On OS maps contours are **brown/orange**, usually every **10 m** (1:50,000) or **5 m** (1:25,000).",
+        "A **spot height** is a black dot with a number: the exact height at that spot.",
+        "To find a height between two lines, look at the lines either side: between 100 and 150 m → somewhere in between."
+      ],
+      "keywords": [
+        [
+          "contour line",
+          "a line joining places of the same height"
+        ],
+        [
+          "spot height",
+          "a dot with a number giving the exact height"
+        ],
+        [
+          "relief",
+          "the shape and height of the land"
+        ],
+        [
+          "steep",
+          "rising quickly — contour lines close together"
+        ],
+        [
+          "gentle",
+          "rising slowly — contour lines far apart"
+        ]
+      ],
+      "questions": [
+        {
+          "id": "geo-ct-01",
           "type": "short",
-          "stem": "What is the biggest threat to the Great Barrier Reef?",
-          "answer": "climate change",
-          "accept": [
-            "global warming",
-            "rising sea temperatures",
-            "warmer sea",
-            "warming seas",
-            "warming oceans",
-            "warmer water",
-            "the sea getting warmer"
-          ],
+          "stem": "Look at the map of the hill. What height is point A?",
+          "answer": "100 m",
+          "accept": [],
           "choices": [
-            "tourists",
-            "sharks",
-            "too many islands"
+            "50 m",
+            "150 m",
+            "268 m"
           ],
-          "explain": "Climate change warms the sea (bleaching) and makes it more acidic. Other threats add to the damage."
+          "explain": "A is on the contour line labelled 100, so it is 100 m above sea level.",
+          "image": "contours",
+          "match": "dist",
+          "unit": "m"
         },
         {
-          "id": "geo-rf-10",
+          "id": "geo-ct-02",
+          "type": "short",
+          "stem": "Look at the map of the hill. What is the height of the top, point B?",
+          "answer": "268 m",
+          "choices": [
+            "250 m",
+            "200 m",
+            "300 m"
+          ],
+          "explain": "The black dot with 268 next to it is a spot height: the top is 268 m.",
+          "image": "contours",
+          "match": "dist",
+          "unit": "m"
+        },
+        {
+          "id": "geo-ct-03",
+          "type": "mcq",
+          "stem": "Look at the map of the hill. Point C is …",
+          "answer": "between 150 m and 200 m, on a steep slope",
+          "choices": [
+            "between 50 m and 100 m, on flat land",
+            "exactly 250 m high",
+            "below sea level"
+          ],
+          "explain": "C lies between the 150 and 200 lines, where they are close together — steep.",
+          "image": "contours"
+        },
+        {
+          "id": "geo-ct-04",
+          "type": "mcq",
+          "stem": "Look at the map of the hill. Point D is …",
+          "answer": "below 50 m",
+          "choices": [
+            "at the top of the hill",
+            "268 m",
+            "between 200 m and 250 m"
+          ],
+          "explain": "D is outside the lowest (50 m) contour, so it is lower than 50 m.",
+          "image": "contours"
+        },
+        {
+          "id": "geo-ct-05",
+          "type": "mcq",
+          "stem": "Look at the map of the hill. Which side is steeper?",
+          "answer": "the east side",
+          "choices": [
+            "the west side",
+            "both the same",
+            "you can't tell"
+          ],
+          "explain": "On the east side the contour lines are close together — that means steep.",
+          "image": "contours"
+        },
+        {
+          "id": "geo-ct-06",
+          "type": "mcq",
+          "stem": "What do contour lines join?",
+          "answer": "places that are the same height above sea level",
+          "choices": [
+            "places with the same name",
+            "roads of the same type",
+            "places with the same weather"
+          ],
+          "explain": "Every point on a contour line is the same height; the number tells you the height in metres."
+        },
+        {
+          "id": "geo-ct-07",
+          "type": "mcq",
+          "stem": "Contour lines close together mean …",
+          "answer": "steep land",
+          "choices": [
+            "flat land",
+            "a lake",
+            "a road"
+          ],
+          "explain": "Close together = the height changes quickly = steep. (Lots of orange lines = steep!)"
+        },
+        {
+          "id": "geo-ct-08",
+          "type": "mcq",
+          "stem": "Contour lines far apart (or none at all) mean …",
+          "answer": "gentle or flat land",
+          "choices": [
+            "a cliff",
+            "a mountain top",
+            "a deep valley"
+          ],
+          "explain": "Far apart = the height changes slowly = gentle slope. No lines = flat."
+        },
+        {
+          "id": "geo-ct-09",
+          "type": "mcq",
+          "stem": "What colour are contour lines on OS maps?",
+          "answer": "brown/orange",
+          "choices": [
+            "blue",
+            "green",
+            "black"
+          ],
+          "explain": "Contours are brown or orange. Blue is water; black dots with numbers are spot heights."
+        },
+        {
+          "id": "geo-ct-10",
+          "type": "mcq",
+          "stem": "What is a spot height?",
+          "answer": "a dot with a number showing the exact height of that spot",
+          "choices": [
+            "a tall tower",
+            "a type of road",
+            "a place where you can see far"
+          ],
+          "explain": "Spot heights (a black dot and a number) give the height in metres at one point, often a hilltop."
+        },
+        {
+          "id": "geo-ct-11",
+          "type": "mcq",
+          "stem": "Which would be the easiest place to walk or build a road?",
+          "answer": "where there are hardly any contour lines",
+          "choices": [
+            "where the contour lines are bunched together",
+            "across the top of a cliff",
+            "where the lines form tight circles"
+          ],
+          "explain": "Few or no contour lines means flat land — easy for walking, farming and building."
+        },
+        {
+          "id": "geo-ct-12",
+          "type": "mcq",
+          "stem": "On a 1:50,000 OS map, contour lines are usually drawn every …",
+          "answer": "10 metres",
+          "choices": [
+            "1 metre",
+            "100 metres",
+            "1 kilometre"
+          ],
+          "explain": "The vertical interval is 10 m on 1:50,000 maps (5 m on 1:25,000 maps)."
+        }
+      ]
+    },
+    {
+      "id": "mental-maps",
+      "number": 10,
+      "title": "Mental maps and sense of place",
+      "source": "From the class workbook (10 Nov): “Mental mapping & sense of place”.",
+      "summary": "Maps from memory, and how places make us feel.",
+      "images": [],
+      "facts": [
+        "A **mental map** is a map drawn **from memory**. It shows the places that matter to you — home, school, a station, a special place.",
+        "It's usually **not to scale**, but it should have **labels** and a **key**.",
+        "**Sense of place** is the feelings and meanings a place has for you — why you like it, or don't.",
+        "Explain with **because**: “I'd like to live near the station **because** I can travel to lots of places quickly.”"
+      ],
+      "keywords": [
+        [
+          "mental map",
+          "a map drawn from memory"
+        ],
+        [
+          "not to scale",
+          "distances aren't measured accurately"
+        ],
+        [
+          "sense of place",
+          "the feelings and meanings a place has for a person"
+        ]
+      ],
+      "questions": [
+        {
+          "id": "geo-mm-01",
+          "type": "mcq",
+          "stem": "What is a mental map?",
+          "answer": "a map drawn from memory, showing the places that matter to you",
+          "choices": [
+            "a map printed by Ordnance Survey",
+            "a map of the brain",
+            "a map with contour lines"
+          ],
+          "explain": "A mental map comes from your head. It shows the places you know and use — home, school, a station, your favourite places."
+        },
+        {
+          "id": "geo-mm-02",
+          "type": "mcq",
+          "stem": "Why do we write “not to scale” on a mental map?",
+          "answer": "the distances aren't measured accurately",
+          "choices": [
+            "it has no key",
+            "it is upside down",
+            "it was drawn in pencil"
+          ],
+          "explain": "In a mental map, places that matter to you may be drawn big and close; real distances aren't measured."
+        },
+        {
+          "id": "geo-mm-03",
+          "type": "mcq",
+          "stem": "What is a “sense of place”?",
+          "answer": "the feelings and meanings a place has for a person",
+          "choices": [
+            "knowing the grid reference of a place",
+            "the size of a place",
+            "the population of a town"
+          ],
+          "explain": "Sense of place is how a place makes you feel and why it matters to you — e.g. a station is special because you can travel anywhere from it."
+        },
+        {
+          "id": "geo-mm-04",
           "type": "tf",
-          "stem": "Bleached coral is always dead.",
-          "answer": false,
-          "explain": "Bleached coral is starving but alive. If the water cools quickly the algae can return; if the heat lasts too long, it dies."
-        },
-        {
-          "id": "geo-rf-11",
-          "type": "mcq",
-          "stem": "Why does the sea become more acidic?",
-          "answer": "It absorbs carbon dioxide from the air",
-          "choices": [
-            "Fish make it acidic",
-            "Rain washes salt out of it",
-            "The Sun heats it up"
-          ],
-          "explain": "The oceans soak up carbon dioxide from burning fossil fuels. More acidic water makes it harder for coral to build its skeleton."
-        },
-        {
-          "id": "geo-rf-12",
-          "type": "mcq",
-          "stem": "Which animal eats coral and has damaged large parts of the reef?",
-          "answer": "the crown-of-thorns starfish",
-          "choices": [
-            "the clownfish",
-            "the sea turtle",
-            "the dugong"
-          ],
-          "explain": "Outbreaks of crown-of-thorns starfish eat huge areas of coral. Divers remove them to protect the reef."
-        },
-        {
-          "id": "geo-rf-13",
-          "type": "mcq",
-          "stem": "How does run-off from farms harm the reef?",
-          "answer": "Soil and fertiliser wash into the sea, making it cloudy and feeding pests",
-          "choices": [
-            "Farm animals swim out and eat the coral",
-            "Farmers build on the reef",
-            "It makes the sea too cold"
-          ],
-          "explain": "Rain washes soil, fertiliser and pesticides off farms in Queensland into rivers and the sea. Cloudy water blocks sunlight, and fertiliser helps crown-of-thorns starfish."
-        },
-        {
-          "id": "geo-rf-14",
-          "type": "mcq",
-          "stem": "Why do coral reefs need clear, shallow water?",
-          "answer": "The algae inside the coral need sunlight to make food",
-          "choices": [
-            "So that tourists can see them",
-            "Because coral can't swim",
-            "Deep water is too salty"
-          ],
-          "explain": "Sunlight has to reach the algae for photosynthesis — that's why reefs grow in warm, clear, shallow, sunny seas."
-        },
-        {
-          "id": "geo-rf-15",
-          "type": "tf",
-          "stem": "Coral reefs grow best in cold, deep, dark water.",
-          "answer": false,
-          "explain": "Reef-building coral needs warm, clear, shallow water with plenty of sunlight."
-        },
-        {
-          "id": "geo-rf-16",
-          "type": "tf",
-          "stem": "The Great Barrier Reef is so big it can be seen from space.",
+          "stem": "Two people's mental maps of the same area can look very different.",
           "answer": true,
-          "explain": "Yes — it's the biggest structure made by living things on Earth."
+          "explain": "Everyone uses and feels about places differently, so they remember and draw different things."
         },
         {
-          "id": "geo-rf-17",
+          "id": "geo-mm-05",
           "type": "mcq",
-          "stem": "Which of these helps to protect the reef?",
-          "answer": "Banning fishing in some zones of the marine park",
+          "stem": "What should a good mental map still have, so others can read it?",
+          "answer": "a key and labels",
           "choices": [
-            "Building more ports on the reef",
-            "Using more fertiliser on farms",
-            "Anchoring boats on the coral"
+            "contour lines",
+            "a 6-figure grid reference",
+            "a scale of 1:50,000"
           ],
-          "explain": "The Great Barrier Reef Marine Park has zones where fishing is banned; there are also rules on farm run-off, starfish culls and coral replanting. Cutting greenhouse gases worldwide helps most of all."
-        },
-        {
-          "id": "geo-rf-18",
-          "type": "mcq",
-          "stem": "Why does the reef matter to people as well as wildlife?",
-          "answer": "Tourism brings money and jobs, and the reef protects the coast from waves",
-          "choices": [
-            "It stops it raining in Australia",
-            "It makes the sea fresh water",
-            "It keeps sharks away from Europe"
-          ],
-          "explain": "Millions of visitors bring money and tens of thousands of jobs; the reef also breaks up big waves before they hit the coast."
-        },
-        {
-          "id": "geo-rf-19",
-          "type": "mcq",
-          "stem": "What does “World Heritage Site” mean?",
-          "answer": "A place so special that the world agrees to protect it",
-          "choices": [
-            "A place where nobody may visit",
-            "A place owned by the United Nations",
-            "A place that is always hot"
-          ],
-          "explain": "UNESCO lists World Heritage Sites — the Great Barrier Reef has been one since 1981."
-        },
-        {
-          "id": "geo-rf-20",
-          "type": "short",
-          "stem": "Burning coal, oil and gas releases which gas that warms the planet and makes the sea more acidic?",
-          "answer": "carbon dioxide",
-          "accept": [
-            "CO2",
-            "co₂",
-            "carbon"
-          ],
-          "choices": [
-            "oxygen",
-            "nitrogen",
-            "helium"
-          ],
-          "explain": "Carbon dioxide (CO₂) is a greenhouse gas: it traps heat (warming the sea) and dissolves in the sea (acidification)."
+          "explain": "Labels and a key (symbols for houses, stations, school …) make it readable."
         }
       ]
     }
