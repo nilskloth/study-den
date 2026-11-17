@@ -1,0 +1,2110 @@
+{
+  "subject": "geography",
+  "label": "Geography",
+  "unit": "Year 7 — revision",
+  "source": "No class sheet yet — these notes and questions are ours, written to Year 7 level. Grid references follow the class homework (4- and 6-figure, eastings first). When Finn's workbook pages are photographed, they can be added as class-sheet topics.",
+  "topics": [
+    {
+      "id": "continents-oceans",
+      "number": 1,
+      "title": "Continents and oceans",
+      "summary": "The seven continents and five oceans, the Equator and the hemispheres — where everything is on a world map.",
+      "images": [
+        {
+          "file": "world",
+          "caption": "The seven continents and five oceans. Russia is in both Europe and Asia — the Ural Mountains are the dividing line."
+        }
+      ],
+      "table": {
+        "title": "The seven continents, biggest first",
+        "head": [
+          "Continent",
+          "Good to know"
+        ],
+        "rows": [
+          [
+            "Asia",
+            "Biggest continent, most people (China, India). Mount Everest."
+          ],
+          [
+            "Africa",
+            "Second biggest. The Equator crosses it. The Sahara Desert, the River Nile, Victoria Falls."
+          ],
+          [
+            "North America",
+            "Canada, the USA, Mexico — and Greenland. The Grand Canyon."
+          ],
+          [
+            "South America",
+            "Brazil, Argentina, Peru. The Amazon rainforest and the Andes mountains."
+          ],
+          [
+            "Antarctica",
+            "Around the South Pole. Coldest, windiest, iciest; no countries, only scientists."
+          ],
+          [
+            "Europe",
+            "The UK, France, Germany, Italy, Iceland … second smallest."
+          ],
+          [
+            "Oceania",
+            "Also called Australia or Australasia: Australia, New Zealand, Pacific islands. Smallest."
+          ]
+        ]
+      },
+      "facts": [
+        "There are **7 continents** (huge areas of land) and **5 oceans** (huge areas of salt water).",
+        "Oceans, biggest first: **Pacific**, **Atlantic**, **Indian**, **Southern** (round Antarctica), **Arctic** (round the North Pole).",
+        "About **70%** of the Earth's surface is water.",
+        "The **Equator** is an imaginary line round the middle of the Earth (0° latitude). It splits the Earth into the **Northern** and **Southern Hemispheres**.",
+        "The **Prime Meridian** (0° longitude) runs from pole to pole through **Greenwich, London**. It splits east from west.",
+        "**Latitude** lines go across (east–west), like the rungs of a ladder. **Longitude** lines go from the North Pole to the South Pole.",
+        "The **UK** is in **Europe**, in the **Northern Hemisphere**, with the **Atlantic Ocean** to its west."
+      ],
+      "keywords": [
+        [
+          "continent",
+          "one of the 7 very large areas of land"
+        ],
+        [
+          "ocean",
+          "one of the 5 very large areas of salt water"
+        ],
+        [
+          "sea",
+          "a smaller area of salt water, often partly surrounded by land (e.g. the North Sea)"
+        ],
+        [
+          "Equator",
+          "imaginary line round the middle of the Earth, 0° latitude"
+        ],
+        [
+          "hemisphere",
+          "half of the Earth — northern/southern (split by the Equator) or eastern/western"
+        ],
+        [
+          "latitude",
+          "how far north or south of the Equator a place is"
+        ],
+        [
+          "longitude",
+          "how far east or west of the Prime Meridian a place is"
+        ],
+        [
+          "Prime Meridian",
+          "the line of 0° longitude, through Greenwich in London"
+        ]
+      ],
+      "questions": [
+        {
+          "id": "geo-co-01",
+          "type": "short",
+          "stem": "Which continent is labelled {L}?",
+          "answer": "North America",
+          "accept": [],
+          "choices": [
+            "South America",
+            "Asia",
+            "Europe"
+          ],
+          "explain": "North America is in the north-west of the map: Canada, the USA, Mexico — and Greenland.",
+          "image": "world",
+          "part": "north-america",
+          "reject": [
+            "South America"
+          ]
+        },
+        {
+          "id": "geo-co-02",
+          "type": "short",
+          "stem": "Which continent is labelled {L}?",
+          "answer": "South America",
+          "accept": [],
+          "choices": [
+            "North America",
+            "Asia",
+            "Africa"
+          ],
+          "explain": "South America is below North America, joined to it by a thin strip of land (Central America).",
+          "image": "world",
+          "part": "south-america",
+          "reject": [
+            "North America",
+            "South Africa"
+          ]
+        },
+        {
+          "id": "geo-co-03",
+          "type": "short",
+          "stem": "Which continent is labelled {L}?",
+          "answer": "Europe",
+          "accept": [],
+          "choices": [
+            "Antarctica",
+            "North America",
+            "Africa"
+          ],
+          "explain": "Europe is the small continent above Africa — the UK is part of it.",
+          "image": "world",
+          "part": "europe"
+        },
+        {
+          "id": "geo-co-04",
+          "type": "short",
+          "stem": "Which continent is labelled {L}?",
+          "answer": "Africa",
+          "accept": [],
+          "choices": [
+            "South America",
+            "Asia",
+            "North America"
+          ],
+          "explain": "Africa is the big continent below Europe; the Equator runs through the middle of it.",
+          "image": "world",
+          "part": "africa"
+        },
+        {
+          "id": "geo-co-05",
+          "type": "short",
+          "stem": "Which continent is labelled {L}?",
+          "answer": "Asia",
+          "accept": [],
+          "choices": [
+            "Europe",
+            "Africa",
+            "Antarctica"
+          ],
+          "explain": "Asia is the biggest continent, to the east of Europe — China, India, most of Russia.",
+          "image": "world",
+          "part": "asia"
+        },
+        {
+          "id": "geo-co-06",
+          "type": "short",
+          "stem": "Which continent is labelled {L}?",
+          "answer": "Oceania",
+          "accept": [
+            "Australia",
+            "Australasia",
+            "Australia and Oceania",
+            "Australia/Oceania"
+          ],
+          "choices": [
+            "Antarctica",
+            "North America",
+            "Europe"
+          ],
+          "explain": "Oceania (also called Australia or Australasia) is the smallest continent: Australia, New Zealand and the Pacific islands.",
+          "image": "world",
+          "part": "oceania"
+        },
+        {
+          "id": "geo-co-07",
+          "type": "short",
+          "stem": "Which continent is labelled {L}?",
+          "answer": "Antarctica",
+          "accept": [],
+          "choices": [
+            "Oceania",
+            "North America",
+            "Europe"
+          ],
+          "explain": "Antarctica is the frozen continent around the South Pole, at the bottom of the map.",
+          "image": "world",
+          "part": "antarctica"
+        },
+        {
+          "id": "geo-co-08",
+          "type": "short",
+          "stem": "Which ocean is labelled {L}?",
+          "answer": "Pacific Ocean",
+          "accept": [
+            "Pacific"
+          ],
+          "choices": [
+            "Atlantic Ocean",
+            "Arctic Ocean",
+            "Southern Ocean"
+          ],
+          "explain": "The Pacific is the biggest ocean, between Asia/Oceania and the Americas. It's on both edges of a flat world map.",
+          "image": "world",
+          "part": "pacific"
+        },
+        {
+          "id": "geo-co-09",
+          "type": "short",
+          "stem": "Which ocean is labelled {L}?",
+          "answer": "Atlantic Ocean",
+          "accept": [
+            "Atlantic"
+          ],
+          "choices": [
+            "Pacific Ocean",
+            "Southern Ocean",
+            "Arctic Ocean"
+          ],
+          "explain": "The Atlantic lies between the Americas and Europe/Africa — it's the ocean to the west of the UK.",
+          "image": "world",
+          "part": "atlantic"
+        },
+        {
+          "id": "geo-co-10",
+          "type": "short",
+          "stem": "Which ocean is labelled {L}?",
+          "answer": "Indian Ocean",
+          "accept": [
+            "Indian"
+          ],
+          "choices": [
+            "Southern Ocean",
+            "Atlantic Ocean",
+            "Arctic Ocean"
+          ],
+          "explain": "The Indian Ocean is between Africa, Asia and Australia, south of India.",
+          "image": "world",
+          "part": "indian"
+        },
+        {
+          "id": "geo-co-11",
+          "type": "short",
+          "stem": "Which ocean is labelled {L}?",
+          "answer": "Arctic Ocean",
+          "accept": [
+            "Arctic"
+          ],
+          "choices": [
+            "Southern Ocean",
+            "Pacific Ocean",
+            "Atlantic Ocean"
+          ],
+          "explain": "The Arctic Ocean is around the North Pole, at the top of the map; much of it is frozen.",
+          "image": "world",
+          "part": "arctic"
+        },
+        {
+          "id": "geo-co-12",
+          "type": "short",
+          "stem": "Which ocean is labelled {L}?",
+          "answer": "Southern Ocean",
+          "accept": [
+            "Southern",
+            "Antarctic Ocean"
+          ],
+          "choices": [
+            "Arctic Ocean",
+            "Pacific Ocean",
+            "Atlantic Ocean"
+          ],
+          "explain": "The Southern Ocean goes all the way round Antarctica.",
+          "image": "world",
+          "part": "southern"
+        },
+        {
+          "id": "geo-co-13",
+          "type": "short",
+          "stem": "How many continents are there?",
+          "answer": "7",
+          "accept": [
+            "seven"
+          ],
+          "choices": [
+            "5",
+            "6",
+            "8"
+          ],
+          "explain": "There are seven continents: Asia, Africa, North America, South America, Antarctica, Europe and Oceania."
+        },
+        {
+          "id": "geo-co-14",
+          "type": "short",
+          "stem": "How many oceans are there?",
+          "answer": "5",
+          "accept": [
+            "five"
+          ],
+          "choices": [
+            "3",
+            "4",
+            "7"
+          ],
+          "explain": "There are five oceans: Pacific, Atlantic, Indian, Southern and Arctic."
+        },
+        {
+          "id": "geo-co-15",
+          "type": "mcq",
+          "stem": "Which is the biggest continent?",
+          "answer": "Asia",
+          "choices": [
+            "Africa",
+            "North America",
+            "Europe"
+          ],
+          "explain": "Asia is the biggest continent, and has the most people. Africa is second."
+        },
+        {
+          "id": "geo-co-16",
+          "type": "mcq",
+          "stem": "Which is the smallest continent?",
+          "answer": "Oceania",
+          "choices": [
+            "Europe",
+            "Antarctica",
+            "South America"
+          ],
+          "explain": "Oceania (Australia and the Pacific islands) is the smallest; Europe is the second smallest."
+        },
+        {
+          "id": "geo-co-17",
+          "type": "short",
+          "stem": "Which is the biggest ocean?",
+          "answer": "Pacific Ocean",
+          "accept": [
+            "Pacific"
+          ],
+          "choices": [
+            "Atlantic Ocean",
+            "Indian Ocean",
+            "Southern Ocean"
+          ],
+          "explain": "The Pacific is the biggest and deepest ocean — bigger than all the land on Earth put together."
+        },
+        {
+          "id": "geo-co-18",
+          "type": "short",
+          "stem": "Which is the smallest ocean?",
+          "answer": "Arctic Ocean",
+          "accept": [
+            "Arctic"
+          ],
+          "choices": [
+            "Southern Ocean",
+            "Indian Ocean",
+            "Atlantic Ocean"
+          ],
+          "explain": "The Arctic is the smallest ocean, around the North Pole."
+        },
+        {
+          "id": "geo-co-19",
+          "type": "short",
+          "stem": "Which ocean lies between the UK and North America?",
+          "answer": "Atlantic Ocean",
+          "accept": [
+            "Atlantic"
+          ],
+          "choices": [
+            "Pacific Ocean",
+            "Indian Ocean",
+            "Arctic Ocean"
+          ],
+          "explain": "The Atlantic separates Europe and Africa from North and South America."
+        },
+        {
+          "id": "geo-co-20",
+          "type": "short",
+          "stem": "Which ocean goes all the way round Antarctica?",
+          "answer": "Southern Ocean",
+          "accept": [
+            "Southern",
+            "Antarctic Ocean"
+          ],
+          "choices": [
+            "Arctic Ocean",
+            "Pacific Ocean",
+            "Indian Ocean"
+          ],
+          "explain": "The Southern Ocean surrounds Antarctica. (The Arctic is at the other end, round the North Pole.)"
+        },
+        {
+          "id": "geo-co-21",
+          "type": "short",
+          "stem": "Which ocean lies between Africa and Australia?",
+          "answer": "Indian Ocean",
+          "accept": [
+            "Indian"
+          ],
+          "choices": [
+            "Pacific Ocean",
+            "Atlantic Ocean",
+            "Southern Ocean"
+          ],
+          "explain": "The Indian Ocean is south of India, between Africa and Australia."
+        },
+        {
+          "id": "geo-co-22",
+          "type": "short",
+          "stem": "Which continent is the UK part of?",
+          "answer": "Europe",
+          "choices": [
+            "Asia",
+            "North America",
+            "Africa"
+          ],
+          "explain": "The UK is an island country in north-west Europe."
+        },
+        {
+          "id": "geo-co-23",
+          "type": "mcq",
+          "stem": "Which continent is Brazil in?",
+          "answer": "South America",
+          "choices": [
+            "Africa",
+            "North America",
+            "Asia"
+          ],
+          "explain": "Brazil is the biggest country in South America."
+        },
+        {
+          "id": "geo-co-24",
+          "type": "mcq",
+          "stem": "Which continent is Egypt in?",
+          "answer": "Africa",
+          "choices": [
+            "Asia",
+            "Europe",
+            "South America"
+          ],
+          "explain": "Egypt is in the north-east corner of Africa."
+        },
+        {
+          "id": "geo-co-25",
+          "type": "mcq",
+          "stem": "Which continent is China in?",
+          "answer": "Asia",
+          "choices": [
+            "Europe",
+            "Oceania",
+            "Africa"
+          ],
+          "explain": "China is in east Asia."
+        },
+        {
+          "id": "geo-co-26",
+          "type": "mcq",
+          "stem": "Which continent is the coldest, with no countries and nobody living there all year?",
+          "answer": "Antarctica",
+          "choices": [
+            "Europe",
+            "North America",
+            "Asia"
+          ],
+          "explain": "Antarctica is covered in ice. Only scientists live there, and only for part of the year."
+        },
+        {
+          "id": "geo-co-27",
+          "type": "short",
+          "stem": "What is the imaginary line around the middle of the Earth called?",
+          "answer": "Equator",
+          "choices": [
+            "Prime Meridian",
+            "Tropic of Cancer",
+            "North Pole"
+          ],
+          "explain": "The Equator is halfway between the North and South Poles (0° latitude)."
+        },
+        {
+          "id": "geo-co-28",
+          "type": "short",
+          "stem": "The Equator splits the Earth into the Northern and Southern …?",
+          "answer": "hemispheres",
+          "accept": [
+            "hemisphere"
+          ],
+          "choices": [
+            "continents",
+            "oceans",
+            "poles"
+          ],
+          "explain": "Hemisphere means half a sphere. The UK is in the Northern Hemisphere; Australia is in the Southern."
+        },
+        {
+          "id": "geo-co-29",
+          "type": "short",
+          "stem": "What is the line of 0° longitude, which runs through Greenwich in London, called?",
+          "answer": "Prime Meridian",
+          "accept": [
+            "Greenwich Meridian",
+            "meridian",
+            "Greenwich Mean Line"
+          ],
+          "choices": [
+            "Equator",
+            "Tropic of Capricorn",
+            "Date Line"
+          ],
+          "explain": "The Prime Meridian runs from the North Pole to the South Pole through Greenwich. It splits east from west."
+        },
+        {
+          "id": "geo-co-30",
+          "type": "tf",
+          "stem": "The Equator passes through Africa.",
+          "answer": true,
+          "explain": "Yes — the Equator crosses the middle of Africa (and South America and Asia's islands)."
+        },
+        {
+          "id": "geo-co-31",
+          "type": "tf",
+          "stem": "The UK is in the Southern Hemisphere.",
+          "answer": false,
+          "explain": "The UK is north of the Equator, so it's in the Northern Hemisphere."
+        },
+        {
+          "id": "geo-co-32",
+          "type": "tf",
+          "stem": "About 70% of the Earth's surface is covered by water.",
+          "answer": true,
+          "explain": "About 71% is water — mostly the oceans. That's why Earth is called the blue planet."
+        },
+        {
+          "id": "geo-co-33",
+          "type": "mcq",
+          "stem": "Lines of latitude…",
+          "answer": "go across the map (east–west) and tell you how far north or south",
+          "choices": [
+            "go from pole to pole and tell you how far east or west",
+            "are the same as grid squares",
+            "only appear on maps of the UK"
+          ],
+          "explain": "Latitude lines go across like the rungs of a ladder (“ladder-tude”); the Equator is 0°. Longitude lines run from pole to pole."
+        }
+      ]
+    },
+    {
+      "id": "compass",
+      "number": 2,
+      "title": "Compass directions",
+      "summary": "The eight points of the compass, opposites, turning, and giving the direction from one place to another on a map.",
+      "images": [
+        {
+          "file": "compass",
+          "caption": "The 8 points of the compass. Clockwise from the top: Never Eat Shredded Wheat."
+        }
+      ],
+      "table": {
+        "title": "Opposite directions",
+        "head": [
+          "Direction",
+          "Opposite"
+        ],
+        "rows": [
+          [
+            "north (N)",
+            "south (S)"
+          ],
+          [
+            "north-east (NE)",
+            "south-west (SW)"
+          ],
+          [
+            "east (E)",
+            "west (W)"
+          ],
+          [
+            "south-east (SE)",
+            "north-west (NW)"
+          ]
+        ]
+      },
+      "facts": [
+        "The four **cardinal points** clockwise from the top: **North, East, South, West** — “**N**ever **E**at **S**hredded **W**heat”.",
+        "Halfway between them are **north-east, south-east, south-west, north-west**. North or south always comes first.",
+        "On most maps **north is at the top**. On OS maps the grid lines point north.",
+        "**“Which direction is B from A?”** — put your finger on **A** (the place after “from”) and look towards **B**.",
+        "Opposite directions are a **half turn (180°)** apart. A **quarter turn** is **90°**; one step round the 8-point compass is **45°**.",
+        "**Clockwise** goes N → NE → E → SE → S …; **anticlockwise** goes the other way.",
+        "The Sun **rises in the east** and **sets in the west**."
+      ],
+      "keywords": [
+        [
+          "compass",
+          "a tool whose needle points north (magnetic north)"
+        ],
+        [
+          "cardinal points",
+          "north, east, south and west"
+        ],
+        [
+          "intercardinal points",
+          "north-east, south-east, south-west, north-west (also called ordinal points)"
+        ],
+        [
+          "clockwise",
+          "turning the same way as a clock's hands"
+        ],
+        [
+          "anticlockwise",
+          "turning the opposite way to a clock's hands"
+        ]
+      ],
+      "questions": [
+        {
+          "id": "geo-cp-01",
+          "type": "short",
+          "stem": "Which direction is labelled {L}?",
+          "answer": "north",
+          "choices": [
+            "north-east",
+            "north-west",
+            "south"
+          ],
+          "explain": "North is at the top of the compass (and of most maps).",
+          "image": "compass",
+          "part": "n",
+          "match": "dir"
+        },
+        {
+          "id": "geo-cp-02",
+          "type": "short",
+          "stem": "Which direction is labelled {L}?",
+          "answer": "north-east",
+          "choices": [
+            "east",
+            "north",
+            "south-west"
+          ],
+          "explain": "North-east is halfway between north and east.",
+          "image": "compass",
+          "part": "ne",
+          "match": "dir"
+        },
+        {
+          "id": "geo-cp-03",
+          "type": "short",
+          "stem": "Which direction is labelled {L}?",
+          "answer": "east",
+          "choices": [
+            "south-east",
+            "north-east",
+            "west"
+          ],
+          "explain": "East is to the right of north — clockwise: north, east, south, west (Never Eat Shredded Wheat).",
+          "image": "compass",
+          "part": "e",
+          "match": "dir"
+        },
+        {
+          "id": "geo-cp-04",
+          "type": "short",
+          "stem": "Which direction is labelled {L}?",
+          "answer": "south-east",
+          "choices": [
+            "south",
+            "east",
+            "north-west"
+          ],
+          "explain": "South-east is halfway between south and east.",
+          "image": "compass",
+          "part": "se",
+          "match": "dir"
+        },
+        {
+          "id": "geo-cp-05",
+          "type": "short",
+          "stem": "Which direction is labelled {L}?",
+          "answer": "south",
+          "choices": [
+            "south-west",
+            "south-east",
+            "north"
+          ],
+          "explain": "South is opposite north, at the bottom.",
+          "image": "compass",
+          "part": "s",
+          "match": "dir"
+        },
+        {
+          "id": "geo-cp-06",
+          "type": "short",
+          "stem": "Which direction is labelled {L}?",
+          "answer": "south-west",
+          "choices": [
+            "west",
+            "south",
+            "north-east"
+          ],
+          "explain": "South-west is halfway between south and west.",
+          "image": "compass",
+          "part": "sw",
+          "match": "dir"
+        },
+        {
+          "id": "geo-cp-07",
+          "type": "short",
+          "stem": "Which direction is labelled {L}?",
+          "answer": "west",
+          "choices": [
+            "north-west",
+            "south-west",
+            "east"
+          ],
+          "explain": "West is to the left of north, opposite east.",
+          "image": "compass",
+          "part": "w",
+          "match": "dir"
+        },
+        {
+          "id": "geo-cp-08",
+          "type": "short",
+          "stem": "Which direction is labelled {L}?",
+          "answer": "north-west",
+          "choices": [
+            "north",
+            "west",
+            "south-east"
+          ],
+          "explain": "North-west is halfway between north and west.",
+          "image": "compass",
+          "part": "nw",
+          "match": "dir"
+        },
+        {
+          "id": "geo-cp-09",
+          "type": "short",
+          "stem": "What is the opposite of north-east?",
+          "answer": "south-west",
+          "choices": [
+            "north-west",
+            "south-east",
+            "east"
+          ],
+          "explain": "Opposites are straight across the compass: NE ↔ SW.",
+          "match": "dir"
+        },
+        {
+          "id": "geo-cp-10",
+          "type": "short",
+          "stem": "What is the opposite of west?",
+          "answer": "east",
+          "choices": [
+            "north",
+            "south",
+            "north-west"
+          ],
+          "explain": "West and east are opposite each other.",
+          "match": "dir"
+        },
+        {
+          "id": "geo-cp-11",
+          "type": "short",
+          "stem": "What is the opposite of south-east?",
+          "answer": "north-west",
+          "choices": [
+            "south-west",
+            "north-east",
+            "west"
+          ],
+          "explain": "SE ↔ NW: swap north for south and east for west.",
+          "match": "dir"
+        },
+        {
+          "id": "geo-cp-12",
+          "type": "short",
+          "stem": "Which direction is halfway between south and west?",
+          "answer": "south-west",
+          "choices": [
+            "north-west",
+            "south-east",
+            "west"
+          ],
+          "explain": "Between south and west is south-west. North or south always comes first.",
+          "match": "dir"
+        },
+        {
+          "id": "geo-cp-13",
+          "type": "short",
+          "stem": "You face north and turn 90° clockwise. Which way are you facing now?",
+          "answer": "east",
+          "choices": [
+            "west",
+            "south",
+            "north-east"
+          ],
+          "explain": "Clockwise from north: north-east (45°), then east (90°).",
+          "match": "dir"
+        },
+        {
+          "id": "geo-cp-14",
+          "type": "short",
+          "stem": "You face south and make a quarter turn anticlockwise. Which way are you facing?",
+          "answer": "east",
+          "choices": [
+            "west",
+            "north",
+            "south-west"
+          ],
+          "explain": "Anticlockwise goes N → W → S → E. From south, a quarter turn anticlockwise brings you to east.",
+          "match": "dir"
+        },
+        {
+          "id": "geo-cp-15",
+          "type": "short",
+          "stem": "You face west and turn 180° (a half turn). Which way are you facing?",
+          "answer": "east",
+          "choices": [
+            "north",
+            "south",
+            "west"
+          ],
+          "explain": "A half turn always takes you to the opposite direction.",
+          "match": "dir"
+        },
+        {
+          "id": "geo-cp-16",
+          "type": "short",
+          "stem": "You face north-west and turn 90° clockwise. Which way are you facing?",
+          "answer": "north-east",
+          "choices": [
+            "south-west",
+            "north",
+            "east"
+          ],
+          "explain": "Clockwise from north-west: north (45°), then north-east (90°).",
+          "match": "dir"
+        },
+        {
+          "id": "geo-cp-17",
+          "type": "short",
+          "stem": "In which direction does the Sun rise?",
+          "answer": "east",
+          "choices": [
+            "west",
+            "north",
+            "south"
+          ],
+          "explain": "The Sun rises in the east and sets in the west.",
+          "match": "dir"
+        },
+        {
+          "id": "geo-cp-18",
+          "type": "short",
+          "stem": "In which direction does the Sun set?",
+          "answer": "west",
+          "choices": [
+            "east",
+            "south",
+            "north"
+          ],
+          "explain": "The Sun rises in the east and sets in the west.",
+          "match": "dir"
+        },
+        {
+          "id": "geo-cp-19",
+          "type": "short",
+          "stem": "Scotland is … of England.",
+          "answer": "north",
+          "choices": [
+            "south",
+            "east",
+            "west"
+          ],
+          "explain": "Scotland is at the top of Great Britain, north of England.",
+          "match": "dir"
+        },
+        {
+          "id": "geo-cp-20",
+          "type": "short",
+          "stem": "Wales is … of England.",
+          "answer": "west",
+          "choices": [
+            "east",
+            "north",
+            "south"
+          ],
+          "explain": "Wales is on the west side of Great Britain.",
+          "match": "dir"
+        },
+        {
+          "id": "geo-cp-21",
+          "type": "short",
+          "stem": "Cornwall is in the … of England.",
+          "answer": "south-west",
+          "choices": [
+            "north-east",
+            "south-east",
+            "north-west"
+          ],
+          "explain": "Cornwall is the tip of England that sticks out into the sea in the south-west.",
+          "match": "dir"
+        },
+        {
+          "id": "geo-cp-22",
+          "type": "mcq",
+          "stem": "How do you say the direction halfway between north and east?",
+          "answer": "north-east",
+          "choices": [
+            "east-north",
+            "north-and-east",
+            "eastnorth"
+          ],
+          "explain": "North or south always comes first: north-east, south-east, south-west, north-west."
+        },
+        {
+          "id": "geo-cp-23",
+          "type": "mcq",
+          "stem": "Which saying helps you remember the order N, E, S, W (clockwise)?",
+          "answer": "Never Eat Shredded Wheat",
+          "choices": [
+            "Silly Elephants Never Wash",
+            "Never Wear Smelly Earrings",
+            "When Elephants Swim North"
+          ],
+          "explain": "Never Eat Shredded Wheat: North, East, South, West, going clockwise."
+        },
+        {
+          "id": "geo-cp-24",
+          "type": "mcq",
+          "stem": "What are north, east, south and west called?",
+          "answer": "the cardinal points",
+          "choices": [
+            "the intercardinal points",
+            "the hemispheres",
+            "the bearings"
+          ],
+          "explain": "The four main directions are the cardinal points. NE, SE, SW and NW are the intercardinal points."
+        },
+        {
+          "id": "geo-cp-25",
+          "type": "tf",
+          "stem": "On most maps, north is at the top.",
+          "answer": true,
+          "explain": "Yes — and OS maps' grid lines point north. If a map has a north arrow, check it."
+        },
+        {
+          "id": "geo-cp-26",
+          "type": "short",
+          "gen": "dir-map"
+        },
+        {
+          "id": "geo-cp-27",
+          "type": "short",
+          "gen": "dir-map"
+        },
+        {
+          "id": "geo-cp-28",
+          "type": "short",
+          "gen": "dir-map"
+        }
+      ]
+    },
+    {
+      "id": "grid-refs",
+      "number": 3,
+      "title": "Grid references",
+      "summary": "Finding places on a map with 4-figure grid references (a square) and 6-figure grid references (an exact point) — as in the class homework.",
+      "images": [
+        {
+          "file": "grid4",
+          "caption": "A 4-figure grid reference names a square. Use its bottom-left corner: along the corridor to 25, up the stairs to 43 → 2543."
+        },
+        {
+          "file": "grid6",
+          "caption": "A 6-figure grid reference pinpoints a spot. Split the square into tenths: 25 and 4 tenths along (254), 43 and 7 tenths up (437) → 254437."
+        }
+      ],
+      "table": {
+        "title": "4-figure or 6-figure?",
+        "head": [
+          "",
+          "4-figure",
+          "6-figure"
+        ],
+        "rows": [
+          [
+            "Shows",
+            "a whole grid square",
+            "an exact point"
+          ],
+          [
+            "Example",
+            "2543",
+            "254437"
+          ],
+          [
+            "How",
+            "bottom-left corner: along, then up",
+            "along + tenths, then up + tenths"
+          ]
+        ]
+      },
+      "facts": [
+        "Maps have a **grid** of squares. The lines going up the map are **eastings** — numbered **along the bottom** (and top); they get bigger going east.",
+        "The lines going across are **northings** — numbered **up the side**; they get bigger going north.",
+        "Always **eastings first**: “**along the corridor, then up the stairs**”.",
+        "A **4-figure** grid reference names a **square**: use the numbers of the lines that meet at its **bottom-left corner**.",
+        "A **6-figure** grid reference gives an **exact point**: imagine the square cut into **tenths**. The 3rd figure is tenths **along**, the 6th is tenths **up**.",
+        "You estimate the tenths by eye — halfway is 5. Being one tenth out is usually fine.",
+        "The **key** tells you what the **symbols** mean, e.g. a church, **PH** = pub (public house), **P** = post office, **Sch** = school."
+      ],
+      "keywords": [
+        [
+          "grid square",
+          "one of the squares made by the grid lines on a map"
+        ],
+        [
+          "eastings",
+          "the lines (and numbers) going along the map — read first"
+        ],
+        [
+          "northings",
+          "the lines (and numbers) going up the map — read second"
+        ],
+        [
+          "4-figure grid reference",
+          "names one grid square, e.g. 2543"
+        ],
+        [
+          "6-figure grid reference",
+          "pinpoints a place inside a square, e.g. 254437"
+        ],
+        [
+          "key",
+          "explains what the symbols on a map mean"
+        ],
+        [
+          "symbol",
+          "a small picture, letter or line standing for something on a map"
+        ],
+        [
+          "Ordnance Survey (OS)",
+          "the organisation that makes Britain's official maps"
+        ]
+      ],
+      "questions": [
+        {
+          "id": "geo-gr-01",
+          "type": "short",
+          "gen": "grid4-what"
+        },
+        {
+          "id": "geo-gr-02",
+          "type": "short",
+          "gen": "grid4-what"
+        },
+        {
+          "id": "geo-gr-03",
+          "type": "short",
+          "gen": "grid4-where"
+        },
+        {
+          "id": "geo-gr-04",
+          "type": "short",
+          "gen": "grid4-where"
+        },
+        {
+          "id": "geo-gr-05",
+          "type": "short",
+          "gen": "grid6-what"
+        },
+        {
+          "id": "geo-gr-06",
+          "type": "short",
+          "gen": "grid6-where"
+        },
+        {
+          "id": "geo-gr-07",
+          "type": "short",
+          "gen": "grid6-where"
+        },
+        {
+          "id": "geo-gr-08",
+          "type": "short",
+          "stem": "In a grid reference, which comes first: eastings or northings?",
+          "answer": "eastings",
+          "accept": [
+            "easting",
+            "eastings first",
+            "along"
+          ],
+          "choices": [
+            "northings",
+            "either — it doesn't matter",
+            "the bigger number"
+          ],
+          "explain": "Eastings first: along the corridor (eastings), then up the stairs (northings)."
+        },
+        {
+          "id": "geo-gr-09",
+          "type": "mcq",
+          "stem": "Which saying helps you get grid references the right way round?",
+          "answer": "Along the corridor, then up the stairs",
+          "choices": [
+            "Up the stairs, then along the corridor",
+            "Up the ladder, then across the bridge",
+            "Down the hall, then round the corner"
+          ],
+          "explain": "You have to walk along the corridor before you can go up the stairs: eastings first, then northings."
+        },
+        {
+          "id": "geo-gr-10",
+          "type": "tf",
+          "stem": "A 4-figure grid reference shows one exact point.",
+          "answer": false,
+          "explain": "A 4-figure grid reference names a whole square. You need 6 figures for an exact point."
+        },
+        {
+          "id": "geo-gr-11",
+          "type": "short",
+          "stem": "How many figures do you need to give an exact point on a map?",
+          "answer": "6",
+          "accept": [
+            "six"
+          ],
+          "choices": [
+            "4",
+            "2",
+            "8"
+          ],
+          "explain": "A 6-figure grid reference splits the square into tenths, so it pinpoints a spot."
+        },
+        {
+          "id": "geo-gr-12",
+          "type": "mcq",
+          "stem": "Which corner of a square gives its 4-figure grid reference?",
+          "answer": "the bottom-left corner",
+          "choices": [
+            "the top-left corner",
+            "the top-right corner",
+            "the bottom-right corner"
+          ],
+          "explain": "Use the lines that meet at the bottom-left corner of the square."
+        },
+        {
+          "id": "geo-gr-13",
+          "type": "short",
+          "stem": "In the grid reference 254437, what are the eastings?",
+          "answer": "254",
+          "choices": [
+            "437",
+            "25",
+            "43"
+          ],
+          "explain": "The first three figures are the eastings: 25 and 4 tenths along → 254. The last three (437) are the northings."
+        },
+        {
+          "id": "geo-gr-14",
+          "type": "short",
+          "stem": "In the grid reference 254437, what are the northings?",
+          "answer": "437",
+          "choices": [
+            "254",
+            "43",
+            "44"
+          ],
+          "explain": "The last three figures are the northings: 43 and 7 tenths up → 437."
+        },
+        {
+          "id": "geo-gr-15",
+          "type": "short",
+          "stem": "The church is in square 2543. Which square is directly east of it (to the right)?",
+          "answer": "2643",
+          "choices": [
+            "2443",
+            "2544",
+            "2542"
+          ],
+          "explain": "Going east, the easting goes up by one (25 → 26); the northing stays 43.",
+          "match": "grid"
+        },
+        {
+          "id": "geo-gr-16",
+          "type": "short",
+          "stem": "The church is in square 2543. Which square is directly north of it (above)?",
+          "answer": "2544",
+          "choices": [
+            "2542",
+            "2643",
+            "2443"
+          ],
+          "explain": "Going north, the northing goes up by one (43 → 44); the easting stays 25.",
+          "match": "grid"
+        },
+        {
+          "id": "geo-gr-17",
+          "type": "mcq",
+          "stem": "Eastings are the numbers…",
+          "answer": "along the bottom (and top) of the map",
+          "choices": [
+            "up the side of the map",
+            "in the middle of each square",
+            "in the key"
+          ],
+          "explain": "Eastings are written along the bottom and top; they get bigger as you go east. Northings go up the sides."
+        },
+        {
+          "id": "geo-gr-18",
+          "type": "mcq",
+          "stem": "What does the key on a map tell you?",
+          "answer": "what the symbols on the map mean",
+          "choices": [
+            "which way is north",
+            "how far apart places are",
+            "the grid references of every place"
+          ],
+          "explain": "The key (or legend) explains the symbols. A scale tells you distances; a north arrow shows north."
+        },
+        {
+          "id": "geo-gr-19",
+          "type": "short",
+          "stem": "On an Ordnance Survey map, what does PH stand for?",
+          "answer": "public house",
+          "accept": [
+            "pub"
+          ],
+          "choices": [
+            "post office",
+            "police headquarters",
+            "playground"
+          ],
+          "explain": "PH = public house (a pub). P = post office, Sch = school."
+        },
+        {
+          "id": "geo-gr-20",
+          "type": "short",
+          "stem": "On an Ordnance Survey map, what does P stand for?",
+          "answer": "post office",
+          "accept": [
+            "PO"
+          ],
+          "choices": [
+            "pub",
+            "police station",
+            "park"
+          ],
+          "explain": "P = post office. (A blue square with a white P is a car park.)"
+        },
+        {
+          "id": "geo-gr-21",
+          "type": "short",
+          "stem": "Which organisation makes Britain's official maps?",
+          "answer": "Ordnance Survey",
+          "accept": [
+            "OS",
+            "the Ordnance Survey"
+          ],
+          "choices": [
+            "Google Maps",
+            "the Met Office",
+            "the Royal Mail"
+          ],
+          "explain": "Ordnance Survey (OS) has made Britain's maps for over 200 years."
+        }
+      ]
+    },
+    {
+      "id": "fantastic-places",
+      "number": 4,
+      "title": "Fantastic places",
+      "summary": "Seven fantastic places around the world — where they are, and how to describe a place like a geographer.",
+      "images": [
+        {
+          "file": "places",
+          "caption": "Seven fantastic places. Can you name the continent each one is in?"
+        }
+      ],
+      "table": {
+        "title": "Where are they?",
+        "head": [
+          "Place",
+          "Continent",
+          "What makes it fantastic"
+        ],
+        "rows": [
+          [
+            "Great Barrier Reef",
+            "Oceania (Australia)",
+            "The world's biggest coral reef, home to thousands of kinds of sea life"
+          ],
+          [
+            "Amazon rainforest",
+            "South America (mostly Brazil)",
+            "The biggest tropical rainforest; the River Amazon carries more water than any other river"
+          ],
+          [
+            "Sahara Desert",
+            "Africa",
+            "The biggest hot desert, across north Africa"
+          ],
+          [
+            "Mount Everest",
+            "Asia (Nepal and China)",
+            "The highest mountain on Earth: 8,849 m, in the Himalayas"
+          ],
+          [
+            "Grand Canyon",
+            "North America (USA)",
+            "A huge canyon cut by the Colorado River, more than 1.5 km deep"
+          ],
+          [
+            "Victoria Falls",
+            "Africa (Zambia and Zimbabwe)",
+            "A giant waterfall on the Zambezi — “the smoke that thunders”"
+          ],
+          [
+            "Iceland",
+            "Europe",
+            "Volcanoes, geysers and glaciers — the land of fire and ice"
+          ]
+        ]
+      },
+      "facts": [
+        "To **describe where a place is**, go from big to small: **continent → country → compass direction / nearby sea or city**.",
+        "Then describe its **physical features** (natural: mountains, rivers, climate, plants and animals) and its **human features** (made by people: towns, roads, tourism).",
+        "Use precise geography words: not “a big hill” but “a **mountain range**”; not “a hot sandy place” but “a **hot desert**”.",
+        "The biggest desert of all is **Antarctica** (a cold desert) — the **Sahara** is the biggest **hot** desert.",
+        "Many fantastic places are **World Heritage Sites**: places so special the world agrees to protect them."
+      ],
+      "keywords": [
+        [
+          "location",
+          "where a place is"
+        ],
+        [
+          "physical feature",
+          "a natural feature, e.g. a mountain, river, desert or reef"
+        ],
+        [
+          "human feature",
+          "something made by people, e.g. a town, road or port"
+        ],
+        [
+          "rainforest",
+          "a thick forest with heavy rain all year"
+        ],
+        [
+          "desert",
+          "a place that gets very little rain (hot or cold)"
+        ],
+        [
+          "canyon",
+          "a deep valley with steep sides, cut by a river"
+        ],
+        [
+          "glacier",
+          "a slow-moving river of ice"
+        ],
+        [
+          "World Heritage Site",
+          "a place listed by UNESCO to be protected for everyone"
+        ]
+      ],
+      "questions": [
+        {
+          "id": "geo-fp-01",
+          "type": "short",
+          "stem": "Which fantastic place is labelled {L}?",
+          "answer": "Great Barrier Reef",
+          "accept": [
+            "Barrier Reef",
+            "the Great Barrier Reef"
+          ],
+          "choices": [
+            "Mount Everest",
+            "Amazon rainforest",
+            "Grand Canyon"
+          ],
+          "explain": "The Great Barrier Reef is in the sea off the north-east coast of Australia.",
+          "image": "places",
+          "part": "great-barrier-reef"
+        },
+        {
+          "id": "geo-fp-02",
+          "type": "short",
+          "stem": "Which fantastic place is labelled {L}?",
+          "answer": "Amazon rainforest",
+          "accept": [
+            "Amazon",
+            "Amazon rain forest",
+            "the Amazon",
+            "Amazon jungle",
+            "Amazonia"
+          ],
+          "choices": [
+            "Iceland",
+            "Mount Everest",
+            "Grand Canyon"
+          ],
+          "explain": "The Amazon rainforest covers the north of South America, mostly in Brazil, near the Equator.",
+          "image": "places",
+          "part": "amazon"
+        },
+        {
+          "id": "geo-fp-03",
+          "type": "short",
+          "stem": "Which fantastic place is labelled {L}?",
+          "answer": "Sahara Desert",
+          "accept": [
+            "Sahara",
+            "the Sahara"
+          ],
+          "choices": [
+            "Mount Everest",
+            "Iceland",
+            "Great Barrier Reef"
+          ],
+          "explain": "The Sahara covers most of north Africa.",
+          "image": "places",
+          "part": "sahara"
+        },
+        {
+          "id": "geo-fp-04",
+          "type": "short",
+          "stem": "Which fantastic place is labelled {L}?",
+          "answer": "Mount Everest",
+          "accept": [
+            "Everest",
+            "Mt Everest"
+          ],
+          "choices": [
+            "Sahara Desert",
+            "Great Barrier Reef",
+            "Victoria Falls"
+          ],
+          "explain": "Mount Everest is in the Himalayas in Asia, on the border of Nepal and China.",
+          "image": "places",
+          "part": "everest"
+        },
+        {
+          "id": "geo-fp-05",
+          "type": "short",
+          "stem": "Which fantastic place is labelled {L}?",
+          "answer": "Grand Canyon",
+          "accept": [
+            "the Grand Canyon"
+          ],
+          "choices": [
+            "Great Barrier Reef",
+            "Victoria Falls",
+            "Iceland"
+          ],
+          "explain": "The Grand Canyon is in Arizona, in the south-west of the USA (North America).",
+          "image": "places",
+          "part": "grand-canyon"
+        },
+        {
+          "id": "geo-fp-06",
+          "type": "short",
+          "stem": "Which fantastic place is labelled {L}?",
+          "answer": "Victoria Falls",
+          "accept": [
+            "Victoria Falls",
+            "Mosi-oa-Tunya",
+            "Victoria waterfall"
+          ],
+          "choices": [
+            "Amazon rainforest",
+            "Mount Everest",
+            "Great Barrier Reef"
+          ],
+          "explain": "Victoria Falls is in southern Africa, on the border of Zambia and Zimbabwe.",
+          "image": "places",
+          "part": "victoria-falls"
+        },
+        {
+          "id": "geo-fp-07",
+          "type": "short",
+          "stem": "Which fantastic place is labelled {L}?",
+          "answer": "Iceland",
+          "accept": [],
+          "choices": [
+            "Mount Everest",
+            "Great Barrier Reef",
+            "Victoria Falls"
+          ],
+          "explain": "Iceland is an island in the North Atlantic, between Greenland and Norway — part of Europe.",
+          "image": "places",
+          "part": "iceland",
+          "reject": [
+            "Ireland"
+          ]
+        },
+        {
+          "id": "geo-fp-08",
+          "type": "short",
+          "stem": "I'm the world's biggest tropical rainforest, mostly in Brazil, with a huge river running through me. Where am I?",
+          "answer": "Amazon rainforest",
+          "accept": [
+            "Amazon",
+            "Amazon rain forest",
+            "the Amazon",
+            "Amazon jungle"
+          ],
+          "choices": [
+            "Sahara Desert",
+            "Great Barrier Reef",
+            "Victoria Falls"
+          ],
+          "explain": "The Amazon rainforest covers much of South America; the River Amazon carries more water than any other river."
+        },
+        {
+          "id": "geo-fp-09",
+          "type": "short",
+          "stem": "I'm the highest mountain on Earth, on the border of Nepal and China. What am I?",
+          "answer": "Mount Everest",
+          "accept": [
+            "Everest",
+            "Mt Everest"
+          ],
+          "choices": [
+            "Ben Nevis",
+            "Mont Blanc",
+            "Grand Canyon"
+          ],
+          "explain": "Mount Everest is 8,849 m high, in the Himalayas in Asia."
+        },
+        {
+          "id": "geo-fp-10",
+          "type": "short",
+          "stem": "I'm the biggest hot desert in the world, stretching across north Africa. Where am I?",
+          "answer": "Sahara Desert",
+          "accept": [
+            "Sahara",
+            "the Sahara"
+          ],
+          "choices": [
+            "Amazon rainforest",
+            "Antarctica",
+            "Grand Canyon"
+          ],
+          "explain": "The Sahara is the largest hot desert. (Antarctica is the largest desert of all — a cold one.)"
+        },
+        {
+          "id": "geo-fp-11",
+          "type": "short",
+          "stem": "I'm a deep, steep-sided valley in Arizona, USA, carved by the Colorado River. What am I?",
+          "answer": "Grand Canyon",
+          "accept": [
+            "the Grand Canyon"
+          ],
+          "choices": [
+            "Victoria Falls",
+            "Mount Everest",
+            "Iceland"
+          ],
+          "explain": "The Colorado River cut the Grand Canyon over millions of years; it's more than 1.5 km deep."
+        },
+        {
+          "id": "geo-fp-12",
+          "type": "short",
+          "stem": "I'm a giant waterfall on the River Zambezi, between Zambia and Zimbabwe — “the smoke that thunders”. What am I?",
+          "answer": "Victoria Falls",
+          "accept": [
+            "Mosi-oa-Tunya",
+            "Victoria waterfall"
+          ],
+          "choices": [
+            "Niagara Falls",
+            "Grand Canyon",
+            "Amazon rainforest"
+          ],
+          "explain": "Victoria Falls' local name, Mosi-oa-Tunya, means “the smoke that thunders” — the spray rises like smoke."
+        },
+        {
+          "id": "geo-fp-13",
+          "type": "short",
+          "stem": "I'm an island country in the North Atlantic with volcanoes, geysers and glaciers. Where am I?",
+          "answer": "Iceland",
+          "choices": [
+            "Greenland",
+            "Ireland",
+            "Antarctica"
+          ],
+          "explain": "Iceland is the “land of fire and ice”: it sits where two plates of the Earth's crust pull apart."
+        },
+        {
+          "id": "geo-fp-14",
+          "type": "short",
+          "stem": "I'm the world's biggest coral reef, off the north-east coast of Australia. What am I?",
+          "answer": "Great Barrier Reef",
+          "accept": [
+            "Barrier Reef"
+          ],
+          "choices": [
+            "Amazon rainforest",
+            "Victoria Falls",
+            "Sahara Desert"
+          ],
+          "explain": "The Great Barrier Reef is in the Coral Sea, off Queensland, Australia."
+        },
+        {
+          "id": "geo-fp-15",
+          "type": "mcq",
+          "stem": "Which continent is the Sahara Desert in?",
+          "answer": "Africa",
+          "choices": [
+            "Asia",
+            "South America",
+            "Oceania"
+          ],
+          "explain": "The Sahara covers most of north Africa."
+        },
+        {
+          "id": "geo-fp-16",
+          "type": "mcq",
+          "stem": "Which continent is Mount Everest in?",
+          "answer": "Asia",
+          "choices": [
+            "Europe",
+            "South America",
+            "Africa"
+          ],
+          "explain": "Everest is in the Himalayas, in Asia."
+        },
+        {
+          "id": "geo-fp-17",
+          "type": "mcq",
+          "stem": "Which continent is the Grand Canyon in?",
+          "answer": "North America",
+          "choices": [
+            "South America",
+            "Africa",
+            "Oceania"
+          ],
+          "explain": "The Grand Canyon is in the USA, in North America."
+        },
+        {
+          "id": "geo-fp-18",
+          "type": "mcq",
+          "stem": "Which continent is Iceland part of?",
+          "answer": "Europe",
+          "choices": [
+            "North America",
+            "Asia",
+            "Antarctica"
+          ],
+          "explain": "Iceland is a European country, in the North Atlantic."
+        },
+        {
+          "id": "geo-fp-19",
+          "type": "mcq",
+          "stem": "Which continent is the Amazon rainforest in?",
+          "answer": "South America",
+          "choices": [
+            "Africa",
+            "Asia",
+            "North America"
+          ],
+          "explain": "The Amazon is in South America, mostly in Brazil."
+        },
+        {
+          "id": "geo-fp-20",
+          "type": "mcq",
+          "stem": "Mount Everest is in which mountain range?",
+          "answer": "the Himalayas",
+          "choices": [
+            "the Alps",
+            "the Andes",
+            "the Rockies"
+          ],
+          "explain": "The Himalayas, in Asia, have all the world's highest mountains."
+        },
+        {
+          "id": "geo-fp-21",
+          "type": "mcq",
+          "stem": "About how high is Mount Everest?",
+          "answer": "8,849 m",
+          "choices": [
+            "1,345 m",
+            "4,806 m",
+            "88,490 m"
+          ],
+          "explain": "Everest is 8,849 m. For comparison, Ben Nevis (the UK's highest) is 1,345 m."
+        },
+        {
+          "id": "geo-fp-22",
+          "type": "mcq",
+          "stem": "Which river carved the Grand Canyon?",
+          "answer": "the Colorado River",
+          "choices": [
+            "the River Amazon",
+            "the River Nile",
+            "the River Zambezi"
+          ],
+          "explain": "The Colorado River cut down through the rock over millions of years."
+        },
+        {
+          "id": "geo-fp-23",
+          "type": "short",
+          "stem": "Which country is the Great Barrier Reef next to?",
+          "answer": "Australia",
+          "choices": [
+            "New Zealand",
+            "Brazil",
+            "Indonesia"
+          ],
+          "explain": "The reef runs along the north-east coast of Australia (Queensland)."
+        },
+        {
+          "id": "geo-fp-24",
+          "type": "tf",
+          "stem": "A physical feature is something made by people.",
+          "answer": false,
+          "explain": "Physical features are natural (mountains, rivers, deserts, reefs). Human features are made by people (towns, roads, hotels)."
+        },
+        {
+          "id": "geo-fp-25",
+          "type": "mcq",
+          "stem": "Which of these is a human feature?",
+          "answer": "a town",
+          "choices": [
+            "a volcano",
+            "a river",
+            "a coral reef"
+          ],
+          "explain": "Human features are made by people — towns, roads, ports, dams. The others are physical (natural) features."
+        },
+        {
+          "id": "geo-fp-26",
+          "type": "mcq",
+          "stem": "When you describe where a place is, what should you say first?",
+          "answer": "its continent and country",
+          "choices": [
+            "what you had for lunch there",
+            "its grid reference on any map",
+            "how many people visit it"
+          ],
+          "explain": "Start big, then get closer: continent → country → compass direction / near which sea or city. Then describe its physical and human features."
+        }
+      ]
+    },
+    {
+      "id": "reef",
+      "number": 5,
+      "title": "The Great Barrier Reef — why is it disappearing?",
+      "summary": "What the reef is, how coral lives, the threats that are killing it, and what is being done to protect it.",
+      "images": [],
+      "table": {
+        "title": "Why the reef is disappearing",
+        "head": [
+          "Threat",
+          "What happens"
+        ],
+        "rows": [
+          [
+            "Warmer seas (climate change)",
+            "Coral bleaching: hot water makes coral push out its algae. It turns white and starves; if the heat lasts, it dies."
+          ],
+          [
+            "More acidic sea",
+            "The sea absorbs carbon dioxide and becomes more acidic, so coral struggles to build its skeleton."
+          ],
+          [
+            "Farm run-off",
+            "Rain washes soil, fertiliser and pesticide into the sea: cloudy water blocks sunlight and feeds pests."
+          ],
+          [
+            "Crown-of-thorns starfish",
+            "Outbreaks of these starfish eat huge areas of coral."
+          ],
+          [
+            "Stronger storms (cyclones)",
+            "Giant waves smash the coral."
+          ],
+          [
+            "People on the reef",
+            "Boat anchors, careless divers, overfishing and shipping damage the coral and its food chains."
+          ]
+        ]
+      },
+      "facts": [
+        "The **Great Barrier Reef** is off the **north-east coast of Australia** (Queensland), in the **Coral Sea**, part of the Pacific Ocean.",
+        "It is the **world's biggest coral reef system**: about **2,300 km** long, made of about **2,900 reefs** and **900 islands**. You can see it from space.",
+        "Coral is built by tiny animals called **polyps**. Tiny **algae** live inside them, making food from sunlight and giving coral its colours — so reefs need **warm, clear, shallow, sunny** water.",
+        "It is home to thousands of species — over **1,500 kinds of fish**, turtles, sharks, dolphins and dugongs — and it's a **World Heritage Site**.",
+        "The biggest threat is **climate change**: warmer seas cause **coral bleaching**. The reef has had several **mass bleaching** events since 2016.",
+        "**Bleached ≠ dead**: if the water cools quickly the algae can return. If the heat lasts, the coral dies — and a reef takes many years to recover.",
+        "**Protecting it:** marine park zones where fishing is banned, less farm run-off, removing crown-of-thorns starfish, growing and replanting coral — and, most of all, cutting the **greenhouse gases** that warm the planet."
+      ],
+      "keywords": [
+        [
+          "coral reef",
+          "a ridge in the sea built from the skeletons of coral polyps"
+        ],
+        [
+          "polyp",
+          "the tiny animal that builds coral"
+        ],
+        [
+          "algae",
+          "tiny living things inside coral that make food from sunlight"
+        ],
+        [
+          "coral bleaching",
+          "coral turning white when the sea is too warm"
+        ],
+        [
+          "climate change",
+          "long-term warming of the Earth, mainly from burning fossil fuels"
+        ],
+        [
+          "ocean acidification",
+          "the sea becoming more acidic as it absorbs carbon dioxide"
+        ],
+        [
+          "run-off",
+          "rainwater flowing off the land into rivers and the sea, carrying soil and chemicals"
+        ],
+        [
+          "biodiversity",
+          "the variety of living things in a place"
+        ]
+      ],
+      "questions": [
+        {
+          "id": "geo-rf-01",
+          "type": "short",
+          "stem": "In which country is the Great Barrier Reef?",
+          "answer": "Australia",
+          "choices": [
+            "New Zealand",
+            "Brazil",
+            "South Africa"
+          ],
+          "explain": "It's off the coast of Queensland, Australia."
+        },
+        {
+          "id": "geo-rf-02",
+          "type": "mcq",
+          "stem": "Off which coast of Australia is the reef?",
+          "answer": "the north-east coast",
+          "choices": [
+            "the south-west coast",
+            "the south coast",
+            "the west coast"
+          ],
+          "explain": "The reef runs along the north-east coast, in the Coral Sea."
+        },
+        {
+          "id": "geo-rf-03",
+          "type": "short",
+          "stem": "Which sea is the Great Barrier Reef in?",
+          "answer": "Coral Sea",
+          "accept": [
+            "the Coral Sea"
+          ],
+          "choices": [
+            "Red Sea",
+            "North Sea",
+            "Caribbean Sea"
+          ],
+          "explain": "The Coral Sea is part of the Pacific Ocean."
+        },
+        {
+          "id": "geo-rf-04",
+          "type": "mcq",
+          "stem": "About how long is the Great Barrier Reef?",
+          "answer": "2,300 km",
+          "choices": [
+            "23 km",
+            "230 km",
+            "23,000 km"
+          ],
+          "explain": "About 2,300 km — further than from London to Moscow. It's the largest coral reef system in the world."
+        },
+        {
+          "id": "geo-rf-05",
+          "type": "short",
+          "stem": "What are the tiny animals that build coral called?",
+          "answer": "polyps",
+          "accept": [
+            "polyp",
+            "coral polyps"
+          ],
+          "choices": [
+            "algae",
+            "plankton",
+            "jellyfish"
+          ],
+          "explain": "Coral polyps build hard limestone skeletons; over thousands of years these build up into a reef."
+        },
+        {
+          "id": "geo-rf-06",
+          "type": "short",
+          "stem": "What tiny living things live inside coral, giving it food and its colours?",
+          "answer": "algae",
+          "accept": [
+            "alga",
+            "zooxanthellae",
+            "algae (zooxanthellae)",
+            "plants"
+          ],
+          "choices": [
+            "polyps",
+            "starfish",
+            "bacteria"
+          ],
+          "explain": "Algae inside the coral use sunlight to make food (photosynthesis) and share it with the coral."
+        },
+        {
+          "id": "geo-rf-07",
+          "type": "short",
+          "stem": "What is it called when coral turns white because the sea is too warm?",
+          "answer": "coral bleaching",
+          "accept": [
+            "bleaching",
+            "bleached coral"
+          ],
+          "choices": [
+            "coral fading",
+            "coral melting",
+            "coral freezing"
+          ],
+          "explain": "In water that's too warm, coral pushes out its algae, loses its colour and turns white — bleaching."
+        },
+        {
+          "id": "geo-rf-08",
+          "type": "mcq",
+          "stem": "What causes coral bleaching?",
+          "answer": "The sea getting too warm",
+          "choices": [
+            "The sea getting too cold",
+            "Too many fish",
+            "Too much rain on the reef"
+          ],
+          "explain": "Rising sea temperatures, caused by climate change, are the main cause of bleaching."
+        },
+        {
+          "id": "geo-rf-09",
+          "type": "short",
+          "stem": "What is the biggest threat to the Great Barrier Reef?",
+          "answer": "climate change",
+          "accept": [
+            "global warming",
+            "rising sea temperatures",
+            "warmer sea",
+            "warming seas",
+            "warming oceans",
+            "warmer water",
+            "the sea getting warmer"
+          ],
+          "choices": [
+            "tourists",
+            "sharks",
+            "too many islands"
+          ],
+          "explain": "Climate change warms the sea (bleaching) and makes it more acidic. Other threats add to the damage."
+        },
+        {
+          "id": "geo-rf-10",
+          "type": "tf",
+          "stem": "Bleached coral is always dead.",
+          "answer": false,
+          "explain": "Bleached coral is starving but alive. If the water cools quickly the algae can return; if the heat lasts too long, it dies."
+        },
+        {
+          "id": "geo-rf-11",
+          "type": "mcq",
+          "stem": "Why does the sea become more acidic?",
+          "answer": "It absorbs carbon dioxide from the air",
+          "choices": [
+            "Fish make it acidic",
+            "Rain washes salt out of it",
+            "The Sun heats it up"
+          ],
+          "explain": "The oceans soak up carbon dioxide from burning fossil fuels. More acidic water makes it harder for coral to build its skeleton."
+        },
+        {
+          "id": "geo-rf-12",
+          "type": "mcq",
+          "stem": "Which animal eats coral and has damaged large parts of the reef?",
+          "answer": "the crown-of-thorns starfish",
+          "choices": [
+            "the clownfish",
+            "the sea turtle",
+            "the dugong"
+          ],
+          "explain": "Outbreaks of crown-of-thorns starfish eat huge areas of coral. Divers remove them to protect the reef."
+        },
+        {
+          "id": "geo-rf-13",
+          "type": "mcq",
+          "stem": "How does run-off from farms harm the reef?",
+          "answer": "Soil and fertiliser wash into the sea, making it cloudy and feeding pests",
+          "choices": [
+            "Farm animals swim out and eat the coral",
+            "Farmers build on the reef",
+            "It makes the sea too cold"
+          ],
+          "explain": "Rain washes soil, fertiliser and pesticides off farms in Queensland into rivers and the sea. Cloudy water blocks sunlight, and fertiliser helps crown-of-thorns starfish."
+        },
+        {
+          "id": "geo-rf-14",
+          "type": "mcq",
+          "stem": "Why do coral reefs need clear, shallow water?",
+          "answer": "The algae inside the coral need sunlight to make food",
+          "choices": [
+            "So that tourists can see them",
+            "Because coral can't swim",
+            "Deep water is too salty"
+          ],
+          "explain": "Sunlight has to reach the algae for photosynthesis — that's why reefs grow in warm, clear, shallow, sunny seas."
+        },
+        {
+          "id": "geo-rf-15",
+          "type": "tf",
+          "stem": "Coral reefs grow best in cold, deep, dark water.",
+          "answer": false,
+          "explain": "Reef-building coral needs warm, clear, shallow water with plenty of sunlight."
+        },
+        {
+          "id": "geo-rf-16",
+          "type": "tf",
+          "stem": "The Great Barrier Reef is so big it can be seen from space.",
+          "answer": true,
+          "explain": "Yes — it's the biggest structure made by living things on Earth."
+        },
+        {
+          "id": "geo-rf-17",
+          "type": "mcq",
+          "stem": "Which of these helps to protect the reef?",
+          "answer": "Banning fishing in some zones of the marine park",
+          "choices": [
+            "Building more ports on the reef",
+            "Using more fertiliser on farms",
+            "Anchoring boats on the coral"
+          ],
+          "explain": "The Great Barrier Reef Marine Park has zones where fishing is banned; there are also rules on farm run-off, starfish culls and coral replanting. Cutting greenhouse gases worldwide helps most of all."
+        },
+        {
+          "id": "geo-rf-18",
+          "type": "mcq",
+          "stem": "Why does the reef matter to people as well as wildlife?",
+          "answer": "Tourism brings money and jobs, and the reef protects the coast from waves",
+          "choices": [
+            "It stops it raining in Australia",
+            "It makes the sea fresh water",
+            "It keeps sharks away from Europe"
+          ],
+          "explain": "Millions of visitors bring money and tens of thousands of jobs; the reef also breaks up big waves before they hit the coast."
+        },
+        {
+          "id": "geo-rf-19",
+          "type": "mcq",
+          "stem": "What does “World Heritage Site” mean?",
+          "answer": "A place so special that the world agrees to protect it",
+          "choices": [
+            "A place where nobody may visit",
+            "A place owned by the United Nations",
+            "A place that is always hot"
+          ],
+          "explain": "UNESCO lists World Heritage Sites — the Great Barrier Reef has been one since 1981."
+        },
+        {
+          "id": "geo-rf-20",
+          "type": "short",
+          "stem": "Burning coal, oil and gas releases which gas that warms the planet and makes the sea more acidic?",
+          "answer": "carbon dioxide",
+          "accept": [
+            "CO2",
+            "co₂",
+            "carbon"
+          ],
+          "choices": [
+            "oxygen",
+            "nitrogen",
+            "helium"
+          ],
+          "explain": "Carbon dioxide (CO₂) is a greenhouse gas: it traps heat (warming the sea) and dissolves in the sea (acidification)."
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 /* =========================================================
-   Year 7 revision trainer (Secondary → Science, Maths).
-   One trainer, one config per subject (SCIENCE, MATHS below):
+   Year 7 revision trainer (Secondary → Science, Maths, Geography).
+   One trainer, one config per subject (SCIENCE, MATHS, GEOGRAPHY below):
      #/secondary/<subj>                 setup: pick topics, mode, start
      #/secondary/<subj>/learn/<topic>   notes: diagram, key facts, key words
      #/secondary/science/label/<diagram> name the parts: label a whole
@@ -9,6 +9,11 @@
    Maths: data/content/secondary/maths.json, same topic format; typed
    answers are marked by core/maths-match.js, and a question with
    "gen" gets fresh numbers each time from gen/ks3maths.js.
+
+   Geography: data/content/secondary/geography.json, same format;
+   maps in geography/ (tools/build-geog-art.mjs); grid-reference and
+   direction questions draw a new map each time (gen/geog.js, q.svg)
+   and are marked by core/geog-match.js.
 
    Science: data/content/secondary/science.json — topics with
    facts, key words, one or more diagrams (inline SVG under
@@ -32,6 +37,8 @@ import { vocabState } from "./langs.js";
 import { seg } from "./vocab.js";
 import { checkMaths } from "../../core/maths-match.js";
 import { GENERATORS } from "../../gen/ks3maths.js";
+import { checkGeog } from "../../core/geog-match.js";
+import { GEO_GENERATORS } from "../../gen/geog.js";
 
 /* code: store.vocab key · subject: recorded attempts · theme: colour */
 export const SCIENCE = {
@@ -47,7 +54,19 @@ export const MATHS = {
   typeHint: "Type your answers. For a negative number type a minus sign, e.g. -5; for × you can type x.",
   judge: checkMaths,
   /* a generated question gets new numbers every time it's asked */
-  expand: q => (q.gen && GENERATORS[q.gen] ? { ...q, ...GENERATORS[q.gen]() } : q)
+  expand: q => (q.gen && GENERATORS[q.gen] ? { ...q, ...GENERATORS[q.gen]() } : q),
+  setupText: "Each topic has key facts, methods and key words; many questions get new numbers every time."
+};
+export const GEOGRAPHY = {
+  code: "geography", label: "Geography", subject: "geography", theme: "geography",
+  route: "#/secondary/geography", base: "data/content/secondary/geography",
+  title: "Geography revision", noun: "geography", mode: "geography", paperId: "geography",
+  typeHint: "Type your answers — spelling slips are forgiven. Grid references are just the numbers (e.g. 2443); directions can be short (e.g. NE).",
+  /* grid references and compass directions first, then words as in science */
+  judge: (q, typed) => checkGeog(q, typed) || judgeTyped(q, typed),
+  /* a map question draws a new map every time it's asked */
+  expand: q => (q.gen && GEO_GENERATORS[q.gen] ? { ...q, ...GEO_GENERATORS[q.gen]() } : q),
+  setupText: "Each topic has maps, key facts and key words. Grid and direction questions get a new map every time."
 };
 const TEST_LENGTHS = [10, 20, 30];
 
@@ -62,26 +81,28 @@ export function loadRevision(S) {
 }
 export const loadScience = () => loadRevision(SCIENCE);
 export const loadMaths = () => loadRevision(MATHS);
+export const loadGeography = () => loadRevision(GEOGRAPHY);
 
 /* Diagrams are inlined so they use the page font and can be switched
-   between names and letters. Cached as text. */
-const BASE = SCIENCE.base;
+   between names and letters. Cached as text; each subject keeps its
+   drawings in a folder next to its question file (S.base). */
 const figures = {};
-function loadFigure(file) {
-  if (!figures[file]) {
-    figures[file] = fetch(`${BASE}/${file}.svg`, { cache: "no-cache" })
+function loadFigure(file, base) {
+  const url = `${base}/${file}.svg`;
+  if (!figures[url]) {
+    figures[url] = fetch(url, { cache: "no-cache" })
       .then(r => { if (!r.ok) throw new Error(`${file}.svg: HTTP ${r.status}`); return r.text(); })
-      .catch(err => { delete figures[file]; throw err; });
+      .catch(err => { delete figures[url]; throw err; });
   }
-  return figures[file];
+  return figures[url];
 }
 
 /* Put a diagram into `host`. quiz: letters instead of names, shuffled so
    the letters can't be learnt; ask: the label key to highlight.
    Returns the letter of the asked part (or null). */
-async function mountFigure(host, file, { quiz = false, ask = null, reveal = false } = {}) {
+async function mountFigure(host, file, { base, quiz = false, ask = null, reveal = false } = {}) {
   let text;
-  try { text = await loadFigure(file); } catch { host.innerHTML = `<p class="muted">The diagram couldn't load.</p>`; return null; }
+  try { text = await loadFigure(file, base); } catch { host.innerHTML = `<p class="muted">The diagram couldn't load.</p>`; return null; }
   host.innerHTML = text;
   const svgEl = host.querySelector("svg");
   if (!svgEl) return null;
@@ -133,6 +154,7 @@ const mastered = stat => (stat?.mastery || 0) >= 0.8;
 
 export const renderScience = (el, params) => renderRevision(el, params, SCIENCE);
 export const renderMaths = (el, params) => renderRevision(el, params, MATHS);
+export const renderGeography = (el, params) => renderRevision(el, params, GEOGRAPHY);
 
 async function renderRevision(el, params = [], S) {
   el.dataset.subject = S.theme;
@@ -201,7 +223,7 @@ async function renderLearn({ el, bank, S }, topicId) {
   topic.images.forEach(async (im, i) => {
     const host = el.querySelector(`[data-host="${i}"]`);
     const narrow = host.clientWidth < NARROW;
-    await mountFigure(host, im.file, { quiz: narrow, reveal: !narrow });
+    await mountFigure(host, im.file, { base: S.base, quiz: narrow, reveal: !narrow });
     const svgEl = host.querySelector("svg");
     if (!svgEl?.querySelector(".lbl")) return;
     const btn = el.querySelector(`[data-selftest="${i}"]`);
@@ -271,7 +293,7 @@ function renderSetup(ctx) {
 
   el.innerHTML = `<div data-setup>
     <div class="run-bar"><h2>${esc(S.title)}</h2><span class="muted">${esc(bank.unit)}</span></div>
-    ${bank.source && S === MATHS ? `<p class="sci-source">${esc(bank.source)}</p>` : ""}
+    ${bank.source ? `<p class="sci-source">${esc(bank.source)}</p>` : ""}
 
     ${labelSets(bank).length ? `
     <div class="card setup-card">
@@ -288,7 +310,7 @@ function renderSetup(ctx) {
 
     <div class="card setup-card">
       <h3>1. Choose your topics</h3>
-      <p class="muted" style="margin-top:calc(-1 * var(--sp-2));">Read the notes first, then practise. ${S === MATHS ? "Each topic has key facts, methods and key words; many questions get new numbers every time." : "Each topic has a diagram, key facts and key words."}</p>
+      <p class="muted" style="margin-top:calc(-1 * var(--sp-2));">Read the notes first, then practise. ${S.setupText || "Each topic has a diagram, key facts and key words."}</p>
       <div class="section-grid" style="margin-left:0;">
         ${bank.topics.map((t, i) => `
           ${i === 0 && t.sheet ? `<p class="section-group muted" style="border-top:0;padding-top:0;">From your class sheets</p>` : ""}
@@ -399,7 +421,10 @@ const LABEL_NAMES = {
   skeleton: ["The skeleton", "bones"],
   muscles: ["Muscles", "muscles"],
   microscope: ["The microscope", "parts"],
-  cells: ["Plant and animal cells", "parts"]
+  cells: ["Plant and animal cells", "parts"],
+  world: ["Continents and oceans", "places"],
+  places: ["Fantastic places", "places"],
+  compass: ["The compass", "directions"]
 };
 
 function labelSets(bank) {
@@ -453,7 +478,7 @@ async function renderLabel(ctx, file) {
   async function start() {
     const my = ++round;
     const fig = $("[data-figure]");
-    await mountFigure(fig, set.file, { quiz: true });
+    await mountFigure(fig, set.file, { base: S.base, quiz: true });
     if (my !== round || !fig.isConnected) return;
     const svgEl = fig.querySelector("svg");
     const groups = new Map([...fig.querySelectorAll(".lbl")].map(g => [g.dataset.part, g]));
@@ -636,8 +661,10 @@ function judgeTyped(q, answer) {
   if ((q.everyday || []).map(canon).includes(given)) return { ok: false, everyday: true, tip: everydayTip(q) };
   const targets = [q.answer, ...(q.accept || [])].map(canon);
   if (targets.includes(given)) return { ok: true };
-  /* numbers must be exact; words may have a slip or two */
+  /* numbers must be exact; words may have a slip or two — but never when
+     the answer typed is a known wrong one ("South America" for "North America") */
   if (/^\d/.test(canon(q.answer))) return { ok: false };
+  if ([...(q.choices || []), ...(q.reject || [])].map(canon).includes(given)) return { ok: false };
   for (const t of targets) {
     const allowed = t.length >= 10 ? 2 : t.length >= 5 ? 1 : 0;
     if (allowed && levenshtein(given, t) <= allowed) return { ok: true, near: true, tip: `Nearly the right spelling — it's “${q.answer}”.` };
@@ -717,8 +744,12 @@ function startRun(ctx, cfg) {
     let letter = null;
     if (q.image) {
       fig.classList.remove("hidden");
-      letter = await mountFigure(fig, q.image, { quiz: true, ask: q.part });
+      letter = await mountFigure(fig, q.image, { base: S.base, quiz: true, ask: q.part });
       if (run.current !== q) return;
+    } else if (q.svg) {
+      /* a generated map (gen/geog.js) */
+      fig.classList.remove("hidden");
+      fig.innerHTML = q.svg;
     } else {
       fig.classList.add("hidden");
       fig.innerHTML = "";
@@ -869,7 +900,7 @@ function startRun(ctx, cfg) {
                 <tr class="${r.ok ? "is-correct" : "is-wrong"}">
                   <td class="mark">${r.ok ? "✓" : "✗"}</td>
                   <td>
-                    <div>${esc(r.q.stem.replace("{L}", r.letter || "?"))}${r.q.image ? ` <span class="muted">(diagram)</span>` : ""}</div>
+                    <div>${esc(r.q.stem.replace("{L}", r.letter || "?"))}${r.q.image ? ` <span class="muted">(diagram)</span>` : r.q.svg ? ` <span class="muted">(map)</span>` : ""}</div>
                     <div class="sci-review-answers">
                       ${r.ok ? `<span>${r.answer !== "" && r.answer != null ? esc(String(r.answer)) : ""}</span>`
                         : `<span class="muted">You:</span> ${r.answer !== "" && r.answer != null ? `<s>${esc(String(r.answer))}</s>` : `<span class="muted">—</span>`}

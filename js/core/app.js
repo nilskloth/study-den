@@ -17,7 +17,7 @@ import { renderProgress } from "../views/progress.js";
 import { renderStart } from "../views/start.js";
 import { renderSecondary } from "../views/secondary/home.js";
 import { availableLangs } from "../views/secondary/langs.js";
-import { loadScience, loadMaths } from "../views/secondary/revision.js";
+import { loadScience, loadMaths, loadGeography } from "../views/secondary/revision.js";
 
 const ROUTES = [
   { path: "start", render: renderStart },
@@ -51,16 +51,18 @@ const NAV = {
 };
 
 /* Languages appear in the nav once they have word lists (built in or uploaded);
-   Maths and Science once their question files are there. */
+   Maths, Science and Geography once their question files are there. */
 async function refreshLanguageNav() {
   const langs = await availableLangs();
   const science = await loadScience().then(() => true).catch(() => false);
   const maths = await loadMaths().then(() => true).catch(() => false);
+  const geography = await loadGeography().then(() => true).catch(() => false);
   NAV.secondary = [
     NAV.secondary[0],
     ...langs.map(l => ({ href: `#/secondary/${l.code}`, label: l.label, match: `secondary/${l.code}` })),
     ...(maths ? [{ href: "#/secondary/maths", label: "Maths", match: "secondary/maths" }] : []),
     ...(science ? [{ href: "#/secondary/science", label: "Science", match: "secondary/science" }] : []),
+    ...(geography ? [{ href: "#/secondary/geography", label: "Geography", match: "secondary/geography" }] : []),
     NAV.secondary[NAV.secondary.length - 1]
   ];
   const { path, params } = parseHash();

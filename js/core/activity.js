@@ -31,7 +31,7 @@ const TRACK_URL = "api/track.php";
 export const AREAS = {
   reading: "Reading", gps: "Grammar & punctuation", maths: "Maths", spelling: "Spelling",
   german: "German", french: "French", science: "Science",
-  phonics: "Phonics", tricky: "Tricky words", menus: "Menus"
+  phonics: "Phonics", tricky: "Tricky words", geography: "Geography", menus: "Menus"
 };
 
 const PAPERS = {
@@ -72,6 +72,7 @@ export function activityFor(hash) {
   if (path === "secondary") {
     if (p[0] === "maths") return ["maths", p[1] === "learn" ? "Maths notes" : "Maths revision"];
     if (p[0] === "science") return ["science", p[1] === "learn" ? "Science notes" : p[1] === "label" ? "Science: name the parts" : "Science revision"];
+    if (p[0] === "geography") return ["geography", p[1] === "learn" ? "Geography notes" : p[1] === "label" ? "Geography: name the places" : "Geography revision"];
     const lang = LANG_AREA[p[0]];
     if (!lang) return ["menus", "Languages menu"];
     if (p[1] === "verbs") return [lang[0], `${lang[1]} verbs`];
@@ -220,6 +221,9 @@ function resultLabel(mode, paperId, area, act) {
   if (mode === "science-test") return "Science test";
   if (mode === "science-practise") return "Science practice";
   if (mode === "science-label") return "Science: name the parts";
+  if (mode === "geography-test") return "Geography test";
+  if (mode === "geography-practise") return "Geography practice";
+  if (mode === "geography-label") return "Geography: name the places";
   return act && act[0] === area ? act[1] : `${AREAS[area]} practice`;
 }
 

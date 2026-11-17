@@ -14,6 +14,7 @@
 [data-subject="german"]   { --subject: var(--c-german); }
 [data-subject="french"]   { --subject: var(--c-french); }
 [data-subject="science"]  { --subject: var(--c-science); }
+[data-subject="geography"] { --subject: var(--c-geography); }
 [data-subject="phonics"]  { --subject: var(--c-phonics); }
 [data-subject="tricky"]   { --subject: var(--c-tricky); }
 
