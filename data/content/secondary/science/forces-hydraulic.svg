@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 320" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<path d="M160 140 V270 H550 V140 H390 V240 H200 V140Z" fill="#f3d27a"/>
+      <path d="M160 90 V270 H550 V90 M200 90 V240 H390 V90" fill="none" stroke="#17181a" stroke-width="3"/>
+      <rect x="162" y="128" width="36" height="12" fill="#5d6d7e"/><rect x="176" y="96" width="8" height="32" fill="#5d6d7e"/>
+      <rect x="392" y="128" width="156" height="12" fill="#5d6d7e"/>
+      <rect x="430" y="82" width="80" height="46" rx="4" fill="#2c6fbb" stroke="#17181a" stroke-width="1.5"/>
+      <text x="470" y="110" text-anchor="middle" font-weight="700" style="fill:#fff">load</text><line x1="180" y1="22" x2="180" y2="82" stroke="#d35400" stroke-width="4"/>
+      <polygon points="180,92 187,82 173,82" fill="#d35400"/><line x1="470" y1="76" x2="470" y2="30" stroke="#2c6fbb" stroke-width="7"/>
+      <polygon points="470,14 459,30 481,30" fill="#2c6fbb"/><text x="488" y="36" font-weight="700" fill="#2c6fbb">large force out</text>
+  <g class="lbl" data-part="effort">
+    <line class="leader" x1="209" y1="40" x2="180" y2="50"/>
+    <circle class="dot" cx="180" cy="50" r="3.5"/>
+    <text class="name" x="215" y="44.5" text-anchor="start">small force in</text>
+    <g class="letter"><circle cx="224" cy="40" r="9.5"/><text x="224" y="44.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="small-piston">
+    <line class="leader" x1="151" y1="134" x2="160" y2="134"/>
+    <circle class="dot" cx="160" cy="134" r="3.5"/>
+    <text class="name" x="145" y="138.5" text-anchor="end">small piston</text>
+    <g class="letter"><circle cx="136" cy="134" r="9.5"/><text x="136" y="138.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="large-piston">
+    <line class="leader" x1="569" y1="160" x2="550" y2="134"/>
+    <circle class="dot" cx="550" cy="134" r="3.5"/>
+    <text class="name" x="575" y="164.5" text-anchor="start">large piston</text>
+    <g class="letter"><circle cx="584" cy="160" r="9.5"/><text x="584" y="164.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="oil">
+    <line class="leader" x1="314" y1="300" x2="300" y2="255"/>
+    <circle class="dot" cx="300" cy="255" r="3.5"/>
+    <text class="name" x="320" y="304.5" text-anchor="start">oil (a liquid)</text>
+    <g class="letter"><circle cx="329" cy="300" r="9.5"/><text x="329" y="304.5" text-anchor="middle"></text></g>
+  </g>
+</svg>

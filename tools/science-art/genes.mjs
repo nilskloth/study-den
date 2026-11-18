@@ -200,5 +200,128 @@ export default function (h) {
     return svg(664, 190, body);
   })();
 
+  /* ---------- Year 8: cell → nucleus → chromosome → DNA → gene ---------- */
+  out["gn-dna"] = (() => {
+    const GENE = "#f6d55c";
+    // the cell with its nucleus
+    let body = `
+      <circle cx="96" cy="160" r="74" fill="${CYTO}" stroke="${MEMB}" stroke-width="3"/>
+      <circle cx="104" cy="152" r="30" fill="${NUC}" stroke="${NUC_EDGE}" stroke-width="2" opacity=".85"/>
+      <path d="M92 140 q6 8 0 16 M104 136 q-6 10 2 20 M114 146 q4 8 -2 16 M98 160 q8 2 12 8" stroke="#3d1f52" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+      <path d="M128 136 L218 82 M128 170 L218 238" stroke="#9a9da1" stroke-width="1.2" stroke-dasharray="5 4"/>`;
+    // one chromosome (two arms joined in the middle), with bands
+    const arm = rot => `<g transform="rotate(${rot} 258 160)">
+        <rect x="248" y="86" width="20" height="148" rx="10" fill="#b48ad0" stroke="${NUC_EDGE}" stroke-width="2"/>
+        ${[104, 124, 190, 214].map(y => `<rect x="249" y="${y}" width="18" height="7" fill="${NUC_EDGE}" opacity=".55"/>`).join("")}
+      </g>`;
+    body += arm(-16) + arm(16) + `<circle cx="258" cy="160" r="6" fill="${NUC_EDGE}"/>`;
+    // zoom from the top of one arm to the DNA strand
+    body += `<path d="M282 92 L356 104 M286 112 L356 216" stroke="#9a9da1" stroke-width="1.2" stroke-dasharray="5 4"/>`;
+    // DNA double helix
+    const x0 = 360, x1 = 630, cy = 160, amp = 40, wave = 90;
+    const y = (x, ph) => cy + amp * Math.sin((x - x0) / wave * 2 * Math.PI + ph);
+    body += `<rect x="470" y="104" width="92" height="112" rx="10" fill="${GENE}" opacity=".55"/>`;
+    let rungs = "";
+    const cols = ["#e07a5f", "#3d85c6", "#81b29a", "#f2a541"];
+    let i = 0;
+    for (let x = x0 + 6; x < x1; x += 12, i++) {
+      rungs += `<line x1="${x}" y1="${y(x, 0)}" x2="${x}" y2="${y(x, Math.PI)}" stroke="${cols[i % 4]}" stroke-width="4"/>`;
+    }
+    const strand = ph => { const pts = []; for (let x = x0; x <= x1; x += 3) pts.push(`${x},${y(x, ph).toFixed(1)}`); return `<polyline points="${pts.join(" ")}" fill="none" stroke="#2f4858" stroke-width="5" stroke-linecap="round"/>`; };
+    body += rungs + strand(0) + strand(Math.PI);
+    body += `<path d="M470 228 v8 h92 v-8" fill="none" stroke="${INK}" stroke-width="1.6"/>
+      <text x="96" y="262" text-anchor="middle" class="cap">a body cell</text>
+      <text x="258" y="262" text-anchor="middle" class="cap">one chromosome</text>
+      <text x="495" y="262" text-anchor="middle" class="cap">part of its DNA, unwound</text>
+      ${label("cell", "Cell", [40, 112], [20, 34])}
+      ${label("nucleus", "Nucleus", [104, 128], [116, 34])}
+      ${label("chromosome", "Chromosome", [276, 96], [236, 34])}
+      ${label("dna", "DNA", [410, 168], [380, 300])}
+      ${label("gene", "Gene", [516, 236], [536, 300])}`;
+    return svg(650, 320, body);
+  })();
+
+  /* ---------- Year 8: natural selection in peppered moths ---------- */
+  out["gn-natsel"] = (() => {
+    const PALE = "#ecebe4", DARK = "#2e2b28";
+    const moth = (x, y, c, eaten = false) => `<g transform="translate(${x} ${y})">
+        <path d="M0 0 L-16 -9 L-13 7 Z M0 0 L16 -9 L13 7 Z" fill="${c}" stroke="#6a6d71" stroke-width="1"/>
+        <ellipse cx="0" cy="0" rx="2.6" ry="7" fill="#5a524b"/>
+        ${eaten ? `<path d="M-14 -12 L14 12 M14 -12 L-14 12" stroke="#c0392b" stroke-width="3" stroke-linecap="round"/>` : ""}
+      </g>`;
+    const panel = (i, title, sub, moths) => {
+      const x = 8 + i * 162;
+      return `<rect x="${x}" y="10" width="150" height="230" rx="12" fill="#fff" stroke="#c9c9c4"/>
+        <rect x="${x + 20}" y="24" width="110" height="150" rx="8" fill="#4d4640"/>
+        <path d="M${x + 40} 30 q6 70 -4 140 M${x + 74} 28 q-8 70 4 144 M${x + 106} 30 q6 60 -2 140" stroke="#3a3430" stroke-width="2" fill="none"/>
+        ${moths.map(([dx, dy, c, e]) => moth(x + dx, dy, c === "p" ? PALE : DARK, e)).join("")}
+        <text x="${x + 75}" y="198" text-anchor="middle" class="title" font-size="13">${title}</text>
+        <text x="${x + 75}" y="216" text-anchor="middle" class="cap" font-size="11">${sub[0]}</text>
+        <text x="${x + 75}" y="231" text-anchor="middle" class="cap" font-size="11">${sub[1]}</text>
+        ${i < 3 ? `<path d="M${x + 152} 100 h8 m-4 -5 l5 5 -5 5" stroke="${INK}" stroke-width="2" fill="none"/>` : ""}`;
+    };
+    const body =
+      panel(0, "1. Variation", ["pale and dark moths", "on sooty bark"], [[50, 50, "p"], [100, 64, "d"], [62, 104, "d"], [104, 120, "p"], [52, 150, "p"], [96, 158, "d"]]) +
+      panel(1, "2. Survival", ["birds spot and eat", "the pale moths"], [[50, 50, "p", 1], [100, 64, "d"], [62, 104, "d"], [104, 120, "p", 1], [52, 150, "p", 1], [96, 158, "d"]]) +
+      panel(2, "3. Reproduction", ["dark survivors breed", "and pass on the gene"], [[100, 64, "d"], [62, 104, "d"], [96, 158, "d"], [52, 50, "d"], [108, 120, "d"], [50, 150, "p"]]) +
+      panel(3, "4. Over time", ["after many generations", "most moths are dark"], [[50, 50, "d"], [100, 54, "d"], [62, 96, "d"], [106, 112, "d"], [50, 150, "d"], [96, 158, "d"], [80, 132, "p"]]);
+    return svg(656, 250, body);
+  })();
+
+  /* ---------- Year 8: chromosome numbers halve and are restored ---------- */
+  out["gn-halving"] = (() => {
+    const cell = (x, y, r, n, fill = CYTO) => `<circle cx="${x}" cy="${y}" r="${r}" fill="${fill}" stroke="${MEMB}" stroke-width="2.5"/>
+      <circle cx="${x}" cy="${y}" r="${r * 0.45}" fill="${NUC}" stroke="${NUC_EDGE}" stroke-width="1.5"/>
+      <text x="${x}" y="${y + 6}" text-anchor="middle" font-size="17" font-weight="700" style="fill:#fff">${n}</text>`;
+    const arrow = (x1, y1, x2, y2) => {
+      const a = Math.atan2(y2 - y1, x2 - x1), hx = x2 - 9 * Math.cos(a), hy = y2 - 9 * Math.sin(a);
+      return `<line x1="${x1}" y1="${y1}" x2="${hx}" y2="${hy}" stroke="${INK}" stroke-width="2"/>
+        <path d="M${x2} ${y2} L${hx - 5 * Math.sin(a)} ${hy + 5 * Math.cos(a)} L${hx + 5 * Math.sin(a)} ${hy - 5 * Math.cos(a)}Z" fill="${INK}"/>`;
+    };
+    const sperm = (x, y) => `<ellipse cx="${x}" cy="${y}" rx="22" ry="15" fill="#cfe5f5" stroke="#4a7fa8" stroke-width="2"/>
+      <path d="M${x + 22} ${y} c8 -8 14 8 22 0 s14 8 22 0" fill="none" stroke="#4a7fa8" stroke-width="2.5"/>
+      <text x="${x}" y="${y + 6}" text-anchor="middle" font-size="16" font-weight="700">23</text>`;
+    const body = `
+      <text x="90" y="28" text-anchor="middle" class="title">Father's body cell</text>
+      ${cell(90, 82, 40, 46)}
+      <text x="90" y="190" text-anchor="middle" class="title">Mother's body cell</text>
+      ${cell(90, 244, 40, 46)}
+      ${arrow(136, 82, 232, 82)}${arrow(136, 244, 232, 244)}
+      <text x="184" y="70" text-anchor="middle" class="cap">makes</text>
+      <text x="184" y="232" text-anchor="middle" class="cap">makes</text>
+      <text x="290" y="28" text-anchor="middle" class="title">Sperm</text>
+      ${sperm(272, 82)}
+      <text x="290" y="190" text-anchor="middle" class="title">Egg</text>
+      ${cell(290, 244, 38, 23)}
+      ${arrow(340, 96, 432, 150)}${arrow(334, 232, 432, 176)}
+      <text x="488" y="98" text-anchor="middle" class="title">Fertilised egg</text>
+      ${cell(488, 164, 44, 46)}
+      <text x="488" y="234" text-anchor="middle" class="cap">23 from each parent</text>
+      <text x="488" y="250" text-anchor="middle" class="cap">= 46 (23 pairs)</text>
+      <text x="300" y="306" text-anchor="middle" class="cap">The numbers are chromosomes in each nucleus. Sex cells carry half.</text>`;
+    return svg(600, 320, body);
+  })();
+
+  /* ---------- Year 8: boy or girl? Sex chromosomes ---------- */
+  out["gn-sexcross"] = (() => {
+    const bub = (x, y, t, c) => `<circle cx="${x}" cy="${y}" r="20" fill="${c}" stroke="${INK}" stroke-width="1.5"/>
+      <text x="${x}" y="${y + 6}" text-anchor="middle" font-size="17" font-weight="700">${t}</text>`;
+    const EGG = "#fbe3e8", SP = "#dceaf7";
+    const gx = 230, gy = 150, s = 90;   // grid top-left, cell size
+    const cellTxt = (c, r, t, who) => `<rect x="${gx + c * s}" y="${gy + r * s}" width="${s}" height="${s}" fill="#fff" stroke="${INK}" stroke-width="1.5"/>
+      <text x="${gx + c * s + s / 2}" y="${gy + r * s + 42}" text-anchor="middle" font-size="20" font-weight="700">${t}</text>
+      <text x="${gx + c * s + s / 2}" y="${gy + r * s + 66}" text-anchor="middle" class="cap">${who}</text>`;
+    const body = `
+      <text x="${gx + s}" y="26" text-anchor="middle" class="title">Father: XY</text>
+      <text x="${gx + s}" y="46" text-anchor="middle" class="cap">his sperm carry X or Y</text>
+      ${bub(gx + s / 2, gy - 36, "X", SP)}${bub(gx + s * 1.5, gy - 36, "Y", SP)}
+      <text x="96" y="${gy + s - 16}" text-anchor="middle" class="title">Mother: XX</text>
+      <text x="96" y="${gy + s + 4}" text-anchor="middle" class="cap">every egg carries X</text>
+      ${bub(gx - 36, gy + s / 2, "X", EGG)}${bub(gx - 36, gy + s * 1.5, "X", EGG)}
+      ${cellTxt(0, 0, "XX", "girl")}${cellTxt(1, 0, "XY", "boy")}${cellTxt(0, 1, "XX", "girl")}${cellTxt(1, 1, "XY", "boy")}
+      <text x="${gx + s}" y="${gy + 2 * s + 30}" text-anchor="middle" class="cap">2 girls : 2 boys — a 50% chance of each</text>`;
+    return svg(480, 380, body);
+  })();
+
   return out;
 }

@@ -353,5 +353,182 @@ export default function (h) {
     return svg(560, 355, b);
   })();
 
+  /* =========================================================
+     Year 8 (Part 2): the periodic table and elements
+     ========================================================= */
+
+  /* ---------- A simplified periodic table (periods 1–6) ---------- */
+  files["mt-periodic-table"] = (() => {
+    const ROWS = [
+      ["H", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "He"],
+      ["Li", "Be", "", "", "", "", "", "", "", "", "", "", "B", "C", "N", "O", "F", "Ne"],
+      ["Na", "Mg", "", "", "", "", "", "", "", "", "", "", "Al", "Si", "P", "S", "Cl", "Ar"],
+      ["K", "Ca", "Sc", "Ti", "V", "Cr", "Mn", "Fe", "Co", "Ni", "Cu", "Zn", "Ga", "Ge", "As", "Se", "Br", "Kr"],
+      ["Rb", "Sr", "Y", "Zr", "Nb", "Mo", "Tc", "Ru", "Rh", "Pd", "Ag", "Cd", "In", "Sn", "Sb", "Te", "I", "Xe"],
+      ["Cs", "Ba", "La", "Hf", "Ta", "W", "Re", "Os", "Ir", "Pt", "Au", "Hg", "Tl", "Pb", "Bi", "Po", "At", "Rn"]
+    ];
+    const NM_FROM = [0, 13, 14, 15, 16, 17];               // first non-metal column per period (1-based)
+    const CW = 29, CH = 30, X0 = 96, Y0 = 72;
+    const cx = c => X0 + (c - 1) * CW, cy = r => Y0 + (r - 1) * CH;
+    const METAL_C = "#d6e6f5", TRANS_C = "#bcd5ec", NON_C = "#fde9c4";
+    let b = "";
+    ROWS.forEach((row, i) => row.forEach((s, j) => {
+      if (!s) return;
+      const r = i + 1, c = j + 1;
+      const non = (r === 1) || c >= NM_FROM[i];
+      const fill = non ? NON_C : (c >= 3 && c <= 12 ? TRANS_C : METAL_C);
+      b += `<rect x="${cx(c)}" y="${cy(r)}" width="${CW}" height="${CH}" fill="${fill}" stroke="#8a96a3" stroke-width="1"/>
+            <text x="${cx(c) + CW / 2}" y="${cy(r) + 19.5}" text-anchor="middle" style="font-size:12px">${s}</text>`;
+    }));
+    /* group numbers above the main groups */
+    [[1, 1, "1"], [2, 2, "2"], [13, 2, "3"], [14, 2, "4"], [15, 2, "5"], [16, 2, "6"], [17, 2, "7"], [18, 1, "0"]]
+      .forEach(([c, r, n]) => { b += `<text x="${cx(c) + CW / 2}" y="${cy(r) - 6}" text-anchor="middle" class="cap" style="font-weight:700">${n}</text>`; });
+    /* the staircase between metals and non-metals */
+    const st = `M${cx(13)} ${cy(2)} L${cx(13)} ${cy(3)} L${cx(14)} ${cy(3)} L${cx(14)} ${cy(4)} L${cx(15)} ${cy(4)} L${cx(15)} ${cy(5)} L${cx(16)} ${cy(5)} L${cx(16)} ${cy(6)} L${cx(17)} ${cy(6)} L${cx(17)} ${cy(7)}`;
+    b += `<path d="${st}" fill="none" stroke="${INK}" stroke-width="3.5" stroke-linejoin="round"/>`;
+    /* outlines: group 1, group 7, group 0 and period 3 */
+    const box = (x, y, w, hh) => `<rect x="${x}" y="${y}" width="${w}" height="${hh}" rx="4" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="5 3"/>`;
+    b += box(cx(1) - 2, cy(1) - 2, CW + 4, 6 * CH + 4) + box(cx(17) - 2, cy(2) - 2, CW + 4, 5 * CH + 4) +
+      box(cx(18) - 2, cy(1) - 2, CW + 4, 6 * CH + 4) + box(cx(1) - 4, cy(3) - 1, 18 * CW + 8, CH + 2);
+    const bottom = cy(7) + 2;
+    b += label("group1", "Group 1", [cx(1) - 2, cy(5) + CH / 2], [X0 - 16, cy(5) + CH / 2], "end") +
+      label("period", "a period", [cx(1) - 4, cy(3) + CH / 2], [X0 - 16, cy(3) + CH / 2], "end") +
+      label("metals", "metals", [cx(2) + CW / 2, bottom - 8], [cx(2) - 4, bottom + 34]) +
+      label("transition", "transition metals", [cx(7) + CW / 2, bottom - 8], [cx(6), bottom + 62]) +
+      label("nonmetals", "non-metals", [cx(15) + CW / 2, cy(2) + 4], [cx(11), cy(1) - 30], "end") +
+      label("group7", "Group 7", [cx(17) + CW / 2, bottom], [cx(17) - 6, bottom + 34], "end") +
+      label("group0", "Group 0", [cx(18) + CW / 2, bottom], [cx(18) + CW / 2 - 4, bottom + 62], "end");
+    return svg(640, 340, b);
+  })();
+
+  /* ---------- Melting points down group 1 ---------- */
+  files["mt-group1-melting"] = (() => {
+    const DATA = [["Li", "lithium", 181], ["Na", "sodium", 98], ["K", "potassium", 63], ["Rb", "rubidium", 39], ["Cs", "caesium", 28]];
+    const X0 = 80, Yb = 250, Y = v => Yb - v * 1.05;
+    let b = `<text x="270" y="24" text-anchor="middle" class="title">Melting points of the group 1 metals</text>`;
+    for (let v = 0; v <= 200; v += 50) b += `<line x1="${X0}" y1="${Y(v)}" x2="490" y2="${Y(v)}" stroke="${GRID}"/>
+      <text x="${X0 - 8}" y="${Y(v) + 4.5}" text-anchor="end" class="cap">${v}</text>`;
+    DATA.forEach(([s, n, v], i) => {
+      const x = X0 + 22 + i * 80;
+      b += `<rect x="${x}" y="${Y(v)}" width="50" height="${Yb - Y(v)}" fill="${P_FILL}" stroke="${P_EDGE}" stroke-width="1.6"/>
+            <text x="${x + 25}" y="${Y(v) - 7}" text-anchor="middle" style="font-weight:700">${v} °C</text>
+            <text x="${x + 25}" y="${Yb + 18}" text-anchor="middle" style="font-weight:700">${s}</text>
+            <text x="${x + 25}" y="${Yb + 34}" text-anchor="middle" class="cap">${n}</text>`;
+    });
+    b += `<line x1="${X0}" y1="${Yb}" x2="490" y2="${Yb}" stroke="${INK}" stroke-width="1.6"/>
+          <line x1="${X0}" y1="${Yb}" x2="${X0}" y2="${Y(200)}" stroke="${INK}" stroke-width="1.6"/>
+          <text x="26" y="${Y(100)}" text-anchor="middle" class="cap" transform="rotate(-90 26 ${Y(100)})">Melting point (°C)</text>
+          <text x="285" y="${Yb + 56}" text-anchor="middle" class="cap">going down the group →</text>`;
+    return svg(520, 318, b);
+  })();
+
+  /* ---------- Particle diagrams: element, compound or mixture? ---------- */
+  files["mt-particle-boxes"] = (() => {
+    const R = 8, A1 = [P_FILL, P_EDGE], A2 = [P2_FILL, P2_EDGE], A3 = ["#ffffff", "#7b8a97"];
+    const at = (x, y, [f, e], r = R) => dot(x, y, r, f, e);
+    /* a molecule: atoms at offsets (in units of R) turned by angle a */
+    const mol = (x, y, a, parts) => {
+      const c = Math.cos(a), s = Math.sin(a);
+      return parts.map(([u, v, col, r]) => at(x + (u * c - v * s) * R, y + (u * s + v * c) * R, col, r || R)).join("");
+    };
+    const pair = (col) => [[-0.8, 0, col], [0.8, 0, col]];
+    const water = [[0, 0, A1], [-1.05, 0.95, A3, 5.5], [1.05, 0.95, A3, 5.5]];
+    const co2 = [[-1.6, 0, A2], [0, 0, A1], [1.6, 0, A2]];
+    const lattice = (x, y, alt) => {
+      let s = "";
+      for (let i = 0; i < 6; i++) for (let j = 0; j < 4; j++)
+        s += at(x + 25 + i * 18, y + 30 + j * 18, alt && (i + j) % 2 ? A2 : A1);
+      return s;
+    };
+    const BOX = [
+      ["A", (x, y) => [[30, 34], [92, 28], [62, 62], [112, 74], [28, 90], [80, 96], [118, 40]].map(([u, v]) => at(x + u, y + v, A1)).join("")],
+      ["B", (x, y) => [[34, 32, .4], [100, 30, -.3], [66, 64, 1.2], [30, 92, -.8], [104, 88, .2]].map(([u, v, a]) => mol(x + u, y + v, a, pair(A2))).join("")],
+      ["C", (x, y) => lattice(x, y, false)],
+      ["D", (x, y) => [[34, 32, .2], [100, 30, -.5], [66, 64, 2.6], [30, 94, 1.1], [104, 90, -.2]].map(([u, v, a]) => mol(x + u, y + v, a, water)).join("")],
+      ["E", (x, y) => lattice(x, y, true)],
+      ["F", (x, y) => [[28, 30], [112, 66], [60, 94]].map(([u, v]) => at(x + u, y + v, A1)).join("") +
+        [[82, 32, .5], [40, 64, -.4], [108, 100, 1.4]].map(([u, v, a]) => mol(x + u, y + v, a, pair(A2))).join("")],
+      ["G", (x, y) => [[36, 32, .3], [100, 92, -.6]].map(([u, v, a]) => mol(x + u, y + v, a, pair(A2))).join("") +
+        [[104, 34, .2], [38, 92, 2.8], [72, 62, -.4]].map(([u, v, a]) => mol(x + u, y + v, a, water)).join("")],
+      ["H", (x, y) => [[70, 30, .1], [40, 94, -.5]].map(([u, v, a]) => mol(x + u, y + v, a, co2)).join("") +
+        [[30, 54, .3], [104, 64, 2.5], [108, 106, 0]].map(([u, v, a]) => mol(x + u, y + v, a, water)).join("")]
+    ];
+    let b = "";
+    BOX.forEach(([L, draw], i) => {
+      const x = 14 + (i % 4) * 156, y = 30 + Math.floor(i / 4) * 160;
+      b += `<text x="${x + 70}" y="${y - 8}" text-anchor="middle" class="title">${L}</text>
+            <rect x="${x}" y="${y}" width="140" height="124" rx="8" fill="#fff" stroke="#9aa3ab" stroke-width="2"/>` + draw(x, y);
+    });
+    return svg(640, 340, b);
+  })();
+
+  /* ---------- Some small molecules and their formulae ---------- */
+  files["mt-molecules"] = (() => {
+    const O = ["#e05a4f", "#a93226"], H = ["#ffffff", "#7b8a97"], C = ["#5d6166", "#2e3134"], N = ["#5dade2", "#21618c"];
+    const a = (x, y, col, r) => dot(x, y, r, col[0], col[1]);
+    const sub = n => `<tspan dy="4" style="font-size:12px">${n}</tspan><tspan dy="-4"></tspan>`;
+    const MOLS = [
+      ["oxygen", `O${sub(2)}`, (x, y) => a(x - 11, y, O, 14) + a(x + 11, y, O, 14)],
+      ["water", `H${sub(2)}O`, (x, y) => a(x - 17, y + 13, H, 9) + a(x + 17, y + 13, H, 9) + a(x, y, O, 14)],
+      ["carbon dioxide", `CO${sub(2)}`, (x, y) => a(x - 25, y, O, 14) + a(x + 25, y, O, 14) + a(x, y, C, 13)],
+      ["ammonia", `NH${sub(3)}`, (x, y) => a(x - 19, y + 11, H, 9) + a(x + 19, y + 11, H, 9) + a(x, y + 20, H, 9) + a(x, y - 2, N, 14)],
+      ["methane", `CH${sub(4)}`, (x, y) => a(x - 18, y - 14, H, 9) + a(x + 18, y - 14, H, 9) + a(x - 18, y + 14, H, 9) + a(x + 18, y + 14, H, 9) + a(x, y, C, 13)]
+    ];
+    let b = "";
+    MOLS.forEach(([name, f, draw], i) => {
+      const x = 70 + i * 125;
+      b += draw(x, 60) + `<text x="${x}" y="122" text-anchor="middle" style="font-size:20px;font-weight:700">${f}</text>
+        <text x="${x}" y="144" text-anchor="middle" class="cap">${name}</text>`;
+    });
+    const KEY = [["carbon", C], ["hydrogen", H], ["oxygen", O], ["nitrogen", N]];
+    KEY.forEach(([n, col], i) => { b += a(150 + i * 105, 180, col, 8) + `<text x="${162 + i * 105}" y="184.5" class="cap">${n}</text>`; });
+    return svg(640, 200, b);
+  })();
+
+  /* ---------- Monomers join to make a polymer ---------- */
+  files["mt-polymer"] = (() => {
+    const unit = (x, y, col = P_FILL, edge = P_EDGE) => `<rect x="${x - 13}" y="${y - 9}" width="26" height="18" rx="9" fill="${col}" stroke="${edge}" stroke-width="1.6"/>`;
+    let b = `<text x="80" y="26" text-anchor="middle" class="title">monomers</text>`;
+    [[50, 60], [104, 52], [60, 104], [112, 98], [80, 142]].forEach(([x, y]) => { b += unit(x, y); });
+    b += `<line x1="160" y1="98" x2="214" y2="98" stroke="${INK}" stroke-width="2.5"/>` + arrowHead(222, 98, 1, 0, 10);
+    b += `<text x="188" y="86" text-anchor="middle" class="cap">join up</text>`;
+    b += `<text x="420" y="26" text-anchor="middle" class="title">a polymer: one very long chain</text>`;
+    const pts = [];
+    for (let i = 0; i < 13; i++) pts.push([258 + i * 26, 70]);
+    for (let i = 12; i >= 0; i--) pts.push([258 + i * 26, 126]);
+    b += `<path d="M${pts[12][0]} 70 C${pts[12][0] + 30} 70 ${pts[12][0] + 30} 126 ${pts[12][0]} 126" fill="none" stroke="${P_EDGE}" stroke-width="2"/>`;
+    b += `<line x1="258" y1="70" x2="${pts[12][0]}" y2="70" stroke="${P_EDGE}" stroke-width="2"/><line x1="258" y1="126" x2="${pts[12][0]}" y2="126" stroke="${P_EDGE}" stroke-width="2"/>`;
+    b += pts.map(([x, y]) => unit(x, y)).join("");
+    b += `<text x="${pts[25][0] - 22}" y="131" text-anchor="end" style="font-size:20px">…</text>
+          <text x="420" y="168" text-anchor="middle" class="cap">thousands of monomers joined in a repeating pattern</text>`;
+    return svg(600, 185, b);
+  })();
+
+  /* ---------- Two composites ---------- */
+  files["mt-composite"] = (() => {
+    let b = "";
+    /* fibreglass: glass fibres set in plastic resin */
+    b += `<text x="150" y="26" text-anchor="middle" class="title">Fibreglass</text>
+          <rect x="30" y="44" width="240" height="110" rx="6" fill="#f6e7b8" stroke="#b9975b" stroke-width="2"/>`;
+    for (let i = 0; i < 9; i++) {
+      const y = 56 + i * 11 + (i % 2) * 2;
+      b += `<line x1="${38 + (i % 3) * 6}" y1="${y}" x2="${262 - (i % 2) * 8}" y2="${y + (i % 3) - 1}" stroke="#4f7fa8" stroke-width="2.6" stroke-linecap="round"/>`;
+    }
+    b += `<text x="150" y="178" text-anchor="middle" class="cap">glass fibres (strong) held in</text>
+          <text x="150" y="194" text-anchor="middle" class="cap">plastic resin (light, holds them together)</text>`;
+    /* reinforced concrete: steel rods in concrete */
+    b += `<text x="470" y="26" text-anchor="middle" class="title">Reinforced concrete</text>
+          <rect x="350" y="44" width="240" height="110" rx="4" fill="#d5d8dc" stroke="#7f8c8d" stroke-width="2"/>`;
+    for (let i = 0; i < 40; i++) {
+      const x = 360 + (i * 53) % 220, y = 52 + (i * 37) % 96;
+      b += `<circle cx="${x}" cy="${y}" r="${1.5 + (i % 3)}" fill="#aab0b5"/>`;
+    }
+    for (const y of [72, 126]) b += `<line x1="358" y1="${y}" x2="582" y2="${y}" stroke="${METAL_DARK}" stroke-width="7" stroke-linecap="round"/>
+          <line x1="358" y1="${y - 1.5}" x2="582" y2="${y - 1.5}" stroke="${METAL}" stroke-width="2.5" stroke-linecap="round"/>`;
+    b += `<text x="470" y="178" text-anchor="middle" class="cap">steel rods (strong when stretched) inside</text>
+          <text x="470" y="194" text-anchor="middle" class="cap">concrete (strong when squashed)</text>`;
+    return svg(620, 206, b);
+  })();
+
   return files;
 }

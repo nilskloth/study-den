@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 318" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<text x="270" y="24" text-anchor="middle" class="title">Melting points of the group 1 metals</text><line x1="80" y1="250" x2="490" y2="250" stroke="#e3e3de"/>
+      <text x="72" y="254.5" text-anchor="end" class="cap">0</text><line x1="80" y1="197.5" x2="490" y2="197.5" stroke="#e3e3de"/>
+      <text x="72" y="202" text-anchor="end" class="cap">50</text><line x1="80" y1="145" x2="490" y2="145" stroke="#e3e3de"/>
+      <text x="72" y="149.5" text-anchor="end" class="cap">100</text><line x1="80" y1="92.5" x2="490" y2="92.5" stroke="#e3e3de"/>
+      <text x="72" y="97" text-anchor="end" class="cap">150</text><line x1="80" y1="40" x2="490" y2="40" stroke="#e3e3de"/>
+      <text x="72" y="44.5" text-anchor="end" class="cap">200</text><rect x="102" y="59.94999999999999" width="50" height="190.05" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/>
+            <text x="127" y="52.94999999999999" text-anchor="middle" style="font-weight:700">181 °C</text>
+            <text x="127" y="268" text-anchor="middle" style="font-weight:700">Li</text>
+            <text x="127" y="284" text-anchor="middle" class="cap">lithium</text><rect x="182" y="147.1" width="50" height="102.9" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/>
+            <text x="207" y="140.1" text-anchor="middle" style="font-weight:700">98 °C</text>
+            <text x="207" y="268" text-anchor="middle" style="font-weight:700">Na</text>
+            <text x="207" y="284" text-anchor="middle" class="cap">sodium</text><rect x="262" y="183.85" width="50" height="66.15" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/>
+            <text x="287" y="176.85" text-anchor="middle" style="font-weight:700">63 °C</text>
+            <text x="287" y="268" text-anchor="middle" style="font-weight:700">K</text>
+            <text x="287" y="284" text-anchor="middle" class="cap">potassium</text><rect x="342" y="209.05" width="50" height="40.94999999999999" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/>
+            <text x="367" y="202.05" text-anchor="middle" style="font-weight:700">39 °C</text>
+            <text x="367" y="268" text-anchor="middle" style="font-weight:700">Rb</text>
+            <text x="367" y="284" text-anchor="middle" class="cap">rubidium</text><rect x="422" y="220.6" width="50" height="29.400000000000006" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/>
+            <text x="447" y="213.6" text-anchor="middle" style="font-weight:700">28 °C</text>
+            <text x="447" y="268" text-anchor="middle" style="font-weight:700">Cs</text>
+            <text x="447" y="284" text-anchor="middle" class="cap">caesium</text><line x1="80" y1="250" x2="490" y2="250" stroke="#17181a" stroke-width="1.6"/>
+          <line x1="80" y1="250" x2="80" y2="40" stroke="#17181a" stroke-width="1.6"/>
+          <text x="26" y="145" text-anchor="middle" class="cap" transform="rotate(-90 26 145)">Melting point (°C)</text>
+          <text x="285" y="306" text-anchor="middle" class="cap">going down the group →</text>
+</svg>

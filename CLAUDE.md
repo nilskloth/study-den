@@ -227,7 +227,10 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
   only the printed ones (also the default). An item `note` is shown in the list and feedback —
   used where the sheet is wrong ("too = un peu" → stored as "a bit"). Openers only where endings
   change (Elle est … grande). French marking: capitals don't count, accents give "Nearly!";
-  a wrong or missing article (le/la/les/un/une/des…) gives "Nearly!" + tip. Further French
+  a wrong or missing article (le/la/les/un/une/des…) gives "Nearly!" + tip. Extra sections `k1-x6…x9`
+  (family and siblings, pets, birthdays + numbers 21–31, hobbies with jouer/faire + how often) follow the other units of
+  the class course's first module (most likely Pearson *Dynamo 1*, Module 1 "La rentrée" — not confirmed with the school);
+  the words are ours. Further French
   sheets: add as chapter 2, 3… (or upload via Word lists), keep `extra` for anything not printed.
 
 - **Verb tables (`verbs/<lang>.json`, `views/secondary/verbs.js`, `#/secondary/<lang>/verbs[/<id>]`):**
@@ -292,10 +295,11 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
   Now / Coming up / Done; saved by `api/track.php` op `science-order` (upload password) to
   `data/uploads/science-order.json` (server-only, read by every device; `loadIdeaOrder()`). The Science page shows
   Now (open) → Coming up (in that order) → Already done; a new save resets the child's topic choice to the Now ideas.
-  No file yet → Organisms is Now, the rest in syllabus order. **Year 7 (Part 1) is complete** (Nov 2026: 65 topics, ~1,200 questions);
-  **Year 8 (Part 2) is next** — same recipe. Syllabus PDF: `_res/aqa/AQA-SCIENCE-KS3-SYLLABUS.pdf` (PDF page = printed
+  No file yet → Organisms is Now, the rest in syllabus order. **Years 7 and 8 (Parts 1 and 2) are complete**
+  (Nov 2026: 120 topics, ~2,200 questions). The default topic choice is the Now ideas in the child's own year (`year` "Year 8"
+  → part 2, otherwise part 1); Year 8 shows under each big idea, unticked. Syllabus PDF: `_res/aqa/AQA-SCIENCE-KS3-SYLLABUS.pdf` (PDF page = printed
   page − 1; one page per syllabus topic: Know / Apply / Extend). Written per big idea into `_res/sci-gen/<idea>.json`
-  (ids prefixed f-, em-, en-, wv-, mt-, rx-, ea-, ec-, gn-) and merged into science.json; edit science.json directly now.
+  and `y8-<idea>.json` (ids prefixed f-, em-, en-, wv-, mt-, rx-, ea-, or-, ec-, gn-) and merged into science.json; edit science.json directly now.
 - **Diagrams per big idea:** `tools/science-art/<idea>.mjs` (`export default h => ({ name: svg })`, helpers `h.svg`,
   `h.label`, colours), loaded by `tools/build-science-art.mjs`. Card titles in `LABEL_NAMES` (or an image's `title`).
 - **Check:** `node tools/test-science.mjs [extra.json…]` — ids, every answer/accept marked right by the real matcher and

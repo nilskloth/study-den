@@ -321,5 +321,179 @@ export default function (h) {
     return svg(580, 310, body);
   })();
 
+  /* =========================================================
+     Year 8 (Part 2): wave effects and wave properties
+     ========================================================= */
+
+  /* ---------------- The electromagnetic spectrum ---------------- */
+  out["wv-spectrum"] = (() => {
+    const rows = [
+      ["radio", "Radio waves", "#cfd8dc", 1],
+      ["microwave", "Microwaves", "#d7ccc8", 1.6],
+      ["infrared", "Infrared", "#ffccbc", 2.4],
+      ["visible", "Visible light", "url(#wvSpecGrad)", 3.4],
+      ["uv", "Ultraviolet (UV)", "#d1c4e9", 4.6],
+      ["xray", "X-rays", "#c5cae9", 6.2],
+      ["gamma", "Gamma rays", "#b39ddb", 8.2]
+    ];
+    const x0 = 200, w = 130, y0 = 46, rh = 42;
+    let body = `<defs><linearGradient id="wvSpecGrad" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#ef9a9a"/><stop offset=".2" stop-color="#ffcc80"/><stop offset=".38" stop-color="#fff59d"/>
+      <stop offset=".56" stop-color="#a5d6a7"/><stop offset=".76" stop-color="#90caf9"/><stop offset="1" stop-color="#ce93d8"/></linearGradient></defs>
+    <text x="${x0 + w / 2}" y="28" text-anchor="middle" class="title">The electromagnetic spectrum</text>`;
+    rows.forEach(([part, name, fill, n], i) => {
+      const y = y0 + i * rh, mid = y + rh / 2;
+      body += `<rect x="${x0}" y="${y}" width="${w}" height="${rh}" fill="${fill}" stroke="#5c6168" stroke-width="1.5"/>
+      <path d="${wavePath(x0 + 8, x0 + w - 8, mid, 11, (w - 16) / n)}" fill="none" stroke="${INK}" stroke-width="2"/>
+      ${label(part, name, [x0 + w, mid], [x0 + w + 40, mid])}`;
+    });
+    const yb = y0 + 7 * rh;
+    body += `
+    <line x1="120" y1="${y0 + 34}" x2="120" y2="${yb - 30}" stroke="${INK}" stroke-width="2.2"/>${arrowHead(120, yb - 26, 90, INK, 10)}
+    <text x="120" y="${y0 + 8}" text-anchor="middle" class="cap">lower frequency</text>
+    <text x="120" y="${y0 + 22}" text-anchor="middle" class="cap">less energy</text>
+    <text x="120" y="${yb - 2}" text-anchor="middle" class="cap">higher frequency</text>
+    <text x="120" y="${yb + 12}" text-anchor="middle" class="cap">more energy</text>
+    <text x="270" y="${yb + 34}" text-anchor="middle" class="cap">UV, X-rays and gamma rays carry enough energy to damage living cells.</text>`;
+    return svg(540, yb + 50, body);
+  })();
+
+  /* ---------------- A loudspeaker ---------------- */
+  out["wv-speaker"] = (() => {
+    let coil = "";
+    for (let x = 156; x <= 204; x += 7) coil += `<rect x="${x}" y="128" width="4.5" height="44" rx="2" fill="#c77d32" stroke="#8a5216" stroke-width="1"/>`;
+    let arcs = "";
+    for (let k = 0; k < 3; k++) arcs += `<path d="M${400 + k * 34} 100 q24 50 0 100" fill="none" stroke="#2f6fb0" stroke-width="3" stroke-linecap="round" opacity="${1 - k * 0.25}"/>`;
+    const body = `
+    <rect x="60" y="92" width="115" height="34" rx="4" fill="#c0392b" stroke="#7b2219" stroke-width="2"/>
+    <rect x="60" y="174" width="115" height="34" rx="4" fill="#2c6fb7" stroke="#1b4677" stroke-width="2"/>
+    <rect x="60" y="126" width="40" height="48" fill="#8d9399" stroke="#5c6168" stroke-width="2"/><rect x="100" y="140" width="112" height="20" fill="#8d9399" stroke="#5c6168" stroke-width="2"/>
+    <text x="105" y="114" text-anchor="middle" fill="#fff" font-weight="700">N</text>
+    <text x="105" y="196" text-anchor="middle" fill="#fff" font-weight="700">S</text>
+    
+    ${coil}
+    <path d="M212 128 L340 40 L352 40 L352 260 L340 260 L212 172 Z" fill="#e9e4da" stroke="#5c6168" stroke-width="2.5" stroke-linejoin="round"/>
+    <line x1="364" y1="150" x2="388" y2="150" stroke="${INK}" stroke-width="1.8"/>${arrowHead(360, 150, 180, INK, 7)}${arrowHead(392, 150, 0, INK, 7)}
+    <text x="378" y="276" text-anchor="middle" class="cap">the cone moves in and out</text>
+    ${arcs}
+    <path d="M192 172 C192 236 140 250 40 250 M204 172 C204 252 140 266 40 266" fill="none" stroke="${INK}" stroke-width="2.2"/>
+    <text x="34" y="304" class="cap">changing current from the amplifier</text>
+    ${label("magnet", "Permanent magnet", [80, 100], [40, 30])}
+    ${label("coil", "Coil of wire", [196, 130], [250, 70], "end")}
+    ${label("cone", "Cone", [290, 90], [302, 22])}
+    ${label("sound", "Sound wave", [446, 116], [470, 60])}
+    ${label("wires", "Wires", [100, 251], [60, 228], "end")}`;
+    return svg(560, 320, body);
+  })();
+
+  /* ---------------- Microphone: pressure wave to current ---------------- */
+  out["wv-mic-signal"] = (() => {
+    let dots = "";
+    const len = 130, xs = 30, xe = 290;
+    for (let i = 0; i < 31; i++) {
+      const x0 = xs + i * 8.6;
+      const x = x0 + 12 * Math.sin(2 * Math.PI * (x0 - xs) / len);
+      if (x > xe) continue;
+      for (let r = 0; r < 5; r++) dots += `<circle cx="${x.toFixed(1)}" cy="${78 + r * 15 + ((i % 2) ? 5 : 0)}" r="3" fill="#2f6fb0"/>`;
+    }
+    const sx = 330, sy = 194, sw = 230, sh = 100;
+    let grid = "";
+    for (let gx = sx + sw / 6; gx < sx + sw - 1; gx += sw / 6) grid += `<line x1="${gx.toFixed(1)}" y1="${sy}" x2="${gx.toFixed(1)}" y2="${sy + sh}" stroke="#34463c" stroke-width="1"/>`;
+    grid += `<line x1="${sx}" y1="${sy + sh / 2}" x2="${sx + sw}" y2="${sy + sh / 2}" stroke="#34463c" stroke-width="1"/>`;
+    const body = `
+    <text x="160" y="40" text-anchor="middle" class="title">Sound: a pressure wave</text>
+    ${dots}
+    <text x="${xs + len / 2}" y="172" text-anchor="middle" class="cap">high</text>
+    <text x="${xs + len / 2}" y="186" text-anchor="middle" class="cap">pressure</text>
+    <text x="${xs + len}" y="172" text-anchor="middle" class="cap">low</text>
+    <text x="${xs + len}" y="186" text-anchor="middle" class="cap">pressure</text>
+    <line x1="60" y1="214" x2="240" y2="214" stroke="${INK}" stroke-width="2"/>${arrowHead(246, 214, 0, INK, 9)}
+    <text x="150" y="236" text-anchor="middle" class="cap">travels to the microphone</text>
+    <rect x="300" y="70" width="10" height="90" rx="3" fill="#e9e4da" stroke="#5c6168" stroke-width="2"/>
+    <path d="M310 80 H380 Q404 115 380 150 H310" fill="#5c6168" stroke="#3b3f45" stroke-width="2"/>
+    <text x="305" y="58" text-anchor="middle" class="cap">diaphragm</text>
+    <text x="440" y="100" class="cap" font-weight="700">microphone</text>
+    <text x="440" y="116" class="cap">vibrates in the</text>
+    <text x="440" y="132" class="cap">same pattern</text>
+    <path d="M392 120 C430 140 445 160 445 ${sy - 4}" fill="none" stroke="${INK}" stroke-width="2.2"/>
+    <rect x="${sx}" y="${sy}" width="${sw}" height="${sh}" rx="8" fill="${SCREEN}"/>${grid}
+    <path d="${wavePath(sx + 6, sx + sw - 6, sy + sh / 2, 34, (sw - 12) / 3, Math.PI / 2)}" fill="none" stroke="${TRACE}" stroke-width="2.6"/>
+    <text x="${sx + sw / 2}" y="${sy + sh + 20}" text-anchor="middle" class="cap">the electric current rises and falls</text>
+    <text x="${sx + sw / 2}" y="${sy + sh + 36}" text-anchor="middle" class="cap">in the same pattern as the pressure</text>`;
+    return svg(590, 350, body);
+  })();
+
+  /* ---------------- Transverse and longitudinal waves ---------------- */
+  out["wv-types"] = (() => {
+    const mid = 110, amp = 34, len = 150, x0 = 60;
+    let coils = "";
+    const ly = 270, lenL = 120;
+    for (let i = 0; i < 46; i++) {
+      const b = 60 + i * 10;
+      const x = b + 9 * Math.sin(2 * Math.PI * (b - 60) / lenL);
+      coils += `<ellipse cx="${x.toFixed(1)}" cy="${ly}" rx="3" ry="24" fill="none" stroke="#2f6fb0" stroke-width="2.2"/>`;
+    }
+    const body = `
+    <text x="20" y="40" class="title">Transverse</text>
+    <path d="${wavePath(x0, 510, mid, amp, len)}" fill="none" stroke="#c0392b" stroke-width="4"/>
+    <line x1="560" y1="${mid - 34}" x2="560" y2="${mid + 34}" stroke="${INK}" stroke-width="2"/>
+    ${arrowHead(560, mid - 38, -90, INK, 8)}${arrowHead(560, mid + 38, 90, INK, 8)}
+    <text x="560" y="${mid + 62}" text-anchor="middle" class="cap">vibration:</text>
+    <text x="560" y="${mid + 76}" text-anchor="middle" class="cap">up and down</text>
+    <line x1="250" y1="186" x2="400" y2="186" stroke="${INK}" stroke-width="2"/>${arrowHead(404, 186, 0, INK, 9)}
+    <text x="410" y="190" class="cap">wave travels</text>
+    <text x="20" y="232" class="title">Longitudinal</text>
+    ${coils}
+    <line x1="530" y1="${ly}" x2="590" y2="${ly}" stroke="${INK}" stroke-width="2"/>
+    ${arrowHead(526, ly, 180, INK, 8)}${arrowHead(594, ly, 0, INK, 8)}
+    <text x="560" y="${ly + 40}" text-anchor="middle" class="cap">vibration:</text>
+    <text x="560" y="${ly + 54}" text-anchor="middle" class="cap">back and forth</text>
+    <line x1="250" y1="336" x2="400" y2="336" stroke="${INK}" stroke-width="2"/>${arrowHead(404, 336, 0, INK, 9)}
+    <text x="410" y="340" class="cap">wave travels</text>
+    ${label("crest", "Crest", [x0 + len / 4, mid - amp], [140, 40])}
+    ${label("trough", "Trough", [x0 + 7 * len / 4, mid + amp], [140, 186], "end")}
+    ${label("compression", "Compression", [120, ly - 24], [170, 222])}
+    ${label("rarefaction", "Rarefaction", [180, ly + 24], [150, 336], "end")}`;
+    return svg(620, 360, body);
+  })();
+
+  /* ---------------- A wave meeting a barrier ---------------- */
+  out["wv-meet"] = (() => {
+    let heat = "";
+    for (let k = 0; k < 3; k++) heat += `<path d="M${296 + k * 16} 196 q-6 -8 0 -16 q6 -8 0 -16" fill="none" stroke="#c0392b" stroke-width="2"/>`;
+    const body = `
+    <rect x="280" y="40" width="70" height="170" fill="#d7ccc8" stroke="#795548" stroke-width="2.5"/>
+    <text x="315" y="232" text-anchor="middle" class="cap">material</text>
+    <path d="${wavePath(30, 278, 160, 34, 62)}" fill="none" stroke="#2f6fb0" stroke-width="3.5"/>
+    <line x1="60" y1="210" x2="150" y2="210" stroke="#2f6fb0" stroke-width="2"/>${arrowHead(156, 210, 0, "#2f6fb0", 9)}
+    <path d="${wavePath(110, 278, 70, 18, 62)}" fill="none" stroke="#2f6fb0" stroke-width="2.5" stroke-dasharray="7 4"/>
+    <line x1="100" y1="34" x2="40" y2="34" stroke="#2f6fb0" stroke-width="2"/>${arrowHead(34, 34, 180, "#2f6fb0", 9)}
+    ${heat}
+    <path d="${wavePath(352, 560, 130, 12, 62)}" fill="none" stroke="#2f6fb0" stroke-width="2.5"/>
+    <line x1="420" y1="168" x2="510" y2="168" stroke="#2f6fb0" stroke-width="2"/>${arrowHead(516, 168, 0, "#2f6fb0", 9)}
+    ${label("incoming", "Incoming wave", [60, 136], [30, 264])}
+    ${label("reflected", "Reflected", [187.5, 52], [214, 20])}
+    ${label("absorbed", "Absorbed", [312, 172], [390, 264])}
+    ${label("transmitted", "Transmitted", [460, 130], [440, 70])}
+    <text x="390" y="282" class="cap">(energy warms the material)</text>`;
+    return svg(580, 296, body);
+  })();
+
+  /* ---------------- Two waves combining ---------------- */
+  out["wv-superpose"] = (() => {
+    const panel = (x, title, flip, result) => {
+      const w = 220, l = w / 2;
+      const p = (y, a, ph, col, dash = "") => `<path d="${wavePath(x, x + w, y, a, l, ph)}" fill="none" stroke="${col}" stroke-width="3"${dash}/>`;
+      return `<text x="${x + w / 2}" y="34" text-anchor="middle" class="title">${title}</text>
+        ${p(80, 20, 0, "#2f6fb0")}
+        <text x="${x + w / 2}" y="124" text-anchor="middle" font-weight="700" font-size="22">+</text>
+        ${p(160, 20, flip ? Math.PI : 0, "#c0392b")}
+        <text x="${x + w / 2}" y="206" text-anchor="middle" font-weight="700" font-size="22">=</text>
+        ${result === "big" ? p(260, 40, 0, "#6a3d9a") : `<line x1="${x}" y1="260" x2="${x + w}" y2="260" stroke="#6a3d9a" stroke-width="3"/>`}
+        <text x="${x + w / 2}" y="324" text-anchor="middle" class="cap">${result === "big" ? "crests meet crests: a bigger wave" : "crests meet troughs: they cancel out"}</text>`;
+    };
+    return svg(560, 340, panel(30, "In step", false, "big") + panel(310, "Out of step", true, "flat"));
+  })();
+
   return out;
 }

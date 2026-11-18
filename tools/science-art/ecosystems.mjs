@@ -5,10 +5,11 @@
    ec-foodweb        a woodland food web, arrows = direction energy flows
    ec-predprey       predator and prey populations over time
    ec-dispersal      five ways seeds are spread
+   Year 8 (3.9.3 Respiration, 3.9.4 Photosynthesis): see the second block below
    ========================================================= */
 
 export default function (h) {
-  const { svg, label, INK } = h;
+  const { svg, label, INK, CHLORO } = h;
   const PETAL = "#f6b3c8", PETAL_EDGE = "#c2577f";
   const SEPAL = "#86c06a", SEPAL_EDGE = "#3f7a2d";
   const ANTHER = "#f2c230", ANTHER_EDGE = "#a77d0a", FILAMENT = "#d4b25a";
@@ -184,6 +185,194 @@ export default function (h) {
       panel(3, "Burdock", "animals · hooks on fur", burr) +
       panel(4, "Blackberry", "animals · eaten", berry);
     return svg(640, 212, body);
+  })();
+
+  /* =========================================================
+     Year 8 (Part 2): 3.9.3 Respiration, 3.9.4 Photosynthesis
+     ec-resp-equations  aerobic and anaerobic respiration word equations
+     ec-yeast           yeast fermenting sugar, gas bubbled through limewater (6 labelled parts)
+     ec-photo-equation  photosynthesis word equation, and where each thing comes from
+     ec-leaf            cross-section of a leaf (8 labelled parts)
+     ec-starch-leaf     variegated leaf before and after the iodine test
+     ec-rate            how light, carbon dioxide and temperature change the rate
+     ========================================================= */
+  const GLASS = "#eef6fb", GLASS_EDGE = "#6f8fa6", WATER = "#cfe6f5";
+  const LEAF = "#7fbf5a", LEAF_EDGE = "#3f7a2d";
+  const eqBox = (y, title, colour, lines) => `<rect x="10" y="${y}" width="460" height="${30 + lines.length * 26}" rx="12" fill="#fff" stroke="${colour}" stroke-width="2"/>
+    <text x="26" y="${y + 24}" class="title" style="fill:${colour}" fill="${colour}">${title}</text>
+    ${lines.map((l, i) => `<text x="26" y="${y + 50 + i * 26}" style="font-size:15px">${l}</text>`).join("")}`;
+
+  /* ---------------- Respiration word equations ---------------- */
+  out["ec-resp-equations"] = (() => {
+    const body = eqBox(8, "Aerobic respiration (with oxygen)", "#2e6fb7", [
+        "glucose + oxygen → carbon dioxide + water",
+        "<tspan class=\"cap\" style=\"font-size:12px\">lots of energy released · in the mitochondria</tspan>"]) +
+      eqBox(108, "Anaerobic respiration in muscles (no oxygen)", "#c0392b", [
+        "glucose → lactic acid",
+        "<tspan class=\"cap\" style=\"font-size:12px\">much less energy released</tspan>"]) +
+      eqBox(208, "Anaerobic respiration in yeast (fermentation)", "#b5651d", [
+        "glucose → ethanol + carbon dioxide",
+        "<tspan class=\"cap\" style=\"font-size:12px\">much less energy released · plants too, when roots lack oxygen</tspan>"]);
+    return svg(480, 296, body);
+  })();
+
+  /* ---------------- Yeast fermentation experiment ---------------- */
+  out["ec-yeast"] = (() => {
+    const bubbles = (x, y1, y2, n) => Array.from({ length: n }, (_, k) => {
+      const y = y1 + (y2 - y1) * k / (n - 1), dx = ((k * 37) % 13) - 6;
+      return `<circle cx="${x + dx}" cy="${y.toFixed(1)}" r="${2.5 + (k % 3)}" fill="#fff" stroke="${GLASS_EDGE}" stroke-width="1"/>`;
+    }).join("");
+    const tube = (x1, x2, top, bottom, liquidTop, liquid) => {
+      const r = (x2 - x1) / 2;
+      return `<path d="M${x1} ${top} V${bottom - r} A${r} ${r} 0 0 0 ${x2} ${bottom - r} V${top}" fill="${GLASS}" stroke="${GLASS_EDGE}" stroke-width="2.5"/>
+        <path d="M${x1 + 2} ${liquidTop} V${bottom - r} A${r - 2} ${r - 2} 0 0 0 ${x2 - 2} ${bottom - r} V${liquidTop}Z" fill="${liquid}"/>`;
+    };
+    const body = `<g transform="translate(40 0)">
+    <!-- water bath -->
+    <rect x="150" y="170" width="250" height="190" rx="6" fill="#fff" stroke="${GLASS_EDGE}" stroke-width="2.5"/>
+    <rect x="152" y="196" width="246" height="162" fill="${WATER}"/>
+    <!-- thermometer -->
+    <rect x="190" y="110" width="10" height="226" rx="5" fill="#fff" stroke="${GLASS_EDGE}" stroke-width="1.5"/>
+    <rect x="193" y="230" width="4" height="100" fill="#c0392b"/><circle cx="195" cy="334" r="8" fill="#c0392b"/>
+    <!-- boiling tube with yeast and sugar solution -->
+    ${tube(250, 300, 86, 340, 160, "#f1dfa8")}
+    ${bubbles(275, 175, 320, 9)}
+    <rect x="244" y="70" width="62" height="24" rx="4" fill="#5a4a3a"/>
+    <!-- delivery tube -->
+    <path d="M275 70 V40 H500 V300" fill="none" stroke="${GLASS_EDGE}" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M275 70 V40 H500 V300" fill="none" stroke="${GLASS}" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- limewater -->
+    ${tube(475, 525, 130, 340, 190, "#e4e8e6")}
+    <path d="M500 130 V300" stroke="${GLASS_EDGE}" stroke-width="6"/><path d="M500 130 V300" stroke="${GLASS}" stroke-width="2.5"/>
+    ${bubbles(500, 205, 295, 6)}
+    ${label("thermometer", "Thermometer", [195, 130], [130, 130], "end")}
+    ${label("bubbles", "Bubbles of gas", [280, 215], [130, 196], "end")}
+    ${label("mixture", "Yeast + sugar solution", [262, 290], [130, 262], "end")}
+    ${label("bath", "Water bath", [170, 345], [130, 330], "end")}
+    ${label("delivery", "Delivery tube", [400, 40], [420, 18])}
+    ${label("limewater", "Limewater", [512, 250], [548, 250])}
+    <text x="20" y="386" class="cap">Yeast respires the sugar. The gas it gives off is carbon dioxide: it turns the limewater cloudy.</text>
+    <text x="20" y="404" class="cap">Count the bubbles in a minute to compare how fast the yeast respires (e.g. at different temperatures).</text></g>`;
+    return svg(680, 414, body);
+  })();
+
+  /* ---------------- Photosynthesis word equation ---------------- */
+  out["ec-photo-equation"] = (() => {
+    const chip = (x, y, w, text, sub, fill, edge) => `<rect x="${x}" y="${y}" width="${w}" height="70" rx="10" fill="${fill}" stroke="${edge}" stroke-width="2"/>
+      <text x="${x + w / 2}" y="${y + 30}" text-anchor="middle" class="title">${text}</text>
+      ${sub.map((s, i) => `<text x="${x + w / 2}" y="${y + 48 + i * 14}" text-anchor="middle" class="cap" style="font-size:11px">${s}</text>`).join("")}`;
+    const IN = ["#e8f1fb", "#2e6fb7"], OUTC = ["#e5f4dc", LEAF_EDGE];
+    const body = `
+    <!-- sun -->
+    <circle cx="297" cy="32" r="18" fill="#ffd75e" stroke="#c79a10" stroke-width="2"/>
+    ${Array.from({ length: 8 }, (_, k) => { const a = k * Math.PI / 4; return `<line x1="${(297 + Math.cos(a) * 23).toFixed(1)}" y1="${(32 + Math.sin(a) * 23).toFixed(1)}" x2="${(297 + Math.cos(a) * 31).toFixed(1)}" y2="${(32 + Math.sin(a) * 31).toFixed(1)}" stroke="#c79a10" stroke-width="2.5" stroke-linecap="round"/>`; }).join("")}
+    <path d="M297 66 V80" stroke="#c79a10" stroke-width="2" stroke-dasharray="4 3"/>
+    <text x="297" y="96" text-anchor="middle" class="cap">light energy, absorbed by chlorophyll</text>
+    ${chip(10, 106, 130, "carbon dioxide", ["from the air,", "in through stomata"], ...IN)}
+    <text x="144" y="147" class="title">+</text>
+    ${chip(160, 106, 116, "water", ["from the soil,", "up through roots"], ...IN)}
+    <path d="M282 141 H310 m-8 -7 l8 7 -8 7" fill="none" stroke="${INK}" stroke-width="2.5"/>
+    ${chip(318, 106, 122, "glucose", ["food: used, built", "into tissue or stored"], ...OUTC)}
+    <text x="444" y="147" class="title">+</text>
+    ${chip(460, 106, 90, "oxygen", ["out into", "the air"], ...OUTC)}
+    <text x="280" y="204" text-anchor="middle" class="cap">Happens in the chloroplasts of plant and algae cells.</text>`;
+    return svg(560, 214, body);
+  })();
+
+  /* ---------------- Cross-section of a leaf ---------------- */
+  out["ec-leaf"] = (() => {
+    const X1 = 120, X2 = 470;
+    let b = "";
+    // sunlight
+    b += [190, 260, 330, 400].map(x => `<path d="M${x - 24} 8 L${x} 58 m-9 -5 l9 5 1 -10" fill="none" stroke="#c79a10" stroke-width="2.2" stroke-linecap="round"/>`).join("");
+    b += `<text x="412" y="24" class="cap">light</text>`;
+    // cuticle + upper epidermis
+    b += `<rect x="${X1}" y="66" width="${X2 - X1}" height="8" fill="#eef5c9" stroke="#b4b86a" stroke-width="1"/>`;
+    for (let x = X1; x < X2; x += 35) b += `<rect x="${x}" y="74" width="35" height="24" fill="#f6f9ee" stroke="${LEAF_EDGE}" stroke-width="1.2"/>`;
+    // palisade layer
+    for (let x = X1; x < X2; x += 25) {
+      b += `<rect x="${x + 1}" y="100" width="23" height="86" rx="8" fill="#dff0cf" stroke="${LEAF_EDGE}" stroke-width="1.2"/>`;
+      for (let k = 0; k < 5; k++) b += `<ellipse cx="${x + 7 + (k % 2) * 11}" cy="${110 + k * 16}" rx="4" ry="5" fill="${CHLORO}"/>`;
+    }
+    // spongy layer: round cells with air spaces between
+    const spongy = [];
+    [[212, 0], [242, 21], [272, 0]].forEach(([y, off]) => {
+      for (let x = X1 + 18 + off; x < X2 - 10; x += 42) if (!(y === 272 && x > 280 && x < 340)) spongy.push([x, y]);
+    });
+    b += `<rect x="${X1}" y="188" width="${X2 - X1}" height="100" fill="#f3f8ec"/>`;
+    b += spongy.map(([x, y]) => `<circle cx="${x}" cy="${y}" r="15" fill="#e6f3d9" stroke="${LEAF_EDGE}" stroke-width="1.2"/><ellipse cx="${x - 5}" cy="${y - 3}" rx="3.5" ry="4" fill="${CHLORO}"/><ellipse cx="${x + 6}" cy="${y + 4}" rx="3.5" ry="4" fill="${CHLORO}"/>`).join("");
+    // lower epidermis with a stoma between two guard cells
+    for (let x = X1; x < X2; x += 34) if (x + 34 <= 292 || x >= 328) b += `<rect x="${x}" y="288" width="${Math.min(34, X2 - x)}" height="22" fill="#f6f9ee" stroke="${LEAF_EDGE}" stroke-width="1.2"/>`;
+    b += `<rect x="290" y="288" width="2" height="22" fill="#f6f9ee"/>`;
+    b += `<rect x="${292 - 20}" y="288" width="20" height="22" fill="#f6f9ee" stroke="${LEAF_EDGE}" stroke-width="1.2"/><rect x="328" y="288" width="20" height="22" fill="#f6f9ee" stroke="${LEAF_EDGE}" stroke-width="1.2"/>`;
+    b += `<ellipse cx="300" cy="299" rx="9" ry="12" fill="#c8e6b0" stroke="${LEAF_EDGE}" stroke-width="1.5"/><ellipse cx="320" cy="299" rx="9" ry="12" fill="#c8e6b0" stroke="${LEAF_EDGE}" stroke-width="1.5"/>
+          <ellipse cx="310" cy="299" rx="2.6" ry="8" fill="#f3f8ec" stroke="${LEAF_EDGE}" stroke-width="1"/>
+          <ellipse cx="298" cy="296" rx="2.5" ry="3" fill="${CHLORO}"/><ellipse cx="322" cy="296" rx="2.5" ry="3" fill="${CHLORO}"/>`;
+    b += `<rect x="${X1}" y="310" width="${X2 - X1}" height="5" fill="#eef5c9" stroke="#b4b86a" stroke-width="1"/>`;
+    // gases at the stoma
+    b += `<path d="M290 360 L306 318 m-9 3 l9 -3 2 9" fill="none" stroke="#2e6fb7" stroke-width="2.2"/>
+          <text x="282" y="374" text-anchor="end" class="cap">carbon dioxide in</text>
+          <path d="M314 318 L330 360 m-9 -4 l9 4 3 -9" fill="none" stroke="${LEAF_EDGE}" stroke-width="2.2"/>
+          <text x="338" y="374" class="cap">oxygen and water vapour out</text>`;
+    // labels
+    b += label("cuticle", "Waxy cuticle", [440, 70], [490, 58]);
+    b += label("upper", "Upper epidermis", [450, 86], [490, 92]);
+    b += label("palisade", "Palisade layer", [450, 140], [490, 140]);
+    b += label("spongy", "Spongy layer", [440, 232], [490, 220]);
+    b += label("lower", "Lower epidermis", [440, 300], [490, 274]);
+    b += label("guard", "Guard cell", [323, 306], [490, 318]);
+    b += label("air", "Air space", [158, 214], [100, 214], "end");
+    b += label("stoma", "Stoma", [310, 294], [100, 312], "end");
+    b += `<text x="20" y="396" class="cap">Light comes in from the top: the palisade cells, packed with chloroplasts, sit just under the surface.</text>`;
+    return svg(640, 406, b);
+  })();
+
+  /* ---------------- The starch test on a variegated leaf ---------------- */
+  out["ec-starch-leaf"] = (() => {
+    const leaf = (cx, outer, inner, edge) => {
+      const o = `M${cx} 40 C${cx + 70} 60 ${cx + 92} 130 ${cx + 60} 190 C${cx + 40} 222 ${cx + 10} 236 ${cx} 244 C${cx - 10} 236 ${cx - 40} 222 ${cx - 60} 190 C${cx - 92} 130 ${cx - 70} 60 ${cx} 40Z`;
+      const i = `M${cx} 66 C${cx + 46} 82 ${cx + 62} 134 ${cx + 40} 180 C${cx + 26} 204 ${cx + 8} 214 ${cx} 220 C${cx - 8} 214 ${cx - 26} 204 ${cx - 40} 180 C${cx - 62} 134 ${cx - 46} 82 ${cx} 66Z`;
+      return `<path d="M${cx} 244 V270" stroke="${edge}" stroke-width="4" stroke-linecap="round"/>
+        <path d="${o}" fill="${outer}" stroke="${edge}" stroke-width="2"/>
+        <path d="${i}" fill="${inner}"/>
+        <path d="M${cx} 52 V238" stroke="${edge}" stroke-width="1.5" opacity=".5"/>`;
+    };
+    const body = `
+    ${leaf(120, "#f4f2e4", LEAF, LEAF_EDGE)}
+    ${leaf(400, "#e8a54a", "#1f2340", "#8a5a1a")}
+    <path d="M220 150 H300 m-10 -8 l10 8 -10 8" fill="none" stroke="${INK}" stroke-width="2.5"/>
+    <text x="260" y="136" text-anchor="middle" class="cap">starch test</text>
+    <text x="120" y="24" text-anchor="middle" class="title">Before</text>
+    <text x="400" y="24" text-anchor="middle" class="title">After iodine</text>
+    <text x="120" y="292" text-anchor="middle" class="cap">green middle: chlorophyll</text>
+    <text x="120" y="308" text-anchor="middle" class="cap">white edge: no chlorophyll</text>
+    <text x="400" y="292" text-anchor="middle" class="cap">blue-black: starch made here</text>
+    <text x="400" y="308" text-anchor="middle" class="cap">orange-brown: no starch</text>
+    <text x="20" y="338" class="cap">1 Boil the leaf in water.  2 Warm it in ethanol in a water bath (no flame)</text>
+    <text x="20" y="354" class="cap">to remove the chlorophyll.  3 Rinse in warm water.  4 Spread it out and</text>
+    <text x="20" y="370" class="cap">add iodine solution.</text>`;
+    return svg(520, 380, body);
+  })();
+
+  /* ---------------- Rate of photosynthesis graphs ---------------- */
+  out["ec-rate"] = (() => {
+    const graph = (i, title, xl, pts, note) => {
+      const x0 = 30 + i * 205, y0 = 190, w = 160, hgt = 140;
+      const d = pts.map(([u, v], k) => `${k ? "L" : "M"}${(x0 + u * w).toFixed(1)} ${(y0 - v * hgt).toFixed(1)}`).join(" ");
+      return `<text x="${x0 + w / 2}" y="22" text-anchor="middle" class="title">${title}</text>
+        <line x1="${x0}" y1="${y0}" x2="${x0 + w + 6}" y2="${y0}" stroke="${INK}" stroke-width="2"/>
+        <line x1="${x0}" y1="${y0}" x2="${x0}" y2="${y0 - hgt - 8}" stroke="${INK}" stroke-width="2"/>
+        <path d="${d}" fill="none" stroke="${LEAF_EDGE}" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+        <text x="${x0 + w / 2}" y="${y0 + 20}" text-anchor="middle" class="cap">${xl} →</text>
+        <text x="${x0 - 10}" y="${y0 - hgt / 2}" text-anchor="middle" class="cap" transform="rotate(-90 ${x0 - 10} ${y0 - hgt / 2})">rate →</text>
+        ${note.map((t, k) => `<text x="${x0 + w / 2}" y="${y0 + 40 + k * 15}" text-anchor="middle" class="cap" style="font-size:11px">${t}</text>`).join("")}`;
+    };
+    const curve = f => Array.from({ length: 41 }, (_, k) => [k / 40, f(k / 40)]);
+    const body =
+      graph(0, "Light", "light intensity", curve(u => 0.82 * (1 - Math.exp(-u * 4.5))), ["rises, then levels off:", "something else runs short"]) +
+      graph(1, "Carbon dioxide", "CO₂ concentration", curve(u => 0.78 * (1 - Math.exp(-u * 4))), ["rises, then levels off"]) +
+      graph(2, "Temperature", "temperature", curve(u => u < 0.62 ? 0.06 + 0.84 * Math.pow(u / 0.62, 1.6) : Math.max(0, 0.9 - Math.pow((u - 0.62) / 0.3, 2) * 0.9)), ["rises to a best temperature,", "then falls fast (too hot)"]);
+    return svg(640, 260, body);
   })();
 
   return out;

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 380" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+
+    <path d="M120 244 V270" stroke="#3f7a2d" stroke-width="4" stroke-linecap="round"/>
+        <path d="M120 40 C190 60 212 130 180 190 C160 222 130 236 120 244 C110 236 80 222 60 190 C28 130 50 60 120 40Z" fill="#f4f2e4" stroke="#3f7a2d" stroke-width="2"/>
+        <path d="M120 66 C166 82 182 134 160 180 C146 204 128 214 120 220 C112 214 94 204 80 180 C58 134 74 82 120 66Z" fill="#7fbf5a"/>
+        <path d="M120 52 V238" stroke="#3f7a2d" stroke-width="1.5" opacity=".5"/>
+    <path d="M400 244 V270" stroke="#8a5a1a" stroke-width="4" stroke-linecap="round"/>
+        <path d="M400 40 C470 60 492 130 460 190 C440 222 410 236 400 244 C390 236 360 222 340 190 C308 130 330 60 400 40Z" fill="#e8a54a" stroke="#8a5a1a" stroke-width="2"/>
+        <path d="M400 66 C446 82 462 134 440 180 C426 204 408 214 400 220 C392 214 374 204 360 180 C338 134 354 82 400 66Z" fill="#1f2340"/>
+        <path d="M400 52 V238" stroke="#8a5a1a" stroke-width="1.5" opacity=".5"/>
+    <path d="M220 150 H300 m-10 -8 l10 8 -10 8" fill="none" stroke="#17181a" stroke-width="2.5"/>
+    <text x="260" y="136" text-anchor="middle" class="cap">starch test</text>
+    <text x="120" y="24" text-anchor="middle" class="title">Before</text>
+    <text x="400" y="24" text-anchor="middle" class="title">After iodine</text>
+    <text x="120" y="292" text-anchor="middle" class="cap">green middle: chlorophyll</text>
+    <text x="120" y="308" text-anchor="middle" class="cap">white edge: no chlorophyll</text>
+    <text x="400" y="292" text-anchor="middle" class="cap">blue-black: starch made here</text>
+    <text x="400" y="308" text-anchor="middle" class="cap">orange-brown: no starch</text>
+    <text x="20" y="338" class="cap">1 Boil the leaf in water.  2 Warm it in ethanol in a water bath (no flame)</text>
+    <text x="20" y="354" class="cap">to remove the chlorophyll.  3 Rinse in warm water.  4 Spread it out and</text>
+    <text x="20" y="370" class="cap">add iodine solution.</text>
+</svg>

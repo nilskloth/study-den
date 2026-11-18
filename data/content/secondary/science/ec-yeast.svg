@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 414" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<g transform="translate(40 0)">
+    <!-- water bath -->
+    <rect x="150" y="170" width="250" height="190" rx="6" fill="#fff" stroke="#6f8fa6" stroke-width="2.5"/>
+    <rect x="152" y="196" width="246" height="162" fill="#cfe6f5"/>
+    <!-- thermometer -->
+    <rect x="190" y="110" width="10" height="226" rx="5" fill="#fff" stroke="#6f8fa6" stroke-width="1.5"/>
+    <rect x="193" y="230" width="4" height="100" fill="#c0392b"/><circle cx="195" cy="334" r="8" fill="#c0392b"/>
+    <!-- boiling tube with yeast and sugar solution -->
+    <path d="M250 86 V315 A25 25 0 0 0 300 315 V86" fill="#eef6fb" stroke="#6f8fa6" stroke-width="2.5"/>
+        <path d="M252 160 V315 A23 23 0 0 0 298 315 V160Z" fill="#f1dfa8"/>
+    <circle cx="269" cy="175.0" r="2.5" fill="#fff" stroke="#6f8fa6" stroke-width="1"/><circle cx="280" cy="193.1" r="3.5" fill="#fff" stroke="#6f8fa6" stroke-width="1"/><circle cx="278" cy="211.3" r="4.5" fill="#fff" stroke="#6f8fa6" stroke-width="1"/><circle cx="276" cy="229.4" r="2.5" fill="#fff" stroke="#6f8fa6" stroke-width="1"/><circle cx="274" cy="247.5" r="3.5" fill="#fff" stroke="#6f8fa6" stroke-width="1"/><circle cx="272" cy="265.6" r="4.5" fill="#fff" stroke="#6f8fa6" stroke-width="1"/><circle cx="270" cy="283.8" r="2.5" fill="#fff" stroke="#6f8fa6" stroke-width="1"/><circle cx="281" cy="301.9" r="3.5" fill="#fff" stroke="#6f8fa6" stroke-width="1"/><circle cx="279" cy="320.0" r="4.5" fill="#fff" stroke="#6f8fa6" stroke-width="1"/>
+    <rect x="244" y="70" width="62" height="24" rx="4" fill="#5a4a3a"/>
+    <!-- delivery tube -->
+    <path d="M275 70 V40 H500 V300" fill="none" stroke="#6f8fa6" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M275 70 V40 H500 V300" fill="none" stroke="#eef6fb" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- limewater -->
+    <path d="M475 130 V315 A25 25 0 0 0 525 315 V130" fill="#eef6fb" stroke="#6f8fa6" stroke-width="2.5"/>
+        <path d="M477 190 V315 A23 23 0 0 0 523 315 V190Z" fill="#e4e8e6"/>
+    <path d="M500 130 V300" stroke="#6f8fa6" stroke-width="6"/><path d="M500 130 V300" stroke="#eef6fb" stroke-width="2.5"/>
+    <circle cx="494" cy="205.0" r="2.5" fill="#fff" stroke="#6f8fa6" stroke-width="1"/><circle cx="505" cy="223.0" r="3.5" fill="#fff" stroke="#6f8fa6" stroke-width="1"/><circle cx="503" cy="241.0" r="4.5" fill="#fff" stroke="#6f8fa6" stroke-width="1"/><circle cx="501" cy="259.0" r="2.5" fill="#fff" stroke="#6f8fa6" stroke-width="1"/><circle cx="499" cy="277.0" r="3.5" fill="#fff" stroke="#6f8fa6" stroke-width="1"/><circle cx="497" cy="295.0" r="4.5" fill="#fff" stroke="#6f8fa6" stroke-width="1"/>
+    
+  <g class="lbl" data-part="thermometer">
+    <line class="leader" x1="136" y1="130" x2="195" y2="130"/>
+    <circle class="dot" cx="195" cy="130" r="3.5"/>
+    <text class="name" x="130" y="134.5" text-anchor="end">Thermometer</text>
+    <g class="letter"><circle cx="121" cy="130" r="9.5"/><text x="121" y="134.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="bubbles">
+    <line class="leader" x1="136" y1="196" x2="280" y2="215"/>
+    <circle class="dot" cx="280" cy="215" r="3.5"/>
+    <text class="name" x="130" y="200.5" text-anchor="end">Bubbles of gas</text>
+    <g class="letter"><circle cx="121" cy="196" r="9.5"/><text x="121" y="200.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="mixture">
+    <line class="leader" x1="136" y1="262" x2="262" y2="290"/>
+    <circle class="dot" cx="262" cy="290" r="3.5"/>
+    <text class="name" x="130" y="266.5" text-anchor="end">Yeast + sugar solution</text>
+    <g class="letter"><circle cx="121" cy="262" r="9.5"/><text x="121" y="266.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="bath">
+    <line class="leader" x1="136" y1="330" x2="170" y2="345"/>
+    <circle class="dot" cx="170" cy="345" r="3.5"/>
+    <text class="name" x="130" y="334.5" text-anchor="end">Water bath</text>
+    <g class="letter"><circle cx="121" cy="330" r="9.5"/><text x="121" y="334.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="delivery">
+    <line class="leader" x1="414" y1="18" x2="400" y2="40"/>
+    <circle class="dot" cx="400" cy="40" r="3.5"/>
+    <text class="name" x="420" y="22.5" text-anchor="start">Delivery tube</text>
+    <g class="letter"><circle cx="429" cy="18" r="9.5"/><text x="429" y="22.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="limewater">
+    <line class="leader" x1="542" y1="250" x2="512" y2="250"/>
+    <circle class="dot" cx="512" cy="250" r="3.5"/>
+    <text class="name" x="548" y="254.5" text-anchor="start">Limewater</text>
+    <g class="letter"><circle cx="557" cy="250" r="9.5"/><text x="557" y="254.5" text-anchor="middle"></text></g>
+  </g>
+    <text x="20" y="386" class="cap">Yeast respires the sugar. The gas it gives off is carbon dioxide: it turns the limewater cloudy.</text>
+    <text x="20" y="404" class="cap">Count the bubbles in a minute to compare how fast the yeast respires (e.g. at different temperatures).</text></g>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 290" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<text x="150" y="26" text-anchor="middle" class="title">Standing on its end</text>
+      <text x="450" y="26" text-anchor="middle" class="title">Lying flat</text><rect x="10" y="220" width="280" height="60" fill="#e8d6a8" stroke="#b89c5a"/><rect x="310" y="220" width="280" height="60" fill="#e8d6a8" stroke="#b89c5a"/><rect x="60" y="120" width="40" height="116" fill="#b9770e" stroke="#17181a" stroke-width="1.5"/>
+      <path d="M50 220 Q56 238 60 236 M100 236 Q104 238 110 220" fill="none" stroke="#b89c5a" stroke-width="1.5"/>
+      <rect x="350" y="199" width="200" height="23" fill="#b9770e" stroke="#17181a" stroke-width="1.5"/><text x="120" y="58">weight = 30 N</text><text x="120" y="80">area = 0.01 m²</text><text x="120" y="102" font-weight="700" fill="#d35400">pressure = 3000 N/m²</text><text x="120" y="124">sinks in deeply</text><text x="330" y="58">weight = 30 N</text><text x="330" y="80">area = 0.05 m²</text><text x="330" y="102" font-weight="700" fill="#d35400">pressure = 600 N/m²</text><text x="330" y="124">hardly sinks in</text>
+</svg>

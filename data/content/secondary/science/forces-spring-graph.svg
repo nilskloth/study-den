@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 340" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<line x1="80" y1="290" x2="80" y2="50" stroke="#e4e2dc"/>
+      <text x="80" y="307" text-anchor="middle" font-size="12">0</text><line x1="130" y1="290" x2="130" y2="50" stroke="#e4e2dc"/>
+      <text x="130" y="307" text-anchor="middle" font-size="12">1</text><line x1="180" y1="290" x2="180" y2="50" stroke="#e4e2dc"/>
+      <text x="180" y="307" text-anchor="middle" font-size="12">2</text><line x1="230" y1="290" x2="230" y2="50" stroke="#e4e2dc"/>
+      <text x="230" y="307" text-anchor="middle" font-size="12">3</text><line x1="280" y1="290" x2="280" y2="50" stroke="#e4e2dc"/>
+      <text x="280" y="307" text-anchor="middle" font-size="12">4</text><line x1="330" y1="290" x2="330" y2="50" stroke="#e4e2dc"/>
+      <text x="330" y="307" text-anchor="middle" font-size="12">5</text><line x1="380" y1="290" x2="380" y2="50" stroke="#e4e2dc"/>
+      <text x="380" y="307" text-anchor="middle" font-size="12">6</text><line x1="430" y1="290" x2="430" y2="50" stroke="#e4e2dc"/>
+      <text x="430" y="307" text-anchor="middle" font-size="12">7</text><line x1="480" y1="290" x2="480" y2="50" stroke="#e4e2dc"/>
+      <text x="480" y="307" text-anchor="middle" font-size="12">8</text><line x1="80" y1="290" x2="480" y2="290" stroke="#e4e2dc"/><line x1="80" y1="266" x2="480" y2="266" stroke="#e4e2dc"/><line x1="80" y1="242" x2="480" y2="242" stroke="#e4e2dc"/><line x1="80" y1="218" x2="480" y2="218" stroke="#e4e2dc"/><line x1="80" y1="194" x2="480" y2="194" stroke="#e4e2dc"/><line x1="80" y1="170" x2="480" y2="170" stroke="#e4e2dc"/><line x1="80" y1="146" x2="480" y2="146" stroke="#e4e2dc"/><line x1="80" y1="122" x2="480" y2="122" stroke="#e4e2dc"/><line x1="80" y1="98" x2="480" y2="98" stroke="#e4e2dc"/><line x1="80" y1="74" x2="480" y2="74" stroke="#e4e2dc"/><line x1="80" y1="50" x2="480" y2="50" stroke="#e4e2dc"/><text x="72" y="294" text-anchor="end" font-size="12">0</text><text x="72" y="246" text-anchor="end" font-size="12">4</text><text x="72" y="198" text-anchor="end" font-size="12">8</text><text x="72" y="150" text-anchor="end" font-size="12">12</text><text x="72" y="102" text-anchor="end" font-size="12">16</text><text x="72" y="54" text-anchor="end" font-size="12">20</text>
+    <line x1="80" y1="290" x2="500" y2="290" stroke="#3b3e42" stroke-width="2"/>
+    <line x1="80" y1="290" x2="80" y2="30" stroke="#3b3e42" stroke-width="2"/>
+    <path d="M492 285 L500 290 L492 295" fill="none" stroke="#3b3e42" stroke-width="2"/>
+    <path d="M75 38 L80 30 L85 38" fill="none" stroke="#3b3e42" stroke-width="2"/>
+    <text x="290" y="330" text-anchor="middle">force (N)</text>
+    <text x="34" y="160" text-anchor="middle" transform="rotate(-90 34 160)">extension (cm)</text><path d="M80 290 L330 170 Q380 146 430 74" fill="none" stroke="#2c6fbb" stroke-width="3"/><circle cx="80" cy="290" r="4" fill="#17181a"/><circle cx="130" cy="266" r="4" fill="#17181a"/><circle cx="180" cy="242" r="4" fill="#17181a"/><circle cx="230" cy="218" r="4" fill="#17181a"/><circle cx="280" cy="194" r="4" fill="#17181a"/><circle cx="330" cy="170" r="4" fill="#17181a"/><circle cx="380" cy="134" r="4" fill="#17181a"/><circle cx="430" cy="74" r="4" fill="#17181a"/><circle cx="330" cy="170" r="9" fill="none" stroke="#d35400" stroke-width="2.5"/>
+      <text x="340" y="198" fill="#d35400" font-weight="700">limit of proportionality</text>
+      <text x="95" y="86" font-weight="700">straight line through 0:</text>
+      <text x="95" y="103">extension is proportional to force</text>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 320" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+
+    <rect x="60" y="92" width="115" height="34" rx="4" fill="#c0392b" stroke="#7b2219" stroke-width="2"/>
+    <rect x="60" y="174" width="115" height="34" rx="4" fill="#2c6fb7" stroke="#1b4677" stroke-width="2"/>
+    <rect x="60" y="126" width="40" height="48" fill="#8d9399" stroke="#5c6168" stroke-width="2"/><rect x="100" y="140" width="112" height="20" fill="#8d9399" stroke="#5c6168" stroke-width="2"/>
+    <text x="105" y="114" text-anchor="middle" fill="#fff" font-weight="700">N</text>
+    <text x="105" y="196" text-anchor="middle" fill="#fff" font-weight="700">S</text>
+    
+    <rect x="156" y="128" width="4.5" height="44" rx="2" fill="#c77d32" stroke="#8a5216" stroke-width="1"/><rect x="163" y="128" width="4.5" height="44" rx="2" fill="#c77d32" stroke="#8a5216" stroke-width="1"/><rect x="170" y="128" width="4.5" height="44" rx="2" fill="#c77d32" stroke="#8a5216" stroke-width="1"/><rect x="177" y="128" width="4.5" height="44" rx="2" fill="#c77d32" stroke="#8a5216" stroke-width="1"/><rect x="184" y="128" width="4.5" height="44" rx="2" fill="#c77d32" stroke="#8a5216" stroke-width="1"/><rect x="191" y="128" width="4.5" height="44" rx="2" fill="#c77d32" stroke="#8a5216" stroke-width="1"/><rect x="198" y="128" width="4.5" height="44" rx="2" fill="#c77d32" stroke="#8a5216" stroke-width="1"/>
+    <path d="M212 128 L340 40 L352 40 L352 260 L340 260 L212 172 Z" fill="#e9e4da" stroke="#5c6168" stroke-width="2.5" stroke-linejoin="round"/>
+    <line x1="364" y1="150" x2="388" y2="150" stroke="#17181a" stroke-width="1.8"/><path d="M366.3 147.0 L360.0 150.0 L366.3 153.0" fill="none" stroke="#17181a" stroke-width="2.2" stroke-linejoin="round"/><path d="M385.7 153.0 L392.0 150.0 L385.7 147.0" fill="none" stroke="#17181a" stroke-width="2.2" stroke-linejoin="round"/>
+    <text x="378" y="276" text-anchor="middle" class="cap">the cone moves in and out</text>
+    <path d="M400 100 q24 50 0 100" fill="none" stroke="#2f6fb0" stroke-width="3" stroke-linecap="round" opacity="1"/><path d="M434 100 q24 50 0 100" fill="none" stroke="#2f6fb0" stroke-width="3" stroke-linecap="round" opacity="0.75"/><path d="M468 100 q24 50 0 100" fill="none" stroke="#2f6fb0" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+    <path d="M192 172 C192 236 140 250 40 250 M204 172 C204 252 140 266 40 266" fill="none" stroke="#17181a" stroke-width="2.2"/>
+    <text x="34" y="304" class="cap">changing current from the amplifier</text>
+    
+  <g class="lbl" data-part="magnet">
+    <line class="leader" x1="34" y1="30" x2="80" y2="100"/>
+    <circle class="dot" cx="80" cy="100" r="3.5"/>
+    <text class="name" x="40" y="34.5" text-anchor="start">Permanent magnet</text>
+    <g class="letter"><circle cx="49" cy="30" r="9.5"/><text x="49" y="34.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="coil">
+    <line class="leader" x1="256" y1="70" x2="196" y2="130"/>
+    <circle class="dot" cx="196" cy="130" r="3.5"/>
+    <text class="name" x="250" y="74.5" text-anchor="end">Coil of wire</text>
+    <g class="letter"><circle cx="241" cy="70" r="9.5"/><text x="241" y="74.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="cone">
+    <line class="leader" x1="296" y1="22" x2="290" y2="90"/>
+    <circle class="dot" cx="290" cy="90" r="3.5"/>
+    <text class="name" x="302" y="26.5" text-anchor="start">Cone</text>
+    <g class="letter"><circle cx="311" cy="22" r="9.5"/><text x="311" y="26.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="sound">
+    <line class="leader" x1="464" y1="60" x2="446" y2="116"/>
+    <circle class="dot" cx="446" cy="116" r="3.5"/>
+    <text class="name" x="470" y="64.5" text-anchor="start">Sound wave</text>
+    <g class="letter"><circle cx="479" cy="60" r="9.5"/><text x="479" y="64.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="wires">
+    <line class="leader" x1="66" y1="228" x2="100" y2="251"/>
+    <circle class="dot" cx="100" cy="251" r="3.5"/>
+    <text class="name" x="60" y="232.5" text-anchor="end">Wires</text>
+    <g class="letter"><circle cx="51" cy="228" r="9.5"/><text x="51" y="232.5" text-anchor="middle"></text></g>
+  </g>
+</svg>

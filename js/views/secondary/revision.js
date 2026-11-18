@@ -42,6 +42,7 @@ import { renderSelfMark } from "../../render/selfmark.js";
 import { esc, pickN, shuffle, normaliseText } from "../../core/utils.js";
 import { newStat, weightedPick, applyResult } from "../../core/adaptive.js";
 import { vocabState } from "./langs.js";
+import { profileById, activeProfileId } from "../../core/profiles.js";
 import { seg } from "./vocab.js";
 import { checkMaths } from "../../core/maths-match.js";
 import { GENERATORS } from "../../gen/ks3maths.js";
@@ -320,8 +321,11 @@ function renderSetup(ctx) {
   if (ctx.order?.updated && prefs.orderSeen !== ctx.order.updated) { prefs.topics = []; prefs.orderSeen = ctx.order.updated; }
   let selected = new Set((prefs.topics || []).filter(id => valid.has(id)));
   if (!selected.size) {
+    /* what's taught now, in the child's own school year (Year 8 = syllabus part 2) */
     const now = new Set((ctx.order || []).filter(o => o.status === "now").map(o => o.idea));
-    bank.topics.filter(t => !bank.ideas || !t.idea || now.has(t.idea)).forEach(t => selected.add(t.id));
+    const part = /8/.test(profileById(activeProfileId())?.year || "") ? 2 : 1;
+    bank.topics.filter(t => !bank.ideas || !t.idea || (now.has(t.idea) && (!t.part || t.part === part)))
+      .forEach(t => selected.add(t.id));
   }
 
   const masteredIn = t => t.questions.filter(q => mastered(state.stats[q.id])).length;
@@ -498,6 +502,20 @@ const LABEL_NAMES = {
   "ec-flower": ["Parts of a flower", "parts"],
   "gn-female": ["Female reproductive system", "parts"], "gn-male": ["Male reproductive system", "parts"],
   "gn-gametes": ["Sperm and egg cells", "parts"], "gn-cycle": ["The menstrual cycle", "stages"], "gn-pregnancy": ["Foetus in the uterus", "parts"],
+  /* Year 8 */
+  "forces-equilibrium": ["Forces in balance", "forces"], "forces-spring-setup": ["Stretching a spring", "parts"],
+  "forces-hydraulic": ["Hydraulic jack", "parts"],
+  "em-electromagnet": ["An electromagnet", "parts"], "em-bell": ["An electric bell", "parts"], "em-bar-field": ["Field round a bar magnet", "parts"],
+  "en-lever": ["A lever", "parts"], "en-motor-lift": ["Motor lifting a weight", "parts"], "en-flask": ["Vacuum flask", "parts"],
+  "en-house": ["Insulating a house", "parts"],
+  "wv-spectrum": ["The electromagnetic spectrum", "types"], "wv-speaker": ["A loudspeaker", "parts"],
+  "wv-types": ["Transverse and longitudinal waves", "parts"], "wv-meet": ["A wave meeting a material", "parts"],
+  "mt-periodic-table": ["The periodic table", "parts"],
+  "rx-combustion-test": ["Testing combustion products", "parts"], "rx-decomp": ["Heating copper carbonate", "parts"],
+  "ea-carbon-cycle": ["The carbon cycle", "processes"], "ea-greenhouse": ["The greenhouse effect", "parts"],
+  "or-lungs": ["The lungs", "parts"], "or-gut": ["The digestive system", "parts"], "or-belljar": ["Bell jar model", "parts"],
+  "ec-yeast": ["Yeast experiment", "parts"], "ec-leaf": ["Inside a leaf", "parts"],
+  "gn-dna": ["From cell to gene", "parts"],
   world: ["Continents and oceans", "places"],
   places: ["The 7 natural wonders", "wonders"],
   antarctica: ["Antarctica", "places"],

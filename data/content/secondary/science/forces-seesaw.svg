@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<rect x="60" y="144" width="440" height="10" rx="3" fill="#a0522d"/>
+      <path d="M280 154 L255 190 H305Z" fill="#7f8c8d" stroke="#17181a" stroke-width="1.5"/>
+      <text x="280" y="26" text-anchor="middle" class="title">Balanced: anticlockwise moment = clockwise moment</text><rect x="100" y="104" width="60" height="40" rx="6" fill="#16a085" stroke="#17181a" stroke-width="1.5"/>
+      <text x="130" y="129" text-anchor="middle" font-weight="700" style="fill:#fff">400 N</text><rect x="350" y="104" width="60" height="40" rx="6" fill="#8e44ad" stroke="#17181a" stroke-width="1.5"/>
+      <text x="380" y="129" text-anchor="middle" font-weight="700" style="fill:#fff">600 N</text><line x1="130" y1="60" x2="130" y2="90" stroke="#d35400" stroke-width="4"/>
+      <polygon points="130,100 137,90 123,90" fill="#d35400"/><line x1="380" y1="60" x2="380" y2="90" stroke="#d35400" stroke-width="4"/>
+      <polygon points="380,100 387,90 373,90" fill="#d35400"/><path d="M130 200 H280 M130 193 V207 M280 193 V207" stroke="#17181a" stroke-width="1.5"/>
+      <text x="205" y="222" text-anchor="middle" font-weight="700">3 m</text><path d="M280 200 H380 M280 193 V207 M380 193 V207" stroke="#17181a" stroke-width="1.5"/>
+      <text x="330" y="222" text-anchor="middle" font-weight="700">2 m</text><text x="312" y="184" class="cap">pivot</text>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+
+      <text x="90" y="28" text-anchor="middle" class="title">Father's body cell</text>
+      <circle cx="90" cy="82" r="40" fill="#fff3d6" stroke="#b5651d" stroke-width="2.5"/>
+      <circle cx="90" cy="82" r="18" fill="#9b59b6" stroke="#6c3483" stroke-width="1.5"/>
+      <text x="90" y="88" text-anchor="middle" font-size="17" font-weight="700" style="fill:#fff">46</text>
+      <text x="90" y="190" text-anchor="middle" class="title">Mother's body cell</text>
+      <circle cx="90" cy="244" r="40" fill="#fff3d6" stroke="#b5651d" stroke-width="2.5"/>
+      <circle cx="90" cy="244" r="18" fill="#9b59b6" stroke="#6c3483" stroke-width="1.5"/>
+      <text x="90" y="250" text-anchor="middle" font-size="17" font-weight="700" style="fill:#fff">46</text>
+      <line x1="136" y1="82" x2="223" y2="82" stroke="#17181a" stroke-width="2"/>
+        <path d="M232 82 L223 87 L223 77Z" fill="#17181a"/><line x1="136" y1="244" x2="223" y2="244" stroke="#17181a" stroke-width="2"/>
+        <path d="M232 244 L223 249 L223 239Z" fill="#17181a"/>
+      <text x="184" y="70" text-anchor="middle" class="cap">makes</text>
+      <text x="184" y="232" text-anchor="middle" class="cap">makes</text>
+      <text x="290" y="28" text-anchor="middle" class="title">Sperm</text>
+      <ellipse cx="272" cy="82" rx="22" ry="15" fill="#cfe5f5" stroke="#4a7fa8" stroke-width="2"/>
+      <path d="M294 82 c8 -8 14 8 22 0 s14 8 22 0" fill="none" stroke="#4a7fa8" stroke-width="2.5"/>
+      <text x="272" y="88" text-anchor="middle" font-size="16" font-weight="700">23</text>
+      <text x="290" y="190" text-anchor="middle" class="title">Egg</text>
+      <circle cx="290" cy="244" r="38" fill="#fff3d6" stroke="#b5651d" stroke-width="2.5"/>
+      <circle cx="290" cy="244" r="17.1" fill="#9b59b6" stroke="#6c3483" stroke-width="1.5"/>
+      <text x="290" y="250" text-anchor="middle" font-size="17" font-weight="700" style="fill:#fff">23</text>
+      <line x1="340" y1="96" x2="424.23825794561526" y2="145.444194881122" stroke="#17181a" stroke-width="2"/>
+        <path d="M432 150 L421.70725510179415 149.75627380022465 L426.7692607894364 141.13211596201936Z" fill="#17181a"/><line x1="334" y1="232" x2="424.1858117208799" y2="180.4652504452115" stroke="#17181a" stroke-width="2"/>
+        <path d="M432 176 L426.66650641266403 184.8064661558338 L421.70511702909573 176.1240347345892Z" fill="#17181a"/>
+      <text x="488" y="98" text-anchor="middle" class="title">Fertilised egg</text>
+      <circle cx="488" cy="164" r="44" fill="#fff3d6" stroke="#b5651d" stroke-width="2.5"/>
+      <circle cx="488" cy="164" r="19.8" fill="#9b59b6" stroke="#6c3483" stroke-width="1.5"/>
+      <text x="488" y="170" text-anchor="middle" font-size="17" font-weight="700" style="fill:#fff">46</text>
+      <text x="488" y="234" text-anchor="middle" class="cap">23 from each parent</text>
+      <text x="488" y="250" text-anchor="middle" class="cap">= 46 (23 pairs)</text>
+      <text x="300" y="306" text-anchor="middle" class="cap">The numbers are chromosomes in each nucleus. Sex cells carry half.</text>
+</svg>

@@ -1,5 +1,5 @@
 /* =========================================================
-   Earth (big idea "earth", Year 7 part 1): Earth structure + Universe.
+   Earth (big idea "earth"): Year 7 Earth structure + Universe; Year 8 climate + Earth resources.
    Built by tools/build-science-art.mjs → data/content/secondary/science/ea-*.svg
    ========================================================= */
 
@@ -284,6 +284,189 @@ export default function (h) {
     b += `<text x="${cx}" y="${cy - 60}" text-anchor="middle" class="cap">Moon's orbit</text>`;
     b += `<text x="20" y="485" class="cap">Inner ring: the Moon from above. Outer ring: how it looks from the UK.</text>`;
     return svg(700, 500, b + L);
+  })();
+
+  /* =========================================================
+     Year 8 (part 2): climate and Earth resources
+     ========================================================= */
+
+  /* ---------------- The carbon cycle ---------------- */
+  out["ea-carbon-cycle"] = (() => {
+    const GREEN = "#2e8b57", GREY = "#6a6d71";
+    const G = 300;                      // ground level
+    const elbow = (pts, col, w) => {    // an arrow with corners
+      const [x1, y1] = pts[pts.length - 2], [x2, y2] = pts[pts.length - 1];
+      return `<polyline points="${pts.map(p => p.join(",")).join(" ")}" fill="none" stroke="${col}" stroke-width="${w}" stroke-linejoin="round" stroke-linecap="round"/>` +
+        arrowHead(x2, y2, Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI).replace(INK, col);
+    };
+    let b = "";
+    // sky, ground, underground rock
+    b += `<rect x="0" y="0" width="700" height="${G}" fill="#eef6fc"/>
+      <rect x="0" y="${G}" width="700" height="${500 - G}" fill="#c9b08a"/>
+      <rect x="0" y="${G}" width="700" height="14" fill="#7aa95c"/>`;
+    // ocean on the left
+    b += `<path d="M0 ${G - 8} L130 ${G - 8} L130 ${G + 60} Q65 ${G + 80} 0 ${G + 70}Z" fill="${SEA}"/>`;
+    for (const x of [10, 50, 90]) b += `<path d="M${x} ${G - 8} q8 -7 16 0 q8 7 16 0" fill="none" stroke="#fff" stroke-width="2"/>`;
+    b += `<text x="65" y="${G + 40}" text-anchor="middle" class="cap" style="fill:#fff">ocean</text>`;
+    // fossil fuels underground
+    b += `<rect x="270" y="440" width="420" height="40" rx="8" fill="#3a3330"/>
+      <text x="480" y="465" text-anchor="middle" class="title" style="fill:#fff">Fossil fuels: coal, oil and gas</text>`;
+    b += `<text x="290" y="430" class="cap">buried for millions of years</text>`;
+    // air box
+    b += `<rect x="250" y="16" width="270" height="50" rx="12" fill="#fff" stroke="${GREY}" stroke-width="2"/>
+      <text x="385" y="38" text-anchor="middle" class="title">Carbon dioxide in the air</text>
+      <text x="385" y="56" text-anchor="middle" class="cap">about 0.04 % of the air</text>`;
+    // tree
+    const tx = 300;
+    b += `<rect x="${tx - 9}" y="${G - 70}" width="18" height="74" fill="#8b5a2b"/>
+      <circle cx="${tx}" cy="${G - 100}" r="44" fill="${LAND}"/>
+      <circle cx="${tx - 28}" cy="${G - 80}" r="25" fill="#5b9a43"/><circle cx="${tx + 28}" cy="${G - 82}" r="25" fill="#5b9a43"/>`;
+    // sheep
+    {
+      const x = 450, y = G - 34;
+      b += `<ellipse cx="${x}" cy="${y}" rx="34" ry="22" fill="#fbfbf6" stroke="${GREY}" stroke-width="1.5"/>
+        <ellipse cx="${x + 36}" cy="${y - 10}" rx="12" ry="9" fill="#444"/>
+        <line x1="${x - 18}" y1="${y + 18}" x2="${x - 18}" y2="${G + 2}" stroke="#444" stroke-width="5"/>
+        <line x1="${x + 16}" y1="${y + 18}" x2="${x + 16}" y2="${G + 2}" stroke="#444" stroke-width="5"/>`;
+    }
+    // dead leaves + mushrooms (decomposers)
+    {
+      const x = 565;
+      b += `<ellipse cx="${x}" cy="${G + 4}" rx="30" ry="7" fill="#a0522d"/>
+        <rect x="${x - 14}" y="${G - 16}" width="6" height="16" fill="#f3e6d0"/><path d="M${x - 24} ${G - 14} q13 -18 26 0Z" fill="#c0532b"/>
+        <rect x="${x + 8}" y="${G - 12}" width="5" height="12" fill="#f3e6d0"/><path d="M${x} ${G - 10} q10.5 -14 21 0Z" fill="#c0532b"/>`;
+    }
+    // factory with chimney
+    {
+      const x = 650;
+      b += `<rect x="${x - 40}" y="${G - 50}" width="70" height="52" fill="#9a8f86"/>
+        <rect x="${x + 6}" y="${G - 100}" width="16" height="52" fill="#7d736b"/>
+        <path d="M${x - 40} ${G - 50} l17 -16 v16 l17 -16 v16 l17 -16 v16" fill="#9a8f86"/>
+        <circle cx="${x + 14}" cy="${G - 112}" r="9" fill="#cfcfcf"/><circle cx="${x + 22}" cy="${G - 126}" r="11" fill="#dcdcdc"/>`;
+    }
+    // processes
+    b += elbow([[24, G - 14], [24, 34], [244, 34]], GREY, 2);               // carbon dioxide leaving the ocean
+    b += elbow([[248, 56], [70, 56], [70, G - 14]], GREEN, 3);               // dissolving into the ocean
+    b += arrow(322, 70, 300, 150, GREEN, 3);                                  // photosynthesis: air → tree
+    b += arrow(332, 150, 360, 72, GREY, 2);                                   // plant respiration (unlabelled)
+    b += arrow(450, 248, 450, 72, GREY, 3);                                   // animal respiration
+    b += arrow(358, G - 40, 406, G - 40, INK, 3);                             // feeding: tree → sheep
+    b += arrow(490, G - 18, 532, G - 6, INK, 3);                              // death and decay → decomposers
+    b += arrow(560, G - 26, 498, 72, GREY, 2);                                // decomposer respiration (unlabelled)
+    b += arrow(565, G + 16, 565, 432, INK, 3);                                // fossilisation
+    b += arrow(670, 438, 670, G + 10, "#5c5f63", 2.5);                        // fuels dug up
+    b += `<text x="660" y="${G + 70}" text-anchor="end" class="cap">dug up,</text><text x="660" y="${G + 86}" text-anchor="end" class="cap">drilled</text>`;
+    b += arrow(652, G - 140, 524, 58, GREY, 3);                               // combustion
+    b += `<text x="10" y="494" class="cap">Green: carbon dioxide taken out of the air. Grey: carbon dioxide put back.</text>`;
+    const L = [
+      label("dissolving", "Dissolving in the oceans", [70, 112], [90, 112]),
+      label("photosynthesis", "Photosynthesis", [313, 104], [250, 142], "end"),
+      label("respiration", "Respiration", [450, 150], [440, 128], "end"),
+      label("feeding", "Feeding", [382, G - 40], [370, G + 40]),
+      label("decay", "Death and decay", [511, G - 12], [480, G + 56]),
+      label("fossilisation", "Fossilisation", [565, 380], [450, 395], "end"),
+      label("combustion", "Combustion", [588, 99], [604, 92])
+    ].join("");
+    return svg(700, 500, b + L);
+  })();
+
+  /* ---------------- The greenhouse effect ---------------- */
+  out["ea-greenhouse"] = (() => {
+    const RED = "#c0392b";
+    let b = `<rect x="0" y="0" width="620" height="420" fill="${SPACE}"/>`;
+    for (let i = 0; i < 30; i++) b += `<circle cx="${(rnd() * 620).toFixed(0)}" cy="${(rnd() * 110).toFixed(0)}" r="${(0.6 + rnd()).toFixed(1)}" fill="#fff" opacity=".6"/>`;
+    // atmosphere band
+    b += `<rect x="0" y="130" width="620" height="200" fill="#bcd9f0"/>
+      <rect x="0" y="130" width="620" height="60" fill="#9cc3e4"/>`;
+    for (let i = 0; i < 46; i++) b += `<circle cx="${(8 + rnd() * 604).toFixed(0)}" cy="${(138 + rnd() * 46).toFixed(0)}" r="3" fill="#3d6f99"/>`;
+    // ground
+    b += `<path d="M0 330 Q310 300 620 330 L620 420 L0 420Z" fill="${LAND}"/>
+      <path d="M0 360 Q310 335 620 360" fill="none" stroke="#4f8a3a" stroke-width="2"/>`;
+    // sun
+    b += `<circle cx="60" cy="40" r="52" fill="${SUN}" stroke="${SUN_EDGE}" stroke-width="3"/>`;
+    b += `<text x="560" y="28" text-anchor="middle" class="cap" style="fill:#c9d3e6">space</text>`;
+    // sunlight in
+    b += arrow(110, 70, 250, 312, SUN_EDGE, 4);
+    // infrared out from the ground
+    const wavy = (x1, y1, x2, y2, col) => {
+      const dx = x2 - x1, dy = y2 - y1, len = Math.hypot(dx, dy), ux = dx / len, uy = dy / len, nx = -uy, ny = ux;
+      let d = `M${x1} ${y1}`;
+      const n = Math.floor((len - 12) / 6);
+      for (let i = 1; i <= n; i++) { const s = i * 6, w = Math.sin(i * Math.PI / 2) * 5; d += ` L${(x1 + ux * s + nx * w).toFixed(1)} ${(y1 + uy * s + ny * w).toFixed(1)}`; }
+      d += ` L${x2} ${y2}`;
+      const ang = Math.atan2(dy, dx) * 180 / Math.PI;
+      return `<path d="${d}" fill="none" stroke="${col}" stroke-width="2.8" stroke-linejoin="round"/>` + arrowHead(x2, y2, ang).replace(INK, col);
+    };
+    b += wavy(290, 312, 360, 196, RED);               // up from the ground into the gases
+    b += wavy(375, 168, 470, 18, RED);                // part escapes to space
+    b += wavy(395, 192, 460, 306, RED);               // part is sent back down
+    b += `<text x="310" y="404" text-anchor="middle" class="title" style="fill:#fff">The Earth's surface warms up</text>`;
+    const L = [
+      label("sunlight", "Sunlight", [160, 155], [150, 110], "end"),
+      label("infrared", "Infrared from the Earth", [320, 262], [210, 250], "end"),
+      label("gases", "Greenhouse gases", [560, 168], [600, 225], "end"),
+      label("escape", "Lost to space", [440, 70], [500, 70]),
+      label("back", "Sent back to Earth", [440, 270], [480, 290])
+    ].join("");
+    // names sit on dark or light; give them a white halo so they read on both
+    return svg(620, 420, b + L.replace(/class="name"/g, `class="name" style="paint-order:stroke;stroke:#fff;stroke-width:4px"`));
+  })();
+
+  /* ---------------- Carbon dioxide and temperature since 1850 (a visual aid) ---------------- */
+  out["ea-co2-graph"] = (() => {
+    const X0 = 70, X1 = 600, yr = y => X0 + (y - 1850) / (2025 - 1850) * (X1 - X0);
+    const panel = (top, h, lo, hi, ticks, data, col, title, unit) => {
+      const Y = v => top + h - (v - lo) / (hi - lo) * h;
+      let g = `<text x="${X0}" y="${top - 10}" class="title">${title}</text>`;
+      g += `<line x1="${X0}" y1="${top}" x2="${X0}" y2="${top + h}" stroke="${INK}" stroke-width="1.5"/>
+        <line x1="${X0}" y1="${top + h}" x2="${X1}" y2="${top + h}" stroke="${INK}" stroke-width="1.5"/>`;
+      for (const t of ticks) g += `<line x1="${X0}" y1="${Y(t)}" x2="${X1}" y2="${Y(t)}" stroke="#d9d9d9" stroke-width="1"/>
+        <text x="${X0 - 8}" y="${Y(t) + 4}" text-anchor="end" class="cap">${t}</text>`;
+      g += `<polyline points="${data.map(([y, v]) => `${yr(y).toFixed(1)},${Y(v).toFixed(1)}`).join(" ")}" fill="none" stroke="${col}" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>`;
+      g += `<text x="${X0 + 6}" y="${top + 14}" class="cap">${unit}</text>`;
+      return g;
+    };
+    let b = "";
+    b += panel(40, 140, 280, 430, [300, 350, 400],
+      [[1850, 285], [1880, 291], [1900, 296], [1920, 303], [1940, 310], [1960, 317], [1970, 326], [1980, 339], [1990, 354], [2000, 369], [2010, 390], [2020, 413], [2025, 426]],
+      "#5c5f63", "Carbon dioxide in the air", "parts per million");
+    b += panel(240, 140, -0.4, 1.6, [0, 0.5, 1, 1.5],
+      [[1850, 0], [1880, 0], [1910, -0.15], [1940, 0.15], [1960, 0.1], [1975, 0.15], [1985, 0.4], [2000, 0.65], [2010, 0.9], [2020, 1.2], [2025, 1.4]],
+      "#c0392b", "Average temperature of the Earth", "°C warmer than in the late 1800s");
+    for (const y of [1850, 1900, 1950, 2000]) b += `<text x="${yr(y)}" y="400" text-anchor="middle" class="cap">${y}</text>`;
+    b += `<text x="${(X0 + X1) / 2}" y="424" text-anchor="middle" class="cap">Year (rough figures, smoothed)</text>`;
+    return svg(620, 434, b);
+  })();
+
+  /* ---------------- How metals are extracted: the reactivity series (a visual aid) ---------------- */
+  out["ea-extraction"] = (() => {
+    const metals = [["Potassium", "K"], ["Sodium", "Na"], ["Lithium", "Li"], ["Calcium", "Ca"], ["Magnesium", "Mg"], ["Aluminium", "Al"],
+      ["CARBON", "C"], ["Zinc", "Zn"], ["Iron", "Fe"], ["Copper", "Cu"], ["Silver", "Ag"], ["Gold", "Au"]];
+    const groups = { 0: "#e6dcf2", 7: "#f6e3c4", 10: "#f7efc2" };
+    let b = `<text x="20" y="24" class="title">Most reactive</text><text x="20" y="438" class="title">Least reactive</text>`;
+    b += arrow(150, 34, 150, 418, INK, 2.5);
+    let y = 40, fill = groups[0];
+    metals.forEach(([name, sym], i) => {
+      if (groups[i]) fill = groups[i];
+      if (name === "CARBON") {
+        b += `<line x1="170" y1="${y + 15}" x2="600" y2="${y + 15}" stroke="${INK}" stroke-width="2" stroke-dasharray="7 5"/>
+          <rect x="190" y="${y + 3}" width="160" height="24" rx="12" fill="${INK}"/>
+          <text x="270" y="${y + 20}" text-anchor="middle" class="title" style="fill:#fff">carbon goes here</text>`;
+      } else {
+        b += `<rect x="190" y="${y + 2}" width="160" height="26" rx="6" fill="${fill}" stroke="#9a9da1" stroke-width="1"/>
+          <text x="204" y="${y + 20}" class="title">${name}</text><text x="338" y="${y + 20}" text-anchor="end" class="cap">${sym}</text>`;
+      }
+      y += 31;
+    });
+    const brace = (y1, y2, lines) => {
+      let g = `<path d="M366 ${y1} q10 0 10 10 V${(y1 + y2) / 2 - 8} q0 8 8 8 q-8 0 -8 8 V${y2 - 10} q0 10 -10 10" fill="none" stroke="${INK}" stroke-width="2"/>`;
+      lines.forEach((t, k) => { g += `<text x="396" y="${(y1 + y2) / 2 - (lines.length - 1) * 9 + k * 18 + 4}" class="${k ? "cap" : "title"}">${t}</text>`; });
+      return g;
+    };
+    b += brace(42, 226, ["Electrolysis", "more reactive than carbon,", "so carbon cannot take", "the oxygen away"]);
+    b += brace(259, 350, ["Heat with carbon", "less reactive than carbon,", "so carbon displaces them"]);
+    b += brace(352, 412, ["Found as the metal", "so unreactive they are", "often found pure"]);
+    return svg(620, 450, b);
   })();
 
   return out;

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 310" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<rect x="30" y="30" width="460" height="260" fill="#fbfaf6" stroke="#5c5f63" stroke-width="4"/><rect x="40" y="196" width="34" height="74" rx="3" fill="#f2f2ee" stroke="#6f7b86" stroke-width="2"/><line x1="46" y1="202" x2="46" y2="264" stroke="#6f7b86" stroke-width="1.5"/><line x1="53.5" y1="202" x2="53.5" y2="264" stroke="#6f7b86" stroke-width="1.5"/><line x1="61" y1="202" x2="61" y2="264" stroke="#6f7b86" stroke-width="1.5"/><line x1="68.5" y1="202" x2="68.5" y2="264" stroke="#6f7b86" stroke-width="1.5"/><rect x="484" y="80" width="12" height="90" fill="#cfe3f2" stroke="#6f7b86" stroke-width="2"/><path d="M98 240 V80 Q98 62 116 62 H200 m-10 -9 l10 9 l-10 9" fill="none" stroke="#c0392b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M200 62 H400 Q440 62 440 92 V120" fill="none" stroke="#b0607a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M440 110 V250 m-9 -11 l9 11 l9 -11" fill="none" stroke="#2f80c0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M440 250 Q440 266 420 266 H120 m10 -9 l-10 9 l10 9" fill="none" stroke="#2f80c0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M98 120 v-30 m-9 12 l9 -12 l9 12" fill="none" stroke="#c0392b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="112" y="150" font-weight="700" style="fill:#c0392b">warm air rises</text>
+      <text x="112" y="167" class="cap">(it expands and becomes</text><text x="112" y="182" class="cap">less dense)</text>
+      <text x="426" y="190" text-anchor="end" font-weight="700" style="fill:#2f80c0">cool air sinks</text>
+      <text x="426" y="207" text-anchor="end" class="cap">(denser)</text>
+      <text x="270" y="50" text-anchor="middle" class="cap">spreads across the ceiling and cools</text>
+      <text x="270" y="256" text-anchor="middle" class="cap">flows back to the radiator along the floor</text>
+      <text x="270" y="120" text-anchor="middle" class="title">convection current</text>
+      <text x="57" y="188" text-anchor="middle" class="cap">radiator</text>
+      <text x="504" y="130" class="cap">cold</text><text x="504" y="145" class="cap">window</text>
+</svg>

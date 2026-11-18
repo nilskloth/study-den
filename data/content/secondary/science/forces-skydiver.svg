@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 690 370" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<text x="115" y="24" text-anchor="middle" class="title">Just jumped</text><circle cx="115" cy="179" r="11" fill="#efe0d0" stroke="#b89d86" stroke-width="1.5"/>
+      <rect x="103" y="191" width="24" height="40" rx="8" fill="#e67e22" stroke="#17181a" stroke-width="1.5"/>
+      <path d="M105 197 L77 175 M125 197 L153 175 M109 229 L89 257 M121 229 L141 257" stroke="#e67e22" stroke-width="8" stroke-linecap="round"/><line x1="115" y1="235" x2="115" y2="311" stroke="#d35400" stroke-width="5"/>
+      <polygon points="115,325 123,311 107,311" fill="#d35400"/><line x1="115" y1="165" x2="115" y2="150" stroke="#2c6fbb" stroke-width="4"/>
+      <polygon points="115,140 108,150 122,150" fill="#2c6fbb"/><text x="127" y="317" font-weight="700" fill="#d35400">weight</text><text x="127" y="154" font-weight="700" fill="#2c6fbb">drag</text><text x="115" y="358" text-anchor="middle" class="cap">drag smaller than weight: speeds up</text><text x="345" y="24" text-anchor="middle" class="title">Terminal velocity</text><circle cx="345" cy="179" r="11" fill="#efe0d0" stroke="#b89d86" stroke-width="1.5"/>
+      <rect x="333" y="191" width="24" height="40" rx="8" fill="#e67e22" stroke="#17181a" stroke-width="1.5"/>
+      <path d="M335 197 L307 175 M355 197 L383 175 M339 229 L319 257 M351 229 L371 257" stroke="#e67e22" stroke-width="8" stroke-linecap="round"/><line x1="345" y1="235" x2="345" y2="311" stroke="#d35400" stroke-width="5"/>
+      <polygon points="345,325 353,311 337,311" fill="#d35400"/><line x1="345" y1="165" x2="345" y2="89" stroke="#2c6fbb" stroke-width="5"/>
+      <polygon points="345,75 337,89 353,89" fill="#2c6fbb"/><text x="357" y="317" font-weight="700" fill="#d35400">weight</text><text x="357" y="89" font-weight="700" fill="#2c6fbb">drag</text><text x="345" y="358" text-anchor="middle" class="cap">drag = weight: steady speed</text><text x="575" y="24" text-anchor="middle" class="title">Parachute open</text><path d="M505 120 Q575 55 645 120 Z" fill="#f5b7b1" stroke="#922b21" stroke-width="1.5"/>
+      <path d="M505 120 L565 185 M645 120 L585 185" stroke="#7b7d7d" stroke-width="1.2"/><circle cx="575" cy="179" r="11" fill="#efe0d0" stroke="#b89d86" stroke-width="1.5"/>
+      <rect x="563" y="191" width="24" height="40" rx="8" fill="#e67e22" stroke="#17181a" stroke-width="1.5"/>
+      <path d="M565 197 L537 175 M585 197 L613 175 M569 229 L549 257 M581 229 L601 257" stroke="#e67e22" stroke-width="8" stroke-linecap="round"/><line x1="575" y1="235" x2="575" y2="311" stroke="#d35400" stroke-width="5"/>
+      <polygon points="575,325 583,311 567,311" fill="#d35400"/><line x1="575" y1="165" x2="575" y2="44" stroke="#2c6fbb" stroke-width="5"/>
+      <polygon points="575,30 567,44 583,44" fill="#2c6fbb"/><text x="587" y="317" font-weight="700" fill="#d35400">weight</text><text x="587" y="44" font-weight="700" fill="#2c6fbb">drag</text><text x="575" y="358" text-anchor="middle" class="cap">drag bigger than weight: slows down</text>
+</svg>

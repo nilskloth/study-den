@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<rect x="0" y="0" width="700" height="300" fill="#eef6fc"/>
+      <rect x="0" y="300" width="700" height="200" fill="#c9b08a"/>
+      <rect x="0" y="300" width="700" height="14" fill="#7aa95c"/><path d="M0 292 L130 292 L130 360 Q65 380 0 370Z" fill="#5b9bd5"/><path d="M10 292 q8 -7 16 0 q8 7 16 0" fill="none" stroke="#fff" stroke-width="2"/><path d="M50 292 q8 -7 16 0 q8 7 16 0" fill="none" stroke="#fff" stroke-width="2"/><path d="M90 292 q8 -7 16 0 q8 7 16 0" fill="none" stroke="#fff" stroke-width="2"/><text x="65" y="340" text-anchor="middle" class="cap" style="fill:#fff">ocean</text><rect x="270" y="440" width="420" height="40" rx="8" fill="#3a3330"/>
+      <text x="480" y="465" text-anchor="middle" class="title" style="fill:#fff">Fossil fuels: coal, oil and gas</text><text x="290" y="430" class="cap">buried for millions of years</text><rect x="250" y="16" width="270" height="50" rx="12" fill="#fff" stroke="#6a6d71" stroke-width="2"/>
+      <text x="385" y="38" text-anchor="middle" class="title">Carbon dioxide in the air</text>
+      <text x="385" y="56" text-anchor="middle" class="cap">about 0.04 % of the air</text><rect x="291" y="230" width="18" height="74" fill="#8b5a2b"/>
+      <circle cx="300" cy="200" r="44" fill="#6aa84f"/>
+      <circle cx="272" cy="220" r="25" fill="#5b9a43"/><circle cx="328" cy="218" r="25" fill="#5b9a43"/><ellipse cx="450" cy="266" rx="34" ry="22" fill="#fbfbf6" stroke="#6a6d71" stroke-width="1.5"/>
+        <ellipse cx="486" cy="256" rx="12" ry="9" fill="#444"/>
+        <line x1="432" y1="284" x2="432" y2="302" stroke="#444" stroke-width="5"/>
+        <line x1="466" y1="284" x2="466" y2="302" stroke="#444" stroke-width="5"/><ellipse cx="565" cy="304" rx="30" ry="7" fill="#a0522d"/>
+        <rect x="551" y="284" width="6" height="16" fill="#f3e6d0"/><path d="M541 286 q13 -18 26 0Z" fill="#c0532b"/>
+        <rect x="573" y="288" width="5" height="12" fill="#f3e6d0"/><path d="M565 290 q10.5 -14 21 0Z" fill="#c0532b"/><rect x="610" y="250" width="70" height="52" fill="#9a8f86"/>
+        <rect x="656" y="200" width="16" height="52" fill="#7d736b"/>
+        <path d="M610 250 l17 -16 v16 l17 -16 v16 l17 -16 v16" fill="#9a8f86"/>
+        <circle cx="664" cy="188" r="9" fill="#cfcfcf"/><circle cx="672" cy="174" r="11" fill="#dcdcdc"/><polyline points="24,286 24,34 244,34" fill="none" stroke="#6a6d71" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><path d="M235.9 37.9 L244 34 L235.9 30.1" fill="none" stroke="#6a6d71" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="248,56 70,56 70,286" fill="none" stroke="#2e8b57" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M66.1 277.9 L70 286 L73.9 277.9" fill="none" stroke="#2e8b57" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="322" y1="70" x2="300" y2="150" stroke="#2e8b57" stroke-width="3" stroke-linecap="round"/><path d="M298.4 141.1 L300 150 L305.9 143.2" fill="none" stroke="#2e8b57" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="332" y1="150" x2="360" y2="72" stroke="#6a6d71" stroke-width="2" stroke-linecap="round"/><path d="M360.9 81.0 L360 72 L353.6 78.3" fill="none" stroke="#6a6d71" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="450" y1="248" x2="450" y2="72" stroke="#6a6d71" stroke-width="3" stroke-linecap="round"/><path d="M453.9 80.1 L450 72 L446.1 80.1" fill="none" stroke="#6a6d71" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="358" y1="260" x2="406" y2="260" stroke="#17181a" stroke-width="3" stroke-linecap="round"/><path d="M397.9 263.9 L406 260 L397.9 256.1" fill="none" stroke="#17181a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="490" y1="282" x2="532" y2="294" stroke="#17181a" stroke-width="3" stroke-linecap="round"/><path d="M523.1 295.5 L532 294 L525.3 288.0" fill="none" stroke="#17181a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="560" y1="274" x2="498" y2="72" stroke="#6a6d71" stroke-width="2" stroke-linecap="round"/><path d="M504.1 78.6 L498 72 L496.6 80.9" fill="none" stroke="#6a6d71" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="565" y1="316" x2="565" y2="432" stroke="#17181a" stroke-width="3" stroke-linecap="round"/><path d="M561.1 423.9 L565 432 L568.9 423.9" fill="none" stroke="#17181a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="670" y1="438" x2="670" y2="310" stroke="#5c5f63" stroke-width="2.5" stroke-linecap="round"/><path d="M673.9 318.1 L670 310 L666.1 318.1" fill="none" stroke="#5c5f63" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><text x="660" y="370" text-anchor="end" class="cap">dug up,</text><text x="660" y="386" text-anchor="end" class="cap">drilled</text><line x1="652" y1="160" x2="524" y2="58" stroke="#6a6d71" stroke-width="3" stroke-linecap="round"/><path d="M532.8 60.0 L524 58 L527.9 66.1" fill="none" stroke="#6a6d71" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><text x="10" y="494" class="cap">Green: carbon dioxide taken out of the air. Grey: carbon dioxide put back.</text>
+  <g class="lbl" data-part="dissolving">
+    <line class="leader" x1="84" y1="112" x2="70" y2="112"/>
+    <circle class="dot" cx="70" cy="112" r="3.5"/>
+    <text class="name" x="90" y="116.5" text-anchor="start">Dissolving in the oceans</text>
+    <g class="letter"><circle cx="99" cy="112" r="9.5"/><text x="99" y="116.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="photosynthesis">
+    <line class="leader" x1="256" y1="142" x2="313" y2="104"/>
+    <circle class="dot" cx="313" cy="104" r="3.5"/>
+    <text class="name" x="250" y="146.5" text-anchor="end">Photosynthesis</text>
+    <g class="letter"><circle cx="241" cy="142" r="9.5"/><text x="241" y="146.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="respiration">
+    <line class="leader" x1="446" y1="128" x2="450" y2="150"/>
+    <circle class="dot" cx="450" cy="150" r="3.5"/>
+    <text class="name" x="440" y="132.5" text-anchor="end">Respiration</text>
+    <g class="letter"><circle cx="431" cy="128" r="9.5"/><text x="431" y="132.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="feeding">
+    <line class="leader" x1="364" y1="340" x2="382" y2="260"/>
+    <circle class="dot" cx="382" cy="260" r="3.5"/>
+    <text class="name" x="370" y="344.5" text-anchor="start">Feeding</text>
+    <g class="letter"><circle cx="379" cy="340" r="9.5"/><text x="379" y="344.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="decay">
+    <line class="leader" x1="474" y1="356" x2="511" y2="288"/>
+    <circle class="dot" cx="511" cy="288" r="3.5"/>
+    <text class="name" x="480" y="360.5" text-anchor="start">Death and decay</text>
+    <g class="letter"><circle cx="489" cy="356" r="9.5"/><text x="489" y="360.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="fossilisation">
+    <line class="leader" x1="456" y1="395" x2="565" y2="380"/>
+    <circle class="dot" cx="565" cy="380" r="3.5"/>
+    <text class="name" x="450" y="399.5" text-anchor="end">Fossilisation</text>
+    <g class="letter"><circle cx="441" cy="395" r="9.5"/><text x="441" y="399.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="combustion">
+    <line class="leader" x1="598" y1="92" x2="588" y2="99"/>
+    <circle class="dot" cx="588" cy="99" r="3.5"/>
+    <text class="name" x="604" y="96.5" text-anchor="start">Combustion</text>
+    <g class="letter"><circle cx="613" cy="92" r="9.5"/><text x="613" y="96.5" text-anchor="middle"></text></g>
+  </g>
+</svg>

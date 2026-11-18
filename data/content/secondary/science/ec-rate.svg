@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 260" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<text x="110" y="22" text-anchor="middle" class="title">Light</text>
+        <line x1="30" y1="190" x2="196" y2="190" stroke="#17181a" stroke-width="2"/>
+        <line x1="30" y1="190" x2="30" y2="42" stroke="#17181a" stroke-width="2"/>
+        <path d="M30.0 190.0 L34.0 177.8 L38.0 166.9 L42.0 157.1 L46.0 148.4 L50.0 140.6 L54.0 133.7 L58.0 127.4 L62.0 121.9 L66.0 116.9 L70.0 112.5 L74.0 108.5 L78.0 105.0 L82.0 101.8 L86.0 99.0 L90.0 96.4 L94.0 94.2 L98.0 92.2 L102.0 90.4 L106.0 88.7 L110.0 87.3 L114.0 86.0 L118.0 84.9 L122.0 83.8 L126.0 82.9 L130.0 82.1 L134.0 81.4 L138.0 80.7 L142.0 80.1 L146.0 79.6 L150.0 79.1 L154.0 78.7 L158.0 78.3 L162.0 78.0 L166.0 77.7 L170.0 77.4 L174.0 77.2 L178.0 77.0 L182.0 76.8 L186.0 76.6 L190.0 76.5" fill="none" stroke="#3f7a2d" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+        <text x="110" y="210" text-anchor="middle" class="cap">light intensity →</text>
+        <text x="20" y="120" text-anchor="middle" class="cap" transform="rotate(-90 20 120)">rate →</text>
+        <text x="110" y="230" text-anchor="middle" class="cap" style="font-size:11px">rises, then levels off:</text><text x="110" y="245" text-anchor="middle" class="cap" style="font-size:11px">something else runs short</text><text x="315" y="22" text-anchor="middle" class="title">Carbon dioxide</text>
+        <line x1="235" y1="190" x2="401" y2="190" stroke="#17181a" stroke-width="2"/>
+        <line x1="235" y1="190" x2="235" y2="42" stroke="#17181a" stroke-width="2"/>
+        <path d="M235.0 190.0 L239.0 179.6 L243.0 170.2 L247.0 161.7 L251.0 154.0 L255.0 147.0 L259.0 140.7 L263.0 135.0 L267.0 129.9 L271.0 125.2 L275.0 121.0 L279.0 117.1 L283.0 113.7 L287.0 110.6 L291.0 107.7 L295.0 105.2 L299.0 102.8 L303.0 100.7 L307.0 98.9 L311.0 97.1 L315.0 95.6 L319.0 94.2 L323.0 92.9 L327.0 91.7 L331.0 90.7 L335.0 89.8 L339.0 88.9 L343.0 88.1 L347.0 87.4 L351.0 86.8 L355.0 86.2 L359.0 85.7 L363.0 85.3 L367.0 84.8 L371.0 84.4 L375.0 84.1 L379.0 83.8 L383.0 83.5 L387.0 83.2 L391.0 83.0 L395.0 82.8" fill="none" stroke="#3f7a2d" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+        <text x="315" y="210" text-anchor="middle" class="cap">CO₂ concentration →</text>
+        <text x="225" y="120" text-anchor="middle" class="cap" transform="rotate(-90 225 120)">rate →</text>
+        <text x="315" y="230" text-anchor="middle" class="cap" style="font-size:11px">rises, then levels off</text><text x="520" y="22" text-anchor="middle" class="title">Temperature</text>
+        <line x1="440" y1="190" x2="606" y2="190" stroke="#17181a" stroke-width="2"/>
+        <line x1="440" y1="190" x2="440" y2="42" stroke="#17181a" stroke-width="2"/>
+        <path d="M440.0 181.6 L444.0 180.9 L448.0 179.5 L452.0 177.6 L456.0 175.3 L460.0 172.5 L464.0 169.5 L468.0 166.1 L472.0 162.4 L476.0 158.4 L480.0 154.1 L484.0 149.6 L488.0 144.8 L492.0 139.8 L496.0 134.5 L500.0 129.0 L504.0 123.3 L508.0 117.3 L512.0 111.2 L516.0 104.8 L520.0 98.2 L524.0 91.5 L528.0 84.5 L532.0 77.4 L536.0 70.0 L540.0 64.0 L544.0 65.3 L548.0 68.2 L552.0 73.0 L556.0 79.4 L560.0 87.7 L564.0 97.6 L568.0 109.4 L572.0 122.8 L576.0 138.1 L580.0 155.0 L584.0 173.8 L588.0 190.0 L592.0 190.0 L596.0 190.0 L600.0 190.0" fill="none" stroke="#3f7a2d" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+        <text x="520" y="210" text-anchor="middle" class="cap">temperature →</text>
+        <text x="430" y="120" text-anchor="middle" class="cap" transform="rotate(-90 430 120)">rate →</text>
+        <text x="520" y="230" text-anchor="middle" class="cap" style="font-size:11px">rises to a best temperature,</text><text x="520" y="245" text-anchor="middle" class="cap" style="font-size:11px">then falls fast (too hot)</text>
+</svg>

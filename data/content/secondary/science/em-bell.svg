@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 670 356" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<g transform="translate(30 0)"><path d="M90 300 V12 H226 V26" fill="none" stroke="#7d7466" stroke-width="4"/>
+          <circle cx="226" cy="62" r="36" fill="#e8c35a" stroke="#a8862a" stroke-width="2.5"/><circle cx="226" cy="62" r="13" fill="#d4ab3e" stroke="#a8862a" stroke-width="1.5"/><rect x="140" y="150" width="12" height="150" fill="#cbbfa6" stroke="#7d7466" stroke-width="1.5"/><line x1="171" y1="152" x2="176" y2="188" stroke="#8a5223" stroke-width="2.2"/><line x1="181" y1="152" x2="186" y2="188" stroke="#8a5223" stroke-width="2.2"/><line x1="191" y1="152" x2="196" y2="188" stroke="#8a5223" stroke-width="2.2"/><line x1="201" y1="152" x2="206" y2="188" stroke="#8a5223" stroke-width="2.2"/><line x1="211" y1="152" x2="216" y2="188" stroke="#8a5223" stroke-width="2.2"/><line x1="221" y1="152" x2="226" y2="188" stroke="#8a5223" stroke-width="2.2"/><line x1="231" y1="152" x2="236" y2="188" stroke="#8a5223" stroke-width="2.2"/><line x1="241" y1="152" x2="246" y2="188" stroke="#8a5223" stroke-width="2.2"/><rect x="152" y="161" width="112" height="18" fill="#9aa3ab" stroke="#5f676e" stroke-width="2"/><line x1="166" y1="188" x2="171" y2="152" stroke="#c47a35" stroke-width="3.2" stroke-linecap="round"/><line x1="176" y1="188" x2="181" y2="152" stroke="#c47a35" stroke-width="3.2" stroke-linecap="round"/><line x1="186" y1="188" x2="191" y2="152" stroke="#c47a35" stroke-width="3.2" stroke-linecap="round"/><line x1="196" y1="188" x2="201" y2="152" stroke="#c47a35" stroke-width="3.2" stroke-linecap="round"/><line x1="206" y1="188" x2="211" y2="152" stroke="#c47a35" stroke-width="3.2" stroke-linecap="round"/><line x1="216" y1="188" x2="221" y2="152" stroke="#c47a35" stroke-width="3.2" stroke-linecap="round"/><line x1="226" y1="188" x2="231" y2="152" stroke="#c47a35" stroke-width="3.2" stroke-linecap="round"/><line x1="236" y1="188" x2="241" y2="152" stroke="#c47a35" stroke-width="3.2" stroke-linecap="round"/><rect x="268" y="280" width="30" height="20" fill="#cbbfa6" stroke="#7d7466" stroke-width="1.5"/>
+          <path d="M283 280 l-6 -4 l12 -5 l-12 -5 l12 -5 l-12 -5 l6 -4" fill="none" stroke="#17181a" stroke-width="2"/>
+          <rect x="276" y="104" width="12" height="148" fill="#9aa3ab" stroke="#5f676e" stroke-width="2"/>
+          <line x1="282" y1="104" x2="282" y2="76" stroke="#17181a" stroke-width="3"/><circle cx="282" cy="66" r="10" fill="#4a4f55"/><rect x="360" y="118" width="16" height="182" fill="#cbbfa6" stroke="#7d7466" stroke-width="1.5"/>
+          <rect x="290" y="135" width="70" height="10" fill="#c9ccd0" stroke="#5f676e" stroke-width="1.5"/>
+          <line x1="300" y1="135" x2="304" y2="145" stroke="#5f676e" stroke-width="1.2"/><line x1="310" y1="135" x2="314" y2="145" stroke="#5f676e" stroke-width="1.2"/><line x1="320" y1="135" x2="324" y2="145" stroke="#5f676e" stroke-width="1.2"/><line x1="330" y1="135" x2="334" y2="145" stroke="#5f676e" stroke-width="1.2"/><line x1="340" y1="135" x2="344" y2="145" stroke="#5f676e" stroke-width="1.2"/><line x1="350" y1="135" x2="354" y2="145" stroke="#5f676e" stroke-width="1.2"/>
+          <circle cx="289" cy="140" r="3.5" fill="#d4ab3e"/><rect x="70" y="300" width="400" height="10" fill="#cbbfa6" stroke="#7d7466" stroke-width="1.5"/><polyline points="170,188 170,334 210,334" fill="none" stroke="#c47a35" stroke-width="2.5" stroke-linejoin="round"/><rect x="210" y="320" width="62" height="28" rx="5" fill="#3d4248"/><rect x="254" y="320" width="18" height="28" rx="5" fill="#d9a441"/><rect x="254" y="320" width="6" height="28" fill="#d9a441"/><rect x="272" y="327" width="6" height="14" rx="2" fill="#9aa3ab"/><polyline points="278,334 440,334" fill="none" stroke="#c47a35" stroke-width="2.5" stroke-linejoin="round"/><rect x="440" y="322" width="70" height="24" rx="5" fill="#e4dccb" stroke="#a89f8c" stroke-width="1.5"/><rect x="460" y="310" width="30" height="12" rx="4" fill="#e0675a" stroke="#8f2f2c" stroke-width="1.5"/><polyline points="510,334 530,334 530,220 376,220" fill="none" stroke="#c47a35" stroke-width="2.5" stroke-linejoin="round"/><polyline points="240,188 240,292 268,292" fill="none" stroke="#c47a35" stroke-width="2.5" stroke-linejoin="round"/>
+  <g class="lbl" data-part="gong">
+    <line class="leader" x1="82" y1="46" x2="196" y2="50"/>
+    <circle class="dot" cx="196" cy="50" r="3.5"/>
+    <text class="name" x="76" y="50.5" text-anchor="end">Gong</text>
+    <g class="letter"><circle cx="67" cy="46" r="9.5"/><text x="67" y="50.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="electromagnet">
+    <line class="leader" x1="82" y1="130" x2="186" y2="154"/>
+    <circle class="dot" cx="186" cy="154" r="3.5"/>
+    <text class="name" x="76" y="134.5" text-anchor="end">Electromagnet</text>
+    <g class="letter"><circle cx="67" cy="130" r="9.5"/><text x="67" y="134.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="armature">
+    <line class="leader" x1="414" y1="180" x2="288" y2="200"/>
+    <circle class="dot" cx="288" cy="200" r="3.5"/>
+    <text class="name" x="420" y="184.5" text-anchor="start">Iron armature</text>
+    <g class="letter"><circle cx="429" cy="180" r="9.5"/><text x="429" y="184.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="hammer">
+    <line class="leader" x1="414" y1="70" x2="292" y2="64"/>
+    <circle class="dot" cx="292" cy="64" r="3.5"/>
+    <text class="name" x="420" y="74.5" text-anchor="start">Hammer</text>
+    <g class="letter"><circle cx="429" cy="70" r="9.5"/><text x="429" y="74.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="contact">
+    <line class="leader" x1="414" y1="116" x2="330" y2="140"/>
+    <circle class="dot" cx="330" cy="140" r="3.5"/>
+    <text class="name" x="420" y="120.5" text-anchor="start">Contact screw</text>
+    <g class="letter"><circle cx="429" cy="116" r="9.5"/><text x="429" y="120.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="spring">
+    <line class="leader" x1="414" y1="262" x2="289" y2="266"/>
+    <circle class="dot" cx="289" cy="266" r="3.5"/>
+    <text class="name" x="420" y="266.5" text-anchor="start">Spring</text>
+    <g class="letter"><circle cx="429" cy="262" r="9.5"/><text x="429" y="266.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="push">
+    <line class="leader" x1="542" y1="296" x2="490" y2="316"/>
+    <circle class="dot" cx="490" cy="316" r="3.5"/>
+    <text class="name" x="548" y="300.5" text-anchor="start">Push switch</text>
+    <g class="letter"><circle cx="557" cy="296" r="9.5"/><text x="557" y="300.5" text-anchor="middle"></text></g>
+  </g></g>
+</svg>

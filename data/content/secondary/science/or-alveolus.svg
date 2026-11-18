@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 470" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+
+    <!-- bronchiole leading in -->
+    <path d="M264 20 V122 M316 20 V122" stroke="#8a7f70" stroke-width="3" fill="none"/>
+    <rect x="266" y="20" width="48" height="104" fill="#f4ece0"/>
+    <!-- the air sac -->
+    <circle cx="290" cy="210" r="96" fill="#eaf4fb" stroke="#b8544e" stroke-width="3"/>
+    <rect x="266" y="108" width="48" height="14" fill="#eaf4fb"/>
+    <!-- capillary wrapped round it -->
+    <path d="M361.3 125.0 A111 111 0 1 1 179.0 210.0" fill="none" stroke="#8f2f2c" stroke-width="24" stroke-linecap="round"/>
+    <path d="M361.3 125.0 A111 111 0 1 1 179.0 210.0" fill="none" stroke="#f7d2d0" stroke-width="20" stroke-linecap="round"/>
+    <ellipse cx="375.0" cy="138.7" rx="7.5" ry="5" transform="rotate(50 375.0 138.7)" fill="#d64541" stroke="#8f2f2c" stroke-width="1"/><ellipse cx="399.3" cy="190.7" rx="7.5" ry="5" transform="rotate(80 399.3 190.7)" fill="#d64541" stroke="#8f2f2c" stroke-width="1"/><ellipse cx="394.3" cy="248.0" rx="7.5" ry="5" transform="rotate(110 394.3 248.0)" fill="#d64541" stroke="#8f2f2c" stroke-width="1"/><ellipse cx="361.3" cy="295.0" rx="7.5" ry="5" transform="rotate(140 361.3 295.0)" fill="#d64541" stroke="#8f2f2c" stroke-width="1"/><ellipse cx="309.3" cy="319.3" rx="7.5" ry="5" transform="rotate(170 309.3 319.3)" fill="#d64541" stroke="#8f2f2c" stroke-width="1"/><ellipse cx="252.0" cy="314.3" rx="7.5" ry="5" transform="rotate(200 252.0 314.3)" fill="#d64541" stroke="#8f2f2c" stroke-width="1"/><ellipse cx="205.0" cy="281.3" rx="7.5" ry="5" transform="rotate(230 205.0 281.3)" fill="#d64541" stroke="#8f2f2c" stroke-width="1"/><ellipse cx="180.7" cy="229.3" rx="7.5" ry="5" transform="rotate(260 180.7 229.3)" fill="#d64541" stroke="#8f2f2c" stroke-width="1"/>
+    <line x1="338.4974226119286" y1="238" x2="381.8" y2="263.0" stroke="#2a78d6" stroke-width="3"/>
+      <polygon points="387.8608706276416,266.5 380.8,256.8 375.9,265.3" fill="#2a78d6"/>
+    <line x1="308.9276513656954" y1="317.3440450783307" x2="300.9" y2="272.0" stroke="#6a6d71" stroke-width="3"/>
+      <polygon points="299.7242979493481,265.1492341686836 296.8,276.8 306.4,275.1" fill="#6a6d71"/>
+    <text x="332.4974226119286" y="228" text-anchor="middle" style="fill:#2a78d6" class="title">oxygen</text>
+    <text x="287.7242979493481" y="251.14923416868362" text-anchor="end" style="fill:#6a6d71" class="title">carbon</text>
+    <text x="287.7242979493481" y="267.1492341686836" text-anchor="end" style="fill:#6a6d71" class="title">dioxide</text>
+    <text x="300" y="160" text-anchor="middle" class="cap">air</text>
+    
+  <g class="lbl" data-part="bronchiole">
+    <line class="leader" x1="166" y1="40" x2="266" y2="40"/>
+    <circle class="dot" cx="266" cy="40" r="3.5"/>
+    <text class="name" x="160" y="44.5" text-anchor="end">Bronchiole</text>
+    <g class="letter"><circle cx="151" cy="40" r="9.5"/><text x="151" y="44.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="alveolus">
+    <line class="leader" x1="166" y1="200" x2="250" y2="170"/>
+    <circle class="dot" cx="250" cy="170" r="3.5"/>
+    <text class="name" x="160" y="204.5" text-anchor="end">Alveolus (air sac)</text>
+    <g class="letter"><circle cx="151" cy="200" r="9.5"/><text x="151" y="204.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="wall">
+    <line class="leader" x1="166" y1="120" x2="211.36140374825675" y2="154.9366621102996"/>
+    <circle class="dot" cx="211.36140374825675" cy="154.9366621102996" r="3.5"/>
+    <text class="name" x="160" y="124.5" text-anchor="end">Wall, one cell thick</text>
+    <g class="letter"><circle cx="151" cy="120" r="9.5"/><text x="151" y="124.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="capillary">
+    <line class="leader" x1="424" y1="80" x2="396.1288198200727" y2="148.5"/>
+    <circle class="dot" cx="396.1288198200727" cy="148.5" r="3.5"/>
+    <text class="name" x="430" y="84.5" text-anchor="start">Capillary</text>
+    <g class="letter"><circle cx="439" cy="80" r="9.5"/><text x="439" y="84.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="rbc">
+    <line class="leader" x1="424" y1="380" x2="252.03576409085076" y2="314.30588090723586"/>
+    <circle class="dot" cx="252.03576409085076" cy="314.30588090723586" r="3.5"/>
+    <text class="name" x="430" y="384.5" text-anchor="start">Red blood cell</text>
+    <g class="letter"><circle cx="439" cy="380" r="9.5"/><text x="439" y="384.5" text-anchor="middle"></text></g>
+  </g>
+    <text x="20" y="440" class="cap">Oxygen diffuses from the air into the blood; carbon dioxide diffuses</text>
+    <text x="20" y="458" class="cap">out of the blood into the air, to be breathed out.</text>
+</svg>

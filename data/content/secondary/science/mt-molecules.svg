@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 200" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<circle cx="59" cy="60" r="14" fill="#e05a4f" stroke="#a93226" stroke-width="1.6"/><circle cx="81" cy="60" r="14" fill="#e05a4f" stroke="#a93226" stroke-width="1.6"/><text x="70" y="122" text-anchor="middle" style="font-size:20px;font-weight:700">O<tspan dy="4" style="font-size:12px">2</tspan><tspan dy="-4"></tspan></text>
+        <text x="70" y="144" text-anchor="middle" class="cap">oxygen</text><circle cx="178" cy="73" r="9" fill="#ffffff" stroke="#7b8a97" stroke-width="1.6"/><circle cx="212" cy="73" r="9" fill="#ffffff" stroke="#7b8a97" stroke-width="1.6"/><circle cx="195" cy="60" r="14" fill="#e05a4f" stroke="#a93226" stroke-width="1.6"/><text x="195" y="122" text-anchor="middle" style="font-size:20px;font-weight:700">H<tspan dy="4" style="font-size:12px">2</tspan><tspan dy="-4"></tspan>O</text>
+        <text x="195" y="144" text-anchor="middle" class="cap">water</text><circle cx="295" cy="60" r="14" fill="#e05a4f" stroke="#a93226" stroke-width="1.6"/><circle cx="345" cy="60" r="14" fill="#e05a4f" stroke="#a93226" stroke-width="1.6"/><circle cx="320" cy="60" r="13" fill="#5d6166" stroke="#2e3134" stroke-width="1.6"/><text x="320" y="122" text-anchor="middle" style="font-size:20px;font-weight:700">CO<tspan dy="4" style="font-size:12px">2</tspan><tspan dy="-4"></tspan></text>
+        <text x="320" y="144" text-anchor="middle" class="cap">carbon dioxide</text><circle cx="426" cy="71" r="9" fill="#ffffff" stroke="#7b8a97" stroke-width="1.6"/><circle cx="464" cy="71" r="9" fill="#ffffff" stroke="#7b8a97" stroke-width="1.6"/><circle cx="445" cy="80" r="9" fill="#ffffff" stroke="#7b8a97" stroke-width="1.6"/><circle cx="445" cy="58" r="14" fill="#5dade2" stroke="#21618c" stroke-width="1.6"/><text x="445" y="122" text-anchor="middle" style="font-size:20px;font-weight:700">NH<tspan dy="4" style="font-size:12px">3</tspan><tspan dy="-4"></tspan></text>
+        <text x="445" y="144" text-anchor="middle" class="cap">ammonia</text><circle cx="552" cy="46" r="9" fill="#ffffff" stroke="#7b8a97" stroke-width="1.6"/><circle cx="588" cy="46" r="9" fill="#ffffff" stroke="#7b8a97" stroke-width="1.6"/><circle cx="552" cy="74" r="9" fill="#ffffff" stroke="#7b8a97" stroke-width="1.6"/><circle cx="588" cy="74" r="9" fill="#ffffff" stroke="#7b8a97" stroke-width="1.6"/><circle cx="570" cy="60" r="13" fill="#5d6166" stroke="#2e3134" stroke-width="1.6"/><text x="570" y="122" text-anchor="middle" style="font-size:20px;font-weight:700">CH<tspan dy="4" style="font-size:12px">4</tspan><tspan dy="-4"></tspan></text>
+        <text x="570" y="144" text-anchor="middle" class="cap">methane</text><circle cx="150" cy="180" r="8" fill="#5d6166" stroke="#2e3134" stroke-width="1.6"/><text x="162" y="184.5" class="cap">carbon</text><circle cx="255" cy="180" r="8" fill="#ffffff" stroke="#7b8a97" stroke-width="1.6"/><text x="267" y="184.5" class="cap">hydrogen</text><circle cx="360" cy="180" r="8" fill="#e05a4f" stroke="#a93226" stroke-width="1.6"/><text x="372" y="184.5" class="cap">oxygen</text><circle cx="465" cy="180" r="8" fill="#5dade2" stroke="#21618c" stroke-width="1.6"/><text x="477" y="184.5" class="cap">nitrogen</text>
+</svg>

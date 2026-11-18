@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<rect x="96" y="72" width="29" height="30" fill="#fde9c4" stroke="#8a96a3" stroke-width="1"/>
+            <text x="110.5" y="91.5" text-anchor="middle" style="font-size:12px">H</text><rect x="589" y="72" width="29" height="30" fill="#fde9c4" stroke="#8a96a3" stroke-width="1"/>
+            <text x="603.5" y="91.5" text-anchor="middle" style="font-size:12px">He</text><rect x="96" y="102" width="29" height="30" fill="#d6e6f5" stroke="#8a96a3" stroke-width="1"/>
+            <text x="110.5" y="121.5" text-anchor="middle" style="font-size:12px">Li</text><rect x="125" y="102" width="29" height="30" fill="#d6e6f5" stroke="#8a96a3" stroke-width="1"/>
+            <text x="139.5" y="121.5" text-anchor="middle" style="font-size:12px">Be</text><rect x="444" y="102" width="29" height="30" fill="#fde9c4" stroke="#8a96a3" stroke-width="1"/>
+            <text x="458.5" y="121.5" text-anchor="middle" style="font-size:12px">B</text><rect x="473" y="102" width="29" height="30" fill="#fde9c4" stroke="#8a96a3" stroke-width="1"/>
+            <text x="487.5" y="121.5" text-anchor="middle" style="font-size:12px">C</text><rect x="502" y="102" width="29" height="30" fill="#fde9c4" stroke="#8a96a3" stroke-width="1"/>
+            <text x="516.5" y="121.5" text-anchor="middle" style="font-size:12px">N</text><rect x="531" y="102" width="29" height="30" fill="#fde9c4" stroke="#8a96a3" stroke-width="1"/>
+            <text x="545.5" y="121.5" text-anchor="middle" style="font-size:12px">O</text><rect x="560" y="102" width="29" height="30" fill="#fde9c4" stroke="#8a96a3" stroke-width="1"/>
+            <text x="574.5" y="121.5" text-anchor="middle" style="font-size:12px">F</text><rect x="589" y="102" width="29" height="30" fill="#fde9c4" stroke="#8a96a3" stroke-width="1"/>
+            <text x="603.5" y="121.5" text-anchor="middle" style="font-size:12px">Ne</text><rect x="96" y="132" width="29" height="30" fill="#d6e6f5" stroke="#8a96a3" stroke-width="1"/>
+            <text x="110.5" y="151.5" text-anchor="middle" style="font-size:12px">Na</text><rect x="125" y="132" width="29" height="30" fill="#d6e6f5" stroke="#8a96a3" stroke-width="1"/>
+            <text x="139.5" y="151.5" text-anchor="middle" style="font-size:12px">Mg</text><rect x="444" y="132" width="29" height="30" fill="#d6e6f5" stroke="#8a96a3" stroke-width="1"/>
+            <text x="458.5" y="151.5" text-anchor="middle" style="font-size:12px">Al</text><rect x="473" y="132" width="29" height="30" fill="#fde9c4" stroke="#8a96a3" stroke-width="1"/>
+            <text x="487.5" y="151.5" text-anchor="middle" style="font-size:12px">Si</text><rect x="502" y="132" width="29" height="30" fill="#fde9c4" stroke="#8a96a3" stroke-width="1"/>
+            <text x="516.5" y="151.5" text-anchor="middle" style="font-size:12px">P</text><rect x="531" y="132" width="29" height="30" fill="#fde9c4" stroke="#8a96a3" stroke-width="1"/>
+            <text x="545.5" y="151.5" text-anchor="middle" style="font-size:12px">S</text><rect x="560" y="132" width="29" height="30" fill="#fde9c4" stroke="#8a96a3" stroke-width="1"/>
+            <text x="574.5" y="151.5" text-anchor="middle" style="font-size:12px">Cl</text><rect x="589" y="132" width="29" height="30" fill="#fde9c4" stroke="#8a96a3" stroke-width="1"/>
+            <text x="603.5" y="151.5" text-anchor="middle" style="font-size:12px">Ar</text><rect x="96" y="162" width="29" height="30" fill="#d6e6f5" stroke="#8a96a3" stroke-width="1"/>
+            <text x="110.5" y="181.5" text-anchor="middle" style="font-size:12px">K</text><rect x="125" y="162" width="29" height="30" fill="#d6e6f5" stroke="#8a96a3" stroke-width="1"/>
+            <text x="139.5" y="181.5" text-anchor="middle" style="font-size:12px">Ca</text><rect x="154" y="162" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="168.5" y="181.5" text-anchor="middle" style="font-size:12px">Sc</text><rect x="183" y="162" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="197.5" y="181.5" text-anchor="middle" style="font-size:12px">Ti</text><rect x="212" y="162" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="226.5" y="181.5" text-anchor="middle" style="font-size:12px">V</text><rect x="241" y="162" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="255.5" y="181.5" text-anchor="middle" style="font-size:12px">Cr</text><rect x="270" y="162" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="284.5" y="181.5" text-anchor="middle" style="font-size:12px">Mn</text><rect x="299" y="162" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="313.5" y="181.5" text-anchor="middle" style="font-size:12px">Fe</text><rect x="328" y="162" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="342.5" y="181.5" text-anchor="middle" style="font-size:12px">Co</text><rect x="357" y="162" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="371.5" y="181.5" text-anchor="middle" style="font-size:12px">Ni</text><rect x="386" y="162" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="400.5" y="181.5" text-anchor="middle" style="font-size:12px">Cu</text><rect x="415" y="162" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="429.5" y="181.5" text-anchor="middle" style="font-size:12px">Zn</text><rect x="444" y="162" width="29" height="30" fill="#d6e6f5" stroke="#8a96a3" stroke-width="1"/>
+            <text x="458.5" y="181.5" text-anchor="middle" style="font-size:12px">Ga</text><rect x="473" y="162" width="29" height="30" fill="#d6e6f5" stroke="#8a96a3" stroke-width="1"/>
+            <text x="487.5" y="181.5" text-anchor="middle" style="font-size:12px">Ge</text><rect x="502" y="162" width="29" height="30" fill="#fde9c4" stroke="#8a96a3" stroke-width="1"/>
+            <text x="516.5" y="181.5" text-anchor="middle" style="font-size:12px">As</text><rect x="531" y="162" width="29" height="30" fill="#fde9c4" stroke="#8a96a3" stroke-width="1"/>
+            <text x="545.5" y="181.5" text-anchor="middle" style="font-size:12px">Se</text><rect x="560" y="162" width="29" height="30" fill="#fde9c4" stroke="#8a96a3" stroke-width="1"/>
+            <text x="574.5" y="181.5" text-anchor="middle" style="font-size:12px">Br</text><rect x="589" y="162" width="29" height="30" fill="#fde9c4" stroke="#8a96a3" stroke-width="1"/>
+            <text x="603.5" y="181.5" text-anchor="middle" style="font-size:12px">Kr</text><rect x="96" y="192" width="29" height="30" fill="#d6e6f5" stroke="#8a96a3" stroke-width="1"/>
+            <text x="110.5" y="211.5" text-anchor="middle" style="font-size:12px">Rb</text><rect x="125" y="192" width="29" height="30" fill="#d6e6f5" stroke="#8a96a3" stroke-width="1"/>
+            <text x="139.5" y="211.5" text-anchor="middle" style="font-size:12px">Sr</text><rect x="154" y="192" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="168.5" y="211.5" text-anchor="middle" style="font-size:12px">Y</text><rect x="183" y="192" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="197.5" y="211.5" text-anchor="middle" style="font-size:12px">Zr</text><rect x="212" y="192" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="226.5" y="211.5" text-anchor="middle" style="font-size:12px">Nb</text><rect x="241" y="192" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="255.5" y="211.5" text-anchor="middle" style="font-size:12px">Mo</text><rect x="270" y="192" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="284.5" y="211.5" text-anchor="middle" style="font-size:12px">Tc</text><rect x="299" y="192" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="313.5" y="211.5" text-anchor="middle" style="font-size:12px">Ru</text><rect x="328" y="192" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="342.5" y="211.5" text-anchor="middle" style="font-size:12px">Rh</text><rect x="357" y="192" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="371.5" y="211.5" text-anchor="middle" style="font-size:12px">Pd</text><rect x="386" y="192" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="400.5" y="211.5" text-anchor="middle" style="font-size:12px">Ag</text><rect x="415" y="192" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="429.5" y="211.5" text-anchor="middle" style="font-size:12px">Cd</text><rect x="444" y="192" width="29" height="30" fill="#d6e6f5" stroke="#8a96a3" stroke-width="1"/>
+            <text x="458.5" y="211.5" text-anchor="middle" style="font-size:12px">In</text><rect x="473" y="192" width="29" height="30" fill="#d6e6f5" stroke="#8a96a3" stroke-width="1"/>
+            <text x="487.5" y="211.5" text-anchor="middle" style="font-size:12px">Sn</text><rect x="502" y="192" width="29" height="30" fill="#d6e6f5" stroke="#8a96a3" stroke-width="1"/>
+            <text x="516.5" y="211.5" text-anchor="middle" style="font-size:12px">Sb</text><rect x="531" y="192" width="29" height="30" fill="#fde9c4" stroke="#8a96a3" stroke-width="1"/>
+            <text x="545.5" y="211.5" text-anchor="middle" style="font-size:12px">Te</text><rect x="560" y="192" width="29" height="30" fill="#fde9c4" stroke="#8a96a3" stroke-width="1"/>
+            <text x="574.5" y="211.5" text-anchor="middle" style="font-size:12px">I</text><rect x="589" y="192" width="29" height="30" fill="#fde9c4" stroke="#8a96a3" stroke-width="1"/>
+            <text x="603.5" y="211.5" text-anchor="middle" style="font-size:12px">Xe</text><rect x="96" y="222" width="29" height="30" fill="#d6e6f5" stroke="#8a96a3" stroke-width="1"/>
+            <text x="110.5" y="241.5" text-anchor="middle" style="font-size:12px">Cs</text><rect x="125" y="222" width="29" height="30" fill="#d6e6f5" stroke="#8a96a3" stroke-width="1"/>
+            <text x="139.5" y="241.5" text-anchor="middle" style="font-size:12px">Ba</text><rect x="154" y="222" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="168.5" y="241.5" text-anchor="middle" style="font-size:12px">La</text><rect x="183" y="222" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="197.5" y="241.5" text-anchor="middle" style="font-size:12px">Hf</text><rect x="212" y="222" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="226.5" y="241.5" text-anchor="middle" style="font-size:12px">Ta</text><rect x="241" y="222" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="255.5" y="241.5" text-anchor="middle" style="font-size:12px">W</text><rect x="270" y="222" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="284.5" y="241.5" text-anchor="middle" style="font-size:12px">Re</text><rect x="299" y="222" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="313.5" y="241.5" text-anchor="middle" style="font-size:12px">Os</text><rect x="328" y="222" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="342.5" y="241.5" text-anchor="middle" style="font-size:12px">Ir</text><rect x="357" y="222" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="371.5" y="241.5" text-anchor="middle" style="font-size:12px">Pt</text><rect x="386" y="222" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="400.5" y="241.5" text-anchor="middle" style="font-size:12px">Au</text><rect x="415" y="222" width="29" height="30" fill="#bcd5ec" stroke="#8a96a3" stroke-width="1"/>
+            <text x="429.5" y="241.5" text-anchor="middle" style="font-size:12px">Hg</text><rect x="444" y="222" width="29" height="30" fill="#d6e6f5" stroke="#8a96a3" stroke-width="1"/>
+            <text x="458.5" y="241.5" text-anchor="middle" style="font-size:12px">Tl</text><rect x="473" y="222" width="29" height="30" fill="#d6e6f5" stroke="#8a96a3" stroke-width="1"/>
+            <text x="487.5" y="241.5" text-anchor="middle" style="font-size:12px">Pb</text><rect x="502" y="222" width="29" height="30" fill="#d6e6f5" stroke="#8a96a3" stroke-width="1"/>
+            <text x="516.5" y="241.5" text-anchor="middle" style="font-size:12px">Bi</text><rect x="531" y="222" width="29" height="30" fill="#d6e6f5" stroke="#8a96a3" stroke-width="1"/>
+            <text x="545.5" y="241.5" text-anchor="middle" style="font-size:12px">Po</text><rect x="560" y="222" width="29" height="30" fill="#fde9c4" stroke="#8a96a3" stroke-width="1"/>
+            <text x="574.5" y="241.5" text-anchor="middle" style="font-size:12px">At</text><rect x="589" y="222" width="29" height="30" fill="#fde9c4" stroke="#8a96a3" stroke-width="1"/>
+            <text x="603.5" y="241.5" text-anchor="middle" style="font-size:12px">Rn</text><text x="110.5" y="66" text-anchor="middle" class="cap" style="font-weight:700">1</text><text x="139.5" y="96" text-anchor="middle" class="cap" style="font-weight:700">2</text><text x="458.5" y="96" text-anchor="middle" class="cap" style="font-weight:700">3</text><text x="487.5" y="96" text-anchor="middle" class="cap" style="font-weight:700">4</text><text x="516.5" y="96" text-anchor="middle" class="cap" style="font-weight:700">5</text><text x="545.5" y="96" text-anchor="middle" class="cap" style="font-weight:700">6</text><text x="574.5" y="96" text-anchor="middle" class="cap" style="font-weight:700">7</text><text x="603.5" y="66" text-anchor="middle" class="cap" style="font-weight:700">0</text><path d="M444 102 L444 132 L473 132 L473 162 L502 162 L502 192 L531 192 L531 222 L560 222 L560 252" fill="none" stroke="#17181a" stroke-width="3.5" stroke-linejoin="round"/><rect x="94" y="70" width="33" height="184" rx="4" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="5 3"/><rect x="558" y="100" width="33" height="154" rx="4" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="5 3"/><rect x="587" y="70" width="33" height="184" rx="4" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="5 3"/><rect x="92" y="131" width="530" height="32" rx="4" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="5 3"/>
+  <g class="lbl" data-part="group1">
+    <line class="leader" x1="86" y1="207" x2="94" y2="207"/>
+    <circle class="dot" cx="94" cy="207" r="3.5"/>
+    <text class="name" x="80" y="211.5" text-anchor="end">Group 1</text>
+    <g class="letter"><circle cx="71" cy="207" r="9.5"/><text x="71" y="211.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="period">
+    <line class="leader" x1="86" y1="147" x2="92" y2="147"/>
+    <circle class="dot" cx="92" cy="147" r="3.5"/>
+    <text class="name" x="80" y="151.5" text-anchor="end">a period</text>
+    <g class="letter"><circle cx="71" cy="147" r="9.5"/><text x="71" y="151.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="metals">
+    <line class="leader" x1="115" y1="288" x2="139.5" y2="246"/>
+    <circle class="dot" cx="139.5" cy="246" r="3.5"/>
+    <text class="name" x="121" y="292.5" text-anchor="start">metals</text>
+    <g class="letter"><circle cx="130" cy="288" r="9.5"/><text x="130" y="292.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="transition">
+    <line class="leader" x1="235" y1="316" x2="284.5" y2="246"/>
+    <circle class="dot" cx="284.5" cy="246" r="3.5"/>
+    <text class="name" x="241" y="320.5" text-anchor="start">transition metals</text>
+    <g class="letter"><circle cx="250" cy="316" r="9.5"/><text x="250" y="320.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="nonmetals">
+    <line class="leader" x1="392" y1="42" x2="516.5" y2="106"/>
+    <circle class="dot" cx="516.5" cy="106" r="3.5"/>
+    <text class="name" x="386" y="46.5" text-anchor="end">non-metals</text>
+    <g class="letter"><circle cx="377" cy="42" r="9.5"/><text x="377" y="46.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="group7">
+    <line class="leader" x1="560" y1="288" x2="574.5" y2="254"/>
+    <circle class="dot" cx="574.5" cy="254" r="3.5"/>
+    <text class="name" x="554" y="292.5" text-anchor="end">Group 7</text>
+    <g class="letter"><circle cx="545" cy="288" r="9.5"/><text x="545" y="292.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="group0">
+    <line class="leader" x1="605.5" y1="316" x2="603.5" y2="254"/>
+    <circle class="dot" cx="603.5" cy="254" r="3.5"/>
+    <text class="name" x="599.5" y="320.5" text-anchor="end">Group 0</text>
+    <g class="letter"><circle cx="590.5" cy="316" r="9.5"/><text x="590.5" y="320.5" text-anchor="middle"></text></g>
+  </g>
+</svg>

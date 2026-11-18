@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 304" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<line x1="20" y1="220" x2="590" y2="220" stroke="#5c5f63" stroke-width="1.5"/><path d="M170 152 L144 220 L196 220 Z" fill="#b8c2cc" stroke="#6f7b86" stroke-width="2"/><rect x="40" y="140" width="530" height="12" rx="3" fill="#c49a6c" stroke="#5c5f63" stroke-width="2"/><path d="M54 140 C50 112 66 90 94 88 C124 86 136 110 132 140 Z" fill="#9a9a92" stroke="#5c5f63" stroke-width="2"/><path d="M93 82 V34 m-9 12 l9 -12 l9 12" fill="none" stroke="#2e8b57" stroke-width="5" stroke-linejoin="round"/><path d="M545 48 V132 m-9 -12 l9 12 l9 -12" fill="none" stroke="#c0392b" stroke-width="3" stroke-linejoin="round"/><path d="M93 238 v12 M170 238 v12 M93 244 H170" stroke="#9aa0a6" stroke-width="1.5" fill="none"/>
+      <text x="131.5" y="262" text-anchor="middle" class="cap">short</text><path d="M170 238 v12 M545 238 v12 M170 244 H545" stroke="#9aa0a6" stroke-width="1.5" fill="none"/>
+      <text x="357.5" y="262" text-anchor="middle" class="cap">long distance from the pivot</text><text x="300" y="292" text-anchor="middle" class="cap">A small push far from the pivot gives a big lift close to it.</text>
+  <g class="lbl" data-part="output">
+    <line class="leader" x1="112" y1="26" x2="93" y2="52"/>
+    <circle class="dot" cx="93" cy="52" r="3.5"/>
+    <text class="name" x="118" y="30.5" text-anchor="start">Output force</text>
+    <g class="letter"><circle cx="127" cy="26" r="9.5"/><text x="127" y="30.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="load">
+    <line class="leader" x1="154" y1="70" x2="106" y2="112"/>
+    <circle class="dot" cx="106" cy="112" r="3.5"/>
+    <text class="name" x="160" y="74.5" text-anchor="start">Load</text>
+    <g class="letter"><circle cx="169" cy="70" r="9.5"/><text x="169" y="74.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="lever">
+    <line class="leader" x1="324" y1="100" x2="360" y2="146"/>
+    <circle class="dot" cx="360" cy="146" r="3.5"/>
+    <text class="name" x="330" y="104.5" text-anchor="start">Lever (rigid bar)</text>
+    <g class="letter"><circle cx="339" cy="100" r="9.5"/><text x="339" y="104.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="input">
+    <line class="leader" x1="506" y1="26" x2="545" y2="70"/>
+    <circle class="dot" cx="545" cy="70" r="3.5"/>
+    <text class="name" x="500" y="30.5" text-anchor="end">Input force</text>
+    <g class="letter"><circle cx="491" cy="26" r="9.5"/><text x="491" y="30.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="pivot">
+    <line class="leader" x1="234" y1="196" x2="170" y2="192"/>
+    <circle class="dot" cx="170" cy="192" r="3.5"/>
+    <text class="name" x="240" y="200.5" text-anchor="start">Pivot</text>
+    <g class="letter"><circle cx="249" cy="196" r="9.5"/><text x="249" y="200.5" text-anchor="middle"></text></g>
+  </g>
+</svg>

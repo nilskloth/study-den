@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 345" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<rect x="0" y="222" width="440" height="16" fill="#cfcac0"/>
+      <rect x="120" y="170" width="160" height="36" rx="10" fill="#c0392b" stroke="#17181a" stroke-width="1.5"/>
+      <path d="M150 170 L170 142 H232 L252 170Z" fill="#c0392b" stroke="#17181a" stroke-width="1.5"/>
+      <path d="M174 147 H228 L242 167 H164Z" fill="#dff1fb"/>
+      <circle cx="152" cy="209" r="13" fill="#333"/><circle cx="248" cy="209" r="13" fill="#333"/><rect x="530" y="30" width="160" height="10" fill="#cfcac0"/>
+      <line x1="610" y1="40" x2="610" y2="150" stroke="#555" stroke-width="2"/>
+      <path d="M592 150 H628 L648 185 H572Z" fill="#16a085" stroke="#17181a" stroke-width="1.5"/>
+      <circle cx="610" cy="192" r="8" fill="#f9e79f" stroke="#17181a" stroke-width="1"/><line x1="280" y1="188" x2="371" y2="188" stroke="#2c6fbb" stroke-width="5"/>
+      <polygon points="385,188 371,180 371,196" fill="#2c6fbb"/><line x1="120" y1="188" x2="29" y2="188" stroke="#d35400" stroke-width="5"/>
+      <polygon points="15,188 29,196 29,180" fill="#d35400"/><line x1="200" y1="200" x2="200" y2="286" stroke="#d35400" stroke-width="5"/>
+      <polygon points="200,300 208,286 192,286" fill="#d35400"/><line x1="200" y1="150" x2="200" y2="64" stroke="#2c6fbb" stroke-width="5"/>
+      <polygon points="200,50 192,64 208,64" fill="#2c6fbb"/><line x1="618" y1="150" x2="618" y2="84" stroke="#2c6fbb" stroke-width="5"/>
+      <polygon points="618,70 610,84 626,84" fill="#2c6fbb"/><line x1="610" y1="200" x2="610" y2="266" stroke="#d35400" stroke-width="5"/>
+      <polygon points="610,280 618,266 602,266" fill="#d35400"/><text x="622" y="280" font-weight="700" fill="#d35400">weight</text><text x="200" y="335" text-anchor="middle" class="cap">a car moving at a steady speed</text><text x="610" y="335" text-anchor="middle" class="cap">a lamp hanging still</text>
+  <g class="lbl" data-part="driving-force">
+    <line class="leader" x1="324" y1="140" x2="360" y2="188"/>
+    <circle class="dot" cx="360" cy="188" r="3.5"/>
+    <text class="name" x="330" y="144.5" text-anchor="start">driving force</text>
+    <g class="letter"><circle cx="339" cy="140" r="9.5"/><text x="339" y="144.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="drag">
+    <line class="leader" x1="24" y1="140" x2="40" y2="188"/>
+    <circle class="dot" cx="40" cy="188" r="3.5"/>
+    <text class="name" x="30" y="144.5" text-anchor="start">drag</text>
+    <g class="letter"><circle cx="39" cy="140" r="9.5"/><text x="39" y="144.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="weight">
+    <line class="leader" x1="222" y1="288" x2="200" y2="280"/>
+    <circle class="dot" cx="200" cy="280" r="3.5"/>
+    <text class="name" x="228" y="292.5" text-anchor="start">weight</text>
+    <g class="letter"><circle cx="237" cy="288" r="9.5"/><text x="237" y="292.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="support">
+    <line class="leader" x1="222" y1="62" x2="200" y2="75"/>
+    <circle class="dot" cx="200" cy="75" r="3.5"/>
+    <text class="name" x="228" y="66.5" text-anchor="start">support force</text>
+    <g class="letter"><circle cx="237" cy="62" r="9.5"/><text x="237" y="66.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="tension">
+    <line class="leader" x1="642" y1="100" x2="618" y2="100"/>
+    <circle class="dot" cx="618" cy="100" r="3.5"/>
+    <text class="name" x="648" y="104.5" text-anchor="start">tension</text>
+    <g class="letter"><circle cx="657" cy="100" r="9.5"/><text x="657" y="104.5" text-anchor="middle"></text></g>
+  </g>
+</svg>

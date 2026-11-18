@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 420" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<rect x="0" y="0" width="620" height="420" fill="#1f2a44"/><circle cx="361" cy="105" r="0.9" fill="#fff" opacity=".6"/><circle cx="18" cy="81" r="1.1" fill="#fff" opacity=".6"/><circle cx="381" cy="76" r="1.3" fill="#fff" opacity=".6"/><circle cx="28" cy="78" r="1.6" fill="#fff" opacity=".6"/><circle cx="524" cy="75" r="1.2" fill="#fff" opacity=".6"/><circle cx="135" cy="69" r="1.2" fill="#fff" opacity=".6"/><circle cx="272" cy="2" r="1.5" fill="#fff" opacity=".6"/><circle cx="405" cy="107" r="0.9" fill="#fff" opacity=".6"/><circle cx="461" cy="103" r="1.2" fill="#fff" opacity=".6"/><circle cx="386" cy="22" r="0.8" fill="#fff" opacity=".6"/><circle cx="277" cy="48" r="0.6" fill="#fff" opacity=".6"/><circle cx="352" cy="86" r="1.4" fill="#fff" opacity=".6"/><circle cx="53" cy="34" r="1.2" fill="#fff" opacity=".6"/><circle cx="262" cy="35" r="0.9" fill="#fff" opacity=".6"/><circle cx="45" cy="41" r="1.0" fill="#fff" opacity=".6"/><circle cx="394" cy="55" r="1.1" fill="#fff" opacity=".6"/><circle cx="268" cy="69" r="1.5" fill="#fff" opacity=".6"/><circle cx="586" cy="51" r="1.4" fill="#fff" opacity=".6"/><circle cx="608" cy="71" r="1.0" fill="#fff" opacity=".6"/><circle cx="390" cy="6" r="0.9" fill="#fff" opacity=".6"/><circle cx="18" cy="92" r="0.7" fill="#fff" opacity=".6"/><circle cx="149" cy="73" r="0.8" fill="#fff" opacity=".6"/><circle cx="169" cy="16" r="1.4" fill="#fff" opacity=".6"/><circle cx="190" cy="69" r="1.4" fill="#fff" opacity=".6"/><circle cx="9" cy="91" r="1.5" fill="#fff" opacity=".6"/><circle cx="476" cy="105" r="0.7" fill="#fff" opacity=".6"/><circle cx="112" cy="4" r="1.6" fill="#fff" opacity=".6"/><circle cx="296" cy="30" r="1.1" fill="#fff" opacity=".6"/><circle cx="518" cy="78" r="1.4" fill="#fff" opacity=".6"/><circle cx="6" cy="13" r="1.2" fill="#fff" opacity=".6"/><rect x="0" y="130" width="620" height="200" fill="#bcd9f0"/>
+      <rect x="0" y="130" width="620" height="60" fill="#9cc3e4"/><circle cx="461" cy="142" r="3" fill="#3d6f99"/><circle cx="182" cy="157" r="3" fill="#3d6f99"/><circle cx="473" cy="169" r="3" fill="#3d6f99"/><circle cx="389" cy="145" r="3" fill="#3d6f99"/><circle cx="570" cy="184" r="3" fill="#3d6f99"/><circle cx="381" cy="171" r="3" fill="#3d6f99"/><circle cx="105" cy="179" r="3" fill="#3d6f99"/><circle cx="104" cy="154" r="3" fill="#3d6f99"/><circle cx="429" cy="157" r="3" fill="#3d6f99"/><circle cx="288" cy="183" r="3" fill="#3d6f99"/><circle cx="278" cy="163" r="3" fill="#3d6f99"/><circle cx="407" cy="143" r="3" fill="#3d6f99"/><circle cx="111" cy="146" r="3" fill="#3d6f99"/><circle cx="514" cy="153" r="3" fill="#3d6f99"/><circle cx="610" cy="163" r="3" fill="#3d6f99"/><circle cx="86" cy="160" r="3" fill="#3d6f99"/><circle cx="315" cy="139" r="3" fill="#3d6f99"/><circle cx="335" cy="176" r="3" fill="#3d6f99"/><circle cx="271" cy="148" r="3" fill="#3d6f99"/><circle cx="48" cy="167" r="3" fill="#3d6f99"/><circle cx="271" cy="144" r="3" fill="#3d6f99"/><circle cx="511" cy="139" r="3" fill="#3d6f99"/><circle cx="559" cy="171" r="3" fill="#3d6f99"/><circle cx="546" cy="169" r="3" fill="#3d6f99"/><circle cx="420" cy="177" r="3" fill="#3d6f99"/><circle cx="174" cy="169" r="3" fill="#3d6f99"/><circle cx="289" cy="138" r="3" fill="#3d6f99"/><circle cx="82" cy="142" r="3" fill="#3d6f99"/><circle cx="43" cy="162" r="3" fill="#3d6f99"/><circle cx="80" cy="148" r="3" fill="#3d6f99"/><circle cx="226" cy="168" r="3" fill="#3d6f99"/><circle cx="156" cy="149" r="3" fill="#3d6f99"/><circle cx="440" cy="173" r="3" fill="#3d6f99"/><circle cx="419" cy="178" r="3" fill="#3d6f99"/><circle cx="117" cy="151" r="3" fill="#3d6f99"/><circle cx="338" cy="157" r="3" fill="#3d6f99"/><circle cx="366" cy="157" r="3" fill="#3d6f99"/><circle cx="341" cy="178" r="3" fill="#3d6f99"/><circle cx="523" cy="157" r="3" fill="#3d6f99"/><circle cx="225" cy="183" r="3" fill="#3d6f99"/><circle cx="455" cy="181" r="3" fill="#3d6f99"/><circle cx="152" cy="182" r="3" fill="#3d6f99"/><circle cx="566" cy="171" r="3" fill="#3d6f99"/><circle cx="351" cy="168" r="3" fill="#3d6f99"/><circle cx="548" cy="146" r="3" fill="#3d6f99"/><circle cx="299" cy="158" r="3" fill="#3d6f99"/><path d="M0 330 Q310 300 620 330 L620 420 L0 420Z" fill="#6aa84f"/>
+      <path d="M0 360 Q310 335 620 360" fill="none" stroke="#4f8a3a" stroke-width="2"/><circle cx="60" cy="40" r="52" fill="#f7c948" stroke="#e0a106" stroke-width="3"/><text x="560" y="28" text-anchor="middle" class="cap" style="fill:#c9d3e6">space</text><line x1="110" y1="70" x2="250" y2="312" stroke="#e0a106" stroke-width="4" stroke-linecap="round"/><path d="M242.6 306.9 L250 312 L249.3 303.0" fill="none" stroke="#e0a106" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M290 312 L297.4 309.4 L296.2 301.7 L295.0 294.0 L302.4 291.5 L309.8 288.9 L308.6 281.2 L307.4 273.5 L314.8 270.9 L322.2 268.3 L321.0 260.6 L319.8 252.9 L327.2 250.4 L334.6 247.8 L333.4 240.1 L332.2 232.4 L339.6 229.8 L347.0 227.3 L345.8 219.5 L344.6 211.8 L352.0 209.3 L360 196" fill="none" stroke="#c0392b" stroke-width="2.8" stroke-linejoin="round"/><path d="M359.2 205.0 L360 196 L352.5 200.9" fill="none" stroke="#c0392b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M375 168 L382.4 165.6 L381.4 157.9 L380.4 150.1 L387.8 147.7 L395.3 145.3 L394.3 137.6 L393.2 129.8 L400.7 127.4 L408.1 125.1 L407.1 117.3 L406.1 109.6 L413.5 107.2 L421.0 104.8 L419.9 97.0 L418.9 89.3 L426.4 86.9 L433.8 84.5 L432.8 76.8 L431.8 69.0 L439.2 66.6 L446.6 64.2 L445.6 56.5 L444.6 48.7 L452.0 46.3 L459.5 44.0 L458.5 36.2 L457.5 28.5 L470 18" fill="none" stroke="#c0392b" stroke-width="2.8" stroke-linejoin="round"/><path d="M469.0 26.9 L470 18 L462.4 22.8" fill="none" stroke="#c0392b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M395 192 L393.6 199.7 L400.9 202.4 L408.3 205.2 L406.9 212.8 L405.5 220.5 L412.8 223.3 L420.1 226.0 L418.8 233.7 L417.4 241.4 L424.7 244.1 L432.0 246.9 L430.7 254.5 L429.3 262.2 L436.6 265.0 L443.9 267.7 L442.6 275.4 L441.2 283.1 L448.5 285.8 L455.8 288.6 L460 306" fill="none" stroke="#c0392b" stroke-width="2.8" stroke-linejoin="round"/><path d="M452.6 300.9 L460 306 L459.4 297.0" fill="none" stroke="#c0392b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><text x="310" y="404" text-anchor="middle" class="title" style="fill:#fff">The Earth's surface warms up</text>
+  <g class="lbl" data-part="sunlight">
+    <line class="leader" x1="156" y1="110" x2="160" y2="155"/>
+    <circle class="dot" cx="160" cy="155" r="3.5"/>
+    <text class="name" style="paint-order:stroke;stroke:#fff;stroke-width:4px" x="150" y="114.5" text-anchor="end">Sunlight</text>
+    <g class="letter"><circle cx="141" cy="110" r="9.5"/><text x="141" y="114.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="infrared">
+    <line class="leader" x1="216" y1="250" x2="320" y2="262"/>
+    <circle class="dot" cx="320" cy="262" r="3.5"/>
+    <text class="name" style="paint-order:stroke;stroke:#fff;stroke-width:4px" x="210" y="254.5" text-anchor="end">Infrared from the Earth</text>
+    <g class="letter"><circle cx="201" cy="250" r="9.5"/><text x="201" y="254.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="gases">
+    <line class="leader" x1="606" y1="225" x2="560" y2="168"/>
+    <circle class="dot" cx="560" cy="168" r="3.5"/>
+    <text class="name" style="paint-order:stroke;stroke:#fff;stroke-width:4px" x="600" y="229.5" text-anchor="end">Greenhouse gases</text>
+    <g class="letter"><circle cx="591" cy="225" r="9.5"/><text x="591" y="229.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="escape">
+    <line class="leader" x1="494" y1="70" x2="440" y2="70"/>
+    <circle class="dot" cx="440" cy="70" r="3.5"/>
+    <text class="name" style="paint-order:stroke;stroke:#fff;stroke-width:4px" x="500" y="74.5" text-anchor="start">Lost to space</text>
+    <g class="letter"><circle cx="509" cy="70" r="9.5"/><text x="509" y="74.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="back">
+    <line class="leader" x1="474" y1="290" x2="440" y2="270"/>
+    <circle class="dot" cx="440" cy="270" r="3.5"/>
+    <text class="name" style="paint-order:stroke;stroke:#fff;stroke-width:4px" x="480" y="294.5" text-anchor="start">Sent back to Earth</text>
+    <g class="letter"><circle cx="489" cy="290" r="9.5"/><text x="489" y="294.5" text-anchor="middle"></text></g>
+  </g>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 296" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+
+    <rect x="280" y="40" width="70" height="170" fill="#d7ccc8" stroke="#795548" stroke-width="2.5"/>
+    <text x="315" y="232" text-anchor="middle" class="cap">material</text>
+    <path d="M30.0 160.0 L32.0 153.2 L34.0 146.6 L36.0 140.6 L38.0 135.4 L40.0 131.1 L42.0 128.1 L44.0 126.4 L46.0 126.0 L48.0 127.1 L50.0 129.5 L52.0 133.1 L54.0 137.9 L56.0 143.5 L58.0 149.8 L60.0 156.6 L62.0 163.4 L64.0 170.2 L66.0 176.5 L68.0 182.1 L70.0 186.9 L72.0 190.5 L74.0 192.9 L76.0 194.0 L78.0 193.6 L80.0 191.9 L82.0 188.9 L84.0 184.6 L86.0 179.4 L88.0 173.4 L90.0 166.8 L92.0 160.0 L94.0 153.2 L96.0 146.6 L98.0 140.6 L100.0 135.4 L102.0 131.1 L104.0 128.1 L106.0 126.4 L108.0 126.0 L110.0 127.1 L112.0 129.5 L114.0 133.1 L116.0 137.9 L118.0 143.5 L120.0 149.8 L122.0 156.6 L124.0 163.4 L126.0 170.2 L128.0 176.5 L130.0 182.1 L132.0 186.9 L134.0 190.5 L136.0 192.9 L138.0 194.0 L140.0 193.6 L142.0 191.9 L144.0 188.9 L146.0 184.6 L148.0 179.4 L150.0 173.4 L152.0 166.8 L154.0 160.0 L156.0 153.2 L158.0 146.6 L160.0 140.6 L162.0 135.4 L164.0 131.1 L166.0 128.1 L168.0 126.4 L170.0 126.0 L172.0 127.1 L174.0 129.5 L176.0 133.1 L178.0 137.9 L180.0 143.5 L182.0 149.8 L184.0 156.6 L186.0 163.4 L188.0 170.2 L190.0 176.5 L192.0 182.1 L194.0 186.9 L196.0 190.5 L198.0 192.9 L200.0 194.0 L202.0 193.6 L204.0 191.9 L206.0 188.9 L208.0 184.6 L210.0 179.4 L212.0 173.4 L214.0 166.8 L216.0 160.0 L218.0 153.2 L220.0 146.6 L222.0 140.6 L224.0 135.4 L226.0 131.1 L228.0 128.1 L230.0 126.4 L232.0 126.0 L234.0 127.1 L236.0 129.5 L238.0 133.1 L240.0 137.9 L242.0 143.5 L244.0 149.8 L246.0 156.6 L248.0 163.4 L250.0 170.2 L252.0 176.5 L254.0 182.1 L256.0 186.9 L258.0 190.5 L260.0 192.9 L262.0 194.0 L264.0 193.6 L266.0 191.9 L268.0 188.9 L270.0 184.6 L272.0 179.4 L274.0 173.4 L276.0 166.8 L278.0 160.0 " fill="none" stroke="#2f6fb0" stroke-width="3.5"/>
+    <line x1="60" y1="210" x2="150" y2="210" stroke="#2f6fb0" stroke-width="2"/><path d="M147.9 213.9 L156.0 210.0 L147.9 206.1" fill="none" stroke="#2f6fb0" stroke-width="2.2" stroke-linejoin="round"/>
+    <path d="M110.0 70.0 L112.0 66.4 L114.0 62.9 L116.0 59.7 L118.0 57.0 L120.0 54.7 L122.0 53.1 L124.0 52.2 L126.0 52.0 L128.0 52.6 L130.0 53.8 L132.0 55.8 L134.0 58.3 L136.0 61.3 L138.0 64.6 L140.0 68.2 L142.0 71.8 L144.0 75.4 L146.0 78.7 L148.0 81.7 L150.0 84.2 L152.0 86.2 L154.0 87.4 L156.0 88.0 L158.0 87.8 L160.0 86.9 L162.0 85.3 L164.0 83.0 L166.0 80.3 L168.0 77.1 L170.0 73.6 L172.0 70.0 L174.0 66.4 L176.0 62.9 L178.0 59.7 L180.0 57.0 L182.0 54.7 L184.0 53.1 L186.0 52.2 L188.0 52.0 L190.0 52.6 L192.0 53.8 L194.0 55.8 L196.0 58.3 L198.0 61.3 L200.0 64.6 L202.0 68.2 L204.0 71.8 L206.0 75.4 L208.0 78.7 L210.0 81.7 L212.0 84.2 L214.0 86.2 L216.0 87.4 L218.0 88.0 L220.0 87.8 L222.0 86.9 L224.0 85.3 L226.0 83.0 L228.0 80.3 L230.0 77.1 L232.0 73.6 L234.0 70.0 L236.0 66.4 L238.0 62.9 L240.0 59.7 L242.0 57.0 L244.0 54.7 L246.0 53.1 L248.0 52.2 L250.0 52.0 L252.0 52.6 L254.0 53.8 L256.0 55.8 L258.0 58.3 L260.0 61.3 L262.0 64.6 L264.0 68.2 L266.0 71.8 L268.0 75.4 L270.0 78.7 L272.0 81.7 L274.0 84.2 L276.0 86.2 L278.0 87.4 " fill="none" stroke="#2f6fb0" stroke-width="2.5" stroke-dasharray="7 4"/>
+    <line x1="100" y1="34" x2="40" y2="34" stroke="#2f6fb0" stroke-width="2"/><path d="M42.1 30.1 L34.0 34.0 L42.1 37.9" fill="none" stroke="#2f6fb0" stroke-width="2.2" stroke-linejoin="round"/>
+    <path d="M296 196 q-6 -8 0 -16 q6 -8 0 -16" fill="none" stroke="#c0392b" stroke-width="2"/><path d="M312 196 q-6 -8 0 -16 q6 -8 0 -16" fill="none" stroke="#c0392b" stroke-width="2"/><path d="M328 196 q-6 -8 0 -16 q6 -8 0 -16" fill="none" stroke="#c0392b" stroke-width="2"/>
+    <path d="M352.0 130.0 L354.0 127.6 L356.0 125.3 L358.0 123.1 L360.0 121.3 L362.0 119.8 L364.0 118.7 L366.0 118.1 L368.0 118.0 L370.0 118.4 L372.0 119.2 L374.0 120.5 L376.0 122.2 L378.0 124.2 L380.0 126.4 L382.0 128.8 L384.0 131.2 L386.0 133.6 L388.0 135.8 L390.0 137.8 L392.0 139.5 L394.0 140.8 L396.0 141.6 L398.0 142.0 L400.0 141.9 L402.0 141.3 L404.0 140.2 L406.0 138.7 L408.0 136.9 L410.0 134.7 L412.0 132.4 L414.0 130.0 L416.0 127.6 L418.0 125.3 L420.0 123.1 L422.0 121.3 L424.0 119.8 L426.0 118.7 L428.0 118.1 L430.0 118.0 L432.0 118.4 L434.0 119.2 L436.0 120.5 L438.0 122.2 L440.0 124.2 L442.0 126.4 L444.0 128.8 L446.0 131.2 L448.0 133.6 L450.0 135.8 L452.0 137.8 L454.0 139.5 L456.0 140.8 L458.0 141.6 L460.0 142.0 L462.0 141.9 L464.0 141.3 L466.0 140.2 L468.0 138.7 L470.0 136.9 L472.0 134.7 L474.0 132.4 L476.0 130.0 L478.0 127.6 L480.0 125.3 L482.0 123.1 L484.0 121.3 L486.0 119.8 L488.0 118.7 L490.0 118.1 L492.0 118.0 L494.0 118.4 L496.0 119.2 L498.0 120.5 L500.0 122.2 L502.0 124.2 L504.0 126.4 L506.0 128.8 L508.0 131.2 L510.0 133.6 L512.0 135.8 L514.0 137.8 L516.0 139.5 L518.0 140.8 L520.0 141.6 L522.0 142.0 L524.0 141.9 L526.0 141.3 L528.0 140.2 L530.0 138.7 L532.0 136.9 L534.0 134.7 L536.0 132.4 L538.0 130.0 L540.0 127.6 L542.0 125.3 L544.0 123.1 L546.0 121.3 L548.0 119.8 L550.0 118.7 L552.0 118.1 L554.0 118.0 L556.0 118.4 L558.0 119.2 L560.0 120.5 " fill="none" stroke="#2f6fb0" stroke-width="2.5"/>
+    <line x1="420" y1="168" x2="510" y2="168" stroke="#2f6fb0" stroke-width="2"/><path d="M507.9 171.9 L516.0 168.0 L507.9 164.1" fill="none" stroke="#2f6fb0" stroke-width="2.2" stroke-linejoin="round"/>
+    
+  <g class="lbl" data-part="incoming">
+    <line class="leader" x1="24" y1="264" x2="60" y2="136"/>
+    <circle class="dot" cx="60" cy="136" r="3.5"/>
+    <text class="name" x="30" y="268.5" text-anchor="start">Incoming wave</text>
+    <g class="letter"><circle cx="39" cy="264" r="9.5"/><text x="39" y="268.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="reflected">
+    <line class="leader" x1="208" y1="20" x2="187.5" y2="52"/>
+    <circle class="dot" cx="187.5" cy="52" r="3.5"/>
+    <text class="name" x="214" y="24.5" text-anchor="start">Reflected</text>
+    <g class="letter"><circle cx="223" cy="20" r="9.5"/><text x="223" y="24.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="absorbed">
+    <line class="leader" x1="384" y1="264" x2="312" y2="172"/>
+    <circle class="dot" cx="312" cy="172" r="3.5"/>
+    <text class="name" x="390" y="268.5" text-anchor="start">Absorbed</text>
+    <g class="letter"><circle cx="399" cy="264" r="9.5"/><text x="399" y="268.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="transmitted">
+    <line class="leader" x1="434" y1="70" x2="460" y2="130"/>
+    <circle class="dot" cx="460" cy="130" r="3.5"/>
+    <text class="name" x="440" y="74.5" text-anchor="start">Transmitted</text>
+    <g class="letter"><circle cx="449" cy="70" r="9.5"/><text x="449" y="74.5" text-anchor="middle"></text></g>
+  </g>
+    <text x="390" y="282" class="cap">(energy warms the material)</text>
+</svg>

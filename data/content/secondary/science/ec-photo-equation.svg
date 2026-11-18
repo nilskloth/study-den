@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 214" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+
+    <!-- sun -->
+    <circle cx="297" cy="32" r="18" fill="#ffd75e" stroke="#c79a10" stroke-width="2"/>
+    <line x1="320.0" y1="32.0" x2="328.0" y2="32.0" stroke="#c79a10" stroke-width="2.5" stroke-linecap="round"/><line x1="313.3" y1="48.3" x2="318.9" y2="53.9" stroke="#c79a10" stroke-width="2.5" stroke-linecap="round"/><line x1="297.0" y1="55.0" x2="297.0" y2="63.0" stroke="#c79a10" stroke-width="2.5" stroke-linecap="round"/><line x1="280.7" y1="48.3" x2="275.1" y2="53.9" stroke="#c79a10" stroke-width="2.5" stroke-linecap="round"/><line x1="274.0" y1="32.0" x2="266.0" y2="32.0" stroke="#c79a10" stroke-width="2.5" stroke-linecap="round"/><line x1="280.7" y1="15.7" x2="275.1" y2="10.1" stroke="#c79a10" stroke-width="2.5" stroke-linecap="round"/><line x1="297.0" y1="9.0" x2="297.0" y2="1.0" stroke="#c79a10" stroke-width="2.5" stroke-linecap="round"/><line x1="313.3" y1="15.7" x2="318.9" y2="10.1" stroke="#c79a10" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M297 66 V80" stroke="#c79a10" stroke-width="2" stroke-dasharray="4 3"/>
+    <text x="297" y="96" text-anchor="middle" class="cap">light energy, absorbed by chlorophyll</text>
+    <rect x="10" y="106" width="130" height="70" rx="10" fill="#e8f1fb" stroke="#2e6fb7" stroke-width="2"/>
+      <text x="75" y="136" text-anchor="middle" class="title">carbon dioxide</text>
+      <text x="75" y="154" text-anchor="middle" class="cap" style="font-size:11px">from the air,</text><text x="75" y="168" text-anchor="middle" class="cap" style="font-size:11px">in through stomata</text>
+    <text x="144" y="147" class="title">+</text>
+    <rect x="160" y="106" width="116" height="70" rx="10" fill="#e8f1fb" stroke="#2e6fb7" stroke-width="2"/>
+      <text x="218" y="136" text-anchor="middle" class="title">water</text>
+      <text x="218" y="154" text-anchor="middle" class="cap" style="font-size:11px">from the soil,</text><text x="218" y="168" text-anchor="middle" class="cap" style="font-size:11px">up through roots</text>
+    <path d="M282 141 H310 m-8 -7 l8 7 -8 7" fill="none" stroke="#17181a" stroke-width="2.5"/>
+    <rect x="318" y="106" width="122" height="70" rx="10" fill="#e5f4dc" stroke="#3f7a2d" stroke-width="2"/>
+      <text x="379" y="136" text-anchor="middle" class="title">glucose</text>
+      <text x="379" y="154" text-anchor="middle" class="cap" style="font-size:11px">food: used, built</text><text x="379" y="168" text-anchor="middle" class="cap" style="font-size:11px">into tissue or stored</text>
+    <text x="444" y="147" class="title">+</text>
+    <rect x="460" y="106" width="90" height="70" rx="10" fill="#e5f4dc" stroke="#3f7a2d" stroke-width="2"/>
+      <text x="505" y="136" text-anchor="middle" class="title">oxygen</text>
+      <text x="505" y="154" text-anchor="middle" class="cap" style="font-size:11px">out into</text><text x="505" y="168" text-anchor="middle" class="cap" style="font-size:11px">the air</text>
+    <text x="280" y="204" text-anchor="middle" class="cap">Happens in the chloroplasts of plant and algae cells.</text>
+</svg>

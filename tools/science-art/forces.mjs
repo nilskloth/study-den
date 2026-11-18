@@ -154,5 +154,183 @@ export default function (h) {
     return svg(640, 380, b);
   })();
 
+  /* =============== Year 8 (Part 2): contact forces, pressure =============== */
+  const WATER = "#cfe6f5", WATER_EDGE = "#5b9bd5", SAND = "#e8d6a8", SAND_EDGE = "#b89c5a", STEEL = "#9aa3ad", OIL = "#f3d27a";
+
+  /* ---- 7. Equilibrium: a car at steady speed, a hanging lamp ---- */
+  out["forces-equilibrium"] = (() => {
+    const car = `<rect x="0" y="222" width="440" height="16" fill="#cfcac0"/>
+      <rect x="120" y="170" width="160" height="36" rx="10" fill="#c0392b" stroke="${INK}" stroke-width="1.5"/>
+      <path d="M150 170 L170 142 H232 L252 170Z" fill="#c0392b" stroke="${INK}" stroke-width="1.5"/>
+      <path d="M174 147 H228 L242 167 H164Z" fill="#dff1fb"/>
+      <circle cx="152" cy="209" r="13" fill="#333"/><circle cx="248" cy="209" r="13" fill="#333"/>`;
+    const lamp = `<rect x="530" y="30" width="160" height="10" fill="#cfcac0"/>
+      <line x1="610" y1="40" x2="610" y2="150" stroke="#555" stroke-width="2"/>
+      <path d="M592 150 H628 L648 185 H572Z" fill="#16a085" stroke="${INK}" stroke-width="1.5"/>
+      <circle cx="610" cy="192" r="8" fill="#f9e79f" stroke="${INK}" stroke-width="1"/>`;
+    return svg(720, 345, car + lamp +
+      arrow(280, 188, 385, 188, FORCE) + arrow(120, 188, 15, 188, FORCE2) +
+      arrow(200, 200, 200, 300, FORCE2) + arrow(200, 150, 200, 50, FORCE) +
+      arrow(618, 150, 618, 70, FORCE) + arrow(610, 200, 610, 280, FORCE2) +
+      `<text x="622" y="280" font-weight="700" fill="${FORCE2}">weight</text>` +
+      `<text x="200" y="335" text-anchor="middle" class="cap">a car moving at a steady speed</text>` +
+      `<text x="610" y="335" text-anchor="middle" class="cap">a lamp hanging still</text>` +
+      label("driving-force", "driving force", [360, 188], [330, 140]) +
+      label("drag", "drag", [40, 188], [30, 140]) +
+      label("weight", "weight", [200, 280], [228, 288]) +
+      label("support", "support force", [200, 75], [228, 62]) +
+      label("tension", "tension", [618, 100], [648, 100]));
+  })();
+
+  /* ---- 8. A skydiver: speeding up, terminal velocity, slowing down ---- */
+  out["forces-skydiver"] = (() => {
+    const diver = (cx, cy) => `<circle cx="${cx}" cy="${cy - 26}" r="11" fill="#efe0d0" stroke="#b89d86" stroke-width="1.5"/>
+      <rect x="${cx - 12}" y="${cy - 14}" width="24" height="40" rx="8" fill="#e67e22" stroke="${INK}" stroke-width="1.5"/>
+      <path d="M${cx - 10} ${cy - 8} L${cx - 38} ${cy - 30} M${cx + 10} ${cy - 8} L${cx + 38} ${cy - 30} M${cx - 6} ${cy + 24} L${cx - 26} ${cy + 52} M${cx + 6} ${cy + 24} L${cx + 26} ${cy + 52}" stroke="#e67e22" stroke-width="8" stroke-linecap="round"/>`;
+    const chute = (cx, cy) => `<path d="M${cx - 70} ${cy - 85} Q${cx} ${cy - 150} ${cx + 70} ${cy - 85} Z" fill="#f5b7b1" stroke="#922b21" stroke-width="1.5"/>
+      <path d="M${cx - 70} ${cy - 85} L${cx - 10} ${cy - 20} M${cx + 70} ${cy - 85} L${cx + 10} ${cy - 20}" stroke="#7b7d7d" stroke-width="1.2"/>`;
+    const panel = (i, title, drag, cap, withChute) => {
+      const cx = 115 + i * 230, cy = 205;
+      return `<text x="${cx}" y="24" text-anchor="middle" class="title">${title}</text>` +
+        (withChute ? chute(cx, cy) : "") + diver(cx, cy) +
+        arrow(cx, cy + 30, cx, cy + 120, FORCE2) +
+        (drag > 30 ? arrow(cx, cy - 40, cx, cy - 40 - drag, FORCE) : arrow(cx, cy - 40, cx, cy - 40 - drag, FORCE, 4, 10, 7)) +
+        `<text x="${cx + 12}" y="${cy + 112}" font-weight="700" fill="${FORCE2}">weight</text>` +
+        `<text x="${cx + 12}" y="${cy - 40 - drag + 14}" font-weight="700" fill="${FORCE}">drag</text>` +
+        `<text x="${cx}" y="358" text-anchor="middle" class="cap">${cap}</text>`;
+    };
+    return svg(690, 370,
+      panel(0, "Just jumped", 25, "drag smaller than weight: speeds up", false) +
+      panel(1, "Terminal velocity", 90, "drag = weight: steady speed", false) +
+      panel(2, "Parachute open", 135, "drag bigger than weight: slows down", true));
+  })();
+
+  /* ---- 9. Stretching a spring: the apparatus ---- */
+  out["forces-spring-setup"] = (() => {
+    let coils = `M250 62 V72`;
+    for (let y = 72; y < 190; y += 12) coils += ` L264 ${y + 6} L236 ${y + 12}`;
+    coils += ` L250 196 V202`;
+    let ticks = "";
+    for (let y = 60; y <= 340; y += 10) ticks += `<line x1="330" y1="${y}" x2="${y % 50 === 0 ? 342 : 337}" y2="${y}" stroke="${INK}" stroke-width="1"/>`;
+    const mass = y => `<rect x="226" y="${y}" width="48" height="16" rx="3" fill="#a6acaf" stroke="${INK}" stroke-width="1.2"/>`;
+    return svg(520, 390,
+      `<rect x="50" y="360" width="160" height="16" rx="3" fill="#7f8c8d"/>
+      <rect x="105" y="35" width="10" height="326" fill="${STEEL}" stroke="#5d6d7e"/>
+      <rect x="100" y="48" width="160" height="12" rx="3" fill="#5d6d7e"/>
+      <rect x="330" y="50" width="22" height="295" fill="#fdf2c4" stroke="${INK}" stroke-width="1.2"/>` + ticks +
+      `<path d="${coils}" fill="none" stroke="#2c3e50" stroke-width="2.5" stroke-linejoin="round"/>
+      <line x1="250" y1="202" x2="250" y2="224" stroke="#2c3e50" stroke-width="3"/>` +
+      mass(224) + mass(242) + mass(260) +
+      `<line x1="262" y1="205" x2="330" y2="205" stroke="#c0392b" stroke-width="2.5"/>` +
+      label("clamp-stand", "clamp stand", [110, 250], [92, 250], "end") +
+      label("spring", "spring", [262, 120], [380, 110]) +
+      label("pointer", "pointer", [300, 205], [380, 175]) +
+      label("masses", "masses", [274, 250], [380, 245]) +
+      label("ruler", "ruler", [352, 300], [380, 305]));
+  })();
+
+  /* ---- 10. Force–extension graph: straight, then curving ---- */
+  out["forces-spring-graph"] = (() => {
+    const ox = 80, oy = 290, sx = 50, sy = 12;           // 1 N = 50 px, 1 cm = 12 px
+    const X = f => ox + f * sx, Y = e => oy - e * sy;
+    let g = "";
+    for (let f = 0; f <= 8; f++) g += `<line x1="${X(f)}" y1="${Y(0)}" x2="${X(f)}" y2="${Y(20)}" stroke="${GRID}"/>
+      <text x="${X(f)}" y="${oy + 17}" text-anchor="middle" font-size="12">${f}</text>`;
+    for (let e = 0; e <= 20; e += 2) g += `<line x1="${X(0)}" y1="${Y(e)}" x2="${X(8)}" y2="${Y(e)}" stroke="${GRID}"/>`;
+    for (let e = 0; e <= 20; e += 4) g += `<text x="${ox - 8}" y="${Y(e) + 4}" text-anchor="end" font-size="12">${e}</text>`;
+    const pts = [[0, 0], [1, 2], [2, 4], [3, 6], [4, 8], [5, 10], [6, 13], [7, 18]];
+    const line = `<path d="M${X(0)} ${Y(0)} L${X(5)} ${Y(10)} Q${X(6)} ${Y(12)} ${X(7)} ${Y(18)}" fill="none" stroke="${LINE}" stroke-width="3"/>`;
+    const dots = pts.map(([f, e]) => `<circle cx="${X(f)}" cy="${Y(e)}" r="4" fill="${INK}"/>`).join("");
+    return svg(540, 340, g + axes(ox, oy, 500, 30, "force (N)", "extension (cm)", 40, 46) + line + dots +
+      `<circle cx="${X(5)}" cy="${Y(10)}" r="9" fill="none" stroke="${FORCE2}" stroke-width="2.5"/>
+      <text x="${X(5) + 10}" y="${Y(10) + 28}" fill="${FORCE2}" font-weight="700">limit of proportionality</text>
+      <text x="${X(0.3)}" y="${Y(17)}" font-weight="700">straight line through 0:</text>
+      <text x="${X(0.3)}" y="${Y(17) + 17}">extension is proportional to force</text>`);
+  })();
+
+  /* ---- 11. Same block, two faces: pressure on sand ---- */
+  out["forces-pressure-block"] = (() => {
+    const sand = (x0) => `<rect x="${x0}" y="220" width="280" height="60" fill="${SAND}" stroke="${SAND_EDGE}"/>`;
+    const txt = (x, lines) => lines.map((l, i) => `<text x="${x}" y="${58 + i * 22}"${i === 2 ? ` font-weight="700" fill="${FORCE2}"` : ""}>${l}</text>`).join("");
+    return svg(600, 290,
+      `<text x="150" y="26" text-anchor="middle" class="title">Standing on its end</text>
+      <text x="450" y="26" text-anchor="middle" class="title">Lying flat</text>` +
+      sand(10) + sand(310) +
+      `<rect x="60" y="120" width="40" height="116" fill="#b9770e" stroke="${INK}" stroke-width="1.5"/>
+      <path d="M50 220 Q56 238 60 236 M100 236 Q104 238 110 220" fill="none" stroke="${SAND_EDGE}" stroke-width="1.5"/>
+      <rect x="350" y="199" width="200" height="23" fill="#b9770e" stroke="${INK}" stroke-width="1.5"/>` +
+      txt(120, ["weight = 30 N", "area = 0.01 m²", "pressure = 3000 N/m²", "sinks in deeply"]) +
+      txt(330, ["weight = 30 N", "area = 0.05 m²", "pressure = 600 N/m²", "hardly sinks in"]));
+  })();
+
+  /* ---- 12. Water pressure grows with depth ---- */
+  out["forces-depth"] = (() => {
+    const holes = [[110, 70], [170, 105], [230, 130]];   // y of hole, horizontal reach
+    let jets = "";
+    for (const [y, r] of holes) jets += `<path d="M202 ${y} Q${202 + r * 0.7} ${y} ${202 + r} ${y + 55}" fill="none" stroke="${WATER_EDGE}" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="200" cy="${y}" r="4" fill="${INK}"/>`;
+    return svg(470, 330,
+      `<rect x="80" y="60" width="120" height="230" fill="${WATER}"/>
+      <path d="M80 30 V290 H200 V30" fill="none" stroke="${INK}" stroke-width="3"/>
+      <line x1="80" y1="60" x2="200" y2="60" stroke="${WATER_EDGE}" stroke-width="2"/>` + jets +
+      arrow(45, 70, 45, 280, AXIS, 2.5, 10, 6) +
+      `<text x="35" y="180" text-anchor="middle" transform="rotate(-90 35 180)">deeper</text>
+      <text x="300" y="100" font-weight="700">shallow: weak jet</text>
+      <text x="345" y="300" text-anchor="middle" font-weight="700">deepest: strongest jet</text>
+      <text x="140" y="318" text-anchor="middle" class="cap">water pressure increases with depth</text>`);
+  })();
+
+  /* ---- 13. Floating and sinking: weight and upthrust ---- */
+  out["forces-float"] = (() => {
+    return svg(560, 340,
+      `<rect x="10" y="150" width="540" height="180" fill="${WATER}"/>
+      <line x1="10" y1="150" x2="550" y2="150" stroke="${WATER_EDGE}" stroke-width="2"/>
+      <text x="140" y="26" text-anchor="middle" class="title">Floats</text>
+      <text x="420" y="26" text-anchor="middle" class="title">Sinks</text>
+      <path d="M85 132 H195 L180 168 H100Z" fill="#e67e22" stroke="${INK}" stroke-width="1.5"/>
+      <ellipse cx="420" cy="215" rx="30" ry="20" fill="#7f8c8d" stroke="${INK}" stroke-width="1.5"/>` +
+      arrow(155, 140, 155, 60, FORCE) + arrow(125, 160, 125, 240, FORCE2) +
+      arrow(432, 200, 432, 165, FORCE, 4, 10, 7) + arrow(408, 230, 408, 330, FORCE2) +
+      `<text x="166" y="72" font-weight="700" fill="${FORCE}">upthrust</text>
+      <text x="114" y="236" text-anchor="end" font-weight="700" fill="${FORCE2}">weight</text>
+      <text x="444" y="176" font-weight="700" fill="${FORCE}">upthrust</text>
+      <text x="397" y="318" text-anchor="end" font-weight="700" fill="${FORCE2}">weight</text>
+      <text x="140" y="292" text-anchor="middle" class="cap">upthrust = weight</text>
+      <text x="480" y="292" text-anchor="middle" class="cap">weight &gt; upthrust</text>`);
+  })();
+
+  /* ---- 14. A hydraulic jack ---- */
+  out["forces-hydraulic"] = (() => {
+    return svg(680, 320,
+      `<path d="M160 140 V270 H550 V140 H390 V240 H200 V140Z" fill="${OIL}"/>
+      <path d="M160 90 V270 H550 V90 M200 90 V240 H390 V90" fill="none" stroke="${INK}" stroke-width="3"/>
+      <rect x="162" y="128" width="36" height="12" fill="#5d6d7e"/><rect x="176" y="96" width="8" height="32" fill="#5d6d7e"/>
+      <rect x="392" y="128" width="156" height="12" fill="#5d6d7e"/>
+      <rect x="430" y="82" width="80" height="46" rx="4" fill="#2c6fbb" stroke="${INK}" stroke-width="1.5"/>
+      <text x="470" y="110" text-anchor="middle" font-weight="700" style="fill:#fff">load</text>` +
+      arrow(180, 22, 180, 92, FORCE2, 4, 10, 7) + arrow(470, 76, 470, 14, FORCE, 7, 16, 11) +
+      `<text x="488" y="36" font-weight="700" fill="${FORCE}">large force out</text>` +
+      label("effort", "small force in", [180, 50], [215, 40]) +
+      label("small-piston", "small piston", [160, 134], [145, 134], "end") +
+      label("large-piston", "large piston", [550, 134], [575, 160]) +
+      label("oil", "oil (a liquid)", [300, 255], [320, 300]));
+  })();
+
+  /* ---- 15. A balanced seesaw: turning forces ---- */
+  out["forces-seesaw"] = (() => {
+    const kid = (x, w, col) => `<rect x="${x - 30}" y="104" width="60" height="40" rx="6" fill="${col}" stroke="${INK}" stroke-width="1.5"/>
+      <text x="${x}" y="129" text-anchor="middle" font-weight="700" style="fill:#fff">${w}</text>`;
+    const dim = (x1, x2, t) => `<path d="M${x1} 200 H${x2} M${x1} 193 V207 M${x2} 193 V207" stroke="${INK}" stroke-width="1.5"/>
+      <text x="${(x1 + x2) / 2}" y="222" text-anchor="middle" font-weight="700">${t}</text>`;
+    return svg(560, 240,
+      `<rect x="60" y="144" width="440" height="10" rx="3" fill="#a0522d"/>
+      <path d="M280 154 L255 190 H305Z" fill="#7f8c8d" stroke="${INK}" stroke-width="1.5"/>
+      <text x="280" y="26" text-anchor="middle" class="title">Balanced: anticlockwise moment = clockwise moment</text>` +
+      kid(130, "400 N", "#16a085") + kid(380, "600 N", "#8e44ad") +
+      arrow(130, 60, 130, 100, FORCE2, 4, 10, 7) + arrow(380, 60, 380, 100, FORCE2, 4, 10, 7) +
+      dim(130, 280, "3 m") + dim(280, 380, "2 m") +
+      `<text x="312" y="184" class="cap">pivot</text>`);
+  })();
+
   return out;
 }

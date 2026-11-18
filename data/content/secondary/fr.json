@@ -2,7 +2,7 @@
   "language": "fr",
   "label": "French",
   "imported": "2026-10-27",
-  "source": "Y7 French Half-Term 1 Revision Worksheet (sections marked extra are not on the sheet)",
+  "source": "Y7 French Half-Term 1 Revision Worksheet (sections marked extra are not on the sheet; family, pets, birthdays and hobbies follow the other units of the class course’s first module)",
   "chapters": [
     {
       "id": "k1",
@@ -721,6 +721,453 @@
               "id": "fr-k1-un-sac",
               "fr": "un sac",
               "en": "a bag"
+            }
+          ]
+        },
+        {
+          "id": "k1-x6",
+          "title": "Ma famille",
+          "en": "Brothers, sisters and family",
+          "extra": true,
+          "items": [
+            {
+              "id": "fr-k1-as-tu-des-freres-et-s-urs",
+              "fr": "As-tu des frères et sœurs ?",
+              "en": "Do you have any brothers and sisters?"
+            },
+            {
+              "id": "fr-k1-j-ai-un-frere",
+              "fr": "J’ai un frère.",
+              "en": "I have a brother."
+            },
+            {
+              "id": "fr-k1-j-ai-une-s-ur",
+              "fr": "J’ai une sœur.",
+              "en": "I have a sister."
+            },
+            {
+              "id": "fr-k1-j-ai-deux-freres",
+              "fr": "J’ai deux frères.",
+              "en": "I have two brothers."
+            },
+            {
+              "id": "fr-k1-j-ai-un-frere-et-une-s-ur",
+              "fr": "J’ai un frère et une sœur.",
+              "en": "I have a brother and a sister."
+            },
+            {
+              "id": "fr-k1-je-n-ai-pas-de-freres-ou-de-s-urs",
+              "fr": "Je n’ai pas de frères ou de sœurs.",
+              "en": "I don’t have any brothers or sisters.",
+              "note": "After ne … pas, des becomes de."
+            },
+            {
+              "id": "fr-k1-je-suis-fils-unique",
+              "fr": "Je suis fils unique.",
+              "en": "I am an only child (boy)."
+            },
+            {
+              "id": "fr-k1-je-suis-fille-unique",
+              "fr": "Je suis fille unique.",
+              "en": "I am an only child (girl)."
+            },
+            {
+              "id": "fr-k1-un-demi-frere",
+              "fr": "un demi-frère",
+              "en": "a half-brother/a stepbrother"
+            },
+            {
+              "id": "fr-k1-une-demi-s-ur",
+              "fr": "une demi-sœur",
+              "en": "a half-sister/a stepsister"
+            },
+            {
+              "id": "fr-k1-mon-frere",
+              "fr": "mon frère",
+              "en": "my brother"
+            },
+            {
+              "id": "fr-k1-ma-s-ur",
+              "fr": "ma sœur",
+              "en": "my sister"
+            },
+            {
+              "id": "fr-k1-mes-parents",
+              "fr": "mes parents",
+              "en": "my parents",
+              "note": "mon before a boy word, ma before a girl word, mes before a plural."
+            },
+            {
+              "id": "fr-k1-mon-pere",
+              "fr": "mon père",
+              "en": "my father/my dad"
+            },
+            {
+              "id": "fr-k1-ma-mere",
+              "fr": "ma mère",
+              "en": "my mother/my mum"
+            },
+            {
+              "id": "fr-k1-mon-beau-pere",
+              "fr": "mon beau-père",
+              "en": "my stepfather"
+            },
+            {
+              "id": "fr-k1-ma-belle-mere",
+              "fr": "ma belle-mère",
+              "en": "my stepmother"
+            },
+            {
+              "id": "fr-k1-mon-grand-pere",
+              "fr": "mon grand-père",
+              "en": "my grandfather/my grandad"
+            },
+            {
+              "id": "fr-k1-ma-grand-mere",
+              "fr": "ma grand-mère",
+              "en": "my grandmother/my grandma"
+            },
+            {
+              "id": "fr-k1-il-s-appelle",
+              "fr": "Il s’appelle …",
+              "en": "He is called …"
+            },
+            {
+              "id": "fr-k1-elle-s-appelle",
+              "fr": "Elle s’appelle …",
+              "en": "She is called …"
+            },
+            {
+              "id": "fr-k1-il-a-douze-ans",
+              "fr": "Il a douze ans.",
+              "en": "He is 12 years old./He is twelve years old."
+            },
+            {
+              "id": "fr-k1-elle-a-neuf-ans",
+              "fr": "Elle a neuf ans.",
+              "en": "She is 9 years old./She is nine years old."
+            }
+          ]
+        },
+        {
+          "id": "k1-x7",
+          "title": "Les animaux",
+          "en": "Pets",
+          "extra": true,
+          "items": [
+            {
+              "id": "fr-k1-as-tu-un-animal",
+              "fr": "As-tu un animal ?",
+              "en": "Do you have a pet?"
+            },
+            {
+              "id": "fr-k1-j-ai-un-chien",
+              "fr": "J’ai un chien.",
+              "en": "I have a dog."
+            },
+            {
+              "id": "fr-k1-je-n-ai-pas-d-animal",
+              "fr": "Je n’ai pas d’animal.",
+              "en": "I don’t have a pet."
+            },
+            {
+              "id": "fr-k1-un-chien",
+              "fr": "un chien",
+              "en": "a dog"
+            },
+            {
+              "id": "fr-k1-un-chat",
+              "fr": "un chat",
+              "en": "a cat"
+            },
+            {
+              "id": "fr-k1-un-lapin",
+              "fr": "un lapin",
+              "en": "a rabbit"
+            },
+            {
+              "id": "fr-k1-un-hamster",
+              "fr": "un hamster",
+              "en": "a hamster"
+            },
+            {
+              "id": "fr-k1-un-cochon-d-inde",
+              "fr": "un cochon d’Inde",
+              "en": "a guinea pig"
+            },
+            {
+              "id": "fr-k1-une-souris",
+              "fr": "une souris",
+              "en": "a mouse"
+            },
+            {
+              "id": "fr-k1-un-oiseau",
+              "fr": "un oiseau",
+              "en": "a bird"
+            },
+            {
+              "id": "fr-k1-un-poisson-rouge",
+              "fr": "un poisson rouge",
+              "en": "a goldfish"
+            },
+            {
+              "id": "fr-k1-un-cheval",
+              "fr": "un cheval",
+              "en": "a horse"
+            },
+            {
+              "id": "fr-k1-une-tortue",
+              "fr": "une tortue",
+              "en": "a tortoise/a turtle"
+            }
+          ]
+        },
+        {
+          "id": "k1-x8",
+          "title": "Mon anniversaire",
+          "en": "Birthdays: months and numbers 21–31",
+          "extra": true,
+          "items": [
+            {
+              "id": "fr-k1-c-est-quand-ton-anniversaire",
+              "fr": "C’est quand, ton anniversaire ?",
+              "en": "When is your birthday?"
+            },
+            {
+              "id": "fr-k1-mon-anniversaire-c-est-le",
+              "fr": "Mon anniversaire, c’est le …",
+              "en": "My birthday is on the …"
+            },
+            {
+              "id": "fr-k1-janvier",
+              "fr": "janvier",
+              "en": "January"
+            },
+            {
+              "id": "fr-k1-fevrier",
+              "fr": "février",
+              "en": "February"
+            },
+            {
+              "id": "fr-k1-mars",
+              "fr": "mars",
+              "en": "March"
+            },
+            {
+              "id": "fr-k1-avril",
+              "fr": "avril",
+              "en": "April"
+            },
+            {
+              "id": "fr-k1-mai",
+              "fr": "mai",
+              "en": "May"
+            },
+            {
+              "id": "fr-k1-juin",
+              "fr": "juin",
+              "en": "June"
+            },
+            {
+              "id": "fr-k1-juillet",
+              "fr": "juillet",
+              "en": "July"
+            },
+            {
+              "id": "fr-k1-aout",
+              "fr": "août",
+              "en": "August"
+            },
+            {
+              "id": "fr-k1-septembre",
+              "fr": "septembre",
+              "en": "September"
+            },
+            {
+              "id": "fr-k1-octobre",
+              "fr": "octobre",
+              "en": "October"
+            },
+            {
+              "id": "fr-k1-novembre",
+              "fr": "novembre",
+              "en": "November"
+            },
+            {
+              "id": "fr-k1-decembre",
+              "fr": "décembre",
+              "en": "December"
+            },
+            {
+              "id": "fr-k1-le-premier-mai",
+              "fr": "le premier mai",
+              "en": "the 1st of May/1st May/the first of May",
+              "note": "The 1st is le premier; all other dates use the plain number: le deux mai."
+            },
+            {
+              "id": "fr-k1-vingt-et-un",
+              "fr": "vingt et un",
+              "en": "21"
+            },
+            {
+              "id": "fr-k1-vingt-deux",
+              "fr": "vingt-deux",
+              "en": "22"
+            },
+            {
+              "id": "fr-k1-vingt-trois",
+              "fr": "vingt-trois",
+              "en": "23"
+            },
+            {
+              "id": "fr-k1-vingt-quatre",
+              "fr": "vingt-quatre",
+              "en": "24"
+            },
+            {
+              "id": "fr-k1-vingt-cinq",
+              "fr": "vingt-cinq",
+              "en": "25"
+            },
+            {
+              "id": "fr-k1-vingt-six",
+              "fr": "vingt-six",
+              "en": "26"
+            },
+            {
+              "id": "fr-k1-vingt-sept",
+              "fr": "vingt-sept",
+              "en": "27"
+            },
+            {
+              "id": "fr-k1-vingt-huit",
+              "fr": "vingt-huit",
+              "en": "28"
+            },
+            {
+              "id": "fr-k1-vingt-neuf",
+              "fr": "vingt-neuf",
+              "en": "29"
+            },
+            {
+              "id": "fr-k1-trente",
+              "fr": "trente",
+              "en": "30"
+            },
+            {
+              "id": "fr-k1-trente-et-un",
+              "fr": "trente et un",
+              "en": "31"
+            }
+          ]
+        },
+        {
+          "id": "k1-x9",
+          "title": "Qu’est-ce que tu fais ?",
+          "en": "What do you do? Hobbies and how often",
+          "extra": true,
+          "items": [
+            {
+              "id": "fr-k1-qu-est-ce-que-tu-fais",
+              "fr": "Qu’est-ce que tu fais ?",
+              "en": "What do you do?"
+            },
+            {
+              "id": "fr-k1-je-joue-au-foot",
+              "fr": "Je joue au foot.",
+              "en": "I play football.",
+              "note": "jouer à for games and sports: au foot, au tennis, aux jeux vidéo."
+            },
+            {
+              "id": "fr-k1-je-joue-au-tennis",
+              "fr": "Je joue au tennis.",
+              "en": "I play tennis."
+            },
+            {
+              "id": "fr-k1-je-joue-aux-jeux-video",
+              "fr": "Je joue aux jeux vidéo.",
+              "en": "I play video games."
+            },
+            {
+              "id": "fr-k1-je-fais-du-velo",
+              "fr": "Je fais du vélo.",
+              "en": "I go cycling./I ride my bike.",
+              "note": "faire de for activities: du vélo, de la natation, du sport."
+            },
+            {
+              "id": "fr-k1-je-fais-de-la-natation",
+              "fr": "Je fais de la natation.",
+              "en": "I go swimming."
+            },
+            {
+              "id": "fr-k1-je-fais-du-sport",
+              "fr": "Je fais du sport.",
+              "en": "I do sport."
+            },
+            {
+              "id": "fr-k1-je-regarde-la-tele",
+              "fr": "Je regarde la télé.",
+              "en": "I watch TV./I watch television."
+            },
+            {
+              "id": "fr-k1-j-ecoute-de-la-musique",
+              "fr": "J’écoute de la musique.",
+              "en": "I listen to music."
+            },
+            {
+              "id": "fr-k1-je-surfe-sur-internet",
+              "fr": "Je surfe sur Internet.",
+              "en": "I surf the internet./I go on the internet."
+            },
+            {
+              "id": "fr-k1-je-retrouve-mes-amis",
+              "fr": "Je retrouve mes amis.",
+              "en": "I meet my friends."
+            },
+            {
+              "id": "fr-k1-je-lis",
+              "fr": "Je lis.",
+              "en": "I read."
+            },
+            {
+              "id": "fr-k1-je-chante",
+              "fr": "Je chante.",
+              "en": "I sing."
+            },
+            {
+              "id": "fr-k1-je-danse",
+              "fr": "Je danse.",
+              "en": "I dance."
+            },
+            {
+              "id": "fr-k1-souvent",
+              "fr": "souvent",
+              "en": "often"
+            },
+            {
+              "id": "fr-k1-quelquefois",
+              "fr": "quelquefois",
+              "en": "sometimes"
+            },
+            {
+              "id": "fr-k1-tous-les-jours",
+              "fr": "tous les jours",
+              "en": "every day"
+            },
+            {
+              "id": "fr-k1-le-week-end",
+              "fr": "le week-end",
+              "en": "at the weekend/at weekends/on the weekend"
+            },
+            {
+              "id": "fr-k1-de-temps-en-temps",
+              "fr": "de temps en temps",
+              "en": "from time to time"
+            },
+            {
+              "id": "fr-k1-et-toi",
+              "fr": "Et toi ?",
+              "en": "And you?"
             }
           ]
         }
