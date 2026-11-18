@@ -13,6 +13,7 @@
    The password is kept in memory only, for this visit.
    ========================================================= */
 
+import { grownUpsPassword } from "../core/grownups-lock.js";
 import { proxyCall, ping } from "../core/ai.js";
 import { getStore } from "../core/store.js";
 import { esc } from "../core/utils.js";
@@ -46,6 +47,7 @@ const ERRORS = {
 const errText = err => ERRORS[err.code] || err.message || "Something went wrong.";
 
 export function renderWordLists(el) {
+  if (!password) password = grownUpsPassword();      // typed once at the Grown-ups lock
   const hasToken = !!getStore().settings.proxyToken;
   el.innerHTML = `
     <div class="run-bar">

@@ -3,8 +3,9 @@
 
 ## What this project is
 A family web app for school practice that grows with whatever school material is fed in.
-The start screen (`#/start`) asks **who is practising** (`core/profiles.js`); each child has
-their own saved progress and a stage with its own home and nav:
+The start screen (`#/start`) asks **who is practising** (`core/profiles.js`): Oskar, Finn or
+**Guest** (other children: first name + Year 6 or Year 7, no password). Each child has their own
+saved progress and a stage with its own home and nav:
 - **Oskar — Year 1** (`year1`): phonics (sounds, read real/alien words, real or alien?, which
   word?) and tricky words, with sound buttons (below)
 - **Finn — Year 7** (`secondary`): German and French vocabulary, verb tables, maths, science and geography revision;
@@ -24,7 +25,8 @@ tag `v1-final` / branch `v1-archive`, and on the server at `/sats-trainer-old/` 
 - Vanilla JS ES modules, HTML, CSS — **no framework, no build step**
 - Content is static JSON in `data/content/`; state in `localStorage`, one key per child:
   Finn `ks2_sats_v2` (everything from before profiles; one-time v1 import from `ks2_sats_runner_v1`),
-  Oskar `studyden_oskar`; active child per device in `studyden_profile`
+  Oskar `studyden_oskar`, a guest `studyden_g<8 letters>`; active child per device in `studyden_profile`,
+  family let in on this device `studyden_family`, guests on this device `studyden_guests`
 - AI (marking + reading-test generation) goes through a small **PHP proxy** in `api/` —
   the API key lives server-side only. The app must stay fully usable without the proxy
   (free-text answers fall back to self-marking with a mark-scheme checklist).
@@ -44,12 +46,13 @@ css/theme.css           # design tokens   css/app.css  # chrome   css/paper.css 
 js/core/
   app.js                # boot + hash router; per-child stages and nav (year1, primary, secondary, grown-ups)
   loader.js             # fetches data/content/*.json, merges generated banks (additive by id)
-  profiles.js           # the children: id, name, year, stage(s), storage key
+  profiles.js           # FAMILY (Finn, Oskar) + this device's guests: id, name, year, stage(s), storage key
   store.js              # per-child state (setProfile, peekStore, setProxyToken → all children), v1 import, recordAttempt()
   schema.js             # browser schema checks (mirror of tools/lib/schema-v2.mjs)
   marking.js            # mark(q, answer) — deterministic markers, DOM-free
   ai.js                 # proxy client: ping, usage, markAI
   activity.js           # usage monitor (child side): active time per screen, answer tallies → proxy
+  grownups-lock.js      # the whole Grown-ups area asks for the upload password (track.php op grown-ups), memory only
   speech.js             # speakWord (en-GB spelling) + speak(text, lang) for languages
   adaptive.js           # adaptive picking/mastery engine (spelling + vocab)
   vocab-match.js        # typed-answer matching for vocab (brackets, slashes, …, umlauts)
@@ -60,7 +63,7 @@ js/render/
   question.js           # paper-style renderer per question type; collectAnswer/showResult
   selfmark.js           # self-mark checklist (AI fallback)
 js/views/
-  start.js              # "Who's practising?" — one card per child
+  start.js              # "Who's practising?" — Oskar, Finn (PIN once per device), Guest (list + New)
   year1/home.js         # Year 1 hub + phonics: sounds, read words, real or alien?, which word?
   year1/tricky.js       # tricky words: list, find it, build it (sound tiles)
   year1/word.js         # loader, wordHtml (sound buttons), adaptive state, round runner, self-check
@@ -93,21 +96,37 @@ data/content/secondary/ # de.json (tools/import-vocab.mjs), fr.json (hand-writte
 data/uploads/           # SERVER-ONLY, written by the proxy: <lang>.json uploaded chapters (gitignored, never deployed)
 api/                    # proxy.php prompts.php ratelimit.php vocab.php activity.php track.php .htaccess state/ (config.php server-only)
 tools/                  # validate2.mjs, test-marking.mjs, test-vocab.mjs, import-vocab.mjs,
+                        # set-upload-password.php, set-family-pin.php (edit local api/config.php),
                         # deploy.sh, lib/schema-v2.mjs (+ legacy v1 tools)
 docs/REBUILD_PLAN.md    # v2 decisions, SATs standards, schema, phases
 ```
 
 ---
 
-## Profiles (`core/profiles.js`)
-- `PROFILES`: `{ id, name, year, stage, key, sub, subject, stages? }`. Adding a child = one entry
-  (+ a new stage in `core/app.js` `ROUTES`/`NAV`/`HOME` and `views/start.js` if theirs is new).
+## Profiles (`core/profiles.js`, start screen `views/start.js`)
+- **Family** (`FAMILY`): Oskar and Finn, `{ id, name, year, stage, key, sub, subject, stages?, family }`,
+  always shown on the start screen. A device may use one only after their **PIN** was typed there once
+  (`#/start/<id>` → `api/track.php` op `family` → `addFamilyToDevice`, list in `studyden_family`). PINs are
+  hashes in `config.php` `family_pin_hashes` (`php tools/set-family-pin.php finn|oskar`, then deploy);
+  wrong PINs are logged in `state/security.json` with their **own** lock (5 in 15 min → 1 h, `pinLockUntil`),
+  so a child guessing never locks the upload password. On first run of this version a device lets in
+  family members whose real progress is already there (`migrateFamily`, once) — an empty copy left by a
+  visit doesn't count, which is why `initStore()` no longer writes Finn's key when nobody is chosen.
+- **Guests** (`#/start/guest`, `/guest/new`): first name (letters, ≤ 20, `cleanName`) + Year 6 (`primary`)
+  or Year 7 (`secondary` + `primary`), no Year 1; id `g` + 8 random letters; saved only on the device
+  (`studyden_guests`). The names Finn/Oskar are refused for guests. Same name + year = same guest.
+  Grown-ups can remove a guest from the device (deletes their progress there).
 - The router sends a child only to their own `stages`; another stage's URL goes to their home.
   Grown-ups works without a child chosen.
 - The shared key (`settings.proxyToken`) belongs to the device: `setProxyToken` writes it into
-  every child's copy; a new child's copy starts with Finn's key.
-- Grown-ups shows one child at a time (`#/grown-ups/<id>`, tabs): mastery, export, reset per child.
-- The site is public, so the children's first names are visible on the start screen (agreed).
+  every child's copy on the device; a new child's copy starts with Finn's key (so guests on a family
+  device get AI marking; guests elsewhere self-mark).
+- **Grown-ups is locked:** every `#/grown-ups…` page first asks for the upload password (`core/grownups-lock.js`,
+  checked by `api/track.php` op `grown-ups`, same lockout/alerts as uploads), kept in memory for the visit
+  (a reload asks again); Activity and Word lists reuse it instead of asking again.
+- Grown-ups shows one child of this device at a time (`#/grown-ups/<id>`, tabs): mastery, export, reset.
+- The site is public: Finn's and Oskar's first names are on the start screen (agreed); guest names
+  never are — they stay on their device and in the activity log (behind the upload password).
 
 ## Year 1 (`views/year1/`, `#/year1[/sounds|read|alien|listen|tricky[/find|build]]`)
 - **Words are stored as their sounds:** `"g": ["sh","i","p"]`; a split friend is `"a-" … "-e"`
@@ -361,7 +380,8 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
   last activity, breaks under 15 min included), **open** (page visible, until 15 min without input) and
   **active** = learning time (visible and touched/typed/scrolled in the last 90 s), the last per screen, mapped by `activityFor(hash)` to an area (reading, gps, maths,
   spelling, german, french, science, phonics, tricky, menus) + label. Every record carries `child`
-  (profile id; none = from before profiles, shown as Finn's); the dashboard filters Everyone / per child,
+  (profile id; none = from before profiles, shown as Finn's) and, for a guest, `name` (first name, checked
+  server-side by `act_name`); the dashboard filters Everyone / Oskar / Finn / Guests,
   the CSV has a child column, and a session ends when another child takes over the device. Start screen and Grown-ups don't count; a 15-min gap starts a
   new session. `recordAttempt()` calls `noteAttempt()` (answer tally + a named result); the spelling
   trainer calls `noteAnswer()`. Records queue in localStorage `ks2_activity` and go to `api/track.php`
@@ -370,7 +390,9 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
   (hashed, `state/track-rate.json`), strict record checks, 20 MB per month. Op `report` needs the upload
   password (same lockout/alerts as uploads).
 - Storage `api/activity.php`: `state/activity/<YYYY-MM>.jsonl`, append-only, newest line per id wins.
-  All children count as one learner (no profiles yet).
+  Dashboard: tiles, daily chart, "What was practised" (subjects, tap to fold out activities),
+  **Day by day** (newest 14 days: per child one line per subject — time, answers, % right — folding out to
+  activities and scores; the raw sessions under a toggle), When.
   The dashboard downloads sessions as CSV (one row per session) or everything as JSON (last 400 days);
   for deeper analysis, download `state/activity/*.jsonl` over SFTP.
 - When adding a route or trainer: extend `activityFor()`; new subjects need an `AREAS` entry (fixed

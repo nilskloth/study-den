@@ -3,8 +3,8 @@
    AI usage/spend, settings (proxy token), data management.
    ========================================================= */
 
-import { getStore, resetProfile, setProxyToken, peekStore, getProfile } from "../core/store.js";
-import { PROFILES, profileById } from "../core/profiles.js";
+import { getStore, resetProfile, setProxyToken, peekStore, getProfile, initStore } from "../core/store.js";
+import { deviceProfiles, profileById, removeGuest } from "../core/profiles.js";
 import { loadContent } from "../core/loader.js";
 import { ping, usage } from "../core/ai.js";
 import { generateReadingTest } from "../gen/generate.js";
@@ -12,6 +12,7 @@ import { esc } from "../core/utils.js";
 import { domainLabel } from "./paper.js";
 import { renderWordLists } from "./wordlists.js";
 import { renderActivity } from "./activity.js";
+import { grownUpsPassword, unlockGrownUps } from "../core/grownups-lock.js";
 
 const SUBJECT_LABELS = { reading: "Reading", gps: "Grammar & punctuation", maths: "Maths", spelling: "Spelling",
   german: "German vocabulary", french: "French vocabulary", science: "Science revision", geography: "Geography revision", maths7: "Maths revision (Year 7)",
@@ -28,7 +29,8 @@ function estimateSpend(log) {
 /* Failed sign-ins on the server (wrong shared key / upload password). */
 function securityHtml(sec, uploads) {
   if (!sec) return "";
-  const kind = k => (k === "upload-password" ? "wrong upload password" : "wrong shared key");
+  const kind = f => (f.kind === "upload-password" ? "wrong upload password"
+    : f.kind === "family-pin" ? `wrong PIN${f.child ? ` for ${f.child[0].toUpperCase()}${f.child.slice(1)}` : ""}` : "wrong shared key");
   const alerts = uploads?.alerts ? "You're emailed about these (at most once an hour)." : "Email alerts are off — set alert_email in api/config.php.";
   if (!sec.fails?.length) return `<p class="muted">No failed sign-in attempts. ${alerts}</p>`;
   return `
@@ -36,19 +38,57 @@ function securityHtml(sec, uploads) {
       <strong>${sec.total} failed sign-in attempt${sec.total === 1 ? "" : "s"}</strong>${sec.locked ? " — uploading is locked for now" : ""}.
       <span class="muted">${alerts}</span>
       <ul style="margin:var(--sp-2) 0 0;padding-left:1.2em;">
-        ${sec.fails.map(f => `<li>${esc(new Date(f.ts).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" }))} — ${kind(f.kind)} from ${esc(f.ip)}</li>`).join("")}
+        ${sec.fails.map(f => `<li>${esc(new Date(f.ts).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" }))} — ${kind(f)} from ${esc(f.ip)}</li>`).join("")}
       </ul>
     </div>`;
 }
 
+const LOCK_ERRORS = {
+  bad_password: "That password isn't right.",
+  no_password: "No upload password is set on the server yet — run php tools/set-upload-password.php, then deploy."
+};
+
+/* Everything under Grown-ups waits for the upload password (once per visit). */
+function renderLock(el, params) {
+  el.innerHTML = `
+    <div class="start start-narrow">
+      <h2>Grown-ups</h2>
+      <p class="muted">Progress, activity, settings and word lists. Type the upload password.</p>
+      <form class="start-form" data-lock-form>
+        <input class="start-input" data-password type="password" autocomplete="current-password" aria-label="Upload password" placeholder="Password" style="width:14em;">
+        <button class="primary" type="submit">Open</button>
+      </form>
+      <p class="start-msg" data-msg role="status"></p>
+      <p class="muted"><a href="#/start">← Back to practising</a></p>
+    </div>`;
+  const input = el.querySelector("[data-password]");
+  const msg = el.querySelector("[data-msg]");
+  input.focus();
+  el.querySelector("[data-lock-form]").addEventListener("submit", async e => {
+    e.preventDefault();
+    if (!input.value) return;
+    msg.textContent = "Checking…";
+    try {
+      await unlockGrownUps(input.value);
+      renderProgress(el, params);
+    } catch (err) {
+      msg.textContent = LOCK_ERRORS[err.code] || err.message;
+      input.value = "";
+      input.focus();
+    }
+  });
+}
+
 export function renderProgress(el, params = []) {
+  if (!grownUpsPassword()) return renderLock(el, params);
   if (params[0] === "word-lists") return renderWordLists(el);
   if (params[0] === "activity") return renderActivity(el);
   /* #/grown-ups/<child>: whose progress to show (this device's copy) */
-  const shown = profileById(params[0]) || getProfile() || PROFILES[PROFILES.length - 1];
-  const store = peekStore(shown.id);
+  const here = deviceProfiles();
+  const shown = profileById(params[0]) || getProfile() || here[here.length - 1] || null;
+  const store = shown ? peekStore(shown.id) : getStore();
   const stats = store.domainStats;
-  const sats = (shown.stages || [shown.stage]).includes("primary");
+  const sats = !!shown && (shown.stages || [shown.stage]).includes("primary");
 
   /* Domain mastery grouped by subject */
   const bySubject = {};
@@ -85,8 +125,9 @@ export function renderProgress(el, params = []) {
 
   el.innerHTML = `
     <div class="child-tabs" role="tablist" aria-label="Whose progress">
-      <span class="muted">Progress for</span>
-      ${PROFILES.map(p => `<a href="#/grown-ups/${p.id}" role="tab" class="${p.id === shown.id ? "active" : ""}" aria-selected="${p.id === shown.id}">${esc(p.name)} <span class="muted">${esc(p.year)}</span></a>`).join("")}
+      ${here.length ? `<span class="muted">Progress on this device for</span>
+      ${here.map(p => `<a href="#/grown-ups/${p.id}" role="tab" class="${p.id === shown?.id ? "active" : ""}" aria-selected="${p.id === shown?.id}">${esc(p.name)} <span class="muted">${esc(p.year)}${p.guest ? " · guest" : ""}</span></a>`).join("")}`
+        : `<span class="muted">Nobody practises on this device yet — progress shows here once someone has picked their name on the start screen.</span>`}
     </div>
     <a class="card verb-link" href="#/grown-ups/activity">
       <strong>Activity →</strong>
@@ -100,11 +141,11 @@ export function renderProgress(el, params = []) {
       <p style="margin-bottom:0;">Recent papers: ${trend}</p>
     </div>` : ""}
 
-    <div class="card" style="margin-bottom:var(--sp-4);">
+    ${shown ? `<div class="card" style="margin-bottom:var(--sp-4);">
       <h2 style="margin-top:0;">${esc(shown.name)}: mastery by topic</h2>
       ${masteryHtml}
       <p class="muted" style="margin-bottom:0;">Bars show a recency-weighted average of marks earned. Self-marked answers count too.</p>
-    </div>
+    </div>` : ""}
 
     <div class="card" style="margin-bottom:var(--sp-4);">
       <h2 style="margin-top:0;">AI marking</h2>
@@ -137,14 +178,16 @@ export function renderProgress(el, params = []) {
       <p style="margin-bottom:0;"><a class="btn" href="#/grown-ups/word-lists">Word lists…</a></p>
     </div>
 
-    <div class="card">
+    ${shown ? `<div class="card">
       <h2 style="margin-top:0;">Data</h2>
       <p>
         <button data-export>Export ${esc(shown.name)}'s progress</button>
         <button data-reset style="color:var(--wrong);">Reset ${esc(shown.name)}'s progress…</button>
+        ${shown.guest ? `<button data-remove style="color:var(--wrong);">Remove ${esc(shown.name)} from this device…</button>` : ""}
       </p>
-      <p class="muted" style="margin-bottom:0;">Progress lives in this browser only, separately for each child. Export before switching devices.</p>
-    </div>
+      <p class="muted" style="margin-bottom:0;">Progress lives in this browser only, separately for each child. Export before switching devices.
+        ${shown.guest ? "Removing a guest takes their name off the start screen here and deletes their progress on this device (their past activity stays in the Activity report)." : ""}</p>
+    </div>` : ""}
   `;
 
   const statusEl = el.querySelector("[data-ai-status]");
@@ -195,6 +238,17 @@ export function renderProgress(el, params = []) {
       genStatus.textContent = `Couldn't generate a test: ${err.message}`;
     } finally {
       btn.disabled = false;
+    }
+  });
+
+  if (!shown) { refreshUsage(); return; }
+
+  el.querySelector("[data-remove]")?.addEventListener("click", () => {
+    if (window.confirm(`Remove ${shown.name} from this device and delete their progress here?`)) {
+      removeGuest(shown.id);
+      initStore();                       // they may have been the one chosen here
+      location.hash = "#/grown-ups";
+      renderProgress(el, []);
     }
   });
 

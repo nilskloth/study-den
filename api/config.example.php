@@ -29,6 +29,10 @@ return [
   'alert_email' => '',
   'alert_from' => '',
 
+  // Finn's and Oskar's start-screen PINs, asked once per new device.
+  // Set with:  php tools/set-family-pin.php finn|oskar
+  'family_pin_hashes' => [],
+
   // Global requests per minute across all operations.
   'per_minute_cap' => 20,
 ];

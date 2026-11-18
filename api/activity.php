@@ -8,8 +8,9 @@
  *   session  {kind, id, dev, child, start, end, active, open, parts:{key: seconds}, tally:{area: [answered, right]}}
  *            (active = learning seconds, open = seconds on screen; see js/core/activity.js)
  *   result   {kind, id, ts, area, child, mode, label, earned, marks}
- * child: profile id ("oskar", "finn"); records from before profiles have none
- * (shown as Finn's).
+ *   both may carry name: a guest's first name (Finn and Oskar have none)
+ * child: profile id ("oskar", "finn", or a guest's "g" + 8 letters); records
+ * from before profiles have none (shown as Finn's).
  * A session is sent again as it grows; the newest line per id wins.
  * Nothing typed by the child (answers, words) is ever sent.
  */
@@ -42,6 +43,12 @@ function act_child($v): string {
   return preg_match('/^[a-z]{1,20}$/', $c) ? $c : '';
 }
 
+/* A guest's first name as typed on their device: letters, spaces, - and '. */
+function act_name($v): string {
+  $n = act_str($v, 20);
+  return preg_match("/^\\p{L}[\\p{L} '’-]*$/u", $n) ? $n : '';
+}
+
 function act_clean($r): ?array {
   if (!is_array($r)) return null;
   $id = act_str($r['id'] ?? '', 80);
@@ -62,6 +69,7 @@ function act_clean($r): ?array {
       if ($area !== '' && is_array($t)) $tally[$area] = [act_int($t[0] ?? 0, 0, 100000), act_int($t[1] ?? 0, 0, 100000)];
     }
     return ['kind' => 'session', 'id' => $id, 'dev' => act_str($r['dev'] ?? '', 40), 'child' => act_child($r['child'] ?? ''),
+      'name' => act_name($r['name'] ?? ''),
       'start' => $start, 'end' => $end, 'active' => act_int($r['active'] ?? 0, 0, 86400),
       'open' => act_int($r['open'] ?? 0, 0, 86400),
       'parts' => (object) $parts, 'tally' => (object) $tally];
@@ -71,7 +79,8 @@ function act_clean($r): ?array {
     $ts = act_ts($r['ts'] ?? null);
     if ($ts === null) return null;
     return ['kind' => 'result', 'id' => $id, 'ts' => $ts,
-      'area' => act_str($r['area'] ?? '', 20), 'child' => act_child($r['child'] ?? ''), 'mode' => act_str($r['mode'] ?? '', 30),
+      'area' => act_str($r['area'] ?? '', 20), 'child' => act_child($r['child'] ?? ''),
+      'name' => act_name($r['name'] ?? ''), 'mode' => act_str($r['mode'] ?? '', 30),
       'label' => act_str($r['label'] ?? '', 80),
       'earned' => act_int($r['earned'] ?? 0, 0, 100000), 'marks' => act_int($r['marks'] ?? 0, 0, 100000)];
   }

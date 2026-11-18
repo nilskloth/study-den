@@ -1,6 +1,9 @@
 /* =========================================================
    State, one saved copy per child (core/profiles.js): Finn's is
-   the original key ks2_sats_v2, Oskar's studyden_oskar. Settings
+   the original key ks2_sats_v2, Oskar's studyden_oskar, a guest's
+   studyden_g…. With nobody chosen (start screen, Grown-ups) the
+   copy is Finn's key but isn't written until something changes,
+   so a visit alone never looks like Finn's progress. Settings
    that belong to the device (the shared key) are copied to every
    child's copy.
    On first boot, imports what it can from the v1 keys
@@ -9,7 +12,7 @@
    ========================================================= */
 
 import { noteAttempt } from "./activity.js";
-import { PROFILES, profileById, activeProfileId, rememberProfile } from "./profiles.js";
+import { deviceProfiles, profileById, activeProfileId, rememberProfile } from "./profiles.js";
 
 const FIRST_KEY = "ks2_sats_v2";          // Finn's — everything from before profiles
 let KEY = FIRST_KEY;
@@ -95,7 +98,7 @@ export function initStore() {
     if (!store.vocab) store.vocab = {};
   } else {
     store = importFromV1(defaultStore());
-    saveStore();
+    if (profile) saveStore();
   }
   return store;
 }
@@ -128,7 +131,7 @@ export function peekStore(id) {
 export function setProxyToken(token) {
   store.settings.proxyToken = token;
   saveStore();
-  PROFILES.forEach(p => {
+  deviceProfiles().forEach(p => {
     if (p.key === KEY) return;
     const raw = readKey(p.key);
     if (!raw || raw.version !== 2) return;

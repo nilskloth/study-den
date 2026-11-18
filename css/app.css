@@ -377,6 +377,37 @@ button.hear { padding: var(--sp-1) var(--sp-2); font-size: var(--fs-3); line-hei
 .act-table tr.act-sub td { color: var(--ink-muted); font-size: var(--fs-0); padding-top: 2px; padding-bottom: 2px; }
 .act-table tr.act-sub td:first-child { padding-left: calc(var(--sp-2) + 16px); }
 .act-sessions td { vertical-align: top; }
+.act-fold { all: unset; cursor: pointer; font-weight: 650; }
+.act-fold::after { content: " ▸"; color: var(--ink-faint); font-weight: 400; }
+.act-fold[aria-expanded="true"]::after { content: " ▾"; }
+.act-fold:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+/* Day by day */
+.act-dayblock { padding: var(--sp-3) 0; border-top: 1px solid var(--line-soft); }
+.act-dayblock:first-of-type { border-top: none; padding-top: 0; }
+.act-dayblock h4 { margin: 0 0 var(--sp-2); }
+.act-dayblock h4 .muted { font-weight: 400; }
+.act-kid { margin-bottom: var(--sp-2); }
+.act-kid-head { margin: 0 0 var(--sp-1); }
+.act-subj { margin-left: var(--sp-2); }
+.act-subj summary, .act-subj-flat { display: grid; grid-template-columns: 16px minmax(7em, auto) 5.5em 1fr; align-items: baseline;
+  gap: var(--sp-2); padding: 3px var(--sp-1); border-radius: 4px; }
+.act-subj summary { cursor: pointer; list-style: none; }
+.act-subj summary::-webkit-details-marker { display: none; }
+.act-subj summary:hover { background: var(--accent-soft); }
+.act-subj summary .act-subj-name::after { content: " ▸"; color: var(--ink-faint); }
+.act-subj[open] summary .act-subj-name::after { content: " ▾"; }
+.act-subj .act-key { margin-right: 0; }
+.act-subj-time { font-variant-numeric: tabular-nums; text-align: right; }
+.act-subj-score { font-size: var(--fs-0); }
+.act-detail { list-style: none; margin: 0 0 var(--sp-2); padding: 0 0 0 calc(16px + var(--sp-4)); font-size: var(--fs-0); color: var(--ink-muted); }
+.act-detail li { display: flex; justify-content: space-between; gap: var(--sp-3); padding: 2px 0; border-bottom: 1px dotted var(--line-soft); max-width: 30rem; }
+.act-detail .act-run strong { color: var(--ink); }
+.act-sess summary { cursor: pointer; font-size: var(--fs-0); color: var(--ink-muted); margin-top: var(--sp-1); }
+@media (max-width: 560px) {
+  .act-subj summary, .act-subj-flat { grid-template-columns: 16px 1fr auto; }
+  .act-subj-score { grid-column: 2 / -1; }
+  .act-sessions th:nth-child(6), .act-sessions td:nth-child(6) { display: none; }
+}
 .act-when .fill { background: var(--accent); }
 .act-when .domain-bar { grid-template-columns: 110px minmax(0, 1fr) 84px; }
 .act-foot { font-size: var(--fs-0); }
@@ -506,6 +537,27 @@ button.hear { padding: var(--sp-1) var(--sp-2); font-size: var(--fs-3); line-hei
 .child-tabs a.active { background: var(--ink); color: #fff; border-color: var(--ink); }
 .child-tabs a.active .muted { color: #d8d8d4; }
 .start-grownups { text-align: center; margin-top: var(--sp-5); }
+
+/* Start: PIN and new guest (views/start.js) */
+.start-narrow { max-width: 440px; }
+.level-card-new { border-style: dashed; box-shadow: none; display: flex; align-items: center; }
+.start-form { display: flex; gap: var(--sp-2); justify-content: center; margin-top: var(--sp-5); }
+.start-form-stack { flex-direction: column; align-items: stretch; text-align: left; gap: var(--sp-2); }
+.start-form-stack .primary { margin-top: var(--sp-4); align-self: center; padding: var(--sp-3) var(--sp-6); font-size: var(--fs-2); }
+.start-label { font-weight: 650; margin-top: var(--sp-3); }
+.start-input { font: inherit; font-size: var(--fs-2); padding: var(--sp-2) var(--sp-3); border: 1px solid var(--line);
+  border-radius: var(--radius-sm); background: var(--paper); color: var(--ink); min-width: 0; }
+.start-pin { width: 9em; text-align: center; letter-spacing: 0.25em; }
+.start-years { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-3); }
+.start-year { position: relative; cursor: pointer; }
+.start-year input { position: absolute; opacity: 0; }
+.start-year > span { display: flex; flex-direction: column; gap: var(--sp-1); height: 100%; padding: var(--sp-3); border: 1px solid var(--line);
+  border-top: 6px solid var(--subject, var(--accent)); border-radius: var(--radius-sm); background: var(--paper); }
+.start-year .muted { font-size: var(--fs-0); }
+.start-year input:checked + span { border-color: var(--subject, var(--accent)); box-shadow: 0 0 0 2px var(--subject, var(--accent)); }
+.start-year input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
+.start-msg { min-height: 1.5em; margin: var(--sp-3) 0 0; color: var(--wrong); }
+.start-note { font-size: var(--fs-0); text-align: left; }
 
 /* =========================================================
    Year 1: phonics and tricky words (views/year1/)

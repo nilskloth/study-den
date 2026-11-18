@@ -184,13 +184,39 @@ function sec_check_password($password, array $config): ?array {
   return null;
 }
 
+/*
+ * Finn's / Oskar's start-screen PIN (config family_pin_hashes), asked once
+ * per new device. Wrong PINs are logged like other failed sign-ins, but
+ * have their own lock (pinLockUntil), so a child guessing can't lock the
+ * grown-up's upload password. Five wrong in 15 minutes → an hour.
+ */
+function sec_check_pin(string $child, $pin, array $config): ?array {
+  $hash = (string) ($config['family_pin_hashes'][$child] ?? '');
+  if ($hash === '') return [403, 'no_pin', 'No PIN is set for this child yet (php tools/set-family-pin.php)'];
+  $now = time();
+  $lockUntil = sec_update(fn(array &$d) => $d['pinLockUntil'] ?? 0) ?? 0;
+  if ($lockUntil > $now) {
+    return [429, 'locked', 'Too many wrong PINs — try again in ' . ceil(($lockUntil - $now) / 60) . ' minutes'];
+  }
+  if (!is_string($pin) || !preg_match('/^\d{4,8}$/', $pin) || !password_verify($pin, $hash)) {
+    $ip = sec_client_ip();
+    sec_update(function (array &$d) use ($now, $ip, $child) {
+      $d['fails'][] = ['ts' => gmdate('c', $now), 't' => $now, 'kind' => 'family-pin', 'ip' => $ip, 'child' => $child];
+      $recent = array_filter($d['fails'], fn($f) => $f['kind'] === 'family-pin' && $now - $f['t'] < SEC_WINDOW);
+      if (count($recent) >= SEC_MAX_FAILS) $d['pinLockUntil'] = $now + SEC_LOCK;
+    });
+    return [401, 'bad_pin', 'Wrong PIN'];
+  }
+  return null;
+}
+
 /* Recent failures for the parent's view. */
 function sec_summary(): array {
   $raw = @file_get_contents(SECURITY_FILE);
   $d = $raw !== false ? json_decode($raw, true) : null;
   if (!is_array($d)) return ['fails' => [], 'locked' => false];
   return [
-    'fails' => array_map(fn($f) => ['ts' => $f['ts'], 'kind' => $f['kind'], 'ip' => $f['ip']],
+    'fails' => array_map(fn($f) => ['ts' => $f['ts'], 'kind' => $f['kind'], 'ip' => $f['ip'], 'child' => $f['child'] ?? ''],
       array_slice(array_reverse($d['fails'] ?? []), 0, 10)),
     'total' => count($d['fails'] ?? []),
     'locked' => ($d['lockUntil'] ?? 0) > time(),

@@ -2,22 +2,25 @@
    Grown-ups → Activity (#/grown-ups/activity): how much the
    trainer is used, when, on what, and how well — from every
    device (records sent by core/activity.js to api/track.php,
-   read back there with the upload password). All children's
-   use counts as one learner for now.
+   read back there with the upload password). Filter by child:
+   Finn, Oskar, or the guests (named by the first name they typed).
    ========================================================= */
 
+import { grownUpsPassword } from "../core/grownups-lock.js";
 import { getStore, saveStore } from "../core/store.js";
 import { esc } from "../core/utils.js";
 import { AREAS, pendingCount } from "../core/activity.js";
-import { PROFILES, profileById } from "../core/profiles.js";
+import { FAMILY, familyById } from "../core/profiles.js";
 
-/* Records from before profiles carry no child: they were Finn's. */
+/* Records from before profiles carry no child: they were Finn's.
+   Filter "guests" = every child who isn't family. */
 const childOf = r => r.child || "finn";
-const childName = r => profileById(childOf(r))?.name || childOf(r);
+const childName = r => familyById(childOf(r))?.name || r.name || "Guest";
+const inFilter = (r, child) => !child || (child === "guests" ? !familyById(childOf(r)) : childOf(r) === child);
 const forChild = (data, child) => (!child ? data : {
   ...data,
-  sessions: data.sessions.filter(r => childOf(r) === child),
-  results: data.results.filter(r => childOf(r) === child)
+  sessions: data.sessions.filter(r => inFilter(r, child)),
+  results: data.results.filter(r => inFilter(r, child))
 });
 
 const PERIODS = [7, 30, 90];
@@ -63,6 +66,7 @@ const dateLabel = (ts, opts) => new Date(ts).toLocaleDateString("en-GB", opts);
 const timeLabel = ts => new Date(ts).toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" });
 
 export function renderActivity(el) {
+  if (!password) password = grownUpsPassword();      // typed once at the Grown-ups lock
   const store = getStore();
   const pending = pendingCount();
   el.innerHTML = `
@@ -80,7 +84,7 @@ export function renderActivity(el) {
     </div>
     <div data-report></div>
     <p class="muted act-foot">This device: ${pending ? `${pending} record${pending === 1 ? "" : "s"} waiting to send` : "everything sent"}.
-      Only timings, activity names and scores are sent — never what is typed.</p>`;
+      Only timings, activity names, scores and guests' first names are sent — never what is typed.</p>`;
 
   const status = el.querySelector("[data-status]");
   const report = el.querySelector("[data-report]");
@@ -180,7 +184,7 @@ function drawReport(box, data, days, reload, fetchAll, child, setChild) {
   box.innerHTML = `
     <div class="act-period">
       <div class="seg" role="radiogroup" aria-label="Whose activity">
-        ${[["", "Everyone"], ...PROFILES.map(p => [p.id, p.name])].map(([id, name]) => `<label class="seg-opt"><input type="radio" name="act-child" value="${id}"${id === child ? " checked" : ""}><span>${esc(name)}</span></label>`).join("")}
+        ${[["", "Everyone"], ...FAMILY.map(p => [p.id, p.name]), ["guests", "Guests"]].map(([id, name]) => `<label class="seg-opt"><input type="radio" name="act-child" value="${id}"${id === child ? " checked" : ""}><span>${esc(name)}</span></label>`).join("")}
       </div>
       <div class="seg" role="radiogroup" aria-label="Period">
         ${PERIODS.map(p => `<label class="seg-opt"><input type="radio" name="act-days" value="${p}"${p === days ? " checked" : ""}><span>${p} days</span></label>`).join("")}
@@ -209,23 +213,30 @@ function drawReport(box, data, days, reload, fetchAll, child, setChild) {
 
     <div class="card act-card">
       <h3>What was practised</h3>
+      <p class="muted act-foot" style="margin-top:0;">Tap a subject for its activities.</p>
       ${activityTable(s)}
+    </div>
+
+
+    <div class="card act-card">
+      <h3>Day by day</h3>
+      ${dayByDay(s)}
     </div>
 
     <div class="card act-card">
       <h3>When</h3>
       ${whenBars(s.hours)}
-    </div>
-
-    <div class="card act-card">
-      <h3>Recent sessions</h3>
-      ${sessionList(s)}
     </div>` : `
     <div class="card act-card"><p class="muted" style="margin:0;">Nothing recorded in the last ${days} days yet.</p></div>`}
 
     <p class="muted act-foot">${devices.length ? `Devices: ${esc(devices.join(", "))}. ` : ""}<strong>Learning</strong> counts only while the page is in use (touched, typed or scrolled in the last 1½ minutes). <strong>On screen</strong> is time the page was in front, up to 15 minutes without input. <strong>Length</strong> is the clock time from a session's first to last activity, short breaks included. A day counts as used from 1 minute of learning.</p>`;
 
   box.querySelectorAll('input[name="act-child"]').forEach(r => r.addEventListener("change", () => setChild(r.value)));
+  box.querySelectorAll("[data-fold]").forEach(b => b.addEventListener("click", () => {
+    const open = b.getAttribute("aria-expanded") !== "true";
+    b.setAttribute("aria-expanded", String(open));
+    box.querySelectorAll(`tr[data-of="${b.dataset.fold}"]`).forEach(tr => { tr.hidden = !open; });
+  }));
   box.querySelectorAll('input[name="act-days"]').forEach(r => r.addEventListener("change", () => reload(Number(r.value))));
   box.querySelector("[data-refresh]").addEventListener("click", () => reload(days));
   box.querySelectorAll("[data-download]").forEach(b => b.addEventListener("click", async () => {
@@ -333,12 +344,13 @@ function activityTable(s) {
       <tbody>
         ${rows.map(r => `
           <tr class="act-area">
-            <td><i class="act-key" style="background:${areaVar(r.a)}"></i>${esc(AREAS[r.a])}</td>
+            <td>${r.acts.length ? `<button type="button" class="act-fold" data-fold="${r.a}" aria-expanded="false"><i class="act-key" style="background:${areaVar(r.a)}"></i>${esc(AREAS[r.a])}</button>`
+              : `<i class="act-key" style="background:${areaVar(r.a)}"></i>${esc(AREAS[r.a])}`}</td>
             <td>${fmt(r.secs)}</td><td>${s.active ? Math.round((100 * r.secs) / s.active) : 0}%</td>
             <td>${r.t[0] || ""}</td><td>${r.a === "menus" ? "" : pct(r.t[1], r.t[0])}</td>
           </tr>
           ${r.acts.map(([label, secs]) => `
-          <tr class="act-sub"><td>${esc(label)}</td><td>${fmt(secs)}</td><td></td><td></td><td></td></tr>`).join("")}`).join("")}
+          <tr class="act-sub" data-of="${r.a}" hidden><td>${esc(label)}</td><td>${fmt(secs)}</td><td></td><td></td><td></td></tr>`).join("")}`).join("")}
       </tbody>
     </table>
     ${testsList(s.results)}`;
@@ -373,32 +385,88 @@ function whenBars(hours) {
     <p class="muted" style="margin-bottom:0;">By the time each session started.</p>`;
 }
 
-function sessionList(s) {
-  const recent = s.sessions.slice(-15).reverse();
-  /* each scored run belongs to the latest session that had started by then */
-  const runsOf = new Map();
-  s.results.filter(r => r.marks).forEach(r => {
-    const owner = s.sessions.filter(x => x.start <= r.ts + 60000).pop();
-    if (owner && r.ts <= owner.end + 15 * 60000) runsOf.set(owner, [...(runsOf.get(owner) || []), r]);
-  });
+/* Day by day, newest first: per child, one line per subject (time, answers),
+   folding out to its activities and scores; the raw sessions under a toggle. */
+function dayByDay(s) {
+  const days = new Map();
+  for (const x of s.sessions) {
+    const k = dayKey(x.start);
+    if (!days.has(k)) days.set(k, { ts: startOfDay(x.start), sessions: [], results: [] });
+    days.get(k).sessions.push(x);
+  }
+  for (const r of s.results) days.get(dayKey(r.ts))?.results.push(r);
+  const list = [...days.values()].filter(d => d.sessions.some(x => x.active)).reverse().slice(0, 14);
+  if (!list.length) return `<p class="muted" style="margin:0;">No sessions yet.</p>`;
+  return list.map(dayBlock).join("") +
+    (days.size > list.length ? `<p class="muted act-foot">Showing the latest ${list.length} days — the CSV download has every session.</p>` : "");
+}
+
+function dayBlock(d) {
+  const total = d.sessions.reduce((n, x) => n + Object.values(x.parts || {}).reduce((a, b) => a + b, 0), 0);
+  /* child → area → { secs, acts: {label: secs}, tally: [n, ok], runs: [] } */
+  const kids = new Map();
+  const kid = r => {
+    const id = childOf(r);
+    if (!kids.has(id)) kids.set(id, { name: childName(r), secs: 0, areas: {} });
+    return kids.get(id);
+  };
+  const areaOf = (k, a) => k.areas[a] || (k.areas[a] = { secs: 0, acts: {}, tally: [0, 0], runs: [] });
+  for (const x of d.sessions) {
+    const k = kid(x);
+    for (const [key, secs] of Object.entries(x.parts || {})) {
+      const [a, label] = key.split("|");
+      const ar = areaOf(k, a);
+      ar.secs += secs; k.secs += secs;
+      ar.acts[label] = (ar.acts[label] || 0) + secs;
+    }
+    for (const [a, [n, ok]] of Object.entries(x.tally || {})) {
+      const ar = areaOf(k, a);
+      ar.tally[0] += n; ar.tally[1] += ok;
+    }
+  }
+  for (const r of d.results) if (r.marks) areaOf(kid(r), r.area || "menus").runs.push(r);
+
+  const kidHtml = [...kids.values()].filter(k => k.secs || Object.keys(k.areas).length).sort((a, b) => b.secs - a.secs).map(k => {
+    const areas = Object.entries(k.areas).sort((x, y) => (x[0] === "menus") - (y[0] === "menus") || y[1].secs - x[1].secs);
+    return `
+      <div class="act-kid">
+        <p class="act-kid-head"><strong>${esc(k.name)}</strong> <span class="muted">${fmt(k.secs)} learning</span></p>
+        ${areas.map(([a, ar]) => {
+          const acts = Object.entries(ar.acts).sort((x, y) => y[1] - x[1]);
+          const detail = acts.length > 1 || ar.runs.length;
+          const head = `<i class="act-key" style="background:${areaVar(a)}"></i><span class="act-subj-name">${esc(AREAS[a] || a)}</span>
+            <span class="act-subj-time">${fmt(ar.secs)}</span>
+            <span class="muted act-subj-score">${ar.tally[0] && a !== "menus" ? `${ar.tally[0]} answer${ar.tally[0] === 1 ? "" : "s"} · ${pct(ar.tally[1], ar.tally[0])} right` : acts.length === 1 && a !== "menus" ? esc(acts[0][0]) : ""}</span>`;
+          if (!detail) return `<div class="act-subj act-subj-flat">${head}</div>`;
+          return `
+            <details class="act-subj">
+              <summary>${head}</summary>
+              <ul class="act-detail">
+                ${acts.map(([label, secs]) => `<li><span>${esc(label)}</span><span>${fmt(secs)}</span></li>`).join("")}
+                ${ar.runs.map(r => `<li class="act-run"><span>${esc(timeLabel(r.ts))} ${esc(r.label)}</span><span><strong>${r.earned}/${r.marks}</strong> <span class="muted">${pct(r.earned, r.marks)}</span></span></li>`).join("")}
+              </ul>
+            </details>`;
+        }).join("")}
+      </div>`;
+  }).join("");
+
+  const sess = [...d.sessions].reverse();
   return `
-    <table class="word-list act-sessions">
-      <thead><tr><th>When</th><th>Length</th><th>On screen</th><th>Learning</th><th>What</th></tr></thead>
-      <tbody>${recent.map(x => {
-        const acts = Object.entries(x.parts || {}).sort((a, b) => b[1] - a[1])
-          .map(([k, secs]) => `${esc(k.split("|")[1])} <span class="muted">${fmt(secs)}</span>`).join(" · ");
-        const runs = (runsOf.get(x) || [])
-          .map(r => `${esc(r.label)} <strong>${r.earned}/${r.marks}</strong>`).join(" · ");
-        return `
-        <tr>
-          <td>${esc(dateLabel(x.start, { weekday: "short", day: "numeric", month: "short" }))}<br><span class="muted">${esc(timeLabel(x.start))}–${esc(timeLabel(x.end))}</span></td>
-          <td>${fmt(sessionLength(x))}</td>
-          <td>${fmt(openTime(x))}</td>
-          <td><strong>${fmt(x.active)}</strong></td>
-          <td><strong>${esc(childName(x))}</strong> · ${acts}${runs ? `<br><span class="muted">Scores:</span> ${runs}` : ""}</td>
-        </tr>`;
-      }).join("")}</tbody>
-    </table>`;
+    <section class="act-dayblock">
+      <h4>${esc(dateLabel(d.ts, { weekday: "long", day: "numeric", month: "short" }))}
+        <span class="muted">· ${fmt(total)} learning · ${sess.length} session${sess.length === 1 ? "" : "s"}</span></h4>
+      ${kidHtml}
+      <details class="act-sess">
+        <summary>Sessions</summary>
+        <table class="word-list act-sessions">
+          <thead><tr><th>When</th><th>Who</th><th>Length</th><th>On screen</th><th>Learning</th><th>Device</th></tr></thead>
+          <tbody>${sess.map(x => `
+            <tr><td>${esc(timeLabel(x.start))}–${esc(timeLabel(x.end))}</td><td>${esc(childName(x))}</td>
+              <td>${fmt(sessionLength(x))}</td><td>${fmt(openTime(x))}</td><td><strong>${fmt(x.active)}</strong></td>
+              <td class="muted">${esc(x.dev || "")}</td></tr>`).join("")}</tbody>
+        </table>
+      </details>
+    </section>`;
 }
 
 /* =========================

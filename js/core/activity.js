@@ -2,8 +2,8 @@
    Usage monitor — the child's side. Counts active time per
    activity (the screen in use) and tallies answers, then sends
    small records to the proxy (op activity-log) for Grown-ups →
-   Activity. Only timings, activity names and scores leave the
-   device — never typed answers or words.
+   Activity. Only timings, activity names, scores and a guest's
+   first name leave the device — never typed answers or words.
 
    Three measures of time per session:
      length  first to last activity (start → end), breaks included
@@ -17,7 +17,7 @@
    as it grows (the server keeps the newest copy).
    ========================================================= */
 
-import { activeProfileId } from "./profiles.js";
+import { activeProfileId, profileById } from "./profiles.js";
 
 const KEY = "ks2_activity";
 const TICK_MS = 5000;
@@ -120,8 +120,11 @@ function currentSession(now) {
   let s = state.session;
   const child = activeProfileId() || "";
   if (!s || now - s.end > SESSION_GAP_MS || (s.child || "") !== child) {
+    /* a guest's first name goes with their records (Finn and Oskar are known by id) */
+    const p = profileById(child);
     s = state.session = {
       kind: "session", id: `s-${state.dev}-${now.toString(36)}`, dev: deviceName(), child,
+      ...(p?.guest ? { name: p.name } : {}),
       start: now, end: now, active: 0, open: 0, parts: {}, tally: {}
     };
   }
@@ -204,6 +207,7 @@ export function noteAttempt({ mode, paperId, items }) {
   const act = activityFor(location.hash);
   queue({
     kind: "result", id: `r-${state.dev}-${now.toString(36)}`, ts: now, area, child: s.child || "",
+    ...(s.name ? { name: s.name } : {}),
     mode: String(mode || ""), label: resultLabel(mode, paperId, area, act),
     earned: Object.values(byArea).reduce((x, t) => x + t[1], 0),
     marks: Object.values(byArea).reduce((x, t) => x + t[0], 0)

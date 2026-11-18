@@ -4,6 +4,8 @@
  * the site is counted without setup. POST JSON:
  *   {op:"log", records:[…]}             from the app (core/activity.js)
  *   {op:"report", password, days}       Grown-ups → Activity (upload password)
+ *   {op:"grown-ups", password}          the Grown-ups area (upload password)
+ *   {op:"family", child, pin}           start screen: Finn/Oskar on a new device
  * Guards for the open "log": same-site Origin only, small bodies, a
  * per-address hourly limit, strict record checks (activity.php) and a
  * monthly size cap. Addresses are used for the limit only, never stored
@@ -74,6 +76,22 @@ try {
     $denied = sec_check_password($req['password'] ?? null, require $configPath);
     if ($denied !== null) track_error($denied[0], $denied[1], $denied[2]);
     $data = activity_report($req);
+  } elseif (($req['op'] ?? '') === 'grown-ups') {
+    /* the Grown-ups area: just check the upload password */
+    $configPath = __DIR__ . '/config.php';
+    if (!is_file($configPath)) track_error(500, 'server', 'Not configured');
+    $denied = sec_check_password($req['password'] ?? null, require $configPath);
+    if ($denied !== null) track_error($denied[0], $denied[1], $denied[2]);
+    $data = ['unlocked' => true];
+  } elseif (($req['op'] ?? '') === 'family') {
+    /* start screen: let Finn or Oskar in on a new device */
+    $configPath = __DIR__ . '/config.php';
+    if (!is_file($configPath)) track_error(500, 'server', 'Not configured');
+    $child = (string) ($req['child'] ?? '');
+    if (!in_array($child, ['finn', 'oskar'], true)) track_error(400, 'bad_request', 'Unknown child');
+    $denied = sec_check_pin($child, $req['pin'] ?? null, require $configPath);
+    if ($denied !== null) track_error($denied[0], $denied[1], $denied[2]);
+    $data = ['child' => $child];
   } else {
     track_error(400, 'bad_request', 'Unknown operation');
   }
