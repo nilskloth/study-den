@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 212" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<rect x="8" y="8" width="118" height="196" rx="12" fill="#fff" stroke="#c9c9c4"/>
+        <line x1="67" y1="130" x2="67" y2="70" stroke="#8a7a5a" stroke-width="2"/>
+      <ellipse cx="67" cy="134" rx="4" ry="8" fill="#8a6a3a"/>
+      <line x1="67" y1="70" x2="33.4" y2="64.7" stroke="#a8a8a8" stroke-width="1.4"/><line x1="67" y1="70" x2="36.2" y2="55.5" stroke="#a8a8a8" stroke-width="1.4"/><line x1="67" y1="70" x2="41.5" y2="47.5" stroke="#a8a8a8" stroke-width="1.4"/><line x1="67" y1="70" x2="48.8" y2="41.3" stroke="#a8a8a8" stroke-width="1.4"/><line x1="67" y1="70" x2="57.5" y2="37.4" stroke="#a8a8a8" stroke-width="1.4"/><line x1="67" y1="70" x2="67.0" y2="36.0" stroke="#a8a8a8" stroke-width="1.4"/><line x1="67" y1="70" x2="76.5" y2="37.4" stroke="#a8a8a8" stroke-width="1.4"/><line x1="67" y1="70" x2="85.2" y2="41.3" stroke="#a8a8a8" stroke-width="1.4"/><line x1="67" y1="70" x2="92.5" y2="47.5" stroke="#a8a8a8" stroke-width="1.4"/><line x1="67" y1="70" x2="97.8" y2="55.5" stroke="#a8a8a8" stroke-width="1.4"/><line x1="67" y1="70" x2="100.6" y2="64.7" stroke="#a8a8a8" stroke-width="1.4"/>
+        <text x="67" y="152" text-anchor="middle" class="title">Dandelion</text>
+        <text x="67" y="172" text-anchor="middle" class="cap">wind</text><text x="67" y="189" text-anchor="middle" class="cap">hairy parachute</text><rect x="134" y="8" width="118" height="196" rx="12" fill="#fff" stroke="#c9c9c4"/>
+        <path d="M193 110 C173 90 143 50 153 34 C169 40 183 80 193 110Z" fill="#c9b27a" stroke="#8a6f30" stroke-width="2"/>
+      <path d="M193 110 C213 90 243 50 233 34 C217 40 203 80 193 110Z" fill="#c9b27a" stroke="#8a6f30" stroke-width="2"/>
+      <circle cx="187" cy="108" r="8" fill="#a07f3a"/><circle cx="199" cy="108" r="8" fill="#a07f3a"/>
+        <text x="193" y="152" text-anchor="middle" class="title">Sycamore</text>
+        <text x="193" y="172" text-anchor="middle" class="cap">wind</text><text x="193" y="189" text-anchor="middle" class="cap">spinning wings</text><rect x="260" y="8" width="118" height="196" rx="12" fill="#fff" stroke="#c9c9c4"/>
+        <path d="M267 110 q13 -8 26 0 t26 0 t26 0 t26 0" fill="none" stroke="#2e6fb7" stroke-width="2.5"/>
+      <ellipse cx="319" cy="92" rx="30" ry="24" fill="#8b5a2b" stroke="#5a3a1a" stroke-width="2"/>
+      <path d="M267 120 q13 -8 26 0 t26 0 t26 0 t26 0" fill="none" stroke="#2e6fb7" stroke-width="2.5"/>
+        <text x="319" y="152" text-anchor="middle" class="title">Coconut</text>
+        <text x="319" y="172" text-anchor="middle" class="cap">water</text><text x="319" y="189" text-anchor="middle" class="cap">floats</text><rect x="386" y="8" width="118" height="196" rx="12" fill="#fff" stroke="#c9c9c4"/>
+        <circle cx="445" cy="80" r="20" fill="#9a7b4f" stroke="#5e4a2c" stroke-width="2"/>
+      <path d="M465.0 80.0 L479.0 80.0 L478.9 85.0" fill="none" stroke="#5e4a2c" stroke-width="1.6"/><path d="M463.5 87.7 L476.4 93.0 L474.4 97.6" fill="none" stroke="#5e4a2c" stroke-width="1.6"/><path d="M459.1 94.1 L469.0 104.0 L465.4 107.5" fill="none" stroke="#5e4a2c" stroke-width="1.6"/><path d="M452.7 98.5 L458.0 111.4 L453.3 113.2" fill="none" stroke="#5e4a2c" stroke-width="1.6"/><path d="M445.0 100.0 L445.0 114.0 L440.0 113.9" fill="none" stroke="#5e4a2c" stroke-width="1.6"/><path d="M437.3 98.5 L432.0 111.4 L427.4 109.4" fill="none" stroke="#5e4a2c" stroke-width="1.6"/><path d="M430.9 94.1 L421.0 104.0 L417.5 100.4" fill="none" stroke="#5e4a2c" stroke-width="1.6"/><path d="M426.5 87.7 L413.6 93.0 L411.8 88.3" fill="none" stroke="#5e4a2c" stroke-width="1.6"/><path d="M425.0 80.0 L411.0 80.0 L411.1 75.0" fill="none" stroke="#5e4a2c" stroke-width="1.6"/><path d="M426.5 72.3 L413.6 67.0 L415.6 62.4" fill="none" stroke="#5e4a2c" stroke-width="1.6"/><path d="M430.9 65.9 L421.0 56.0 L424.6 52.5" fill="none" stroke="#5e4a2c" stroke-width="1.6"/><path d="M437.3 61.5 L432.0 48.6 L436.7 46.8" fill="none" stroke="#5e4a2c" stroke-width="1.6"/><path d="M445.0 60.0 L445.0 46.0 L450.0 46.1" fill="none" stroke="#5e4a2c" stroke-width="1.6"/><path d="M452.7 61.5 L458.0 48.6 L462.6 50.6" fill="none" stroke="#5e4a2c" stroke-width="1.6"/><path d="M459.1 65.9 L469.0 56.0 L472.5 59.6" fill="none" stroke="#5e4a2c" stroke-width="1.6"/><path d="M463.5 72.3 L476.4 67.0 L478.2 71.7" fill="none" stroke="#5e4a2c" stroke-width="1.6"/>
+        <text x="445" y="152" text-anchor="middle" class="title">Burdock</text>
+        <text x="445" y="172" text-anchor="middle" class="cap">animals</text><text x="445" y="189" text-anchor="middle" class="cap">hooks on fur</text><rect x="512" y="8" width="118" height="196" rx="12" fill="#fff" stroke="#c9c9c4"/>
+        <path d="M571 40 v14" stroke="#3f7a2d" stroke-width="3"/>
+      <circle cx="559" cy="66" r="9" fill="#3b1f4f" stroke="#1d0f28" stroke-width="1.2"/><circle cx="556" cy="63" r="2" fill="#8c6aa6"/><circle cx="571" cy="62" r="9" fill="#3b1f4f" stroke="#1d0f28" stroke-width="1.2"/><circle cx="568" cy="59" r="2" fill="#8c6aa6"/><circle cx="583" cy="66" r="9" fill="#3b1f4f" stroke="#1d0f28" stroke-width="1.2"/><circle cx="580" cy="63" r="2" fill="#8c6aa6"/><circle cx="555" cy="80" r="9" fill="#3b1f4f" stroke="#1d0f28" stroke-width="1.2"/><circle cx="552" cy="77" r="2" fill="#8c6aa6"/><circle cx="567" cy="76" r="9" fill="#3b1f4f" stroke="#1d0f28" stroke-width="1.2"/><circle cx="564" cy="73" r="2" fill="#8c6aa6"/><circle cx="579" cy="78" r="9" fill="#3b1f4f" stroke="#1d0f28" stroke-width="1.2"/><circle cx="576" cy="75" r="2" fill="#8c6aa6"/><circle cx="589" cy="82" r="9" fill="#3b1f4f" stroke="#1d0f28" stroke-width="1.2"/><circle cx="586" cy="79" r="2" fill="#8c6aa6"/><circle cx="561" cy="92" r="9" fill="#3b1f4f" stroke="#1d0f28" stroke-width="1.2"/><circle cx="558" cy="89" r="2" fill="#8c6aa6"/><circle cx="575" cy="92" r="9" fill="#3b1f4f" stroke="#1d0f28" stroke-width="1.2"/><circle cx="572" cy="89" r="2" fill="#8c6aa6"/><circle cx="585" cy="96" r="9" fill="#3b1f4f" stroke="#1d0f28" stroke-width="1.2"/><circle cx="582" cy="93" r="2" fill="#8c6aa6"/><circle cx="569" cy="106" r="9" fill="#3b1f4f" stroke="#1d0f28" stroke-width="1.2"/><circle cx="566" cy="103" r="2" fill="#8c6aa6"/>
+        <text x="571" y="152" text-anchor="middle" class="title">Blackberry</text>
+        <text x="571" y="172" text-anchor="middle" class="cap">animals</text><text x="571" y="189" text-anchor="middle" class="cap">eaten</text>
+</svg>

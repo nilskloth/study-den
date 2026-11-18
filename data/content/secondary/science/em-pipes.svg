@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 260" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<g transform="translate(60 0)"><path d="M420 90 V50 H90 V210 H420 V170" fill="none" stroke="#2f6f99" stroke-width="27" stroke-linejoin="round"/><path d="M420 90 V50 H90 V210 H420 V170" fill="none" stroke="#5aa9d6" stroke-width="22" stroke-linejoin="round"/><path d="M420 90 V170" fill="none" stroke="#2f6f99" stroke-width="12" stroke-linejoin="round"/><path d="M420 90 V170" fill="none" stroke="#5aa9d6" stroke-width="7" stroke-linejoin="round"/><circle cx="90" cy="130" r="30" fill="#fff" stroke="#17181a" stroke-width="2.5"/>
+          <path d="M90 112 a18 18 0 1 1 -16 10" fill="none" stroke="#17181a" stroke-width="2.5"/><path d="M70 118 l4 12 l8 -9Z" fill="#17181a"/><path d="M196 44 L206 50 L196 56" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M316 44 L326 50 L316 56" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M324 216 L314 210 L324 204" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M204 216 L194 210 L204 204" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M96 84 L90 74 L84 84" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M414 126 L420 136 L426 126" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="40" y="125" text-anchor="end" class="cap" >pump</text><text x="40" y="141" text-anchor="end" class="cap" style="font-weight:700">= battery</text><text x="440" y="126" text-anchor="start" class="cap" >narrow pipe</text><text x="440" y="142" text-anchor="start" class="cap" style="font-weight:700">= resistance</text><text x="250" y="30" text-anchor="middle" class="cap" style="font-weight:700">water flowing round = current</text><text x="250" y="245" text-anchor="middle" class="cap" style="font-weight:700">the pump's push = potential difference (voltage)</text><text x="250" y="130" text-anchor="middle" class="cap" >A narrow pipe is harder to push</text><text x="250" y="146" text-anchor="middle" class="cap" >water through, so less flows:</text><text x="250" y="162" text-anchor="middle" class="cap" >higher resistance, lower current</text></g>
+</svg>

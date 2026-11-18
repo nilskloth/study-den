@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+
+    <circle cx="330" cy="170" r="110" fill="#fbfaf6" stroke="#9aa3ab" stroke-width="3"/>
+    <path d="M368.4 71.2 A106 106 0 0 1 368.4 268.8" fill="none" stroke="#d9534f" stroke-width="6"/>
+    <path d="M232 120 C200 140 200 200 232 220" fill="#e6f3fb" stroke="#7fb3d5" stroke-width="2.5"/>
+    <rect x="236" y="114" width="7" height="40" rx="3" fill="#4f7f5f"/>
+    <rect x="236" y="186" width="7" height="40" rx="3" fill="#4f7f5f"/>
+    <ellipse cx="258" cy="170" rx="13" ry="36" fill="#cfe6f5" stroke="#5d8aa8" stroke-width="2"/>
+    <path d="M430 196 C470 200 500 206 560 214 L560 250 C500 244 466 236 422 222Z" fill="#e3b23c" stroke="#8a6d10" stroke-width="2"/>
+    <line x1="30.0" y1="120.0" x2="214.0" y2="156.0" stroke="#e67e22" stroke-width="2.5" stroke-linecap="round"/><path d="M118.2 141.2 L126.9 139.0 L119.7 133.6" fill="none" stroke="#a85a10" stroke-width="2.2" stroke-linejoin="round"/><line x1="214" y1="156" x2="434" y2="170" stroke="#e67e22" stroke-width="2.5"/>
+    <line x1="30.0" y1="220.0" x2="214.0" y2="184.0" stroke="#e67e22" stroke-width="2.5" stroke-linecap="round"/><path d="M119.7 206.4 L126.9 201.0 L118.2 198.8" fill="none" stroke="#a85a10" stroke-width="2.2" stroke-linejoin="round"/><line x1="214" y1="184" x2="434" y2="170" stroke="#e67e22" stroke-width="2.5"/>
+    
+  <g class="lbl" data-part="cornea">
+    <line class="leader" x1="196" y1="30" x2="210" y2="136"/>
+    <circle class="dot" cx="210" cy="136" r="3.5"/>
+    <text class="name" x="190" y="34.5" text-anchor="end">Cornea</text>
+    <g class="letter"><circle cx="181" cy="30" r="9.5"/><text x="181" y="34.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="iris">
+    <line class="leader" x1="240" y1="30" x2="240" y2="124"/>
+    <circle class="dot" cx="240" cy="124" r="3.5"/>
+    <text class="name" x="246" y="34.5" text-anchor="start">Iris</text>
+    <g class="letter"><circle cx="255" cy="30" r="9.5"/><text x="255" y="34.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="lens">
+    <line class="leader" x1="294" y1="30" x2="262" y2="148"/>
+    <circle class="dot" cx="262" cy="148" r="3.5"/>
+    <text class="name" x="300" y="34.5" text-anchor="start">Lens</text>
+    <g class="letter"><circle cx="309" cy="30" r="9.5"/><text x="309" y="34.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="pupil">
+    <line class="leader" x1="196" y1="320" x2="240" y2="170"/>
+    <circle class="dot" cx="240" cy="170" r="3.5"/>
+    <text class="name" x="190" y="324.5" text-anchor="end">Pupil</text>
+    <g class="letter"><circle cx="181" cy="320" r="9.5"/><text x="181" y="324.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="retina">
+    <line class="leader" x1="434" y1="40" x2="405" y2="95"/>
+    <circle class="dot" cx="405" cy="95" r="3.5"/>
+    <text class="name" x="440" y="44.5" text-anchor="start">Retina</text>
+    <g class="letter"><circle cx="449" cy="40" r="9.5"/><text x="449" y="44.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="optic">
+    <line class="leader" x1="464" y1="320" x2="520" y2="226"/>
+    <circle class="dot" cx="520" cy="226" r="3.5"/>
+    <text class="name" x="470" y="324.5" text-anchor="start">Optic nerve</text>
+    <g class="letter"><circle cx="479" cy="320" r="9.5"/><text x="479" y="324.5" text-anchor="middle"></text></g>
+  </g>
+</svg>

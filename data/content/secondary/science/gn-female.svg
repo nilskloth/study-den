@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 396" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<path d="M274 124 C230 104 180 92 152 128" fill="none" stroke="#8f2f2c" stroke-width="12" stroke-linecap="round"/>
+        <path d="M274 124 C230 104 180 92 152 128" fill="none" stroke="#e9a3a0" stroke-width="8" stroke-linecap="round"/>
+        <path d="M158 122 l-18 4 M154 128 l-16 14 M152 132 l-6 20 M156 134 l6 18" stroke="#8f2f2c" stroke-width="5" stroke-linecap="round"/>
+        <line x1="276" y1="150" x2="204" y2="176" stroke="#b89d86" stroke-width="2"/>
+        <ellipse cx="180" cy="180" rx="28" ry="17" fill="#f5d3a6" stroke="#b5813f" stroke-width="2"/>
+        <circle cx="188" cy="176" r="4" fill="#fff" stroke="#b5813f"/><circle cx="172" cy="186" r="3" fill="#fff" stroke="#b5813f"/><circle cx="170" cy="172" r="2.5" fill="#fff" stroke="#b5813f"/><path d="M386 124 C430 104 480 92 508 128" fill="none" stroke="#8f2f2c" stroke-width="12" stroke-linecap="round"/>
+        <path d="M386 124 C430 104 480 92 508 128" fill="none" stroke="#e9a3a0" stroke-width="8" stroke-linecap="round"/>
+        <path d="M502 122 l18 4 M506 128 l16 14 M508 132 l6 20 M504 134 l-6 18" stroke="#8f2f2c" stroke-width="5" stroke-linecap="round"/>
+        <line x1="384" y1="150" x2="456" y2="176" stroke="#b89d86" stroke-width="2"/>
+        <ellipse cx="480" cy="180" rx="28" ry="17" fill="#f5d3a6" stroke="#b5813f" stroke-width="2"/>
+        <circle cx="472" cy="176" r="4" fill="#fff" stroke="#b5813f"/><circle cx="488" cy="186" r="3" fill="#fff" stroke="#b5813f"/><circle cx="490" cy="172" r="2.5" fill="#fff" stroke="#b5813f"/>
+      <path d="M266 114 Q330 96 394 114 C406 172 372 230 352 254 L352 286 L308 286 L308 254 C288 230 254 172 266 114Z" fill="#e9a3a0" stroke="#8f2f2c" stroke-width="2.5"/>
+      <path d="M288 126 Q330 116 372 126 C374 168 348 216 335 248 L325 248 C312 216 286 168 288 126Z" fill="#d46a66" stroke="#8f2f2c" stroke-width="1.5"/>
+      <path d="M302 136 Q330 130 358 136 C358 168 340 206 330 236 C320 206 302 168 302 136Z" fill="#fbe9e7"/>
+      <line x1="330" y1="236" x2="330" y2="286" stroke="#8f2f2c" stroke-width="2"/>
+      <path d="M308 286 L300 380 L360 380 L352 286Z" fill="#f2c9c4" stroke="#8f2f2c" stroke-width="2"/>
+      <path d="M330 286 L330 380" stroke="#8f2f2c" stroke-width="1.2" stroke-dasharray="4 3"/>
+      
+  <g class="lbl" data-part="oviduct">
+    <line class="leader" x1="186" y1="52" x2="220" y2="104"/>
+    <circle class="dot" cx="220" cy="104" r="3.5"/>
+    <text class="name" x="180" y="56.5" text-anchor="end">Oviduct</text>
+    <g class="letter"><circle cx="171" cy="52" r="9.5"/><text x="171" y="56.5" text-anchor="middle"></text></g>
+  </g>
+      
+  <g class="lbl" data-part="ovary">
+    <line class="leader" x1="136" y1="248" x2="170" y2="190"/>
+    <circle class="dot" cx="170" cy="190" r="3.5"/>
+    <text class="name" x="130" y="252.5" text-anchor="end">Ovary</text>
+    <g class="letter"><circle cx="121" cy="248" r="9.5"/><text x="121" y="252.5" text-anchor="middle"></text></g>
+  </g>
+      
+  <g class="lbl" data-part="vagina">
+    <line class="leader" x1="216" y1="340" x2="304" y2="340"/>
+    <circle class="dot" cx="304" cy="340" r="3.5"/>
+    <text class="name" x="210" y="344.5" text-anchor="end">Vagina</text>
+    <g class="letter"><circle cx="201" cy="340" r="9.5"/><text x="201" y="344.5" text-anchor="middle"></text></g>
+  </g>
+      
+  <g class="lbl" data-part="uterus">
+    <line class="leader" x1="539" y1="224" x2="375" y2="205"/>
+    <circle class="dot" cx="375" cy="205" r="3.5"/>
+    <text class="name" x="545" y="228.5" text-anchor="start">Uterus</text>
+    <g class="letter"><circle cx="554" cy="224" r="9.5"/><text x="554" y="228.5" text-anchor="middle"></text></g>
+  </g>
+      
+  <g class="lbl" data-part="lining">
+    <line class="leader" x1="539" y1="264" x2="352" y2="216"/>
+    <circle class="dot" cx="352" cy="216" r="3.5"/>
+    <text class="name" x="545" y="268.5" text-anchor="start">Lining of uterus</text>
+    <g class="letter"><circle cx="554" cy="264" r="9.5"/><text x="554" y="268.5" text-anchor="middle"></text></g>
+  </g>
+      
+  <g class="lbl" data-part="cervix">
+    <line class="leader" x1="539" y1="304" x2="352" y2="272"/>
+    <circle class="dot" cx="352" cy="272" r="3.5"/>
+    <text class="name" x="545" y="308.5" text-anchor="start">Cervix</text>
+    <g class="letter"><circle cx="554" cy="304" r="9.5"/><text x="554" y="308.5" text-anchor="middle"></text></g>
+  </g>
+</svg>

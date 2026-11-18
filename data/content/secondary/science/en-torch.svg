@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 250" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<rect x="60" y="90" width="300" height="60" rx="22" fill="#e9edf0" stroke="#6f7b86" stroke-width="2.5"/>
+      <path d="M352 88 L410 68 V172 L352 152 Z" fill="#e9edf0" stroke="#6f7b86" stroke-width="2.5"/>
+      <rect x="406" y="66" width="10" height="108" rx="3" fill="#cfe3f2" stroke="#6f7b86" stroke-width="2"/><rect x="84" y="102" width="78" height="36" rx="6" fill="#f6e3b4" stroke="#a07a2b" stroke-width="2"/><ellipse cx="96" cy="120" rx="4" ry="13" fill="none" stroke="#b5651d" stroke-width="2"/><ellipse cx="107" cy="120" rx="4" ry="13" fill="none" stroke="#b5651d" stroke-width="2"/><ellipse cx="118" cy="120" rx="4" ry="13" fill="none" stroke="#b5651d" stroke-width="2"/><ellipse cx="129" cy="120" rx="4" ry="13" fill="none" stroke="#b5651d" stroke-width="2"/><ellipse cx="140" cy="120" rx="4" ry="13" fill="none" stroke="#b5651d" stroke-width="2"/><ellipse cx="151" cy="120" rx="4" ry="13" fill="none" stroke="#b5651d" stroke-width="2"/><path d="M162 112 H200 M162 128 H200 M282 112 H380 M282 128 H380" stroke="#17181a" stroke-width="1.5" fill="none"/><rect x="200" y="104" width="74" height="32" rx="4" fill="#4a90a4" stroke="#5c5f63" stroke-width="2"/>
+      <rect x="274" y="113" width="8" height="14" rx="2" fill="#b8c2cc" stroke="#5c5f63" stroke-width="1.5"/><path d="M380 110 h10 a10 10 0 0 1 0 20 h-10 Z" fill="#fff6c2" stroke="#c9a400" stroke-width="2"/><path d="M426 99.6 L478 75.8" stroke="#f2c94c" stroke-width="3" stroke-linecap="round"/><path d="M426 112.8 L478 104.4" stroke="#f2c94c" stroke-width="3" stroke-linecap="round"/><path d="M426 127.2 L478 135.6" stroke="#f2c94c" stroke-width="3" stroke-linecap="round"/><path d="M426 140.4 L478 164.2" stroke="#f2c94c" stroke-width="3" stroke-linecap="round"/><line x1="123" y1="150" x2="123" y2="168" stroke="#17181a" stroke-width="5"/>
+      <path d="M123 168 H60" stroke="#17181a" stroke-width="7" stroke-linecap="round"/>
+      <rect x="52" y="162" width="12" height="30" rx="5" fill="#e74c3c" stroke="#5c5f63" stroke-width="2"/>
+      <path d="M30 154 a30 30 0 0 0 4 42" fill="none" stroke="#9aa0a6" stroke-width="2"/><path d="M28 190 l6 7 l4 -9" fill="none" stroke="#9aa0a6" stroke-width="2"/>
+  <g class="lbl" data-part="handle">
+    <line class="leader" x1="94" y1="224" x2="58" y2="184"/>
+    <circle class="dot" cx="58" cy="184" r="3.5"/>
+    <text class="name" x="100" y="228.5" text-anchor="start">Handle</text>
+    <g class="letter"><circle cx="109" cy="224" r="9.5"/><text x="109" y="228.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="generator">
+    <line class="leader" x1="64" y1="40" x2="118" y2="104"/>
+    <circle class="dot" cx="118" cy="104" r="3.5"/>
+    <text class="name" x="70" y="44.5" text-anchor="start">Generator</text>
+    <g class="letter"><circle cx="79" cy="40" r="9.5"/><text x="79" y="44.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="battery">
+    <line class="leader" x1="204" y1="40" x2="237" y2="106"/>
+    <circle class="dot" cx="237" cy="106" r="3.5"/>
+    <text class="name" x="210" y="44.5" text-anchor="start">Battery</text>
+    <g class="letter"><circle cx="219" cy="40" r="9.5"/><text x="219" y="44.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="led">
+    <line class="leader" x1="324" y1="40" x2="388" y2="112"/>
+    <circle class="dot" cx="388" cy="112" r="3.5"/>
+    <text class="name" x="330" y="44.5" text-anchor="start">LED (bulb)</text>
+    <g class="letter"><circle cx="339" cy="40" r="9.5"/><text x="339" y="44.5" text-anchor="middle"></text></g>
+  </g>
+</svg>

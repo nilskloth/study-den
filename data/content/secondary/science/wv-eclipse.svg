@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 330" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+
+      <text x="300" y="24" text-anchor="middle" class="title">Solar eclipse: the Moon blocks the Sun's light</text>
+      <circle cx="60" cy="90" r="36" fill="#ffd54f" stroke="#e0a800" stroke-width="2"/><circle cx="470" cy="90" r="40" fill="#5aa0d8" stroke="#2f6fb0" stroke-width="2"/><path d="M450 74 q12 -12 24 0 q-4 16 -20 20Z" fill="#6dbf67"/>
+      <path d="M300 76 L460 42.7 L460 137.3 L300 104Z" fill="#555" opacity=".18"/>
+      <path d="M300 76 L452.7 90 L300 104Z" fill="#222" opacity=".55"/>
+      <circle cx="300" cy="90" r="14" fill="#cfd2d6" stroke="#7d8288" stroke-width="2"/>
+      <text x="60" y="146" text-anchor="middle" class="cap">Sun</text>
+      <text x="300" y="124" text-anchor="middle" class="cap">Moon</text>
+      <text x="470" y="148" text-anchor="middle" class="cap">Earth</text>
+      <line x1="446.7" y1="90" x2="530" y2="44" stroke="#6a6d71" stroke-width="1.2"/>
+      <text x="534" y="40" class="cap">total eclipse here</text>
+      <line x1="440" y1="116" x2="530" y2="134" stroke="#6a6d71" stroke-width="1.2"/>
+      <text x="534" y="138" class="cap">partial here</text>
+      <text x="300" y="180" text-anchor="middle" class="title">Lunar eclipse: the Moon moves into Earth's shadow</text>
+      <circle cx="60" cy="240" r="36" fill="#ffd54f" stroke="#e0a800" stroke-width="2"/>
+      <path d="M300 210 L540 216.0 L540 264.0 L300 270Z" fill="#222" opacity=".4"/>
+      <circle cx="300" cy="240" r="30" fill="#5aa0d8" stroke="#2f6fb0" stroke-width="2"/><path d="M285 228 q9 -9 18 0 q-3 12 -15 15Z" fill="#6dbf67"/><circle cx="480" cy="240" r="12" fill="#cfd2d6" stroke="#7d8288" stroke-width="2"/>
+      <text x="60" y="296" text-anchor="middle" class="cap">Sun</text>
+      <text x="300" y="290" text-anchor="middle" class="cap">Earth</text>
+      <text x="480" y="290" text-anchor="middle" class="cap">Moon (looks dark red)</text>
+      <text x="300" y="318" text-anchor="middle" class="cap">Not to scale: the Sun is far bigger and further away.</text>
+</svg>

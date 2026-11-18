@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<rect x="40" y="210" width="120" height="100" rx="10" fill="#fff" stroke="#9aa3ab" stroke-width="2"/><circle cx="67.75" cy="223.8125" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="67.75" cy="239.9375" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="67.75" cy="256.0625" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="67.75" cy="272.1875" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="83.875" cy="223.8125" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="83.875" cy="239.9375" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="83.875" cy="256.0625" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="83.875" cy="272.1875" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="100" cy="223.8125" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="100" cy="239.9375" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="100" cy="256.0625" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="100" cy="272.1875" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="116.125" cy="223.8125" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="116.125" cy="239.9375" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="116.125" cy="256.0625" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="116.125" cy="272.1875" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="132.25" cy="223.8125" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="132.25" cy="239.9375" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="132.25" cy="256.0625" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="132.25" cy="272.1875" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><text x="100" y="302" text-anchor="middle" class="title">Solid</text><rect x="260" y="210" width="120" height="100" rx="10" fill="#fff" stroke="#9aa3ab" stroke-width="2"/><circle cx="273.5" cy="272.5" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="288.8" cy="271.6" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="304.25" cy="272.8" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="319.7" cy="271.9" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="335" cy="272.95" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="350.3" cy="271.75" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="365.3" cy="272.5" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="281" cy="258.25" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="297.8" cy="257.2" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="312.8" cy="259" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="327.8" cy="257.5" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="342.8" cy="258.7" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="358.4" cy="257.8" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="275.3" cy="244.3" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="291.5" cy="243.25" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="318.2" cy="244.6" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="335" cy="243.7" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="351.5" cy="244.6" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><text x="320" y="302" text-anchor="middle" class="title">Liquid</text><rect x="480" y="210" width="120" height="100" rx="10" fill="#fff" stroke="#9aa3ab" stroke-width="2"/><circle cx="502" cy="232" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="572" cy="228" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="538" cy="262" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="580" cy="278" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><circle cx="504" cy="280" r="7.5" fill="#8fbde6" stroke="#2f6690" stroke-width="1.6"/><text x="540" y="302" text-anchor="middle" class="title">Gas</text><path d="M140 208 Q210 158 280 208" fill="none" stroke="#c0392b" stroke-width="3"/><path d="M267.2 207.0 L280.0 208.0 L274.9 196.2" fill="none" stroke="#c0392b" stroke-width="2" stroke-linejoin="round"/><path d="M360 208 Q430 158 500 208" fill="none" stroke="#c0392b" stroke-width="3"/><path d="M487.2 207.0 L500.0 208.0 L494.9 196.2" fill="none" stroke="#c0392b" stroke-width="2" stroke-linejoin="round"/><path d="M280 312 Q210 362 140 312" fill="none" stroke="#2471a3" stroke-width="3"/><path d="M152.8 313.0 L140.0 312.0 L145.1 323.8" fill="none" stroke="#2471a3" stroke-width="2" stroke-linejoin="round"/><path d="M500 312 Q430 362 360 312" fill="none" stroke="#2471a3" stroke-width="3"/><path d="M372.8 313.0 L360.0 312.0 L365.1 323.8" fill="none" stroke="#2471a3" stroke-width="2" stroke-linejoin="round"/><path d="M100 208 C100 50 540 50 540 208" fill="none" stroke="#c0392b" stroke-width="3" stroke-dasharray="7 5"/><path d="M533.4 197.0 L540.0 208.0 L546.6 197.0" fill="none" stroke="#c0392b" stroke-width="2" stroke-linejoin="round"/><text x="20" y="30" class="cap">red = particles gain energy (heating)</text>
+          <text x="20" y="48" class="cap">blue = particles lose energy (cooling)</text>
+  <g class="lbl" data-part="melting">
+    <line class="leader" x1="220" y1="160" x2="210" y2="183"/>
+    <circle class="dot" cx="210" cy="183" r="3.5"/>
+    <text class="name" x="226" y="164.5" text-anchor="start">melting</text>
+    <g class="letter"><circle cx="235" cy="160" r="9.5"/><text x="235" y="164.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="boiling">
+    <line class="leader" x1="440" y1="160" x2="430" y2="183"/>
+    <circle class="dot" cx="430" cy="183" r="3.5"/>
+    <text class="name" x="446" y="164.5" text-anchor="start">boiling</text>
+    <g class="letter"><circle cx="455" cy="160" r="9.5"/><text x="455" y="164.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="freezing">
+    <line class="leader" x1="220" y1="362" x2="210" y2="337"/>
+    <circle class="dot" cx="210" cy="337" r="3.5"/>
+    <text class="name" x="226" y="366.5" text-anchor="start">freezing</text>
+    <g class="letter"><circle cx="235" cy="362" r="9.5"/><text x="235" y="366.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="condensing">
+    <line class="leader" x1="440" y1="362" x2="430" y2="337"/>
+    <circle class="dot" cx="430" cy="337" r="3.5"/>
+    <text class="name" x="446" y="366.5" text-anchor="start">condensing</text>
+    <g class="letter"><circle cx="455" cy="362" r="9.5"/><text x="455" y="366.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="subliming">
+    <line class="leader" x1="340" y1="66" x2="320" y2="89"/>
+    <circle class="dot" cx="320" cy="89" r="3.5"/>
+    <text class="name" x="346" y="70.5" text-anchor="start">subliming</text>
+    <g class="letter"><circle cx="355" cy="66" r="9.5"/><text x="355" y="70.5" text-anchor="middle"></text></g>
+  </g>
+</svg>

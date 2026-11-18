@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 450" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<circle cx="200" cy="225" r="186" fill="#dcecf8"/>
+      <circle cx="200" cy="225" r="164" fill="#7a5a3a"/>
+      <circle cx="200" cy="225" r="154" fill="#d9603b"/>
+      <circle cx="200" cy="225" r="96" fill="#f0a030"/>
+      <circle cx="200" cy="225" r="46" fill="#fbe27a" stroke="#e8b923" stroke-width="2"/><path d="M200 225 L200 61 A164 164 0 0 0 36 225Z" fill="#5b9bd5"/>
+      <path d="M80 165 q20 -40 50 -30 q30 -30 40 10 q-10 30 -40 30 q-30 20 -50 -10Z" fill="#6aa84f"/>
+      <path d="M140 85 q20 -10 40 0 q10 20 -10 30 q-30 0 -30 -30Z" fill="#6aa84f"/>
+      <path d="M50 215 q10 -20 30 -10 q0 10 -30 10Z" fill="#6aa84f"/>
+      <line x1="200" y1="225" x2="200" y2="61" stroke="#17181a" stroke-width="1" opacity=".4"/>
+      <line x1="200" y1="225" x2="36" y2="225" stroke="#17181a" stroke-width="1" opacity=".4"/><text x="200" y="440" text-anchor="middle" class="cap">Not to scale — the crust is really much thinner.</text>
+  <g class="lbl" data-part="atmosphere">
+    <line class="leader" x1="404" y1="50" x2="318" y2="94"/>
+    <circle class="dot" cx="318" cy="94" r="3.5"/>
+    <text class="name" x="410" y="54.5" text-anchor="start">Atmosphere</text>
+    <g class="letter"><circle cx="419" cy="50" r="9.5"/><text x="419" y="54.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="crust">
+    <line class="leader" x1="404" y1="130" x2="349" y2="171"/>
+    <circle class="dot" cx="349" cy="171" r="3.5"/>
+    <text class="name" x="410" y="134.5" text-anchor="start">Crust</text>
+    <g class="letter"><circle cx="419" cy="130" r="9.5"/><text x="419" y="134.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="mantle">
+    <line class="leader" x1="404" y1="225" x2="326" y2="247"/>
+    <circle class="dot" cx="326" cy="247" r="3.5"/>
+    <text class="name" x="410" y="229.5" text-anchor="start">Mantle</text>
+    <g class="letter"><circle cx="419" cy="225" r="9.5"/><text x="419" y="229.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="outer-core">
+    <line class="leader" x1="404" y1="310" x2="261" y2="263"/>
+    <circle class="dot" cx="261" cy="263" r="3.5"/>
+    <text class="name" x="410" y="314.5" text-anchor="start">Outer core</text>
+    <g class="letter"><circle cx="419" cy="310" r="9.5"/><text x="419" y="314.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="inner-core">
+    <line class="leader" x1="404" y1="390" x2="214" y2="237"/>
+    <circle class="dot" cx="214" cy="237" r="3.5"/>
+    <text class="name" x="410" y="394.5" text-anchor="start">Inner core</text>
+    <g class="letter"><circle cx="419" cy="390" r="9.5"/><text x="419" y="394.5" text-anchor="middle"></text></g>
+  </g>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 400" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<path d="M150 200 V350 q0 12 12 12 h136 q12 0 12 -12 V200" fill="none"/>
+      <path d="M152 262 V350 q0 10 10 10 h136 q10 0 10 -10 V262Z" fill="#f08a5d" opacity=".85"/>
+      <path d="M144 196 h8 V350 q0 12 12 12 h132 q12 0 12 -12 V196 h8" fill="none" stroke="#8a9aa6" stroke-width="3"/><line x1="268" y1="168" x2="214" y2="346" stroke="#9fb4c2" stroke-width="7" stroke-linecap="round"/>
+      <line x1="268" y1="168" x2="214" y2="346" stroke="#e9f2f7" stroke-width="3" stroke-linecap="round"/><rect x="176" y="62" width="22" height="34" rx="10" fill="#5d6d7e"/>
+      <path d="M180 96 h14 v70 l-5 22 h-4 l-5 -22Z" fill="#eef4f8" stroke="#8a9aa6" stroke-width="2"/>
+      <path d="M181 130 h12 v36 l-5 21 h-2 l-5 -21Z" fill="#5b7fd1"/>
+      <path d="M187 204 c-4 6 -4 10 0 10 c4 0 4 -4 0 -10Z" fill="#5b7fd1"/><rect x="120" y="364" width="220" height="12" rx="2" fill="#fff" stroke="#b9bcc0"/>
+  <g class="lbl" data-part="pipette">
+    <line class="leader" x1="116" y1="100" x2="180" y2="110"/>
+    <circle class="dot" cx="180" cy="110" r="3.5"/>
+    <text class="name" x="110" y="104.5" text-anchor="end">dropping pipette</text>
+    <g class="letter"><circle cx="101" cy="100" r="9.5"/><text x="101" y="104.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="alkali">
+    <line class="leader" x1="116" y1="160" x2="187" y2="150"/>
+    <circle class="dot" cx="187" cy="150" r="3.5"/>
+    <text class="name" x="110" y="164.5" text-anchor="end">alkali</text>
+    <g class="letter"><circle cx="101" cy="160" r="9.5"/><text x="101" y="164.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="rod">
+    <line class="leader" x1="342" y1="160" x2="260" y2="196"/>
+    <circle class="dot" cx="260" cy="196" r="3.5"/>
+    <text class="name" x="348" y="164.5" text-anchor="start">glass rod</text>
+    <g class="letter"><circle cx="357" cy="160" r="9.5"/><text x="357" y="164.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="acid">
+    <line class="leader" x1="342" y1="290" x2="290" y2="300"/>
+    <circle class="dot" cx="290" cy="300" r="3.5"/>
+    <text class="name" x="348" y="294.5" text-anchor="start">acid with indicator</text>
+    <g class="letter"><circle cx="357" cy="290" r="9.5"/><text x="357" y="294.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="tile">
+    <line class="leader" x1="342" y1="382" x2="330" y2="370"/>
+    <circle class="dot" cx="330" cy="370" r="3.5"/>
+    <text class="name" x="348" y="386.5" text-anchor="start">white tile</text>
+    <g class="letter"><circle cx="357" cy="382" r="9.5"/><text x="357" y="386.5" text-anchor="middle"></text></g>
+  </g>
+</svg>

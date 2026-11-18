@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 670 290" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<rect x="10" y="10" width="320" height="270" rx="12" fill="#fff" stroke="#c9c9c4"/>
+      <text x="170" y="34" text-anchor="middle" class="title">Discontinuous variation</text>
+      <text x="170" y="52" text-anchor="middle" class="cap">bar chart — bars with gaps</text><path d="M56 70 V230 H306" fill="none" stroke="#17181a" stroke-width="1.6"/>
+      <text x="44" y="150" text-anchor="middle" class="cap" transform="rotate(-90 44 150)">number of people</text>
+      <text x="181" y="270" text-anchor="middle" class="cap">blood group</text><rect x="76" y="108.39999999999999" width="38" height="121.60000000000001" fill="#7fa7c9" stroke="#3f6d94" stroke-width="1.5"/>
+        <text x="95" y="248" text-anchor="middle">A</text><rect x="134" y="198" width="38" height="32" fill="#7fa7c9" stroke="#3f6d94" stroke-width="1.5"/>
+        <text x="153" y="248" text-anchor="middle">B</text><rect x="192" y="217.2" width="38" height="12.8" fill="#7fa7c9" stroke="#3f6d94" stroke-width="1.5"/>
+        <text x="211" y="248" text-anchor="middle">AB</text><rect x="250" y="76.39999999999998" width="38" height="153.60000000000002" fill="#7fa7c9" stroke="#3f6d94" stroke-width="1.5"/>
+        <text x="269" y="248" text-anchor="middle">O</text><rect x="340" y="10" width="320" height="270" rx="12" fill="#fff" stroke="#c9c9c4"/>
+      <text x="500" y="34" text-anchor="middle" class="title">Continuous variation</text>
+      <text x="500" y="52" text-anchor="middle" class="cap">histogram or line graph — no gaps</text><path d="M386 70 V230 H636" fill="none" stroke="#17181a" stroke-width="1.6"/>
+      <text x="374" y="150" text-anchor="middle" class="cap" transform="rotate(-90 374 150)">number of people</text>
+      <text x="511" y="270" text-anchor="middle" class="cap">height (cm)</text><rect x="396" y="217.1" width="26" height="12.899999999999999" fill="#e7b46a" stroke="#a8742a" stroke-width="1.5"/><rect x="422" y="195.6" width="26" height="34.4" fill="#e7b46a" stroke="#a8742a" stroke-width="1.5"/><rect x="448" y="156.9" width="26" height="73.1" fill="#e7b46a" stroke="#a8742a" stroke-width="1.5"/><rect x="474" y="109.60000000000001" width="26" height="120.39999999999999" fill="#e7b46a" stroke="#a8742a" stroke-width="1.5"/><rect x="500" y="83.80000000000001" width="26" height="146.2" fill="#e7b46a" stroke="#a8742a" stroke-width="1.5"/><rect x="526" y="113.9" width="26" height="116.1" fill="#e7b46a" stroke="#a8742a" stroke-width="1.5"/><rect x="552" y="161.2" width="26" height="68.8" fill="#e7b46a" stroke="#a8742a" stroke-width="1.5"/><rect x="578" y="199.9" width="26" height="30.099999999999998" fill="#e7b46a" stroke="#a8742a" stroke-width="1.5"/><rect x="604" y="217.1" width="26" height="12.899999999999999" fill="#e7b46a" stroke="#a8742a" stroke-width="1.5"/><polyline points="409,217.1 435,195.6 461,156.9 487,109.60000000000001 513,83.80000000000001 539,113.9 565,161.2 591,199.9 617,217.1" fill="none" stroke="#8f2f2c" stroke-width="2.2" stroke-linejoin="round"/><text x="422" y="248" text-anchor="middle" class="cap">140</text><text x="474" y="248" text-anchor="middle" class="cap">150</text><text x="526" y="248" text-anchor="middle" class="cap">160</text><text x="578" y="248" text-anchor="middle" class="cap">170</text>
+</svg>

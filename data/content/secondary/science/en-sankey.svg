@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 320" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<text x="30" y="34" class="title">Filament bulb: what happens to 100 J</text><rect x="30" y="70" width="200" height="140" fill="#f2c94c"/><path d="M230 70 H430 l18 7 l-18 7 H230 Z" fill="#f2c94c"/><path d="M230 84 H250 A146 146 0 0 1 396 230 V260 L333 280 L270 260 V230 A20 20 0 0 0 250 210 H230 Z" fill="#e8743b"/><text x="40" y="136" class="title">100 J</text>
+      <text x="40" y="154">electrical energy in</text>
+      <text x="456" y="82" class="title">10 J light</text>
+      <text x="456" y="99" class="cap">useful</text>
+      <text x="410" y="250" class="title">90 J heats surroundings</text>
+      <text x="410" y="268" class="cap">wasted (dissipated)</text>
+</svg>

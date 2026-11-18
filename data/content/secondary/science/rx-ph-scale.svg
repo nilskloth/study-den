@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 250" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<text x="320" y="20" text-anchor="middle" class="title">The pH scale (universal indicator colours)</text><rect x="20" y="96" width="40" height="46" fill="#d7191c"/><text x="40" y="125" text-anchor="middle" font-weight="700" style="font-size:16px;fill:#fff">0</text><rect x="60" y="96" width="40" height="46" fill="#e8412a"/><text x="80" y="125" text-anchor="middle" font-weight="700" style="font-size:16px;fill:#fff">1</text><rect x="100" y="96" width="40" height="46" fill="#f06a26"/><text x="120" y="125" text-anchor="middle" font-weight="700" style="font-size:16px;fill:#fff">2</text><rect x="140" y="96" width="40" height="46" fill="#f7941d"/><text x="160" y="125" text-anchor="middle" font-weight="700" style="font-size:16px;fill:#fff">3</text><rect x="180" y="96" width="40" height="46" fill="#fbb829"/><text x="200" y="125" text-anchor="middle" font-weight="700" style="font-size:16px;fill:#fff">4</text><rect x="220" y="96" width="40" height="46" fill="#f4d82b"/><text x="240" y="125" text-anchor="middle" font-weight="700" style="font-size:16px;fill:#17181a">5</text><rect x="260" y="96" width="40" height="46" fill="#c3d530"/><text x="280" y="125" text-anchor="middle" font-weight="700" style="font-size:16px;fill:#17181a">6</text><rect x="300" y="96" width="40" height="46" fill="#4cb848"/><text x="320" y="125" text-anchor="middle" font-weight="700" style="font-size:16px;fill:#17181a">7</text><rect x="340" y="96" width="40" height="46" fill="#22a05a"/><text x="360" y="125" text-anchor="middle" font-weight="700" style="font-size:16px;fill:#fff">8</text><rect x="380" y="96" width="40" height="46" fill="#16917e"/><text x="400" y="125" text-anchor="middle" font-weight="700" style="font-size:16px;fill:#fff">9</text><rect x="420" y="96" width="40" height="46" fill="#2479b8"/><text x="440" y="125" text-anchor="middle" font-weight="700" style="font-size:16px;fill:#fff">10</text><rect x="460" y="96" width="40" height="46" fill="#2e56a3"/><text x="480" y="125" text-anchor="middle" font-weight="700" style="font-size:16px;fill:#fff">11</text><rect x="500" y="96" width="40" height="46" fill="#3b3c94"/><text x="520" y="125" text-anchor="middle" font-weight="700" style="font-size:16px;fill:#fff">12</text><rect x="540" y="96" width="40" height="46" fill="#4f2d88"/><text x="560" y="125" text-anchor="middle" font-weight="700" style="font-size:16px;fill:#fff">13</text><rect x="580" y="96" width="40" height="46" fill="#5b237a"/><text x="600" y="125" text-anchor="middle" font-weight="700" style="font-size:16px;fill:#fff">14</text><rect x="20" y="96" width="600" height="46" fill="none" stroke="#17181a" stroke-width="1.5"/><path d="M290 158 H40 m8 -6 l-8 6 8 6" stroke="#17181a" stroke-width="1.6" fill="none"/>
+      <path d="M350 158 H600 m-8 -6 l8 6 -8 6" stroke="#17181a" stroke-width="1.6" fill="none"/>
+      <text x="165" y="176" text-anchor="middle" class="cap">more acidic</text>
+      <text x="475" y="176" text-anchor="middle" class="cap">more alkaline</text><line x1="80" y1="144" x2="80" y2="196" stroke="#b9bcc0" stroke-dasharray="2 3"/>
+        <text x="80" y="208" text-anchor="middle" class="cap">stomach acid</text><line x1="120" y1="144" x2="120" y2="218" stroke="#b9bcc0" stroke-dasharray="2 3"/>
+        <text x="120" y="230" text-anchor="middle" class="cap">lemon juice</text><line x1="160" y1="144" x2="160" y2="196" stroke="#b9bcc0" stroke-dasharray="2 3"/>
+        <text x="160" y="208" text-anchor="middle" class="cap">vinegar</text><line x1="320" y1="144" x2="320" y2="196" stroke="#b9bcc0" stroke-dasharray="2 3"/>
+        <text x="320" y="208" text-anchor="middle" class="cap">pure water</text><line x1="400" y1="144" x2="400" y2="218" stroke="#b9bcc0" stroke-dasharray="2 3"/>
+        <text x="400" y="230" text-anchor="middle" class="cap">baking soda</text><line x1="440" y1="144" x2="440" y2="196" stroke="#b9bcc0" stroke-dasharray="2 3"/>
+        <text x="440" y="208" text-anchor="middle" class="cap">soap</text><line x1="560" y1="144" x2="560" y2="218" stroke="#b9bcc0" stroke-dasharray="2 3"/>
+        <text x="560" y="230" text-anchor="middle" class="cap">oven cleaner</text>
+  <g class="lbl" data-part="strong-acid">
+    <line class="leader" x1="80" y1="66" x2="80" y2="94"/>
+    <circle class="dot" cx="80" cy="94" r="3.5"/>
+    <text class="name" x="86" y="70.5" text-anchor="start">strong acid</text>
+    <g class="letter"><circle cx="95" cy="66" r="9.5"/><text x="95" y="70.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="weak-acid">
+    <line class="leader" x1="240" y1="66" x2="240" y2="94"/>
+    <circle class="dot" cx="240" cy="94" r="3.5"/>
+    <text class="name" x="234" y="70.5" text-anchor="end">weak acid</text>
+    <g class="letter"><circle cx="225" cy="66" r="9.5"/><text x="225" y="70.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="neutral">
+    <line class="leader" x1="320" y1="44" x2="320" y2="94"/>
+    <circle class="dot" cx="320" cy="94" r="3.5"/>
+    <text class="name" x="326" y="48.5" text-anchor="start">neutral</text>
+    <g class="letter"><circle cx="335" cy="44" r="9.5"/><text x="335" y="48.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="weak-alkali">
+    <line class="leader" x1="400" y1="66" x2="400" y2="94"/>
+    <circle class="dot" cx="400" cy="94" r="3.5"/>
+    <text class="name" x="406" y="70.5" text-anchor="start">weak alkali</text>
+    <g class="letter"><circle cx="415" cy="66" r="9.5"/><text x="415" y="70.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="strong-alkali">
+    <line class="leader" x1="560" y1="44" x2="560" y2="94"/>
+    <circle class="dot" cx="560" cy="94" r="3.5"/>
+    <text class="name" x="554" y="48.5" text-anchor="end">strong alkali</text>
+    <g class="letter"><circle cx="545" cy="44" r="9.5"/><text x="545" y="48.5" text-anchor="middle"></text></g>
+  </g>
+</svg>

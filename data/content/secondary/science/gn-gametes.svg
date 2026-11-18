@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 280" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+
+      <text x="150" y="26" text-anchor="middle" class="title">Sperm cell</text>
+      <text x="470" y="26" text-anchor="middle" class="title">Egg cell</text>
+      <path d="M150 140 c14 -18 26 18 40 0 s26 18 40 0 s26 18 40 0" fill="none" stroke="#4a7fa8" stroke-width="3.5" stroke-linecap="round"/>
+      <rect x="124" y="131" width="30" height="18" rx="6" fill="#e67e22" stroke="#a85a10" stroke-width="1.5"/>
+      <path d="M128 140 h22" stroke="#a85a10" stroke-width="1" stroke-dasharray="3 2"/>
+      <ellipse cx="92" cy="140" rx="34" ry="22" fill="#cfe5f5" stroke="#4a7fa8" stroke-width="2.5"/>
+      <ellipse cx="96" cy="140" rx="20" ry="13" fill="#9b59b6" stroke="#6c3483" stroke-width="1.5"/>
+      <circle cx="470" cy="140" r="98" fill="#fdf6e3" stroke="#d8c48a" stroke-width="2" stroke-dasharray="6 4"/>
+      <circle cx="470" cy="140" r="82" fill="#fff3d6" stroke="#b5651d" stroke-width="3"/>
+      <circle cx="458" cy="132" r="24" fill="#9b59b6" stroke="#6c3483" stroke-width="2"/>
+      <text x="320" y="268" text-anchor="middle" class="cap">not to scale: the egg is many times wider than a sperm</text>
+      
+  <g class="lbl" data-part="head">
+    <line class="leader" x1="50" y1="84" x2="66" y2="140"/>
+    <circle class="dot" cx="66" cy="140" r="3.5"/>
+    <text class="name" x="44" y="88.5" text-anchor="end">Head</text>
+    <g class="letter"><circle cx="35" cy="84" r="9.5"/><text x="35" y="88.5" text-anchor="middle"></text></g>
+  </g>
+      
+  <g class="lbl" data-part="mito">
+    <line class="leader" x1="144" y1="82" x2="139" y2="140"/>
+    <circle class="dot" cx="139" cy="140" r="3.5"/>
+    <text class="name" x="150" y="86.5" text-anchor="start">Mitochondria</text>
+    <g class="letter"><circle cx="159" cy="82" r="9.5"/><text x="159" y="86.5" text-anchor="middle"></text></g>
+  </g>
+      
+  <g class="lbl" data-part="tail">
+    <line class="leader" x1="234" y1="206" x2="230" y2="140"/>
+    <circle class="dot" cx="230" cy="140" r="3.5"/>
+    <text class="name" x="240" y="210.5" text-anchor="start">Tail</text>
+    <g class="letter"><circle cx="249" cy="206" r="9.5"/><text x="249" y="210.5" text-anchor="middle"></text></g>
+  </g>
+      
+  <g class="lbl" data-part="nucleus">
+    <line class="leader" x1="594" y1="112" x2="458" y2="132"/>
+    <circle class="dot" cx="458" cy="132" r="3.5"/>
+    <text class="name" x="600" y="116.5" text-anchor="start">Nucleus</text>
+    <g class="letter"><circle cx="609" cy="112" r="9.5"/><text x="609" y="116.5" text-anchor="middle"></text></g>
+  </g>
+      
+  <g class="lbl" data-part="cytoplasm">
+    <line class="leader" x1="594" y1="196" x2="500" y2="190"/>
+    <circle class="dot" cx="500" cy="190" r="3.5"/>
+    <text class="name" x="600" y="200.5" text-anchor="start">Cytoplasm</text>
+    <g class="letter"><circle cx="609" cy="196" r="9.5"/><text x="609" y="200.5" text-anchor="middle"></text></g>
+  </g>
+      
+  <g class="lbl" data-part="jelly">
+    <line class="leader" x1="594" y1="46" x2="530" y2="60"/>
+    <circle class="dot" cx="530" cy="60" r="3.5"/>
+    <text class="name" x="600" y="50.5" text-anchor="start">Jelly coat</text>
+    <g class="letter"><circle cx="609" cy="46" r="9.5"/><text x="609" y="50.5" text-anchor="middle"></text></g>
+  </g>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 450" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+
+    <line x1="225" y1="328" x2="136.7960158034848" y2="273.2206834990064" stroke="#17181a" stroke-width="2"/>
+        <polygon points="130,269 136.3,278.0 140.9,270.7" fill="#17181a"/><line x1="225" y1="328" x2="313.2039841965152" y2="273.2206834990064" stroke="#17181a" stroke-width="2"/>
+        <polygon points="320,269 309.1,270.7 313.7,278.0" fill="#17181a"/><line x1="415" y1="328" x2="326.7960158034848" y2="273.2206834990064" stroke="#17181a" stroke-width="2"/>
+        <polygon points="320,269 326.3,278.0 330.9,270.7" fill="#17181a"/><line x1="415" y1="328" x2="503.2039841965152" y2="273.2206834990064" stroke="#17181a" stroke-width="2"/>
+        <polygon points="510,269 499.1,270.7 503.7,278.0" fill="#17181a"/><line x1="130" y1="233" x2="130" y2="177" stroke="#17181a" stroke-width="2"/>
+        <polygon points="130,169 125.7,179.1 134.3,179.1" fill="#17181a"/><line x1="130" y1="133" x2="130" y2="77" stroke="#17181a" stroke-width="2"/>
+        <polygon points="130,69 125.7,79.1 134.3,79.1" fill="#17181a"/><line x1="320" y1="233" x2="320" y2="77" stroke="#17181a" stroke-width="2"/>
+        <polygon points="320,69 315.7,79.1 324.3,79.1" fill="#17181a"/><line x1="320" y1="233" x2="503.9439827884727" y2="74.22729906679201" stroke="#17181a" stroke-width="2"/>
+        <polygon points="510,69 499.5,72.4 505.1,78.9" fill="#17181a"/><line x1="510" y1="233" x2="510" y2="77" stroke="#17181a" stroke-width="2"/>
+        <polygon points="510,69 505.7,79.1 514.3,79.1" fill="#17181a"/>
+    <rect x="74" y="33" width="112" height="34" rx="9" fill="#fbd9cf" stroke="#b5503a" stroke-width="2"/>
+      <text x="130" y="55" text-anchor="middle" class="title">Sparrowhawk</text><rect x="264" y="33" width="112" height="34" rx="9" fill="#fbd9cf" stroke="#b5503a" stroke-width="2"/>
+      <text x="320" y="55" text-anchor="middle" class="title">Owl</text><rect x="454" y="33" width="112" height="34" rx="9" fill="#fbd9cf" stroke="#b5503a" stroke-width="2"/>
+      <text x="510" y="55" text-anchor="middle" class="title">Fox</text><rect x="74" y="133" width="112" height="34" rx="9" fill="#fbd9cf" stroke="#b5503a" stroke-width="2"/>
+      <text x="130" y="155" text-anchor="middle" class="title">Blue tit</text><rect x="74" y="233" width="112" height="34" rx="9" fill="#fff1c4" stroke="#b58a12" stroke-width="2"/>
+      <text x="130" y="255" text-anchor="middle" class="title">Caterpillar</text><rect x="264" y="233" width="112" height="34" rx="9" fill="#fff1c4" stroke="#b58a12" stroke-width="2"/>
+      <text x="320" y="255" text-anchor="middle" class="title">Mouse</text><rect x="454" y="233" width="112" height="34" rx="9" fill="#fff1c4" stroke="#b58a12" stroke-width="2"/>
+      <text x="510" y="255" text-anchor="middle" class="title">Rabbit</text><rect x="169" y="328" width="112" height="34" rx="9" fill="#d7efc6" stroke="#3f7a2d" stroke-width="2"/>
+      <text x="225" y="350" text-anchor="middle" class="title">Oak tree</text><rect x="359" y="328" width="112" height="34" rx="9" fill="#d7efc6" stroke="#3f7a2d" stroke-width="2"/>
+      <text x="415" y="350" text-anchor="middle" class="title">Grass</text>
+    <rect x="20" y="384" width="14" height="14" rx="3" fill="#d7efc6" stroke="#3f7a2d"/><text x="40" y="396" class="cap">producers</text>
+    <rect x="120" y="384" width="14" height="14" rx="3" fill="#fff1c4" stroke="#b58a12"/><text x="140" y="396" class="cap">eat plants</text>
+    <rect x="220" y="384" width="14" height="14" rx="3" fill="#fbd9cf" stroke="#b5503a"/><text x="240" y="396" class="cap">eat animals</text>
+    <text x="20" y="420" class="cap">Each arrow points from the food to the animal that eats it — the way energy flows.</text>
+    <text x="20" y="438" class="cap">Decomposers (fungi, bacteria) break down the dead remains and waste of all of them.</text>
+</svg>

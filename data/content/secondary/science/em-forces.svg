@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 244" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<circle cx="150" cy="40" r="22" fill="#f6d4cf" stroke="#c0392b" stroke-width="2.5"/>
+      <text x="150" y="48" text-anchor="middle" style="font-size:24px;font-weight:700;fill:#c0392b">+</text><circle cx="250" cy="40" r="22" fill="#f6d4cf" stroke="#c0392b" stroke-width="2.5"/>
+      <text x="250" y="48" text-anchor="middle" style="font-size:24px;font-weight:700;fill:#c0392b">+</text><line x1="122" y1="40" x2="92" y2="40" stroke="#17181a" stroke-width="3"/><path d="M82 40 l12 -7 v14Z" fill="#17181a"/><line x1="278" y1="40" x2="308" y2="40" stroke="#17181a" stroke-width="3"/><path d="M318 40 l-12 -7 v14Z" fill="#17181a"/><text x="340" y="45" class="title">repel</text><circle cx="150" cy="110" r="22" fill="#d3e2f4" stroke="#2f6db5" stroke-width="2.5"/>
+      <text x="150" y="118" text-anchor="middle" style="font-size:24px;font-weight:700;fill:#2f6db5">−</text><circle cx="250" cy="110" r="22" fill="#d3e2f4" stroke="#2f6db5" stroke-width="2.5"/>
+      <text x="250" y="118" text-anchor="middle" style="font-size:24px;font-weight:700;fill:#2f6db5">−</text><line x1="122" y1="110" x2="92" y2="110" stroke="#17181a" stroke-width="3"/><path d="M82 110 l12 -7 v14Z" fill="#17181a"/><line x1="278" y1="110" x2="308" y2="110" stroke="#17181a" stroke-width="3"/><path d="M318 110 l-12 -7 v14Z" fill="#17181a"/><text x="340" y="115" class="title">repel</text><circle cx="110" cy="180" r="22" fill="#f6d4cf" stroke="#c0392b" stroke-width="2.5"/>
+      <text x="110" y="188" text-anchor="middle" style="font-size:24px;font-weight:700;fill:#c0392b">+</text><circle cx="290" cy="180" r="22" fill="#d3e2f4" stroke="#2f6db5" stroke-width="2.5"/>
+      <text x="290" y="188" text-anchor="middle" style="font-size:24px;font-weight:700;fill:#2f6db5">−</text><line x1="136" y1="180" x2="166" y2="180" stroke="#17181a" stroke-width="3"/><path d="M176 180 l-12 -7 v14Z" fill="#17181a"/><line x1="264" y1="180" x2="234" y2="180" stroke="#17181a" stroke-width="3"/><path d="M224 180 l12 -7 v14Z" fill="#17181a"/><text x="340" y="185" class="title">attract</text><text x="220" y="232" text-anchor="middle" class="cap" >Like charges repel · unlike (opposite) charges attract</text>
+</svg>

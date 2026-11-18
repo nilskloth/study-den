@@ -620,3 +620,34 @@ button.hear { padding: var(--sp-1) var(--sp-2); font-size: var(--fs-3); line-hei
   .y1-options.four { grid-template-columns: 1fr 1fr; }
   .y1-self-btn, .y1-choice { min-width: 0; flex: 1; }
 }
+
+/* Science: Fix my test, longer answers (views/secondary/revision.js) */
+.sci-fix { border-left: 4px solid var(--subject, var(--accent)); }
+.sci-fix-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-2); }
+.sci-explain-list td { vertical-align: top; }
+.sci-explain-list a { color: var(--ink); }
+.sci-explain-marks { white-space: nowrap; text-align: right; }
+.sci-marks { font-size: var(--fs-0); white-space: nowrap; }
+.sci-scheme { margin: 0 0 var(--sp-2); padding-left: 1.4em; }
+.sci-scheme li { margin: 2px 0; }
+.sci-scheme li.hit::marker { content: "✓  "; color: var(--correct); }
+.sci-scheme li.miss { color: var(--ink-muted); }
+.sci-scheme li.miss::marker { content: "○  "; color: var(--ink-faint); }
+.sci-model summary { cursor: pointer; color: var(--ink-muted); margin-top: var(--sp-2); }
+.sci-model p { margin: var(--sp-2) 0 0; }
+/* Science topic picker: one fold per big idea */
+.sci-ideas { display: grid; gap: var(--sp-2); margin-top: var(--sp-3); }
+.sci-idea { border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--paper); }
+.sci-idea > summary { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--sp-1) var(--sp-3); padding: var(--sp-2) var(--sp-3); cursor: pointer; list-style: none; }
+.sci-idea > summary::-webkit-details-marker { display: none; }
+.sci-idea > summary::before { content: "▸"; color: var(--ink-faint); width: 1em; }
+.sci-idea[open] > summary::before { content: "▾"; }
+.sci-idea-name { font-weight: 650; }
+.sci-idea-meta, .sci-idea-count { font-size: var(--fs-0); }
+.sci-idea-count { margin-left: auto; }
+.sci-idea-all { padding: 0 var(--sp-3) var(--sp-2); font-size: var(--fs-0); }
+.sci-year { padding: 0 var(--sp-3) var(--sp-3); }
+.sci-year-head { margin: var(--sp-2) 0 0; }
+.sci-year .section-grid { margin-left: calc(18px + var(--sp-2)); }
+.sci-label-idea:first-of-type { border-top: 0; padding-top: 0; }
+.sci-label-more > summary { cursor: pointer; color: var(--ink-muted); margin-top: var(--sp-3); }

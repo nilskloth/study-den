@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 324" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+
+    <path d="M200 270 L380 270 L290 70Z" fill="#d6ecf7" stroke="#5d8aa8" stroke-width="2.5" opacity=".95"/>
+    <path d="M242 176 L327 152 L342 186Z" fill="#f4f4f4" opacity=".9"/><line x1="327.0" y1="152.0" x2="540" y2="120" stroke="#e53935" stroke-width="4"/>
+              <text x="552" y="124.5" font-weight="700" fill="#e53935" style="fill:#e53935">Red</text><line x1="329.5" y1="157.7" x2="540" y2="144" stroke="#fb8c00" stroke-width="4"/>
+              <text x="552" y="148.5" font-weight="700" fill="#fb8c00" style="fill:#fb8c00">Orange</text><line x1="332.0" y1="163.3" x2="540" y2="168" stroke="#f2c200" stroke-width="4"/>
+              <text x="552" y="172.5" font-weight="700" fill="#f2c200" style="fill:#f2c200">Yellow</text><line x1="334.5" y1="169.0" x2="540" y2="192" stroke="#43a047" stroke-width="4"/>
+              <text x="552" y="196.5" font-weight="700" fill="#43a047" style="fill:#43a047">Green</text><line x1="337.0" y1="174.7" x2="540" y2="216" stroke="#1e88e5" stroke-width="4"/>
+              <text x="552" y="220.5" font-weight="700" fill="#1e88e5" style="fill:#1e88e5">Blue</text><line x1="339.5" y1="180.3" x2="540" y2="240" stroke="#3949ab" stroke-width="4"/>
+              <text x="552" y="244.5" font-weight="700" fill="#3949ab" style="fill:#3949ab">Indigo</text><line x1="342.0" y1="186.0" x2="540" y2="264" stroke="#8e24aa" stroke-width="4"/>
+              <text x="552" y="268.5" font-weight="700" fill="#8e24aa" style="fill:#8e24aa">Violet</text>
+    <line x1="30" y1="214" x2="242" y2="176" stroke="#9aa3ab" stroke-width="7"/>
+    <line x1="30" y1="214" x2="242" y2="176" stroke="#ffffff" stroke-width="4"/>
+    <path d="M132.7 198.5 L140.0 193.3 L131.3 190.8" fill="none" stroke="#6a6d71" stroke-width="2.2" stroke-linejoin="round"/>
+    <line x1="540" y1="100" x2="540" y2="290" stroke="#3b3f45" stroke-width="4"/>
+    <text x="30" y="244" font-weight="700">White light</text>
+    <text x="290" y="296" text-anchor="middle" class="cap">Glass prism</text>
+    <text x="540" y="312" text-anchor="middle" class="cap">screen: a spectrum</text>
+</svg>

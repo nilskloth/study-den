@@ -131,9 +131,12 @@ SYS;
 function build_mark_request(array $p): array {
   $stem = require_string($p, 'stem', 4000);
   $answer = require_string($p, 'answer', 4000);
+  /* level "ks3": Year 7 science (Secondary → Science → Longer answers), up to 6 marks */
+  $ks3 = ($p['level'] ?? '') === 'ks3';
   $marks = $p['marks'] ?? null;
-  if (!is_int($marks) || $marks < 1 || $marks > 5) {
-    throw new InvalidArgumentException('payload.marks must be an integer 1-5');
+  $maxMarks = $ks3 ? 6 : 5;
+  if (!is_int($marks) || $marks < 1 || $marks > $maxMarks) {
+    throw new InvalidArgumentException("payload.marks must be an integer 1-{$maxMarks}");
   }
   $scheme = $p['markScheme'] ?? null;
   if (!is_array($scheme)) {
@@ -146,7 +149,21 @@ function build_mark_request(array $p): array {
   $excerpt = isset($p['passageExcerpt']) && is_string($p['passageExcerpt'])
     ? substr($p['passageExcerpt'], 0, 6000) : '';
 
-  $system = <<<SYS
+  $system = $ks3 ? <<<SYS
+You are an experienced Key Stage 3 science teacher marking a Year 7 pupil's
+written answer to a test question, using the mark scheme given. Award one mark
+for each different acceptable point the answer clearly makes, up to the
+question's marks, and follow the award rules; never award marks for effort,
+length, or points the scheme does not list. Accept the pupil's own wording and
+everyday spelling slips when the scientific meaning is clear, but a wrong key
+word (e.g. "hinge" for a ball and socket joint, "relaxes" for "contracts") does
+not earn the point. The pupil is 11 or 12 years old: "feedback" must be one or
+two encouraging, specific sentences addressed to the pupil, in simple warm
+British English — what they did well and, if marks were lost, exactly which
+point to add next time. List in "matchedPoints" the acceptable points the answer
+actually made, quoting the scheme's own wording.
+SYS
+  : <<<SYS
 You are an experienced KS2 SATs marker applying an official mark scheme to a
 Year 6 pupil's written answer. Award marks strictly according to the mark
 scheme's acceptable points and award rules — never for effort, length, or

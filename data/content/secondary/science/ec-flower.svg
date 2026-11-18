@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 492" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+
+    <!-- stalk and receptacle -->
+    <path d="M311 440 V352 h18 V440Z" fill="#86c06a" stroke="#3f7a2d" stroke-width="2"/>
+    <path d="M276 350 C280 330 360 330 364 350 C340 362 300 362 276 350Z" fill="#86c06a" stroke="#3f7a2d" stroke-width="2"/>
+    <path d="M290 346 C250 350 220 362 204 388 C240 384 272 372 298 358Z" fill="#86c06a" stroke="#3f7a2d" stroke-width="2"/><path d="M350 346 C390 350 420 362 436 388 C400 384 368 372 342 358Z" fill="#86c06a" stroke="#3f7a2d" stroke-width="2"/>
+    <path d="M294 332 C260 300 200 250 170 150 C160 118 134 128 136 160 C142 250 210 318 280 342Z" fill="#f6b3c8" stroke="#c2577f" stroke-width="2"/><path d="M346 332 C380 300 440 250 470 150 C480 118 506 128 504 160 C498 250 430 318 360 342Z" fill="#f6b3c8" stroke="#c2577f" stroke-width="2"/>
+    <!-- nectaries -->
+    <ellipse cx="284" cy="336" rx="9" ry="6" fill="#ffd75e" stroke="#c79a10" stroke-width="1.5"/>
+    <ellipse cx="356" cy="336" rx="9" ry="6" fill="#ffd75e" stroke="#c79a10" stroke-width="1.5"/>
+    <path d="M290 330 C270 280 250 230 242 182" fill="none" stroke="#d4b25a" stroke-width="4" stroke-linecap="round"/>
+      <ellipse cx="240" cy="168" rx="9" ry="18" transform="rotate(-12 240 168)" fill="#f2c230" stroke="#a77d0a" stroke-width="2"/><path d="M350 330 C370 280 390 230 398 182" fill="none" stroke="#d4b25a" stroke-width="4" stroke-linecap="round"/>
+      <ellipse cx="400" cy="168" rx="9" ry="18" transform="rotate(12 400 168)" fill="#f2c230" stroke="#a77d0a" stroke-width="2"/>
+    <!-- carpel: ovary, style, stigma -->
+    <path d="M315 262 V150 h10 V262Z" fill="#bfe09a" stroke="#4f8a2e" stroke-width="2"/>
+    <path d="M298 144 C298 128 312 136 320 128 C328 136 342 128 342 144 C338 154 302 154 298 144Z" fill="#bfe09a" stroke="#4f8a2e" stroke-width="2"/>
+    <path d="M320 258 C354 258 360 300 350 330 C340 346 300 346 290 330 C280 300 286 258 320 258Z" fill="#bfe09a" stroke="#4f8a2e" stroke-width="2"/>
+    <path d="M320 270 C340 272 344 300 338 324 C330 336 310 336 302 324 C296 300 300 272 320 270Z" fill="#e3f2cf" stroke="#4f8a2e" stroke-width="1"/>
+    <ellipse cx="312" cy="286" rx="6" ry="7.5" fill="#fff6c9" stroke="#a08a2e" stroke-width="1.5"/><ellipse cx="328" cy="286" rx="6" ry="7.5" fill="#fff6c9" stroke="#a08a2e" stroke-width="1.5"/><ellipse cx="311" cy="305" rx="6" ry="7.5" fill="#fff6c9" stroke="#a08a2e" stroke-width="1.5"/><ellipse cx="329" cy="305" rx="6" ry="7.5" fill="#fff6c9" stroke="#a08a2e" stroke-width="1.5"/><ellipse cx="320" cy="322" rx="6" ry="7.5" fill="#fff6c9" stroke="#a08a2e" stroke-width="1.5"/>
+    
+  <g class="lbl" data-part="anther">
+    <line class="leader" x1="156" y1="96" x2="238" y2="166"/>
+    <circle class="dot" cx="238" cy="166" r="3.5"/>
+    <text class="name" x="150" y="100.5" text-anchor="end">Anther</text>
+    <g class="letter"><circle cx="141" cy="96" r="9.5"/><text x="141" y="100.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="filament">
+    <line class="leader" x1="126" y1="214" x2="256" y2="240"/>
+    <circle class="dot" cx="256" cy="240" r="3.5"/>
+    <text class="name" x="120" y="218.5" text-anchor="end">Filament</text>
+    <g class="letter"><circle cx="111" cy="214" r="9.5"/><text x="111" y="218.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="petal">
+    <line class="leader" x1="110" y1="276" x2="170" y2="186"/>
+    <circle class="dot" cx="170" cy="186" r="3.5"/>
+    <text class="name" x="104" y="280.5" text-anchor="end">Petal</text>
+    <g class="letter"><circle cx="95" cy="276" r="9.5"/><text x="95" y="280.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="nectary">
+    <line class="leader" x1="156" y1="340" x2="282" y2="338"/>
+    <circle class="dot" cx="282" cy="338" r="3.5"/>
+    <text class="name" x="150" y="344.5" text-anchor="end">Nectary</text>
+    <g class="letter"><circle cx="141" cy="340" r="9.5"/><text x="141" y="344.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="sepal">
+    <line class="leader" x1="176" y1="400" x2="230" y2="376"/>
+    <circle class="dot" cx="230" cy="376" r="3.5"/>
+    <text class="name" x="170" y="404.5" text-anchor="end">Sepal</text>
+    <g class="letter"><circle cx="161" cy="400" r="9.5"/><text x="161" y="404.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="stigma">
+    <line class="leader" x1="464" y1="70" x2="332" y2="138"/>
+    <circle class="dot" cx="332" cy="138" r="3.5"/>
+    <text class="name" x="470" y="74.5" text-anchor="start">Stigma</text>
+    <g class="letter"><circle cx="479" cy="70" r="9.5"/><text x="479" y="74.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="style">
+    <line class="leader" x1="514" y1="210" x2="324" y2="200"/>
+    <circle class="dot" cx="324" cy="200" r="3.5"/>
+    <text class="name" x="520" y="214.5" text-anchor="start">Style</text>
+    <g class="letter"><circle cx="529" cy="210" r="9.5"/><text x="529" y="214.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="ovary">
+    <line class="leader" x1="464" y1="336" x2="350" y2="316"/>
+    <circle class="dot" cx="350" cy="316" r="3.5"/>
+    <text class="name" x="470" y="340.5" text-anchor="start">Ovary</text>
+    <g class="letter"><circle cx="479" cy="336" r="9.5"/><text x="479" y="340.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="ovule">
+    <line class="leader" x1="464" y1="300" x2="329" y2="305"/>
+    <circle class="dot" cx="329" cy="305" r="3.5"/>
+    <text class="name" x="470" y="304.5" text-anchor="start">Ovule</text>
+    <g class="letter"><circle cx="479" cy="300" r="9.5"/><text x="479" y="304.5" text-anchor="middle"></text></g>
+  </g>
+    <path d="M556 60 q8 0 8 10 V196 q0 6 8 6 q-8 0 -8 6 V334 q0 10 -8 10" fill="none" stroke="#8a8d91" stroke-width="1.6"/>
+      <text x="572" y="206.5" text-anchor="start" class="title" fill="#8a8d91" style="fill:#8a8d91">Carpel</text>
+    <path d="M76 86 q-8 0 -8 10 V149 q0 6 -8 6 q8 0 8 6 V214 q0 10 8 10" fill="none" stroke="#8a8d91" stroke-width="1.6"/>
+      <text x="60" y="159.5" text-anchor="end" class="title" fill="#8a8d91" style="fill:#8a8d91">Stamen</text>
+    <text x="320" y="462" text-anchor="middle" class="cap">Half a flower, cut down the middle.</text>
+    <text x="320" y="480" text-anchor="middle" class="cap">Stamen = anther + filament (male) · Carpel = stigma + style + ovary (female)</text>
+</svg>

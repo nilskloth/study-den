@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 355" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<line x1="80" y1="300" x2="80" y2="30" stroke="#e3e3de"/>
+      <text x="80" y="318" text-anchor="middle" class="cap">0</text><line x1="124" y1="300" x2="124" y2="30" stroke="#e3e3de"/>
+      <text x="124" y="318" text-anchor="middle" class="cap">10</text><line x1="168" y1="300" x2="168" y2="30" stroke="#e3e3de"/>
+      <text x="168" y="318" text-anchor="middle" class="cap">20</text><line x1="212" y1="300" x2="212" y2="30" stroke="#e3e3de"/>
+      <text x="212" y="318" text-anchor="middle" class="cap">30</text><line x1="256" y1="300" x2="256" y2="30" stroke="#e3e3de"/>
+      <text x="256" y="318" text-anchor="middle" class="cap">40</text><line x1="300" y1="300" x2="300" y2="30" stroke="#e3e3de"/>
+      <text x="300" y="318" text-anchor="middle" class="cap">50</text><line x1="344" y1="300" x2="344" y2="30" stroke="#e3e3de"/>
+      <text x="344" y="318" text-anchor="middle" class="cap">60</text><line x1="388" y1="300" x2="388" y2="30" stroke="#e3e3de"/>
+      <text x="388" y="318" text-anchor="middle" class="cap">70</text><line x1="432" y1="300" x2="432" y2="30" stroke="#e3e3de"/>
+      <text x="432" y="318" text-anchor="middle" class="cap">80</text><line x1="476.00000000000006" y1="300" x2="476.00000000000006" y2="30" stroke="#e3e3de"/>
+      <text x="476.00000000000006" y="318" text-anchor="middle" class="cap">90</text><line x1="520" y1="300" x2="520" y2="30" stroke="#e3e3de"/>
+      <text x="520" y="318" text-anchor="middle" class="cap">100</text><line x1="80" y1="300" x2="520" y2="300" stroke="#e3e3de"/><text x="72" y="304.5" text-anchor="end" class="cap">0</text><line x1="80" y1="285" x2="520" y2="285" stroke="#e3e3de"/><line x1="80" y1="270" x2="520" y2="270" stroke="#e3e3de"/><text x="72" y="274.5" text-anchor="end" class="cap">20</text><line x1="80" y1="255" x2="520" y2="255" stroke="#e3e3de"/><line x1="80" y1="240" x2="520" y2="240" stroke="#e3e3de"/><text x="72" y="244.5" text-anchor="end" class="cap">40</text><line x1="80" y1="225" x2="520" y2="225" stroke="#e3e3de"/><line x1="80" y1="210" x2="520" y2="210" stroke="#e3e3de"/><text x="72" y="214.5" text-anchor="end" class="cap">60</text><line x1="80" y1="195" x2="520" y2="195" stroke="#e3e3de"/><line x1="80" y1="180" x2="520" y2="180" stroke="#e3e3de"/><text x="72" y="184.5" text-anchor="end" class="cap">80</text><line x1="80" y1="165" x2="520" y2="165" stroke="#e3e3de"/><line x1="80" y1="150" x2="520" y2="150" stroke="#e3e3de"/><text x="72" y="154.5" text-anchor="end" class="cap">100</text><line x1="80" y1="135" x2="520" y2="135" stroke="#e3e3de"/><line x1="80" y1="120" x2="520" y2="120" stroke="#e3e3de"/><text x="72" y="124.5" text-anchor="end" class="cap">120</text><line x1="80" y1="105" x2="520" y2="105" stroke="#e3e3de"/><line x1="80" y1="90" x2="520" y2="90" stroke="#e3e3de"/><text x="72" y="94.5" text-anchor="end" class="cap">140</text><line x1="80" y1="75" x2="520" y2="75" stroke="#e3e3de"/><line x1="80" y1="60" x2="520" y2="60" stroke="#e3e3de"/><text x="72" y="64.5" text-anchor="end" class="cap">160</text><line x1="80" y1="45" x2="520" y2="45" stroke="#e3e3de"/><line x1="80" y1="30" x2="520" y2="30" stroke="#e3e3de"/><text x="72" y="34.5" text-anchor="end" class="cap">180</text><line x1="80" y1="300" x2="520" y2="300" stroke="#17181a" stroke-width="1.6"/>
+          <line x1="80" y1="300" x2="80" y2="30" stroke="#17181a" stroke-width="1.6"/>
+          <text x="300" y="340" text-anchor="middle" class="cap">Temperature (°C)</text>
+          <text x="24" y="165" text-anchor="middle" class="cap" transform="rotate(-90 24 165)">Solubility (g per 100 g of water)</text><polyline points="80.0,270.0 88.8,269.2 97.6,268.2 106.4,267.1 115.2,265.8 124.0,264.4 132.8,262.8 141.6,261.1 150.4,259.2 159.2,257.2 168.0,255.0 176.8,252.7 185.6,250.2 194.4,247.6 203.2,244.8 212.0,241.9 220.8,238.8 229.6,235.6 238.4,232.2 247.2,228.7 256.0,225.0 264.8,221.2 273.6,217.2 282.4,213.1 291.2,208.8 300.0,204.4 308.8,199.8 317.6,195.1 326.4,190.2 335.2,185.2 344.0,180.0 352.8,174.7 361.6,169.2 370.4,163.6 379.2,157.8 388.0,151.9 396.8,145.8 405.6,139.6 414.4,133.2 423.2,126.7 432.0,120.0 440.8,113.2 449.6,106.2 458.4,99.1 467.2,91.8 476.0,84.4 484.8,76.8 493.6,69.1 502.4,61.2 511.2,53.2 520.0,45.0" fill="none" stroke="#c0392b" stroke-width="3"/><text x="212" y="75" class="title">Solubility of solid X</text>
+</svg>

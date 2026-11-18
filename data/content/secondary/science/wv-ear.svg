@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+
+    <rect x="95" y="50" width="490" height="240" rx="24" fill="#efe0d0" stroke="#b89d86" stroke-width="2"/>
+    <rect x="300" y="86" width="200" height="190" rx="30" fill="#f4efe3" stroke="#7d7466" stroke-width="1.5" opacity=".9"/>
+    <path d="M104 72 C70 58 36 80 34 128 C32 176 40 230 74 272 C88 288 104 276 104 262Z" fill="#efe0d0" stroke="#b89d86" stroke-width="2.5"/>
+    <path d="M96 96 C70 92 58 120 60 150 C62 190 70 220 90 240" fill="none" stroke="#b89d86" stroke-width="2"/>
+    <path d="M80 160 H252 V192 H80 C70 184 70 168 80 160Z" fill="#fbfaf6" stroke="#b89d86" stroke-width="2"/>
+    <rect x="254" y="132" width="76" height="92" rx="16" fill="#fbfaf6" stroke="#7d7466" stroke-width="1.5"/>
+    <ellipse cx="254" cy="176" rx="4.5" ry="30" fill="#e8a0a0" stroke="#a35050" stroke-width="1.5"/>
+    <line x1="259" y1="176" x2="278" y2="150" stroke="#7d7466" stroke-width="8.5" stroke-linecap="round"/>
+   <line x1="259" y1="176" x2="278" y2="150" stroke="#f4efe3" stroke-width="6" stroke-linecap="round"/><line x1="278" y1="150" x2="300" y2="160" stroke="#7d7466" stroke-width="8.5" stroke-linecap="round"/>
+   <line x1="278" y1="150" x2="300" y2="160" stroke="#f4efe3" stroke-width="6" stroke-linecap="round"/><line x1="300" y1="160" x2="326" y2="166" stroke="#7d7466" stroke-width="7.5" stroke-linecap="round"/>
+   <line x1="300" y1="160" x2="326" y2="166" stroke="#f4efe3" stroke-width="5" stroke-linecap="round"/>
+    <rect x="326" y="156" width="26" height="22" rx="6" fill="#f6d7b0" stroke="#b5651d" stroke-width="1.5"/>
+    <circle cx="378" cy="186" r="33" fill="#f6d7b0" stroke="#b5651d" stroke-width="2"/>
+    <path d="M348.0 186.0 L348.6 181.6 L349.8 177.3 L351.6 173.3 L354.0 169.6 L356.9 166.4 L360.2 163.6 L363.9 161.4 L367.8 159.8 L371.9 158.8 L376.0 158.5 L380.2 158.7 L384.2 159.6 L388.0 161.0 L391.4 163.0 L394.6 165.5 L397.3 168.3 L399.5 171.5 L401.2 175.0 L402.4 178.7 L402.9 182.4 L403.0 186.2 L402.4 189.9 L401.3 193.4 L399.7 196.7 L397.7 199.7 L395.2 202.3 L392.5 204.5 L389.4 206.3 L386.2 207.5 L382.8 208.3 L379.4 208.5 L376.0 208.2 L372.8 207.5 L369.7 206.2 L366.9 204.6 L364.4 202.5 L362.3 200.1 L360.6 197.5 L359.3 194.7 L358.4 191.7 L358.0 188.7 L358.1 185.7 L358.6 182.7 L359.5 179.9 L360.9 177.4 L362.5 175.0 L364.5 173.0 L366.8 171.3 L369.2 170.0 L371.8 169.1 L374.4 168.6 L377.1 168.5 L379.7 168.8 L382.1 169.5 L384.5 170.5 L386.6 171.8 L388.5 173.5 L390.0 175.3 L391.3 177.4 L392.2 179.6 L392.8 181.8 L393.0 184.1 L392.9 186.4 L392.4 188.6 L391.6 190.6 L390.6 192.5 L389.3 194.1 L387.8 195.6 L386.1 196.7 L384.3 197.6 L382.4 198.2 L380.5 198.5 L378.6 198.5 L376.7 198.2 L375.0 197.6 L373.4 196.8 L371.9 195.8 L370.7 194.6 L369.7 193.2 L368.9 191.8 L368.3 190.3 L368.0 188.7 L368.0 187.2 L368.2 185.7 L368.6 184.2 L369.2 182.9 L369.9 181.8 L370.8 180.7 L371.9 179.9 L373.0 179.2 L374.2 178.8 L375.4 178.5 L376.6 178.5 L377.7 178.6 L378.8 178.8 L379.8 179.3 L380.7 179.8 L381.5 180.5 L382.1 181.3 L382.6 182.1 L382.9 183.0 L383.1 183.8 L383.1 184.7 L383.0 185.5 L382.8 186.2 L382.5 186.9 L382.1 187.4 L381.6 187.9 " fill="none" stroke="#b5651d" stroke-width="2"/>
+    <path d="M404 172 C440 160 470 150 560 140" fill="none" stroke="#8a6d10" stroke-width="10" stroke-linecap="round"/>
+    <path d="M404 172 C440 160 470 150 560 140" fill="none" stroke="#e3b23c" stroke-width="6.5" stroke-linecap="round"/>
+    <path d="M18 168 q6 -8 0 -16 M10 172 q10 -12 0 -24 M2 176 q14 -16 0 -32" fill="none" stroke="#6a6d71" stroke-width="1.8" transform="translate(6 8)"/>
+    
+  <g class="lbl" data-part="pinna">
+    <line class="leader" x1="18" y1="24" x2="48" y2="120"/>
+    <circle class="dot" cx="48" cy="120" r="3.5"/>
+    <text class="name" x="24" y="28.5" text-anchor="start">Outer ear (pinna)</text>
+    <g class="letter"><circle cx="33" cy="24" r="9.5"/><text x="33" y="28.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="canal">
+    <line class="leader" x1="114" y1="322" x2="170" y2="176"/>
+    <circle class="dot" cx="170" cy="176" r="3.5"/>
+    <text class="name" x="120" y="326.5" text-anchor="start">Ear canal</text>
+    <g class="letter"><circle cx="129" cy="322" r="9.5"/><text x="129" y="326.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="eardrum">
+    <line class="leader" x1="208" y1="24" x2="254" y2="150"/>
+    <circle class="dot" cx="254" cy="150" r="3.5"/>
+    <text class="name" x="214" y="28.5" text-anchor="start">Eardrum</text>
+    <g class="letter"><circle cx="223" cy="24" r="9.5"/><text x="223" y="28.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="ossicles">
+    <line class="leader" x1="244" y1="322" x2="282" y2="151"/>
+    <circle class="dot" cx="282" cy="151" r="3.5"/>
+    <text class="name" x="250" y="326.5" text-anchor="start">Ossicles (tiny bones)</text>
+    <g class="letter"><circle cx="259" cy="322" r="9.5"/><text x="259" y="326.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="cochlea">
+    <line class="leader" x1="394" y1="24" x2="384" y2="200"/>
+    <circle class="dot" cx="384" cy="200" r="3.5"/>
+    <text class="name" x="400" y="28.5" text-anchor="start">Cochlea</text>
+    <g class="letter"><circle cx="409" cy="24" r="9.5"/><text x="409" y="28.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="nerve">
+    <line class="leader" x1="434" y1="322" x2="500" y2="148"/>
+    <circle class="dot" cx="500" cy="148" r="3.5"/>
+    <text class="name" x="440" y="326.5" text-anchor="start">Auditory nerve</text>
+    <g class="letter"><circle cx="449" cy="322" r="9.5"/><text x="449" y="326.5" text-anchor="middle"></text></g>
+  </g>
+</svg>

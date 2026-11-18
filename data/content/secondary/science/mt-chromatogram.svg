@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 335" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<rect x="30" y="20" width="400" height="300" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/><line x1="30" y1="270" x2="430" y2="270" stroke="#555" stroke-width="2"/>
+          <line x1="30" y1="60" x2="430" y2="60" stroke="#2471a3" stroke-width="2" stroke-dasharray="6 4"/>
+          <text x="436" y="64" class="cap">solvent front</text>
+          <text x="436" y="274" class="cap">pencil line</text><circle cx="80" cy="270" r="3" fill="#999"/><ellipse cx="80" cy="210" rx="11" ry="9" fill="#e74c3c" opacity=".88"/><text x="80" y="296" text-anchor="middle" class="title">A</text><circle cx="150" cy="270" r="3" fill="#999"/><ellipse cx="150" cy="150" rx="11" ry="9" fill="#2e86c1" opacity=".88"/><text x="150" y="296" text-anchor="middle" class="title">B</text><circle cx="220" cy="270" r="3" fill="#999"/><ellipse cx="220" cy="100" rx="11" ry="9" fill="#f1c40f" opacity=".88"/><text x="220" y="296" text-anchor="middle" class="title">C</text><circle cx="300" cy="270" r="3" fill="#999"/><ellipse cx="300" cy="210" rx="11" ry="9" fill="#e74c3c" opacity=".88"/><ellipse cx="300" cy="100" rx="11" ry="9" fill="#f1c40f" opacity=".88"/><text x="300" y="296" text-anchor="middle" class="title">X</text><circle cx="370" cy="270" r="3" fill="#999"/><ellipse cx="370" cy="150" rx="11" ry="9" fill="#2e86c1" opacity=".88"/><ellipse cx="370" cy="236" rx="11" ry="9" fill="#8e44ad" opacity=".88"/><text x="370" y="296" text-anchor="middle" class="title">Y</text><line x1="260" y1="30" x2="260" y2="310" stroke="#c9c9c4" stroke-dasharray="3 4"/>
+          <text x="150" y="42" text-anchor="middle" class="cap">known dyes</text>
+          <text x="335" y="42" text-anchor="middle" class="cap">unknown inks</text>
+</svg>

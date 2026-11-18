@@ -358,10 +358,10 @@ function activityTable(s) {
 
 /* Scored runs worth naming: papers, tests and verb rounds. */
 function testsList(results) {
-  const named = results.filter(r => r.marks && /paper|test/.test(r.mode)).slice(-12).reverse();
+  const named = results.filter(r => r.marks && /paper|test|explain/.test(r.mode)).slice(-12).reverse();
   if (!named.length) return "";
   return `
-    <h4>Papers and tests</h4>
+    <h4>Papers, tests and longer answers</h4>
     <table class="word-list">
       <tbody>${named.map(r => `
         <tr><td>${esc(dateLabel(r.ts, { day: "numeric", month: "short" }))} ${esc(timeLabel(r.ts))}</td>

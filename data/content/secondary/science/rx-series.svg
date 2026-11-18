@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 408" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<text x="270" y="22" text-anchor="middle" class="title">The reactivity series</text><rect x="80" y="44" width="180" height="28" rx="6" fill="#c0392b" stroke="#8b7f74" stroke-width="1"/>
+        <text x="92" y="63" font-weight="700">potassium</text>
+        <text x="248" y="63" text-anchor="end" class="cap" style="fill:#3c3f43">K</text><rect x="80" y="76" width="180" height="28" rx="6" fill="#cd4a2f" stroke="#8b7f74" stroke-width="1"/>
+        <text x="92" y="95" font-weight="700">sodium</text>
+        <text x="248" y="95" text-anchor="end" class="cap" style="fill:#3c3f43">Na</text><rect x="80" y="108" width="180" height="28" rx="6" fill="#d65d33" stroke="#8b7f74" stroke-width="1"/>
+        <text x="92" y="127" font-weight="700">lithium</text>
+        <text x="248" y="127" text-anchor="end" class="cap" style="fill:#3c3f43">Li</text><rect x="80" y="140" width="180" height="28" rx="6" fill="#de7036" stroke="#8b7f74" stroke-width="1"/>
+        <text x="92" y="159" font-weight="700">calcium</text>
+        <text x="248" y="159" text-anchor="end" class="cap" style="fill:#3c3f43">Ca</text><rect x="80" y="172" width="180" height="28" rx="6" fill="#e5853a" stroke="#8b7f74" stroke-width="1"/>
+        <text x="92" y="191" font-weight="700">magnesium</text>
+        <text x="248" y="191" text-anchor="end" class="cap" style="fill:#3c3f43">Mg</text><rect x="80" y="204" width="180" height="28" rx="6" fill="#eb9a40" stroke="#8b7f74" stroke-width="1"/>
+        <text x="92" y="223" font-weight="700">aluminium</text>
+        <text x="248" y="223" text-anchor="end" class="cap" style="fill:#3c3f43">Al</text><rect x="80" y="236" width="180" height="28" rx="6" fill="#efae4b" stroke="#8b7f74" stroke-width="1"/>
+        <text x="92" y="255" font-weight="700">zinc</text>
+        <text x="248" y="255" text-anchor="end" class="cap" style="fill:#3c3f43">Zn</text><rect x="80" y="268" width="180" height="28" rx="6" fill="#f2c25a" stroke="#8b7f74" stroke-width="1"/>
+        <text x="92" y="287" font-weight="700">iron</text>
+        <text x="248" y="287" text-anchor="end" class="cap" style="fill:#3c3f43">Fe</text><rect x="80" y="300" width="180" height="28" rx="6" fill="#bcc6cc" stroke="#8b7f74" stroke-width="1"/>
+        <text x="92" y="319" font-weight="700">copper</text>
+        <text x="248" y="319" text-anchor="end" class="cap" style="fill:#3c3f43">Cu</text><rect x="80" y="332" width="180" height="28" rx="6" fill="#cfd6db" stroke="#8b7f74" stroke-width="1"/>
+        <text x="92" y="351" font-weight="700">silver</text>
+        <text x="248" y="351" text-anchor="end" class="cap" style="fill:#3c3f43">Ag</text><rect x="80" y="364" width="180" height="28" rx="6" fill="#e8d48a" stroke="#8b7f74" stroke-width="1"/>
+        <text x="92" y="383" font-weight="700">gold</text>
+        <text x="248" y="383" text-anchor="end" class="cap" style="fill:#3c3f43">Au</text><path d="M44 392 V48 m-7 10 l7 -10 7 10" stroke="#17181a" stroke-width="2.2" fill="none"/>
+      <text transform="translate(30 218) rotate(-90)" text-anchor="middle" class="cap">more reactive</text><path d="M272 46 h8 V166 h-8 M280 106 h8" stroke="#17181a" stroke-width="1.5" fill="none"/><text x="294" y="94" class="cap">react with cold water</text><text x="294" y="110" class="cap">(react dangerously</text><text x="294" y="126" class="cap">with acids)</text><path d="M272 174 h8 V294 h-8 M280 234 h8" stroke="#17181a" stroke-width="1.5" fill="none"/><text x="294" y="230" class="cap">react with dilute acids:</text><text x="294" y="246" class="cap">salt + hydrogen</text><path d="M272 302 h8 V390 h-8 M280 346 h8" stroke="#17181a" stroke-width="1.5" fill="none"/><text x="294" y="342" class="cap">do not react with</text><text x="294" y="358" class="cap">dilute acids</text>
+</svg>

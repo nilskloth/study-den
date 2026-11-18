@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 664 190" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<rect x="8" y="10" width="120" height="170" rx="12" fill="#fff" stroke="#c9c9c4"/>
+        <circle cx="80" cy="80" r="28" fill="#fff3d6" stroke="#b5651d" stroke-width="2"/><circle cx="80" cy="80" r="8" fill="#9b59b6"/><ellipse cx="58" cy="46" rx="6" ry="4" fill="#cfe5f5" stroke="#4a7fa8" stroke-width="1.5"/><path d="M52 46 c-5 -5 -9 5 -14 0 s-9 5 -14 0" fill="none" stroke="#4a7fa8" stroke-width="1.6"/><ellipse cx="54" cy="110" rx="6" ry="4" fill="#cfe5f5" stroke="#4a7fa8" stroke-width="1.5"/><path d="M48 110 c-5 -5 -9 5 -14 0 s-9 5 -14 0" fill="none" stroke="#4a7fa8" stroke-width="1.6"/>
+        <text x="68" y="146" text-anchor="middle" class="title" font-size="13">Sex cells</text>
+        <text x="68" y="166" text-anchor="middle" class="cap" font-size="11">sperm meets egg</text>
+        <path d="M130 80 h8 m-4 -5 l5 5 -5 5" stroke="#17181a" stroke-width="2" fill="none"/><rect x="140" y="10" width="120" height="170" rx="12" fill="#fff" stroke="#c9c9c4"/>
+        <circle cx="200" cy="80" r="30" fill="#fff3d6" stroke="#b5651d" stroke-width="2"/><circle cx="200" cy="80" r="10" fill="#9b59b6" stroke="#6c3483" stroke-width="2"/>
+        <text x="200" y="146" text-anchor="middle" class="title" font-size="13">Fertilisation</text>
+        <text x="200" y="166" text-anchor="middle" class="cap" font-size="11">in the oviduct</text>
+        <path d="M262 80 h8 m-4 -5 l5 5 -5 5" stroke="#17181a" stroke-width="2" fill="none"/><rect x="272" y="10" width="120" height="170" rx="12" fill="#fff" stroke="#c9c9c4"/>
+        <path d="M282 114 h100" stroke="#d46a66" stroke-width="10"/><circle cx="318" cy="68" r="9" fill="#fff3d6" stroke="#b5651d" stroke-width="2"/><circle cx="332" cy="64" r="9" fill="#fff3d6" stroke="#b5651d" stroke-width="2"/><circle cx="346" cy="68" r="9" fill="#fff3d6" stroke="#b5651d" stroke-width="2"/><circle cx="316" cy="82" r="9" fill="#fff3d6" stroke="#b5651d" stroke-width="2"/><circle cx="332" cy="80" r="9" fill="#fff3d6" stroke="#b5651d" stroke-width="2"/><circle cx="348" cy="82" r="9" fill="#fff3d6" stroke="#b5651d" stroke-width="2"/><circle cx="324" cy="94" r="9" fill="#fff3d6" stroke="#b5651d" stroke-width="2"/><circle cx="340" cy="94" r="9" fill="#fff3d6" stroke="#b5651d" stroke-width="2"/>
+        <text x="332" y="146" text-anchor="middle" class="title" font-size="13">Embryo</text>
+        <text x="332" y="166" text-anchor="middle" class="cap" font-size="11">settles in the lining</text>
+        <path d="M394 80 h8 m-4 -5 l5 5 -5 5" stroke="#17181a" stroke-width="2" fill="none"/><rect x="404" y="10" width="120" height="170" rx="12" fill="#fff" stroke="#c9c9c4"/>
+        <ellipse cx="464" cy="80" rx="40" ry="44" fill="#d6ecf7" stroke="#7fb3d5"/>
+        <g fill="#efe0d0" stroke="#b89d86" stroke-width="1.5"><ellipse cx="468" cy="88" rx="16" ry="22"/><circle cx="460" cy="62" r="15"/></g>
+        <path d="M478 88 c12 -6 14 -24 22 -34" fill="none" stroke="#7d5a96" stroke-width="3"/>
+        <text x="464" y="146" text-anchor="middle" class="title" font-size="13">Foetus</text>
+        <text x="464" y="166" text-anchor="middle" class="cap" font-size="11">grows for months</text>
+        <path d="M526 80 h8 m-4 -5 l5 5 -5 5" stroke="#17181a" stroke-width="2" fill="none"/><rect x="536" y="10" width="120" height="170" rx="12" fill="#fff" stroke="#c9c9c4"/>
+        <g fill="#efe0d0" stroke="#b89d86" stroke-width="2"><circle cx="596" cy="58" r="20"/>
+        <ellipse cx="596" cy="98" rx="22" ry="26"/></g><path d="M590 62 a6 4 0 0 0 12 0" fill="none" stroke="#b89d86" stroke-width="1.5"/>
+        <circle cx="589" cy="54" r="2" fill="#17181a"/><circle cx="603" cy="54" r="2" fill="#17181a"/>
+        <text x="596" y="146" text-anchor="middle" class="title" font-size="13">Birth</text>
+        <text x="596" y="166" text-anchor="middle" class="cap" font-size="11">about 9 months on</text>
+        
+</svg>

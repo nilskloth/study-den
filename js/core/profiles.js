@@ -4,10 +4,11 @@
    home screen and nav. The active child is remembered per device
    in localStorage "studyden_profile".
 
-   FAMILY: Finn and Oskar, always on the start screen. A device
-   may use them only once a grown-up has typed the upload password
-   there (list in "studyden_family"); devices that already had
-   their progress are let in without it (migrateFamily, once).
+   FAMILY: Finn and Oskar, always on the start screen. Every device
+   asks for their PIN once (checked by api/track.php op family), then
+   remembers it (list in "studyden_family2" — the "2" because the
+   first version let devices that already had progress in without
+   the PIN; the parent wanted every device to ask).
    Finn keeps the original key (ks2_sats_v2), so everything saved
    before profiles existed stays his.
 
@@ -33,7 +34,7 @@ export const GUEST_YEARS = [
 ];
 
 const ACTIVE_KEY = "studyden_profile";
-const FAMILY_KEY = "studyden_family";
+const FAMILY_KEY = "studyden_family2";
 const GUESTS_KEY = "studyden_guests";
 
 const read = (key, fallback) => {
@@ -45,29 +46,7 @@ const write = (key, value) => {
 
 /* ---------- family ---------- */
 
-/* Real practice in a saved copy (not just settings an empty visit leaves behind). */
-function hasProgress(key) {
-  const s = read(key, null);
-  if (!s || typeof s !== "object") return false;
-  return (s.attempts || []).length > 0 || Object.keys(s.vocab || {}).length > 0 ||
-    Object.keys(s.spelling?.wordsByWord || {}).length > 0 || Object.keys(s.year1?.stats || {}).length > 0;
-}
-
-/* First run of this version on a device: let in the family members
-   whose progress is already here (or who were last chosen here). */
-function migrateFamily() {
-  let raw = null;
-  try { raw = localStorage.getItem(FAMILY_KEY); } catch { return []; }
-  if (raw !== null) return read(FAMILY_KEY, []);
-  let last = null;
-  try { last = localStorage.getItem(ACTIVE_KEY); } catch { /* blocked */ }
-  const ids = FAMILY.filter(p => p.id === last || hasProgress(p.key) ||
-    (p.id === "finn" && hasProgress("ks2_sats_runner_v1"))).map(p => p.id);
-  write(FAMILY_KEY, ids);
-  return ids;
-}
-
-const familyHere = () => migrateFamily().filter(id => FAMILY.some(p => p.id === id));
+const familyHere = () => read(FAMILY_KEY, []).filter(id => FAMILY.some(p => p.id === id));
 export const familyOnDevice = id => familyHere().includes(id);
 
 /* After the upload password was checked on the server. */

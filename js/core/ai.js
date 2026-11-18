@@ -67,13 +67,14 @@ export async function usage() {
  * AI-mark one free-text answer. Returns {earned, possible, feedback,
  * matchedPoints} or throws (caller falls back to self-marking).
  */
-export async function markAI(q, answer, passageExcerpt) {
+export async function markAI(q, answer, passageExcerpt, { level } = {}) {
   const payload = {
     stem: String(q.stem || "").slice(0, 4000),
     marks: q.marks,
     markScheme: q.markScheme || {},
     answer: String(answer || "").slice(0, 4000)
   };
+  if (level) payload.level = level;            // "ks3": Year 7 science marker, up to 6 marks
   if (passageExcerpt) payload.passageExcerpt = String(passageExcerpt).slice(0, 6000);
 
   const body = await call("mark", payload, MARK_TIMEOUT_MS);

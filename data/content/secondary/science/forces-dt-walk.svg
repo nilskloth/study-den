@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 345" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<line x1="80" y1="290" x2="80" y2="50" stroke="#e4e2dc"/><line x1="120" y1="290" x2="120" y2="50" stroke="#e4e2dc"/><line x1="160" y1="290" x2="160" y2="50" stroke="#e4e2dc"/><line x1="200" y1="290" x2="200" y2="50" stroke="#e4e2dc"/><line x1="240" y1="290" x2="240" y2="50" stroke="#e4e2dc"/><line x1="280" y1="290" x2="280" y2="50" stroke="#e4e2dc"/><line x1="320" y1="290" x2="320" y2="50" stroke="#e4e2dc"/><line x1="360" y1="290" x2="360" y2="50" stroke="#e4e2dc"/><line x1="400" y1="290" x2="400" y2="50" stroke="#e4e2dc"/><line x1="440" y1="290" x2="440" y2="50" stroke="#e4e2dc"/><line x1="480" y1="290" x2="480" y2="50" stroke="#e4e2dc"/><line x1="80" y1="290" x2="480" y2="290" stroke="#e4e2dc"/><line x1="80" y1="260" x2="480" y2="260" stroke="#e4e2dc"/><line x1="80" y1="230" x2="480" y2="230" stroke="#e4e2dc"/><line x1="80" y1="200" x2="480" y2="200" stroke="#e4e2dc"/><line x1="80" y1="170" x2="480" y2="170" stroke="#e4e2dc"/><line x1="80" y1="140" x2="480" y2="140" stroke="#e4e2dc"/><line x1="80" y1="110" x2="480" y2="110" stroke="#e4e2dc"/><line x1="80" y1="80" x2="480" y2="80" stroke="#e4e2dc"/><line x1="80" y1="50" x2="480" y2="50" stroke="#e4e2dc"/><text x="80" y="307" text-anchor="middle" font-size="12">0</text><text x="160" y="307" text-anchor="middle" font-size="12">20</text><text x="240" y="307" text-anchor="middle" font-size="12">40</text><text x="320" y="307" text-anchor="middle" font-size="12">60</text><text x="400" y="307" text-anchor="middle" font-size="12">80</text><text x="480" y="307" text-anchor="middle" font-size="12">100</text><text x="72" y="294" text-anchor="end" font-size="12">0</text><text x="72" y="234" text-anchor="end" font-size="12">100</text><text x="72" y="174" text-anchor="end" font-size="12">200</text><text x="72" y="114" text-anchor="end" font-size="12">300</text><text x="72" y="54" text-anchor="end" font-size="12">400</text>
+    <line x1="80" y1="290" x2="520" y2="290" stroke="#3b3e42" stroke-width="2"/>
+    <line x1="80" y1="290" x2="80" y2="30" stroke="#3b3e42" stroke-width="2"/>
+    <path d="M512 285 L520 290 L512 295" fill="none" stroke="#3b3e42" stroke-width="2"/>
+    <path d="M75 38 L80 30 L85 38" fill="none" stroke="#3b3e42" stroke-width="2"/>
+    <text x="300" y="330" text-anchor="middle">time (s)</text>
+    <text x="28" y="160" text-anchor="middle" transform="rotate(-90 28 160)">distance (m)</text><polyline points="80,290 240,170 320,170 480,110" fill="none" stroke="#2c6fbb" stroke-width="4" stroke-linejoin="round"/><circle cx="144" cy="212" r="12" fill="#fff" stroke="#17181a" stroke-width="1.5"/><text x="144" y="217" text-anchor="middle" font-weight="700">A</text><circle cx="280" cy="146" r="12" fill="#fff" stroke="#17181a" stroke-width="1.5"/><text x="280" y="151" text-anchor="middle" font-weight="700">B</text><circle cx="416" cy="110" r="12" fill="#fff" stroke="#17181a" stroke-width="1.5"/><text x="416" y="115" text-anchor="middle" font-weight="700">C</text>
+</svg>

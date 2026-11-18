@@ -26,7 +26,7 @@ tag `v1-final` / branch `v1-archive`, and on the server at `/sats-trainer-old/` 
 - Content is static JSON in `data/content/`; state in `localStorage`, one key per child:
   Finn `ks2_sats_v2` (everything from before profiles; one-time v1 import from `ks2_sats_runner_v1`),
   Oskar `studyden_oskar`, a guest `studyden_g<8 letters>`; active child per device in `studyden_profile`,
-  family let in on this device `studyden_family`, guests on this device `studyden_guests`
+  family let in on this device `studyden_family2`, guests on this device `studyden_guests`
 - AI (marking + reading-test generation) goes through a small **PHP proxy** in `api/` —
   the API key lives server-side only. The app must stay fully usable without the proxy
   (free-text answers fall back to self-marking with a mark-scheme checklist).
@@ -109,9 +109,9 @@ docs/REBUILD_PLAN.md    # v2 decisions, SATs standards, schema, phases
   (`#/start/<id>` → `api/track.php` op `family` → `addFamilyToDevice`, list in `studyden_family`). PINs are
   hashes in `config.php` `family_pin_hashes` (`php tools/set-family-pin.php finn|oskar`, then deploy);
   wrong PINs are logged in `state/security.json` with their **own** lock (5 in 15 min → 1 h, `pinLockUntil`),
-  so a child guessing never locks the upload password. On first run of this version a device lets in
-  family members whose real progress is already there (`migrateFamily`, once) — an empty copy left by a
-  visit doesn't count, which is why `initStore()` no longer writes Finn's key when nobody is chosen.
+  so a child guessing never locks the upload password. **Every** device asks once — also ones that already hold
+  their progress (parent's choice, 18 Nov 2026; key `studyden_family2`). `initStore()` doesn't write Finn's key when
+  nobody is chosen.
 - **Guests** (`#/start/guest`, `/guest/new`): first name (letters, ≤ 20, `cleanName`) + Year 6 (`primary`)
   or Year 7 (`secondary` + `primary`), no Year 1; id `g` + 8 random letters; saved only on the device
   (`studyden_guests`). The names Finn/Oskar are refused for guests. Same name + year = same guest.
@@ -168,7 +168,7 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
 3. A route branch in `renderPractice()` and a link/card in `renderHub()`
 4. A bespoke view (if needed) in `js/views/<name>.js`
 5. New domain codes → `DOMAIN_LABELS` in `views/paper.js` (used by results + progress)
-6. Run `node tools/validate2.mjs` and `node tools/test-marking.mjs` (Year 7 maths: `node tools/test-maths.mjs`, geography: `node tools/test-geog.mjs`)
+6. Run `node tools/validate2.mjs` and `node tools/test-marking.mjs` (Year 7 maths: `node tools/test-maths.mjs`, geography: `node tools/test-geog.mjs`, science: `node tools/test-science.mjs`)
 
 ---
 
@@ -283,7 +283,18 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
 - **State/records:** `store.vocab.geography`; attempts subject `geography`, modes `geography-practise` / `-test` /
   `-label`; usage area `geography` (`--viz-10`); colour `--c-geography`.
 
-## Secondary: science revision (`views/secondary/revision.js` with `SCIENCE`, `#/secondary/science[/learn/<topicId>|/label/<diagram>]`)
+## Secondary: science revision (`views/secondary/revision.js` with `SCIENCE`, `#/secondary/science[/learn/<topicId>|/label/<diagram>|/explain[/<id>]]`)
+- **Whole AQA KS3 syllabus (Activate for AQA in class):** `science.json` `ideas` = the 10 big ideas + "Working
+  scientifically"; every non-sheet topic has `idea`, `part` (1 = Year 7, 2 = Year 8) and `sub` (the syllabus topic,
+  e.g. "Speed"). The picker folds per big idea → year → syllabus topic ("All of …" boxes); Name the parts shows the
+  chosen ideas' diagrams, the rest folded. **Year 7 (Part 1) is complete** (Nov 2026: 65 topics, ~1,200 questions);
+  **Year 8 (Part 2) is next** — same recipe. Syllabus PDF: `_res/aqa/AQA-SCIENCE-KS3-SYLLABUS.pdf` (PDF page = printed
+  page − 1; one page per syllabus topic: Know / Apply / Extend). Written per big idea into `_res/sci-gen/<idea>.json`
+  (ids prefixed f-, em-, en-, wv-, mt-, rx-, ea-, ec-, gn-) and merged into science.json; edit science.json directly now.
+- **Diagrams per big idea:** `tools/science-art/<idea>.mjs` (`export default h => ({ name: svg })`, helpers `h.svg`,
+  `h.label`, colours), loaded by `tools/build-science-art.mjs`. Card titles in `LABEL_NAMES` (or an image's `title`).
+- **Check:** `node tools/test-science.mjs [extra.json…]` — ids, every answer/accept marked right by the real matcher and
+  no choice/reject/everyday marked right, explain schemes, diagram files and parts. Run after any edit.
 - **Source:** the revision list the school sets on Arbor (Year 7, Nov 2026: organisation, skeleton, joints,
   muscles, microscope, cells, specialised cells, unicellular organisms, diffusion). Facts are written to KS3
   level in our own words — the site is public.
@@ -327,6 +338,15 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
   Answer is "Pick from 4"), Check marks all; red ones can be retried, or "Show the answers" puts the names
   back on the drawing. Only the first check counts (stats per question, `recordAttempt` mode `science-label`).
   Typed answers may carry the notes' bracket ("Skull (cranium)").
+- **Tests (`fix: true` topics, also `sheet: true`):** a marked class test becomes a "Fix my test" topic aimed at the
+  lost marks — our own questions (the test is the publisher's, e.g. Activate for AQA — never copy it; no name or score
+  on the site). It gets its own card at the top of the setup (Practise the mix-ups · What to remember · Longer answers).
+  `test1` = Part 1 test (Organisms: movement + cells, Nov 2026).
+- **Longer answers (`type: "explain"`, `#/secondary/science/explain[/<id>]`):** `marks` 1–6, `markScheme`
+  `{ acceptablePoints: [{point}], award, modelAnswer }`, optional `tip`. Marked by the proxy op `mark` with
+  `level: "ks3"` (Year 7 science prompt, up to 6 marks) or, without the shared key / offline, by the self-mark
+  checklist. Kept out of quick-fire practise/tests; best mark per question in `store.vocab.science.explain`;
+  recorded as mode `science-explain` with real marks. Write one point per mark (plus spares) in the scheme.
 - **Adding a topic:** a new entry in `science.json` (and a drawing in the script if it needs one) — nothing
   else to register. To add another unit later, give topics a `unit` field and group the picker by it.
 

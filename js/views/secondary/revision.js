@@ -24,13 +24,21 @@
             letter shown on the quiz version of the diagram)
      mcq    pick from 4 only
      tf     true / false
+     explain  a longer written answer (marks 1–6 + markScheme with
+            acceptablePoints, award, modelAnswer; optional tip), marked
+            by AI through the proxy (op mark, level ks3) or, without the
+            shared key, by a self-mark checklist. Never in the quick-fire
+            runs: #/secondary/science/explain[/<id>] (renderExplain).
+   A topic with "fix": true (a test's lost marks) gets its own card.
    Practise is adaptive (core/adaptive.js, one stat per question in
    store.vocab.science.stats); Test is a fixed set with a review at
    the end. Runs are recorded as attempts (subject "science", domain
    = topic) so Grown-ups shows them.
    ========================================================= */
 
-import { saveStore, recordAttempt } from "../../core/store.js";
+import { saveStore, recordAttempt, getStore } from "../../core/store.js";
+import { markAI } from "../../core/ai.js";
+import { renderSelfMark } from "../../render/selfmark.js";
 import { esc, pickN, shuffle, normaliseText } from "../../core/utils.js";
 import { newStat, weightedPick, applyResult } from "../../core/adaptive.js";
 import { vocabState } from "./langs.js";
@@ -144,7 +152,8 @@ const NARROW = 520;
 const rich = s => esc(s).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
 
 /* Class-sheet topics have no number; the rest are "N. Title". */
-const topicLabel = t => (t.sheet ? t.title : `${t.number}. ${t.title}`);
+const topicLabel = t => (t.sheet || t.idea ? t.title : `${t.number}. ${t.title}`);
+const YEAR = { 1: "Year 7", 2: "Year 8" };
 
 const mastered = stat => (stat?.mastery || 0) >= 0.8;
 
@@ -170,10 +179,13 @@ async function renderRevision(el, params = [], S) {
   const ctx = { el, bank, S };
   if (params[0] === "learn" && params[1]) return renderLearn(ctx, params[1]);
   if (params[0] === "label" && params[1]) return renderLabel(ctx, params[1]);
+  if (params[0] === "explain") return renderExplain(ctx, params[1]);
   renderSetup(ctx);
 }
 
 const topicById = (bank, id) => bank.topics.find(t => t.id === id);
+const quick = q => q.type !== "explain";
+const explainQs = bank => bank.topics.flatMap(t => t.questions.filter(q => q.type === "explain").map(q => ({ ...q, topic: t })));
 const stateOf = S => vocabState(S.code);
 const judgeOf = S => S.judge || judgeTyped;
 
@@ -218,6 +230,7 @@ async function renderLearn({ el, bank, S }, topicId) {
     <div class="start-bar" style="margin-top:var(--sp-4);">
       <button class="primary" data-practise>Practise this topic</button>
       <span class="muted">${topic.questions.length} questions · ${known} mastered</span>
+      ${topic.questions.some(q => !quick(q)) ? `<a class="btn" href="${S.route}/explain">Longer answers →</a>` : ""}
     </div>`;
 
   topic.images.forEach(async (im, i) => {
@@ -270,7 +283,7 @@ async function renderLearn({ el, bank, S }, topicId) {
   el.querySelector("[data-practise]").addEventListener("click", () => {
     const prefs = stateOf(S).prefs;
     startRun({ el, bank, S }, {
-      pool: topic.questions.map(q => ({ ...q, topic })),
+      pool: topic.questions.filter(quick).map(q => ({ ...q, topic })),
       style: prefs.style || "type",
       test: 0
     });
@@ -287,7 +300,10 @@ function renderSetup(ctx) {
   const prefs = state.prefs;
   const valid = new Set(bank.topics.map(t => t.id));
   let selected = new Set((prefs.topics || []).filter(id => valid.has(id)));
-  if (!selected.size) bank.topics.forEach(t => selected.add(t.id));
+  if (!selected.size) {
+    const first = bank.ideas?.find(i => bank.topics.some(t => t.idea === i.id && t.part === 1 && i.id === "organisms"))?.id;
+    bank.topics.filter(t => !bank.ideas || t.sheet || t.idea === first || !t.idea).forEach(t => selected.add(t.id));
+  }
 
   const masteredIn = t => t.questions.filter(q => mastered(state.stats[q.id])).length;
 
@@ -295,35 +311,39 @@ function renderSetup(ctx) {
     <div class="run-bar"><h2>${esc(S.title)}</h2><span class="muted">${esc(bank.unit)}</span></div>
     ${bank.source ? `<p class="sci-source">${esc(bank.source)}</p>` : ""}
 
+    ${fixCards(bank, S, state)}
+
     ${labelSets(bank).length ? `
     <div class="card setup-card">
       <h3>Name the parts</h3>
       <p class="muted" style="margin-top:calc(-1 * var(--sp-2));">Fill in every label on one diagram, then check them all.</p>
-      <div class="sci-label-pick">
-        ${labelSets(bank).map(set => {
-          const known = set.qs.filter(q => mastered(state.stats[q.id])).length;
-          return `<a class="btn" href="${S.route}/label/${esc(set.file)}"><strong>${esc(set.title)}</strong>
-            <span class="muted">${set.qs.length} ${set.noun} · ${known} known</span></a>`;
-        }).join("")}
-      </div>
+      ${(() => {
+        const card = ([title, sets]) => `
+          ${title ? `<p class="section-group muted sci-label-idea">${esc(title)}</p>` : ""}
+          <div class="sci-label-pick">
+            ${sets.map(set => {
+              const known = set.qs.filter(q => mastered(state.stats[q.id])).length;
+              return `<a class="btn" href="${S.route}/label/${esc(set.file)}"><strong>${esc(set.title)}</strong>
+                <span class="muted">${set.qs.length} ${set.noun} · ${known} known</span></a>`;
+            }).join("")}
+          </div>`;
+        /* the big ideas being practised first; the rest folded away */
+        const groups = labelGroups(bank);
+        const chosen = new Set(bank.topics.filter(t => selected.has(t.id)).map(t => t.idea));
+        const shown = bank.ideas ? groups.filter(g => g[2] == null || chosen.has(g[2])) : groups;
+        const rest = groups.filter(g => !shown.includes(g));
+        return shown.map(card).join("") + (rest.length ? `
+          <details class="sci-label-more"${shown.length ? "" : " open"}>
+            <summary>${shown.length ? "Other diagrams" : "All diagrams"} (${rest.reduce((n, g) => n + g[1].length, 0)})</summary>
+            ${rest.map(card).join("")}
+          </details>` : "");
+      })()}
     </div>` : ""}
 
     <div class="card setup-card">
       <h3>1. Choose your topics</h3>
       <p class="muted" style="margin-top:calc(-1 * var(--sp-2));">Read the notes first, then practise. ${S.setupText || "Each topic has a diagram, key facts and key words."}</p>
-      <div class="section-grid" style="margin-left:0;">
-        ${bank.topics.map((t, i) => `
-          ${i === 0 && t.sheet ? `<p class="section-group muted" style="border-top:0;padding-top:0;">From your class sheets</p>` : ""}
-          ${!t.sheet && bank.topics[i - 1]?.sheet ? `<p class="section-group muted">Revision topics — our notes</p>` : ""}
-          <div class="section-row">
-            <label class="section-pick">
-              <input type="checkbox" data-topic="${t.id}" ${selected.has(t.id) ? "checked" : ""}>
-              <span>${t.sheet ? esc(t.title) : `<strong>${t.number}.</strong> ${esc(t.title)}`}</span>
-            </label>
-            <span class="muted section-meta" data-meta="${t.id}">${masteredIn(t)}/${t.questions.length} mastered</span>
-            <a class="section-look" href="${S.route}/learn/${t.id}">Read the notes</a>
-          </div>`).join("")}
-      </div>
+      ${topicPicker(bank, S, selected, masteredIn)}
       <p style="margin-bottom:0;">
         <button type="button" class="quiet" data-all>Select everything</button>
         ${bank.topics.some(t => t.sheet) ? `<button type="button" class="quiet" data-sheet>Just the class sheets</button>` : ""}
@@ -362,7 +382,7 @@ function renderSetup(ctx) {
   });
   const val = name => el.querySelector(`input[name="${name}"]:checked`)?.value;
 
-  const pool = () => bank.topics.filter(t => selected.has(t.id)).flatMap(t => t.questions.map(q => ({ ...q, topic: t })));
+  const pool = () => bank.topics.filter(t => selected.has(t.id)).flatMap(t => t.questions.filter(quick).map(q => ({ ...q, topic: t })));
 
   function refresh() {
     const qs = pool();
@@ -384,23 +404,49 @@ function renderSetup(ctx) {
   el.querySelector("[data-setup]").addEventListener("change", e => {
     const t = e.target;
     if (t.dataset.topic) t.checked ? selected.add(t.dataset.topic) : selected.delete(t.dataset.topic);
+    if (t.dataset.group) {
+      el.querySelectorAll(`[data-topic][data-in~="${t.dataset.group}"]`).forEach(b => {
+        b.checked = t.checked;
+        t.checked ? selected.add(b.dataset.topic) : selected.delete(b.dataset.topic);
+      });
+    }
+    syncGroups();
     refresh();
   });
+  /* a group's box: ticked when all its topics are, half-ticked when some are */
+  function syncGroups() {
+    el.querySelectorAll("[data-group]").forEach(g => {
+      const boxes = [...el.querySelectorAll(`[data-topic][data-in~="${g.dataset.group}"]`)];
+      const on = boxes.filter(b => b.checked).length;
+      g.checked = on === boxes.length && on > 0;
+      g.indeterminate = on > 0 && on < boxes.length;
+      const count = el.querySelector(`[data-count-of="${g.dataset.group}"]`);
+      if (count) count.textContent = on ? `${on} chosen` : "";
+    });
+  }
   el.querySelector("[data-all]").addEventListener("click", () => {
     bank.topics.forEach(t => selected.add(t.id));
     el.querySelectorAll("[data-topic]").forEach(b => { b.checked = true; });
+    syncGroups();
     refresh();
   });
   el.querySelector("[data-sheet]")?.addEventListener("click", () => {
     selected = new Set(bank.topics.filter(t => t.sheet).map(t => t.id));
     el.querySelectorAll("[data-topic]").forEach(b => { b.checked = selected.has(b.dataset.topic); });
+    syncGroups();
     refresh();
   });
   el.querySelector("[data-none]").addEventListener("click", () => {
     selected = new Set();
     el.querySelectorAll("[data-topic]").forEach(b => { b.checked = false; });
+    syncGroups();
     refresh();
   });
+  syncGroups();
+  el.querySelectorAll("[data-fix]").forEach(b => b.addEventListener("click", () => {
+    const t = topicById(bank, b.dataset.fix);
+    startRun(ctx, { pool: t.questions.filter(quick).map(q => ({ ...q, topic: t })), style: prefs.style || "type", test: 0 });
+  }));
   el.querySelector("[data-start]").addEventListener("click", () => {
     const qs = pool();
     if (!qs.length) return;
@@ -422,12 +468,32 @@ const LABEL_NAMES = {
   muscles: ["Muscles", "muscles"],
   microscope: ["The microscope", "parts"],
   cells: ["Plant and animal cells", "parts"],
+  "forces-dt-graph": ["Reading a distance–time graph", "sections"], "forces-arrows": ["Force arrows", "forces"],
+  "em-symbols": ["Circuit symbols", "symbols"],
+  "en-stores": ["Energy stores", "stores"], "en-power-station": ["Power station", "parts"], "en-torch": ["Hand-crank torch", "parts"],
+  "wv-wave": ["Parts of a wave", "parts"], "wv-ear": ["The ear", "parts"], "wv-reflection": ["Reflection in a mirror", "parts"],
+  "wv-refraction": ["Refraction in a glass block", "parts"], "wv-eye": ["The eye", "parts"],
+  "mt-changes": ["Changes of state", "changes"], "mt-heating-curve": ["Heating curve", "parts"], "mt-filtration": ["Filtration", "parts"],
+  "mt-evaporation": ["Evaporating", "parts"], "mt-distillation": ["Distillation", "parts"], "mt-chromatography": ["Chromatography", "parts"],
+  "rx-ph-scale": ["The pH scale", "parts"], "rx-h2-test": ["Testing for hydrogen", "parts"], "rx-neutral": ["Neutralising an acid", "parts"],
+  "ec-flower": ["Parts of a flower", "parts"],
+  "gn-female": ["Female reproductive system", "parts"], "gn-male": ["Male reproductive system", "parts"],
+  "gn-gametes": ["Sperm and egg cells", "parts"], "gn-cycle": ["The menstrual cycle", "stages"], "gn-pregnancy": ["Foetus in the uterus", "parts"],
   world: ["Continents and oceans", "places"],
   places: ["The 7 natural wonders", "wonders"],
   antarctica: ["Antarctica", "places"],
   "easter-island": ["Easter Island", "places"],
   compass: ["The compass", "directions"]
 };
+
+/* Diagram sets under their big idea (science); one untitled group otherwise. */
+function labelGroups(bank) {
+  const sets = labelSets(bank);
+  if (!bank.ideas) return [["", sets]];
+  const groups = bank.ideas.map(i => [i.title, sets.filter(x => x.topic.idea === i.id), i.id]);
+  const rest = sets.filter(x => !bank.ideas.some(i => i.id === x.topic.idea));
+  return [...(rest.length ? [["", rest]] : []), ...groups].filter(([, list]) => list.length);
+}
 
 function labelSets(bank) {
   const sets = new Map();
@@ -440,7 +506,7 @@ function labelSets(bank) {
   }
   return [...sets.values()].filter(s => s.qs.length >= 4).map(s => ({
     ...s,
-    title: LABEL_NAMES[s.file]?.[0] || s.topic.title,
+    title: LABEL_NAMES[s.file]?.[0] || s.topic.images?.find(im => im.file === s.file)?.title || s.topic.title,
     noun: LABEL_NAMES[s.file]?.[1] || "parts"
   }));
 }
@@ -996,4 +1062,198 @@ function startRun(ctx, cfg) {
   }
 
   ask();
+}
+
+/* =========================
+   Fix my test + Longer answers (cards on the setup page)
+========================= */
+
+function fixCards(bank, S, state) {
+  const fixes = bank.topics.filter(t => t.fix);
+  const longer = explainQs(bank);
+  const best = state.explain || {};
+  return `
+    ${fixes.map(t => {
+      const qs = t.questions.filter(quick);
+      const known = qs.filter(q => mastered(state.stats[q.id])).length;
+      const ex = t.questions.filter(q => !quick(q)).length;
+      return `
+      <div class="card setup-card sci-fix">
+        <h3>${esc(t.title)}</h3>
+        <p class="muted" style="margin-top:calc(-1 * var(--sp-2));">${esc(t.summary)}</p>
+        <p style="margin-bottom:0;" class="sci-fix-actions">
+          <button class="primary" data-fix="${t.id}">Practise the mix-ups</button>
+          <a class="btn" href="${S.route}/learn/${t.id}">What to remember</a>
+          ${ex ? `<a class="btn" href="${S.route}/explain">Longer answers (${ex})</a>` : ""}
+          <span class="muted">${known}/${qs.length} mastered</span>
+        </p>
+      </div>`;
+    }).join("")}
+    ${longer.length && !fixes.length ? `
+      <div class="card setup-card">
+        <h3>Longer answers</h3>
+        <p class="muted" style="margin:0;"><a href="${S.route}/explain">Describe and explain questions, marked like a test →</a>
+          ${Object.keys(best).length} of ${longer.length} tried.</p>
+      </div>` : ""}`;
+}
+
+/* =========================
+   Longer answers: one "explain" question at a time, marked out of its marks
+========================= */
+
+async function renderExplain(ctx, qid) {
+  const { el, bank, S } = ctx;
+  const all = explainQs(bank);
+  const state = stateOf(S);
+  const best = state.explain || (state.explain = {});
+  const q = all.find(x => x.id === qid);
+  if (!q) {
+    const total = all.reduce((n, x) => n + x.marks, 0);
+    const got = all.reduce((n, x) => n + (best[x.id]?.best || 0), 0);
+    el.innerHTML = `
+      <div class="run-bar"><h2>Longer answers</h2><a class="btn quiet" href="${S.route}">Back</a></div>
+      <div class="card">
+        <p style="margin-top:0;">Describe and explain questions, marked like a test: one mark for each point the mark scheme wants.
+          <strong>Count the marks</strong> — 2 marks means two points.</p>
+        <p class="muted">${getStore().settings.proxyToken ? "Your answer is marked by AI, with tips on what to add." : "You'll mark your answer yourself with the mark scheme (AI marking needs the shared key in Grown-ups)."}
+          Best marks so far: <strong>${got} / ${total}</strong>.</p>
+        <table class="word-list sci-explain-list"><tbody>
+          ${all.map(x => `
+            <tr><td><a href="${S.route}/explain/${x.id}">${esc(x.stem)}</a><br><span class="muted">${esc(topicLabel(x.topic))}</span></td>
+              <td class="sci-explain-marks">${best[x.id] ? `<strong>${best[x.id].best}</strong> / ${x.marks}` : `<span class="muted">${x.marks} mark${x.marks === 1 ? "" : "s"}</span>`}</td></tr>`).join("")}
+        </tbody></table>
+      </div>`;
+    return;
+  }
+
+  const i = all.indexOf(q);
+  const next = all[(i + 1) % all.length];
+  const startedAt = Date.now();
+  el.innerHTML = `
+    <div class="run-bar">
+      <h2>Longer answer <span class="muted" style="font-weight:400;">· ${i + 1} of ${all.length}</span></h2>
+      <a class="btn quiet" href="${S.route}/explain">All questions</a>
+    </div>
+    <div class="paper-sheet sci-card" data-subject="${S.theme}">
+      <p class="vocab-context muted">${esc(topicLabel(q.topic))}</p>
+      <div class="sci-prompt">${esc(q.stem)} <span class="muted sci-marks">(${q.marks} mark${q.marks === 1 ? "" : "s"})</span></div>
+      ${q.tip ? `<p class="muted" style="margin-top:0;">${esc(q.tip)}</p>` : ""}
+      <div class="answer-line"><textarea rows="${Math.max(3, q.marks + 1)}" data-answer aria-label="Your answer" spellcheck="true"></textarea></div>
+      <div class="vocab-actions"><button class="primary" data-mark>Mark my answer</button></div>
+      <div data-result aria-live="polite"></div>
+    </div>`;
+  const box = el.querySelector("[data-result]");
+  const input = el.querySelector("[data-answer]");
+  input.focus();
+
+  const done = (earned, marking, feedback, matched) => {
+    const prev = best[q.id];
+    best[q.id] = { best: Math.max(prev?.best || 0, earned), last: earned, ts: Date.now() };
+    const stats = state.stats;
+    const stat = stats[q.id] || (stats[q.id] = newStat(q.id));
+    applyResult(stat, earned >= Math.ceil(q.marks * 0.75));
+    saveStore();
+    recordAttempt({
+      mode: `${S.mode}-explain`, paperId: S.paperId, seconds: Math.round((Date.now() - startedAt) / 1000),
+      items: [{ qid: q.id, domain: q.topic.title, subject: S.subject, marks: q.marks, earned, marking }]
+    });
+    const points = q.markScheme.acceptablePoints.map(p => p.point);
+    const hit = pt => matched && matched.some(m => { const a = canon(m), b = canon(pt); return a && b && (a.includes(b.slice(0, 24)) || b.includes(a.slice(0, 24))); });
+    const cls = earned === q.marks ? "correct" : earned ? "partial" : "wrong";
+    box.innerHTML = `
+      <div class="mark-note ${cls}">
+        <strong>${earned} / ${q.marks} mark${q.marks === 1 ? "" : "s"}</strong>${prev && earned > prev.best ? " — your best yet!" : ""}
+        ${feedback ? `<p style="margin:var(--sp-1) 0 0;">${esc(feedback)}</p>` : ""}
+      </div>
+      <h4 style="margin-bottom:var(--sp-1);">The mark scheme</h4>
+      <ul class="sci-scheme">${points.map(pt => `<li class="${matched ? (hit(pt) ? "hit" : "miss") : ""}">${esc(pt)}</li>`).join("")}</ul>
+      <p class="muted" style="margin:0;">${esc(Object.entries(q.markScheme.award).map(([m, r]) => `${m} mark${m === "1" ? "" : "s"}: ${r}`).join(" · "))}</p>
+      <details class="sci-model"><summary>Show a model answer</summary><p>${esc(q.markScheme.modelAnswer)}</p></details>
+      <div class="vocab-actions">
+        <button class="primary" data-again>Try again</button>
+        <a class="btn" href="${S.route}/explain/${next.id}">Next question</a>
+        <a class="btn quiet" href="${S.route}/learn/${q.topic.id}">Read the notes</a>
+      </div>`;
+    box.querySelector("[data-again]").addEventListener("click", () => renderExplain(ctx, q.id));
+  };
+
+  el.querySelector("[data-mark]").addEventListener("click", async () => {
+    const answer = input.value.trim();
+    if (!answer) { input.focus(); return; }
+    const btn = el.querySelector("[data-mark]");
+    btn.disabled = true;
+    input.readOnly = true;
+    if (getStore().settings.proxyToken) {
+      btn.textContent = "Marking…";
+      try {
+        const r = await markAI(q, answer, null, { level: "ks3" });
+        btn.remove();
+        return done(r.earned, "ai", r.feedback, r.matchedPoints);
+      } catch { /* fall through to self-marking */ }
+    }
+    btn.remove();
+    box.innerHTML = `<div class="paper-q-result"></div>`;
+    renderSelfMark(q, box, ({ earned }) => done(earned, "self", "", null));
+  });
+}
+
+/* =========================
+   Topic picker: class sheets and tests first, then (science) one
+   fold per big idea → Year 7 / Year 8 → syllabus topic → our topics.
+   Subjects without "ideas" (maths, geography) keep the flat list.
+========================= */
+
+function topicPicker(bank, S, selected, masteredIn) {
+  const row = (t, groups = "") => `
+    <div class="section-row">
+      <label class="section-pick">
+        <input type="checkbox" data-topic="${t.id}" data-in="${groups}" ${selected.has(t.id) ? "checked" : ""}>
+        <span>${t.sheet || t.idea ? esc(t.title) : `<strong>${t.number}.</strong> ${esc(t.title)}`}</span>
+      </label>
+      <span class="muted section-meta" data-meta="${t.id}">${masteredIn(t)}/${t.questions.length} mastered</span>
+      <a class="section-look" href="${S.route}/learn/${t.id}">Read the notes</a>
+    </div>`;
+  const sheets = bank.topics.filter(t => t.sheet);
+  const sheetHtml = sheets.length ? `<p class="section-group muted" style="border-top:0;padding-top:0;">From your class sheets and tests</p>${sheets.map(t => row(t)).join("")}` : "";
+
+  if (!bank.ideas) {
+    const rest = bank.topics.filter(t => !t.sheet);
+    return `<div class="section-grid" style="margin-left:0;">${sheetHtml}
+      ${rest.length && sheets.length ? `<p class="section-group muted">Revision topics — our notes</p>` : ""}${rest.map(t => row(t)).join("")}</div>`;
+  }
+
+  const ideas = bank.ideas.map(idea => ({ idea, topics: bank.topics.filter(t => !t.sheet && t.idea === idea.id) })).filter(x => x.topics.length);
+  const loose = bank.topics.filter(t => !t.sheet && !t.idea);
+  return `
+    <div class="section-grid" style="margin-left:0;">${sheetHtml}</div>
+    <div class="sci-ideas">
+      ${ideas.map(({ idea, topics }) => {
+        const chosen = topics.filter(t => selected.has(t.id)).length;
+        const parts = [1, 2].map(n => topics.filter(t => t.part === n)).filter(x => x.length);
+        return `
+        <details class="sci-idea" ${chosen ? "open" : ""}>
+          <summary>
+            <span class="sci-idea-name">${esc(idea.title)}</span>
+            <span class="muted sci-idea-meta">${parts.map(p => YEAR[p[0].part]).join(" · ")} · ${topics.length} topic${topics.length === 1 ? "" : "s"}</span>
+            <span class="muted sci-idea-count" data-count-of="i-${idea.id}">${chosen ? `${chosen} chosen` : ""}</span>
+          </summary>
+          <label class="section-pick sci-idea-all"><input type="checkbox" data-group="i-${idea.id}"> <span>All of ${esc(idea.title)}</span></label>
+          ${parts.map(list => {
+            const yr = `y-${idea.id}-${list[0].part}`;
+            const subs = [...new Set(list.map(t => t.sub || ""))];
+            return `
+            <div class="sci-year">
+              ${parts.length > 1 ? `<label class="section-pick sci-year-head"><input type="checkbox" data-group="${yr}"> <strong>${YEAR[list[0].part]}</strong></label>`
+                : `<p class="sci-year-head"><strong>${YEAR[list[0].part]}</strong></p>`}
+              <div class="section-grid">
+                ${subs.map(sub => `
+                  ${sub ? `<p class="section-group muted">${esc(sub)}</p>` : ""}
+                  ${list.filter(t => (t.sub || "") === sub).map(t => row(t, `i-${idea.id} ${yr}`)).join("")}`).join("")}
+              </div>
+            </div>`;
+          }).join("")}
+        </details>`;
+      }).join("")}
+    </div>
+    ${loose.length ? `<div class="section-grid" style="margin-left:0;"><p class="section-group muted">More topics</p>${loose.map(t => row(t)).join("")}</div>` : ""}`;
 }

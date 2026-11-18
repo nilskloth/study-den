@@ -12,7 +12,7 @@
    questions); "ask" on one .lbl highlights it.
    ========================================================= */
 
-import { writeFileSync, mkdirSync } from "node:fs";
+import { writeFileSync, mkdirSync, readdirSync, existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -483,6 +483,20 @@ files["sheet-leg"] = (() => {
     tag("C", [220, 350], [140, 360], "end") + tag("B", [272, 330], [320, 320]) +
     tag("tendon", [264, 425], [320, 436]));
 })();
+
+/* ---------------- More diagrams: one module per big idea ----------------
+   tools/science-art/<idea>.mjs: export default function (h) → { name: svgString }.
+   h holds the shared helpers and colours, so every drawing looks the same and
+   its labels work with the quiz ("which part is labelled {L}?"). */
+const helpers = { svg, label, bone, FONT, INK, BONE, BONE_EDGE, MUSCLE, MUSCLE_DARK, SKIN, SKIN_EDGE, CYTO, MEMB, NUC, NUC_EDGE, MITO, CHLORO, CHLORO_EDGE, VAC, WALL };
+const ART = join(dirname(fileURLToPath(import.meta.url)), "science-art");
+if (existsSync(ART)) {
+  for (const f of readdirSync(ART).filter(f => f.endsWith(".mjs")).sort()) {
+    const made = (await import(join(ART, f))).default(helpers);
+    for (const name of Object.keys(made)) if (files[name]) throw new Error(`${f}: diagram name "${name}" is already used`);
+    Object.assign(files, made);
+  }
+}
 
 for (const [name, content] of Object.entries(files)) {
   writeFileSync(join(OUT, `${name}.svg`), content);

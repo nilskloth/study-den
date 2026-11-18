@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 516" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+
+    <!-- ovary wall, style, stigma -->
+    <path d="M246 270 V96 h28 V270Z" fill="#bfe09a" stroke="#4f8a2e" stroke-width="2"/>
+    <path d="M210 92 C208 60 240 70 260 56 C280 70 312 60 310 92 C300 110 220 110 210 92Z" fill="#bfe09a" stroke="#4f8a2e" stroke-width="2"/>
+    <path d="M260 262 C350 262 360 340 340 384 C316 420 204 420 180 384 C160 340 170 262 260 262Z" fill="#bfe09a" stroke="#4f8a2e" stroke-width="2.5"/>
+    <path d="M260 284 C324 284 334 340 320 372 C304 400 216 400 200 372 C186 340 196 284 260 284Z" fill="#e3f2cf" stroke="#4f8a2e" stroke-width="1"/>
+    <!-- ovule with its nucleus -->
+    <ellipse cx="260" cy="344" rx="30" ry="38" fill="#fff6c9" stroke="#a08a2e" stroke-width="2"/>
+    <circle cx="260" cy="352" r="8" fill="#9b59b6" stroke="#6c3483" stroke-width="1.5"/>
+    <!-- pollen grains on the stigma; one grows a tube -->
+    <circle cx="230" cy="70" r="7" fill="#f5b82e" stroke="#a77d0a" stroke-width="1.5"/><circle cx="228" cy="68" r="1.6" fill="#a77d0a"/><circle cx="292" cy="72" r="7" fill="#f5b82e" stroke="#a77d0a" stroke-width="1.5"/><circle cx="290" cy="70" r="1.6" fill="#a77d0a"/><circle cx="272" cy="60" r="7" fill="#f5b82e" stroke="#a77d0a" stroke-width="1.5"/><circle cx="270" cy="58" r="1.6" fill="#a77d0a"/>
+    <path d="M254 66 C256 120 266 160 262 220 C260 260 256 290 260 308" fill="none" stroke="#a77d0a" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="254" cy="62" r="7" fill="#f5b82e" stroke="#a77d0a" stroke-width="1.5"/><circle cx="252" cy="60" r="1.6" fill="#a77d0a"/>
+    <circle cx="260" cy="314" r="5" fill="#2e6fb7" stroke="#1d4a7d" stroke-width="1.2"/>
+    
+  <g class="lbl" data-part="pollen">
+    <line class="leader" x1="136" y1="40" x2="230" y2="70"/>
+    <circle class="dot" cx="230" cy="70" r="3.5"/>
+    <text class="name" x="130" y="44.5" text-anchor="end">Pollen grain</text>
+    <g class="letter"><circle cx="121" cy="40" r="9.5"/><text x="121" y="44.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="stigma">
+    <line class="leader" x1="136" y1="110" x2="216" y2="92"/>
+    <circle class="dot" cx="216" cy="92" r="3.5"/>
+    <text class="name" x="130" y="114.5" text-anchor="end">Stigma</text>
+    <g class="letter"><circle cx="121" cy="110" r="9.5"/><text x="121" y="114.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="style">
+    <line class="leader" x1="136" y1="180" x2="246" y2="180"/>
+    <circle class="dot" cx="246" cy="180" r="3.5"/>
+    <text class="name" x="130" y="184.5" text-anchor="end">Style</text>
+    <g class="letter"><circle cx="121" cy="180" r="9.5"/><text x="121" y="184.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="tube">
+    <line class="leader" x1="374" y1="140" x2="263" y2="150"/>
+    <circle class="dot" cx="263" cy="150" r="3.5"/>
+    <text class="name" x="380" y="144.5" text-anchor="start">Pollen tube</text>
+    <g class="letter"><circle cx="389" cy="140" r="9.5"/><text x="389" y="144.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="nucleus">
+    <line class="leader" x1="384" y1="300" x2="265" y2="314"/>
+    <circle class="dot" cx="265" cy="314" r="3.5"/>
+    <text class="name" x="390" y="304.5" text-anchor="start">Male nucleus</text>
+    <g class="letter"><circle cx="399" cy="300" r="9.5"/><text x="399" y="304.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="ovule">
+    <line class="leader" x1="384" y1="350" x2="286" y2="360"/>
+    <circle class="dot" cx="286" cy="360" r="3.5"/>
+    <text class="name" x="390" y="354.5" text-anchor="start">Ovule</text>
+    <g class="letter"><circle cx="399" cy="350" r="9.5"/><text x="399" y="354.5" text-anchor="middle"></text></g>
+  </g>
+    
+  <g class="lbl" data-part="ovary">
+    <line class="leader" x1="136" y1="340" x2="176" y2="360"/>
+    <circle class="dot" cx="176" cy="360" r="3.5"/>
+    <text class="name" x="130" y="344.5" text-anchor="end">Ovary</text>
+    <g class="letter"><circle cx="121" cy="340" r="9.5"/><text x="121" y="344.5" text-anchor="middle"></text></g>
+  </g>
+    <text x="20" y="450" class="cap">1 Pollen lands on the stigma (pollination).</text>
+    <text x="20" y="468" class="cap">2 A pollen tube grows down through the style to an ovule.</text>
+    <text x="20" y="486" class="cap">3 The male nucleus moves down the tube and joins the nucleus in the ovule (fertilisation).</text>
+    <text x="20" y="504" class="cap">4 The fertilised ovule becomes a seed; the ovary becomes the fruit.</text>
+</svg>

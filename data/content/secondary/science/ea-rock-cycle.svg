@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 460" class="sci-fig " role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 13px; fill: #17181a; }
+    .title { font-size: 15px; font-weight: 700; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #6a6d71; stroke-width: 1.2; fill: none; }
+    .lbl .dot { fill: #6a6d71; }
+    .lbl .name { font-weight: 700; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<line x1="130" y1="288" x2="130" y2="116" stroke="#17181a" stroke-width="2.2" stroke-linecap="round"/><path d="M133.9 124.1 L130 116 L126.1 124.1" fill="none" stroke="#17181a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="212" y1="90" x2="422" y2="90" stroke="#17181a" stroke-width="2.2" stroke-linecap="round"/><path d="M413.9 93.9 L422 90 L413.9 86.1" fill="none" stroke="#17181a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="500" y1="116" x2="500" y2="288" stroke="#17181a" stroke-width="2.2" stroke-linecap="round"/><path d="M496.1 279.9 L500 288 L503.9 279.9" fill="none" stroke="#17181a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="470" y1="342" x2="392" y2="400" stroke="#17181a" stroke-width="2.2" stroke-linecap="round"/><path d="M396.2 392.0 L392 400 L400.8 398.3" fill="none" stroke="#17181a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="248" y1="400" x2="170" y2="342" stroke="#17181a" stroke-width="2.2" stroke-linecap="round"/><path d="M178.8 343.7 L170 342 L174.2 350.0" fill="none" stroke="#17181a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M212 316 L422 316" stroke="#9a9da1" stroke-width="2" stroke-dasharray="6 5"/><path d="M413.9 319.9 L422 316 L413.9 312.1" fill="none" stroke="#9a9da1" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><text x="317" y="336" text-anchor="middle" class="cap">heat and pressure</text><path d="M440 116 C380 160 250 160 190 116" fill="none" stroke="#9a9da1" stroke-width="2" stroke-dasharray="6 5"/><path d="M198.9 117.4 L190 116 L194.4 123.9" fill="none" stroke="#9a9da1" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><text x="317" y="170" text-anchor="middle" class="cap">weathered again</text><rect x="52" y="63" width="156" height="54" rx="12" fill="#f5ead0" stroke="#b89d6a" stroke-width="2"/>
+       <text x="130" y="87" text-anchor="middle" class="title">Sediment</text>
+       <text x="130" y="105" text-anchor="middle" class="cap">laid down in layers</text><rect x="422" y="63" width="156" height="54" rx="12" fill="#efe0bf" stroke="#a8874f" stroke-width="2"/>
+       <text x="500" y="95" text-anchor="middle" class="title">Sedimentary rock</text>
+       <rect x="422" y="289" width="156" height="54" rx="12" fill="#dcd3e8" stroke="#7d6a9a" stroke-width="2"/>
+       <text x="500" y="321" text-anchor="middle" class="title">Metamorphic rock</text>
+       <rect x="242" y="393" width="156" height="54" rx="12" fill="#f7c3a8" stroke="#c0532b" stroke-width="2"/>
+       <text x="320" y="417" text-anchor="middle" class="title">Magma</text>
+       <text x="320" y="435" text-anchor="middle" class="cap">melted rock</text><rect x="52" y="289" width="156" height="54" rx="12" fill="#d9d9d9" stroke="#6f6f6f" stroke-width="2"/>
+       <text x="130" y="321" text-anchor="middle" class="title">Igneous rock</text>
+       
+  <g class="lbl" data-part="weathering">
+    <line class="leader" x1="144" y1="222" x2="130" y2="205"/>
+    <circle class="dot" cx="130" cy="205" r="3.5"/>
+    <text class="name" x="150" y="226.5" text-anchor="start">Weathering and erosion</text>
+    <g class="letter"><circle cx="159" cy="222" r="9.5"/><text x="159" y="226.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="compaction">
+    <line class="leader" x1="244" y1="48" x2="317" y2="90"/>
+    <circle class="dot" cx="317" cy="90" r="3.5"/>
+    <text class="name" x="250" y="52.5" text-anchor="start">Compaction and cementation</text>
+    <g class="letter"><circle cx="259" cy="48" r="9.5"/><text x="259" y="52.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="heat-pressure">
+    <line class="leader" x1="488" y1="244" x2="500" y2="205"/>
+    <circle class="dot" cx="500" cy="205" r="3.5"/>
+    <text class="name" x="482" y="248.5" text-anchor="end">Heat and pressure</text>
+    <g class="letter"><circle cx="473" cy="244" r="9.5"/><text x="473" y="248.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="melting">
+    <line class="leader" x1="464" y1="400" x2="431" y2="371"/>
+    <circle class="dot" cx="431" cy="371" r="3.5"/>
+    <text class="name" x="470" y="404.5" text-anchor="start">Melting</text>
+    <g class="letter"><circle cx="479" cy="400" r="9.5"/><text x="479" y="404.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="cooling">
+    <line class="leader" x1="176" y1="400" x2="209" y2="371"/>
+    <circle class="dot" cx="209" cy="371" r="3.5"/>
+    <text class="name" x="170" y="404.5" text-anchor="end">Cooling</text>
+    <g class="letter"><circle cx="161" cy="400" r="9.5"/><text x="161" y="404.5" text-anchor="middle"></text></g>
+  </g>
+</svg>

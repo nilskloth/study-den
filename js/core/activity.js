@@ -71,7 +71,7 @@ export function activityFor(hash) {
   }
   if (path === "secondary") {
     if (p[0] === "maths") return ["maths", p[1] === "learn" ? "Maths notes" : "Maths revision"];
-    if (p[0] === "science") return ["science", p[1] === "learn" ? "Science notes" : p[1] === "label" ? "Science: name the parts" : "Science revision"];
+    if (p[0] === "science") return ["science", p[1] === "learn" ? "Science notes" : p[1] === "label" ? "Science: name the parts" : p[1] === "explain" ? "Science: longer answers" : "Science revision"];
     if (p[0] === "geography") return ["geography", p[1] === "learn" ? "Geography notes" : p[1] === "label" ? "Geography: name the places" : "Geography revision"];
     const lang = LANG_AREA[p[0]];
     if (!lang) return ["menus", "Languages menu"];
@@ -225,6 +225,7 @@ function resultLabel(mode, paperId, area, act) {
   if (mode === "science-test") return "Science test";
   if (mode === "science-practise") return "Science practice";
   if (mode === "science-label") return "Science: name the parts";
+  if (mode === "science-explain") return "Science: longer answer";
   if (mode === "geography-test") return "Geography test";
   if (mode === "geography-practise") return "Geography practice";
   if (mode === "geography-label") return "Geography: name the places";
