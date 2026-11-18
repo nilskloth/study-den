@@ -278,7 +278,9 @@
      ],
      "explain": "Each pair works across one joint: D and A (quadriceps and hamstrings) move the knee; B and C (gastrocnemius and tibialis anterior) move the ankle."
     }
-   ]
+   ],
+   "idea": "organisms",
+   "part": 1
   },
   {
    "id": "sheet-skel",
@@ -518,7 +520,9 @@
      ],
      "explain": "Cartilage cushions the ends of the bones."
     }
-   ]
+   ],
+   "idea": "organisms",
+   "part": 1
   },
   {
    "id": "test1",
@@ -948,7 +952,9 @@
      },
      "tip": "Six marks: give six points, in order, with the key words — and check your spelling (biceps, triceps, contracts, antagonistic)."
     }
-   ]
+   ],
+   "idea": "organisms",
+   "part": 1
   },
   {
    "id": "f-speed",

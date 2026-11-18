@@ -88,6 +88,23 @@ export function loadRevision(S) {
   return banks[S.code];
 }
 export const loadScience = () => loadRevision(SCIENCE);
+
+/* Science: the big ideas in the order they're taught (Grown-ups → Science order,
+   saved on the server in data/uploads/science-order.json). Without it: Organisms
+   now, the rest in syllabus order. → [{ idea, status: "now"|"next"|"done" }] */
+export async function loadIdeaOrder(bank) {
+  const ids = (bank.ideas || []).map(i => i.id);
+  let saved = null;
+  try {
+    const r = await fetch("data/uploads/science-order.json", { cache: "no-cache" });
+    if (r.ok) { const f = await r.json(); saved = f.order; if (saved) saved.updated = f.updated; }
+  } catch { /* none yet, or offline */ }
+  const list = (Array.isArray(saved) ? saved : []).filter(o => ids.includes(o.idea));
+  for (const id of ids) if (!list.some(o => o.idea === id)) list.push({ idea: id, status: !saved && id === "organisms" ? "now" : "next" });
+  if (!saved) list.sort((a, b) => (a.status === "now" ? -1 : 0) - (b.status === "now" ? -1 : 0));
+  list.updated = saved ? String(saved.updated || "") : "";
+  return list;
+}
 export const loadMaths = () => loadRevision(MATHS);
 export const loadGeography = () => loadRevision(GEOGRAPHY);
 
@@ -176,7 +193,7 @@ async function renderRevision(el, params = [], S) {
       <p class="muted">${esc(err.message)}</p></div>`;
     return;
   }
-  const ctx = { el, bank, S };
+  const ctx = { el, bank, S, order: bank.ideas ? await loadIdeaOrder(bank) : null };
   if (params[0] === "learn" && params[1]) return renderLearn(ctx, params[1]);
   if (params[0] === "label" && params[1]) return renderLabel(ctx, params[1]);
   if (params[0] === "explain") return renderExplain(ctx, params[1]);
@@ -299,10 +316,12 @@ function renderSetup(ctx) {
   const state = stateOf(S);
   const prefs = state.prefs;
   const valid = new Set(bank.topics.map(t => t.id));
+  /* a new order from Grown-ups: start again from what's taught now */
+  if (ctx.order?.updated && prefs.orderSeen !== ctx.order.updated) { prefs.topics = []; prefs.orderSeen = ctx.order.updated; }
   let selected = new Set((prefs.topics || []).filter(id => valid.has(id)));
   if (!selected.size) {
-    const first = bank.ideas?.find(i => bank.topics.some(t => t.idea === i.id && t.part === 1 && i.id === "organisms"))?.id;
-    bank.topics.filter(t => !bank.ideas || t.sheet || t.idea === first || !t.idea).forEach(t => selected.add(t.id));
+    const now = new Set((ctx.order || []).filter(o => o.status === "now").map(o => o.idea));
+    bank.topics.filter(t => !bank.ideas || !t.idea || now.has(t.idea)).forEach(t => selected.add(t.id));
   }
 
   const masteredIn = t => t.questions.filter(q => mastered(state.stats[q.id])).length;
@@ -311,9 +330,9 @@ function renderSetup(ctx) {
     <div class="run-bar"><h2>${esc(S.title)}</h2><span class="muted">${esc(bank.unit)}</span></div>
     ${bank.source ? `<p class="sci-source">${esc(bank.source)}</p>` : ""}
 
-    ${fixCards(bank, S, state)}
+    ${fixCards(bank, S, state, t => !t.idea)}
 
-    ${labelSets(bank).length ? `
+    ${!bank.ideas && labelSets(bank).length ? `
     <div class="card setup-card">
       <h3>Name the parts</h3>
       <p class="muted" style="margin-top:calc(-1 * var(--sp-2));">Fill in every label on one diagram, then check them all.</p>
@@ -343,7 +362,7 @@ function renderSetup(ctx) {
     <div class="card setup-card">
       <h3>1. Choose your topics</h3>
       <p class="muted" style="margin-top:calc(-1 * var(--sp-2));">Read the notes first, then practise. ${S.setupText || "Each topic has a diagram, key facts and key words."}</p>
-      ${topicPicker(bank, S, selected, masteredIn)}
+      ${topicPicker(bank, S, selected, masteredIn, state, ctx.order)}
       <p style="margin-bottom:0;">
         <button type="button" class="quiet" data-all>Select everything</button>
         ${bank.topics.some(t => t.sheet) ? `<button type="button" class="quiet" data-sheet>Just the class sheets</button>` : ""}
@@ -1068,8 +1087,8 @@ function startRun(ctx, cfg) {
    Fix my test + Longer answers (cards on the setup page)
 ========================= */
 
-function fixCards(bank, S, state) {
-  const fixes = bank.topics.filter(t => t.fix);
+function fixCards(bank, S, state, which = () => true) {
+  const fixes = bank.topics.filter(t => t.fix && which(t));
   const longer = explainQs(bank);
   const best = state.explain || {};
   return `
@@ -1089,7 +1108,7 @@ function fixCards(bank, S, state) {
         </p>
       </div>`;
     }).join("")}
-    ${longer.length && !fixes.length ? `
+    ${longer.length && !bank.topics.some(t => t.fix) ? `
       <div class="card setup-card">
         <h3>Longer answers</h3>
         <p class="muted" style="margin:0;"><a href="${S.route}/explain">Describe and explain questions, marked like a test →</a>
@@ -1203,7 +1222,17 @@ async function renderExplain(ctx, qid) {
    Subjects without "ideas" (maths, geography) keep the flat list.
 ========================= */
 
-function topicPicker(bank, S, selected, masteredIn) {
+function topicPicker(bank, S, selected, masteredIn, state, order) {
+  const sets = bank.ideas ? labelSets(bank) : [];
+  /* Name the parts, inside each big idea's fold */
+  const diagrams = list => list.length ? `
+    <div class="sci-idea-diagrams">
+      <span class="muted">Name the parts:</span>
+      ${list.map(set => {
+        const known = set.qs.filter(q => mastered(state.stats[q.id])).length;
+        return `<a class="chip-link" href="${S.route}/label/${esc(set.file)}">${esc(set.title)} <span class="muted">${known}/${set.qs.length}</span></a>`;
+      }).join("")}
+    </div>` : "";
   const row = (t, groups = "") => `
     <div class="section-row">
       <label class="section-pick">
@@ -1213,7 +1242,7 @@ function topicPicker(bank, S, selected, masteredIn) {
       <span class="muted section-meta" data-meta="${t.id}">${masteredIn(t)}/${t.questions.length} mastered</span>
       <a class="section-look" href="${S.route}/learn/${t.id}">Read the notes</a>
     </div>`;
-  const sheets = bank.topics.filter(t => t.sheet);
+  const sheets = bank.topics.filter(t => t.sheet && !(bank.ideas && t.idea));
   const sheetHtml = sheets.length ? `<p class="section-group muted" style="border-top:0;padding-top:0;">From your class sheets and tests</p>${sheets.map(t => row(t)).join("")}` : "";
 
   if (!bank.ideas) {
@@ -1222,22 +1251,36 @@ function topicPicker(bank, S, selected, masteredIn) {
       ${rest.length && sheets.length ? `<p class="section-group muted">Revision topics — our notes</p>` : ""}${rest.map(t => row(t)).join("")}</div>`;
   }
 
-  const ideas = bank.ideas.map(idea => ({ idea, topics: bank.topics.filter(t => !t.sheet && t.idea === idea.id) })).filter(x => x.topics.length);
+  const byId = Object.fromEntries(bank.ideas.map(i => [i.id, i]));
+  const ideas = (order || bank.ideas.map(i => ({ idea: i.id, status: "next" })))
+    .map(o => ({ idea: byId[o.idea], status: o.status, topics: bank.topics.filter(t => !t.sheet && t.idea === o.idea),
+      classwork: bank.topics.filter(t => t.sheet && t.idea === o.idea) }))
+    .filter(x => x.idea && (x.topics.length || x.classwork.length));
+  const rank = { now: 0, next: 1, done: 2 };
+  ideas.sort((a, b) => rank[a.status] - rank[b.status]);      // stable: keeps the grown-up's order within each
+  const heading = { now: "Now in class", next: "Coming up", done: "Already done — for revision" };
   const loose = bank.topics.filter(t => !t.sheet && !t.idea);
   return `
     <div class="section-grid" style="margin-left:0;">${sheetHtml}</div>
     <div class="sci-ideas">
-      ${ideas.map(({ idea, topics }) => {
-        const chosen = topics.filter(t => selected.has(t.id)).length;
+      ${ideas.map(({ idea, topics, status, classwork }, n) => {
+        const all = [...classwork, ...topics];
+        const chosen = all.filter(t => selected.has(t.id)).length;
         const parts = [1, 2].map(n => topics.filter(t => t.part === n)).filter(x => x.length);
         return `
-        <details class="sci-idea" ${chosen ? "open" : ""}>
+        ${n === 0 || ideas[n - 1].status !== status ? `<p class="sci-idea-status sci-${status}">${heading[status]}</p>` : ""}
+        <details class="sci-idea sci-idea-${status}" ${chosen || status === "now" ? "open" : ""}>
           <summary>
             <span class="sci-idea-name">${esc(idea.title)}</span>
-            <span class="muted sci-idea-meta">${parts.map(p => YEAR[p[0].part]).join(" · ")} · ${topics.length} topic${topics.length === 1 ? "" : "s"}</span>
+            <span class="muted sci-idea-meta">${parts.map(p => YEAR[p[0].part]).join(" · ")} · ${topics.length} topic${topics.length === 1 ? "" : "s"}${(n => n ? ` · ${n} diagram${n === 1 ? "" : "s"}` : "")(sets.filter(x => x.topic.idea === idea.id).length)}</span>
             <span class="muted sci-idea-count" data-count-of="i-${idea.id}">${chosen ? `${chosen} chosen` : ""}</span>
           </summary>
+          ${fixCards(bank, S, state, t => t.idea === idea.id)}
           <label class="section-pick sci-idea-all"><input type="checkbox" data-group="i-${idea.id}"> <span>All of ${esc(idea.title)}</span></label>
+          ${diagrams(sets.filter(x => x.topic.idea === idea.id))}
+          ${classwork.length ? `<div class="sci-year"><div class="section-grid">
+            <p class="section-group muted" style="border-top:0;">From class: sheets and tests</p>
+            ${classwork.map(t => row(t, `i-${idea.id}`)).join("")}</div></div>` : ""}
           ${parts.map(list => {
             const yr = `y-${idea.id}-${list[0].part}`;
             const subs = [...new Set(list.map(t => t.sub || ""))];

@@ -13,6 +13,7 @@ import { domainLabel } from "./paper.js";
 import { renderWordLists } from "./wordlists.js";
 import { renderActivity } from "./activity.js";
 import { grownUpsPassword, unlockGrownUps } from "../core/grownups-lock.js";
+import { loadScience, loadIdeaOrder } from "./secondary/revision.js";
 
 const SUBJECT_LABELS = { reading: "Reading", gps: "Grammar & punctuation", maths: "Maths", spelling: "Spelling",
   german: "German vocabulary", french: "French vocabulary", science: "Science revision", geography: "Geography revision", maths7: "Maths revision (Year 7)",
@@ -147,6 +148,15 @@ export function renderProgress(el, params = []) {
       <p class="muted" style="margin-bottom:0;">Bars show a recency-weighted average of marks earned. Self-marked answers count too.</p>
     </div>` : ""}
 
+    <div class="card" style="margin-bottom:var(--sp-4);" data-sci-order>
+      <h2 style="margin-top:0;">Science: what's taught when</h2>
+      <p class="muted">Put the big ideas in the order the school teaches them. <strong>Now</strong> shows first and open on the
+        Science page, <strong>Coming up</strong> follows in this order, <strong>Done</strong> folds away for revision.
+        Saved on the server — every device follows it.</p>
+      <div data-order-list><p class="muted">Loading…</p></div>
+      <p style="margin-bottom:0;"><button class="primary" data-order-save>Save the order</button> <span class="muted" data-order-status></span></p>
+    </div>
+
     <div class="card" style="margin-bottom:var(--sp-4);">
       <h2 style="margin-top:0;">AI marking</h2>
       <p class="muted">Written answers are marked by Claude through your own server. Enter the shared key from <code>api/config.php</code> once; without it (or offline) the app falls back to self-marking checklists.</p>
@@ -241,7 +251,7 @@ export function renderProgress(el, params = []) {
     }
   });
 
-  if (!shown) { refreshUsage(); return; }
+  if (!shown) { refreshUsage(); scienceOrder(el.querySelector("[data-sci-order]")); return; }
 
   el.querySelector("[data-remove]")?.addEventListener("click", () => {
     if (window.confirm(`Remove ${shown.name} from this device and delete their progress here?`)) {
@@ -271,4 +281,53 @@ export function renderProgress(el, params = []) {
   });
 
   refreshUsage();
+  scienceOrder(el.querySelector("[data-sci-order]"));
+}
+
+/* Grown-ups → Science: what's taught when (api/track.php op science-order). */
+async function scienceOrder(card) {
+  const list = card.querySelector("[data-order-list]");
+  const status = card.querySelector("[data-order-status]");
+  let bank, order;
+  try {
+    bank = await loadScience();
+    order = (await loadIdeaOrder(bank)).map(o => ({ ...o }));
+  } catch {
+    list.innerHTML = `<p class="muted">The science topics couldn't load.</p>`;
+    return;
+  }
+  const title = Object.fromEntries(bank.ideas.map(i => [i.id, i.title]));
+  const label = { now: "Now", next: "Coming up", done: "Done" };
+  const draw = () => {
+    list.innerHTML = `<ol class="sci-order">${order.map((o, i) => `
+      <li class="sci-order-${o.status}">
+        <span class="sci-order-name">${esc(title[o.idea])}</span>
+        <select data-status="${i}" aria-label="${esc(title[o.idea])}: status">
+          ${["now", "next", "done"].map(st => `<option value="${st}"${st === o.status ? " selected" : ""}>${label[st]}</option>`).join("")}
+        </select>
+        <button type="button" class="quiet" data-up="${i}" aria-label="Move up"${i ? "" : " disabled"}>↑</button>
+        <button type="button" class="quiet" data-down="${i}" aria-label="Move down"${i < order.length - 1 ? "" : " disabled"}>↓</button>
+      </li>`).join("")}</ol>`;
+    list.querySelectorAll("[data-status]").forEach(sel => sel.addEventListener("change", () => {
+      order[Number(sel.dataset.status)].status = sel.value; status.textContent = "Not saved yet."; draw();
+    }));
+    const move = (i, d) => { [order[i], order[i + d]] = [order[i + d], order[i]]; status.textContent = "Not saved yet."; draw(); };
+    list.querySelectorAll("[data-up]").forEach(b => b.addEventListener("click", () => move(Number(b.dataset.up), -1)));
+    list.querySelectorAll("[data-down]").forEach(b => b.addEventListener("click", () => move(Number(b.dataset.down), 1)));
+  };
+  draw();
+  card.querySelector("[data-order-save]").addEventListener("click", async () => {
+    status.textContent = "Saving…";
+    try {
+      const res = await fetch("api/track.php", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ op: "science-order", password: grownUpsPassword(), order: order.map(({ idea, status: st }) => ({ idea, status: st })) })
+      });
+      const body = await res.json().catch(() => null);
+      if (!body?.ok) throw new Error(body?.error?.message || `The server answered HTTP ${res.status}`);
+      status.textContent = "Saved — every device will show this order.";
+    } catch (err) {
+      status.textContent = `Couldn't save: ${err.message}`;
+    }
+  });
 }

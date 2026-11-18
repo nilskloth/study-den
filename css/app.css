@@ -651,3 +651,19 @@ button.hear { padding: var(--sp-1) var(--sp-2); font-size: var(--fs-3); line-hei
 .sci-year .section-grid { margin-left: calc(18px + var(--sp-2)); }
 .sci-label-idea:first-of-type { border-top: 0; padding-top: 0; }
 .sci-label-more > summary { cursor: pointer; color: var(--ink-muted); margin-top: var(--sp-3); }
+.sci-idea-diagrams { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-2); padding: 0 var(--sp-3) var(--sp-2); font-size: var(--fs-0); }
+.chip-link { display: inline-block; padding: 2px var(--sp-2); border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink); text-decoration: none; }
+.chip-link:hover { border-color: var(--accent); }
+/* Science: big ideas by teaching status; Grown-ups → Science order */
+.sci-idea-status { margin: var(--sp-3) 0 0; font-size: var(--fs-0); font-weight: 650; color: var(--ink-muted); text-transform: uppercase; letter-spacing: .04em; }
+.sci-idea-status.sci-now { color: var(--subject, var(--accent)); }
+.sci-idea-now { border-color: var(--subject, var(--accent)); border-width: 2px; }
+.sci-idea-done > summary .sci-idea-name { color: var(--ink-muted); }
+.sci-idea .sci-fix { margin: 0 var(--sp-3) var(--sp-3); box-shadow: none; }
+.sci-order { margin: 0 0 var(--sp-3); padding-left: 1.6em; display: grid; gap: var(--sp-1); }
+.sci-order li { padding: 2px 0; }
+.sci-order li > * { vertical-align: middle; }
+.sci-order-name { display: inline-block; min-width: 10em; font-weight: 600; }
+.sci-order-done .sci-order-name { color: var(--ink-muted); }
+.sci-order select { font: inherit; padding: 2px var(--sp-1); }
+.sci-order button { padding: 2px var(--sp-2); }
