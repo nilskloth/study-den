@@ -121,7 +121,7 @@ docs/REBUILD_PLAN.md    # v2 decisions, SATs standards, schema, phases
   **Secondary school**; a school with several years opens `#/start/year/<stage>` (Year 7 / Year 8), one with a single
   year (Year 6) goes straight in.
   The pick is `settings.year` (+ its stage as `settings.level`) via `setYear`; `currentYear()` reads it (falls back to
-  the first year in the stage in use). The nav button shows "Finn · Year 8 ⇄". Year 8 only changes science for now
+  the first year in the stage in use). The nav button shows "Finn · Year 8 ⇄" and opens `#/start/year` (which links "← Not Finn?"); one-year children's button opens `#/start`. Year 8 only changes science for now
   (Year 8 science topics); a deep link into primary sets Year 6. One-year children (Oskar, Year 6 guests) skip the page.
 - The router sends a child only to their own `stages`; another stage's URL goes to their home.
   Grown-ups works without a child chosen.

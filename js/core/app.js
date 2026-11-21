@@ -97,10 +97,12 @@ function buildChrome(level, path, params) {
   });
 
   const sw = document.createElement("a");
-  sw.href = "#/start";
+  /* children with several years go to their years (which has "Not Finn?"); others to Who's practising */
+  const many = yearsOf(profile).length > 1;
+  sw.href = many ? "#/start/year" : "#/start";
   sw.className = "level-switch";
   sw.textContent = `${profile.name} · ${currentYear()} ⇄`;
-  sw.title = "Another year, or someone else practising? Switch here";
+  sw.title = many ? "Change year (or someone else practising?)" : "Someone else practising? Switch here";
   nav.appendChild(sw);
 }
 
