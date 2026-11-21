@@ -3,8 +3,9 @@
    #/start/<finn|oskar> PIN, once per device (checked by api/track.php op family)
    #/start/guest        the guests saved on this device + New
    #/start/guest/new    first name + Year 6 or Year 7
-   #/start/year         the chosen child's years: last used first ("Carry on"),
-                        the others beneath (only for children with more than one)
+   #/start/year         the chosen child's years: "carry on" with the last used,
+                        then Primary / Secondary school (only for children with more than one year)
+   #/start/year/<stage> the years in that school (Year 7, Year 8)
    Each child has their own progress; the choice is remembered on this device. */
 
 import { setProfile, getProfile, currentYear, setYear } from "../core/store.js";
@@ -32,7 +33,7 @@ function go(id) {
 }
 
 export function renderStart(el, params = []) {
-  if (params[0] === "year") return renderYear(el);
+  if (params[0] === "year") return renderYear(el, params[1]);
   if (params[0] === "guest") return params[1] === "new" || !guests().length ? renderNewGuest(el) : renderGuests(el);
   const fam = FAMILY.find(p => p.id === params[0]);
   if (fam && !familyOnDevice(fam.id)) return renderPin(el, fam);
@@ -172,24 +173,54 @@ function renderNewGuest(el) {
   });
 }
 
-/* Which year? The last one used first, the child's other years beneath. */
-function renderYear(el) {
+/* Which year? "Carry on" with the last one used, then the schools
+   (primary, secondary); a school with several years opens a second
+   step (#/start/year/<stage>), one with a single year goes straight in. */
+const SCHOOL = {
+  year1: "Primary school", primary: "Primary school", secondary: "Secondary school"
+};
+
+function renderYear(el, stage) {
   const p = getProfile();
   if (!p) { location.replace("#/start"); return; }
   const ys = yearsOf(p);
   const last = ys.find(y => y.year === currentYear()) || ys[0];
+  const subjectOf = y => (y.stage === "primary" ? "reading" : p.subject);
   const yearCard = (y, carry) => card({
-    href: HOME[y.stage], name: carry ? `${y.year} — carry on` : y.year, line: y.sub,
-    subject: y.stage === "primary" ? "reading" : p.subject, current: carry, attrs: `data-year="${esc(y.year)}"`
+    href: HOME[y.stage], name: carry ? `${y.year} — carry on` : y.year,
+    line: carry ? `${SCHOOL[y.stage]} · ${y.sub}` : y.sub,
+    subject: subjectOf(y), current: carry, attrs: `data-year="${esc(y.year)}"`
   });
-  el.innerHTML = `
-    <div class="start">
-      <h2>Hi ${esc(p.name)}!</h2>
-      <p class="muted">Carry on where you were, or pick another year.</p>
-      <div class="level-grid">${yearCard(last, true)}</div>
-      <p class="start-label start-years-head">Other years</p>
-      <div class="level-grid">${ys.filter(y => y !== last).map(y => yearCard(y, false)).join("")}</div>
-      <p class="muted start-grownups"><a href="#/start">← Not ${esc(p.name)}?</a></p>
-    </div>`;
+  const stages = [...new Set(ys.map(y => y.stage))];
+  const inStage = st => ys.filter(y => y.stage === st);
+  const back = `<p class="muted start-grownups"><a href="#/start">← Not ${esc(p.name)}?</a></p>`;
+
+  if (stage && stages.includes(stage)) {
+    /* step 2: the years in one school, the last used marked */
+    el.innerHTML = `
+      <div class="start">
+        <h2>${esc(SCHOOL[stage])}</h2>
+        <p class="muted">Which year?</p>
+        <div class="level-grid">${inStage(stage).map(y => yearCard(y, false).replace('class="level-card"', `class="level-card${y === last ? " current" : ""}"`)).join("")}</div>
+        <p class="muted start-grownups"><a href="#/start/year">← Back</a></p>
+      </div>`;
+  } else {
+    el.innerHTML = `
+      <div class="start">
+        <h2>Hi ${esc(p.name)}!</h2>
+        <p class="muted">Carry on where you were, or pick another year.</p>
+        <div class="level-grid">${yearCard(last, true)}</div>
+        <p class="start-label start-years-head">Or choose</p>
+        <div class="level-grid">
+          ${stages.map(st => {
+            const list = inStage(st);
+            return list.length === 1
+              ? card({ href: HOME[st], name: SCHOOL[st], line: `${list[0].year} — ${list[0].sub}`, subject: subjectOf(list[0]), attrs: `data-year="${esc(list[0].year)}"` })
+              : card({ href: `#/start/year/${st}`, name: SCHOOL[st], line: list.map(y => y.year).join(" or "), subject: subjectOf(list[0]) });
+          }).join("")}
+        </div>
+        ${back}
+      </div>`;
+  }
   el.querySelectorAll("[data-year]").forEach(a => a.addEventListener("click", () => setYear(a.dataset.year)));
 }

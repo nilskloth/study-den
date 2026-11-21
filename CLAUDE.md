@@ -117,7 +117,9 @@ docs/REBUILD_PLAN.md    # v2 decisions, SATs standards, schema, phases
   (`studyden_guests`). The names Finn/Oskar are refused for guests. Same name + year = same guest.
   Grown-ups can remove a guest from the device (deletes their progress there).
 - **School years (`years` on a profile, `yearsOf(p)`):** Finn and Year 7 guests have Year 7 · Year 8 · Year 6 (primary).
-  Choosing such a child goes to `#/start/year`: the last used year first ("Year 7 — carry on"), the others beneath.
+  Choosing such a child goes to `#/start/year`: the last used year first ("Year 7 — carry on"), then **Primary school** /
+  **Secondary school**; a school with several years opens `#/start/year/<stage>` (Year 7 / Year 8), one with a single
+  year (Year 6) goes straight in.
   The pick is `settings.year` (+ its stage as `settings.level`) via `setYear`; `currentYear()` reads it (falls back to
   the first year in the stage in use). The nav button shows "Finn · Year 8 ⇄". Year 8 only changes science for now
   (Year 8 science topics); a deep link into primary sets Year 6. One-year children (Oskar, Year 6 guests) skip the page.
