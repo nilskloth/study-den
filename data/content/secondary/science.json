@@ -17902,6 +17902,7 @@
     "**Boiling vs evaporating:** boiling happens **at the boiling point**, **all through** the liquid (bubbles); evaporating happens at **any temperature**, only at the **surface**. Evaporation is faster when it's **warm, windy** or the liquid is **spread out**.",
     "**Diffusion** needs no stirring: particles move randomly from **high to low concentration**. Faster in **gases** than liquids, faster when **hotter**; not in solids.",
     "**Gas pressure** comes from particles **colliding with the walls**. Heating makes them hit **harder and more often**, so the pressure rises.",
+    "**Pressure** is a force pushing on an area. Gas particles fly in **straight lines** until they hit something, so they keep hitting every wall. A pumped-up tyre is hard because **more particles push inside than outside**; squash a gas (smaller volume) and the walls are hit **more often**, so its pressure rises.",
     "**Solutions:** the **solute** dissolves in the **solvent** to make a **solution**. Its particles spread out between the solvent particles: they don't disappear (you can still taste sugar). **Mass of solution = mass of solute + mass of solvent.**",
     "**Exam tip:** for “explain using particles”, always say what the particles **do** (move faster, hit the walls, spread out) and **why** that causes what you see. Count the marks: 3 marks = 3 points."
    ],
@@ -18326,6 +18327,88 @@
      "answer": false,
      "stem": "When 100 g of water freezes, you get less than 100 g of ice.",
      "explain": "Changes of state conserve mass: the same particles are there, so it's still 100 g."
+    },
+    {
+     "id": "chk-mt-35",
+     "type": "mcq",
+     "stem": "Pressure is…",
+     "answer": "a force pushing on a certain area",
+     "choices": [
+      "the speed of the particles",
+      "how heavy a gas is",
+      "the number of particles in a container"
+     ],
+     "explain": "Pressure is how much force pushes on each bit of area. Gas pressure is the force of the particles hitting the walls."
+    },
+    {
+     "id": "chk-mt-36",
+     "type": "mcq",
+     "stem": "A sealed syringe of air is squashed into a smaller volume. Why does the pressure go up?",
+     "answer": "the particles hit the walls more often",
+     "choices": [
+      "the particles get bigger",
+      "the particles get hotter and bigger",
+      "new particles are made"
+     ],
+     "explain": "Same particles, less space: each part of the wall gets hit more often, so the pressure rises."
+    },
+    {
+     "id": "chk-mt-37",
+     "type": "mcq",
+     "stem": "How do gas particles move?",
+     "answer": "quickly, in straight lines, in random directions, until they hit something",
+     "choices": [
+      "slowly, in circles",
+      "only downwards",
+      "they vibrate on the spot"
+     ],
+     "explain": "Gas particles fly in straight lines until they bump into another particle or a wall, then change direction — so their movement is random."
+    },
+    {
+     "id": "chk-mt-38",
+     "type": "mcq",
+     "stem": "Why is a pumped-up tyre hard?",
+     "answer": "more air particles push on the inside of the tyre than on the outside",
+     "choices": [
+      "the rubber gets harder when air is added",
+      "the air inside is a solid",
+      "there are no particles outside the tyre"
+     ],
+     "explain": "The tyre has more particles packed inside, so the push from inside is bigger than the push from the air outside."
+    },
+    {
+     "id": "chk-mt-39",
+     "type": "tf",
+     "answer": true,
+     "stem": "If you sit on an exercise ball, it squashes until the air pressure inside is big enough to hold you up.",
+     "explain": "Squashing makes the volume smaller, so the pressure rises until it balances your weight."
+    },
+    {
+     "id": "chk-mt-40",
+     "type": "mcq",
+     "stem": "A pumped-up beach ball is left in a freezer for 30 minutes. What will it be like?",
+     "answer": "softer, because the pressure inside has dropped",
+     "choices": [
+      "harder, because cold makes the pressure rise",
+      "exactly the same",
+      "it will burst"
+     ],
+     "explain": "The cold gas particles have less energy, so they hit the inside of the ball less often and less hard: lower pressure, softer ball."
+    },
+    {
+     "id": "chk-mt-41",
+     "type": "short",
+     "stem": "What is the word for a prediction you can test, with a scientific reason, like “the ball will go soft in the freezer because the gas particles slow down”?",
+     "answer": "hypothesis",
+     "accept": [
+      "a hypothesis"
+     ],
+     "choices": [
+      "conclusion",
+      "method",
+      "variable"
+     ],
+     "explain": "A hypothesis is a testable idea with a reason. You test it by doing the investigation."
     },
     {
      "id": "chk-mt-31",
