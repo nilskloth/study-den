@@ -17904,6 +17904,8 @@
     "**Gas pressure** comes from particles **colliding with the walls**. Heating makes them hit **harder and more often**, so the pressure rises.",
     "**Pressure** is a force pushing on an area. Gas particles fly in **straight lines** until they hit something, so they keep hitting every wall. A pumped-up tyre is hard because **more particles push inside than outside**; squash a gas (smaller volume) and the walls are hit **more often**, so its pressure rises.",
     "**Solutions:** the **solute** dissolves in the **solvent** to make a **solution**. Its particles spread out between the solvent particles: they don't disappear (you can still taste sugar). **Mass of solution = mass of solute + mass of solvent.**",
+    "**Physical or chemical?** Changes of state and dissolving are **physical changes**: no new substance, easy to reverse. A **chemical change** makes a **new substance** (iron + sulfur heated → iron sulfide). **Dissolving is not diffusion**: a solid first dissolves, then its particles diffuse through the liquid. Diffusion also moves substances **into and out of cells**.",
+    "**Why melting points differ:** particles attract each other. The **stronger the attraction**, the more energy is needed to separate them, so the **higher** the melting and boiling points (ice 0 °C, chocolate about 35 °C).",
     "**Exam tip:** for “explain using particles”, always say what the particles **do** (move faster, hit the walls, spread out) and **why** that causes what you see. Count the marks: 3 marks = 3 points."
    ],
    "keywords": [
@@ -18409,6 +18411,149 @@
       "variable"
      ],
      "explain": "A hypothesis is a testable idea with a reason. You test it by doing the investigation."
+    },
+    {
+     "id": "chk-mt-42",
+     "type": "mcq",
+     "stem": "Which state has a fixed volume but no fixed shape?",
+     "answer": "liquid",
+     "choices": [
+      "solid",
+      "gas",
+      "all three"
+     ],
+     "explain": "A liquid keeps its volume (the particles stay touching) but flows to take the shape of its container."
+    },
+    {
+     "id": "chk-mt-43",
+     "type": "mcq",
+     "stem": "In which states are the particles arranged randomly, with no pattern?",
+     "answer": "liquid and gas",
+     "choices": [
+      "solid and liquid",
+      "solid and gas",
+      "only solid"
+     ],
+     "explain": "Only a solid has a regular pattern. In liquids and gases the particles are jumbled."
+    },
+    {
+     "id": "chk-mt-44",
+     "type": "mcq",
+     "stem": "Which change of state takes in energy from the surroundings?",
+     "answer": "melting",
+     "choices": [
+      "freezing",
+      "condensing",
+      "none of them"
+     ],
+     "explain": "Melting (and boiling and evaporating) need energy to be transferred in, by heating. Freezing and condensing give energy out."
+    },
+    {
+     "id": "chk-mt-45",
+     "type": "mcq",
+     "stem": "Why do different substances melt and boil at different temperatures?",
+     "answer": "the forces holding their particles together are different strengths",
+     "choices": [
+      "their particles are different colours",
+      "some particles are hotter than others",
+      "bigger containers need more heat"
+     ],
+     "explain": "The stronger the attraction between the particles, the more energy is needed to pull them apart, so the higher the melting and boiling points."
+    },
+    {
+     "id": "chk-mt-46",
+     "type": "tf",
+     "answer": true,
+     "stem": "Chocolate melts at about 35 °C, so it has a higher melting point than ice.",
+     "explain": "Ice melts at 0 °C. Different solids melt at different temperatures; 35 °C is higher than 0 °C."
+    },
+    {
+     "id": "chk-mt-47",
+     "type": "mcq",
+     "stem": "In which kind of change is a new substance made?",
+     "answer": "a chemical change",
+     "choices": [
+      "a change of state",
+      "a physical change",
+      "dissolving"
+     ],
+     "explain": "Changes of state and dissolving are physical changes: no new substance, easy to reverse. A chemical change (a reaction) makes something new."
+    },
+    {
+     "id": "chk-mt-48",
+     "type": "mcq",
+     "stem": "Which of these is a chemical change?",
+     "answer": "iron and sulfur heated together to make iron sulfide",
+     "choices": [
+      "iron filings stirred into sulfur powder",
+      "water boiling to steam",
+      "sugar dissolving in tea"
+     ],
+     "explain": "Iron sulfide is a new substance, so that is a chemical change. Just mixing iron and sulfur, boiling and dissolving are physical changes."
+    },
+    {
+     "id": "chk-mt-49",
+     "type": "mcq",
+     "stem": "Is dissolving the same as diffusion?",
+     "answer": "no: dissolving is a solid mixing into a solvent to make a solution; diffusion is particles spreading from many to few",
+     "choices": [
+      "yes, they are two words for the same thing",
+      "no: diffusion only happens in solids",
+      "no: dissolving only happens in gases"
+     ],
+     "explain": "Sweets on a wet plate show both: the colour first dissolves in the water, then diffuses outwards through it."
+    },
+    {
+     "id": "chk-mt-50",
+     "type": "mcq",
+     "stem": "Blackcurrant squash is mixed with water and the colour spreads until it is even. What has happened to the squash?",
+     "answer": "it has spread out and become less concentrated (diluted)",
+     "choices": [
+      "it has become more concentrated",
+      "it has evaporated",
+      "it has turned into water"
+     ],
+     "explain": "The squash particles diffuse through the water from high to low concentration, so the drink ends up diluted."
+    },
+    {
+     "id": "chk-mt-51",
+     "type": "mcq",
+     "stem": "Diffusion is important in living things. What does it do?",
+     "answer": "moves substances into and out of cells",
+     "choices": [
+      "makes cells divide",
+      "turns food into energy",
+      "makes muscles contract"
+     ],
+     "explain": "Oxygen, for example, diffuses into cells and carbon dioxide diffuses out."
+    },
+    {
+     "id": "chk-mt-52",
+     "type": "mcq",
+     "stem": "You plan to add copper sulfate solution to hot and cold water to compare diffusion. What should you do first?",
+     "answer": "find out the hazards (hazard symbols) and follow the lab safety rules",
+     "choices": [
+      "use your hands to stir it",
+      "heat it as hot as possible",
+      "nothing: chemicals in school are always safe"
+     ],
+     "explain": "Before any investigation, look up the hazards of the chemicals and take precautions such as wearing eye protection."
+    },
+    {
+     "id": "chk-mt-53",
+     "type": "short",
+     "stem": "Substance A melts at −220 °C and boils at −183 °C. What state is it in at 20 °C?",
+     "answer": "gas",
+     "accept": [
+      "a gas",
+      "gaseous"
+     ],
+     "choices": [
+      "solid",
+      "liquid",
+      "melting"
+     ],
+     "explain": "20 °C is above its boiling point, so it is a gas."
     },
     {
      "id": "chk-mt-31",
