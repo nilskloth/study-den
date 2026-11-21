@@ -75,17 +75,5 @@ async function renderHub(el) {
       </div>`;
     grid.appendChild(card);
   }
-
-  /* Year 6 SATs papers and practice stay available */
-  const sats = document.createElement("a");
-  sats.className = "subject-card";
-  sats.dataset.subject = "maths";
-  sats.href = "#/home";
-  sats.innerHTML = `
-    <div class="subject-card-band"></div>
-    <div class="subject-card-body">
-      <strong>Year 6 SATs</strong>
-      <span>Papers and practice from primary school</span>
-    </div>`;
-  grid.appendChild(sats);
+  /* Year 6 SATs: picked at the start (Finn · Year 7 ⇄ → Primary school), not from here */
 }
