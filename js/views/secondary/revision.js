@@ -29,7 +29,9 @@
             by AI through the proxy (op mark, level ks3) or, without the
             shared key, by a self-mark checklist. Never in the quick-fire
             runs: #/secondary/science/explain[/<id>] (renderExplain).
-   A topic with "fix": true (a test's lost marks) gets its own card.
+   A topic with "fix": true (a test's lost marks) gets its own card
+   in its big idea; "prep": true (a coming checkpoint) gets one at the
+   top of the page, practising it plus the topics in its "covers".
    Practise is adaptive (core/adaptive.js, one stat per question in
    store.vocab.science.stats); Test is a fixed set with a review at
    the end. Runs are recorded as attempts (subject "science", domain
@@ -334,7 +336,7 @@ function renderSetup(ctx) {
     <div class="run-bar"><h2>${esc(S.title)}</h2><span class="muted">${esc(bank.unit)}</span></div>
     ${bank.source ? `<p class="sci-source">${esc(bank.source)}</p>` : ""}
 
-    ${fixCards(bank, S, state, t => !t.idea)}
+    ${fixCards(bank, S, state, t => !t.idea || t.prep)}
 
     ${!bank.ideas && labelSets(bank).length ? `
     <div class="card setup-card">
@@ -468,7 +470,7 @@ function renderSetup(ctx) {
   syncGroups();
   el.querySelectorAll("[data-fix]").forEach(b => b.addEventListener("click", () => {
     const t = topicById(bank, b.dataset.fix);
-    startRun(ctx, { pool: t.questions.filter(quick).map(q => ({ ...q, topic: t })), style: prefs.style || "type", test: 0 });
+    startRun(ctx, { pool: cardPool(bank, t), style: prefs.style || "type", test: 0 });
   }));
   el.querySelector("[data-start]").addEventListener("click", () => {
     const qs = pool();
@@ -1105,13 +1107,20 @@ function startRun(ctx, cfg) {
    Fix my test + Longer answers (cards on the setup page)
 ========================= */
 
+/* A test's mix-ups (fix), or a coming checkpoint (prep) with the
+   topics it "covers" mixed in: quick questions, each with its topic. */
+function cardPool(bank, t) {
+  return [t, ...(t.covers || []).map(id => topicById(bank, id)).filter(Boolean)]
+    .flatMap(x => x.questions.filter(quick).map(q => ({ ...q, topic: x })));
+}
+
 function fixCards(bank, S, state, which = () => true) {
-  const fixes = bank.topics.filter(t => t.fix && which(t));
+  const fixes = bank.topics.filter(t => (t.fix || t.prep) && which(t));
   const longer = explainQs(bank);
   const best = state.explain || {};
   return `
     ${fixes.map(t => {
-      const qs = t.questions.filter(quick);
+      const qs = cardPool(bank, t);
       const known = qs.filter(q => mastered(state.stats[q.id])).length;
       const ex = t.questions.filter(q => !quick(q)).length;
       return `
@@ -1119,7 +1128,7 @@ function fixCards(bank, S, state, which = () => true) {
         <h3>${esc(t.title)}</h3>
         <p class="muted" style="margin-top:calc(-1 * var(--sp-2));">${esc(t.summary)}</p>
         <p style="margin-bottom:0;" class="sci-fix-actions">
-          <button class="primary" data-fix="${t.id}">Practise the mix-ups</button>
+          <button class="primary" data-fix="${t.id}">${t.prep ? "Practise all of it" : "Practise the mix-ups"}</button>
           <a class="btn" href="${S.route}/learn/${t.id}">What to remember</a>
           ${ex ? `<a class="btn" href="${S.route}/explain">Longer answers (${ex})</a>` : ""}
           <span class="muted">${known}/${qs.length} mastered</span>
@@ -1293,7 +1302,7 @@ function topicPicker(bank, S, selected, masteredIn, state, order) {
             <span class="muted sci-idea-meta">${parts.map(p => YEAR[p[0].part]).join(" · ")} · ${topics.length} topic${topics.length === 1 ? "" : "s"}${(n => n ? ` · ${n} diagram${n === 1 ? "" : "s"}` : "")(sets.filter(x => x.topic.idea === idea.id).length)}</span>
             <span class="muted sci-idea-count" data-count-of="i-${idea.id}">${chosen ? `${chosen} chosen` : ""}</span>
           </summary>
-          ${fixCards(bank, S, state, t => t.idea === idea.id)}
+          ${fixCards(bank, S, state, t => t.idea === idea.id && !t.prep)}
           <label class="section-pick sci-idea-all"><input type="checkbox" data-group="i-${idea.id}"> <span>All of ${esc(idea.title)}</span></label>
           ${diagrams(sets.filter(x => x.topic.idea === idea.id))}
           ${classwork.length ? `<div class="sci-year"><div class="section-grid">

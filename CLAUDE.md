@@ -296,7 +296,7 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
   `data/uploads/science-order.json` (server-only, read by every device; `loadIdeaOrder()`). The Science page shows
   Now (open) → Coming up (in that order) → Already done; a new save resets the child's topic choice to the Now ideas.
   No file yet → Organisms is Now, the rest in syllabus order. **Years 7 and 8 (Parts 1 and 2) are complete**
-  (Nov 2026: 120 topics, ~2,200 questions). The default topic choice is the Now ideas in the child's own year (`year` "Year 8"
+  (Nov 2026: 122 topics, ~2,300 questions). The default topic choice is the Now ideas in the child's own year (`year` "Year 8"
   → part 2, otherwise part 1); Year 8 shows under each big idea, unticked. Syllabus PDF: `_res/aqa/AQA-SCIENCE-KS3-SYLLABUS.pdf` (PDF page = printed
   page − 1; one page per syllabus topic: Know / Apply / Extend). Written per big idea into `_res/sci-gen/<idea>.json`
   and `y8-<idea>.json` (ids prefixed f-, em-, en-, wv-, mt-, rx-, ea-, or-, ec-, gn-) and merged into science.json; edit science.json directly now.
@@ -351,6 +351,12 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
   lost marks — our own questions (the test is the publisher's, e.g. Activate for AQA — never copy it; no name or score
   on the site). It gets its own card at the top of the setup (Practise the mix-ups · What to remember · Longer answers).
   `test1` = Part 1 test (Organisms: movement + cells, Nov 2026).
+- **Checkpoints (`prep: true`, also `sheet: true`):** a coming class assessment. Its card sits at the **top** of the setup
+  (not inside the fold, so it shows whatever the teaching order says): "Practise all of it" mixes its own questions with
+  every topic in its `covers: [topicId…]`; "What to remember" = its notes (one table row per lesson). `check-matter` =
+  chemistry checkpoint Tue 24 Nov 2026 (Arbor list: particle model … solutions, Activate lessons 1–8 + Solutions); covers
+  mt-particles, mt-changes, mt-diffusion, mt-inside (Inside particles, added for it), mt-solutions. Remove `prep` (or the
+  topic) once the checkpoint is past, or turn it into a Fix my test when it comes back marked.
 - **Longer answers (`type: "explain"`, `#/secondary/science/explain[/<id>]`):** `marks` 1–6, `markScheme`
   `{ acceptablePoints: [{point}], award, modelAnswer }`, optional `tip`. Marked by the proxy op `mark` with
   `level: "ks3"` (Year 7 science prompt, up to 6 marks) or, without the shared key / offline, by the self-mark

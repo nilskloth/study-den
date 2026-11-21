@@ -17787,6 +17787,616 @@
    ]
   },
   {
+   "id": "check-matter",
+   "idea": "matter",
+   "part": 1,
+   "sheet": true,
+   "prep": true,
+   "covers": [
+    "mt-particles",
+    "mt-changes",
+    "mt-diffusion",
+    "mt-inside",
+    "mt-solutions"
+   ],
+   "title": "Checkpoint: particles and solutions (Tue 24 Nov)",
+   "source": "The checkpoint’s topic list on Arbor (lessons 1–9). The notes and questions are ours, not the school’s.",
+   "summary": "All nine lessons on one page, plus checkpoint-style questions. “Practise all of it” mixes these with the questions from the topic notes.",
+   "images": [
+    {
+     "file": "mt-states",
+     "caption": "Lessons 1–2: the same particles as a solid, a liquid and a gas."
+    },
+    {
+     "file": "mt-heating-curve",
+     "caption": "Lessons 3–4: the temperature stays flat while ice melts and while water boils."
+    }
+   ],
+   "table": {
+    "title": "The nine lessons in one line each",
+    "head": [
+     "Lesson",
+     "Remember"
+    ],
+    "rows": [
+     [
+      "1. Particle model",
+      "everything is made of tiny particles that are always moving"
+     ],
+     [
+      "2. States of matter",
+      "solid: touching, pattern, vibrate · liquid: touching, no pattern, slide · gas: far apart, fast, all directions"
+     ],
+     [
+      "3. Melting and freezing",
+      "same temperature (melting point); heat in to melt, heat out to freeze"
+     ],
+     [
+      "4. Boiling",
+      "at the boiling point, bubbles all through the liquid; temperature stays flat"
+     ],
+     [
+      "5. More changes of state",
+      "evaporating (surface, any temperature), condensing (gas → liquid), subliming (solid → gas)"
+     ],
+     [
+      "6. Diffusion",
+      "particles spread from many to few by themselves; fastest in gases and when warm"
+     ],
+     [
+      "7. Gas pressure",
+      "particles hitting the walls; more particles, smaller space or hotter = more pressure"
+     ],
+     [
+      "8. Inside particles",
+      "atoms and molecules; same particles in every state; particles don't grow or melt"
+     ],
+     [
+      "9. Solutions",
+      "solute + solvent = solution; mass is conserved; saturated = no more dissolves"
+     ]
+    ]
+   },
+   "facts": [
+    "**Changes of state:** melting (solid → liquid), freezing (liquid → solid), boiling and evaporating (liquid → gas), condensing (gas → liquid), subliming (solid → gas). They are **physical changes**: reversible, no new substance, **mass stays the same**.",
+    "**Heating** gives particles **energy**: they move or vibrate faster. Melting and boiling **take in** energy; freezing and condensing **give out** energy.",
+    "**Melting point = freezing point.** Water melts and freezes at **0 °C** and boils at **100 °C**. Solid below the melting point, liquid between, gas above the boiling point.",
+    "**Flat parts of a heating curve:** while a substance melts or boils its temperature does not rise; the energy goes into breaking the particles out of their arrangement.",
+    "**Boiling vs evaporating:** boiling happens **at the boiling point**, **all through** the liquid (bubbles); evaporating happens at **any temperature**, only at the **surface**. Evaporation is faster when it's **warm, windy** or the liquid is **spread out**.",
+    "**Diffusion** needs no stirring: particles move randomly from **high to low concentration**. Faster in **gases** than liquids, faster when **hotter**; not in solids.",
+    "**Gas pressure** comes from particles **colliding with the walls**. Heating makes them hit **harder and more often**, so the pressure rises.",
+    "**Solutions:** the **solute** dissolves in the **solvent** to make a **solution**. Its particles spread out between the solvent particles: they don't disappear (you can still taste sugar). **Mass of solution = mass of solute + mass of solvent.**",
+    "**Exam tip:** for “explain using particles”, always say what the particles **do** (move faster, hit the walls, spread out) and **why** that causes what you see. Count the marks: 3 marks = 3 points."
+   ],
+   "keywords": [
+    [
+     "melting point",
+     "the temperature at which a solid melts (and its liquid freezes)"
+    ],
+    [
+     "boiling point",
+     "the temperature at which a liquid boils"
+    ],
+    [
+     "sublimation",
+     "a solid turning straight into a gas"
+    ],
+    [
+     "diffusion",
+     "particles spreading out by themselves from high to low concentration"
+    ],
+    [
+     "gas pressure",
+     "the push of gas particles colliding with the walls of their container"
+    ],
+    [
+     "solute",
+     "the substance that dissolves (e.g. salt)"
+    ],
+    [
+     "solvent",
+     "the liquid it dissolves in (e.g. water)"
+    ],
+    [
+     "saturated",
+     "a solution in which no more solute can dissolve"
+    ]
+   ],
+   "questions": [
+    {
+     "id": "chk-mt-01",
+     "type": "short",
+     "stem": "What is the change of state from liquid to solid called?",
+     "answer": "freezing",
+     "accept": [
+      "freeze",
+      "solidifying",
+      "solidification"
+     ],
+     "choices": [
+      "melting",
+      "condensing",
+      "subliming"
+     ],
+     "explain": "Freezing is the reverse of melting, and happens at the same temperature."
+    },
+    {
+     "id": "chk-mt-02",
+     "type": "short",
+     "stem": "What is the change of state from gas to liquid called?",
+     "answer": "condensing",
+     "accept": [
+      "condensation",
+      "condense"
+     ],
+     "choices": [
+      "evaporating",
+      "freezing",
+      "boiling"
+     ],
+     "explain": "Gas particles cool, slow down and come close together again as a liquid."
+    },
+    {
+     "id": "chk-mt-03",
+     "type": "short",
+     "stem": "What is the change of state from solid straight to gas called?",
+     "answer": "subliming",
+     "accept": [
+      "sublimation",
+      "sublime",
+      "sublimating"
+     ],
+     "choices": [
+      "melting",
+      "evaporating",
+      "boiling"
+     ],
+     "explain": "Dry ice (solid carbon dioxide) sublimes: it never becomes a liquid."
+    },
+    {
+     "id": "chk-mt-04",
+     "type": "short",
+     "stem": "At what temperature, in °C, does pure water freeze?",
+     "answer": "0",
+     "accept": [
+      "0 °C",
+      "zero"
+     ],
+     "choices": [
+      "100",
+      "-10",
+      "4"
+     ],
+     "explain": "Water's melting point and freezing point are the same: 0 °C."
+    },
+    {
+     "id": "chk-mt-05",
+     "type": "short",
+     "stem": "At what temperature, in °C, does pure water boil?",
+     "answer": "100",
+     "accept": [
+      "100 °C"
+     ],
+     "choices": [
+      "0",
+      "50",
+      "212"
+     ],
+     "explain": "Pure water boils at 100 °C (at normal air pressure)."
+    },
+    {
+     "id": "chk-mt-06",
+     "type": "mcq",
+     "stem": "Butter melts at about 35 °C. At what temperature does liquid butter freeze?",
+     "answer": "about 35 °C",
+     "choices": [
+      "0 °C",
+      "below 0 °C",
+      "about 70 °C"
+     ],
+     "explain": "A substance freezes at the same temperature as it melts."
+    },
+    {
+     "id": "chk-mt-07",
+     "type": "mcq",
+     "stem": "A substance melts at 80 °C and boils at 220 °C. What state is it in at 150 °C?",
+     "answer": "liquid",
+     "choices": [
+      "solid",
+      "gas",
+      "melting"
+     ],
+     "explain": "150 °C is above its melting point but below its boiling point, so it is a liquid."
+    },
+    {
+     "id": "chk-mt-08",
+     "type": "mcq",
+     "stem": "Water is boiling in a kettle at 100 °C. The kettle keeps heating. What happens to the water's temperature?",
+     "answer": "it stays at 100 °C until all the water has boiled",
+     "choices": [
+      "it keeps rising",
+      "it drops",
+      "it rises to 200 °C"
+     ],
+     "explain": "While a liquid boils, the energy goes into freeing particles from the liquid, not into making it hotter."
+    },
+    {
+     "id": "chk-mt-09",
+     "type": "mcq",
+     "stem": "Which change of state gives out energy to the surroundings?",
+     "answer": "freezing",
+     "choices": [
+      "melting",
+      "boiling",
+      "evaporating"
+     ],
+     "explain": "Freezing and condensing give out energy as particles settle back together. Melting, boiling and evaporating take energy in."
+    },
+    {
+     "id": "chk-mt-10",
+     "type": "mcq",
+     "stem": "Where in a liquid does evaporation happen?",
+     "answer": "only at the surface",
+     "choices": [
+      "all through the liquid",
+      "only at the bottom",
+      "only where it is heated"
+     ],
+     "explain": "Only particles at the surface with enough energy can escape. Boiling happens all through the liquid."
+    },
+    {
+     "id": "chk-mt-11",
+     "type": "tf",
+     "answer": true,
+     "stem": "Water can evaporate at room temperature.",
+     "explain": "Evaporation happens at any temperature. That is how puddles dry without boiling."
+    },
+    {
+     "id": "chk-mt-12",
+     "type": "mcq",
+     "stem": "What are the bubbles that appear all through boiling water made of?",
+     "answer": "water vapour (steam)",
+     "choices": [
+      "air",
+      "hydrogen and oxygen",
+      "nothing: they are empty"
+     ],
+     "explain": "At the boiling point, liquid water turns to gas inside the liquid, making bubbles of steam."
+    },
+    {
+     "id": "chk-mt-13",
+     "type": "mcq",
+     "stem": "Which of these will make a puddle dry fastest?",
+     "answer": "a warm, windy day",
+     "choices": [
+      "a cold, still day",
+      "a warm day with no wind",
+      "a cold, windy night"
+     ],
+     "explain": "Warmth gives particles more energy to escape, and wind carries away the particles that have escaped."
+    },
+    {
+     "id": "chk-mt-14",
+     "type": "mcq",
+     "stem": "Which of these is a sign that diffusion is happening?",
+     "answer": "the smell of a bin spreads through the kitchen",
+     "choices": [
+      "ice melts in a drink",
+      "steam turns to water on a window",
+      "a ball bounces off a wall"
+     ],
+     "explain": "Smell particles spread out from the bin by themselves, from where there are many to where there are few."
+    },
+    {
+     "id": "chk-mt-15",
+     "type": "mcq",
+     "stem": "Why is diffusion faster in a gas than in a liquid?",
+     "answer": "gas particles move faster and have more space",
+     "choices": [
+      "gas particles are bigger",
+      "gas particles are heavier",
+      "liquids have no particles"
+     ],
+     "explain": "Fast particles with lots of space between them spread out quickly."
+    },
+    {
+     "id": "chk-mt-16",
+     "type": "mcq",
+     "stem": "Why doesn't diffusion happen in a solid?",
+     "answer": "the particles are held in place and can only vibrate",
+     "choices": [
+      "solid particles don't move at all",
+      "solids have no particles",
+      "solid particles are too small"
+     ],
+     "explain": "Solid particles vibrate on the spot but can't move about, so they can't spread out."
+    },
+    {
+     "id": "chk-mt-17",
+     "type": "short",
+     "stem": "A tea bag is put in hot water and another in cold water. In which will the colour spread faster: hot or cold?",
+     "answer": "hot",
+     "accept": [
+      "hot water",
+      "the hot water",
+      "hot one"
+     ],
+     "explain": "In hot water the particles move faster, so diffusion is faster."
+    },
+    {
+     "id": "chk-mt-18",
+     "type": "mcq",
+     "stem": "A tyre is pumped up with more air. Why does the pressure inside go up?",
+     "answer": "more particles hit the inside walls more often",
+     "choices": [
+      "the particles get bigger",
+      "the particles move more slowly",
+      "the air gets heavier and pushes down"
+     ],
+     "explain": "More particles in the same space means more collisions with the walls each second."
+    },
+    {
+     "id": "chk-mt-19",
+     "type": "tf",
+     "answer": true,
+     "stem": "Gas particles push on every wall of a sealed container, not just the bottom.",
+     "explain": "Gas particles move in all directions, so they hit every wall, top and sides included."
+    },
+    {
+     "id": "chk-mt-20",
+     "type": "short",
+     "stem": "A sealed bottle of air is warmed in the sun. Does the pressure inside go up or down?",
+     "answer": "up",
+     "accept": [
+      "it goes up",
+      "increases",
+      "goes up",
+      "higher",
+      "rises"
+     ],
+     "choices": [
+      "down",
+      "stays the same",
+      "drops to zero"
+     ],
+     "explain": "Warmer particles move faster and hit the walls harder and more often, so the pressure rises."
+    },
+    {
+     "id": "chk-mt-21",
+     "type": "short",
+     "stem": "Sugar dissolves in tea. Which is the solute?",
+     "answer": "sugar",
+     "accept": [
+      "the sugar"
+     ],
+     "choices": [
+      "tea",
+      "water",
+      "solution"
+     ],
+     "explain": "The solute is what dissolves (the sugar); the solvent is the liquid it dissolves in."
+    },
+    {
+     "id": "chk-mt-22",
+     "type": "short",
+     "stem": "Sugar dissolves in tea. What is the sweet tea called?",
+     "answer": "solution",
+     "accept": [
+      "a solution",
+      "sugar solution"
+     ],
+     "choices": [
+      "solvent",
+      "solute",
+      "suspension"
+     ],
+     "explain": "Solute + solvent = solution."
+    },
+    {
+     "id": "chk-mt-23",
+     "type": "short",
+     "stem": "5 g of salt dissolves completely in 95 g of water. What is the mass of the solution, in grams?",
+     "answer": "100",
+     "accept": [
+      "100 g",
+      "100g"
+     ],
+     "choices": [
+      "95",
+      "90",
+      "5"
+     ],
+     "explain": "Mass is conserved: 5 g + 95 g = 100 g. The salt particles are still there, just spread out."
+    },
+    {
+     "id": "chk-mt-24",
+     "type": "mcq",
+     "stem": "Salt seems to disappear when stirred into water. What has really happened to the salt particles?",
+     "answer": "they have spread out between the water particles",
+     "choices": [
+      "they have been destroyed",
+      "they have melted",
+      "they have turned into water"
+     ],
+     "explain": "Dissolving isn't melting or destroying: the solute particles mix in between the solvent particles. You can still taste the salt."
+    },
+    {
+     "id": "chk-mt-25",
+     "type": "short",
+     "stem": "What word describes a solution in which no more solute can dissolve?",
+     "answer": "saturated",
+     "accept": [
+      "saturated solution"
+     ],
+     "choices": [
+      "soluble",
+      "concentrated",
+      "insoluble"
+     ],
+     "explain": "Once a solution is saturated, any extra solute just sits at the bottom."
+    },
+    {
+     "id": "chk-mt-26",
+     "type": "mcq",
+     "stem": "How can you usually get more sugar to dissolve in the same amount of water?",
+     "answer": "warm the water",
+     "choices": [
+      "cool the water",
+      "use bigger sugar lumps",
+      "add a lid"
+     ],
+     "explain": "For most solids, solubility rises as the temperature rises."
+    },
+    {
+     "id": "chk-mt-27",
+     "type": "mcq",
+     "stem": "Which is the correct difference between dissolving and melting?",
+     "answer": "dissolving needs a solvent; melting needs only one substance and heat",
+     "choices": [
+      "they are the same thing",
+      "melting needs a solvent; dissolving needs heat",
+      "dissolving makes a new substance"
+     ],
+     "explain": "Sugar dissolving in water involves two substances. Ice melting involves just one, heated up."
+    },
+    {
+     "id": "chk-mt-28",
+     "type": "mcq",
+     "stem": "A particle diagram shows particles touching, in rows, all the same. What does it show?",
+     "answer": "a solid",
+     "choices": [
+      "a liquid",
+      "a gas",
+      "a solution"
+     ],
+     "explain": "Touching + regular pattern = a solid."
+    },
+    {
+     "id": "chk-mt-29",
+     "type": "mcq",
+     "stem": "A particle diagram shows a few particles far apart, with arrows pointing in different directions. What does it show?",
+     "answer": "a gas",
+     "choices": [
+      "a solid",
+      "a liquid",
+      "a solid being heated"
+     ],
+     "explain": "Far apart, moving fast in all directions = a gas."
+    },
+    {
+     "id": "chk-mt-30",
+     "type": "tf",
+     "answer": false,
+     "stem": "When 100 g of water freezes, you get less than 100 g of ice.",
+     "explain": "Changes of state conserve mass: the same particles are there, so it's still 100 g."
+    },
+    {
+     "id": "chk-mt-31",
+     "type": "explain",
+     "marks": 3,
+     "stem": "Explain, using the particle model, why the smell of perfume sprayed in one corner can soon be smelled across the room.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "the perfume evaporates / becomes a gas"
+       },
+       {
+        "point": "the perfume particles move randomly / in all directions / collide with air particles"
+       },
+       {
+        "point": "they spread out from high concentration to low concentration / where there are many to where there are few"
+       },
+       {
+        "point": "this is diffusion"
+       }
+      ],
+      "award": {
+       "3": "one mark per point, up to 3"
+      },
+      "modelAnswer": "The perfume evaporates into a gas. Its particles move randomly and bump into air particles, so they spread out from the corner where there are lots of them to the rest of the room where there are fewer. This is diffusion."
+     }
+    },
+    {
+     "id": "chk-mt-32",
+     "type": "explain",
+     "marks": 2,
+     "stem": "Explain the difference between boiling and evaporation.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "boiling happens at the boiling point / one temperature; evaporation happens at any temperature"
+       },
+       {
+        "point": "boiling happens all through the liquid (bubbles); evaporation only at the surface"
+       },
+       {
+        "point": "boiling is fast; evaporation is slow"
+       }
+      ],
+      "award": {
+       "2": "one mark per difference, up to 2"
+      },
+      "modelAnswer": "Boiling only happens at the boiling point, and gas forms all through the liquid as bubbles. Evaporation happens at any temperature, but only from the surface of the liquid."
+     }
+    },
+    {
+     "id": "chk-mt-33",
+     "type": "explain",
+     "marks": 3,
+     "stem": "A sealed can of air is heated. Use the particle model to explain why the pressure inside goes up.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "the particles gain energy / move faster"
+       },
+       {
+        "point": "they hit the walls of the can more often"
+       },
+       {
+        "point": "they hit the walls harder / with more force"
+       },
+       {
+        "point": "pressure is caused by particles hitting the walls"
+       }
+      ],
+      "award": {
+       "3": "one mark per point, up to 3"
+      },
+      "modelAnswer": "Gas pressure is caused by particles hitting the walls. When the can is heated the particles gain energy and move faster, so they hit the walls more often and harder. This makes the pressure go up."
+     }
+    },
+    {
+     "id": "chk-mt-34",
+     "type": "explain",
+     "marks": 4,
+     "stem": "Describe what happens to the arrangement and movement of the particles when liquid water is cooled until it freezes, and say what happens to its mass.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "the particles lose energy / slow down"
+       },
+       {
+        "point": "at 0 °C / the freezing point they stop sliding past each other / are held in place"
+       },
+       {
+        "point": "they settle into a regular pattern / fixed arrangement"
+       },
+       {
+        "point": "they now only vibrate on the spot"
+       },
+       {
+        "point": "the mass stays the same / is conserved, because the particles are the same / none are added or lost"
+       }
+      ],
+      "award": {
+       "4": "one mark per point, up to 4"
+      },
+      "modelAnswer": "As the water cools, its particles lose energy and move more slowly. At 0 °C they stop sliding past each other and settle into a regular pattern, where they can only vibrate on the spot. The mass stays the same because the particles are the same ones: none are added or lost."
+     }
+    }
+   ]
+  },
+  {
    "id": "mt-particles",
    "idea": "matter",
    "part": 1,
@@ -18964,6 +19574,284 @@
        "2": "one mark per point, up to 2"
       },
       "modelAnswer": "Smell particles from the food move randomly and mix with the air particles. They diffuse from the kitchen, where there are lots of them, to where there are fewer, until some reach your nose."
+     }
+    }
+   ]
+  },
+  {
+   "id": "mt-inside",
+   "idea": "matter",
+   "part": 1,
+   "sub": "Particle model",
+   "title": "Inside particles",
+   "summary": "What particles really are: atoms and molecules, why each substance has its own particles, and what changes (and what doesn't) when a substance changes state.",
+   "images": [
+    {
+     "file": "mt-molecules",
+     "caption": "Some particles are single atoms; many are molecules: atoms joined together. Each colour is a different kind of atom."
+    }
+   ],
+   "table": {
+    "title": "What changes when a substance changes state?",
+    "head": [
+     "",
+     "Changes?",
+     "Why"
+    ],
+    "rows": [
+     [
+      "The particles themselves",
+      "no",
+      "the same particles are there in every state"
+     ],
+     [
+      "Size of each particle",
+      "no",
+      "particles never grow, shrink or melt"
+     ],
+     [
+      "Number of particles (mass)",
+      "no",
+      "nothing is added or taken away, so mass is conserved"
+     ],
+     [
+      "How the particles are arranged",
+      "yes",
+      "pattern in a solid, no pattern in a liquid or gas"
+     ],
+     [
+      "How the particles move",
+      "yes",
+      "faster when heated, slower when cooled"
+     ],
+     [
+      "Spaces between particles",
+      "yes",
+      "big spaces in a gas, tiny gaps in a solid or liquid"
+     ]
+    ]
+   },
+   "facts": [
+    "Particles are the tiny pieces that every substance is made of. The smallest are **atoms**. An **atom** is the smallest part of an element that can exist.",
+    "Many particles are **molecules**: **two or more atoms joined together**. A water particle is a molecule of **2 hydrogen atoms + 1 oxygen atom** (H₂O). An oxygen particle in the air is **2 oxygen atoms** joined (O₂).",
+    "**Each substance has its own particles.** All the particles in pure water are water molecules; all the particles in pure oxygen are oxygen molecules. Different substances have particles that differ in **size, mass and shape**, which is why they have different properties (different melting points, colours, densities).",
+    "A substance keeps the **same particles in every state.** Ice, liquid water and steam are all made of water molecules. Only the **arrangement**, **movement** and **spaces** between them change.",
+    "Particles themselves **do not change**: they don't get bigger when heated, they don't melt, and they have no colour or smell of their own. A single particle of copper isn't shiny; shininess belongs to lots of particles together. These are **properties of the substance, not of one particle**.",
+    "**Between the particles is empty space**, not air. In a gas the particles are far apart with nothing in between.",
+    "Atoms are incredibly small: about **10 million** side by side would fit across a millimetre. Even the best light microscope can't show them.",
+    "The particle model is a **model**: a simple picture that explains a lot (states, changes of state, diffusion, pressure). Drawing particles as hard balls leaves things out: real particles are not coloured balls and the forces between them aren't shown."
+   ],
+   "keywords": [
+    [
+     "atom",
+     "the smallest part of an element that can exist"
+    ],
+    [
+     "molecule",
+     "two or more atoms joined together"
+    ],
+    [
+     "substance",
+     "one kind of matter, made of one kind of particle (e.g. water, oxygen, copper)"
+    ],
+    [
+     "property",
+     "what a substance is like or does, e.g. its melting point, colour or density"
+    ],
+    [
+     "model",
+     "a simple way of picturing something that helps explain what we see"
+    ]
+   ],
+   "questions": [
+    {
+     "id": "mt-inside-01",
+     "type": "short",
+     "stem": "What is the name for the smallest part of an element that can exist?",
+     "answer": "atom",
+     "accept": [
+      "an atom",
+      "atoms"
+     ],
+     "choices": [
+      "molecule",
+      "cell",
+      "compound"
+     ],
+     "explain": "Atoms are the smallest particles of an element. Molecules are made of atoms joined together."
+    },
+    {
+     "id": "mt-inside-02",
+     "type": "short",
+     "stem": "What is the name for two or more atoms joined together?",
+     "answer": "molecule",
+     "accept": [
+      "a molecule",
+      "molecules"
+     ],
+     "choices": [
+      "element",
+      "mixture",
+      "solution"
+     ],
+     "explain": "A molecule is a group of atoms joined together, like H₂O (water) or O₂ (oxygen)."
+    },
+    {
+     "id": "mt-inside-03",
+     "type": "mcq",
+     "stem": "A molecule of water (H₂O) is made of…",
+     "answer": "2 hydrogen atoms and 1 oxygen atom",
+     "choices": [
+      "1 hydrogen atom and 2 oxygen atoms",
+      "2 hydrogen molecules and 1 oxygen molecule",
+      "2 water atoms"
+     ],
+     "explain": "The small 2 belongs to the H in front of it: two hydrogen atoms. No number after O means one oxygen atom."
+    },
+    {
+     "id": "mt-inside-04",
+     "type": "mcq",
+     "stem": "Ice is heated until it becomes steam. What happens to the water particles themselves?",
+     "answer": "they stay the same; only their arrangement and movement change",
+     "choices": [
+      "they get bigger",
+      "they melt and then turn into gas particles",
+      "they turn into air particles"
+     ],
+     "explain": "Ice, water and steam are all made of the same water molecules. Heating changes how they are arranged and how fast they move, never the particles themselves."
+    },
+    {
+     "id": "mt-inside-05",
+     "type": "tf",
+     "answer": false,
+     "stem": "When a metal bar is heated, each of its particles gets bigger.",
+     "explain": "The bar expands because the particles vibrate more and move a little further apart. Each particle stays the same size."
+    },
+    {
+     "id": "mt-inside-06",
+     "type": "tf",
+     "answer": false,
+     "stem": "One single particle of copper is shiny and orange-brown, just like a copper coin.",
+     "explain": "Colour and shininess are properties of lots of particles together, not of one particle on its own."
+    },
+    {
+     "id": "mt-inside-07",
+     "type": "mcq",
+     "stem": "What is between the particles in a gas?",
+     "answer": "nothing: empty space",
+     "choices": [
+      "air",
+      "water vapour",
+      "smaller particles"
+     ],
+     "explain": "The spaces between particles are empty. 'Air' would be wrong: air is itself made of particles."
+    },
+    {
+     "id": "mt-inside-08",
+     "type": "mcq",
+     "stem": "Why do water and oxygen have different melting and boiling points?",
+     "answer": "they are made of different particles",
+     "choices": [
+      "water particles are always hotter",
+      "oxygen particles melt more easily",
+      "they have the same particles arranged differently"
+     ],
+     "explain": "Each substance has its own particles, with their own size, mass and shape, so each substance has its own properties."
+    },
+    {
+     "id": "mt-inside-09",
+     "type": "tf",
+     "answer": true,
+     "stem": "All the particles in a sample of pure water are the same.",
+     "explain": "A pure substance contains only one kind of particle: here, water molecules."
+    },
+    {
+     "id": "mt-inside-10",
+     "type": "short",
+     "stem": "Steam, liquid water and ice are three states of one substance. Which substance's particles are in all three?",
+     "answer": "water",
+     "accept": [
+      "water molecules",
+      "water particles",
+      "h2o"
+     ],
+     "choices": [
+      "air",
+      "hydrogen",
+      "oxygen"
+     ],
+     "explain": "All three are water: the same water molecules, just arranged and moving differently."
+    },
+    {
+     "id": "mt-inside-11",
+     "type": "mcq",
+     "stem": "Why can't we see atoms with a light microscope?",
+     "answer": "they are far too small",
+     "choices": [
+      "they are see-through",
+      "they move too fast to see",
+      "they only exist in gases"
+     ],
+     "explain": "Atoms are so tiny that about 10 million side by side fit across one millimetre, far below what light microscopes can show."
+    },
+    {
+     "id": "mt-inside-12",
+     "type": "mcq",
+     "stem": "A particle diagram shows particles as coloured balls. What does this model leave out?",
+     "answer": "real particles are not coloured balls, and the forces between them aren't shown",
+     "choices": [
+      "it leaves out the arrangement of the particles",
+      "it leaves out that there are three states",
+      "nothing: particles really are coloured balls"
+     ],
+     "explain": "A model is a simple picture. It explains a lot, but real particles have no colour and the forces holding them together are invisible in the drawing."
+    },
+    {
+     "id": "mt-inside-13",
+     "type": "short",
+     "stem": "An oxygen particle (O₂) is made of how many atoms?",
+     "answer": "2",
+     "accept": [
+      "two"
+     ],
+     "choices": [
+      "1",
+      "3",
+      "4"
+     ],
+     "explain": "The small 2 after O shows two oxygen atoms joined: an oxygen molecule."
+    },
+    {
+     "id": "mt-inside-14",
+     "type": "tf",
+     "answer": true,
+     "stem": "When water boils, the number of water particles stays the same, so the mass is conserved (if no steam escapes).",
+     "explain": "Changing state doesn't create or destroy particles. If you trap all the steam, its mass equals the mass of the water you started with."
+    },
+    {
+     "id": "mt-inside-15",
+     "type": "explain",
+     "marks": 3,
+     "stem": "A student says: “When ice melts, the ice particles melt into water particles.” Explain what is wrong with this, using the particle model.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "the particles do not melt / particles themselves do not change"
+       },
+       {
+        "point": "ice and water are made of the same (water) particles / molecules"
+       },
+       {
+        "point": "the particles gain energy and vibrate faster"
+       },
+       {
+        "point": "they break out of their fixed pattern / arrangement changes / they can slide past each other"
+       }
+      ],
+      "award": {
+       "3": "one mark per point, up to 3"
+      },
+      "modelAnswer": "The particles themselves don't melt or change: ice and liquid water are made of the same water molecules. When ice is heated the particles gain energy and vibrate faster until they break out of their fixed pattern and can slide past each other. Only the arrangement and movement change."
      }
     }
    ]
