@@ -357,6 +357,9 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
   chemistry checkpoint Tue 24 Nov 2026 (Arbor list: particle model … solutions, Activate lessons 1–8 + Solutions); covers
   mt-particles, mt-changes, mt-diffusion, mt-inside (Inside particles, added for it), mt-solutions. Remove `prep` (or the
   topic) once the checkpoint is past, or turn it into a Fix my test when it comes back marked.
+- **Teacher links (`links: [{ title, url, note? }]` on a fix/prep/sheet topic):** the BBC Bitesize / BBC Teach pages the
+  teacher set for that milestone, shown as "Watch and read" on its card and notes page (https only, new tab). Only links
+  the school gave, kept with their milestone (not on the syllabus topics), so each test has its own list.
 - **Longer answers (`type: "explain"`, `#/secondary/science/explain[/<id>]`):** `marks` 1–6, `markScheme`
   `{ acceptablePoints: [{point}], award, modelAnswer }`, optional `tip`. Marked by the proxy op `mark` with
   `level: "ks3"` (Year 7 science prompt, up to 6 marks) or, without the shared key / offline, by the self-mark

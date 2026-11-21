@@ -623,6 +623,10 @@ button.hear { padding: var(--sp-1) var(--sp-2); font-size: var(--fs-3); line-hei
 
 /* Science: Fix my test, longer answers (views/secondary/revision.js) */
 .sci-fix { border-left: 4px solid var(--subject, var(--accent)); }
+.sci-links { font-size: var(--fs-0); margin: var(--sp-3) 0; }
+.sci-links-head { margin: 0 0 var(--sp-1); font-weight: 600; }
+.sci-links ul { margin: 0; padding-left: 1.2em; }
+.sci-links li { margin: 0 0 var(--sp-1); }
 .sci-fix-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-2); }
 .sci-explain-list td { vertical-align: top; }
 .sci-explain-list a { color: var(--ink); }

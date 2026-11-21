@@ -227,6 +227,7 @@ async function renderLearn({ el, bank, S }, topicId) {
     <div class="paper-sheet sci-notes" data-subject="${S.theme}">
       ${topic.source ? `<p class="sci-source">${esc(topic.source)}</p>` : ""}
       <p class="muted" style="margin-top:0;">${esc(topic.summary)}</p>
+      ${linkList(topic)}
       ${topic.images.map((im, i) => `
         <figure class="sci-figure" data-fig="${i}">
           <div class="sci-figure-host" data-host="${i}"></div>
@@ -1107,6 +1108,16 @@ function startRun(ctx, cfg) {
    Fix my test + Longer answers (cards on the setup page)
 ========================= */
 
+/* Links the teacher gave for this test or checkpoint (BBC Bitesize …),
+   kept with it so each milestone has its own list. Only https links. */
+function linkList(t) {
+  const links = (t.links || []).filter(l => /^https:\/\//.test(l.url));
+  return links.length ? `
+    <div class="sci-links"><p class="sci-links-head">Watch and read <span class="muted">(from your teacher, opens BBC)</span></p>
+      <ul>${links.map(l => `<li><a href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">${esc(l.title)}</a>${l.note ? ` <span class="muted">· ${esc(l.note)}</span>` : ""}</li>`).join("")}</ul>
+    </div>` : "";
+}
+
 /* A test's mix-ups (fix), or a coming checkpoint (prep) with the
    topics it "covers" mixed in: quick questions, each with its topic. */
 function cardPool(bank, t) {
@@ -1133,6 +1144,7 @@ function fixCards(bank, S, state, which = () => true) {
           ${ex ? `<a class="btn" href="${S.route}/explain">Longer answers (${ex})</a>` : ""}
           <span class="muted">${known}/${qs.length} mastered</span>
         </p>
+        ${linkList(t)}
       </div>`;
     }).join("")}
     ${longer.length && !bank.topics.some(t => t.fix) ? `
