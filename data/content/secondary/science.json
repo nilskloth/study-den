@@ -17906,6 +17906,7 @@
     "**Solutions:** the **solute** dissolves in the **solvent** to make a **solution**. Its particles spread out between the solvent particles: they don't disappear (you can still taste sugar). **Mass of solution = mass of solute + mass of solvent.**",
     "**Physical or chemical?** Changes of state and dissolving are **physical changes**: no new substance, easy to reverse. A **chemical change** makes a **new substance** (iron + sulfur heated → iron sulfide). **Dissolving is not diffusion**: a solid first dissolves, then its particles diffuse through the liquid. Diffusion also moves substances **into and out of cells**.",
     "**Why melting points differ:** particles attract each other. The **stronger the attraction**, the more energy is needed to separate them, so the **higher** the melting and boiling points (ice 0 °C, chocolate about 35 °C).",
+    "**Solubility depends on** the **solute**, the **solvent** (water isn't the only one: polystyrene dissolves in propanone) and the **temperature**. Most **solids** dissolve **more** when hotter, so cooling a saturated solution makes **crystals**; most **gases** dissolve **less** when hotter.",
     "**Exam tip:** for “explain using particles”, always say what the particles **do** (move faster, hit the walls, spread out) and **why** that causes what you see. Count the marks: 3 marks = 3 points."
    ],
    "keywords": [
@@ -18554,6 +18555,61 @@
       "melting"
      ],
      "explain": "20 °C is above its boiling point, so it is a gas."
+    },
+    {
+     "id": "chk-mt-54",
+     "type": "tf",
+     "answer": false,
+     "stem": "Water is the only solvent.",
+     "explain": "Many liquids are solvents. Polystyrene won't dissolve in water, but it dissolves in propanone (acetone), a different solvent."
+    },
+    {
+     "id": "chk-mt-55",
+     "type": "mcq",
+     "stem": "A big block of polystyrene disappears into a small amount of propanone. Which is the solvent?",
+     "answer": "propanone",
+     "choices": [
+      "polystyrene",
+      "the solution",
+      "air"
+     ],
+     "explain": "The solvent is the liquid that does the dissolving; the polystyrene is the solute."
+    },
+    {
+     "id": "chk-mt-56",
+     "type": "mcq",
+     "stem": "Hot sweet tea that is saturated with sugar is cooled down. What happens?",
+     "answer": "some sugar comes back out as crystals",
+     "choices": [
+      "more sugar dissolves",
+      "the sugar turns into water",
+      "nothing changes"
+     ],
+     "explain": "Most solids are less soluble when colder, so the sugar that no longer fits comes out as crystals."
+    },
+    {
+     "id": "chk-mt-57",
+     "type": "mcq",
+     "stem": "Most solids dissolve better in hot water. What about gases, such as the air dissolved in water?",
+     "answer": "most gases dissolve less well when the water is hotter",
+     "choices": [
+      "gases dissolve better when hotter too",
+      "gases never dissolve in water",
+      "temperature makes no difference to gases"
+     ],
+     "explain": "Warming water drives dissolved gas out (the tiny bubbles in a heated pan). Boiling water first and then freezing it makes clearer ice, because there is less air trapped inside."
+    },
+    {
+     "id": "chk-mt-58",
+     "type": "mcq",
+     "stem": "Which three things can change how much of a substance dissolves?",
+     "answer": "the solute, the solvent and the temperature",
+     "choices": [
+      "only the size of the cup",
+      "only the colour of the solute",
+      "only how long you wait"
+     ],
+     "explain": "Different solutes dissolve by different amounts, different solvents dissolve different things, and temperature changes solubility. Stirring only makes it dissolve faster, not more."
     },
     {
      "id": "chk-mt-31",
