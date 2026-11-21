@@ -10,6 +10,7 @@
    ========================================================= */
 
 import { esc } from "../../core/utils.js";
+import { currentYear } from "../../core/store.js";
 import { LANGS, loadBank, isKnown, vocabState } from "./langs.js";
 import { renderVocab } from "./vocab.js";
 import { renderVerbs } from "./verbs.js";
@@ -27,7 +28,7 @@ export function renderSecondary(el, params = []) {
 async function renderHub(el) {
   el.innerHTML = `
     <div class="card" style="margin-bottom:var(--sp-4);">
-      <h2 style="margin-top:0;">Year 7</h2>
+      <h2 style="margin-top:0;">${esc(currentYear() || "Year 7")}</h2>
       <p class="muted" style="margin-bottom:0;">Learn the words and phrases from each chapter, or revise a maths, science or geography topic, then test yourself.</p>
     </div>
     <div class="subject-grid" data-cards></div>`;

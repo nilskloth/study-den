@@ -38,13 +38,12 @@
    = topic) so Grown-ups shows them.
    ========================================================= */
 
-import { saveStore, recordAttempt, getStore } from "../../core/store.js";
+import { saveStore, recordAttempt, getStore, currentYear, setYear } from "../../core/store.js";
 import { markAI } from "../../core/ai.js";
 import { renderSelfMark } from "../../render/selfmark.js";
 import { esc, pickN, shuffle, normaliseText } from "../../core/utils.js";
 import { newStat, weightedPick, applyResult } from "../../core/adaptive.js";
 import { vocabState } from "./langs.js";
-import { profileById, activeProfileId } from "../../core/profiles.js";
 import { seg } from "./vocab.js";
 import { checkMaths } from "../../core/maths-match.js";
 import { GENERATORS } from "../../gen/ks3maths.js";
@@ -174,6 +173,8 @@ const rich = s => esc(s).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
 /* Class-sheet topics have no number; the rest are "N. Title". */
 const topicLabel = t => (t.sheet || t.idea ? t.title : `${t.number}. ${t.title}`);
 const YEAR = { 1: "Year 7", 2: "Year 8" };
+/* science.json ideas[].science; an idea without one (Working scientifically) shows under every filter */
+const SCIENCES = [["biology", "Biology"], ["chemistry", "Chemistry"], ["physics", "Physics"]];
 
 const mastered = stat => (stat?.mastery || 0) >= 0.8;
 
@@ -320,14 +321,28 @@ function renderSetup(ctx) {
   const state = stateOf(S);
   const prefs = state.prefs;
   const valid = new Set(bank.topics.map(t => t.id));
+  /* science: which year and which science are showing. Only what's showing
+     gets practised; ticks elsewhere stay saved for when it's shown again. */
+  const ownYear = /8/.test(currentYear()) ? "2" : "1";      // the year picked at the start
+  const view = bank.ideas ? {
+    year: ownYear,
+    sci: SCIENCES.some(([k]) => k === prefs.sci) ? prefs.sci : "all"
+  } : null;
+  const sciOf = Object.fromEntries((bank.ideas || []).map(i => [i.id, i.science || null]));
+  const shown = t => !view || ((!t.part || String(t.part) === view.year)
+    && (view.sci === "all" || !t.idea || !sciOf[t.idea] || sciOf[t.idea] === view.sci));
   /* a new order from Grown-ups: start again from what's taught now */
   if (ctx.order?.updated && prefs.orderSeen !== ctx.order.updated) { prefs.topics = []; prefs.orderSeen = ctx.order.updated; }
   let selected = new Set((prefs.topics || []).filter(id => valid.has(id)));
+  /* nothing ticked in the year showing (e.g. just switched to Year 8): what's taught now there */
+  if (view && !bank.topics.some(t => selected.has(t.id) && shown(t))) {
+    const now = new Set((ctx.order || []).filter(o => o.status === "now").map(o => o.idea));
+    bank.topics.filter(t => t.idea && now.has(t.idea) && shown(t)).forEach(t => selected.add(t.id));
+  }
   if (!selected.size) {
     /* what's taught now, in the child's own school year (Year 8 = syllabus part 2) */
     const now = new Set((ctx.order || []).filter(o => o.status === "now").map(o => o.idea));
-    const part = /8/.test(profileById(activeProfileId())?.year || "") ? 2 : 1;
-    bank.topics.filter(t => !bank.ideas || !t.idea || (now.has(t.idea) && (!t.part || t.part === part)))
+    bank.topics.filter(t => !bank.ideas || !t.idea || (now.has(t.idea) && (!t.part || String(t.part) === ownYear)))
       .forEach(t => selected.add(t.id));
   }
 
@@ -337,7 +352,7 @@ function renderSetup(ctx) {
     <div class="run-bar"><h2>${esc(S.title)}</h2><span class="muted">${esc(bank.unit)}</span></div>
     ${bank.source ? `<p class="sci-source">${esc(bank.source)}</p>` : ""}
 
-    ${fixCards(bank, S, state, t => !t.idea || t.prep)}
+    ${fixCards(bank, S, state, t => (!t.idea || t.prep) && shown(t))}
 
     ${!bank.ideas && labelSets(bank).length ? `
     <div class="card setup-card">
@@ -369,10 +384,15 @@ function renderSetup(ctx) {
     <div class="card setup-card">
       <h3>1. Choose your topics</h3>
       <p class="muted" style="margin-top:calc(-1 * var(--sp-2));">Read the notes first, then practise. ${S.setupText || "Each topic has a diagram, key facts and key words."}</p>
-      ${topicPicker(bank, S, selected, masteredIn, state, ctx.order)}
+      ${view ? `
+      <div class="sci-filter">
+        <div class="seg" role="radiogroup" aria-label="School year">${seg("year", "1", "Year 7", view.year)}${seg("year", "2", "Year 8", view.year)}</div>
+        <div class="seg" role="radiogroup" aria-label="Science">${seg("sci", "all", "All", view.sci)}${SCIENCES.map(([k, l]) => seg("sci", k, l, view.sci)).join("")}</div>
+      </div>` : ""}
+      ${topicPicker(bank, S, selected, masteredIn, state, ctx.order, shown)}
       <p style="margin-bottom:0;">
         <button type="button" class="quiet" data-all>Select everything</button>
-        ${bank.topics.some(t => t.sheet) ? `<button type="button" class="quiet" data-sheet>Just the class sheets</button>` : ""}
+        ${bank.topics.some(t => t.sheet && shown(t)) ? `<button type="button" class="quiet" data-sheet>Just the class sheets</button>` : ""}
         <button type="button" class="quiet" data-none>Clear</button>
       </p>
     </div>
@@ -408,7 +428,7 @@ function renderSetup(ctx) {
   });
   const val = name => el.querySelector(`input[name="${name}"]:checked`)?.value;
 
-  const pool = () => bank.topics.filter(t => selected.has(t.id)).flatMap(t => t.questions.filter(quick).map(q => ({ ...q, topic: t })));
+  const pool = () => bank.topics.filter(t => selected.has(t.id) && shown(t)).flatMap(t => t.questions.filter(quick).map(q => ({ ...q, topic: t })));
 
   function refresh() {
     const qs = pool();
@@ -429,6 +449,16 @@ function renderSetup(ctx) {
 
   el.querySelector("[data-setup]").addEventListener("change", e => {
     const t = e.target;
+    if (view && t.name === "sci") {
+      prefs.sci = t.value;
+      saveStore();
+      return renderSetup(ctx);
+    }
+    /* the same school year as the start screen's (and the nav shows it) */
+    if (view && t.name === "year") {
+      setYear(YEAR[t.value]);
+      return window.dispatchEvent(new HashChangeEvent("hashchange"));
+    }
     if (t.dataset.topic) t.checked ? selected.add(t.dataset.topic) : selected.delete(t.dataset.topic);
     if (t.dataset.group) {
       el.querySelectorAll(`[data-topic][data-in~="${t.dataset.group}"]`).forEach(b => {
@@ -451,19 +481,19 @@ function renderSetup(ctx) {
     });
   }
   el.querySelector("[data-all]").addEventListener("click", () => {
-    bank.topics.forEach(t => selected.add(t.id));
+    bank.topics.filter(shown).forEach(t => selected.add(t.id));
     el.querySelectorAll("[data-topic]").forEach(b => { b.checked = true; });
     syncGroups();
     refresh();
   });
   el.querySelector("[data-sheet]")?.addEventListener("click", () => {
-    selected = new Set(bank.topics.filter(t => t.sheet).map(t => t.id));
+    selected = new Set(bank.topics.filter(t => t.sheet && shown(t)).map(t => t.id));
     el.querySelectorAll("[data-topic]").forEach(b => { b.checked = selected.has(b.dataset.topic); });
     syncGroups();
     refresh();
   });
   el.querySelector("[data-none]").addEventListener("click", () => {
-    selected = new Set();
+    bank.topics.filter(shown).forEach(t => selected.delete(t.id));
     el.querySelectorAll("[data-topic]").forEach(b => { b.checked = false; });
     syncGroups();
     refresh();
@@ -1261,7 +1291,7 @@ async function renderExplain(ctx, qid) {
    Subjects without "ideas" (maths, geography) keep the flat list.
 ========================= */
 
-function topicPicker(bank, S, selected, masteredIn, state, order) {
+function topicPicker(bank, S, selected, masteredIn, state, order, shown = () => true) {
   const sets = bank.ideas ? labelSets(bank) : [];
   /* Name the parts, inside each big idea's fold */
   const diagrams = list => list.length ? `
@@ -1292,50 +1322,47 @@ function topicPicker(bank, S, selected, masteredIn, state, order) {
 
   const byId = Object.fromEntries(bank.ideas.map(i => [i.id, i]));
   const ideas = (order || bank.ideas.map(i => ({ idea: i.id, status: "next" })))
-    .map(o => ({ idea: byId[o.idea], status: o.status, topics: bank.topics.filter(t => !t.sheet && t.idea === o.idea),
-      classwork: bank.topics.filter(t => t.sheet && t.idea === o.idea) }))
+    .map(o => ({ idea: byId[o.idea], status: o.status, topics: bank.topics.filter(t => !t.sheet && t.idea === o.idea && shown(t)),
+      classwork: bank.topics.filter(t => t.sheet && t.idea === o.idea && shown(t)) }))
     .filter(x => x.idea && (x.topics.length || x.classwork.length));
   const rank = { now: 0, next: 1, done: 2 };
   ideas.sort((a, b) => rank[a.status] - rank[b.status]);      // stable: keeps the grown-up's order within each
-  const heading = { now: "Now in class", next: "Coming up", done: "Already done — for revision" };
+  const badge = { now: "Now in class", next: "", done: "Done" };
   const loose = bank.topics.filter(t => !t.sheet && !t.idea);
+  const fold = ({ idea, topics, status, classwork }) => {
+    const all = [...classwork, ...topics];
+    const chosen = all.filter(t => selected.has(t.id)).length;
+    const subs = [...new Set(topics.map(t => t.sub || ""))];
+    const nSets = sets.filter(x => x.topic.idea === idea.id && shown(x.topic)).length;
+    return `
+    <details class="sci-idea sci-idea-${status}" ${chosen || status === "now" ? "open" : ""}>
+      <summary>
+        <span class="sci-idea-name">${esc(idea.title)}</span>
+        ${badge[status] ? `<span class="sci-badge sci-${status}">${badge[status]}</span>` : ""}
+        <span class="muted sci-idea-meta">${topics.length} topic${topics.length === 1 ? "" : "s"}${nSets ? ` · ${nSets} diagram${nSets === 1 ? "" : "s"}` : ""}</span>
+        <span class="muted sci-idea-count" data-count-of="i-${idea.id}">${chosen ? `${chosen} chosen` : ""}</span>
+      </summary>
+      ${fixCards(bank, S, state, t => t.idea === idea.id && !t.prep && shown(t))}
+      <label class="section-pick sci-idea-all"><input type="checkbox" data-group="i-${idea.id}"> <span>All of ${esc(idea.title)}</span></label>
+      ${diagrams(sets.filter(x => x.topic.idea === idea.id && shown(x.topic)))}
+      ${classwork.length ? `<div class="sci-year"><div class="section-grid">
+        <p class="section-group muted" style="border-top:0;">From class: sheets and tests</p>
+        ${classwork.map(t => row(t, `i-${idea.id}`)).join("")}</div></div>` : ""}
+      ${topics.length ? `<div class="sci-year"><div class="section-grid">
+        ${subs.map(sub => `
+          ${sub ? `<p class="section-group muted">${esc(sub)}</p>` : ""}
+          ${topics.filter(t => (t.sub || "") === sub).map(t => row(t, `i-${idea.id}`)).join("")}`).join("")}
+      </div></div>` : ""}
+    </details>`;
+  };
+  /* Biology, Chemistry, Physics; then ideas that belong to all three */
+  const groups = [...SCIENCES, [null, "All sciences"]]
+    .map(([k, label]) => [label, ideas.filter(x => (x.idea.science || null) === k)])
+    .filter(([, list]) => list.length);
   return `
     <div class="section-grid" style="margin-left:0;">${sheetHtml}</div>
     <div class="sci-ideas">
-      ${ideas.map(({ idea, topics, status, classwork }, n) => {
-        const all = [...classwork, ...topics];
-        const chosen = all.filter(t => selected.has(t.id)).length;
-        const parts = [1, 2].map(n => topics.filter(t => t.part === n)).filter(x => x.length);
-        return `
-        ${n === 0 || ideas[n - 1].status !== status ? `<p class="sci-idea-status sci-${status}">${heading[status]}</p>` : ""}
-        <details class="sci-idea sci-idea-${status}" ${chosen || status === "now" ? "open" : ""}>
-          <summary>
-            <span class="sci-idea-name">${esc(idea.title)}</span>
-            <span class="muted sci-idea-meta">${parts.map(p => YEAR[p[0].part]).join(" · ")} · ${topics.length} topic${topics.length === 1 ? "" : "s"}${(n => n ? ` · ${n} diagram${n === 1 ? "" : "s"}` : "")(sets.filter(x => x.topic.idea === idea.id).length)}</span>
-            <span class="muted sci-idea-count" data-count-of="i-${idea.id}">${chosen ? `${chosen} chosen` : ""}</span>
-          </summary>
-          ${fixCards(bank, S, state, t => t.idea === idea.id && !t.prep)}
-          <label class="section-pick sci-idea-all"><input type="checkbox" data-group="i-${idea.id}"> <span>All of ${esc(idea.title)}</span></label>
-          ${diagrams(sets.filter(x => x.topic.idea === idea.id))}
-          ${classwork.length ? `<div class="sci-year"><div class="section-grid">
-            <p class="section-group muted" style="border-top:0;">From class: sheets and tests</p>
-            ${classwork.map(t => row(t, `i-${idea.id}`)).join("")}</div></div>` : ""}
-          ${parts.map(list => {
-            const yr = `y-${idea.id}-${list[0].part}`;
-            const subs = [...new Set(list.map(t => t.sub || ""))];
-            return `
-            <div class="sci-year">
-              ${parts.length > 1 ? `<label class="section-pick sci-year-head"><input type="checkbox" data-group="${yr}"> <strong>${YEAR[list[0].part]}</strong></label>`
-                : `<p class="sci-year-head"><strong>${YEAR[list[0].part]}</strong></p>`}
-              <div class="section-grid">
-                ${subs.map(sub => `
-                  ${sub ? `<p class="section-group muted">${esc(sub)}</p>` : ""}
-                  ${list.filter(t => (t.sub || "") === sub).map(t => row(t, `i-${idea.id} ${yr}`)).join("")}`).join("")}
-              </div>
-            </div>`;
-          }).join("")}
-        </details>`;
-      }).join("")}
+      ${groups.map(([label, list]) => `<p class="sci-science-head">${esc(label)}</p>${list.map(fold).join("")}`).join("")}
     </div>
     ${loose.length ? `<div class="section-grid" style="margin-left:0;"><p class="section-group muted">More topics</p>${loose.map(t => row(t)).join("")}</div>` : ""}`;
 }

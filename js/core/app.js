@@ -5,8 +5,8 @@
    its own home and nav. A child only sees their own stages.
    ========================================================= */
 
-import { initStore, getStore, setLevel, getProfile } from "./store.js";
-import { stagesOf } from "./profiles.js";
+import { initStore, getStore, setLevel, getProfile, currentYear, setYear } from "./store.js";
+import { stagesOf, yearsOf } from "./profiles.js";
 import { renderYear1 } from "../views/year1/home.js";
 import { startActivity } from "./activity.js";
 import { loadContent } from "./loader.js";
@@ -99,8 +99,8 @@ function buildChrome(level, path, params) {
   const sw = document.createElement("a");
   sw.href = "#/start";
   sw.className = "level-switch";
-  sw.textContent = `${profile.name} ⇄`;
-  sw.title = "Someone else practising? Switch here";
+  sw.textContent = `${profile.name} · ${currentYear()} ⇄`;
+  sw.title = "Another year, or someone else practising? Switch here";
   nav.appendChild(sw);
 }
 
@@ -121,7 +121,8 @@ function route() {
 
   /* A deep link into the child's other stage switches stage. */
   if (match.level && match.level !== level) {
-    setLevel(match.level);
+    const y = yearsOf(profile).find(x => x.stage === match.level);
+    y ? setYear(y.year) : setLevel(match.level);
     level = match.level;
   }
 

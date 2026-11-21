@@ -18,19 +18,28 @@
    records so Grown-ups → Activity can show who practised.
    ========================================================= */
 
+/* The years a secondary child can pick after choosing their name:
+   their own first; Year 8 only changes science for now (the other
+   subjects are Year 7 material); Year 6 = the primary SATs area. */
+const SECONDARY_YEARS = [
+  { year: "Year 7", stage: "secondary", sub: "Languages, maths, science and geography" },
+  { year: "Year 8", stage: "secondary", sub: "Year 8 science (languages, maths and geography stay Year 7 for now)" },
+  { year: "Year 6", stage: "primary", sub: "SATs papers and practice" }
+];
+
 export const FAMILY = [
   { id: "oskar", name: "Oskar", year: "Year 1", stage: "year1", key: "studyden_oskar",
     sub: "Sounds, reading words and tricky words", subject: "phonics", family: true },
   { id: "finn", name: "Finn", year: "Year 7", stage: "secondary", key: "ks2_sats_v2",
     sub: "Languages, maths, science and geography", subject: "german", family: true,
-    stages: ["secondary", "primary"] }     // can still open the Year 6 SATs area
+    stages: ["secondary", "primary"], years: SECONDARY_YEARS }     // can still open the Year 6 SATs area
 ];
 
 /* What a guest can pick (Year 1 stays for the family). */
 export const GUEST_YEARS = [
   { year: "Year 6", stage: "primary", sub: "SATs papers and practice", subject: "reading" },
   { year: "Year 7", stage: "secondary", sub: "Languages, maths, science and geography", subject: "german",
-    stages: ["secondary", "primary"] }
+    stages: ["secondary", "primary"], years: SECONDARY_YEARS }
 ];
 
 const ACTIVE_KEY = "studyden_profile";
@@ -86,7 +95,7 @@ export function removeGuest(id) {
 
 function guestProfile(g) {
   const y = GUEST_YEARS.find(x => x.year === g.year) || GUEST_YEARS[1];
-  return { id: g.id, name: g.name, year: y.year, stage: y.stage, stages: y.stages, key: `studyden_${g.id}`,
+  return { id: g.id, name: g.name, year: y.year, stage: y.stage, stages: y.stages, years: y.years, key: `studyden_${g.id}`,
     sub: y.sub, subject: y.subject, guest: true };
 }
 
@@ -111,6 +120,9 @@ export function activeProfileId() {
 export function rememberProfile(id) {
   try { localStorage.setItem(ACTIVE_KEY, id); } catch { /* private mode: lasts this visit */ }
 }
+
+/* Years a child may pick at the start, their own first; one = no choice. */
+export const yearsOf = p => (p ? p.years || [{ year: p.year, stage: p.stage, sub: p.sub }] : []);
 
 /* Stages a child may use (their own first). */
 export const stagesOf = p => (p ? p.stages || [p.stage] : []);

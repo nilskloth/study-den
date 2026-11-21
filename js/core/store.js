@@ -12,7 +12,7 @@
    ========================================================= */
 
 import { noteAttempt } from "./activity.js";
-import { deviceProfiles, profileById, activeProfileId, rememberProfile } from "./profiles.js";
+import { deviceProfiles, profileById, activeProfileId, rememberProfile, yearsOf } from "./profiles.js";
 
 const FIRST_KEY = "ks2_sats_v2";          // Finn's — everything from before profiles
 let KEY = FIRST_KEY;
@@ -28,7 +28,8 @@ function defaultStore() {
       proxyToken: "",
       dailyMinutes: 15,
       examDate: "2027-05-11",
-      level: null          // stage in use: "year1" | "primary" | "secondary" (profile's own by default)
+      level: null,         // stage in use: "year1" | "primary" | "secondary" (profile's own by default)
+      year: null           // school year picked at the start ("Year 7", "Year 8", "Year 6"); its stage = level
     },
     attempts: [],        // { id, ts, mode, paperId?, seconds, items:[{qid, domain, subject, marks, earned, marking}] }
     domainStats: {},     // "reading.2d" -> { attempts, marksSeen, marksEarned, ewma, lastSeen }
@@ -116,6 +117,23 @@ export function setProfile(id) {
   rememberProfile(p.id);
   initStore();
   if (!store.settings.level) { store.settings.level = p.stage; saveStore(); }
+}
+
+/* The school year in use: the one picked at the start if it fits the
+   stage in use, else the first of the child's years in that stage. */
+export function currentYear() {
+  const ys = yearsOf(profile);
+  const level = store?.settings.level || profile?.stage;
+  return (ys.find(y => y.year === store?.settings.year && y.stage === level) || ys.find(y => y.stage === level) || ys[0])?.year || "";
+}
+
+/* Pick a school year (start screen, science's year switch): also its stage. */
+export function setYear(year) {
+  const y = yearsOf(profile).find(x => x.year === year);
+  if (!y) return;
+  store.settings.year = y.year;
+  store.settings.level = y.stage;
+  saveStore();
 }
 
 /* Another child's saved progress, read-only (Grown-ups). */

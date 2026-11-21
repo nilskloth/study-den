@@ -661,6 +661,12 @@ button.hear { padding: var(--sp-1) var(--sp-2); font-size: var(--fs-3); line-hei
 /* Science: big ideas by teaching status; Grown-ups → Science order */
 .sci-idea-status { margin: var(--sp-3) 0 0; font-size: var(--fs-0); font-weight: 650; color: var(--ink-muted); text-transform: uppercase; letter-spacing: .04em; }
 .sci-idea-status.sci-now { color: var(--subject, var(--accent)); }
+.start-years-head { margin: var(--sp-4) 0 var(--sp-2); }
+.sci-filter { display: flex; flex-wrap: wrap; gap: var(--sp-2) var(--sp-3); margin: 0 0 var(--sp-2); }
+.sci-science-head { margin: var(--sp-3) 0 0; font-size: var(--fs-0); font-weight: 650; color: var(--ink-muted); text-transform: uppercase; letter-spacing: .04em; }
+.sci-science-head:first-child { margin-top: 0; }
+.sci-badge { font-size: var(--fs-0); font-weight: 600; padding: 0 var(--sp-2); border-radius: 999px; border: 1px solid var(--line); color: var(--ink-muted); }
+.sci-badge.sci-now { border-color: var(--subject, var(--accent)); color: var(--subject, var(--accent)); }
 .sci-idea-now { border-color: var(--subject, var(--accent)); border-width: 2px; }
 .sci-idea-done > summary .sci-idea-name { color: var(--ink-muted); }
 .sci-idea .sci-fix { margin: 0 var(--sp-3) var(--sp-3); box-shadow: none; }

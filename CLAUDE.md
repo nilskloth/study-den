@@ -116,6 +116,11 @@ docs/REBUILD_PLAN.md    # v2 decisions, SATs standards, schema, phases
   or Year 7 (`secondary` + `primary`), no Year 1; id `g` + 8 random letters; saved only on the device
   (`studyden_guests`). The names Finn/Oskar are refused for guests. Same name + year = same guest.
   Grown-ups can remove a guest from the device (deletes their progress there).
+- **School years (`years` on a profile, `yearsOf(p)`):** Finn and Year 7 guests have Year 7 · Year 8 · Year 6 (primary).
+  Choosing such a child goes to `#/start/year`: the last used year first ("Year 7 — carry on"), the others beneath.
+  The pick is `settings.year` (+ its stage as `settings.level`) via `setYear`; `currentYear()` reads it (falls back to
+  the first year in the stage in use). The nav button shows "Finn · Year 8 ⇄". Year 8 only changes science for now
+  (Year 8 science topics); a deep link into primary sets Year 6. One-year children (Oskar, Year 6 guests) skip the page.
 - The router sends a child only to their own `stages`; another stage's URL goes to their home.
   Grown-ups works without a child chosen.
 - The shared key (`settings.proxyToken`) belongs to the device: `setProxyToken` writes it into
@@ -289,7 +294,11 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
 ## Secondary: science revision (`views/secondary/revision.js` with `SCIENCE`, `#/secondary/science[/learn/<topicId>|/label/<diagram>|/explain[/<id>]]`)
 - **Whole AQA KS3 syllabus (Activate for AQA in class):** `science.json` `ideas` = the 10 big ideas + "Working
   scientifically"; every non-sheet topic has `idea`, `part` (1 = Year 7, 2 = Year 8) and `sub` (the syllabus topic,
-  e.g. "Speed"). The picker folds per big idea → year → syllabus topic ("All of …" boxes). Inside each fold: its
+  e.g. "Speed"). Each idea has `science` (biology | chemistry | physics; Working scientifically has none = every filter).
+  The picker has a **Year 7 | Year 8** switch (= the start screen's year, `setYear`) and **All | Biology | Chemistry | Physics**
+  (`prefs.sci`); only what's showing is practised — ticks elsewhere stay saved. Below: Biology / Chemistry / Physics headings,
+  one fold per big idea (Now ones open, "Now in class" badge) → syllabus topic ("All of …" boxes). A year with nothing
+  ticked gets its Now ideas ticked. Inside each fold: its
   Fix my test card, "Name the parts" chips, then "From class" (sheet/test topics with that `idea`), then the years.
 - **Teaching order (Grown-ups → "Science: what's taught when"):** the parent orders the big ideas and marks each
   Now / Coming up / Done; saved by `api/track.php` op `science-order` (upload password) to

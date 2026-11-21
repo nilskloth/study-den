@@ -6,43 +6,53 @@
  "ideas": [
   {
    "id": "forces",
-   "title": "Forces"
+   "title": "Forces",
+   "science": "physics"
   },
   {
    "id": "electromagnets",
-   "title": "Electromagnets"
+   "title": "Electromagnets",
+   "science": "physics"
   },
   {
    "id": "energy",
-   "title": "Energy"
+   "title": "Energy",
+   "science": "physics"
   },
   {
    "id": "waves",
-   "title": "Waves"
+   "title": "Waves",
+   "science": "physics"
   },
   {
    "id": "matter",
-   "title": "Matter"
+   "title": "Matter",
+   "science": "chemistry"
   },
   {
    "id": "reactions",
-   "title": "Reactions"
+   "title": "Reactions",
+   "science": "chemistry"
   },
   {
    "id": "earth",
-   "title": "Earth"
+   "title": "Earth",
+   "science": "chemistry"
   },
   {
    "id": "organisms",
-   "title": "Organisms"
+   "title": "Organisms",
+   "science": "biology"
   },
   {
    "id": "ecosystems",
-   "title": "Ecosystems"
+   "title": "Ecosystems",
+   "science": "biology"
   },
   {
    "id": "genes",
-   "title": "Genes"
+   "title": "Genes",
+   "science": "biology"
   },
   {
    "id": "enquiry",
