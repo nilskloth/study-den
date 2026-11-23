@@ -2,7 +2,7 @@
   "language": "fr",
   "label": "French",
   "imported": "2026-10-27",
-  "source": "Y7 French Half-Term 1 Revision Worksheet (sections marked extra are not on the sheet; family, pets, birthdays and hobbies follow the other units of the class course’s first module)",
+  "source": "Y7 French Half-Term 1 Revision Worksheet and the Unité 1 (pages 36–37) list for half-term 2 (sections marked extra are not on the sheets; family, pets, birthdays and hobbies follow the other units of the class course’s first module)",
   "chapters": [
     {
       "id": "k1",
@@ -1168,6 +1168,200 @@
               "id": "fr-k1-et-toi",
               "fr": "Et toi ?",
               "en": "And you?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "k2",
+      "number": 2,
+      "title": "Qu’est-ce que tu penses de tes matières ?",
+      "pages": "36–37",
+      "sections": [
+        {
+          "id": "k2-s1",
+          "title": "Les matières",
+          "en": "Subjects",
+          "items": [
+            {
+              "id": "fr-k2-quest-ce-que-tu-penses-de-tes-matieres",
+              "fr": "Qu’est-ce que tu penses de tes matières ?",
+              "en": "What do you think of your subjects?"
+            },
+            {
+              "id": "fr-k2-le-francais",
+              "fr": "le français",
+              "en": "French"
+            },
+            {
+              "id": "fr-k2-le-theatre",
+              "fr": "le théâtre",
+              "en": "drama"
+            },
+            {
+              "id": "fr-k2-la-geographie",
+              "fr": "la géographie",
+              "en": "geography"
+            },
+            {
+              "id": "fr-k2-la-musique",
+              "fr": "la musique",
+              "en": "music"
+            },
+            {
+              "id": "fr-k2-la-technologie",
+              "fr": "la technologie",
+              "en": "technology"
+            },
+            {
+              "id": "fr-k2-langlais",
+              "fr": "l’anglais",
+              "en": "English"
+            },
+            {
+              "id": "fr-k2-leps",
+              "fr": "l’EPS",
+              "en": "P.E."
+            },
+            {
+              "id": "fr-k2-lhistoire",
+              "fr": "l’histoire",
+              "en": "history"
+            },
+            {
+              "id": "fr-k2-linformatique",
+              "fr": "l’informatique",
+              "en": "I.C.T."
+            },
+            {
+              "id": "fr-k2-les-arts-plastiques",
+              "fr": "les arts plastiques",
+              "en": "art"
+            },
+            {
+              "id": "fr-k2-les-maths",
+              "fr": "les maths",
+              "en": "maths"
+            },
+            {
+              "id": "fr-k2-les-sciences",
+              "fr": "les sciences",
+              "en": "science"
+            }
+          ]
+        },
+        {
+          "id": "k2-s2",
+          "title": "J’adore … / Je déteste …",
+          "en": "Likes and dislikes",
+          "items": [
+            {
+              "id": "fr-k2-aimer",
+              "fr": "aimer",
+              "en": "to like"
+            },
+            {
+              "id": "fr-k2-detester",
+              "fr": "détester",
+              "en": "to hate"
+            },
+            {
+              "id": "fr-k2-adorer",
+              "fr": "adorer",
+              "en": "to love"
+            },
+            {
+              "id": "fr-k2-tu-aimes",
+              "fr": "Tu aimes … ?",
+              "en": "Do you like …?"
+            },
+            {
+              "id": "fr-k2-jadore",
+              "fr": "j’adore …",
+              "en": "I love …"
+            },
+            {
+              "id": "fr-k2-jaime",
+              "fr": "j’aime …",
+              "en": "I like …"
+            },
+            {
+              "id": "fr-k2-jaime-assez",
+              "fr": "j’aime assez …",
+              "en": "I quite like …"
+            },
+            {
+              "id": "fr-k2-je-naime-pas",
+              "fr": "je n’aime pas …",
+              "en": "I don’t like …"
+            },
+            {
+              "id": "fr-k2-je-deteste",
+              "fr": "je déteste …",
+              "en": "I hate …"
+            }
+          ]
+        },
+        {
+          "id": "k2-s3",
+          "title": "C’est …",
+          "en": "Opinions",
+          "items": [
+            {
+              "id": "fr-k2-cest",
+              "fr": "C’est …",
+              "en": "It’s …"
+            },
+            {
+              "id": "fr-k2-facile",
+              "fr": "facile",
+              "en": "easy"
+            },
+            {
+              "id": "fr-k2-difficile",
+              "fr": "difficile",
+              "en": "difficult/hard"
+            },
+            {
+              "id": "fr-k2-interessant",
+              "fr": "intéressant",
+              "en": "interesting"
+            },
+            {
+              "id": "fr-k2-ennuyeux",
+              "fr": "ennuyeux",
+              "en": "boring"
+            },
+            {
+              "id": "fr-k2-amusant",
+              "fr": "amusant",
+              "en": "fun/funny"
+            },
+            {
+              "id": "fr-k2-creatif",
+              "fr": "créatif",
+              "en": "creative"
+            },
+            {
+              "id": "fr-k2-nul",
+              "fr": "nul",
+              "en": "rubbish/awful"
+            },
+            {
+              "id": "fr-k2-le-la-prof-est-sympa",
+              "fr": "le/la prof est sympa",
+              "en": "the teacher is kind"
+            },
+            {
+              "id": "fr-k2-le-la-prof-est-trop-severe",
+              "fr": "le/la prof est trop sévère",
+              "en": "the teacher is too strict"
+            },
+            {
+              "id": "fr-k2-jai-trop-de-devoirs",
+              "fr": "j’ai trop de devoirs",
+              "en": "I have too much homework"
             }
           ]
         }
