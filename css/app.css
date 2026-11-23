@@ -604,6 +604,8 @@ button.hear { padding: var(--sp-1) var(--sp-2); font-size: var(--fs-3); line-hei
 .y1-sound-btn { font-family: var(--font-paper); font-size: var(--fs-3); min-width: 56px; min-height: 52px; border-radius: 10px; }
 .y1-set-picks { display: flex; flex-wrap: wrap; gap: var(--sp-2); }
 .y1-chip { display: inline-flex; align-items: center; gap: var(--sp-2); padding: var(--sp-2) var(--sp-3); border: 1px solid var(--line); border-radius: 999px; background: #fff; cursor: pointer; }
+.y1-list-head { margin: var(--sp-6) 0 var(--sp-2); }
+.y1-list-head .muted { font-size: var(--fs-sm, 0.9rem); font-weight: normal; }
 .y1-tricky-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: var(--sp-3); margin-top: var(--sp-4); }
 .y1-tricky-card { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--sp-1); padding: var(--sp-3) var(--sp-2); min-height: 120px; background: #fff; border-radius: 12px; }
 .y1-tricky-card .y1-word { font-size: 40px; }

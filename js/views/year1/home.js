@@ -6,7 +6,8 @@
      #/year1/alien          real word or alien word?
      #/year1/listen         which word did you hear?
      #/year1/tricky[/…]     tricky words (views/year1/tricky.js)
-   Content: data/content/year1/phonics.json, tricky.json.
+     #/year1/words[/…]      words to know, the school word cards (views/year1/hfw.js)
+   Content: data/content/year1/phonics.json, tricky.json, hfw.json.
    Speech: real words are read by the en-GB voice; single sounds
    and alien words are not (a computer voice says them wrongly) —
    those are checked by the child or a grown-up.
@@ -17,6 +18,7 @@ import { esc, shuffle, pickN } from "../../core/utils.js";
 import { speak, canSpeak } from "../../core/speech.js";
 import { loadYear1, wordHtml, runRounds, selfCheck, pickAdaptive, masteredCount } from "./word.js";
 import { renderTricky } from "./tricky.js";
+import { renderWords } from "./hfw.js";
 
 const ROUNDS = 10;
 const say = text => speak(text, "en-GB", { slow: true });
@@ -37,6 +39,7 @@ export async function renderYear1(el, params = []) {
   }
   const [page, ...rest] = params;
   if (page === "tricky") return renderTricky(el, rest);
+  if (page === "words") return renderWords(el, rest);
   if (page === "sounds") return renderSounds(el, ph);
   if (page === "read") return setupWords(el, ph, "read");
   if (page === "alien") return setupWords(el, ph, "alien");
@@ -53,6 +56,8 @@ async function renderHub(el, ph) {
   const real = ph.words.filter(w => w.real);
   let tricky = [];
   try { tricky = (await loadYear1("tricky")).words; } catch { /* shows 0 */ }
+  let hfw = [];
+  try { hfw = (await loadYear1("hfw")).words; } catch { /* shows 0 */ }
   const card = (href, subject, title, sub) => `
     <a class="subject-card y1-hub-card" href="${href}" data-subject="${subject}">
       <div class="subject-card-band"></div>
@@ -69,6 +74,7 @@ async function renderHub(el, ph) {
       ${card("#/year1/alien", "phonics", "Real or alien?", "Is it a real word, or a made-up one?")}
       ${canSpeak() ? card("#/year1/listen", "phonics", "Which word?", `Listen and find the word · ${real.length} words`) : ""}
       ${card("#/year1/tricky", "tricky", "Tricky words", `${masteredCount(tricky, w => `t:${w.id}`)} of ${tricky.length} known`)}
+      ${card("#/year1/words", "tricky", "Words to know", `From the school word cards · ${masteredCount(hfw, w => `hr:${w.id}`)} of ${hfw.length} read`)}
     </div>`;
 }
 

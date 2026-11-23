@@ -144,6 +144,11 @@ docs/REBUILD_PLAN.md    # v2 decisions, SATs standards, schema, phases
   alien words (`a-…`) are made up, like the Year 1 phonics screening check — make sure new ones
   aren't real or rude words.
 - **tricky.json:** the 45 Year 1 common exception words: `{ id, word, g, tricky[], why, sentence }`.
+- **hfw.json (Words to know, `views/year1/hfw.js`, `#/year1/words[/read|find/<listId|all>]`):** the school's word cards, words exactly
+  as printed: `first100` (red card "Words I need to know" = Letters and Sounds first 100 high-frequency words) and `next200`
+  (purple card, king … yes = the k–y half of the next 200 common words; the a–j half not sent yet). `{ lists, words: [{ id, word, list }] }`,
+  shown whole (no sound buttons). Read it (self-check, 🔊 to check) and Find it (hear → pick from 4, look-alikes first);
+  stats `hr:` / `hf:`, recorded as subject `tricky`, modes `y1-words-read` / `y1-words-find`.
 - **Speech:** the en-GB voice reads real words and sentences only — never single sounds or alien
   words (it says them wrongly); those are self-checked ("✓ I got it" / "Not yet", or a grown-up listens).
 - **Rounds:** 10 per go, a star per right answer, adaptive per item in `store.year1.stats`

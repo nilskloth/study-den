@@ -1,0 +1,1058 @@
+{
+  "title": "Words to know",
+  "note": "The school's word cards: the first 100 high-frequency words (“Words I need to know”, red card) and the next common words (purple card, k–y). Exactly as printed on the cards.",
+  "lists": [
+    {
+      "id": "first100",
+      "title": "Words I need to know",
+      "sub": "The first 100 words (red card)"
+    },
+    {
+      "id": "next200",
+      "title": "Next words",
+      "sub": "king … yes (purple card)"
+    }
+  ],
+  "words": [
+    {
+      "id": "a",
+      "word": "a",
+      "list": "first100"
+    },
+    {
+      "id": "about",
+      "word": "about",
+      "list": "first100"
+    },
+    {
+      "id": "all",
+      "word": "all",
+      "list": "first100"
+    },
+    {
+      "id": "an",
+      "word": "an",
+      "list": "first100"
+    },
+    {
+      "id": "and",
+      "word": "and",
+      "list": "first100"
+    },
+    {
+      "id": "are",
+      "word": "are",
+      "list": "first100"
+    },
+    {
+      "id": "as",
+      "word": "as",
+      "list": "first100"
+    },
+    {
+      "id": "asked",
+      "word": "asked",
+      "list": "first100"
+    },
+    {
+      "id": "at",
+      "word": "at",
+      "list": "first100"
+    },
+    {
+      "id": "back",
+      "word": "back",
+      "list": "first100"
+    },
+    {
+      "id": "be",
+      "word": "be",
+      "list": "first100"
+    },
+    {
+      "id": "big",
+      "word": "big",
+      "list": "first100"
+    },
+    {
+      "id": "but",
+      "word": "but",
+      "list": "first100"
+    },
+    {
+      "id": "by",
+      "word": "by",
+      "list": "first100"
+    },
+    {
+      "id": "called",
+      "word": "called",
+      "list": "first100"
+    },
+    {
+      "id": "came",
+      "word": "came",
+      "list": "first100"
+    },
+    {
+      "id": "can",
+      "word": "can",
+      "list": "first100"
+    },
+    {
+      "id": "children",
+      "word": "children",
+      "list": "first100"
+    },
+    {
+      "id": "come",
+      "word": "come",
+      "list": "first100"
+    },
+    {
+      "id": "could",
+      "word": "could",
+      "list": "first100"
+    },
+    {
+      "id": "dad",
+      "word": "dad",
+      "list": "first100"
+    },
+    {
+      "id": "day",
+      "word": "day",
+      "list": "first100"
+    },
+    {
+      "id": "do",
+      "word": "do",
+      "list": "first100"
+    },
+    {
+      "id": "don-t",
+      "word": "don’t",
+      "list": "first100"
+    },
+    {
+      "id": "down",
+      "word": "down",
+      "list": "first100"
+    },
+    {
+      "id": "for",
+      "word": "for",
+      "list": "first100"
+    },
+    {
+      "id": "from",
+      "word": "from",
+      "list": "first100"
+    },
+    {
+      "id": "get",
+      "word": "get",
+      "list": "first100"
+    },
+    {
+      "id": "go",
+      "word": "go",
+      "list": "first100"
+    },
+    {
+      "id": "got",
+      "word": "got",
+      "list": "first100"
+    },
+    {
+      "id": "had",
+      "word": "had",
+      "list": "first100"
+    },
+    {
+      "id": "have",
+      "word": "have",
+      "list": "first100"
+    },
+    {
+      "id": "he",
+      "word": "he",
+      "list": "first100"
+    },
+    {
+      "id": "help",
+      "word": "help",
+      "list": "first100"
+    },
+    {
+      "id": "her",
+      "word": "her",
+      "list": "first100"
+    },
+    {
+      "id": "here",
+      "word": "here",
+      "list": "first100"
+    },
+    {
+      "id": "him",
+      "word": "him",
+      "list": "first100"
+    },
+    {
+      "id": "his",
+      "word": "his",
+      "list": "first100"
+    },
+    {
+      "id": "house",
+      "word": "house",
+      "list": "first100"
+    },
+    {
+      "id": "i",
+      "word": "I",
+      "list": "first100"
+    },
+    {
+      "id": "i-m",
+      "word": "I’m",
+      "list": "first100"
+    },
+    {
+      "id": "if",
+      "word": "if",
+      "list": "first100"
+    },
+    {
+      "id": "in",
+      "word": "in",
+      "list": "first100"
+    },
+    {
+      "id": "into",
+      "word": "into",
+      "list": "first100"
+    },
+    {
+      "id": "is",
+      "word": "is",
+      "list": "first100"
+    },
+    {
+      "id": "it",
+      "word": "it",
+      "list": "first100"
+    },
+    {
+      "id": "it-s",
+      "word": "it’s",
+      "list": "first100"
+    },
+    {
+      "id": "just",
+      "word": "just",
+      "list": "first100"
+    },
+    {
+      "id": "like",
+      "word": "like",
+      "list": "first100"
+    },
+    {
+      "id": "little",
+      "word": "little",
+      "list": "first100"
+    },
+    {
+      "id": "look",
+      "word": "look",
+      "list": "first100"
+    },
+    {
+      "id": "looked",
+      "word": "looked",
+      "list": "first100"
+    },
+    {
+      "id": "made",
+      "word": "made",
+      "list": "first100"
+    },
+    {
+      "id": "make",
+      "word": "make",
+      "list": "first100"
+    },
+    {
+      "id": "me",
+      "word": "me",
+      "list": "first100"
+    },
+    {
+      "id": "mr",
+      "word": "Mr",
+      "list": "first100"
+    },
+    {
+      "id": "mrs",
+      "word": "Mrs",
+      "list": "first100"
+    },
+    {
+      "id": "mum",
+      "word": "mum",
+      "list": "first100"
+    },
+    {
+      "id": "my",
+      "word": "my",
+      "list": "first100"
+    },
+    {
+      "id": "no",
+      "word": "no",
+      "list": "first100"
+    },
+    {
+      "id": "not",
+      "word": "not",
+      "list": "first100"
+    },
+    {
+      "id": "now",
+      "word": "now",
+      "list": "first100"
+    },
+    {
+      "id": "of",
+      "word": "of",
+      "list": "first100"
+    },
+    {
+      "id": "off",
+      "word": "off",
+      "list": "first100"
+    },
+    {
+      "id": "oh",
+      "word": "oh",
+      "list": "first100"
+    },
+    {
+      "id": "old",
+      "word": "old",
+      "list": "first100"
+    },
+    {
+      "id": "on",
+      "word": "on",
+      "list": "first100"
+    },
+    {
+      "id": "one",
+      "word": "one",
+      "list": "first100"
+    },
+    {
+      "id": "out",
+      "word": "out",
+      "list": "first100"
+    },
+    {
+      "id": "people",
+      "word": "people",
+      "list": "first100"
+    },
+    {
+      "id": "put",
+      "word": "put",
+      "list": "first100"
+    },
+    {
+      "id": "said",
+      "word": "said",
+      "list": "first100"
+    },
+    {
+      "id": "saw",
+      "word": "saw",
+      "list": "first100"
+    },
+    {
+      "id": "see",
+      "word": "see",
+      "list": "first100"
+    },
+    {
+      "id": "she",
+      "word": "she",
+      "list": "first100"
+    },
+    {
+      "id": "so",
+      "word": "so",
+      "list": "first100"
+    },
+    {
+      "id": "some",
+      "word": "some",
+      "list": "first100"
+    },
+    {
+      "id": "that",
+      "word": "that",
+      "list": "first100"
+    },
+    {
+      "id": "the",
+      "word": "the",
+      "list": "first100"
+    },
+    {
+      "id": "their",
+      "word": "their",
+      "list": "first100"
+    },
+    {
+      "id": "them",
+      "word": "them",
+      "list": "first100"
+    },
+    {
+      "id": "then",
+      "word": "then",
+      "list": "first100"
+    },
+    {
+      "id": "there",
+      "word": "there",
+      "list": "first100"
+    },
+    {
+      "id": "they",
+      "word": "they",
+      "list": "first100"
+    },
+    {
+      "id": "this",
+      "word": "this",
+      "list": "first100"
+    },
+    {
+      "id": "time",
+      "word": "time",
+      "list": "first100"
+    },
+    {
+      "id": "to",
+      "word": "to",
+      "list": "first100"
+    },
+    {
+      "id": "too",
+      "word": "too",
+      "list": "first100"
+    },
+    {
+      "id": "up",
+      "word": "up",
+      "list": "first100"
+    },
+    {
+      "id": "very",
+      "word": "very",
+      "list": "first100"
+    },
+    {
+      "id": "was",
+      "word": "was",
+      "list": "first100"
+    },
+    {
+      "id": "we",
+      "word": "we",
+      "list": "first100"
+    },
+    {
+      "id": "went",
+      "word": "went",
+      "list": "first100"
+    },
+    {
+      "id": "were",
+      "word": "were",
+      "list": "first100"
+    },
+    {
+      "id": "what",
+      "word": "what",
+      "list": "first100"
+    },
+    {
+      "id": "when",
+      "word": "when",
+      "list": "first100"
+    },
+    {
+      "id": "will",
+      "word": "will",
+      "list": "first100"
+    },
+    {
+      "id": "with",
+      "word": "with",
+      "list": "first100"
+    },
+    {
+      "id": "you",
+      "word": "you",
+      "list": "first100"
+    },
+    {
+      "id": "your",
+      "word": "your",
+      "list": "first100"
+    },
+    {
+      "id": "king",
+      "word": "king",
+      "list": "next200"
+    },
+    {
+      "id": "know",
+      "word": "know",
+      "list": "next200"
+    },
+    {
+      "id": "last",
+      "word": "last",
+      "list": "next200"
+    },
+    {
+      "id": "laughed",
+      "word": "laughed",
+      "list": "next200"
+    },
+    {
+      "id": "let",
+      "word": "let",
+      "list": "next200"
+    },
+    {
+      "id": "let-s",
+      "word": "let’s",
+      "list": "next200"
+    },
+    {
+      "id": "liked",
+      "word": "liked",
+      "list": "next200"
+    },
+    {
+      "id": "live",
+      "word": "live",
+      "list": "next200"
+    },
+    {
+      "id": "lived",
+      "word": "lived",
+      "list": "next200"
+    },
+    {
+      "id": "long",
+      "word": "long",
+      "list": "next200"
+    },
+    {
+      "id": "looking",
+      "word": "looking",
+      "list": "next200"
+    },
+    {
+      "id": "looks",
+      "word": "looks",
+      "list": "next200"
+    },
+    {
+      "id": "lots",
+      "word": "lots",
+      "list": "next200"
+    },
+    {
+      "id": "magic",
+      "word": "magic",
+      "list": "next200"
+    },
+    {
+      "id": "man",
+      "word": "man",
+      "list": "next200"
+    },
+    {
+      "id": "many",
+      "word": "many",
+      "list": "next200"
+    },
+    {
+      "id": "may",
+      "word": "may",
+      "list": "next200"
+    },
+    {
+      "id": "miss",
+      "word": "miss",
+      "list": "next200"
+    },
+    {
+      "id": "more",
+      "word": "more",
+      "list": "next200"
+    },
+    {
+      "id": "morning",
+      "word": "morning",
+      "list": "next200"
+    },
+    {
+      "id": "most",
+      "word": "most",
+      "list": "next200"
+    },
+    {
+      "id": "mother",
+      "word": "mother",
+      "list": "next200"
+    },
+    {
+      "id": "mouse",
+      "word": "mouse",
+      "list": "next200"
+    },
+    {
+      "id": "much",
+      "word": "much",
+      "list": "next200"
+    },
+    {
+      "id": "must",
+      "word": "must",
+      "list": "next200"
+    },
+    {
+      "id": "narrator",
+      "word": "narrator",
+      "list": "next200"
+    },
+    {
+      "id": "need",
+      "word": "need",
+      "list": "next200"
+    },
+    {
+      "id": "never",
+      "word": "never",
+      "list": "next200"
+    },
+    {
+      "id": "new",
+      "word": "new",
+      "list": "next200"
+    },
+    {
+      "id": "next",
+      "word": "next",
+      "list": "next200"
+    },
+    {
+      "id": "night",
+      "word": "night",
+      "list": "next200"
+    },
+    {
+      "id": "once",
+      "word": "once",
+      "list": "next200"
+    },
+    {
+      "id": "only",
+      "word": "only",
+      "list": "next200"
+    },
+    {
+      "id": "or",
+      "word": "or",
+      "list": "next200"
+    },
+    {
+      "id": "other",
+      "word": "other",
+      "list": "next200"
+    },
+    {
+      "id": "our",
+      "word": "our",
+      "list": "next200"
+    },
+    {
+      "id": "over",
+      "word": "over",
+      "list": "next200"
+    },
+    {
+      "id": "park",
+      "word": "park",
+      "list": "next200"
+    },
+    {
+      "id": "place",
+      "word": "place",
+      "list": "next200"
+    },
+    {
+      "id": "plants",
+      "word": "plants",
+      "list": "next200"
+    },
+    {
+      "id": "play",
+      "word": "play",
+      "list": "next200"
+    },
+    {
+      "id": "please",
+      "word": "please",
+      "list": "next200"
+    },
+    {
+      "id": "pulled",
+      "word": "pulled",
+      "list": "next200"
+    },
+    {
+      "id": "queen",
+      "word": "queen",
+      "list": "next200"
+    },
+    {
+      "id": "rabbit",
+      "word": "rabbit",
+      "list": "next200"
+    },
+    {
+      "id": "ran",
+      "word": "ran",
+      "list": "next200"
+    },
+    {
+      "id": "really",
+      "word": "really",
+      "list": "next200"
+    },
+    {
+      "id": "red",
+      "word": "red",
+      "list": "next200"
+    },
+    {
+      "id": "right",
+      "word": "right",
+      "list": "next200"
+    },
+    {
+      "id": "river",
+      "word": "river",
+      "list": "next200"
+    },
+    {
+      "id": "room",
+      "word": "room",
+      "list": "next200"
+    },
+    {
+      "id": "round",
+      "word": "round",
+      "list": "next200"
+    },
+    {
+      "id": "run",
+      "word": "run",
+      "list": "next200"
+    },
+    {
+      "id": "sat",
+      "word": "sat",
+      "list": "next200"
+    },
+    {
+      "id": "say",
+      "word": "say",
+      "list": "next200"
+    },
+    {
+      "id": "school",
+      "word": "school",
+      "list": "next200"
+    },
+    {
+      "id": "sea",
+      "word": "sea",
+      "list": "next200"
+    },
+    {
+      "id": "shouted",
+      "word": "shouted",
+      "list": "next200"
+    },
+    {
+      "id": "sleep",
+      "word": "sleep",
+      "list": "next200"
+    },
+    {
+      "id": "small",
+      "word": "small",
+      "list": "next200"
+    },
+    {
+      "id": "snow",
+      "word": "snow",
+      "list": "next200"
+    },
+    {
+      "id": "something",
+      "word": "something",
+      "list": "next200"
+    },
+    {
+      "id": "soon",
+      "word": "soon",
+      "list": "next200"
+    },
+    {
+      "id": "still",
+      "word": "still",
+      "list": "next200"
+    },
+    {
+      "id": "stop",
+      "word": "stop",
+      "list": "next200"
+    },
+    {
+      "id": "stopped",
+      "word": "stopped",
+      "list": "next200"
+    },
+    {
+      "id": "suddenly",
+      "word": "suddenly",
+      "list": "next200"
+    },
+    {
+      "id": "sun",
+      "word": "sun",
+      "list": "next200"
+    },
+    {
+      "id": "take",
+      "word": "take",
+      "list": "next200"
+    },
+    {
+      "id": "tea",
+      "word": "tea",
+      "list": "next200"
+    },
+    {
+      "id": "tell",
+      "word": "tell",
+      "list": "next200"
+    },
+    {
+      "id": "than",
+      "word": "than",
+      "list": "next200"
+    },
+    {
+      "id": "that-s",
+      "word": "that’s",
+      "list": "next200"
+    },
+    {
+      "id": "there-s",
+      "word": "there’s",
+      "list": "next200"
+    },
+    {
+      "id": "these",
+      "word": "these",
+      "list": "next200"
+    },
+    {
+      "id": "thing",
+      "word": "thing",
+      "list": "next200"
+    },
+    {
+      "id": "things",
+      "word": "things",
+      "list": "next200"
+    },
+    {
+      "id": "think",
+      "word": "think",
+      "list": "next200"
+    },
+    {
+      "id": "thought",
+      "word": "thought",
+      "list": "next200"
+    },
+    {
+      "id": "three",
+      "word": "three",
+      "list": "next200"
+    },
+    {
+      "id": "through",
+      "word": "through",
+      "list": "next200"
+    },
+    {
+      "id": "told",
+      "word": "told",
+      "list": "next200"
+    },
+    {
+      "id": "took",
+      "word": "took",
+      "list": "next200"
+    },
+    {
+      "id": "top",
+      "word": "top",
+      "list": "next200"
+    },
+    {
+      "id": "town",
+      "word": "town",
+      "list": "next200"
+    },
+    {
+      "id": "tree",
+      "word": "tree",
+      "list": "next200"
+    },
+    {
+      "id": "trees",
+      "word": "trees",
+      "list": "next200"
+    },
+    {
+      "id": "two",
+      "word": "two",
+      "list": "next200"
+    },
+    {
+      "id": "under",
+      "word": "under",
+      "list": "next200"
+    },
+    {
+      "id": "us",
+      "word": "us",
+      "list": "next200"
+    },
+    {
+      "id": "use",
+      "word": "use",
+      "list": "next200"
+    },
+    {
+      "id": "want",
+      "word": "want",
+      "list": "next200"
+    },
+    {
+      "id": "wanted",
+      "word": "wanted",
+      "list": "next200"
+    },
+    {
+      "id": "water",
+      "word": "water",
+      "list": "next200"
+    },
+    {
+      "id": "way",
+      "word": "way",
+      "list": "next200"
+    },
+    {
+      "id": "we-re",
+      "word": "we’re",
+      "list": "next200"
+    },
+    {
+      "id": "well",
+      "word": "well",
+      "list": "next200"
+    },
+    {
+      "id": "where",
+      "word": "where",
+      "list": "next200"
+    },
+    {
+      "id": "which",
+      "word": "which",
+      "list": "next200"
+    },
+    {
+      "id": "white",
+      "word": "white",
+      "list": "next200"
+    },
+    {
+      "id": "who",
+      "word": "who",
+      "list": "next200"
+    },
+    {
+      "id": "why",
+      "word": "why",
+      "list": "next200"
+    },
+    {
+      "id": "wind",
+      "word": "wind",
+      "list": "next200"
+    },
+    {
+      "id": "window",
+      "word": "window",
+      "list": "next200"
+    },
+    {
+      "id": "wish",
+      "word": "wish",
+      "list": "next200"
+    },
+    {
+      "id": "work",
+      "word": "work",
+      "list": "next200"
+    },
+    {
+      "id": "would",
+      "word": "would",
+      "list": "next200"
+    },
+    {
+      "id": "yes",
+      "word": "yes",
+      "list": "next200"
+    }
+  ]
+}

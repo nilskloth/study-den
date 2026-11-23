@@ -51,6 +51,7 @@ export function activityFor(hash) {
     if (p[0] === "listen") return ["phonics", "Which word?"];
     if (p[0] === "alien") return ["phonics", "Real or alien?"];
     if (p[0] === "tricky") return ["tricky", "Tricky words"];
+    if (p[0] === "words") return ["tricky", "Words to know"];
     return ["menus", "Year 1 home"];
   }
   if (path === "papers") {
