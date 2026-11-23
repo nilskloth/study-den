@@ -14,6 +14,8 @@ import { loadYear1, wordHtml, runRounds, pickAdaptive, selfCheck, y1Stats } from
 
 const ROUNDS = 10;
 const plain = (w, big = true) => wordHtml([w.word], { buttons: false, big });
+/* long words shrink to fit their card (--fit is read by the card and option CSS) */
+const fit = w => `style="--fit:${Math.min(1, 5.5 / w.word.length).toFixed(2)}"`;
 const hear = w => speak(w.word, "en-GB", { slow: true });
 
 export async function renderWords(el, params = []) {
@@ -54,7 +56,7 @@ function renderList(el, data) {
       <h3 class="y1-list-head">${esc(l.title)} <span class="muted">· ${esc(l.sub)} · ${ws.filter(known).length} of ${ws.length} read</span></h3>
       ${buttons(l.id)}
       <div class="y1-tricky-grid">
-        ${ws.map(w => `<button type="button" class="y1-tricky-card${known(w) ? " known" : ""}" data-word="${esc(w.id)}">${plain(w, false)}</button>`).join("")}
+        ${ws.map(w => `<button type="button" class="y1-tricky-card${known(w) ? " known" : ""}" data-word="${esc(w.id)}" ${fit(w)}>${plain(w, false)}</button>`).join("")}
       </div>`;
     }).join("")}`;
   el.querySelectorAll("[data-word]").forEach(b => b.addEventListener("click", () => {
@@ -97,7 +99,7 @@ function runFind(el, words, name) {
         <p class="y1-ask">Find the word you hear</p>
         <p class="y1-hint"><button type="button" class="y1-listen" data-hear>🔊 Listen again</button></p>
         <div class="y1-options four">
-          ${options.map((o, i) => `<button class="y1-choice" data-opt="${i}">${plain(o, false)}</button>`).join("")}
+          ${options.map((o, i) => `<button class="y1-choice" data-opt="${i}" ${fit(o)}>${plain(o, false)}</button>`).join("")}
         </div>`;
       card.querySelector("[data-hear]").addEventListener("click", () => hear(w));
       setTimeout(() => hear(w), 250);
