@@ -1,6 +1,6 @@
 /* =========================================================
    Year 7 revision trainer (Secondary → Science, Maths, Geography).
-   One trainer, one config per subject (SCIENCE, MATHS, GEOGRAPHY below):
+   One trainer, one config per subject (SCIENCE, MATHS, GEOGRAPHY, RS below):
      #/secondary/<subj>                 setup: pick topics, mode, start
      #/secondary/<subj>/learn/<topic>   notes: diagram, key facts, key words
      #/secondary/science/label/<diagram> name the parts: label a whole
@@ -78,6 +78,14 @@ export const GEOGRAPHY = {
   expand: q => (q.gen && GEO_GENERATORS[q.gen] ? { ...q, ...GEO_GENERATORS[q.gen]() } : q),
   setupText: "Each topic has maps, key facts and key words. Grid and direction questions get a new map every time."
 };
+export const RS = {
+  code: "rs", label: "RS", subject: "rs", theme: "rs",
+  route: "#/secondary/rs", base: "data/content/secondary/rs",
+  title: "RS revision", noun: "RS", mode: "rs", paperId: "rs", aiLevel: "ks3-rs",
+  labelTitle: "Name the symbols", labelText: "Fill in every symbol on one god's picture, then check them all.",
+  typeHint: "Type your answers — spelling slips are forgiven, but you'll see the proper spelling.",
+  setupText: "Hinduism: each topic has key facts and key words; the gods' pictures show their symbols. Longer answers are marked like the test."
+};
 const TEST_LENGTHS = [10, 20, 30];
 
 const banks = {};
@@ -109,6 +117,7 @@ export async function loadIdeaOrder(bank) {
 }
 export const loadMaths = () => loadRevision(MATHS);
 export const loadGeography = () => loadRevision(GEOGRAPHY);
+export const loadRS = () => loadRevision(RS);
 
 /* Diagrams are inlined so they use the page font and can be switched
    between names and letters. Cached as text; each subject keeps its
@@ -185,6 +194,7 @@ const mastered = stat => (stat?.mastery || 0) >= 0.8;
 export const renderScience = (el, params) => renderRevision(el, params, SCIENCE);
 export const renderMaths = (el, params) => renderRevision(el, params, MATHS);
 export const renderGeography = (el, params) => renderRevision(el, params, GEOGRAPHY);
+export const renderRS = (el, params) => renderRevision(el, params, RS);
 
 async function renderRevision(el, params = [], S) {
   el.dataset.subject = S.theme;
@@ -356,8 +366,8 @@ function renderSetup(ctx) {
 
     ${!bank.ideas && labelSets(bank).length ? `
     <div class="card setup-card">
-      <h3>Name the parts</h3>
-      <p class="muted" style="margin-top:calc(-1 * var(--sp-2));">Fill in every label on one diagram, then check them all.</p>
+      <h3>${S.labelTitle || "Name the parts"}</h3>
+      <p class="muted" style="margin-top:calc(-1 * var(--sp-2));">${S.labelText || "Fill in every label on one diagram, then check them all."}</p>
       ${(() => {
         const card = ([title, sets]) => `
           ${title ? `<p class="section-group muted sci-label-idea">${esc(title)}</p>` : ""}
@@ -553,7 +563,9 @@ const LABEL_NAMES = {
   places: ["The 7 natural wonders", "wonders"],
   antarctica: ["Antarctica", "places"],
   "easter-island": ["Easter Island", "places"],
-  compass: ["The compass", "directions"]
+  compass: ["The compass", "directions"],
+  brahma: ["Brahma's symbols", "symbols"], vishnu: ["Vishnu's symbols", "symbols"], shiva: ["Shiva's symbols", "symbols"],
+  ganesha: ["Ganesha's symbols", "symbols"], lakshmi: ["Lakshmi's symbols", "symbols"]
 };
 
 /* Diagram sets under their big idea (science); one untitled group otherwise. */
@@ -1274,7 +1286,7 @@ async function renderExplain(ctx, qid) {
     if (getStore().settings.proxyToken) {
       btn.textContent = "Marking…";
       try {
-        const r = await markAI(q, answer, null, { level: "ks3" });
+        const r = await markAI(q, answer, null, { level: S.aiLevel || "ks3" });
         btn.remove();
         return done(r.earned, "ai", r.feedback, r.matchedPoints);
       } catch { /* fall through to self-marking */ }

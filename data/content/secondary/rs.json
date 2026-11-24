@@ -1,0 +1,3168 @@
+{
+ "subject": "rs",
+ "label": "Religious Studies",
+ "unit": "Year 7 — Hinduism",
+ "source": "For the end of unit assessment on Hinduism (Fri 27 Nov 2026). Built from Finn's notes (Brahman, murti, deities; the table of four traditions) and the Arbor homework titles (Brahma, Vishnu and Shiva's symbols; Holika and Prahlad). The notes, questions and pictures are ours; Ganesha, Lakshmi and the worship key words are extra.",
+ "topics": [
+  {
+   "id": "brahman",
+   "number": 1,
+   "title": "Brahman and the deities",
+   "source": "From Finn's notes (Brahman, murti, deities) and the “Hindu beliefs about God” homework (24 Sept). The questions are ours.",
+   "summary": "Hindus believe in one God, Brahman, who is shown through many deities. The Trimurti are the three deities for the three things God does: create, preserve, destroy.",
+   "images": [
+    {
+     "file": "trimurti",
+     "caption": "The Trimurti: three deities showing three things Brahman, the one God, does."
+    }
+   ],
+   "table": {
+    "title": "The Trimurti (“three forms”)",
+    "head": [
+     "Deity",
+     "Role",
+     "Look out for"
+    ],
+    "rows": [
+     [
+      "Brahma",
+      "The creator — made the universe",
+      "Four heads, the Vedas, a swan"
+     ],
+     [
+      "Vishnu",
+      "The preserver — keeps the universe safe and in balance",
+      "Blue skin, discus, conch shell"
+     ],
+     [
+      "Shiva",
+      "The destroyer — destroys so new things can be created",
+      "Third eye, trident, snake"
+     ]
+    ]
+   },
+   "facts": [
+    "**Brahman** is the one ultimate reality — God. Hindus believe Brahman is everywhere and in everything.",
+    "Brahman is too great for people to understand all at once, so Hindus worship Brahman through **deities** (gods and goddesses).",
+    "A **deity** is a form that represents one part of God — like the different faces of one person. So most Hindus believe in **one God shown in many forms**.",
+    "A **murti** is a statue or image of a deity. Hindus use murtis to help them focus on God when they worship (puja).",
+    "The **Trimurti** means “three forms”: **Brahma** the creator, **Vishnu** the preserver and **Shiva** the destroyer. Together they show the never-ending cycle of the universe: created, kept going, destroyed, created again.",
+    "Each deity's picture is full of **symbols**: what they hold, wear or ride all tell you something about them.",
+    "An **avatar** is a form Vishnu takes when he comes down to Earth to fight evil, such as **Rama** and **Krishna**.",
+    "The **atman** is the soul. Hindus believe a part of Brahman is in every living thing.",
+    "**Om** (Aum) is the sacred sound and symbol of Brahman, said at the start of prayers."
+   ],
+   "keywords": [
+    [
+     "Brahman",
+     "the one ultimate reality, God"
+    ],
+    [
+     "deity",
+     "a form representing a part of God (a god or goddess)"
+    ],
+    [
+     "murti",
+     "a statue or image of a deity"
+    ],
+    [
+     "Trimurti",
+     "the three forms: Brahma, Vishnu and Shiva"
+    ],
+    [
+     "avatar",
+     "a form Vishnu takes on Earth, e.g. Rama, Krishna"
+    ],
+    [
+     "atman",
+     "the soul — part of Brahman in every living thing"
+    ],
+    [
+     "Om",
+     "the sacred sound and symbol of Brahman"
+    ],
+    [
+     "puja",
+     "worship"
+    ]
+   ],
+   "questions": [
+    {
+     "id": "rs-bd-01",
+     "type": "short",
+     "stem": "What do Hindus call the one ultimate reality, God?",
+     "answer": "Brahman",
+     "reject": [
+      "Brahma"
+     ],
+     "choices": [
+      "Brahma",
+      "Vishnu",
+      "Atman"
+     ],
+     "explain": "Brahman is the one ultimate reality — God, everywhere and in everything. (Brahma, without the n, is the creator deity.)"
+    },
+    {
+     "id": "rs-bd-02",
+     "type": "short",
+     "stem": "What is the word for a statue or image of a deity?",
+     "answer": "murti",
+     "accept": [
+      "murtis",
+      "murthi"
+     ],
+     "choices": [
+      "mandir",
+      "avatar",
+      "atman"
+     ],
+     "explain": "A murti is a statue or image of a deity, used to help focus on God in worship."
+    },
+    {
+     "id": "rs-bd-03",
+     "type": "short",
+     "stem": "What is the word for a form representing a part of God (a god or goddess)?",
+     "answer": "deity",
+     "accept": [
+      "deities",
+      "a deity",
+      "god",
+      "goddess"
+     ],
+     "choices": [
+      "murti",
+      "atman",
+      "avatar"
+     ],
+     "explain": "A deity is a form that represents one part of God (Brahman)."
+    },
+    {
+     "id": "rs-bd-04",
+     "type": "short",
+     "stem": "What name is given to the three deities Brahma, Vishnu and Shiva together?",
+     "answer": "Trimurti",
+     "accept": [
+      "the Trimurti",
+      "Trimurthi"
+     ],
+     "choices": [
+      "Trinity",
+      "Vedas",
+      "Mandir"
+     ],
+     "explain": "Trimurti means “three forms”: Brahma creates, Vishnu preserves, Shiva destroys."
+    },
+    {
+     "id": "rs-bd-05",
+     "type": "short",
+     "stem": "Which deity is the creator?",
+     "answer": "Brahma",
+     "reject": [
+      "Brahman"
+     ],
+     "choices": [
+      "Vishnu",
+      "Shiva",
+      "Ganesha"
+     ],
+     "explain": "Brahma is the creator in the Trimurti."
+    },
+    {
+     "id": "rs-bd-06",
+     "type": "short",
+     "stem": "Which deity is the preserver?",
+     "answer": "Vishnu",
+     "choices": [
+      "Brahma",
+      "Shiva",
+      "Lakshmi"
+     ],
+     "explain": "Vishnu preserves the universe — he keeps it safe and in balance."
+    },
+    {
+     "id": "rs-bd-07",
+     "type": "short",
+     "stem": "Which deity is the destroyer?",
+     "answer": "Shiva",
+     "accept": [
+      "Siva"
+     ],
+     "choices": [
+      "Vishnu",
+      "Brahma",
+      "Ganesha"
+     ],
+     "explain": "Shiva destroys, so that new things can be created."
+    },
+    {
+     "id": "rs-bd-08",
+     "type": "short",
+     "stem": "What is the Hindu word for the soul?",
+     "answer": "atman",
+     "accept": [
+      "atma"
+     ],
+     "choices": [
+      "Brahman",
+      "murti",
+      "avatar"
+     ],
+     "explain": "The atman is the soul. Hindus believe a part of Brahman is in every living thing."
+    },
+    {
+     "id": "rs-bd-09",
+     "type": "short",
+     "stem": "What is the word for a form Vishnu takes when he comes to Earth?",
+     "answer": "avatar",
+     "accept": [
+      "avatars",
+      "avatara"
+     ],
+     "choices": [
+      "atman",
+      "murti",
+      "deity"
+     ],
+     "explain": "Vishnu comes to Earth as avatars, such as Rama and Krishna, to defeat evil."
+    },
+    {
+     "id": "rs-bd-10",
+     "type": "short",
+     "stem": "What is the sacred sound and symbol of Brahman, said at the start of prayers?",
+     "answer": "Om",
+     "accept": [
+      "Aum"
+     ],
+     "choices": [
+      "Amen",
+      "Puja",
+      "Aarti"
+     ],
+     "explain": "Om (or Aum) is the sacred sound of Brahman."
+    },
+    {
+     "id": "rs-bd-11",
+     "type": "mcq",
+     "stem": "What does “Trimurti” mean?",
+     "answer": "three forms",
+     "choices": [
+      "three gods who fight",
+      "three holy books",
+      "three festivals"
+     ],
+     "explain": "Tri = three, murti = form. The three forms of the one God."
+    },
+    {
+     "id": "rs-bd-12",
+     "type": "mcq",
+     "stem": "Most Hindus believe that…",
+     "answer": "there is one God, shown in many forms",
+     "choices": [
+      "there are many gods who are not connected",
+      "there is no God",
+      "only Brahma is God"
+     ],
+     "explain": "The deities are different forms of Brahman, the one God — so Hinduism has many deities but one ultimate reality."
+    },
+    {
+     "id": "rs-bd-13",
+     "type": "mcq",
+     "stem": "Why do Hindus worship Brahman through deities?",
+     "answer": "Brahman is too great to understand all at once, so each deity shows one part of God",
+     "choices": [
+      "The deities are more powerful than Brahman",
+      "Brahman has no link to the deities",
+      "It is the law in India"
+     ],
+     "explain": "Each deity helps Hindus understand and focus on one part of God."
+    },
+    {
+     "id": "rs-bd-14",
+     "type": "mcq",
+     "stem": "Why do Hindus use a murti in worship?",
+     "answer": "To help them focus on God",
+     "choices": [
+      "Because the statue itself is God and nothing else",
+      "To decorate the mandir only",
+      "To keep away bad weather"
+     ],
+     "explain": "The murti is a focus: Hindus believe God can be present in it, but God is far greater than any statue."
+    },
+    {
+     "id": "rs-bd-15",
+     "type": "mcq",
+     "stem": "What does the Trimurti show about the universe?",
+     "answer": "A never-ending cycle of creating, preserving and destroying",
+     "choices": [
+      "That the universe will never change",
+      "That the universe was made by humans",
+      "That Shiva is the only god"
+     ],
+     "explain": "Brahma creates, Vishnu keeps it going, Shiva destroys so it can be created again."
+    },
+    {
+     "id": "rs-bd-16",
+     "type": "mcq",
+     "stem": "Which of these is an avatar of Vishnu?",
+     "answer": "Krishna",
+     "choices": [
+      "Ganesha",
+      "Brahma",
+      "Shiva"
+     ],
+     "explain": "Rama and Krishna are the best-known avatars of Vishnu."
+    },
+    {
+     "id": "rs-bd-17",
+     "type": "tf",
+     "stem": "Hindus believe Brahman is everywhere and in everything.",
+     "answer": true,
+     "explain": "Brahman is the ultimate reality, in everything — including every living thing's atman."
+    },
+    {
+     "id": "rs-bd-18",
+     "type": "tf",
+     "stem": "Brahma and Brahman are the same word for the same thing.",
+     "answer": false,
+     "explain": "Brahman is the one God (ultimate reality). Brahma is the creator deity — one part of Brahman."
+    },
+    {
+     "id": "rs-bd-19",
+     "type": "tf",
+     "stem": "A murti is a type of Hindu holy book.",
+     "answer": false,
+     "explain": "A murti is a statue or image of a deity. The holy books include the Vedas."
+    },
+    {
+     "id": "rs-bd-20",
+     "type": "explain",
+     "marks": 3,
+     "stem": "Explain what Hindus mean by Brahman, and how the deities are linked to Brahman.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "Brahman is the one ultimate reality / God"
+       },
+       {
+        "point": "Brahman is everywhere / in everything"
+       },
+       {
+        "point": "the deities are forms of Brahman / each deity shows one part (quality) of God"
+       },
+       {
+        "point": "so Hindus believe in one God even though they worship many deities"
+       }
+      ],
+      "award": {
+       "3": "one mark for each point, up to 3"
+      },
+      "modelAnswer": "Brahman is the one ultimate reality — God — and is everywhere and in everything. The deities are different forms of Brahman, each showing one part of God, so Hindus can worship many deities but still believe in one God."
+     }
+    },
+    {
+     "id": "rs-bd-21",
+     "type": "explain",
+     "marks": 4,
+     "stem": "Explain what the Trimurti is.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "the three main forms / deities of Brahman (Trimurti = three forms)"
+       },
+       {
+        "point": "Brahma is the creator"
+       },
+       {
+        "point": "Vishnu is the preserver (keeps the world safe)"
+       },
+       {
+        "point": "Shiva is the destroyer (destroys so things can be created again) / it shows the cycle of the universe"
+       }
+      ],
+      "award": {
+       "4": "one mark for each point, up to 4"
+      },
+      "modelAnswer": "The Trimurti means “three forms”: three deities who show the three main things Brahman does. Brahma creates the universe, Vishnu preserves it and keeps it safe, and Shiva destroys it so it can be created again — a never-ending cycle."
+     }
+    }
+   ]
+  },
+  {
+   "id": "brahma",
+   "number": 2,
+   "title": "Brahma, the creator",
+   "source": "From the “Hindu beliefs about God” homework (24 Sept: Brahma, Vishnu and Shiva and their symbols). Picture redrawn; notes and questions are ours.",
+   "summary": "Brahma created the universe. Learn what his four heads, the Vedas, the water pot, the prayer beads, the lotus and the swan stand for.",
+   "images": [
+    {
+     "file": "brahma",
+     "caption": "Brahma and his symbols. Hide the names and test yourself."
+    }
+   ],
+   "table": {
+    "title": "Brahma's symbols",
+    "head": [
+     "Symbol",
+     "What it means"
+    ],
+    "rows": [
+     [
+      "Four heads",
+      "Sees in all four directions; the four Vedas"
+     ],
+     [
+      "The Vedas (book)",
+      "Knowledge — the holy books"
+     ],
+     [
+      "Water pot",
+      "Water: life and creation began from it"
+     ],
+     [
+      "Prayer beads",
+      "Time, and prayer"
+     ],
+     [
+      "Lotus flower",
+      "Purity; Brahma was born from a lotus"
+     ],
+     [
+      "White beard",
+      "Wisdom; as old as the universe"
+     ],
+     [
+      "Swan",
+      "Wisdom: telling good from bad"
+     ]
+    ]
+   },
+   "facts": [
+    "**Brahma** is the **creator**: he made the universe and everything in it.",
+    "Hindus tell that Brahma was **born from a lotus** growing out of Vishnu's navel.",
+    "He has **four heads**, facing the four directions — he sees and knows everything. The four **Vedas** (the oldest holy books) are said to have come from his four mouths.",
+    "He holds the **Vedas**, a **water pot**, **prayer beads** and a **lotus**, and rides a **swan**.",
+    "His wife is **Saraswati**, goddess of knowledge and learning.",
+    "Brahma is **rarely worshipped**: there are very few temples to him. One story says it is because his work — creating — is finished."
+   ],
+   "keywords": [
+    [
+     "creator",
+     "the one who makes (Brahma)"
+    ],
+    [
+     "Vedas",
+     "the oldest Hindu holy books"
+    ],
+    [
+     "hamsa",
+     "Brahma's swan"
+    ],
+    [
+     "Saraswati",
+     "Brahma's wife, goddess of knowledge"
+    ]
+   ],
+   "questions": [
+    {
+     "id": "rs-br-01",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Brahma?",
+     "answer": "Four heads",
+     "accept": [
+      "4 heads",
+      "heads"
+     ],
+     "choices": [
+      "The Vedas",
+      "Water pot",
+      "Prayer beads"
+     ],
+     "explain": "Four heads: he sees in all four directions and knows everything; the four Vedas came from his four mouths.",
+     "image": "brahma",
+     "part": "four-heads"
+    },
+    {
+     "id": "rs-br-02",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Brahma?",
+     "answer": "The Vedas",
+     "accept": [
+      "Vedas",
+      "book",
+      "the Vedas (book)",
+      "holy book"
+     ],
+     "choices": [
+      "Water pot",
+      "Prayer beads",
+      "Lotus flower"
+     ],
+     "explain": "The Vedas: the holy books — Brahma is the source of all knowledge.",
+     "image": "brahma",
+     "part": "vedas"
+    },
+    {
+     "id": "rs-br-03",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Brahma?",
+     "answer": "Water pot",
+     "accept": [
+      "pot",
+      "kamandalu",
+      "water jug"
+     ],
+     "choices": [
+      "Prayer beads",
+      "Lotus flower",
+      "White beard"
+     ],
+     "explain": "Water pot: a water pot: water, from which all life and creation began.",
+     "image": "brahma",
+     "part": "kamandalu"
+    },
+    {
+     "id": "rs-br-04",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Brahma?",
+     "answer": "Prayer beads",
+     "accept": [
+      "beads",
+      "mala",
+      "rosary"
+     ],
+     "choices": [
+      "Lotus flower",
+      "White beard",
+      "Swan"
+     ],
+     "explain": "Prayer beads: prayer beads: time — Brahma counts the time of the universe — and prayer.",
+     "image": "brahma",
+     "part": "mala"
+    },
+    {
+     "id": "rs-br-05",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Brahma?",
+     "answer": "Lotus flower",
+     "accept": [
+      "lotus",
+      "lotus flowers"
+     ],
+     "choices": [
+      "White beard",
+      "Swan",
+      "Four heads"
+     ],
+     "explain": "Lotus flower: a lotus: purity, and creation — Brahma was born from a lotus.",
+     "image": "brahma",
+     "part": "lotus"
+    },
+    {
+     "id": "rs-br-06",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Brahma?",
+     "answer": "White beard",
+     "accept": [
+      "beard"
+     ],
+     "choices": [
+      "Swan",
+      "Four heads",
+      "The Vedas"
+     ],
+     "explain": "White beard: a long white beard: wisdom — Brahma is as old as the universe.",
+     "image": "brahma",
+     "part": "beard"
+    },
+    {
+     "id": "rs-br-07",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Brahma?",
+     "answer": "Swan",
+     "accept": [
+      "hamsa",
+      "goose"
+     ],
+     "choices": [
+      "Four heads",
+      "The Vedas",
+      "Water pot"
+     ],
+     "explain": "Swan: his swan (hamsa): wisdom — the swan was said to separate milk from water, like telling good from bad.",
+     "image": "brahma",
+     "part": "swan"
+    },
+    {
+     "id": "rs-br-08",
+     "type": "mcq",
+     "stem": "Why does Brahma have four heads?",
+     "answer": "He sees in all four directions and knows everything",
+     "choices": [
+      "He has four brothers",
+      "To scare away demons",
+      "He likes to wear four crowns"
+     ],
+     "explain": "he sees in all four directions and knows everything; the four Vedas came from his four mouths."
+    },
+    {
+     "id": "rs-br-09",
+     "type": "mcq",
+     "stem": "What do the Vedas in Brahma's hand stand for?",
+     "answer": "Knowledge",
+     "choices": [
+      "Wealth",
+      "Strength",
+      "Destruction"
+     ],
+     "explain": "the holy books — Brahma is the source of all knowledge."
+    },
+    {
+     "id": "rs-br-10",
+     "type": "mcq",
+     "stem": "What does Brahma's water pot stand for?",
+     "answer": "Water, from which life and creation began",
+     "choices": [
+      "The river Ganges flooding",
+      "Money and wealth",
+      "Washing away sins"
+     ],
+     "explain": "a water pot: water, from which all life and creation began."
+    },
+    {
+     "id": "rs-br-11",
+     "type": "mcq",
+     "stem": "What do Brahma's prayer beads stand for?",
+     "answer": "Time (and prayer)",
+     "choices": [
+      "Wealth",
+      "Anger",
+      "Weapons"
+     ],
+     "explain": "prayer beads: time — Brahma counts the time of the universe — and prayer."
+    },
+    {
+     "id": "rs-br-12",
+     "type": "mcq",
+     "stem": "What does Brahma's swan stand for?",
+     "answer": "Wisdom — telling good from bad",
+     "choices": [
+      "Speed",
+      "Danger",
+      "Wealth"
+     ],
+     "explain": "his swan (hamsa): wisdom — the swan was said to separate milk from water, like telling good from bad."
+    },
+    {
+     "id": "rs-br-13",
+     "type": "mcq",
+     "stem": "What does Brahma's white beard show?",
+     "answer": "Wisdom — he is as old as the universe",
+     "choices": [
+      "That he is sad",
+      "That he is a king",
+      "That he is the destroyer"
+     ],
+     "explain": "a long white beard: wisdom — Brahma is as old as the universe."
+    },
+    {
+     "id": "rs-br-14",
+     "type": "mcq",
+     "stem": "Which animal does Brahma ride?",
+     "answer": "a swan",
+     "choices": [
+      "a mouse",
+      "a bull",
+      "an eagle"
+     ],
+     "explain": "Brahma's vehicle is a swan (hamsa). Ganesha rides a mouse, Shiva a bull, Vishnu an eagle (Garuda)."
+    },
+    {
+     "id": "rs-br-15",
+     "type": "short",
+     "stem": "Who is Brahma's wife, the goddess of knowledge?",
+     "answer": "Saraswati",
+     "accept": [
+      "Sarasvati"
+     ],
+     "choices": [
+      "Lakshmi",
+      "Parvati",
+      "Durga"
+     ],
+     "explain": "Saraswati is the goddess of knowledge, learning and music."
+    },
+    {
+     "id": "rs-br-16",
+     "type": "mcq",
+     "stem": "According to the story, where was Brahma born?",
+     "answer": "From a lotus growing out of Vishnu's navel",
+     "choices": [
+      "From the river Ganges",
+      "From an egg on Mount Everest",
+      "From Shiva's third eye"
+     ],
+     "explain": "A lotus grew from Vishnu's navel, and Brahma was born from it."
+    },
+    {
+     "id": "rs-br-17",
+     "type": "tf",
+     "stem": "Brahma has many temples and is the most worshipped deity in India.",
+     "answer": false,
+     "explain": "Brahma has very few temples. Vishnu, Shiva and Devi (the goddess) are worshipped far more."
+    },
+    {
+     "id": "rs-br-18",
+     "type": "explain",
+     "marks": 4,
+     "stem": "Explain the symbolism of Brahma. Refer to at least two of his symbols.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "Brahma is the creator (made the universe)"
+       },
+       {
+        "point": "four heads: sees in all directions / knows everything / the four Vedas"
+       },
+       {
+        "point": "the Vedas: knowledge"
+       },
+       {
+        "point": "water pot: water, life / creation began from water"
+       },
+       {
+        "point": "prayer beads: time / prayer"
+       },
+       {
+        "point": "lotus: purity / born from a lotus; or swan: wisdom, good from bad; or white beard: wisdom, old as the universe"
+       }
+      ],
+      "award": {
+       "4": "1 mark for saying he is the creator; 1 mark for each symbol with its correct meaning, up to 4"
+      },
+      "modelAnswer": "Brahma is the creator. His four heads show that he sees in all four directions and knows everything, and the four Vedas came from them. He holds the Vedas, which stand for knowledge, and a water pot, because life and creation began from water. His swan stands for wisdom — telling good from bad."
+     }
+    }
+   ]
+  },
+  {
+   "id": "vishnu",
+   "number": 3,
+   "title": "Vishnu, the preserver",
+   "source": "From the “Hindu beliefs about God” homework (24 Sept). Picture redrawn; notes and questions are ours.",
+   "summary": "Vishnu keeps the universe safe and comes to Earth as avatars to defeat evil. Learn what his blue skin, four arms, discus, conch, mace and lotus mean.",
+   "images": [
+    {
+     "file": "vishnu",
+     "caption": "Vishnu and his symbols."
+    }
+   ],
+   "table": {
+    "title": "Vishnu's symbols",
+    "head": [
+     "Symbol",
+     "What it means"
+    ],
+    "rows": [
+     [
+      "Blue skin",
+      "Like the sky and ocean: endless, everywhere"
+     ],
+     [
+      "Four arms",
+      "All-powerful, in all four directions"
+     ],
+     [
+      "Discus (chakra)",
+      "The mind; destroys evil"
+     ],
+     [
+      "Conch shell",
+      "The sound Om; calls people to do good"
+     ],
+     [
+      "Mace (gada)",
+      "Strength to defeat evil"
+     ],
+     [
+      "Lotus flower",
+      "Purity"
+     ],
+     [
+      "Crown",
+      "Supreme ruler"
+     ]
+    ]
+   },
+   "facts": [
+    "**Vishnu** is the **preserver**: he keeps the universe safe and in balance, and protects good against evil.",
+    "When evil grows strong, Vishnu comes down to Earth as an **avatar**. Hindus tell of ten avatars, including **Rama**, **Krishna** and **Narasimha** (half man, half lion — see Holika and Prahlad).",
+    "His **blue skin** is the colour of the sky and the ocean, which seem endless: Vishnu is infinite and everywhere.",
+    "His **four arms** show he is all-powerful. He holds a **discus (chakra)**, a **conch shell**, a **mace (gada)** and a **lotus**.",
+    "He rides **Garuda**, an eagle, and is often shown resting on the great snake **Shesha** in the cosmic ocean.",
+    "His wife is **Lakshmi**, goddess of wealth and good fortune.",
+    "Hindus who see Vishnu as the most important deity follow **Vaishnavism**."
+   ],
+   "keywords": [
+    [
+     "preserver",
+     "the one who keeps things safe (Vishnu)"
+    ],
+    [
+     "avatar",
+     "a form Vishnu takes on Earth"
+    ],
+    [
+     "chakra",
+     "Vishnu's discus"
+    ],
+    [
+     "gada",
+     "Vishnu's mace"
+    ],
+    [
+     "Garuda",
+     "the eagle Vishnu rides"
+    ]
+   ],
+   "questions": [
+    {
+     "id": "rs-vi-01",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Vishnu?",
+     "answer": "Crown",
+     "accept": [],
+     "choices": [
+      "Blue skin",
+      "Four arms",
+      "Discus"
+     ],
+     "explain": "Crown: a crown: he is the supreme ruler, king of the universe.",
+     "image": "vishnu",
+     "part": "crown"
+    },
+    {
+     "id": "rs-vi-02",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Vishnu?",
+     "answer": "Blue skin",
+     "accept": [
+      "blue",
+      "skin"
+     ],
+     "choices": [
+      "Four arms",
+      "Discus",
+      "Conch shell"
+     ],
+     "explain": "Blue skin: blue skin, like the sky and the ocean: he is endless (infinite) and everywhere.",
+     "image": "vishnu",
+     "part": "blue-skin"
+    },
+    {
+     "id": "rs-vi-03",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Vishnu?",
+     "answer": "Four arms",
+     "accept": [
+      "4 arms",
+      "arms"
+     ],
+     "choices": [
+      "Discus",
+      "Conch shell",
+      "Mace"
+     ],
+     "explain": "Four arms: four arms: he is all-powerful, with power in all four directions.",
+     "image": "vishnu",
+     "part": "four-arms"
+    },
+    {
+     "id": "rs-vi-04",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Vishnu?",
+     "answer": "Discus",
+     "accept": [
+      "chakra",
+      "discus (chakra)",
+      "disc",
+      "wheel"
+     ],
+     "choices": [
+      "Conch shell",
+      "Mace",
+      "Lotus flower"
+     ],
+     "explain": "Discus: the discus (chakra), a spinning weapon: the mind, and destroying evil.",
+     "image": "vishnu",
+     "part": "chakra"
+    },
+    {
+     "id": "rs-vi-05",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Vishnu?",
+     "answer": "Conch shell",
+     "accept": [
+      "conch",
+      "shell",
+      "shankha"
+     ],
+     "choices": [
+      "Mace",
+      "Lotus flower",
+      "Crown"
+     ],
+     "explain": "Conch shell: the conch shell: the sacred sound Om; blown to call people to do good and for victory over evil.",
+     "image": "vishnu",
+     "part": "conch"
+    },
+    {
+     "id": "rs-vi-06",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Vishnu?",
+     "answer": "Mace",
+     "accept": [
+      "gada",
+      "mace (gada)",
+      "club"
+     ],
+     "choices": [
+      "Lotus flower",
+      "Crown",
+      "Blue skin"
+     ],
+     "explain": "Mace: the mace (gada): strength and power to defeat evil.",
+     "image": "vishnu",
+     "part": "gada"
+    },
+    {
+     "id": "rs-vi-07",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Vishnu?",
+     "answer": "Lotus flower",
+     "accept": [
+      "lotus",
+      "lotus flowers"
+     ],
+     "choices": [
+      "Crown",
+      "Blue skin",
+      "Four arms"
+     ],
+     "explain": "Lotus flower: the lotus: purity — it grows in muddy water but comes out clean and beautiful.",
+     "image": "vishnu",
+     "part": "lotus"
+    },
+    {
+     "id": "rs-vi-08",
+     "type": "mcq",
+     "stem": "Why is Vishnu shown with blue skin?",
+     "answer": "Like the sky and ocean, he is endless and everywhere",
+     "choices": [
+      "He is cold",
+      "He is sad",
+      "He lives under the sea"
+     ],
+     "explain": "blue skin, like the sky and the ocean: he is endless (infinite) and everywhere."
+    },
+    {
+     "id": "rs-vi-09",
+     "type": "mcq",
+     "stem": "What do Vishnu's four arms show?",
+     "answer": "He is all-powerful, in all four directions",
+     "choices": [
+      "He has four jobs",
+      "He has four wives",
+      "He was born four times"
+     ],
+     "explain": "four arms: he is all-powerful, with power in all four directions."
+    },
+    {
+     "id": "rs-vi-10",
+     "type": "mcq",
+     "stem": "What does Vishnu's discus (chakra) stand for?",
+     "answer": "The mind, and destroying evil",
+     "choices": [
+      "Wealth",
+      "Water",
+      "Time running out"
+     ],
+     "explain": "the discus (chakra), a spinning weapon: the mind, and destroying evil."
+    },
+    {
+     "id": "rs-vi-11",
+     "type": "mcq",
+     "stem": "What does Vishnu's conch shell stand for?",
+     "answer": "The sacred sound Om — calling people to do good",
+     "choices": [
+      "The sea he lives in",
+      "Money",
+      "Destroying the world"
+     ],
+     "explain": "the conch shell: the sacred sound Om; blown to call people to do good and for victory over evil."
+    },
+    {
+     "id": "rs-vi-12",
+     "type": "mcq",
+     "stem": "What does Vishnu's mace (gada) stand for?",
+     "answer": "Strength to defeat evil",
+     "choices": [
+      "Knowledge",
+      "Purity",
+      "Water"
+     ],
+     "explain": "the mace (gada): strength and power to defeat evil."
+    },
+    {
+     "id": "rs-vi-13",
+     "type": "mcq",
+     "stem": "Why is the lotus a symbol of purity?",
+     "answer": "It grows in muddy water but comes out clean and beautiful",
+     "choices": [
+      "It is white",
+      "It smells nice",
+      "It only grows in temples"
+     ],
+     "explain": "the lotus: purity — it grows in muddy water but comes out clean and beautiful."
+    },
+    {
+     "id": "rs-vi-14",
+     "type": "short",
+     "stem": "What is Vishnu's role in the Trimurti?",
+     "answer": "preserver",
+     "accept": [
+      "the preserver",
+      "preserves",
+      "protector",
+      "preserving"
+     ],
+     "choices": [
+      "creator",
+      "destroyer",
+      "remover of obstacles"
+     ],
+     "explain": "Vishnu preserves: he keeps the universe safe and in balance."
+    },
+    {
+     "id": "rs-vi-15",
+     "type": "short",
+     "stem": "Which goddess is Vishnu's wife?",
+     "answer": "Lakshmi",
+     "accept": [
+      "Laxmi",
+      "Lakshmi Devi"
+     ],
+     "choices": [
+      "Parvati",
+      "Saraswati",
+      "Durga"
+     ],
+     "explain": "Lakshmi is the goddess of wealth and good fortune."
+    },
+    {
+     "id": "rs-vi-16",
+     "type": "mcq",
+     "stem": "Which bird does Vishnu ride?",
+     "answer": "Garuda, an eagle",
+     "choices": [
+      "a swan",
+      "an owl",
+      "a peacock"
+     ],
+     "explain": "Vishnu rides Garuda, a great eagle."
+    },
+    {
+     "id": "rs-vi-17",
+     "type": "mcq",
+     "stem": "Why does Vishnu come to Earth as an avatar?",
+     "answer": "To defeat evil and protect good when the world is out of balance",
+     "choices": [
+      "To have a holiday",
+      "To create the universe",
+      "To destroy the world"
+     ],
+     "explain": "Vishnu the preserver keeps the balance between good and evil."
+    },
+    {
+     "id": "rs-vi-18",
+     "type": "mcq",
+     "stem": "Which of these is NOT an avatar of Vishnu?",
+     "answer": "Ganesha",
+     "choices": [
+      "Rama",
+      "Krishna",
+      "Narasimha"
+     ],
+     "explain": "Ganesha is the son of Shiva and Parvati. Rama, Krishna and Narasimha are avatars of Vishnu."
+    },
+    {
+     "id": "rs-vi-19",
+     "type": "explain",
+     "marks": 4,
+     "stem": "Explain the symbolism of Vishnu. Refer to at least two of his symbols.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "Vishnu is the preserver (keeps the universe safe / in balance)"
+       },
+       {
+        "point": "blue skin: like the sky / ocean — endless, everywhere"
+       },
+       {
+        "point": "four arms: all-powerful"
+       },
+       {
+        "point": "discus: mind / destroys evil; or mace: strength to defeat evil"
+       },
+       {
+        "point": "conch: the sound Om / calls people to do good"
+       },
+       {
+        "point": "lotus: purity"
+       }
+      ],
+      "award": {
+       "4": "1 mark for saying he is the preserver; 1 mark for each symbol with its correct meaning, up to 4"
+      },
+      "modelAnswer": "Vishnu is the preserver who keeps the universe safe. His blue skin is the colour of the sky and ocean, showing he is endless and everywhere, and his four arms show he is all-powerful. His discus and mace are for destroying evil, his conch shell makes the sacred sound Om, and the lotus stands for purity."
+     }
+    }
+   ]
+  },
+  {
+   "id": "shiva",
+   "number": 4,
+   "title": "Shiva, the destroyer",
+   "source": "From the “Hindu beliefs about God” homework (24 Sept). Picture redrawn; notes and questions are ours.",
+   "summary": "Shiva destroys so that new things can be made, and destroys evil and ignorance. Learn the meaning of his third eye, trident, drum, snake, moon and the river Ganges.",
+   "images": [
+    {
+     "file": "shiva",
+     "caption": "Shiva and his symbols."
+    }
+   ],
+   "table": {
+    "title": "Shiva's symbols",
+    "head": [
+     "Symbol",
+     "What it means"
+    ],
+    "rows": [
+     [
+      "Third eye",
+      "Wisdom; destroys evil"
+     ],
+     [
+      "Trident (trishul)",
+      "The three roles: create, preserve, destroy"
+     ],
+     [
+      "Drum (damaru)",
+      "The rhythm of creation"
+     ],
+     [
+      "Snake",
+      "Power over danger and death"
+     ],
+     [
+      "Crescent moon",
+      "Time and the cycles of life"
+     ],
+     [
+      "River Ganges",
+      "Purity: washes away sins"
+     ],
+     [
+      "Blue throat",
+      "Drank poison to save the world"
+     ],
+     [
+      "Raised hand",
+      "Blessing: do not be afraid"
+     ]
+    ]
+   },
+   "facts": [
+    "**Shiva** is the **destroyer**. Destroying is not just bad: old things must end so **new things can be created**. He also destroys evil and ignorance.",
+    "He has a **third eye** of wisdom; when it opens, it destroys evil.",
+    "He holds a **trident (trishul)** and a small **drum (damaru)**, and wears a **snake** round his neck.",
+    "A **crescent moon** sits in his hair, and the **River Ganges** flows from it: Shiva caught the falling river in his hair so it would not flood the Earth.",
+    "His **blue throat** comes from a story where he drank a poison to save the world.",
+    "As **Nataraja**, Lord of the Dance, he dances inside a ring of fire, ending one universe so a new one can begin.",
+    "He meditates on **Mount Kailash** in the Himalayas, rides the bull **Nandi**, and his wife is **Parvati**. Their son is **Ganesha**.",
+    "Hindus who see Shiva as the most important deity follow **Shaivism**."
+   ],
+   "keywords": [
+    [
+     "destroyer",
+     "the one who ends things so new ones can begin (Shiva)"
+    ],
+    [
+     "trishul",
+     "Shiva's trident"
+    ],
+    [
+     "damaru",
+     "Shiva's drum"
+    ],
+    [
+     "Nataraja",
+     "Shiva as Lord of the Dance"
+    ],
+    [
+     "Nandi",
+     "the bull Shiva rides"
+    ]
+   ],
+   "questions": [
+    {
+     "id": "rs-sh-01",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Shiva?",
+     "answer": "River Ganges",
+     "accept": [
+      "Ganges",
+      "Ganga",
+      "river",
+      "rivers",
+      "the Ganges",
+      "Ganges river"
+     ],
+     "choices": [
+      "Crescent moon",
+      "Third eye",
+      "Drum"
+     ],
+     "explain": "River Ganges: the River Ganges flowing from his hair: he caught the river to stop it flooding the Earth; it stands for purity — washing away sins.",
+     "image": "shiva",
+     "part": "ganga"
+    },
+    {
+     "id": "rs-sh-02",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Shiva?",
+     "answer": "Crescent moon",
+     "accept": [
+      "moon"
+     ],
+     "choices": [
+      "Third eye",
+      "Drum",
+      "Blue throat"
+     ],
+     "explain": "Crescent moon: the crescent moon: time and the cycles of life — the moon grows and shrinks again and again.",
+     "image": "shiva",
+     "part": "moon"
+    },
+    {
+     "id": "rs-sh-03",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Shiva?",
+     "answer": "Third eye",
+     "accept": [
+      "eye",
+      "3rd eye"
+     ],
+     "choices": [
+      "Drum",
+      "Blue throat",
+      "Trident"
+     ],
+     "explain": "Third eye: the third eye: wisdom; when it opens it destroys evil and ignorance.",
+     "image": "shiva",
+     "part": "third-eye"
+    },
+    {
+     "id": "rs-sh-04",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Shiva?",
+     "answer": "Drum",
+     "accept": [
+      "damaru",
+      "drum (damaru)"
+     ],
+     "choices": [
+      "Blue throat",
+      "Trident",
+      "Snake"
+     ],
+     "explain": "Drum: the drum (damaru): the rhythm and sound of creation — the beat of the universe.",
+     "image": "shiva",
+     "part": "damaru"
+    },
+    {
+     "id": "rs-sh-05",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Shiva?",
+     "answer": "Blue throat",
+     "accept": [
+      "throat"
+     ],
+     "choices": [
+      "Trident",
+      "Snake",
+      "Raised hand"
+     ],
+     "explain": "Blue throat: the blue throat: he drank a poison to save the world, and it turned his throat blue.",
+     "image": "shiva",
+     "part": "blue-throat"
+    },
+    {
+     "id": "rs-sh-06",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Shiva?",
+     "answer": "Trident",
+     "accept": [
+      "trishul",
+      "trident (trishul)",
+      "trishula"
+     ],
+     "choices": [
+      "Snake",
+      "Raised hand",
+      "River Ganges"
+     ],
+     "explain": "Trident: the trident (trishul): its three points stand for the three roles — create, preserve, destroy (or past, present and future).",
+     "image": "shiva",
+     "part": "trishul"
+    },
+    {
+     "id": "rs-sh-07",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Shiva?",
+     "answer": "Snake",
+     "accept": [
+      "cobra",
+      "serpent"
+     ],
+     "choices": [
+      "Raised hand",
+      "River Ganges",
+      "Crescent moon"
+     ],
+     "explain": "Snake: the snake round his neck: power over danger and death.",
+     "image": "shiva",
+     "part": "snake"
+    },
+    {
+     "id": "rs-sh-08",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Shiva?",
+     "answer": "Raised hand",
+     "accept": [
+      "hand",
+      "blessing",
+      "blessing hand"
+     ],
+     "choices": [
+      "River Ganges",
+      "Crescent moon",
+      "Third eye"
+     ],
+     "explain": "Raised hand: the raised hand: a blessing — “do not be afraid”; he protects.",
+     "image": "shiva",
+     "part": "blessing"
+    },
+    {
+     "id": "rs-sh-09",
+     "type": "mcq",
+     "stem": "What does Shiva's third eye stand for?",
+     "answer": "Wisdom — when it opens it destroys evil",
+     "choices": [
+      "Seeing in the dark",
+      "Wealth",
+      "Being very old"
+     ],
+     "explain": "the third eye: wisdom; when it opens it destroys evil and ignorance."
+    },
+    {
+     "id": "rs-sh-10",
+     "type": "mcq",
+     "stem": "What do the three points of Shiva's trident stand for?",
+     "answer": "Create, preserve, destroy (or past, present, future)",
+     "choices": [
+      "Three wives",
+      "Three rivers",
+      "Three temples"
+     ],
+     "explain": "the trident (trishul): its three points stand for the three roles — create, preserve, destroy (or past, present and future)."
+    },
+    {
+     "id": "rs-sh-11",
+     "type": "mcq",
+     "stem": "What does Shiva's drum (damaru) stand for?",
+     "answer": "The rhythm and sound of creation",
+     "choices": [
+      "A call to dinner",
+      "Anger",
+      "Wealth"
+     ],
+     "explain": "the drum (damaru): the rhythm and sound of creation — the beat of the universe."
+    },
+    {
+     "id": "rs-sh-12",
+     "type": "mcq",
+     "stem": "What does the snake round Shiva's neck show?",
+     "answer": "Power over danger and death",
+     "choices": [
+      "He is a pet lover",
+      "Wealth",
+      "Purity"
+     ],
+     "explain": "the snake round his neck: power over danger and death."
+    },
+    {
+     "id": "rs-sh-13",
+     "type": "mcq",
+     "stem": "What does the crescent moon in Shiva's hair stand for?",
+     "answer": "Time and the cycles of life",
+     "choices": [
+      "Night-time worship",
+      "Wealth",
+      "The creator"
+     ],
+     "explain": "the crescent moon: time and the cycles of life — the moon grows and shrinks again and again."
+    },
+    {
+     "id": "rs-sh-14",
+     "type": "mcq",
+     "stem": "Why does the River Ganges flow from Shiva's hair?",
+     "answer": "He caught the falling river so it wouldn't flood the Earth",
+     "choices": [
+      "He was swimming",
+      "It is where he washes",
+      "He made it as a punishment"
+     ],
+     "explain": "the River Ganges flowing from his hair: he caught the river to stop it flooding the Earth; it stands for purity — washing away sins."
+    },
+    {
+     "id": "rs-sh-15",
+     "type": "mcq",
+     "stem": "Why is Shiva's throat blue?",
+     "answer": "He drank poison to save the world",
+     "choices": [
+      "He is cold",
+      "He ate blueberries",
+      "He is sad"
+     ],
+     "explain": "the blue throat: he drank a poison to save the world, and it turned his throat blue."
+    },
+    {
+     "id": "rs-sh-16",
+     "type": "short",
+     "stem": "What is Shiva's role in the Trimurti?",
+     "answer": "destroyer",
+     "accept": [
+      "the destroyer",
+      "destroys",
+      "destruction",
+      "destroying"
+     ],
+     "choices": [
+      "creator",
+      "preserver",
+      "remover of obstacles"
+     ],
+     "explain": "Shiva destroys so that new things can be created."
+    },
+    {
+     "id": "rs-sh-17",
+     "type": "short",
+     "stem": "What is the name for Shiva as the Lord of the Dance?",
+     "answer": "Nataraja",
+     "accept": [
+      "Nataraj"
+     ],
+     "choices": [
+      "Narasimha",
+      "Nandi",
+      "Krishna"
+     ],
+     "explain": "As Nataraja, Shiva dances in a ring of fire, ending one universe so a new one can begin."
+    },
+    {
+     "id": "rs-sh-18",
+     "type": "mcq",
+     "stem": "Which animal does Shiva ride?",
+     "answer": "Nandi the bull",
+     "choices": [
+      "a swan",
+      "a mouse",
+      "an eagle"
+     ],
+     "explain": "Shiva rides the bull Nandi; statues of Nandi face Shiva's shrine in many temples."
+    },
+    {
+     "id": "rs-sh-19",
+     "type": "mcq",
+     "stem": "Who is Shiva's son?",
+     "answer": "Ganesha",
+     "choices": [
+      "Krishna",
+      "Rama",
+      "Brahma"
+     ],
+     "explain": "Ganesha is the son of Shiva and Parvati."
+    },
+    {
+     "id": "rs-sh-20",
+     "type": "tf",
+     "stem": "For Hindus, Shiva's destruction is only bad.",
+     "answer": false,
+     "explain": "Destruction makes way for new creation, and Shiva destroys evil and ignorance."
+    },
+    {
+     "id": "rs-sh-21",
+     "type": "explain",
+     "marks": 3,
+     "stem": "Explain why Shiva the destroyer is important to Hindus.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "old things must be destroyed so new things can be created / part of the cycle of the universe"
+       },
+       {
+        "point": "he destroys evil / ignorance"
+       },
+       {
+        "point": "he completes the Trimurti with Brahma (create) and Vishnu (preserve)"
+       },
+       {
+        "point": "he protects / blesses his followers (e.g. drank the poison to save the world)"
+       }
+      ],
+      "award": {
+       "3": "one mark for each point, up to 3"
+      },
+      "modelAnswer": "Shiva is the destroyer, and destruction is needed so that new things can be created — it keeps the cycle of the universe going with Brahma and Vishnu. He also destroys evil and ignorance, and he protects people, as when he drank the poison to save the world."
+     }
+    },
+    {
+     "id": "rs-sh-22",
+     "type": "explain",
+     "marks": 4,
+     "stem": "Explain the symbolism of Shiva. Refer to at least two of his symbols.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "Shiva is the destroyer (so new things can be created)"
+       },
+       {
+        "point": "third eye: wisdom / destroys evil"
+       },
+       {
+        "point": "trident: three roles create, preserve, destroy (past, present, future)"
+       },
+       {
+        "point": "drum: rhythm / sound of creation"
+       },
+       {
+        "point": "snake: power over danger / death"
+       },
+       {
+        "point": "moon: time / cycles; or Ganges: purity; or blue throat: drank poison to save the world"
+       }
+      ],
+      "award": {
+       "4": "1 mark for saying he is the destroyer; 1 mark for each symbol with its correct meaning, up to 4"
+      },
+      "modelAnswer": "Shiva is the destroyer, ending things so new ones can be created. His third eye stands for wisdom and destroys evil. His trident has three points for creating, preserving and destroying, and his drum beats the rhythm of creation. The snake round his neck shows his power over danger and death."
+     }
+    }
+   ]
+  },
+  {
+   "id": "ganesha",
+   "number": 5,
+   "title": "Ganesha, remover of obstacles",
+   "source": "Our notes: one of the main Hindu deities with a symbol picture (not from a class sheet we've seen). Picture is ours.",
+   "summary": "Ganesha, the elephant-headed son of Shiva and Parvati, removes obstacles and is prayed to before anything new. Learn what his head, ears, tusk, belly, axe, rope, sweets and mouse mean.",
+   "images": [
+    {
+     "file": "ganesha",
+     "caption": "Ganesha and his symbols."
+    }
+   ],
+   "table": {
+    "title": "Ganesha's symbols",
+    "head": [
+     "Symbol",
+     "What it means"
+    ],
+    "rows": [
+     [
+      "Elephant head",
+      "Wisdom"
+     ],
+     [
+      "Big ears",
+      "Listen more"
+     ],
+     [
+      "Broken tusk",
+      "Sacrifice; keep the good, throw away the bad"
+     ],
+     [
+      "Big belly",
+      "Take in everything life brings, good and bad"
+     ],
+     [
+      "Axe",
+      "Cut away bad habits and obstacles"
+     ],
+     [
+      "Rope (noose)",
+      "Pull people closer to God and their goals"
+     ],
+     [
+      "Sweets (modaks)",
+      "The reward of a good life"
+     ],
+     [
+      "Mouse",
+      "Controlling desires"
+     ]
+    ]
+   },
+   "facts": [
+    "**Ganesha** (Ganesh) is the **remover of obstacles** and the god of **new beginnings** and **wisdom**.",
+    "Hindus pray to Ganesha **before starting something new** — a journey, an exam, a wedding, a new business.",
+    "He is the son of **Shiva and Parvati**. The story: Parvati made Ganesha to guard her door; Shiva, not knowing him, cut off his head; to make things right, Shiva gave him the head of an elephant.",
+    "His **elephant head** stands for wisdom, his **big ears** for listening, his **big belly** for taking in all of life, good and bad.",
+    "His **broken tusk**: he broke it off to write down the long holy story the **Mahabharata** — a sign of sacrifice.",
+    "He holds an **axe**, a **rope (noose)** and **sweets (modaks)**, and rides a **mouse**."
+   ],
+   "keywords": [
+    [
+     "obstacle",
+     "something in the way that stops you"
+    ],
+    [
+     "modak",
+     "a sweet Ganesha loves"
+    ],
+    [
+     "Mahabharata",
+     "a long Hindu holy story Ganesha wrote down"
+    ],
+    [
+     "Parvati",
+     "Ganesha's mother, Shiva's wife"
+    ]
+   ],
+   "questions": [
+    {
+     "id": "rs-ga-01",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Ganesha?",
+     "answer": "Axe",
+     "accept": [],
+     "choices": [
+      "Big ears",
+      "Sweets",
+      "Broken tusk"
+     ],
+     "explain": "Axe: the axe: cutting away bad habits, attachments and obstacles.",
+     "image": "ganesha",
+     "part": "axe"
+    },
+    {
+     "id": "rs-ga-02",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Ganesha?",
+     "answer": "Big ears",
+     "accept": [
+      "ears"
+     ],
+     "choices": [
+      "Sweets",
+      "Broken tusk",
+      "Elephant head"
+     ],
+     "explain": "Big ears: big ears: listen more — listen carefully to others.",
+     "image": "ganesha",
+     "part": "ears"
+    },
+    {
+     "id": "rs-ga-03",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Ganesha?",
+     "answer": "Sweets",
+     "accept": [
+      "modaks",
+      "modak",
+      "sweets (modaks)",
+      "laddoos",
+      "bowl of sweets"
+     ],
+     "choices": [
+      "Broken tusk",
+      "Elephant head",
+      "Rope"
+     ],
+     "explain": "Sweets: sweets (modaks): the reward of a good life.",
+     "image": "ganesha",
+     "part": "modaks"
+    },
+    {
+     "id": "rs-ga-04",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Ganesha?",
+     "answer": "Broken tusk",
+     "accept": [
+      "tusk"
+     ],
+     "choices": [
+      "Elephant head",
+      "Rope",
+      "Big belly"
+     ],
+     "explain": "Broken tusk: the broken tusk: sacrifice — he broke it off to write down the Mahabharata; keep the good and throw away the bad.",
+     "image": "ganesha",
+     "part": "tusk"
+    },
+    {
+     "id": "rs-ga-05",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Ganesha?",
+     "answer": "Elephant head",
+     "accept": [
+      "head",
+      "elephant's head"
+     ],
+     "choices": [
+      "Rope",
+      "Big belly",
+      "Mouse"
+     ],
+     "explain": "Elephant head: the elephant head: wisdom and intelligence.",
+     "image": "ganesha",
+     "part": "head"
+    },
+    {
+     "id": "rs-ga-06",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Ganesha?",
+     "answer": "Rope",
+     "accept": [
+      "noose",
+      "rope (noose)",
+      "lasso"
+     ],
+     "choices": [
+      "Big belly",
+      "Mouse",
+      "Axe"
+     ],
+     "explain": "Rope: the rope (noose): pulling people closer to God and to their goals.",
+     "image": "ganesha",
+     "part": "noose"
+    },
+    {
+     "id": "rs-ga-07",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Ganesha?",
+     "answer": "Big belly",
+     "accept": [
+      "belly",
+      "stomach",
+      "big stomach"
+     ],
+     "choices": [
+      "Mouse",
+      "Axe",
+      "Big ears"
+     ],
+     "explain": "Big belly: the big belly: he takes in (digests) everything life brings, good and bad.",
+     "image": "ganesha",
+     "part": "belly"
+    },
+    {
+     "id": "rs-ga-08",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Ganesha?",
+     "answer": "Mouse",
+     "accept": [
+      "rat"
+     ],
+     "choices": [
+      "Axe",
+      "Big ears",
+      "Sweets"
+     ],
+     "explain": "Mouse: the mouse he rides: controlling your desires; even a small creature can carry great wisdom.",
+     "image": "ganesha",
+     "part": "mouse"
+    },
+    {
+     "id": "rs-ga-09",
+     "type": "mcq",
+     "stem": "What does Ganesha's elephant head stand for?",
+     "answer": "Wisdom",
+     "choices": [
+      "Strength only",
+      "Wealth",
+      "Destruction"
+     ],
+     "explain": "the elephant head: wisdom and intelligence."
+    },
+    {
+     "id": "rs-ga-10",
+     "type": "mcq",
+     "stem": "What do Ganesha's big ears teach?",
+     "answer": "Listen more",
+     "choices": [
+      "Talk more",
+      "Eat more",
+      "Sleep more"
+     ],
+     "explain": "big ears: listen more — listen carefully to others."
+    },
+    {
+     "id": "rs-ga-11",
+     "type": "mcq",
+     "stem": "Why is one of Ganesha's tusks broken?",
+     "answer": "He broke it off to write down the Mahabharata — a sacrifice",
+     "choices": [
+      "It fell out when he was old",
+      "Shiva broke it in anger",
+      "He lost it fighting a mouse"
+     ],
+     "explain": "the broken tusk: sacrifice — he broke it off to write down the Mahabharata; keep the good and throw away the bad."
+    },
+    {
+     "id": "rs-ga-12",
+     "type": "mcq",
+     "stem": "What does Ganesha's big belly stand for?",
+     "answer": "Taking in everything life brings, good and bad",
+     "choices": [
+      "Greed",
+      "Being lazy",
+      "Wealth"
+     ],
+     "explain": "the big belly: he takes in (digests) everything life brings, good and bad."
+    },
+    {
+     "id": "rs-ga-13",
+     "type": "mcq",
+     "stem": "What does Ganesha's axe stand for?",
+     "answer": "Cutting away bad habits and obstacles",
+     "choices": [
+      "Chopping wood",
+      "Destroying the universe",
+      "Fighting Shiva"
+     ],
+     "explain": "the axe: cutting away bad habits, attachments and obstacles."
+    },
+    {
+     "id": "rs-ga-14",
+     "type": "mcq",
+     "stem": "What does Ganesha's rope (noose) stand for?",
+     "answer": "Pulling people closer to God and their goals",
+     "choices": [
+      "Tying up enemies",
+      "Wealth",
+      "Water"
+     ],
+     "explain": "the rope (noose): pulling people closer to God and to their goals."
+    },
+    {
+     "id": "rs-ga-15",
+     "type": "mcq",
+     "stem": "What does the mouse Ganesha rides stand for?",
+     "answer": "Controlling your desires",
+     "choices": [
+      "Speed",
+      "Wealth",
+      "Danger"
+     ],
+     "explain": "the mouse he rides: controlling your desires; even a small creature can carry great wisdom."
+    },
+    {
+     "id": "rs-ga-16",
+     "type": "mcq",
+     "stem": "When do many Hindus pray to Ganesha?",
+     "answer": "Before starting something new, like a journey or an exam",
+     "choices": [
+      "Only at funerals",
+      "Only at night",
+      "Only on birthdays"
+     ],
+     "explain": "Ganesha removes obstacles, so he is prayed to at the start of new things."
+    },
+    {
+     "id": "rs-ga-17",
+     "type": "short",
+     "stem": "Ganesha is known as the remover of …?",
+     "answer": "obstacles",
+     "accept": [
+      "obstacle",
+      "the obstacles"
+     ],
+     "choices": [
+      "sins",
+      "rivers",
+      "demons"
+     ],
+     "explain": "Ganesha is the remover of obstacles (and god of new beginnings)."
+    },
+    {
+     "id": "rs-ga-18",
+     "type": "mcq",
+     "stem": "Who are Ganesha's parents?",
+     "answer": "Shiva and Parvati",
+     "choices": [
+      "Vishnu and Lakshmi",
+      "Brahma and Saraswati",
+      "Rama and Sita"
+     ],
+     "explain": "Ganesha is the son of Shiva and Parvati."
+    },
+    {
+     "id": "rs-ga-19",
+     "type": "mcq",
+     "stem": "How did Ganesha get his elephant head?",
+     "answer": "Shiva cut off his head without knowing him, then gave him an elephant's head",
+     "choices": [
+      "He was born with it",
+      "Brahma swapped it in a game",
+      "He won it in a race"
+     ],
+     "explain": "Parvati made Ganesha to guard her door; Shiva, not knowing who he was, cut off his head and then gave him an elephant's head."
+    },
+    {
+     "id": "rs-ga-20",
+     "type": "explain",
+     "marks": 4,
+     "stem": "Explain the symbolism of Ganesha. Refer to at least two of his symbols.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "Ganesha is the remover of obstacles / god of new beginnings / wisdom"
+       },
+       {
+        "point": "elephant head: wisdom"
+       },
+       {
+        "point": "big ears: listen more"
+       },
+       {
+        "point": "broken tusk: sacrifice / wrote the Mahabharata / keep the good, throw away the bad"
+       },
+       {
+        "point": "big belly: takes in good and bad"
+       },
+       {
+        "point": "axe: cut away obstacles / bad habits; or rope: pulls people closer to God; or mouse: control desires; or sweets: reward"
+       }
+      ],
+      "award": {
+       "4": "1 mark for saying what Ganesha is the god of; 1 mark for each symbol with its correct meaning, up to 4"
+      },
+      "modelAnswer": "Ganesha is the remover of obstacles. His elephant head shows wisdom and his big ears remind Hindus to listen more. His broken tusk shows sacrifice, because he broke it to write the Mahabharata. His axe cuts away obstacles and bad habits, and the mouse he rides shows controlling your desires."
+     }
+    }
+   ]
+  },
+  {
+   "id": "lakshmi",
+   "number": 6,
+   "title": "Lakshmi, goddess of wealth",
+   "source": "Our notes: one of the main Hindu deities with a symbol picture (not from a class sheet we've seen). Picture is ours.",
+   "summary": "Lakshmi, Vishnu's wife, is the goddess of wealth and good fortune, welcomed into homes at Diwali. Learn what her lotus flowers, gold coins, elephants and four arms mean.",
+   "images": [
+    {
+     "file": "lakshmi",
+     "caption": "Lakshmi and her symbols."
+    }
+   ],
+   "table": {
+    "title": "Lakshmi's symbols",
+    "head": [
+     "Symbol",
+     "What it means"
+    ],
+    "rows": [
+     [
+      "Lotus flowers",
+      "Purity and beauty"
+     ],
+     [
+      "Gold coins",
+      "Wealth and good fortune"
+     ],
+     [
+      "Elephants",
+      "Royalty; rain for good harvests"
+     ],
+     [
+      "Four arms",
+      "The four aims of life"
+     ],
+     [
+      "Raised hand",
+      "Blessing"
+     ],
+     [
+      "Red sari",
+      "Energy and good fortune"
+     ],
+     [
+      "Owl",
+      "Wisdom and patience"
+     ]
+    ]
+   },
+   "facts": [
+    "**Lakshmi** is the goddess of **wealth, good fortune and beauty**. She is the wife of **Vishnu**.",
+    "She sits or stands on a **lotus** and holds lotus flowers: purity and beauty.",
+    "**Gold coins** pour from her hand: she brings wealth and good fortune to those who work hard and are devoted.",
+    "Two **elephants** pour water over her: royalty, and the rain that brings good harvests.",
+    "Her **four arms** stand for the four aims of life: duty (dharma), wealth (artha), happiness (kama) and freedom from rebirth (moksha).",
+    "At **Diwali**, the festival of lights, Hindus light lamps (divas) and clean their homes to welcome Lakshmi in."
+   ],
+   "keywords": [
+    [
+     "Lakshmi",
+     "goddess of wealth and good fortune, Vishnu's wife"
+    ],
+    [
+     "Diwali",
+     "the festival of lights, when Lakshmi is welcomed"
+    ],
+    [
+     "diva",
+     "a small clay oil lamp"
+    ]
+   ],
+   "questions": [
+    {
+     "id": "rs-la-01",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Lakshmi?",
+     "answer": "Elephants",
+     "accept": [
+      "elephant"
+     ],
+     "choices": [
+      "Lotus flowers",
+      "Four arms",
+      "Gold coins"
+     ],
+     "explain": "Elephants: the elephants pouring water: royalty and power, and rain, which brings good harvests.",
+     "image": "lakshmi",
+     "part": "elephants"
+    },
+    {
+     "id": "rs-la-02",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Lakshmi?",
+     "answer": "Lotus flowers",
+     "accept": [
+      "lotus",
+      "lotus flower",
+      "lotuses"
+     ],
+     "choices": [
+      "Four arms",
+      "Gold coins",
+      "Raised hand"
+     ],
+     "explain": "Lotus flowers: the lotus flowers: purity and beauty — and wealth of the spirit, not just money.",
+     "image": "lakshmi",
+     "part": "lotus"
+    },
+    {
+     "id": "rs-la-03",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Lakshmi?",
+     "answer": "Four arms",
+     "accept": [
+      "4 arms",
+      "arms"
+     ],
+     "choices": [
+      "Gold coins",
+      "Raised hand",
+      "Red sari"
+     ],
+     "explain": "Four arms: four arms: the four aims of life — doing your duty (dharma), wealth (artha), happiness (kama) and freedom from rebirth (moksha).",
+     "image": "lakshmi",
+     "part": "four-arms"
+    },
+    {
+     "id": "rs-la-04",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Lakshmi?",
+     "answer": "Gold coins",
+     "accept": [
+      "coins",
+      "gold",
+      "money"
+     ],
+     "choices": [
+      "Raised hand",
+      "Red sari",
+      "Owl"
+     ],
+     "explain": "Gold coins: the gold coins: wealth and good fortune, given to those who work hard and are devoted.",
+     "image": "lakshmi",
+     "part": "coins"
+    },
+    {
+     "id": "rs-la-05",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Lakshmi?",
+     "answer": "Raised hand",
+     "accept": [
+      "hand",
+      "blessing",
+      "blessing hand"
+     ],
+     "choices": [
+      "Red sari",
+      "Owl",
+      "Elephants"
+     ],
+     "explain": "Raised hand: the raised hand: a blessing — she protects and gives.",
+     "image": "lakshmi",
+     "part": "blessing"
+    },
+    {
+     "id": "rs-la-06",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Lakshmi?",
+     "answer": "Red sari",
+     "accept": [
+      "sari",
+      "saree",
+      "red saree",
+      "red dress"
+     ],
+     "choices": [
+      "Owl",
+      "Elephants",
+      "Lotus flowers"
+     ],
+     "explain": "Red sari: the red sari: red stands for energy and good fortune.",
+     "image": "lakshmi",
+     "part": "red-sari"
+    },
+    {
+     "id": "rs-la-07",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Lakshmi?",
+     "answer": "Owl",
+     "accept": [],
+     "choices": [
+      "Elephants",
+      "Lotus flowers",
+      "Four arms"
+     ],
+     "explain": "Owl: the owl she rides: wisdom and patience.",
+     "image": "lakshmi",
+     "part": "owl"
+    },
+    {
+     "id": "rs-la-08",
+     "type": "short",
+     "stem": "Lakshmi is the goddess of …?",
+     "answer": "wealth",
+     "accept": [
+      "wealth and good fortune",
+      "money",
+      "good fortune",
+      "fortune",
+      "riches",
+      "prosperity"
+     ],
+     "choices": [
+      "knowledge",
+      "destruction",
+      "war"
+     ],
+     "explain": "Lakshmi is the goddess of wealth, good fortune and beauty."
+    },
+    {
+     "id": "rs-la-09",
+     "type": "mcq",
+     "stem": "What do the gold coins falling from Lakshmi's hand stand for?",
+     "answer": "Wealth and good fortune",
+     "choices": [
+      "Paying for the temple",
+      "Greed",
+      "Time"
+     ],
+     "explain": "the gold coins: wealth and good fortune, given to those who work hard and are devoted."
+    },
+    {
+     "id": "rs-la-10",
+     "type": "mcq",
+     "stem": "What do the elephants beside Lakshmi stand for?",
+     "answer": "Royalty, and rain for good harvests",
+     "choices": [
+      "Danger",
+      "Wisdom only",
+      "Destruction"
+     ],
+     "explain": "the elephants pouring water: royalty and power, and rain, which brings good harvests."
+    },
+    {
+     "id": "rs-la-11",
+     "type": "mcq",
+     "stem": "What do Lakshmi's four arms stand for?",
+     "answer": "The four aims of life",
+     "choices": [
+      "The four Vedas",
+      "Four husbands",
+      "The four seasons"
+     ],
+     "explain": "four arms: the four aims of life — doing your duty (dharma), wealth (artha), happiness (kama) and freedom from rebirth (moksha)."
+    },
+    {
+     "id": "rs-la-12",
+     "type": "mcq",
+     "stem": "Which festival is Lakshmi especially welcomed at?",
+     "answer": "Diwali",
+     "choices": [
+      "Holi",
+      "Christmas",
+      "Eid"
+     ],
+     "explain": "At Diwali, Hindus light lamps and clean their homes to welcome Lakshmi."
+    },
+    {
+     "id": "rs-la-13",
+     "type": "mcq",
+     "stem": "Whose wife is Lakshmi?",
+     "answer": "Vishnu's",
+     "choices": [
+      "Shiva's",
+      "Brahma's",
+      "Ganesha's"
+     ],
+     "explain": "Lakshmi is Vishnu's wife; when he comes as an avatar, she comes too (as Sita with Rama)."
+    },
+    {
+     "id": "rs-la-14",
+     "type": "explain",
+     "marks": 3,
+     "stem": "Explain the symbolism of Lakshmi. Refer to at least two of her symbols.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "Lakshmi is the goddess of wealth / good fortune"
+       },
+       {
+        "point": "lotus: purity / beauty"
+       },
+       {
+        "point": "gold coins: wealth / good fortune"
+       },
+       {
+        "point": "elephants: royalty / rain / good harvests; or four arms: the four aims of life"
+       }
+      ],
+      "award": {
+       "3": "1 mark for saying what she is the goddess of; 1 mark for each symbol with its correct meaning, up to 3"
+      },
+      "modelAnswer": "Lakshmi is the goddess of wealth and good fortune. The gold coins falling from her hand show she gives wealth to those who work hard. The lotus stands for purity and beauty, and the elephants pouring water stand for royalty and the rain that brings good harvests."
+     }
+    }
+   ]
+  },
+  {
+   "id": "traditions",
+   "number": 7,
+   "title": "Four Hindu traditions",
+   "source": "From Finn's notes: the table of Vaishnavism, Shaivism, Shaktism and Smartism (who they worship, key beliefs, their worship). Questions are ours.",
+   "summary": "Hindus belong to different traditions depending on which deity they see as most important: Vishnu, Shiva, the Goddess, or five deities as equals.",
+   "images": [],
+   "table": {
+    "title": "The four main traditions",
+    "head": [
+     "Tradition",
+     "Who they worship",
+     "Key beliefs",
+     "Their worship"
+    ],
+    "rows": [
+     [
+      "Vaishnavism",
+      "Vishnu (and his avatars Rama and Krishna) as the most important deity",
+      "Show devotion to Vishnu",
+      "Holy books and many saints"
+     ],
+     [
+      "Shaivism",
+      "Shiva, as the most important deity and creator",
+      "Shiva is within and part of this world",
+      "Puja and yoga"
+     ],
+     [
+      "Shaktism",
+      "Devi, the Mother Goddess (Shakti)",
+      "The Goddess is the ultimate reality",
+      "Worshipping the Goddess, e.g. as Durga or Kali"
+     ],
+     [
+      "Smartism",
+      "Five deities as equals (Shiva, Vishnu, Devi, Ganesha, Surya); follows the Smriti scriptures",
+      "All five are forms of the one Brahman",
+      "Worshipping a deity they choose"
+     ]
+    ]
+   },
+   "facts": [
+    "Hinduism has several **traditions** (denominations). They share many beliefs, but differ in **which deity they see as most important**.",
+    "**Vaishnavism**: Vishnu (and his avatars, Rama and Krishna) is the most important deity. Followers show **devotion** to Vishnu; their worship uses **holy books** and honours **many saints**. It is the biggest tradition.",
+    "**Shaivism**: Shiva is the most important deity — and the creator. They believe Shiva is **within and part of this world**. Their worship includes **puja and yoga**.",
+    "**Shaktism**: worship of **Devi**, the **Mother Goddess** (Shakti, divine power), as the ultimate reality — for example as **Durga** or **Kali**.",
+    "**Smartism**: follows the **Smriti** scriptures and worships **five deities** — Shiva, Vishnu, Devi, Ganesha and Surya (the sun) — as equal forms of Brahman; each person chooses one to focus on."
+   ],
+   "keywords": [
+    [
+     "Vaishnavism",
+     "worship of Vishnu as the most important deity"
+    ],
+    [
+     "Shaivism",
+     "worship of Shiva as the most important deity"
+    ],
+    [
+     "Shaktism",
+     "worship of Devi, the Mother Goddess"
+    ],
+    [
+     "Smartism",
+     "five deities worshipped as equal forms of Brahman"
+    ],
+    [
+     "devotion",
+     "deep love and loyalty to God (bhakti)"
+    ],
+    [
+     "Devi",
+     "the Mother Goddess"
+    ]
+   ],
+   "questions": [
+    {
+     "id": "rs-dn-01",
+     "type": "short",
+     "stem": "Which tradition sees Vishnu as the most important deity?",
+     "answer": "Vaishnavism",
+     "accept": [
+      "Vaishnavites",
+      "Vaishnava",
+      "Vaishnavite"
+     ],
+     "reject": [
+      "Vishnu"
+     ],
+     "choices": [
+      "Shaivism",
+      "Shaktism",
+      "Smartism"
+     ],
+     "explain": "Vaishnavism: Vishnu (and his avatars) is the most important deity."
+    },
+    {
+     "id": "rs-dn-02",
+     "type": "short",
+     "stem": "Which tradition sees Shiva as the most important deity?",
+     "answer": "Shaivism",
+     "accept": [
+      "Saivism",
+      "Shaivites",
+      "Shaiva",
+      "Shaivite"
+     ],
+     "reject": [
+      "Shiva"
+     ],
+     "choices": [
+      "Vaishnavism",
+      "Shaktism",
+      "Smartism"
+     ],
+     "explain": "Shaivism: Shiva is the most important deity, seen as the creator."
+    },
+    {
+     "id": "rs-dn-03",
+     "type": "short",
+     "stem": "Which tradition worships Devi, the Mother Goddess?",
+     "answer": "Shaktism",
+     "accept": [
+      "Shaktas",
+      "Shakta",
+      "Saktism"
+     ],
+     "choices": [
+      "Shaivism",
+      "Vaishnavism",
+      "Smartism"
+     ],
+     "explain": "Shaktism worships Devi (Shakti), the Mother Goddess, as the ultimate reality."
+    },
+    {
+     "id": "rs-dn-04",
+     "type": "short",
+     "stem": "Which tradition worships five deities as equal forms of Brahman?",
+     "answer": "Smartism",
+     "accept": [
+      "Smartas",
+      "Smarta"
+     ],
+     "choices": [
+      "Shaktism",
+      "Shaivism",
+      "Vaishnavism"
+     ],
+     "explain": "Smartism: five deities (Shiva, Vishnu, Devi, Ganesha, Surya), all forms of Brahman."
+    },
+    {
+     "id": "rs-dn-05",
+     "type": "mcq",
+     "stem": "How many deities do followers of Smartism worship as equals?",
+     "answer": "5",
+     "choices": [
+      "3",
+      "4",
+      "10"
+     ],
+     "explain": "Five: Shiva, Vishnu, Devi, Ganesha and Surya."
+    },
+    {
+     "id": "rs-dn-06",
+     "type": "mcq",
+     "stem": "Which tradition believes Shiva is within and part of this world?",
+     "answer": "Shaivism",
+     "choices": [
+      "Vaishnavism",
+      "Shaktism",
+      "Smartism"
+     ],
+     "explain": "From the notes: Shaivites believe Shiva is within and part of this world."
+    },
+    {
+     "id": "rs-dn-07",
+     "type": "mcq",
+     "stem": "Which tradition's worship especially includes puja and yoga?",
+     "answer": "Shaivism",
+     "choices": [
+      "Vaishnavism",
+      "Shaktism",
+      "Smartism"
+     ],
+     "explain": "From the notes: Shaivism — puja and yoga."
+    },
+    {
+     "id": "rs-dn-08",
+     "type": "mcq",
+     "stem": "Which tradition's worship uses holy books and honours many saints?",
+     "answer": "Vaishnavism",
+     "choices": [
+      "Shaivism",
+      "Shaktism",
+      "Smartism"
+     ],
+     "explain": "From the notes: Vaishnavism — holy books and many saints."
+    },
+    {
+     "id": "rs-dn-09",
+     "type": "mcq",
+     "stem": "Which goddess is a form of Devi worshipped in Shaktism?",
+     "answer": "Durga",
+     "choices": [
+      "Lakshmi's owl",
+      "Garuda",
+      "Nandi"
+     ],
+     "explain": "Durga and Kali are powerful forms of Devi, the Mother Goddess."
+    },
+    {
+     "id": "rs-dn-10",
+     "type": "mcq",
+     "stem": "What do the four traditions mainly disagree about?",
+     "answer": "Which deity is the most important",
+     "choices": [
+      "Whether Brahman exists",
+      "Whether to be kind",
+      "Which country is best"
+     ],
+     "explain": "They share beliefs like Brahman, karma and the atman, but put a different deity first."
+    },
+    {
+     "id": "rs-dn-11",
+     "type": "mcq",
+     "stem": "Which scriptures does Smartism follow, giving it its name?",
+     "answer": "the Smriti",
+     "choices": [
+      "the Bible",
+      "the Qur'an",
+      "the Torah"
+     ],
+     "explain": "Smartism takes its name from the Smriti scriptures."
+    },
+    {
+     "id": "rs-dn-12",
+     "type": "tf",
+     "stem": "Vaishnavism is about showing devotion to Vishnu.",
+     "answer": true,
+     "explain": "Key belief from the notes: show devotion to Vishnu."
+    },
+    {
+     "id": "rs-dn-13",
+     "type": "tf",
+     "stem": "Followers of Shaktism see Ganesha as the ultimate reality.",
+     "answer": false,
+     "explain": "Shaktism sees Devi, the Mother Goddess, as the ultimate reality."
+    },
+    {
+     "id": "rs-dn-14",
+     "type": "explain",
+     "marks": 4,
+     "stem": "Explain the difference between Vaishnavism and Shaivism.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "Vaishnavism sees Vishnu (and his avatars) as the most important deity"
+       },
+       {
+        "point": "Vaishnavites show devotion to Vishnu / use holy books and saints"
+       },
+       {
+        "point": "Shaivism sees Shiva as the most important deity / the creator"
+       },
+       {
+        "point": "Shaivites believe Shiva is within and part of this world / worship with puja and yoga"
+       }
+      ],
+      "award": {
+       "4": "1 mark for each point, up to 4 (at most 2 for one tradition)"
+      },
+      "modelAnswer": "Vaishnavites see Vishnu, and his avatars such as Rama and Krishna, as the most important deity and show devotion to him, using holy books and honouring saints. Shaivites see Shiva as the most important deity and the creator; they believe Shiva is within and part of this world, and worship with puja and yoga."
+     }
+    }
+   ]
+  },
+  {
+   "id": "holika",
+   "number": 8,
+   "title": "Holika and Prahlad",
+   "source": "From “Hinduism homework 2” (22 Oct): how the story of Holika and Prahlad teaches about good and evil, devotion, blessings and being led into bad things. Story retold and questions are ours.",
+   "summary": "The story behind the festival of Holi: Prahlad stays devoted to Vishnu, his aunt Holika is burned, and Vishnu as Narasimha defeats the demon king. What does it teach Hindus?",
+   "images": [],
+   "table": {
+    "title": "What the story teaches (the homework questions)",
+    "head": [
+     "The lesson",
+     "In the story"
+    ],
+    "rows": [
+     [
+      "a) Good wins over evil",
+      "Holika burns but Prahlad is safe; Narasimha defeats the demon king. Holi bonfires remember it."
+     ],
+     [
+      "b) Devotion to God is rewarded",
+      "Prahlad keeps praying to Vishnu, and Vishnu protects him every time."
+     ],
+     [
+      "c) Use your blessings the right way",
+      "Holika's gift (safe from fire) was meant for good; she used it to kill, so it failed her. The king misused his boon too."
+     ],
+     [
+      "d) People can be led into doing bad things",
+      "Holika did evil because her brother told her to — she followed him instead of doing right."
+     ]
+    ]
+   },
+   "facts": [
+    "**Hiranyakashipu** was a proud demon king. He had a **boon** (a blessing) that he could not be killed by man or animal, inside or outside, by day or by night, on the ground or in the sky, by any weapon. He thought he could not die, and ordered everyone to **worship him instead of God**.",
+    "His son **Prahlad** refused: he stayed **devoted to Vishnu** and kept praying to him.",
+    "The king tried to kill Prahlad many times (snakes, elephants, a cliff), but **Vishnu protected him** every time.",
+    "The king's sister **Holika** had a **gift that kept her safe from fire** (often a magic shawl). She sat in a bonfire holding Prahlad on her lap to burn him.",
+    "Because she **misused her gift** for evil, it failed her: the shawl flew to Prahlad. **Holika burned, and Prahlad was safe.**",
+    "Then Vishnu came as **Narasimha**, half man and half lion, and defeated the king **at dusk** (not day or night), **in a doorway** (not inside or outside), **on his lap** (not ground or sky), **with his claws** (no weapon) — so the boon was not broken.",
+    "Hindus remember the story at **Holi**: bonfires on the night before (**Holika Dahan**) show good beating evil; the next day people throw **coloured powder** and water and celebrate spring."
+   ],
+   "keywords": [
+    [
+     "Prahlad",
+     "the boy devoted to Vishnu"
+    ],
+    [
+     "Holika",
+     "the demon king's sister, burned in the fire"
+    ],
+    [
+     "Hiranyakashipu",
+     "the demon king, Prahlad's father"
+    ],
+    [
+     "Narasimha",
+     "Vishnu's avatar: half man, half lion"
+    ],
+    [
+     "boon",
+     "a special blessing or gift"
+    ],
+    [
+     "Holi",
+     "the spring festival of colours"
+    ],
+    [
+     "devotion",
+     "deep love and loyalty to God"
+    ]
+   ],
+   "questions": [
+    {
+     "id": "rs-hp-01",
+     "type": "short",
+     "stem": "Who was the boy who stayed devoted to Vishnu?",
+     "answer": "Prahlad",
+     "accept": [
+      "Prahlada",
+      "Prahlaad",
+      "Prahalad"
+     ],
+     "choices": [
+      "Holika",
+      "Hiranyakashipu",
+      "Narasimha"
+     ],
+     "explain": "Prahlad kept praying to Vishnu even when his father ordered him to stop."
+    },
+    {
+     "id": "rs-hp-02",
+     "type": "short",
+     "stem": "Who was the demon king's sister who sat in the fire?",
+     "answer": "Holika",
+     "accept": [
+      "Holikaa"
+     ],
+     "choices": [
+      "Prahlad",
+      "Lakshmi",
+      "Parvati"
+     ],
+     "explain": "Holika thought her gift would keep her safe from the fire, but she burned."
+    },
+    {
+     "id": "rs-hp-03",
+     "type": "short",
+     "stem": "Which festival remembers the story of Holika and Prahlad?",
+     "answer": "Holi",
+     "accept": [
+      "Holi festival",
+      "Holika Dahan"
+     ],
+     "choices": [
+      "Diwali",
+      "Navaratri",
+      "Raksha Bandhan"
+     ],
+     "explain": "Holi: bonfires the night before (Holika Dahan) and colours the next day."
+    },
+    {
+     "id": "rs-hp-04",
+     "type": "short",
+     "stem": "What was the name of Vishnu's half-man, half-lion avatar?",
+     "answer": "Narasimha",
+     "accept": [
+      "Narasingha",
+      "Narsimha",
+      "Narsingh",
+      "Narasimhan"
+     ],
+     "choices": [
+      "Nataraja",
+      "Krishna",
+      "Rama"
+     ],
+     "explain": "Narasimha (Narsingh) — neither man nor animal, so the king's boon wasn't broken."
+    },
+    {
+     "id": "rs-hp-05",
+     "type": "mcq",
+     "stem": "Who was Hiranyakashipu?",
+     "answer": "A proud demon king, Prahlad's father",
+     "choices": [
+      "Prahlad's teacher",
+      "An avatar of Vishnu",
+      "Holika's son"
+     ],
+     "explain": "Hiranyakashipu wanted everyone to worship him instead of God."
+    },
+    {
+     "id": "rs-hp-06",
+     "type": "mcq",
+     "stem": "What did Hiranyakashipu order everyone to do?",
+     "answer": "Worship him instead of God",
+     "choices": [
+      "Light bonfires",
+      "Throw coloured powder",
+      "Go to the temple every day"
+     ],
+     "explain": "He believed his boon made him unbeatable, so he demanded to be worshipped."
+    },
+    {
+     "id": "rs-hp-07",
+     "type": "mcq",
+     "stem": "Why wasn't Prahlad harmed by the fire?",
+     "answer": "Vishnu protected him because of his devotion",
+     "choices": [
+      "He was wearing armour",
+      "The fire was not real",
+      "He ran away"
+     ],
+     "explain": "Prahlad's devotion was rewarded: Holika's shawl flew to him and Vishnu kept him safe."
+    },
+    {
+     "id": "rs-hp-08",
+     "type": "mcq",
+     "stem": "Why did Holika's gift fail her?",
+     "answer": "She misused it to do evil",
+     "choices": [
+      "It was too old",
+      "It was raining",
+      "Prahlad stole it on purpose"
+     ],
+     "explain": "A blessing used for bad purposes doesn't protect you — homework question c."
+    },
+    {
+     "id": "rs-hp-09",
+     "type": "mcq",
+     "stem": "How did Narasimha get round the king's boon?",
+     "answer": "At dusk, in a doorway, on his lap, with claws — not man or animal",
+     "choices": [
+      "With a sword at midday",
+      "By poisoning him",
+      "By flooding the palace"
+     ],
+     "explain": "Every condition of the boon was kept, yet the king was defeated."
+    },
+    {
+     "id": "rs-hp-10",
+     "type": "mcq",
+     "stem": "What do the Holi bonfires remember?",
+     "answer": "Holika burning: good beating evil",
+     "choices": [
+      "The burning of the Vedas",
+      "Shiva's third eye",
+      "The start of winter"
+     ],
+     "explain": "The bonfires on the night before Holi are called Holika Dahan."
+    },
+    {
+     "id": "rs-hp-11",
+     "type": "mcq",
+     "stem": "What do people throw at Holi?",
+     "answer": "Coloured powder and water",
+     "choices": [
+      "Rice",
+      "Gold coins",
+      "Flowers only"
+     ],
+     "explain": "Holi is the festival of colours, celebrating spring and good winning over evil."
+    },
+    {
+     "id": "rs-hp-12",
+     "type": "mcq",
+     "stem": "Which lesson does Holika show us best?",
+     "answer": "People can be led into doing bad things",
+     "choices": [
+      "Always trust your family whatever they ask",
+      "Fire is safe",
+      "Wealth brings happiness"
+     ],
+     "explain": "Holika did evil because her brother asked her to — homework question d."
+    },
+    {
+     "id": "rs-hp-13",
+     "type": "tf",
+     "stem": "The story teaches that people who show devotion to God are rewarded.",
+     "answer": true,
+     "explain": "Prahlad stayed devoted to Vishnu and was protected — homework question b."
+    },
+    {
+     "id": "rs-hp-14",
+     "type": "tf",
+     "stem": "In the story, Prahlad was burned and Holika survived.",
+     "answer": false,
+     "explain": "The other way round: Holika burned, and Prahlad was safe."
+    },
+    {
+     "id": "rs-hp-15",
+     "type": "explain",
+     "marks": 2,
+     "stem": "Explain how the story of Holika and Prahlad teaches Hindus about the battle of good versus evil.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "good (Prahlad / Vishnu) wins over evil (Holika / the demon king)"
+       },
+       {
+        "point": "with an example: Holika burns while Prahlad is safe / Narasimha defeats the king"
+       },
+       {
+        "point": "Hindus remember this at Holi, e.g. Holika Dahan bonfires show evil being destroyed"
+       }
+      ],
+      "award": {
+       "2": "1 mark for each point, up to 2"
+      },
+      "modelAnswer": "In the story good beats evil: Holika, who tried to kill Prahlad, burns in the fire while Prahlad is safe, and Vishnu as Narasimha defeats the evil king. Hindus light bonfires at Holi to remember that good wins over evil."
+     }
+    },
+    {
+     "id": "rs-hp-16",
+     "type": "explain",
+     "marks": 2,
+     "stem": "Explain how the story of Holika and Prahlad teaches that people who show devotion to Brahman are rewarded.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "Prahlad stayed devoted to / kept praying to Vishnu (God) even when ordered to stop"
+       },
+       {
+        "point": "he was rewarded by being protected / saved from the fire and the other attacks"
+       },
+       {
+        "point": "this teaches Hindus to keep their faith / be devoted even when it is hard"
+       }
+      ],
+      "award": {
+       "2": "1 mark for each point, up to 2"
+      },
+      "modelAnswer": "Prahlad kept praying to Vishnu even though his father ordered him to worship the king. Because of his devotion, Vishnu protected him from the fire and every attack — so Hindus learn that devotion to God is rewarded."
+     }
+    },
+    {
+     "id": "rs-hp-17",
+     "type": "explain",
+     "marks": 2,
+     "stem": "Explain how the story of Holika and Prahlad teaches about using your blessings in the right way, rather than for bad purposes.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "Holika had a gift / blessing (safe from fire) but used it to try to kill Prahlad"
+       },
+       {
+        "point": "because she misused it, it failed her / she burned"
+       },
+       {
+        "point": "the king misused his boon too (to make people worship him) and was still defeated"
+       }
+      ],
+      "award": {
+       "2": "1 mark for each point, up to 2"
+      },
+      "modelAnswer": "Holika had a gift that kept her safe from fire, but she used it to try to kill Prahlad. Because she used her blessing for evil it failed her and she burned. The king also misused his boon and was defeated, so Hindus learn to use their blessings for good."
+     }
+    },
+    {
+     "id": "rs-hp-18",
+     "type": "explain",
+     "marks": 2,
+     "stem": "Explain how the story of Holika and Prahlad shows how people can be led into doing bad things.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "Holika did evil because her brother (the king) told / persuaded her to"
+       },
+       {
+        "point": "she followed him instead of doing what was right / she was loyal to the wrong person"
+       },
+       {
+        "point": "the people were ordered to worship the king instead of God"
+       }
+      ],
+      "award": {
+       "2": "1 mark for each point, up to 2"
+      },
+      "modelAnswer": "Holika tried to kill Prahlad because her brother, the demon king, told her to. She followed him instead of doing what was right, which shows how people can be led into doing bad things by others."
+     }
+    },
+    {
+     "id": "rs-hp-19",
+     "type": "explain",
+     "marks": 4,
+     "stem": "Retell the story of Holika and Prahlad.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "the demon king (Hiranyakashipu) wanted to be worshipped instead of God"
+       },
+       {
+        "point": "his son Prahlad stayed devoted to Vishnu"
+       },
+       {
+        "point": "Holika, safe from fire, sat in a bonfire with Prahlad"
+       },
+       {
+        "point": "Holika burned but Prahlad was saved"
+       },
+       {
+        "point": "Vishnu as Narasimha defeated the king"
+       }
+      ],
+      "award": {
+       "4": "one mark for each point, up to 4"
+      },
+      "modelAnswer": "The demon king Hiranyakashipu wanted everyone to worship him, but his son Prahlad stayed devoted to Vishnu. The king's sister Holika, who could not be burned, sat in a bonfire holding Prahlad, but Holika burned and Prahlad was saved. Then Vishnu came as Narasimha and defeated the king."
+     }
+    }
+   ]
+  },
+  {
+   "id": "worship",
+   "number": 9,
+   "title": "Worship and key beliefs",
+   "source": "Extra: key words often in Year 7 Hinduism tests (puja, mandir, karma …), not from Finn's notes we've seen. Ours.",
+   "summary": "How Hindus worship (puja at home and in the mandir) and the key beliefs about the soul: karma, samsara, moksha and dharma.",
+   "images": [],
+   "facts": [
+    "**Puja** is worship. Many Hindus do puja every day at a **shrine at home**, as well as at the **mandir** (temple).",
+    "In puja, Hindus make offerings to the **murti** — flowers, fruit, sweets, water, incense — and ring a bell.",
+    "In **aarti**, a tray with a flame (lamp) is waved in circles in front of the murti; worshippers pass their hands over the flame and then over their heads to receive God's blessing.",
+    "**Atman** is the soul. Hindus believe it is reborn again and again in a cycle called **samsara**.",
+    "**Karma**: every action has a result. Good actions bring good results (in this life or the next), bad actions bad results.",
+    "**Moksha** is the final goal: freedom from samsara, when the atman is united with Brahman.",
+    "**Dharma** is your duty — doing the right thing in your life.",
+    "**Ahimsa** means not harming any living thing; it is why many Hindus are vegetarian."
+   ],
+   "keywords": [
+    [
+     "puja",
+     "worship"
+    ],
+    [
+     "mandir",
+     "a Hindu temple"
+    ],
+    [
+     "aarti",
+     "worship with a flame waved before the murti"
+    ],
+    [
+     "shrine",
+     "a special place for worship, often at home"
+    ],
+    [
+     "samsara",
+     "the cycle of birth, death and rebirth"
+    ],
+    [
+     "karma",
+     "actions and their results"
+    ],
+    [
+     "moksha",
+     "freedom from samsara; the soul joins Brahman"
+    ],
+    [
+     "dharma",
+     "duty; doing the right thing"
+    ],
+    [
+     "ahimsa",
+     "not harming any living thing"
+    ]
+   ],
+   "questions": [
+    {
+     "id": "rs-wk-01",
+     "type": "short",
+     "stem": "What is the Hindu word for worship?",
+     "answer": "puja",
+     "accept": [
+      "pooja"
+     ],
+     "choices": [
+      "aarti",
+      "mandir",
+      "karma"
+     ],
+     "explain": "Puja is worship, at home or in the mandir."
+    },
+    {
+     "id": "rs-wk-02",
+     "type": "short",
+     "stem": "What is a Hindu temple called?",
+     "answer": "mandir",
+     "accept": [
+      "mandhir",
+      "a mandir"
+     ],
+     "choices": [
+      "murti",
+      "shrine",
+      "puja"
+     ],
+     "explain": "A Hindu temple is a mandir."
+    },
+    {
+     "id": "rs-wk-03",
+     "type": "short",
+     "stem": "What is the cycle of birth, death and rebirth called?",
+     "answer": "samsara",
+     "accept": [
+      "sansara"
+     ],
+     "choices": [
+      "moksha",
+      "karma",
+      "dharma"
+     ],
+     "explain": "Samsara: the atman is reborn again and again."
+    },
+    {
+     "id": "rs-wk-04",
+     "type": "short",
+     "stem": "What is the word for actions and their results (good actions bring good results)?",
+     "answer": "karma",
+     "choices": [
+      "dharma",
+      "moksha",
+      "samsara"
+     ],
+     "explain": "Karma: every action has a result, in this life or the next."
+    },
+    {
+     "id": "rs-wk-05",
+     "type": "short",
+     "stem": "What is the word for freedom from samsara, when the soul joins Brahman?",
+     "answer": "moksha",
+     "accept": [
+      "mukti"
+     ],
+     "reject": [
+      "murti"
+     ],
+     "choices": [
+      "karma",
+      "dharma",
+      "samsara"
+     ],
+     "explain": "Moksha is the final goal of Hindus."
+    },
+    {
+     "id": "rs-wk-06",
+     "type": "short",
+     "stem": "What is the word for your duty — doing the right thing?",
+     "answer": "dharma",
+     "reject": [
+      "karma"
+     ],
+     "choices": [
+      "karma",
+      "moksha",
+      "ahimsa"
+     ],
+     "explain": "Dharma is duty, doing what is right in your life."
+    },
+    {
+     "id": "rs-wk-07",
+     "type": "short",
+     "stem": "What is the word for not harming any living thing?",
+     "answer": "ahimsa",
+     "choices": [
+      "dharma",
+      "karma",
+      "aarti"
+     ],
+     "explain": "Ahimsa (non-violence) is why many Hindus are vegetarian."
+    },
+    {
+     "id": "rs-wk-08",
+     "type": "short",
+     "stem": "What is the ceremony where a lamp is waved in circles before the murti?",
+     "answer": "aarti",
+     "accept": [
+      "arti",
+      "arati",
+      "aarati"
+     ],
+     "choices": [
+      "puja",
+      "Holi",
+      "mandir"
+     ],
+     "explain": "In aarti, worshippers then pass their hands over the flame and over their heads."
+    },
+    {
+     "id": "rs-wk-09",
+     "type": "mcq",
+     "stem": "Where do many Hindus worship every day?",
+     "answer": "At a shrine at home",
+     "choices": [
+      "Only in a mandir in India",
+      "Only at Diwali",
+      "At school"
+     ],
+     "explain": "Most Hindu homes have a shrine with murtis for daily puja."
+    },
+    {
+     "id": "rs-wk-10",
+     "type": "mcq",
+     "stem": "Which of these is an offering in puja?",
+     "answer": "flowers",
+     "choices": [
+      "shoes",
+      "money for parking",
+      "homework"
+     ],
+     "explain": "Flowers, fruit, sweets, water and incense are offered to the murti."
+    },
+    {
+     "id": "rs-wk-11",
+     "type": "mcq",
+     "stem": "What is the final goal for Hindus?",
+     "answer": "Moksha — freedom from samsara",
+     "choices": [
+      "To become rich",
+      "To be reborn as many times as possible",
+      "To build a mandir"
+     ],
+     "explain": "Moksha: the atman is freed from rebirth and united with Brahman."
+    },
+    {
+     "id": "rs-wk-12",
+     "type": "tf",
+     "stem": "Hindus believe that good actions bring good results, in this life or the next.",
+     "answer": true,
+     "explain": "That is karma."
+    },
+    {
+     "id": "rs-wk-13",
+     "type": "explain",
+     "marks": 3,
+     "stem": "Explain why many Hindus use a murti and a shrine at home in puja.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "the murti helps them focus on God / the deity"
+       },
+       {
+        "point": "they believe God / the deity is present in the murti"
+       },
+       {
+        "point": "offerings (flowers, food, incense) show love / devotion"
+       },
+       {
+        "point": "a home shrine lets them worship every day / the family worships together"
+       }
+      ],
+      "award": {
+       "3": "one mark for each point, up to 3"
+      },
+      "modelAnswer": "The murti helps Hindus focus on God, and they believe the deity is present in it. By making offerings like flowers and sweets at the shrine they show their devotion, and a shrine at home means the family can do puja every day."
+     }
+    }
+   ]
+  }
+ ]
+}

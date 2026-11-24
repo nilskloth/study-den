@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 500" class="sci-fig" role="img">
+  <style>
+    text { font-family: Andika, 'Comic Sans MS', system-ui, sans-serif; font-size: 14px; fill: #17181a; }
+    .cap { font-size: 12px; fill: #5c5f63; }
+    .lbl .leader { stroke: #3d4248; stroke-width: 1.3; fill: none; }
+    .lbl .dot { fill: #3d4248; }
+    .lbl .name { font-weight: 700; paint-order: stroke; stroke: rgba(255,255,255,0.9); stroke-width: 3px; }
+    .lbl .letter { display: none; }
+    .lbl .letter circle { fill: #17181a; }
+    .lbl .letter text { fill: #fff; font-weight: 700; font-size: 12px; }
+    .quiz .lbl .name { display: none; }
+    .quiz .lbl .letter { display: block; }
+    .lbl.ask .leader { stroke: #c0392b; stroke-width: 2.5; }
+    .lbl.ask .dot { fill: #c0392b; r: 6; }
+    .lbl.ask .letter circle { fill: #c0392b; }
+  </style>
+<circle cx="330" cy="152" r="84" fill="#fbf0c9" stroke="#efd88a" stroke-width="3"/><path d="M294,232 L226,226 L202,168" fill="none" stroke="#ab6f4c" stroke-width="19" stroke-linecap="round" stroke-linejoin="round"/><path d="M294,232 L226,226 L202,168" fill="none" stroke="#ee9a6a" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/><path d="M366,232 L434,226 L458,168" fill="none" stroke="#ab6f4c" stroke-width="19" stroke-linecap="round" stroke-linejoin="round"/><path d="M366,232 L434,226 L458,168" fill="none" stroke="#ee9a6a" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="194" cy="438" rx="24" ry="40" transform="rotate(-48 194 470)" fill="#f2a7bd" stroke="#b67d8e" stroke-width="1.5"/><ellipse cx="228" cy="438" rx="24" ry="40" transform="rotate(-36 228 470)" fill="#f2a7bd" stroke="#b67d8e" stroke-width="1.5"/><ellipse cx="262" cy="438" rx="24" ry="40" transform="rotate(-24 262 470)" fill="#f2a7bd" stroke="#b67d8e" stroke-width="1.5"/><ellipse cx="296" cy="438" rx="24" ry="40" transform="rotate(-12 296 470)" fill="#f2a7bd" stroke="#b67d8e" stroke-width="1.5"/><ellipse cx="330" cy="438" rx="24" ry="40" transform="rotate(0 330 470)" fill="#f2a7bd" stroke="#b67d8e" stroke-width="1.5"/><ellipse cx="364" cy="438" rx="24" ry="40" transform="rotate(12 364 470)" fill="#f2a7bd" stroke="#b67d8e" stroke-width="1.5"/><ellipse cx="398" cy="438" rx="24" ry="40" transform="rotate(24 398 470)" fill="#f2a7bd" stroke="#b67d8e" stroke-width="1.5"/><ellipse cx="432" cy="438" rx="24" ry="40" transform="rotate(36 432 470)" fill="#f2a7bd" stroke="#b67d8e" stroke-width="1.5"/><ellipse cx="466" cy="438" rx="24" ry="40" transform="rotate(48 466 470)" fill="#f2a7bd" stroke="#b67d8e" stroke-width="1.5"/><ellipse cx="330" cy="452" rx="150" ry="22" fill="#da96aa" stroke="#a97584" stroke-width="1.5"/><path d="M212,418 Q210,372 270,364 L390,364 Q450,372 448,418 Q330,440 212,418 Z" fill="#d94a3a" stroke="#8a2418" stroke-width="2"/><path d="M240,410 Q330,392 420,410" fill="none" stroke="#8a2418" stroke-width="2"/><ellipse cx="278" cy="404" rx="16" ry="8" fill="#ee9a6a" stroke="#ab6f4c" stroke-width="2"/><ellipse cx="382" cy="404" rx="16" ry="8" fill="#ee9a6a" stroke="#ab6f4c" stroke-width="2"/><path d="M290,226 Q330,214 370,226 Q412,300 382,360 L278,360 Q248,300 290,226 Z" fill="#ee9a6a" stroke="#ab6f4c" stroke-width="2"/><path d="M274,338 Q330,352 386,338 L392,368 L268,368 Z" fill="#d94a3a" stroke="#8a2418" stroke-width="2"/><path d="M306,226 Q330,258 354,226" fill="none" stroke="#e3b23c" stroke-width="4"/><rect x="319" y="196" width="22" height="30" fill="#ee9a6a" stroke="#ab6f4c" stroke-width="2"/><path d="M294,232 L260,270 L246,316" fill="none" stroke="#ab6f4c" stroke-width="19" stroke-linecap="round" stroke-linejoin="round"/><path d="M294,232 L260,270 L246,316" fill="none" stroke="#ee9a6a" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/><path d="M366,232 L396,276 L422,290" fill="none" stroke="#ab6f4c" stroke-width="19" stroke-linecap="round" stroke-linejoin="round"/><path d="M366,232 L396,276 L422,290" fill="none" stroke="#ee9a6a" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/><path d="M300,130 Q238,104 244,170 Q250,206 300,190 Z" fill="#d68b5f" stroke="#ab6f4c" stroke-width="2"/><path d="M360,130 Q422,104 416,170 Q410,206 360,190 Z" fill="#d68b5f" stroke="#ab6f4c" stroke-width="2"/><ellipse cx="330" cy="156" rx="38" ry="40" fill="#ee9a6a" stroke="#ab6f4c" stroke-width="2"/><path d="M306,150 q6,4 12,0 M342,150 q6,4 12,0" fill="none" stroke="#3b2f2a" stroke-width="2.2" stroke-linecap="round"/><path d="M314,124 h32" stroke="#c0392b" stroke-width="3"/><circle cx="330" cy="132" r="3" fill="#c0392b"/><path d="M330,176 Q334,226 308,250 Q286,262 280,246" fill="none" stroke="#ab6f4c" stroke-width="22" stroke-linecap="round"/><path d="M330,176 Q334,226 308,250 Q286,262 280,246" fill="none" stroke="#ee9a6a" stroke-width="18" stroke-linecap="round"/><path transform="translate(330,120) scale(0.85)" d="M-28,0 L-24,-40 L-12,-26 L0,-54 L12,-26 L24,-40 L28,0 Z" fill="#e3b23c" stroke="#a87a14" stroke-width="2"/><circle transform="translate(330,120) scale(0.85)" cx="0" cy="-16" r="5" fill="#c0392b"/><path d="M341,180 Q376,196 378,232 Q362,208 341,196 Z" fill="#fffaf0" stroke="#8a7a62" stroke-width="1.8"/><path d="M319,180 Q296,186 290,204 L304,208 Q308,198 319,196 Z" fill="#fffaf0" stroke="#8a7a62" stroke-width="1.8"/><g><line x1="202" y1="198" x2="202" y2="106" stroke="#8a5a2b" stroke-width="5" stroke-linecap="round"/>
+      <path d="M202,110 L172,96 Q162,116 172,136 L202,124 Z" fill="#b8bec6" stroke="#5f656d" stroke-width="2"/></g><circle cx="202" cy="168" r="9.5" fill="#ee9a6a" stroke="#ab6f4c" stroke-width="2"/><g fill="none" stroke="#b07a2e" stroke-width="4" stroke-linecap="round">
+      <path d="M458,162 Q464,138 460,124"/>
+      <ellipse cx="462" cy="102" rx="18" ry="22"/>
+      <path d="M456,174 q-6,14 2,24"/></g><circle cx="458" cy="168" r="9.5" fill="#ee9a6a" stroke="#ab6f4c" stroke-width="2"/><g transform="translate(252,320)"><path d="M-30,-6 Q-28,16 0,18 Q28,16 30,-6 Z" fill="#e3b23c" stroke="#a87a14" stroke-width="2"/>
+      <path d="M-26,-6 Q-18,-26 -10,-6 Z" fill="#f6d98a" stroke="#b5892a" stroke-width="1.5"/><path d="M-14,-6 Q-6,-26 2,-6 Z" fill="#f6d98a" stroke="#b5892a" stroke-width="1.5"/><path d="M-2,-6 Q6,-26 14,-6 Z" fill="#f6d98a" stroke="#b5892a" stroke-width="1.5"/><path d="M10,-6 Q18,-26 26,-6 Z" fill="#f6d98a" stroke="#b5892a" stroke-width="1.5"/>
+      <path d="M-6,-18 Q0,-36 6,-18 Z" fill="#f6d98a" stroke="#b5892a" stroke-width="1.5"/></g><circle cx="246" cy="316" r="9.5" fill="#ee9a6a" stroke="#ab6f4c" stroke-width="2"/><g transform="translate(422,290)">
+    <path d="M-10,8 L-10,-10 Q-10,-16 -6,-16 L-6,-22 Q-6,-26 -3,-26 Q0,-26 0,-22 L0,-24 Q0,-28 3,-28 Q6,-28 6,-24 L6,-21 Q6,-25 9,-25 Q12,-25 12,-21 L12,8 Q12,14 1,14 Q-10,14 -10,8 Z" fill="#ee9a6a" stroke="#ab6f4c" stroke-width="2"/>
+  </g><g transform="translate(544,446)">
+    <path d="M-34,10 Q-30,-18 2,-18 Q24,-18 34,4 Q20,14 -34,10 Z" fill="#9a8f86" stroke="#5c534c" stroke-width="2"/>
+    <circle cx="20" cy="-14" r="9" fill="#b3a79d" stroke="#5c534c" stroke-width="2"/>
+    <circle cx="30" cy="0" r="1.8" fill="#17181a"/><circle cx="37" cy="4" r="2.4" fill="#e09a9a"/>
+    <path d="M-34,8 Q-56,6 -60,-10" fill="none" stroke="#5c534c" stroke-width="2"/>
+    <path d="M-12,12 v6 M10,12 v6" stroke="#5c534c" stroke-width="2"/>
+    <path d="M42,-2 Q48,-16 54,-2 Z" fill="#f6d98a" stroke="#b5892a" stroke-width="1.5"/></g>
+  <g class="lbl" data-part="axe">
+    <line class="leader" x1="106.4" y1="80" x2="176" y2="112"/>
+    <circle class="dot" cx="176" cy="112" r="3.5"/>
+    <text class="name" x="92" y="85" text-anchor="middle">Axe</text>
+    <g class="letter"><circle cx="92" cy="80" r="10"/><text x="92" y="84.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="ears">
+    <line class="leader" x1="125.4" y1="180" x2="258" y2="150"/>
+    <circle class="dot" cx="258" cy="150" r="3.5"/>
+    <text class="name" x="92" y="185" text-anchor="middle">Big ears</text>
+    <g class="letter"><circle cx="92" cy="180" r="10"/><text x="92" y="184.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="modaks">
+    <line class="leader" x1="92" y1="370" x2="234" y2="306"/>
+    <circle class="dot" cx="234" cy="306" r="3.5"/>
+    <text class="name" x="92" y="385" text-anchor="middle">Sweets (modaks)</text>
+    <g class="letter"><circle cx="92" cy="380" r="10"/><text x="92" y="384.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="tusk">
+    <line class="leader" x1="92" y1="264" x2="298" y2="200"/>
+    <circle class="dot" cx="298" cy="200" r="3.5"/>
+    <text class="name" x="92" y="279" text-anchor="middle">Broken tusk</text>
+    <g class="letter"><circle cx="92" cy="274" r="10"/><text x="92" y="278.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="head">
+    <line class="leader" x1="568" y1="72" x2="352" y2="140"/>
+    <circle class="dot" cx="352" cy="140" r="3.5"/>
+    <text class="name" x="568" y="67" text-anchor="middle">Elephant head</text>
+    <g class="letter"><circle cx="568" cy="62" r="10"/><text x="568" y="66.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="noose">
+    <line class="leader" x1="568" y1="118" x2="480" y2="102"/>
+    <circle class="dot" cx="480" cy="102" r="3.5"/>
+    <text class="name" x="568" y="133" text-anchor="middle">Rope (noose)</text>
+    <g class="letter"><circle cx="568" cy="128" r="10"/><text x="568" y="132.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="belly">
+    <line class="leader" x1="568" y1="250" x2="380" y2="300"/>
+    <circle class="dot" cx="380" cy="300" r="3.5"/>
+    <text class="name" x="568" y="245" text-anchor="middle">Big belly</text>
+    <g class="letter"><circle cx="568" cy="240" r="10"/><text x="568" y="244.5" text-anchor="middle"></text></g>
+  </g>
+  <g class="lbl" data-part="mouse">
+    <line class="leader" x1="588" y1="380" x2="530" y2="436"/>
+    <circle class="dot" cx="530" cy="436" r="3.5"/>
+    <text class="name" x="588" y="375" text-anchor="middle">Mouse</text>
+    <g class="letter"><circle cx="588" cy="370" r="10"/><text x="588" y="374.5" text-anchor="middle"></text></g>
+  </g>
+</svg>

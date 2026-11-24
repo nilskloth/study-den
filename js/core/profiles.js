@@ -22,8 +22,8 @@
    their own first; Year 8 only changes science for now (the other
    subjects are Year 7 material); Year 6 = the primary SATs area. */
 const SECONDARY_YEARS = [
-  { year: "Year 7", stage: "secondary", sub: "Languages, maths, science and geography" },
-  { year: "Year 8", stage: "secondary", sub: "Year 8 science (languages, maths and geography stay Year 7 for now)" },
+  { year: "Year 7", stage: "secondary", sub: "Languages, maths, science, geography and RS" },
+  { year: "Year 8", stage: "secondary", sub: "Year 8 science (languages, maths, geography and RS stay Year 7 for now)" },
   { year: "Year 6", stage: "primary", sub: "SATs papers and practice" }
 ];
 
@@ -31,14 +31,14 @@ export const FAMILY = [
   { id: "oskar", name: "Oskar", year: "Year 1", stage: "year1", key: "studyden_oskar",
     sub: "Sounds, reading words and tricky words", subject: "phonics", family: true },
   { id: "finn", name: "Finn", year: "Year 7", stage: "secondary", key: "ks2_sats_v2",
-    sub: "Languages, maths, science and geography", subject: "german", family: true,
+    sub: "Languages, maths, science, geography and RS", subject: "german", family: true,
     stages: ["secondary", "primary"], years: SECONDARY_YEARS }     // can still open the Year 6 SATs area
 ];
 
 /* What a guest can pick (Year 1 stays for the family). */
 export const GUEST_YEARS = [
   { year: "Year 6", stage: "primary", sub: "SATs papers and practice", subject: "reading" },
-  { year: "Year 7", stage: "secondary", sub: "Languages, maths, science and geography", subject: "german",
+  { year: "Year 7", stage: "secondary", sub: "Languages, maths, science, geography and RS", subject: "german",
     stages: ["secondary", "primary"], years: SECONDARY_YEARS }
 ];
 

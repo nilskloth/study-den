@@ -5,6 +5,8 @@
      node tools/test-science.mjs extra.json …    the bank + extra topic
                                                  files (an array of topics,
                                                  or { topics: [...] })
+     node tools/test-science.mjs --bank rs       another bank in the same
+                                                 format (rs.json + rs/ pictures)
    - ids unique; every topic has the fields the trainer needs;
      topics with an "idea" use a known idea and part 1|2
    - short: the answer and every accept are marked right by the
@@ -15,6 +17,9 @@
      award rules and a model answer
    - diagrams: every image file exists; a question's "part" is a
      labelled part (data-part) of its diagram
+   - no answer or choice anywhere in the bank is marked right for a
+     question it doesn't belong to (a spelling slip away: Brahma /
+     Brahman) unless that question lists it in choices or reject
    ========================================================= */
 
 import { readFileSync, existsSync } from "node:fs";
@@ -22,8 +27,11 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const BANK = join(ROOT, "data/content/secondary/science.json");
-const ART = join(ROOT, "data/content/secondary/science");
+const args = process.argv.slice(2);
+const bi = args.indexOf("--bank");
+const NAME = bi >= 0 ? args.splice(bi, 2)[1] : "science";
+const BANK = join(ROOT, `data/content/secondary/${NAME}.json`);
+const ART = join(ROOT, `data/content/secondary/${NAME}`);
 
 /* the trainer's matcher, lifted out of the view (no DOM needed) */
 const { normaliseText } = await import(join(ROOT, "js/core/utils.js"));
@@ -33,7 +41,7 @@ const judgeTyped = new Function("normaliseText",
 
 const bank = JSON.parse(readFileSync(BANK, "utf8"));
 const topics = [...bank.topics];
-for (const f of process.argv.slice(2)) {
+for (const f of args) {
   const extra = JSON.parse(readFileSync(f, "utf8"));
   topics.push(...(Array.isArray(extra) ? extra : extra.topics));
 }
@@ -95,6 +103,19 @@ for (const t of topics) {
       const r = judgeTyped(q, c);
       check(!r.ok || r.everyday, `${at}: wrong answer "${c}" is marked right`);
     }
+  }
+}
+
+/* a wrong answer from elsewhere in the bank must not count as a slip
+   (other banks only for now: science has older near-misses to sort out) */
+const shorts = topics.flatMap(t => t.questions || []).filter(q => q.type === "short");
+const pool = [...new Set(shorts.flatMap(q => [q.answer, ...(q.choices || [])]))];
+for (const q of NAME === "science" ? [] : shorts) {
+  const own = new Set([q.answer, ...(q.accept || []), ...(q.everyday || [])].map(a => normaliseText(a)));
+  for (const w of pool) {
+    if (own.has(normaliseText(w))) continue;
+    const r = judgeTyped(q, w);
+    check(!r.ok || r.everyday, `${q.id}: "${w}" is marked right for "${q.answer}" — add it to reject`);
   }
 }
 

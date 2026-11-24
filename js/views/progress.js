@@ -16,7 +16,7 @@ import { grownUpsPassword, unlockGrownUps } from "../core/grownups-lock.js";
 import { loadScience, loadIdeaOrder } from "./secondary/revision.js";
 
 const SUBJECT_LABELS = { reading: "Reading", gps: "Grammar & punctuation", maths: "Maths", spelling: "Spelling",
-  german: "German vocabulary", french: "French vocabulary", science: "Science revision", geography: "Geography revision", maths7: "Maths revision (Year 7)",
+  german: "German vocabulary", french: "French vocabulary", science: "Science revision", geography: "Geography revision", rs: "RS revision (Hinduism)", maths7: "Maths revision (Year 7)",
   phonics: "Phonics", tricky: "Tricky words" };
 
 /* Sonnet 5 pricing (per MTok): in $3 / out $15 — rough spend estimate. */
