@@ -2,13 +2,13 @@
  "subject": "rs",
  "label": "Religious Studies",
  "unit": "Year 7 — Hinduism",
- "source": "For the end of unit assessment on Hinduism (Fri 27 Nov 2026). Built from Finn's notes (Brahman, murti, deities; the table of four traditions) and the Arbor homework titles (Brahma, Vishnu and Shiva's symbols; Holika and Prahlad). The notes, questions and pictures are ours; Ganesha, Lakshmi and the worship key words are extra.",
+ "source": "For the end of unit assessment on Hinduism (Fri 27 Nov 2026). Built from Finn's RS workbook and notes (Sept–Nov 2026: beliefs about God, karma and rebirth, the deities' symbols, Shruti and Smriti, Holika and Prahlad, the four stages of life, different groups of Hindus) and the Arbor homework. The notes, questions and pictures are ours; Ganesha, Lakshmi and Worship are extra.",
  "topics": [
   {
    "id": "brahman",
    "number": 1,
    "title": "Brahman and the deities",
-   "source": "From Finn's notes (Brahman, murti, deities) and the “Hindu beliefs about God” homework (24 Sept). The questions are ours.",
+   "source": "From Finn's workbook (10 Sept “Hindu beliefs about God”: one God or many?; 11 Sept: the Sanskrit word for God; 13 Nov starter: Brahman, Trimurti, deities, murti; the Key Words page) and his notes. The questions are ours.",
    "summary": "Hindus believe in one God, Brahman, who is shown through many deities. The Trimurti are the three deities for the three things God does: create, preserve, destroy.",
    "images": [
     {
@@ -42,9 +42,11 @@
     ]
    },
    "facts": [
-    "**Brahman** is the one ultimate reality — God. Hindus believe Brahman is everywhere and in everything.",
+    "**Brahman** is the one ultimate reality — God. It is the word for God in **Sanskrit**, the ancient language of the Hindu holy books. Hindus believe Brahman is everywhere and in everything.",
     "Brahman is too great for people to understand all at once, so Hindus worship Brahman through **deities** (gods and goddesses).",
     "A **deity** is a form that represents one part of God — like the different faces of one person. So most Hindus believe in **one God shown in many forms**.",
+    "**One God or many?** (the class question, 10 Sept) It can look as if Hindus believe in many gods, because they worship many deities. But most Hindus believe there is **one God, Brahman**, and the deities are all forms of Brahman. A good answer says both.",
+    "Deities are often shown with **many heads or arms** to show that they are **superhuman** beings — more powerful than any human.",
     "A **murti** is a statue or image of a deity. Hindus use murtis to help them focus on God when they worship (puja).",
     "The **Trimurti** means “three forms”: **Brahma** the creator, **Vishnu** the preserver and **Shiva** the destroyer. Together they show the never-ending cycle of the universe: created, kept going, destroyed, created again.",
     "Each deity's picture is full of **symbols**: what they hold, wear or ride all tell you something about them.",
@@ -67,7 +69,7 @@
     ],
     [
      "Trimurti",
-     "the three forms: Brahma, Vishnu and Shiva"
+     "“three forms” of God: Brahma, Vishnu and Shiva"
     ],
     [
      "avatar",
@@ -384,14 +386,411 @@
       },
       "modelAnswer": "The Trimurti means “three forms”: three deities who show the three main things Brahman does. Brahma creates the universe, Vishnu preserves it and keeps it safe, and Shiva destroys it so it can be created again — a never-ending cycle."
      }
+    },
+    {
+     "id": "rs-bd-22",
+     "type": "short",
+     "stem": "Which word means “God” in Sanskrit?",
+     "answer": "Brahman",
+     "reject": [
+      "Brahma"
+     ],
+     "choices": [
+      "Brahma",
+      "Atman",
+      "Murti"
+     ],
+     "explain": "Brahman — the one ultimate reality. (Careful: Brahma, without the n, is the creator deity.)"
+    },
+    {
+     "id": "rs-bd-23",
+     "type": "mcq",
+     "stem": "What is a murti?",
+     "answer": "A statue or image of a deity",
+     "choices": [
+      "The one ultimate reality, God",
+      "The three forms of God",
+      "The Hindu word for the soul"
+     ],
+     "explain": "A murti is a statue or image of a deity, used in worship. (13 Nov starter: Brahman, Trimurti, deities, murti.)"
+    },
+    {
+     "id": "rs-bd-24",
+     "type": "mcq",
+     "stem": "What are deities?",
+     "answer": "Gods and goddesses — forms that each show a part of Brahman",
+     "choices": [
+      "Statues used in worship",
+      "The three forms of God only",
+      "Hindu holy books"
+     ],
+     "explain": "Deities are gods and goddesses, forms of the one God, Brahman. A statue of one is a murti."
+    },
+    {
+     "id": "rs-bd-25",
+     "type": "mcq",
+     "stem": "What is the Trimurti?",
+     "answer": "“Three forms” of God: Brahma, Vishnu and Shiva",
+     "choices": [
+      "A statue of a deity",
+      "The one ultimate reality",
+      "The cycle of life, death and rebirth"
+     ],
+     "explain": "Tri = three, murti = form."
+    },
+    {
+     "id": "rs-bd-26",
+     "type": "mcq",
+     "stem": "Why are deities often shown with many heads or arms?",
+     "answer": "To show that they are superhuman beings",
+     "choices": [
+      "Because they were born that way",
+      "To make them look scary",
+      "So the artist can show off"
+     ],
+     "explain": "From the Key Words page: many heads or arms show they are superhuman — more powerful than any human."
+    },
+    {
+     "id": "rs-bd-27",
+     "type": "explain",
+     "marks": 3,
+     "stem": "Do Hindus believe in one God or many gods? Explain your answer.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "Hindus worship many deities (gods and goddesses), so it can look like many gods"
+       },
+       {
+        "point": "but most Hindus believe in one God / ultimate reality, Brahman"
+       },
+       {
+        "point": "the deities are forms of Brahman / each shows one part of God (e.g. the Trimurti)"
+       },
+       {
+        "point": "so the answer is both: one God shown in many forms"
+       }
+      ],
+      "award": {
+       "3": "one mark for each point, up to 3"
+      },
+      "modelAnswer": "It can look as if Hindus believe in many gods, because they worship many deities such as Vishnu, Shiva and Ganesha. But most Hindus believe in one God, Brahman, the ultimate reality. The deities are different forms of Brahman, each showing one part of God — so Hindus believe in one God shown in many forms."
+     },
+     "tip": "Your workbook answer was “many gods”. Say both sides: many deities, but one God (Brahman)."
+    }
+   ]
+  },
+  {
+   "id": "beliefs",
+   "number": 2,
+   "title": "Karma, rebirth and moksha",
+   "source": "From Finn's workbook: “Key beliefs – karma and rebirth” (11 Sept), the starters on 8 and 9 Oct (karma, moksha, samsara, reincarnation, atman), 12 Nov and the Key Words page. The class definitions are kept; the questions are ours.",
+   "summary": "Hindus believe the soul (atman) is reborn again and again (samsara). Karma — your actions, thoughts and intentions — shapes your future. The goal is moksha: release from the cycle.",
+   "images": [],
+   "table": {
+    "title": "The key words (class definitions)",
+    "head": [
+     "Key word",
+     "Meaning"
+    ],
+    "rows": [
+     [
+      "Karma",
+      "Actions, thoughts and intentions shape your future"
+     ],
+     [
+      "Atman",
+      "“Soul” or “spirit”"
+     ],
+     [
+      "Samsara",
+      "The cycle of life, death and rebirth"
+     ],
+     [
+      "Reincarnation",
+      "Being born into another body"
+     ],
+     [
+      "Moksha",
+      "Liberation, freedom or release (from samsara)"
+     ]
+    ]
+   },
+   "facts": [
+    "**Karma**: Hindus believe your **actions, thoughts and intentions shape your future** — all actions in life have **consequences**. Good karma brings good results, bad karma bad results, in this life or the next.",
+    "The **atman** is the **soul or spirit**. Hindus believe it never dies.",
+    "For Hindus, **death is not the end**: the atman is **reborn into another body** (**reincarnation**). Good karma can lead to a better next life.",
+    "**Samsara** is the **cycle of life, death and rebirth** that the atman goes round again and again.",
+    "**Moksha** means **liberation, freedom or release** — the atman is freed from samsara and joins Brahman. It is the final goal for Hindus.",
+    "**Watch the mix-up:** samsara is the **cycle**; moksha is the **escape** from the cycle. (Memory hook: **M**oksha = **M**ade free.)",
+    "**How karma changes a life:** someone who believes in karma tries to do good actions — and think good thoughts — so there are good consequences, and avoids harming others."
+   ],
+   "keywords": [
+    [
+     "karma",
+     "actions, thoughts and intentions shape your future"
+    ],
+    [
+     "atman",
+     "“soul” or “spirit”"
+    ],
+    [
+     "samsara",
+     "the cycle of life, death and rebirth"
+    ],
+    [
+     "reincarnation",
+     "being born into another body"
+    ],
+    [
+     "moksha",
+     "liberation, freedom or release from samsara"
+    ],
+    [
+     "consequence",
+     "the result of an action"
+    ]
+   ],
+   "questions": [
+    {
+     "id": "rs-kb-01",
+     "type": "short",
+     "stem": "Which key word means that actions, thoughts and intentions shape your future?",
+     "answer": "karma",
+     "reject": [
+      "dharma"
+     ],
+     "choices": [
+      "dharma",
+      "moksha",
+      "samsara"
+     ],
+     "explain": "Karma: all actions (and thoughts and intentions) have consequences."
+    },
+    {
+     "id": "rs-kb-02",
+     "type": "short",
+     "stem": "Which key word means the cycle of life, death and rebirth?",
+     "answer": "samsara",
+     "accept": [
+      "sansara",
+      "samsaara"
+     ],
+     "choices": [
+      "moksha",
+      "karma",
+      "atman"
+     ],
+     "explain": "Samsara is the cycle. Moksha is the release from it."
+    },
+    {
+     "id": "rs-kb-03",
+     "type": "short",
+     "stem": "Which key word means liberation, freedom or release?",
+     "answer": "moksha",
+     "accept": [
+      "mukti"
+     ],
+     "reject": [
+      "murti"
+     ],
+     "choices": [
+      "samsara",
+      "karma",
+      "atman"
+     ],
+     "explain": "Moksha: the atman is released from samsara and joins Brahman."
+    },
+    {
+     "id": "rs-kb-04",
+     "type": "short",
+     "stem": "Which key word means being born into another body?",
+     "answer": "reincarnation",
+     "accept": [
+      "rebirth",
+      "reincarnated",
+      "reborn"
+     ],
+     "choices": [
+      "samsara",
+      "moksha",
+      "karma"
+     ],
+     "explain": "Reincarnation (rebirth): the atman is born into a new body after death."
+    },
+    {
+     "id": "rs-kb-05",
+     "type": "short",
+     "stem": "Which key word means “soul” or “spirit”?",
+     "answer": "atman",
+     "accept": [
+      "atma"
+     ],
+     "choices": [
+      "Brahman",
+      "moksha",
+      "karma"
+     ],
+     "explain": "The atman is the soul or spirit, which Hindus believe never dies."
+    },
+    {
+     "id": "rs-kb-06",
+     "type": "mcq",
+     "stem": "What does samsara mean?",
+     "answer": "The cycle of life, death and rebirth",
+     "choices": [
+      "Liberation, freedom or release",
+      "Actions, thoughts and intentions shape your future",
+      "“Soul” or “spirit”"
+     ],
+     "explain": "Samsara is the cycle. (On 8 Oct samsara and moksha got swapped — samsara = cycle, moksha = release.)"
+    },
+    {
+     "id": "rs-kb-07",
+     "type": "mcq",
+     "stem": "What does moksha mean?",
+     "answer": "Liberation, freedom or release from samsara",
+     "choices": [
+      "The cycle of life, death and rebirth",
+      "Being born into another body",
+      "“Soul” or “spirit”"
+     ],
+     "explain": "Moksha is being set free from the cycle — the final goal."
+    },
+    {
+     "id": "rs-kb-08",
+     "type": "mcq",
+     "stem": "What does karma mean?",
+     "answer": "Actions, thoughts and intentions shape your future",
+     "choices": [
+      "Being born into another body",
+      "The one ultimate reality",
+      "Liberation, freedom or release"
+     ],
+     "explain": "Karma: every action has consequences."
+    },
+    {
+     "id": "rs-kb-09",
+     "type": "mcq",
+     "stem": "What do Hindus believe happens to the atman when someone dies?",
+     "answer": "It is reborn into another body",
+     "choices": [
+      "Nothing — death is the end",
+      "It stays in the body",
+      "It becomes a deity"
+     ],
+     "explain": "Death is not the end: the atman is reborn (reincarnation), round the cycle of samsara."
+    },
+    {
+     "id": "rs-kb-10",
+     "type": "mcq",
+     "stem": "What is the final goal for Hindus?",
+     "answer": "Moksha — release from samsara",
+     "choices": [
+      "To be reborn as many times as possible",
+      "To become rich",
+      "To build a mandir"
+     ],
+     "explain": "Moksha: the atman is freed from rebirth and united with Brahman."
+    },
+    {
+     "id": "rs-kb-11",
+     "type": "mcq",
+     "stem": "What might good karma lead to?",
+     "answer": "Good consequences — perhaps a better next life",
+     "choices": [
+      "Nothing at all",
+      "Being reborn as a deity straight away",
+      "Bad luck"
+     ],
+     "explain": "Good actions, thoughts and intentions bring good consequences, in this life or the next."
+    },
+    {
+     "id": "rs-kb-12",
+     "type": "tf",
+     "stem": "Moksha is the cycle of life, death and rebirth.",
+     "answer": false,
+     "explain": "That's samsara. Moksha is the release from the cycle."
+    },
+    {
+     "id": "rs-kb-13",
+     "type": "tf",
+     "stem": "Hindus believe karma includes your thoughts and intentions, not just your actions.",
+     "answer": true,
+     "explain": "Class definition: actions, thoughts and intentions shape your future."
+    },
+    {
+     "id": "rs-kb-14",
+     "type": "tf",
+     "stem": "Hindus believe that good actions bring good results, in this life or the next.",
+     "answer": true,
+     "explain": "That is karma."
+    },
+    {
+     "id": "rs-kb-15",
+     "type": "explain",
+     "marks": 3,
+     "stem": "How might a person be influenced in their life if they believe in karma?",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "they try to do good actions so that there are good consequences"
+       },
+       {
+        "point": "they avoid bad actions / harming others because these bring bad consequences"
+       },
+       {
+        "point": "they think about their thoughts and intentions too, not just actions"
+       },
+       {
+        "point": "an example: being kind, honest, helping others, not harming living things"
+       },
+       {
+        "point": "they hope for a better rebirth / to reach moksha"
+       }
+      ],
+      "award": {
+       "3": "one mark for each point, up to 3"
+      },
+      "modelAnswer": "If a person believes in karma, they will try to do good actions, like being kind and helping others, so that there are good consequences. They will avoid harming others, because bad actions bring bad consequences, perhaps in their next life. They will also try to have good thoughts and intentions, hoping for a better rebirth and one day moksha."
+     },
+     "tip": "Your workbook answer had the main idea (good actions → good consequences). Add an example and say what they avoid."
+    },
+    {
+     "id": "rs-kb-16",
+     "type": "explain",
+     "marks": 4,
+     "stem": "Explain what Hindus believe about samsara and moksha.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "the atman (soul) is reborn into another body after death (reincarnation)"
+       },
+       {
+        "point": "samsara is the cycle of life, death and rebirth"
+       },
+       {
+        "point": "karma decides what the next life is like"
+       },
+       {
+        "point": "moksha is liberation / freedom / release from samsara"
+       },
+       {
+        "point": "at moksha the atman joins Brahman / it is the final goal"
+       }
+      ],
+      "award": {
+       "4": "one mark for each point, up to 4"
+      },
+      "modelAnswer": "Hindus believe the atman, the soul, is reborn into another body after death. This cycle of life, death and rebirth is samsara, and karma decides what each next life is like. The final goal is moksha: liberation from samsara, when the atman is set free and joins Brahman."
+     }
     }
    ]
   },
   {
    "id": "brahma",
-   "number": 2,
+   "number": 3,
    "title": "Brahma, the creator",
-   "source": "From the “Hindu beliefs about God” homework (24 Sept: Brahma, Vishnu and Shiva and their symbols). Picture redrawn; notes and questions are ours.",
+   "source": "From Finn's homework (24 Sept): his labelled picture of Brahma — the meanings in the table are the ones he wrote. Picture redrawn; extra notes and questions are ours.",
    "summary": "Brahma created the universe. Learn what his four heads, the Vedas, the water pot, the prayer beads, the lotus and the swan stand for.",
    "images": [
     {
@@ -407,24 +806,24 @@
     ],
     "rows": [
      [
-      "Four heads",
-      "Sees in all four directions; the four Vedas"
+      "Four heads (only three seen — one faces backwards)",
+      "His all-encompassing knowledge; sees in all four directions"
      ],
      [
       "The Vedas (book)",
-      "Knowledge — the holy books"
+      "Universal wisdom — the holy books"
      ],
      [
       "Water pot",
-      "Water: life and creation began from it"
+      "The source of life"
      ],
      [
       "Prayer beads",
-      "Time, and prayer"
+      "Prayer, and time"
      ],
      [
-      "Lotus flower",
-      "Purity; Brahma was born from a lotus"
+      "Lotus flower (in his hand, and his seat)",
+      "Cosmic creation and the unfolding of nature; one of the most sacred Hindu symbols"
      ],
      [
       "White beard",
@@ -439,7 +838,7 @@
    "facts": [
     "**Brahma** is the **creator**: he made the universe and everything in it.",
     "Hindus tell that Brahma was **born from a lotus** growing out of Vishnu's navel.",
-    "He has **four heads**, facing the four directions — he sees and knows everything. The four **Vedas** (the oldest holy books) are said to have come from his four mouths.",
+    "He has **four heads**, facing the four directions — he sees and knows everything. In pictures you can **only see three**: the fourth faces backwards. The four **Vedas** (the oldest holy books) are said to have come from his four mouths.",
     "He holds the **Vedas**, a **water pot**, **prayer beads** and a **lotus**, and rides a **swan**.",
     "His wife is **Saraswati**, goddess of knowledge and learning.",
     "Brahma is **rarely worshipped**: there are very few temples to him. One story says it is because his work — creating — is finished."
@@ -470,14 +869,18 @@
      "answer": "Four heads",
      "accept": [
       "4 heads",
-      "heads"
+      "heads",
+      "three heads",
+      "3 heads",
+      "Four heads (3 seen)",
+      "many heads"
      ],
      "choices": [
       "The Vedas",
       "Water pot",
       "Prayer beads"
      ],
-     "explain": "Four heads: he sees in all four directions and knows everything; the four Vedas came from his four mouths.",
+     "explain": "Four heads: his all-encompassing knowledge — he sees in all four directions and knows everything; the four Vedas came from his four mouths. Pictures show only three heads: the fourth faces backwards, out of sight.",
      "image": "brahma",
      "part": "four-heads"
     },
@@ -497,7 +900,7 @@
       "Prayer beads",
       "Lotus flower"
      ],
-     "explain": "The Vedas: the holy books — Brahma is the source of all knowledge.",
+     "explain": "The Vedas: the holy books: universal wisdom and knowledge — Brahma is the source of all knowledge.",
      "image": "brahma",
      "part": "vedas"
     },
@@ -516,7 +919,7 @@
       "Lotus flower",
       "White beard"
      ],
-     "explain": "Water pot: a water pot: water, from which all life and creation began.",
+     "explain": "Water pot: a water pot: the source of life — all life and creation began from water.",
      "image": "brahma",
      "part": "kamandalu"
     },
@@ -553,7 +956,7 @@
       "Swan",
       "Four heads"
      ],
-     "explain": "Lotus flower: a lotus: purity, and creation — Brahma was born from a lotus.",
+     "explain": "Lotus flower: a lotus: cosmic creation and the unfolding of nature, and purity — Brahma was born from a lotus and sits on one; it is one of the most sacred symbols in Hinduism.",
      "image": "brahma",
      "part": "lotus"
     },
@@ -595,38 +998,38 @@
     {
      "id": "rs-br-08",
      "type": "mcq",
-     "stem": "Why does Brahma have four heads?",
-     "answer": "He sees in all four directions and knows everything",
+     "stem": "Brahma has four heads (pictures show three — one faces backwards). What do they symbolise?",
+     "answer": "His all-encompassing knowledge — he sees in all directions",
      "choices": [
       "He has four brothers",
       "To scare away demons",
       "He likes to wear four crowns"
      ],
-     "explain": "he sees in all four directions and knows everything; the four Vedas came from his four mouths."
+     "explain": "his all-encompassing knowledge — he sees in all four directions and knows everything; the four Vedas came from his four mouths. Pictures show only three heads: the fourth faces backwards, out of sight."
     },
     {
      "id": "rs-br-09",
      "type": "mcq",
      "stem": "What do the Vedas in Brahma's hand stand for?",
-     "answer": "Knowledge",
+     "answer": "Universal wisdom and knowledge",
      "choices": [
       "Wealth",
       "Strength",
       "Destruction"
      ],
-     "explain": "the holy books — Brahma is the source of all knowledge."
+     "explain": "the holy books: universal wisdom and knowledge — Brahma is the source of all knowledge."
     },
     {
      "id": "rs-br-10",
      "type": "mcq",
      "stem": "What does Brahma's water pot stand for?",
-     "answer": "Water, from which life and creation began",
+     "answer": "The source of life",
      "choices": [
       "The river Ganges flooding",
       "Money and wealth",
       "Washing away sins"
      ],
-     "explain": "a water pot: water, from which all life and creation began."
+     "explain": "a water pot: the source of life — all life and creation began from water."
     },
     {
      "id": "rs-br-11",
@@ -721,34 +1124,46 @@
         "point": "Brahma is the creator (made the universe)"
        },
        {
-        "point": "four heads: sees in all directions / knows everything / the four Vedas"
+        "point": "four heads: all-encompassing knowledge / sees in all directions / the four Vedas"
        },
        {
-        "point": "the Vedas: knowledge"
+        "point": "the Vedas: universal wisdom / knowledge"
        },
        {
-        "point": "water pot: water, life / creation began from water"
+        "point": "water pot: the source of life / creation began from water"
        },
        {
-        "point": "prayer beads: time / prayer"
+        "point": "prayer beads: prayer / time"
        },
        {
-        "point": "lotus: purity / born from a lotus; or swan: wisdom, good from bad; or white beard: wisdom, old as the universe"
+        "point": "lotus: cosmic creation / the unfolding of nature / purity / a sacred symbol; or swan: wisdom, good from bad; or white beard: wisdom, old as the universe"
        }
       ],
       "award": {
        "4": "1 mark for saying he is the creator; 1 mark for each symbol with its correct meaning, up to 4"
       },
-      "modelAnswer": "Brahma is the creator. His four heads show that he sees in all four directions and knows everything, and the four Vedas came from them. He holds the Vedas, which stand for knowledge, and a water pot, because life and creation began from water. His swan stands for wisdom — telling good from bad."
+      "modelAnswer": "Brahma is the creator. His four heads symbolise his all-encompassing knowledge: he sees in all four directions. He holds the Vedas, which stand for universal wisdom, and a water pot, the source of life. The lotus he holds and sits on stands for cosmic creation and the unfolding of nature."
      }
+    },
+    {
+     "id": "rs-br-19",
+     "type": "mcq",
+     "stem": "What does the lotus Brahma holds (and sits on) stand for?",
+     "answer": "Cosmic creation and the unfolding of nature",
+     "choices": [
+      "Destruction",
+      "Wealth",
+      "Anger"
+     ],
+     "explain": "a lotus: cosmic creation and the unfolding of nature, and purity — Brahma was born from a lotus and sits on one; it is one of the most sacred symbols in Hinduism."
     }
    ]
   },
   {
    "id": "vishnu",
-   "number": 3,
+   "number": 4,
    "title": "Vishnu, the preserver",
-   "source": "From the “Hindu beliefs about God” homework (24 Sept). Picture redrawn; notes and questions are ours.",
+   "source": "From Finn's homework (24 Sept): his labelled picture of Vishnu (“Good homework Finn”) — the discus, conch, mace and lotus meanings are the ones he wrote. Picture redrawn (his shows Vishnu standing); extra notes and questions are ours.",
    "summary": "Vishnu keeps the universe safe and comes to Earth as avatars to defeat evil. Learn what his blue skin, four arms, discus, conch, mace and lotus mean.",
    "images": [
     {
@@ -764,28 +1179,28 @@
     ],
     "rows": [
      [
+      "Sudarshana chakra (discus)",
+      "Cosmic order and protection"
+     ],
+     [
+      "Conch shell",
+      "The sound of creation and spiritual awakening"
+     ],
+     [
+      "Kaumodaki (mace)",
+      "Mental and physical strength"
+     ],
+     [
+      "Lotus flower",
+      "Purity, spiritual liberation and fertility"
+     ],
+     [
       "Blue skin",
       "Like the sky and ocean: endless, everywhere"
      ],
      [
       "Four arms",
       "All-powerful, in all four directions"
-     ],
-     [
-      "Discus (chakra)",
-      "The mind; destroys evil"
-     ],
-     [
-      "Conch shell",
-      "The sound Om; calls people to do good"
-     ],
-     [
-      "Mace (gada)",
-      "Strength to defeat evil"
-     ],
-     [
-      "Lotus flower",
-      "Purity"
      ],
      [
       "Crown",
@@ -797,7 +1212,8 @@
     "**Vishnu** is the **preserver**: he keeps the universe safe and in balance, and protects good against evil.",
     "When evil grows strong, Vishnu comes down to Earth as an **avatar**. Hindus tell of ten avatars, including **Rama**, **Krishna** and **Narasimha** (half man, half lion — see Holika and Prahlad).",
     "His **blue skin** is the colour of the sky and the ocean, which seem endless: Vishnu is infinite and everywhere.",
-    "His **four arms** show he is all-powerful. He holds a **discus (chakra)**, a **conch shell**, a **mace (gada)** and a **lotus**.",
+    "His **four arms** show he is all-powerful. He holds the **Sudarshana chakra** (a discus), a **conch shell**, a mace called **Kaumodaki** and a **lotus**.",
+    "He is often shown **standing on a pedestal**, called a **peetham** (or a lotus pedestal, padmapitha).",
     "He rides **Garuda**, an eagle, and is often shown resting on the great snake **Shesha** in the cosmic ocean.",
     "His wife is **Lakshmi**, goddess of wealth and good fortune.",
     "Hindus who see Vishnu as the most important deity follow **Vaishnavism**."
@@ -885,14 +1301,16 @@
       "chakra",
       "discus (chakra)",
       "disc",
-      "wheel"
+      "wheel",
+      "Sudarshana chakra",
+      "Sudarshana"
      ],
      "choices": [
       "Conch shell",
       "Mace",
       "Lotus flower"
      ],
-     "explain": "Discus: the discus (chakra), a spinning weapon: the mind, and destroying evil.",
+     "explain": "Discus: the Sudarshana chakra (discus), a spinning weapon: cosmic order and protection — it destroys evil.",
      "image": "vishnu",
      "part": "chakra"
     },
@@ -911,7 +1329,7 @@
       "Lotus flower",
       "Crown"
      ],
-     "explain": "Conch shell: the conch shell: the sacred sound Om; blown to call people to do good and for victory over evil.",
+     "explain": "Conch shell: the conch shell: the sound of creation (Om) and spiritual awakening; blown for victory over evil.",
      "image": "vishnu",
      "part": "conch"
     },
@@ -923,14 +1341,15 @@
      "accept": [
       "gada",
       "mace (gada)",
-      "club"
+      "club",
+      "Kaumodaki"
      ],
      "choices": [
       "Lotus flower",
       "Crown",
       "Blue skin"
      ],
-     "explain": "Mace: the mace (gada): strength and power to defeat evil.",
+     "explain": "Mace: the mace, called Kaumodaki: mental and physical strength, to defeat evil.",
      "image": "vishnu",
      "part": "gada"
     },
@@ -948,7 +1367,7 @@
       "Blue skin",
       "Four arms"
      ],
-     "explain": "Lotus flower: the lotus: purity — it grows in muddy water but comes out clean and beautiful.",
+     "explain": "Lotus flower: the lotus: purity, spiritual liberation and fertility — it grows in muddy water but comes out clean and beautiful.",
      "image": "vishnu",
      "part": "lotus"
     },
@@ -979,38 +1398,38 @@
     {
      "id": "rs-vi-10",
      "type": "mcq",
-     "stem": "What does Vishnu's discus (chakra) stand for?",
-     "answer": "The mind, and destroying evil",
+     "stem": "What does Vishnu's discus (the Sudarshana chakra) stand for?",
+     "answer": "Cosmic order and protection",
      "choices": [
       "Wealth",
       "Water",
       "Time running out"
      ],
-     "explain": "the discus (chakra), a spinning weapon: the mind, and destroying evil."
+     "explain": "the Sudarshana chakra (discus), a spinning weapon: cosmic order and protection — it destroys evil."
     },
     {
      "id": "rs-vi-11",
      "type": "mcq",
      "stem": "What does Vishnu's conch shell stand for?",
-     "answer": "The sacred sound Om — calling people to do good",
+     "answer": "The sound of creation and spiritual awakening",
      "choices": [
       "The sea he lives in",
       "Money",
       "Destroying the world"
      ],
-     "explain": "the conch shell: the sacred sound Om; blown to call people to do good and for victory over evil."
+     "explain": "the conch shell: the sound of creation (Om) and spiritual awakening; blown for victory over evil."
     },
     {
      "id": "rs-vi-12",
      "type": "mcq",
-     "stem": "What does Vishnu's mace (gada) stand for?",
-     "answer": "Strength to defeat evil",
+     "stem": "What does Vishnu's mace (Kaumodaki) stand for?",
+     "answer": "Mental and physical strength",
      "choices": [
       "Knowledge",
       "Purity",
       "Water"
      ],
-     "explain": "the mace (gada): strength and power to defeat evil."
+     "explain": "the mace, called Kaumodaki: mental and physical strength, to defeat evil."
     },
     {
      "id": "rs-vi-13",
@@ -1022,7 +1441,7 @@
       "It smells nice",
       "It only grows in temples"
      ],
-     "explain": "the lotus: purity — it grows in muddy water but comes out clean and beautiful."
+     "explain": "the lotus: purity, spiritual liberation and fertility — it grows in muddy water but comes out clean and beautiful."
     },
     {
      "id": "rs-vi-14",
@@ -1111,29 +1530,90 @@
         "point": "four arms: all-powerful"
        },
        {
-        "point": "discus: mind / destroys evil; or mace: strength to defeat evil"
+        "point": "discus (Sudarshana chakra): cosmic order / protection / destroys evil"
        },
        {
-        "point": "conch: the sound Om / calls people to do good"
+        "point": "mace (Kaumodaki): mental and physical strength"
        },
        {
-        "point": "lotus: purity"
+        "point": "conch: the sound of creation (Om) / spiritual awakening"
+       },
+       {
+        "point": "lotus: purity / spiritual liberation / fertility"
        }
       ],
       "award": {
        "4": "1 mark for saying he is the preserver; 1 mark for each symbol with its correct meaning, up to 4"
       },
-      "modelAnswer": "Vishnu is the preserver who keeps the universe safe. His blue skin is the colour of the sky and ocean, showing he is endless and everywhere, and his four arms show he is all-powerful. His discus and mace are for destroying evil, his conch shell makes the sacred sound Om, and the lotus stands for purity."
+      "modelAnswer": "Vishnu is the preserver who keeps the universe safe. His discus, the Sudarshana chakra, symbolises cosmic order and protection, and his mace, Kaumodaki, mental and physical strength. His conch shell stands for the sound of creation and spiritual awakening, and the lotus for purity and spiritual liberation."
      }
+    },
+    {
+     "id": "rs-vi-20",
+     "type": "short",
+     "stem": "What is the name of Vishnu's discus?",
+     "answer": "Sudarshana chakra",
+     "accept": [
+      "Sudarshana",
+      "Sudarshan chakra",
+      "Sudarshan",
+      "Sudarshana chakra (discus)"
+     ],
+     "choices": [
+      "Kaumodaki",
+      "Trishul",
+      "Damaru"
+     ],
+     "explain": "The Sudarshana chakra: cosmic order and protection."
+    },
+    {
+     "id": "rs-vi-21",
+     "type": "short",
+     "stem": "What is the name of Vishnu's mace?",
+     "answer": "Kaumodaki",
+     "accept": [
+      "Kaumodaki gada",
+      "Kaumodki"
+     ],
+     "choices": [
+      "Sudarshana chakra",
+      "Trishul",
+      "Damaru"
+     ],
+     "explain": "Kaumodaki: mental and physical strength."
+    },
+    {
+     "id": "rs-vi-22",
+     "type": "mcq",
+     "stem": "What does the lotus Vishnu holds stand for?",
+     "answer": "Purity, spiritual liberation and fertility",
+     "choices": [
+      "War and anger",
+      "Wealth only",
+      "The sound of creation"
+     ],
+     "explain": "the lotus: purity, spiritual liberation and fertility — it grows in muddy water but comes out clean and beautiful."
+    },
+    {
+     "id": "rs-vi-23",
+     "type": "mcq",
+     "stem": "In many pictures Vishnu stands on a pedestal. What is it called?",
+     "answer": "A peetham (padmapitha)",
+     "choices": [
+      "A mandir",
+      "A murti",
+      "A trishul"
+     ],
+     "explain": "From Finn's homework: he stands on a pedestal, called a peetham or padmapitha (lotus pedestal)."
     }
    ]
   },
   {
    "id": "shiva",
-   "number": 4,
+   "number": 5,
    "title": "Shiva, the destroyer",
-   "source": "From the “Hindu beliefs about God” homework (24 Sept). Picture redrawn; notes and questions are ours.",
-   "summary": "Shiva destroys so that new things can be made, and destroys evil and ignorance. Learn the meaning of his third eye, trident, drum, snake, moon and the river Ganges.",
+   "source": "From Finn's homework (24 Sept): his labelled picture of Shiva — third eye, raised hand, snake, tiger skin and trident, with the meanings he wrote. Picture redrawn; extra notes and questions are ours.",
+   "summary": "Shiva destroys so that new things can be made, and destroys evil and ignorance. Learn the meaning of his third eye, raised hand, snake, tiger skin, trident, drum, moon and the river Ganges.",
    "images": [
     {
      "file": "shiva",
@@ -1148,8 +1628,20 @@
     ],
     "rows": [
      [
-      "Third eye",
-      "Wisdom; destroys evil"
+      "Third eye (trinetra)",
+      "His wisdom; destroys evil"
+     ],
+     [
+      "Raised hand",
+      "Peace: a blessing, do not be afraid"
+     ],
+     [
+      "Snake",
+      "Bravery; power over danger and death"
+     ],
+     [
+      "Tiger skin",
+      "He is the master of his own mind"
      ],
      [
       "Trident (trishul)",
@@ -1158,10 +1650,6 @@
      [
       "Drum (damaru)",
       "The rhythm of creation"
-     ],
-     [
-      "Snake",
-      "Power over danger and death"
      ],
      [
       "Crescent moon",
@@ -1174,17 +1662,15 @@
      [
       "Blue throat",
       "Drank poison to save the world"
-     ],
-     [
-      "Raised hand",
-      "Blessing: do not be afraid"
      ]
     ]
    },
    "facts": [
+    "Shiva is a **male deity** and one of the **principal (main) gods** of Hinduism.",
     "**Shiva** is the **destroyer**. Destroying is not just bad: old things must end so **new things can be created**. He also destroys evil and ignorance.",
-    "He has a **third eye** of wisdom; when it opens, it destroys evil.",
-    "He holds a **trident (trishul)** and a small **drum (damaru)**, and wears a **snake** round his neck.",
+    "He has a **third eye** (**trinetra**) of wisdom; when it opens, it destroys evil.",
+    "He holds a **trident (trishul)** and a small **drum (damaru)**, and wears a **snake** round his neck — a sign of **bravery**. His raised hand is a symbol of **peace**.",
+    "He sits on (and wears) a **tiger skin**: he is the **master of his own mind**.",
     "A **crescent moon** sits in his hair, and the **River Ganges** flows from it: Shiva caught the falling river in his hair so it would not flood the Earth.",
     "His **blue throat** comes from a story where he drank a poison to save the world.",
     "As **Nataraja**, Lord of the Dance, he dances inside a ring of fire, ending one universe so a new one can begin.",
@@ -1260,14 +1746,16 @@
      "answer": "Third eye",
      "accept": [
       "eye",
-      "3rd eye"
+      "3rd eye",
+      "trinetra",
+      "third eye (trinetra)"
      ],
      "choices": [
       "Drum",
       "Blue throat",
       "Trident"
      ],
-     "explain": "Third eye: the third eye: wisdom; when it opens it destroys evil and ignorance.",
+     "explain": "Third eye: the third eye (trinetra): his wisdom; when it opens it destroys evil and ignorance.",
      "image": "shiva",
      "part": "third-eye"
     },
@@ -1339,7 +1827,7 @@
       "River Ganges",
       "Crescent moon"
      ],
-     "explain": "Snake: the snake round his neck: power over danger and death.",
+     "explain": "Snake: the snake round his neck: bravery — power over danger and death.",
      "image": "shiva",
      "part": "snake"
     },
@@ -1358,7 +1846,7 @@
       "Crescent moon",
       "Third eye"
      ],
-     "explain": "Raised hand: the raised hand: a blessing — “do not be afraid”; he protects.",
+     "explain": "Raised hand: the raised hand: a symbol of peace — a blessing, “do not be afraid”; he protects.",
      "image": "shiva",
      "part": "blessing"
     },
@@ -1372,7 +1860,7 @@
       "Wealth",
       "Being very old"
      ],
-     "explain": "the third eye: wisdom; when it opens it destroys evil and ignorance."
+     "explain": "the third eye (trinetra): his wisdom; when it opens it destroys evil and ignorance."
     },
     {
      "id": "rs-sh-10",
@@ -1402,13 +1890,13 @@
      "id": "rs-sh-12",
      "type": "mcq",
      "stem": "What does the snake round Shiva's neck show?",
-     "answer": "Power over danger and death",
+     "answer": "Bravery — power over danger and death",
      "choices": [
       "He is a pet lover",
       "Wealth",
       "Purity"
      ],
-     "explain": "the snake round his neck: power over danger and death."
+     "explain": "the snake round his neck: bravery — power over danger and death."
     },
     {
      "id": "rs-sh-13",
@@ -1556,7 +2044,10 @@
         "point": "drum: rhythm / sound of creation"
        },
        {
-        "point": "snake: power over danger / death"
+        "point": "snake: bravery / power over danger / death"
+       },
+       {
+        "point": "raised hand: peace / blessing; or tiger skin: master of his own mind"
        },
        {
         "point": "moon: time / cycles; or Ganges: purity; or blue throat: drank poison to save the world"
@@ -1565,15 +2056,1298 @@
       "award": {
        "4": "1 mark for saying he is the destroyer; 1 mark for each symbol with its correct meaning, up to 4"
       },
-      "modelAnswer": "Shiva is the destroyer, ending things so new ones can be created. His third eye stands for wisdom and destroys evil. His trident has three points for creating, preserving and destroying, and his drum beats the rhythm of creation. The snake round his neck shows his power over danger and death."
+      "modelAnswer": "Shiva is the destroyer, ending things so new ones can be created. His third eye (trinetra) represents his wisdom and destroys evil. His raised hand is a symbol of peace, the snake round his neck symbolises bravery, and the tiger skin shows he is the master of his own mind. His trident has three points for creating, preserving and destroying."
+     }
+    },
+    {
+     "id": "rs-sh-23",
+     "type": "short",
+     "stem": "Which symbol is labelled {L} on the picture of Shiva?",
+     "answer": "Tiger skin",
+     "accept": [
+      "tiger",
+      "tigerskin",
+      "tiger skin rug"
+     ],
+     "choices": [
+      "Snake",
+      "Raised hand",
+      "Drum"
+     ],
+     "explain": "Tiger skin: the tiger skin he sits on and wears: he is the master of his own mind — he has tamed his desires, as he tamed the tiger.",
+     "image": "shiva",
+     "part": "tiger-skin"
+    },
+    {
+     "id": "rs-sh-24",
+     "type": "mcq",
+     "stem": "What does the tiger skin Shiva sits on show?",
+     "answer": "He is the master of his own mind",
+     "choices": [
+      "He is a hunter",
+      "He is rich",
+      "He is cold"
+     ],
+     "explain": "the tiger skin he sits on and wears: he is the master of his own mind — he has tamed his desires, as he tamed the tiger."
+    },
+    {
+     "id": "rs-sh-25",
+     "type": "mcq",
+     "stem": "What does Shiva's raised hand stand for?",
+     "answer": "Peace — a blessing: do not be afraid",
+     "choices": [
+      "Stop talking",
+      "Anger",
+      "Wealth"
+     ],
+     "explain": "the raised hand: a symbol of peace — a blessing, “do not be afraid”; he protects."
+    },
+    {
+     "id": "rs-sh-26",
+     "type": "short",
+     "stem": "What is another name for Shiva's third eye?",
+     "answer": "trinetra",
+     "accept": [
+      "trinetram",
+      "trinethra"
+     ],
+     "choices": [
+      "trishul",
+      "damaru",
+      "Nandi"
+     ],
+     "explain": "The third eye, trinetra, represents his wisdom."
+    }
+   ]
+  },
+  {
+   "id": "scriptures",
+   "title": "Holy books: Shruti and Smriti",
+   "source": "From Finn's workbook: 8 Oct (Shruti “heard and seen”: the V…, the U…; Smriti “remembered”: the R…, the P…, the M…, the L… of M…), the 9 Oct starter and the Key Words page. The blanks are filled in here; the questions are ours.",
+   "summary": "Hindu holy books come in two groups: Shruti (“heard”) — the Vedas and Upanishads — and Smriti (“remembered”) — the Ramayana, the Puranas, the Mahabharata and the Laws of Manu.",
+   "images": [],
+   "table": {
+    "title": "The two groups of holy books",
+    "head": [
+     "Group",
+     "Means",
+     "The books"
+    ],
+    "rows": [
+     [
+      "Shruti",
+      "“Heard” (and seen)",
+      "The Vedas · The Upanishads"
+     ],
+     [
+      "Smriti",
+      "“Remembered”",
+      "The Ramayana · The Puranas · The Mahabharata · The Laws of Manu"
+     ]
+    ]
+   },
+   "facts": [
+    "Hindu holy books (scriptures) are in **Sanskrit**, an ancient language, and come in two groups.",
+    "**Shruti** means “**heard**” (and seen). Hindus believe these were **revealed by God** to wise men (rishis) long ago, who heard them. They are the **most important**: the **Vedas** (the oldest holy books) and the **Upanishads** (teachings about Brahman and the atman).",
+    "**Smriti** means “**remembered**”. These were **remembered and passed on by people**, then written down: the **Ramayana** (the story of Rama and Sita), the **Puranas** (stories of the deities), the **Mahabharata** (a great war story — it includes the **Bhagavad Gita**) and the **Laws of Manu** (rules for living, including the four stages of life).",
+    "Memory hook: **Sh**ruti — “**sh**h, listen!” (heard). **Sm**riti — “**s**o **m**emorable” (remembered).",
+    "**Smartism** takes its name from Smriti: Smartas are followers of Smriti."
+   ],
+   "keywords": [
+    [
+     "Shruti",
+     "“heard” — revealed scriptures: the Vedas, the Upanishads"
+    ],
+    [
+     "Smriti",
+     "“remembered” — the Ramayana, Puranas, Mahabharata, Laws of Manu"
+    ],
+    [
+     "Vedas",
+     "the oldest Hindu holy books (Shruti)"
+    ],
+    [
+     "Upanishads",
+     "Shruti teachings about Brahman and the atman"
+    ],
+    [
+     "Sanskrit",
+     "the ancient language of the holy books"
+    ]
+   ],
+   "questions": [
+    {
+     "id": "rs-sc-01",
+     "type": "short",
+     "stem": "Which group of holy books means “heard”?",
+     "answer": "Shruti",
+     "accept": [
+      "Sruti",
+      "Shruthi",
+      "Shrutti",
+      "Shruti (heard)"
+     ],
+     "choices": [
+      "Smriti",
+      "Vedas",
+      "Puranas"
+     ],
+     "explain": "Shruti = heard (and seen): the Vedas and the Upanishads."
+    },
+    {
+     "id": "rs-sc-02",
+     "type": "short",
+     "stem": "Which group of holy books means “remembered”?",
+     "answer": "Smriti",
+     "accept": [
+      "Smrti",
+      "Smirti",
+      "Smritti",
+      "Smriti (remembered)"
+     ],
+     "choices": [
+      "Shruti",
+      "Vedas",
+      "Upanishads"
+     ],
+     "explain": "Smriti = remembered: the Ramayana, the Puranas, the Mahabharata, the Laws of Manu."
+    },
+    {
+     "id": "rs-sc-03",
+     "type": "short",
+     "stem": "Which are the oldest Hindu holy books (Shruti)?",
+     "answer": "the Vedas",
+     "accept": [
+      "Vedas",
+      "Veda"
+     ],
+     "choices": [
+      "the Puranas",
+      "the Ramayana",
+      "the Laws of Manu"
+     ],
+     "explain": "The Vedas — Shruti, the oldest and most important."
+    },
+    {
+     "id": "rs-sc-04",
+     "type": "mcq",
+     "stem": "Which two books are Shruti?",
+     "answer": "The Vedas and the Upanishads",
+     "choices": [
+      "The Ramayana and the Mahabharata",
+      "The Puranas and the Laws of Manu",
+      "The Vedas and the Ramayana"
+     ],
+     "explain": "Shruti (heard): the Vedas and the Upanishads."
+    },
+    {
+     "id": "rs-sc-05",
+     "type": "mcq",
+     "stem": "Which of these is Smriti?",
+     "answer": "the Ramayana",
+     "choices": [
+      "the Vedas",
+      "the Upanishads",
+      "the Qur'an"
+     ],
+     "explain": "Smriti (remembered): the Ramayana, the Puranas, the Mahabharata, the Laws of Manu."
+    },
+    {
+     "id": "rs-sc-06",
+     "type": "mcq",
+     "stem": "Which of these is NOT Smriti?",
+     "answer": "the Upanishads",
+     "choices": [
+      "the Puranas",
+      "the Mahabharata",
+      "the Laws of Manu"
+     ],
+     "explain": "The Upanishads are Shruti (heard)."
+    },
+    {
+     "id": "rs-sc-07",
+     "type": "mcq",
+     "stem": "Which Smriti book tells the story of Rama and Sita?",
+     "answer": "the Ramayana",
+     "choices": [
+      "the Mahabharata",
+      "the Laws of Manu",
+      "the Vedas"
+     ],
+     "explain": "The Ramayana is the story of Rama (an avatar of Vishnu) and Sita."
+    },
+    {
+     "id": "rs-sc-08",
+     "type": "mcq",
+     "stem": "The Bhagavad Gita is part of which book?",
+     "answer": "the Mahabharata",
+     "choices": [
+      "the Ramayana",
+      "the Vedas",
+      "the Laws of Manu"
+     ],
+     "explain": "The Bhagavad Gita is a famous part of the Mahabharata."
+    },
+    {
+     "id": "rs-sc-09",
+     "type": "mcq",
+     "stem": "Which Smriti book gives rules for living, including the four stages of life?",
+     "answer": "the Laws of Manu",
+     "choices": [
+      "the Ramayana",
+      "the Upanishads",
+      "the Puranas"
+     ],
+     "explain": "The Laws of Manu describe how to live, including the four ashramas."
+    },
+    {
+     "id": "rs-sc-10",
+     "type": "mcq",
+     "stem": "Why is Shruti seen as the most important group?",
+     "answer": "Hindus believe it was revealed by God and heard by wise men",
+     "choices": [
+      "It is the newest",
+      "It is the shortest",
+      "It was written by a king"
+     ],
+     "explain": "Shruti is revealed (heard); Smriti was remembered and passed on by people."
+    },
+    {
+     "id": "rs-sc-11",
+     "type": "tf",
+     "stem": "The Ramayana is Shruti.",
+     "answer": false,
+     "explain": "The Ramayana is Smriti (remembered)."
+    },
+    {
+     "id": "rs-sc-12",
+     "type": "tf",
+     "stem": "Smriti means “remembered”.",
+     "answer": true,
+     "explain": "Smriti = remembered; Shruti = heard."
+    },
+    {
+     "id": "rs-sc-13",
+     "type": "explain",
+     "marks": 4,
+     "stem": "Explain the difference between Shruti and Smriti.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "Shruti means “heard” / believed to be revealed by God to wise men"
+       },
+       {
+        "point": "Shruti includes the Vedas / the Upanishads"
+       },
+       {
+        "point": "Smriti means “remembered” / passed on and written down by people"
+       },
+       {
+        "point": "Smriti includes the Ramayana / Mahabharata / Puranas / Laws of Manu"
+       },
+       {
+        "point": "Shruti is seen as more important / authoritative"
+       }
+      ],
+      "award": {
+       "4": "one mark for each point, up to 4"
+      },
+      "modelAnswer": "Shruti means “heard”: Hindus believe these scriptures were revealed by God to wise men, so they are the most important — the Vedas and the Upanishads. Smriti means “remembered”: they were remembered and passed on by people, like the Ramayana, the Mahabharata, the Puranas and the Laws of Manu."
+     },
+     "tip": "On 9 Oct Shruti was marked wrong — learn the pair: Shruti = heard, Smriti = remembered."
+    }
+   ],
+   "number": 6
+  },
+  {
+   "id": "holika",
+   "number": 7,
+   "title": "Holika and Prahlad",
+   "source": "From Finn's workbook (storyboard of Holika and Prahlad, Oct) and “Hinduism homework 2” (22 Oct, questions a–d, copied into his book): how the story teaches about good and evil, devotion, blessings and being led into bad things. Story retold and questions are ours.",
+   "summary": "The story behind the festival of Holi: Prahlad stays devoted to Vishnu, his aunt Holika is burned, and Vishnu as Narasimha defeats the demon king. What does it teach Hindus?",
+   "images": [],
+   "table": {
+    "title": "What the story teaches (the homework questions)",
+    "head": [
+     "The lesson",
+     "In the story"
+    ],
+    "rows": [
+     [
+      "a) Good wins over evil",
+      "Holika burns but Prahlad is safe; Narasimha defeats the demon king. Holi bonfires remember it."
+     ],
+     [
+      "b) Devotion to God is rewarded",
+      "Prahlad keeps praying to Vishnu, and Vishnu protects him every time."
+     ],
+     [
+      "c) Use your blessings the right way",
+      "Holika's gift (safe from fire) was meant for good; she used it to kill, so it failed her. The king misused his boon too."
+     ],
+     [
+      "d) People can be led into doing bad things",
+      "Holika did evil because her brother told her to — she followed him instead of doing right."
+     ]
+    ]
+   },
+   "facts": [
+    "**Hiranyakashipu** was a proud demon king. He had a **boon** (a blessing) that he could not be killed by man or animal, inside or outside, by day or by night, on the ground or in the sky, by any weapon. He thought he could not die, and ordered everyone to **worship him instead of God**.",
+    "His son **Prahlad** refused: he stayed **devoted to Vishnu** and kept praying to him.",
+    "The king tried to kill Prahlad many times (snakes, elephants, a cliff), but **Vishnu protected him** every time.",
+    "The king's sister **Holika** had a **gift that kept her safe from fire** (often a magic shawl). She sat in a bonfire holding Prahlad on her lap to burn him.",
+    "Because she **misused her gift** for evil, it failed her: the shawl flew to Prahlad. **Holika burned, and Prahlad was safe.**",
+    "Then Vishnu came as **Narasimha**, half man and half lion, and defeated the king **at dusk** (not day or night), **in a doorway** (not inside or outside), **on his lap** (not ground or sky), **with his claws** (no weapon) — so the boon was not broken.",
+    "Hindus remember the story at **Holi**: bonfires on the night before (**Holika Dahan**) show good beating evil; the next day people throw **coloured powder** and water and celebrate spring."
+   ],
+   "keywords": [
+    [
+     "Prahlad",
+     "the boy devoted to Vishnu"
+    ],
+    [
+     "Holika",
+     "the demon king's sister, burned in the fire"
+    ],
+    [
+     "Hiranyakashipu",
+     "the demon king, Prahlad's father"
+    ],
+    [
+     "Narasimha",
+     "Vishnu's avatar: half man, half lion"
+    ],
+    [
+     "boon",
+     "a special blessing or gift"
+    ],
+    [
+     "Holi",
+     "the spring festival of colours"
+    ],
+    [
+     "devotion",
+     "deep love and loyalty to God"
+    ]
+   ],
+   "questions": [
+    {
+     "id": "rs-hp-01",
+     "type": "short",
+     "stem": "Who was the boy who stayed devoted to Vishnu?",
+     "answer": "Prahlad",
+     "accept": [
+      "Prahlada",
+      "Prahlaad",
+      "Prahalad"
+     ],
+     "choices": [
+      "Holika",
+      "Hiranyakashipu",
+      "Narasimha"
+     ],
+     "explain": "Prahlad kept praying to Vishnu even when his father ordered him to stop."
+    },
+    {
+     "id": "rs-hp-02",
+     "type": "short",
+     "stem": "Who was the demon king's sister who sat in the fire?",
+     "answer": "Holika",
+     "accept": [
+      "Holikaa"
+     ],
+     "choices": [
+      "Prahlad",
+      "Lakshmi",
+      "Parvati"
+     ],
+     "explain": "Holika thought her gift would keep her safe from the fire, but she burned."
+    },
+    {
+     "id": "rs-hp-03",
+     "type": "short",
+     "stem": "Which festival remembers the story of Holika and Prahlad?",
+     "answer": "Holi",
+     "accept": [
+      "Holi festival",
+      "Holika Dahan"
+     ],
+     "choices": [
+      "Diwali",
+      "Navaratri",
+      "Raksha Bandhan"
+     ],
+     "explain": "Holi: bonfires the night before (Holika Dahan) and colours the next day."
+    },
+    {
+     "id": "rs-hp-04",
+     "type": "short",
+     "stem": "What was the name of Vishnu's half-man, half-lion avatar?",
+     "answer": "Narasimha",
+     "accept": [
+      "Narasingha",
+      "Narsimha",
+      "Narsingh",
+      "Narasimhan"
+     ],
+     "choices": [
+      "Nataraja",
+      "Krishna",
+      "Rama"
+     ],
+     "explain": "Narasimha (Narsingh) — neither man nor animal, so the king's boon wasn't broken."
+    },
+    {
+     "id": "rs-hp-05",
+     "type": "mcq",
+     "stem": "Who was Hiranyakashipu?",
+     "answer": "A proud demon king, Prahlad's father",
+     "choices": [
+      "Prahlad's teacher",
+      "An avatar of Vishnu",
+      "Holika's son"
+     ],
+     "explain": "Hiranyakashipu wanted everyone to worship him instead of God."
+    },
+    {
+     "id": "rs-hp-06",
+     "type": "mcq",
+     "stem": "What did Hiranyakashipu order everyone to do?",
+     "answer": "Worship him instead of God",
+     "choices": [
+      "Light bonfires",
+      "Throw coloured powder",
+      "Go to the temple every day"
+     ],
+     "explain": "He believed his boon made him unbeatable, so he demanded to be worshipped."
+    },
+    {
+     "id": "rs-hp-07",
+     "type": "mcq",
+     "stem": "Why wasn't Prahlad harmed by the fire?",
+     "answer": "Vishnu protected him because of his devotion",
+     "choices": [
+      "He was wearing armour",
+      "The fire was not real",
+      "He ran away"
+     ],
+     "explain": "Prahlad's devotion was rewarded: Holika's shawl flew to him and Vishnu kept him safe."
+    },
+    {
+     "id": "rs-hp-08",
+     "type": "mcq",
+     "stem": "Why did Holika's gift fail her?",
+     "answer": "She misused it to do evil",
+     "choices": [
+      "It was too old",
+      "It was raining",
+      "Prahlad stole it on purpose"
+     ],
+     "explain": "A blessing used for bad purposes doesn't protect you — homework question c."
+    },
+    {
+     "id": "rs-hp-09",
+     "type": "mcq",
+     "stem": "How did Narasimha get round the king's boon?",
+     "answer": "At dusk, in a doorway, on his lap, with claws — not man or animal",
+     "choices": [
+      "With a sword at midday",
+      "By poisoning him",
+      "By flooding the palace"
+     ],
+     "explain": "Every condition of the boon was kept, yet the king was defeated."
+    },
+    {
+     "id": "rs-hp-10",
+     "type": "mcq",
+     "stem": "What do the Holi bonfires remember?",
+     "answer": "Holika burning: good beating evil",
+     "choices": [
+      "The burning of the Vedas",
+      "Shiva's third eye",
+      "The start of winter"
+     ],
+     "explain": "The bonfires on the night before Holi are called Holika Dahan."
+    },
+    {
+     "id": "rs-hp-11",
+     "type": "mcq",
+     "stem": "What do people throw at Holi?",
+     "answer": "Coloured powder and water",
+     "choices": [
+      "Rice",
+      "Gold coins",
+      "Flowers only"
+     ],
+     "explain": "Holi is the festival of colours, celebrating spring and good winning over evil."
+    },
+    {
+     "id": "rs-hp-12",
+     "type": "mcq",
+     "stem": "Which lesson does Holika show us best?",
+     "answer": "People can be led into doing bad things",
+     "choices": [
+      "Always trust your family whatever they ask",
+      "Fire is safe",
+      "Wealth brings happiness"
+     ],
+     "explain": "Holika did evil because her brother asked her to — homework question d."
+    },
+    {
+     "id": "rs-hp-13",
+     "type": "tf",
+     "stem": "The story teaches that people who show devotion to God are rewarded.",
+     "answer": true,
+     "explain": "Prahlad stayed devoted to Vishnu and was protected — homework question b."
+    },
+    {
+     "id": "rs-hp-14",
+     "type": "tf",
+     "stem": "In the story, Prahlad was burned and Holika survived.",
+     "answer": false,
+     "explain": "The other way round: Holika burned, and Prahlad was safe."
+    },
+    {
+     "id": "rs-hp-15",
+     "type": "explain",
+     "marks": 2,
+     "stem": "Explain how the story of Holika and Prahlad teaches Hindus about the battle of good versus evil.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "good (Prahlad / Vishnu) wins over evil (Holika / the demon king)"
+       },
+       {
+        "point": "with an example: Holika burns while Prahlad is safe / Narasimha defeats the king"
+       },
+       {
+        "point": "Hindus remember this at Holi, e.g. Holika Dahan bonfires show evil being destroyed"
+       }
+      ],
+      "award": {
+       "2": "1 mark for each point, up to 2"
+      },
+      "modelAnswer": "In the story good beats evil: Holika, who tried to kill Prahlad, burns in the fire while Prahlad is safe, and Vishnu as Narasimha defeats the evil king. Hindus light bonfires at Holi to remember that good wins over evil."
+     }
+    },
+    {
+     "id": "rs-hp-16",
+     "type": "explain",
+     "marks": 2,
+     "stem": "Explain how the story of Holika and Prahlad teaches that people who show devotion to Brahman are rewarded.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "Prahlad stayed devoted to / kept praying to Vishnu (God) even when ordered to stop"
+       },
+       {
+        "point": "he was rewarded by being protected / saved from the fire and the other attacks"
+       },
+       {
+        "point": "this teaches Hindus to keep their faith / be devoted even when it is hard"
+       }
+      ],
+      "award": {
+       "2": "1 mark for each point, up to 2"
+      },
+      "modelAnswer": "Prahlad kept praying to Vishnu even though his father ordered him to worship the king. Because of his devotion, Vishnu protected him from the fire and every attack — so Hindus learn that devotion to God is rewarded."
+     }
+    },
+    {
+     "id": "rs-hp-17",
+     "type": "explain",
+     "marks": 2,
+     "stem": "Explain how the story of Holika and Prahlad teaches about using your blessings in the right way, rather than for bad purposes.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "Holika had a gift / blessing (safe from fire) but used it to try to kill Prahlad"
+       },
+       {
+        "point": "because she misused it, it failed her / she burned"
+       },
+       {
+        "point": "the king misused his boon too (to make people worship him) and was still defeated"
+       }
+      ],
+      "award": {
+       "2": "1 mark for each point, up to 2"
+      },
+      "modelAnswer": "Holika had a gift that kept her safe from fire, but she used it to try to kill Prahlad. Because she used her blessing for evil it failed her and she burned. The king also misused his boon and was defeated, so Hindus learn to use their blessings for good."
+     }
+    },
+    {
+     "id": "rs-hp-18",
+     "type": "explain",
+     "marks": 2,
+     "stem": "Explain how the story of Holika and Prahlad shows how people can be led into doing bad things.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "Holika did evil because her brother (the king) told / persuaded her to"
+       },
+       {
+        "point": "she followed him instead of doing what was right / she was loyal to the wrong person"
+       },
+       {
+        "point": "the people were ordered to worship the king instead of God"
+       }
+      ],
+      "award": {
+       "2": "1 mark for each point, up to 2"
+      },
+      "modelAnswer": "Holika tried to kill Prahlad because her brother, the demon king, told her to. She followed him instead of doing what was right, which shows how people can be led into doing bad things by others."
+     }
+    },
+    {
+     "id": "rs-hp-19",
+     "type": "explain",
+     "marks": 4,
+     "stem": "Retell the story of Holika and Prahlad.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "the demon king (Hiranyakashipu) wanted to be worshipped instead of God"
+       },
+       {
+        "point": "his son Prahlad stayed devoted to Vishnu"
+       },
+       {
+        "point": "Holika, safe from fire, sat in a bonfire with Prahlad"
+       },
+       {
+        "point": "Holika burned but Prahlad was saved"
+       },
+       {
+        "point": "Vishnu as Narasimha defeated the king"
+       }
+      ],
+      "award": {
+       "4": "one mark for each point, up to 4"
+      },
+      "modelAnswer": "The demon king Hiranyakashipu wanted everyone to worship him, but his son Prahlad stayed devoted to Vishnu. The king's sister Holika, who could not be burned, sat in a bonfire holding Prahlad, but Holika burned and Prahlad was saved. Then Vishnu came as Narasimha and defeated the king."
      }
     }
    ]
   },
   {
+   "id": "ashramas",
+   "title": "The four stages of life",
+   "source": "From Finn's workbook: “The four stages of life in Hinduism” (Nov), the matching starter (karma, Smriti, Shruti, Holika, Holi) and the Key Words page (ashrama). Notes and questions are ours.",
+   "summary": "The four ashramas (stages of a Hindu life): Brahmacharya the student, Grihastha the householder, Vanaprastha retirement, and Sannyasa, giving everything up to focus on moksha.",
+   "images": [],
+   "table": {
+    "title": "The four ashramas",
+    "head": [
+     "Stage",
+     "Name",
+     "What happens"
+    ],
+    "rows": [
+     [
+      "1",
+      "Brahmacharya",
+      "The student stage: learn the scriptures from a teacher (guru), self-control"
+     ],
+     [
+      "2",
+      "Grihastha",
+      "The householder stage: marry, work, raise a family, give to others"
+     ],
+     [
+      "3",
+      "Vanaprastha",
+      "The retirement stage: hand over to the children, more time for prayer"
+     ],
+     [
+      "4",
+      "Sannyasa",
+      "Give up belongings and put all attention on moksha"
+     ]
+    ]
+   },
+   "facts": [
+    "An **ashrama** is a **stage of life**. Hindu teaching (the **Laws of Manu**) describes **four stages of life**, traditionally for **Hindu men**.",
+    "**Brahmacharya — the student stage**: a young person learns the scriptures from a teacher (**guru**) and learns self-control.",
+    "**Grihastha — the householder stage**: marrying, working, earning money and raising a family; looking after others and giving to charity. It is their **dharma** (duty) to their family and society.",
+    "**Vanaprastha — the retirement stage**: when the children are grown up, the person hands over the household, gives advice and spends more time on prayer and spiritual things.",
+    "**Sannyasa**: the person **gives up their belongings** (and family ties) and puts **all their attention on moksha**. Today few people take this stage.",
+    "Memory hook, in order: **B**right **G**rown-ups **V**ery **S**ensibly — Brahmacharya, Grihastha, Vanaprastha, Sannyasa."
+   ],
+   "keywords": [
+    [
+     "ashrama",
+     "one of the four stages of a Hindu life"
+    ],
+    [
+     "Brahmacharya",
+     "the student stage"
+    ],
+    [
+     "Grihastha",
+     "the householder stage"
+    ],
+    [
+     "Vanaprastha",
+     "the retirement stage"
+    ],
+    [
+     "Sannyasa",
+     "giving up belongings to focus on moksha"
+    ],
+    [
+     "guru",
+     "a teacher"
+    ]
+   ],
+   "questions": [
+    {
+     "id": "rs-as-01",
+     "type": "short",
+     "stem": "What is the word for the four stages of a Hindu life?",
+     "answer": "ashrama",
+     "accept": [
+      "ashramas",
+      "asrama",
+      "the ashramas",
+      "ashram"
+     ],
+     "choices": [
+      "atman",
+      "avatar",
+      "aarti"
+     ],
+     "explain": "Ashrama: the four stages of a Hindu life."
+    },
+    {
+     "id": "rs-as-02",
+     "type": "short",
+     "stem": "What is the student stage called?",
+     "answer": "Brahmacharya",
+     "accept": [
+      "Brahmacharia",
+      "Brahmachari",
+      "Bramacharya"
+     ],
+     "choices": [
+      "Grihastha",
+      "Vanaprastha",
+      "Sannyasa"
+     ],
+     "explain": "Brahmacharya: learning the scriptures from a guru."
+    },
+    {
+     "id": "rs-as-03",
+     "type": "short",
+     "stem": "What is the householder stage called?",
+     "answer": "Grihastha",
+     "accept": [
+      "Grihasthra",
+      "Grihasta",
+      "Grhastha",
+      "Grahastha"
+     ],
+     "choices": [
+      "Brahmacharya",
+      "Vanaprastha",
+      "Sannyasa"
+     ],
+     "explain": "Grihastha: marry, work and raise a family."
+    },
+    {
+     "id": "rs-as-04",
+     "type": "short",
+     "stem": "What is the retirement stage called?",
+     "answer": "Vanaprastha",
+     "accept": [
+      "Vanprastha",
+      "Vanaprasta"
+     ],
+     "choices": [
+      "Grihastha",
+      "Brahmacharya",
+      "Sannyasa"
+     ],
+     "explain": "Vanaprastha: hand over to the children, more time for prayer."
+    },
+    {
+     "id": "rs-as-05",
+     "type": "short",
+     "stem": "What is the stage called when a person gives up their belongings to focus on moksha?",
+     "answer": "Sannyasa",
+     "accept": [
+      "Sanyasa",
+      "Sannyas",
+      "Sanyas",
+      "Sunnyasa",
+      "Sannyasin"
+     ],
+     "choices": [
+      "Vanaprastha",
+      "Grihastha",
+      "Brahmacharya"
+     ],
+     "explain": "Sannyasa: giving everything up to focus on moksha."
+    },
+    {
+     "id": "rs-as-06",
+     "type": "mcq",
+     "stem": "What is the right order of the four stages?",
+     "answer": "Brahmacharya, Grihastha, Vanaprastha, Sannyasa",
+     "choices": [
+      "Grihastha, Brahmacharya, Sannyasa, Vanaprastha",
+      "Sannyasa, Vanaprastha, Grihastha, Brahmacharya",
+      "Brahmacharya, Vanaprastha, Grihastha, Sannyasa"
+     ],
+     "explain": "Student → householder → retirement → giving up everything for moksha."
+    },
+    {
+     "id": "rs-as-07",
+     "type": "mcq",
+     "stem": "What does a person do in the Grihastha stage?",
+     "answer": "Marries, works and raises a family",
+     "choices": [
+      "Learns from a guru",
+      "Gives up all belongings",
+      "Hands over the household"
+     ],
+     "explain": "Grihastha is the householder stage."
+    },
+    {
+     "id": "rs-as-08",
+     "type": "mcq",
+     "stem": "What does a person do in the Brahmacharya stage?",
+     "answer": "Learns the scriptures from a teacher (guru)",
+     "choices": [
+      "Raises a family",
+      "Gives up all belongings",
+      "Retires"
+     ],
+     "explain": "Brahmacharya is the student stage."
+    },
+    {
+     "id": "rs-as-09",
+     "type": "mcq",
+     "stem": "What is the aim of the Sannyasa stage?",
+     "answer": "To put all attention on moksha",
+     "choices": [
+      "To earn as much money as possible",
+      "To start a family",
+      "To go to school"
+     ],
+     "explain": "In Sannyasa a person gives up belongings to focus on moksha."
+    },
+    {
+     "id": "rs-as-10",
+     "type": "mcq",
+     "stem": "Traditionally, who were the four stages of life described for?",
+     "answer": "Hindu men",
+     "choices": [
+      "Hindu children only",
+      "Priests only",
+      "Everyone in the world"
+     ],
+     "explain": "From the workbook: the four stages of life for Hindu (males)."
+    },
+    {
+     "id": "rs-as-11",
+     "type": "tf",
+     "stem": "In Vanaprastha a person starts a family and a career.",
+     "answer": false,
+     "explain": "That's Grihastha. Vanaprastha is the retirement stage."
+    },
+    {
+     "id": "rs-as-12",
+     "type": "tf",
+     "stem": "Sannyasa is the last of the four stages.",
+     "answer": true,
+     "explain": "Brahmacharya, Grihastha, Vanaprastha, Sannyasa."
+    },
+    {
+     "id": "rs-as-13",
+     "type": "explain",
+     "marks": 4,
+     "stem": "Describe the four stages of life in Hinduism.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "Brahmacharya: the student stage — learning (from a guru)"
+       },
+       {
+        "point": "Grihastha: the householder stage — marriage, work, family"
+       },
+       {
+        "point": "Vanaprastha: the retirement stage — hand over, more prayer"
+       },
+       {
+        "point": "Sannyasa: give up belongings, focus on moksha"
+       }
+      ],
+      "award": {
+       "4": "1 mark for each stage named with what happens in it, up to 4"
+      },
+      "modelAnswer": "The first stage is Brahmacharya, the student stage, when a young person learns from a guru. Next is Grihastha, the householder stage: marrying, working and raising a family. Vanaprastha is the retirement stage, when the person hands over to the children and prays more. Last is Sannyasa, when the person gives up their belongings and puts all their attention on moksha."
+     }
+    },
+    {
+     "id": "rs-as-14",
+     "type": "explain",
+     "marks": 3,
+     "stem": "Which stage of life do you think is the most important? Explain your answer.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "names a stage and says what happens in it"
+       },
+       {
+        "point": "a reason why it matters (e.g. Sannyasa: focus on moksha, the final goal; Grihastha: supports the family and society)"
+       },
+       {
+        "point": "a second reason, or a link to a key word (dharma, karma, moksha)"
+       },
+       {
+        "point": "shows awareness of another view (another stage could be seen as most important, and why)"
+       }
+      ],
+      "award": {
+       "3": "one mark for each point, up to 3"
+      },
+      "modelAnswer": "I think Sannyasa is the most important stage because the person gives up their belongings and puts all their attention on moksha, the final goal for Hindus. However, others might say Grihastha matters most, because the householder supports the family and pays for the people in the other stages."
+     },
+     "tip": "Your workbook answer chose the last stage — good. Use the key word moksha correctly (not karma), and add another view."
+    }
+   ],
+   "number": 8
+  },
+  {
+   "id": "traditions",
+   "number": 9,
+   "title": "Four Hindu traditions",
+   "source": "From Finn's notes (the table of Vaishnavism, Shaivism, Shaktism and Smartism) and his workbook, “Different groups of Hindus” (13 Nov). Questions are ours.",
+   "summary": "Hindus belong to different traditions depending on which deity they see as most important: Vishnu, Shiva, the Goddess, or five deities as equals.",
+   "images": [],
+   "table": {
+    "title": "The four main traditions",
+    "head": [
+     "Tradition",
+     "Who they worship",
+     "Key beliefs",
+     "Their worship"
+    ],
+    "rows": [
+     [
+      "Vaishnavism",
+      "Vishnu (and his avatars Rama and Krishna) as the most important deity",
+      "Show devotion to Vishnu",
+      "Holy books and many saints"
+     ],
+     [
+      "Shaivism",
+      "Shiva, as the most important deity and creator",
+      "Shiva is within and part of this world",
+      "Puja and yoga"
+     ],
+     [
+      "Shaktism",
+      "Devi, the Mother Goddess (Shakti)",
+      "The Goddess is the ultimate reality",
+      "Worshipping the Goddess, e.g. as Durga or Kali"
+     ],
+     [
+      "Smartism",
+      "Five deities as equals (Shiva, Vishnu, Devi, Ganesha, Surya); follows the Smriti scriptures",
+      "All five are forms of the one Brahman",
+      "Worshipping a deity they choose"
+     ]
+    ]
+   },
+   "facts": [
+    "Hinduism has several **traditions** (denominations). They share many beliefs, but differ in **which deity they see as most important**.",
+    "**Vaishnavism**: Vishnu (and his avatars, Rama and Krishna) is the most important deity. Followers show **devotion** to Vishnu; their worship uses **holy books** and honours **many saints**. It is the biggest tradition.",
+    "**Shaivism**: Shiva is the most important deity — and the creator. They believe Shiva is **within and part of this world**. Their worship includes **puja and yoga**.",
+    "**Shaktism**: worship of **Devi**, the **Mother Goddess** (Shakti, divine power), as the ultimate reality — for example as **Durga** or **Kali**.",
+    "**Smartism**: follows the **Smriti** scriptures and worships **five deities** — Shiva, Vishnu, Devi, Ganesha and Surya (the sun) — as equal forms of Brahman; each person chooses one to focus on.",
+    "**What the names mean** (workbook, 13 Nov): **Vaishnavite** means a **worshipper of Vishnu**, who they see as the most important deity and the creator. **Shaivites** practise **yoga to discipline their mind and body** in their goal to reach **moksha**. **Shaktism** means the teaching of **energy, power, the goddess** — Shaktas worship **Devi**. **Smartism** means a **follower of Smriti** (the “remembered” scriptures)."
+   ],
+   "keywords": [
+    [
+     "Vaishnavism",
+     "worship of Vishnu as the most important deity"
+    ],
+    [
+     "Shaivism",
+     "worship of Shiva as the most important deity"
+    ],
+    [
+     "Shaktism",
+     "worship of Devi, the Mother Goddess"
+    ],
+    [
+     "Smartism",
+     "five deities worshipped as equal forms of Brahman"
+    ],
+    [
+     "devotion",
+     "deep love and loyalty to God (bhakti)"
+    ],
+    [
+     "Devi",
+     "the Mother Goddess"
+    ]
+   ],
+   "questions": [
+    {
+     "id": "rs-dn-01",
+     "type": "short",
+     "stem": "Which tradition sees Vishnu as the most important deity?",
+     "answer": "Vaishnavism",
+     "accept": [
+      "Vaishnavites",
+      "Vaishnava",
+      "Vaishnavite"
+     ],
+     "reject": [
+      "Vishnu"
+     ],
+     "choices": [
+      "Shaivism",
+      "Shaktism",
+      "Smartism"
+     ],
+     "explain": "Vaishnavism: Vishnu (and his avatars) is the most important deity."
+    },
+    {
+     "id": "rs-dn-02",
+     "type": "short",
+     "stem": "Which tradition sees Shiva as the most important deity?",
+     "answer": "Shaivism",
+     "accept": [
+      "Saivism",
+      "Shaivites",
+      "Shaiva",
+      "Shaivite"
+     ],
+     "reject": [
+      "Shiva"
+     ],
+     "choices": [
+      "Vaishnavism",
+      "Shaktism",
+      "Smartism"
+     ],
+     "explain": "Shaivism: Shiva is the most important deity, seen as the creator."
+    },
+    {
+     "id": "rs-dn-03",
+     "type": "short",
+     "stem": "Which tradition worships Devi, the Mother Goddess?",
+     "answer": "Shaktism",
+     "accept": [
+      "Shaktas",
+      "Shakta",
+      "Saktism"
+     ],
+     "choices": [
+      "Shaivism",
+      "Vaishnavism",
+      "Smartism"
+     ],
+     "explain": "Shaktism worships Devi (Shakti), the Mother Goddess, as the ultimate reality."
+    },
+    {
+     "id": "rs-dn-04",
+     "type": "short",
+     "stem": "Which tradition worships five deities as equal forms of Brahman?",
+     "answer": "Smartism",
+     "accept": [
+      "Smartas",
+      "Smarta"
+     ],
+     "choices": [
+      "Shaktism",
+      "Shaivism",
+      "Vaishnavism"
+     ],
+     "explain": "Smartism: five deities (Shiva, Vishnu, Devi, Ganesha, Surya), all forms of Brahman."
+    },
+    {
+     "id": "rs-dn-05",
+     "type": "mcq",
+     "stem": "How many deities do followers of Smartism worship as equals?",
+     "answer": "5",
+     "choices": [
+      "3",
+      "4",
+      "10"
+     ],
+     "explain": "Five: Shiva, Vishnu, Devi, Ganesha and Surya."
+    },
+    {
+     "id": "rs-dn-06",
+     "type": "mcq",
+     "stem": "Which tradition believes Shiva is within and part of this world?",
+     "answer": "Shaivism",
+     "choices": [
+      "Vaishnavism",
+      "Shaktism",
+      "Smartism"
+     ],
+     "explain": "From the notes: Shaivites believe Shiva is within and part of this world."
+    },
+    {
+     "id": "rs-dn-07",
+     "type": "mcq",
+     "stem": "Which tradition's worship especially includes puja and yoga?",
+     "answer": "Shaivism",
+     "choices": [
+      "Vaishnavism",
+      "Shaktism",
+      "Smartism"
+     ],
+     "explain": "From the notes: Shaivism — puja and yoga."
+    },
+    {
+     "id": "rs-dn-08",
+     "type": "mcq",
+     "stem": "Which tradition's worship uses holy books and honours many saints?",
+     "answer": "Vaishnavism",
+     "choices": [
+      "Shaivism",
+      "Shaktism",
+      "Smartism"
+     ],
+     "explain": "From the notes: Vaishnavism — holy books and many saints."
+    },
+    {
+     "id": "rs-dn-09",
+     "type": "mcq",
+     "stem": "Which goddess is a form of Devi worshipped in Shaktism?",
+     "answer": "Durga",
+     "choices": [
+      "Lakshmi's owl",
+      "Garuda",
+      "Nandi"
+     ],
+     "explain": "Durga and Kali are powerful forms of Devi, the Mother Goddess."
+    },
+    {
+     "id": "rs-dn-10",
+     "type": "mcq",
+     "stem": "What do the four traditions mainly disagree about?",
+     "answer": "Which deity is the most important",
+     "choices": [
+      "Whether Brahman exists",
+      "Whether to be kind",
+      "Which country is best"
+     ],
+     "explain": "They share beliefs like Brahman, karma and the atman, but put a different deity first."
+    },
+    {
+     "id": "rs-dn-11",
+     "type": "mcq",
+     "stem": "Which scriptures does Smartism follow, giving it its name?",
+     "answer": "the Smriti",
+     "choices": [
+      "the Bible",
+      "the Qur'an",
+      "the Torah"
+     ],
+     "explain": "Smartism takes its name from the Smriti scriptures."
+    },
+    {
+     "id": "rs-dn-12",
+     "type": "tf",
+     "stem": "Vaishnavism is about showing devotion to Vishnu.",
+     "answer": true,
+     "explain": "Key belief from the notes: show devotion to Vishnu."
+    },
+    {
+     "id": "rs-dn-13",
+     "type": "tf",
+     "stem": "Followers of Shaktism see Ganesha as the ultimate reality.",
+     "answer": false,
+     "explain": "Shaktism sees Devi, the Mother Goddess, as the ultimate reality."
+    },
+    {
+     "id": "rs-dn-14",
+     "type": "explain",
+     "marks": 4,
+     "stem": "Explain the difference between Vaishnavism and Shaivism.",
+     "markScheme": {
+      "acceptablePoints": [
+       {
+        "point": "Vaishnavism sees Vishnu (and his avatars) as the most important deity"
+       },
+       {
+        "point": "Vaishnavites show devotion to Vishnu / use holy books and saints"
+       },
+       {
+        "point": "Shaivism sees Shiva as the most important deity / the creator"
+       },
+       {
+        "point": "Shaivites believe Shiva is within and part of this world / worship with puja and yoga"
+       }
+      ],
+      "award": {
+       "4": "1 mark for each point, up to 4 (at most 2 for one tradition)"
+      },
+      "modelAnswer": "Vaishnavites see Vishnu, and his avatars such as Rama and Krishna, as the most important deity and show devotion to him, using holy books and honouring saints. Shaivites see Shiva as the most important deity and the creator; they believe Shiva is within and part of this world, and worship with puja and yoga."
+     }
+    },
+    {
+     "id": "rs-dn-15",
+     "type": "mcq",
+     "stem": "What does “Vaishnavite” mean?",
+     "answer": "A worshipper of Vishnu",
+     "choices": [
+      "A worshipper of Shiva",
+      "A follower of Smriti",
+      "A worshipper of the goddess"
+     ],
+     "explain": "Vaishnavites see Vishnu as the most important deity and the creator."
+    },
+    {
+     "id": "rs-dn-16",
+     "type": "mcq",
+     "stem": "Why do Shaivites practise yoga?",
+     "answer": "To discipline their mind and body, to reach moksha",
+     "choices": [
+      "To get fit for sport",
+      "To show off",
+      "To make money"
+     ],
+     "explain": "From the workbook: Shaivites practise yoga to discipline mind and body in their goal to reach moksha."
+    },
+    {
+     "id": "rs-dn-17",
+     "type": "mcq",
+     "stem": "What does Shaktism mean?",
+     "answer": "The teaching of energy, power — the goddess",
+     "choices": [
+      "Following the remembered scriptures",
+      "Worship of Vishnu",
+      "The cycle of rebirth"
+     ],
+     "explain": "Shakti = energy, power. Shaktas worship Devi, the Mother Goddess."
+    },
+    {
+     "id": "rs-dn-18",
+     "type": "mcq",
+     "stem": "What does Smartism mean?",
+     "answer": "Following Smriti, the “remembered” scriptures",
+     "choices": [
+      "Worship of Shiva",
+      "The teaching of energy and power",
+      "Worship of Vishnu"
+     ],
+     "explain": "Smartas are followers of Smriti."
+    }
+   ]
+  },
+  {
    "id": "ganesha",
-   "number": 5,
-   "title": "Ganesha, remover of obstacles",
+   "number": 10,
+   "title": "Ganesha, remover of obstacles (extra)",
    "source": "Our notes: one of the main Hindu deities with a symbol picture (not from a class sheet we've seen). Picture is ours.",
    "summary": "Ganesha, the elephant-headed son of Shiva and Parvati, removes obstacles and is prayed to before anything new. Learn what his head, ears, tusk, belly, axe, rope, sweets and mouse mean.",
    "images": [
@@ -1965,8 +3739,8 @@
   },
   {
    "id": "lakshmi",
-   "number": 6,
-   "title": "Lakshmi, goddess of wealth",
+   "number": 11,
+   "title": "Lakshmi, goddess of wealth (extra)",
    "source": "Our notes: one of the main Hindu deities with a symbol picture (not from a class sheet we've seen). Picture is ours.",
    "summary": "Lakshmi, Vishnu's wife, is the goddess of wealth and good fortune, welcomed into homes at Diwali. Learn what her lotus flowers, gold coins, elephants and four arms mean.",
    "images": [
@@ -2271,666 +4045,16 @@
    ]
   },
   {
-   "id": "traditions",
-   "number": 7,
-   "title": "Four Hindu traditions",
-   "source": "From Finn's notes: the table of Vaishnavism, Shaivism, Shaktism and Smartism (who they worship, key beliefs, their worship). Questions are ours.",
-   "summary": "Hindus belong to different traditions depending on which deity they see as most important: Vishnu, Shiva, the Goddess, or five deities as equals.",
-   "images": [],
-   "table": {
-    "title": "The four main traditions",
-    "head": [
-     "Tradition",
-     "Who they worship",
-     "Key beliefs",
-     "Their worship"
-    ],
-    "rows": [
-     [
-      "Vaishnavism",
-      "Vishnu (and his avatars Rama and Krishna) as the most important deity",
-      "Show devotion to Vishnu",
-      "Holy books and many saints"
-     ],
-     [
-      "Shaivism",
-      "Shiva, as the most important deity and creator",
-      "Shiva is within and part of this world",
-      "Puja and yoga"
-     ],
-     [
-      "Shaktism",
-      "Devi, the Mother Goddess (Shakti)",
-      "The Goddess is the ultimate reality",
-      "Worshipping the Goddess, e.g. as Durga or Kali"
-     ],
-     [
-      "Smartism",
-      "Five deities as equals (Shiva, Vishnu, Devi, Ganesha, Surya); follows the Smriti scriptures",
-      "All five are forms of the one Brahman",
-      "Worshipping a deity they choose"
-     ]
-    ]
-   },
-   "facts": [
-    "Hinduism has several **traditions** (denominations). They share many beliefs, but differ in **which deity they see as most important**.",
-    "**Vaishnavism**: Vishnu (and his avatars, Rama and Krishna) is the most important deity. Followers show **devotion** to Vishnu; their worship uses **holy books** and honours **many saints**. It is the biggest tradition.",
-    "**Shaivism**: Shiva is the most important deity — and the creator. They believe Shiva is **within and part of this world**. Their worship includes **puja and yoga**.",
-    "**Shaktism**: worship of **Devi**, the **Mother Goddess** (Shakti, divine power), as the ultimate reality — for example as **Durga** or **Kali**.",
-    "**Smartism**: follows the **Smriti** scriptures and worships **five deities** — Shiva, Vishnu, Devi, Ganesha and Surya (the sun) — as equal forms of Brahman; each person chooses one to focus on."
-   ],
-   "keywords": [
-    [
-     "Vaishnavism",
-     "worship of Vishnu as the most important deity"
-    ],
-    [
-     "Shaivism",
-     "worship of Shiva as the most important deity"
-    ],
-    [
-     "Shaktism",
-     "worship of Devi, the Mother Goddess"
-    ],
-    [
-     "Smartism",
-     "five deities worshipped as equal forms of Brahman"
-    ],
-    [
-     "devotion",
-     "deep love and loyalty to God (bhakti)"
-    ],
-    [
-     "Devi",
-     "the Mother Goddess"
-    ]
-   ],
-   "questions": [
-    {
-     "id": "rs-dn-01",
-     "type": "short",
-     "stem": "Which tradition sees Vishnu as the most important deity?",
-     "answer": "Vaishnavism",
-     "accept": [
-      "Vaishnavites",
-      "Vaishnava",
-      "Vaishnavite"
-     ],
-     "reject": [
-      "Vishnu"
-     ],
-     "choices": [
-      "Shaivism",
-      "Shaktism",
-      "Smartism"
-     ],
-     "explain": "Vaishnavism: Vishnu (and his avatars) is the most important deity."
-    },
-    {
-     "id": "rs-dn-02",
-     "type": "short",
-     "stem": "Which tradition sees Shiva as the most important deity?",
-     "answer": "Shaivism",
-     "accept": [
-      "Saivism",
-      "Shaivites",
-      "Shaiva",
-      "Shaivite"
-     ],
-     "reject": [
-      "Shiva"
-     ],
-     "choices": [
-      "Vaishnavism",
-      "Shaktism",
-      "Smartism"
-     ],
-     "explain": "Shaivism: Shiva is the most important deity, seen as the creator."
-    },
-    {
-     "id": "rs-dn-03",
-     "type": "short",
-     "stem": "Which tradition worships Devi, the Mother Goddess?",
-     "answer": "Shaktism",
-     "accept": [
-      "Shaktas",
-      "Shakta",
-      "Saktism"
-     ],
-     "choices": [
-      "Shaivism",
-      "Vaishnavism",
-      "Smartism"
-     ],
-     "explain": "Shaktism worships Devi (Shakti), the Mother Goddess, as the ultimate reality."
-    },
-    {
-     "id": "rs-dn-04",
-     "type": "short",
-     "stem": "Which tradition worships five deities as equal forms of Brahman?",
-     "answer": "Smartism",
-     "accept": [
-      "Smartas",
-      "Smarta"
-     ],
-     "choices": [
-      "Shaktism",
-      "Shaivism",
-      "Vaishnavism"
-     ],
-     "explain": "Smartism: five deities (Shiva, Vishnu, Devi, Ganesha, Surya), all forms of Brahman."
-    },
-    {
-     "id": "rs-dn-05",
-     "type": "mcq",
-     "stem": "How many deities do followers of Smartism worship as equals?",
-     "answer": "5",
-     "choices": [
-      "3",
-      "4",
-      "10"
-     ],
-     "explain": "Five: Shiva, Vishnu, Devi, Ganesha and Surya."
-    },
-    {
-     "id": "rs-dn-06",
-     "type": "mcq",
-     "stem": "Which tradition believes Shiva is within and part of this world?",
-     "answer": "Shaivism",
-     "choices": [
-      "Vaishnavism",
-      "Shaktism",
-      "Smartism"
-     ],
-     "explain": "From the notes: Shaivites believe Shiva is within and part of this world."
-    },
-    {
-     "id": "rs-dn-07",
-     "type": "mcq",
-     "stem": "Which tradition's worship especially includes puja and yoga?",
-     "answer": "Shaivism",
-     "choices": [
-      "Vaishnavism",
-      "Shaktism",
-      "Smartism"
-     ],
-     "explain": "From the notes: Shaivism — puja and yoga."
-    },
-    {
-     "id": "rs-dn-08",
-     "type": "mcq",
-     "stem": "Which tradition's worship uses holy books and honours many saints?",
-     "answer": "Vaishnavism",
-     "choices": [
-      "Shaivism",
-      "Shaktism",
-      "Smartism"
-     ],
-     "explain": "From the notes: Vaishnavism — holy books and many saints."
-    },
-    {
-     "id": "rs-dn-09",
-     "type": "mcq",
-     "stem": "Which goddess is a form of Devi worshipped in Shaktism?",
-     "answer": "Durga",
-     "choices": [
-      "Lakshmi's owl",
-      "Garuda",
-      "Nandi"
-     ],
-     "explain": "Durga and Kali are powerful forms of Devi, the Mother Goddess."
-    },
-    {
-     "id": "rs-dn-10",
-     "type": "mcq",
-     "stem": "What do the four traditions mainly disagree about?",
-     "answer": "Which deity is the most important",
-     "choices": [
-      "Whether Brahman exists",
-      "Whether to be kind",
-      "Which country is best"
-     ],
-     "explain": "They share beliefs like Brahman, karma and the atman, but put a different deity first."
-    },
-    {
-     "id": "rs-dn-11",
-     "type": "mcq",
-     "stem": "Which scriptures does Smartism follow, giving it its name?",
-     "answer": "the Smriti",
-     "choices": [
-      "the Bible",
-      "the Qur'an",
-      "the Torah"
-     ],
-     "explain": "Smartism takes its name from the Smriti scriptures."
-    },
-    {
-     "id": "rs-dn-12",
-     "type": "tf",
-     "stem": "Vaishnavism is about showing devotion to Vishnu.",
-     "answer": true,
-     "explain": "Key belief from the notes: show devotion to Vishnu."
-    },
-    {
-     "id": "rs-dn-13",
-     "type": "tf",
-     "stem": "Followers of Shaktism see Ganesha as the ultimate reality.",
-     "answer": false,
-     "explain": "Shaktism sees Devi, the Mother Goddess, as the ultimate reality."
-    },
-    {
-     "id": "rs-dn-14",
-     "type": "explain",
-     "marks": 4,
-     "stem": "Explain the difference between Vaishnavism and Shaivism.",
-     "markScheme": {
-      "acceptablePoints": [
-       {
-        "point": "Vaishnavism sees Vishnu (and his avatars) as the most important deity"
-       },
-       {
-        "point": "Vaishnavites show devotion to Vishnu / use holy books and saints"
-       },
-       {
-        "point": "Shaivism sees Shiva as the most important deity / the creator"
-       },
-       {
-        "point": "Shaivites believe Shiva is within and part of this world / worship with puja and yoga"
-       }
-      ],
-      "award": {
-       "4": "1 mark for each point, up to 4 (at most 2 for one tradition)"
-      },
-      "modelAnswer": "Vaishnavites see Vishnu, and his avatars such as Rama and Krishna, as the most important deity and show devotion to him, using holy books and honouring saints. Shaivites see Shiva as the most important deity and the creator; they believe Shiva is within and part of this world, and worship with puja and yoga."
-     }
-    }
-   ]
-  },
-  {
-   "id": "holika",
-   "number": 8,
-   "title": "Holika and Prahlad",
-   "source": "From “Hinduism homework 2” (22 Oct): how the story of Holika and Prahlad teaches about good and evil, devotion, blessings and being led into bad things. Story retold and questions are ours.",
-   "summary": "The story behind the festival of Holi: Prahlad stays devoted to Vishnu, his aunt Holika is burned, and Vishnu as Narasimha defeats the demon king. What does it teach Hindus?",
-   "images": [],
-   "table": {
-    "title": "What the story teaches (the homework questions)",
-    "head": [
-     "The lesson",
-     "In the story"
-    ],
-    "rows": [
-     [
-      "a) Good wins over evil",
-      "Holika burns but Prahlad is safe; Narasimha defeats the demon king. Holi bonfires remember it."
-     ],
-     [
-      "b) Devotion to God is rewarded",
-      "Prahlad keeps praying to Vishnu, and Vishnu protects him every time."
-     ],
-     [
-      "c) Use your blessings the right way",
-      "Holika's gift (safe from fire) was meant for good; she used it to kill, so it failed her. The king misused his boon too."
-     ],
-     [
-      "d) People can be led into doing bad things",
-      "Holika did evil because her brother told her to — she followed him instead of doing right."
-     ]
-    ]
-   },
-   "facts": [
-    "**Hiranyakashipu** was a proud demon king. He had a **boon** (a blessing) that he could not be killed by man or animal, inside or outside, by day or by night, on the ground or in the sky, by any weapon. He thought he could not die, and ordered everyone to **worship him instead of God**.",
-    "His son **Prahlad** refused: he stayed **devoted to Vishnu** and kept praying to him.",
-    "The king tried to kill Prahlad many times (snakes, elephants, a cliff), but **Vishnu protected him** every time.",
-    "The king's sister **Holika** had a **gift that kept her safe from fire** (often a magic shawl). She sat in a bonfire holding Prahlad on her lap to burn him.",
-    "Because she **misused her gift** for evil, it failed her: the shawl flew to Prahlad. **Holika burned, and Prahlad was safe.**",
-    "Then Vishnu came as **Narasimha**, half man and half lion, and defeated the king **at dusk** (not day or night), **in a doorway** (not inside or outside), **on his lap** (not ground or sky), **with his claws** (no weapon) — so the boon was not broken.",
-    "Hindus remember the story at **Holi**: bonfires on the night before (**Holika Dahan**) show good beating evil; the next day people throw **coloured powder** and water and celebrate spring."
-   ],
-   "keywords": [
-    [
-     "Prahlad",
-     "the boy devoted to Vishnu"
-    ],
-    [
-     "Holika",
-     "the demon king's sister, burned in the fire"
-    ],
-    [
-     "Hiranyakashipu",
-     "the demon king, Prahlad's father"
-    ],
-    [
-     "Narasimha",
-     "Vishnu's avatar: half man, half lion"
-    ],
-    [
-     "boon",
-     "a special blessing or gift"
-    ],
-    [
-     "Holi",
-     "the spring festival of colours"
-    ],
-    [
-     "devotion",
-     "deep love and loyalty to God"
-    ]
-   ],
-   "questions": [
-    {
-     "id": "rs-hp-01",
-     "type": "short",
-     "stem": "Who was the boy who stayed devoted to Vishnu?",
-     "answer": "Prahlad",
-     "accept": [
-      "Prahlada",
-      "Prahlaad",
-      "Prahalad"
-     ],
-     "choices": [
-      "Holika",
-      "Hiranyakashipu",
-      "Narasimha"
-     ],
-     "explain": "Prahlad kept praying to Vishnu even when his father ordered him to stop."
-    },
-    {
-     "id": "rs-hp-02",
-     "type": "short",
-     "stem": "Who was the demon king's sister who sat in the fire?",
-     "answer": "Holika",
-     "accept": [
-      "Holikaa"
-     ],
-     "choices": [
-      "Prahlad",
-      "Lakshmi",
-      "Parvati"
-     ],
-     "explain": "Holika thought her gift would keep her safe from the fire, but she burned."
-    },
-    {
-     "id": "rs-hp-03",
-     "type": "short",
-     "stem": "Which festival remembers the story of Holika and Prahlad?",
-     "answer": "Holi",
-     "accept": [
-      "Holi festival",
-      "Holika Dahan"
-     ],
-     "choices": [
-      "Diwali",
-      "Navaratri",
-      "Raksha Bandhan"
-     ],
-     "explain": "Holi: bonfires the night before (Holika Dahan) and colours the next day."
-    },
-    {
-     "id": "rs-hp-04",
-     "type": "short",
-     "stem": "What was the name of Vishnu's half-man, half-lion avatar?",
-     "answer": "Narasimha",
-     "accept": [
-      "Narasingha",
-      "Narsimha",
-      "Narsingh",
-      "Narasimhan"
-     ],
-     "choices": [
-      "Nataraja",
-      "Krishna",
-      "Rama"
-     ],
-     "explain": "Narasimha (Narsingh) — neither man nor animal, so the king's boon wasn't broken."
-    },
-    {
-     "id": "rs-hp-05",
-     "type": "mcq",
-     "stem": "Who was Hiranyakashipu?",
-     "answer": "A proud demon king, Prahlad's father",
-     "choices": [
-      "Prahlad's teacher",
-      "An avatar of Vishnu",
-      "Holika's son"
-     ],
-     "explain": "Hiranyakashipu wanted everyone to worship him instead of God."
-    },
-    {
-     "id": "rs-hp-06",
-     "type": "mcq",
-     "stem": "What did Hiranyakashipu order everyone to do?",
-     "answer": "Worship him instead of God",
-     "choices": [
-      "Light bonfires",
-      "Throw coloured powder",
-      "Go to the temple every day"
-     ],
-     "explain": "He believed his boon made him unbeatable, so he demanded to be worshipped."
-    },
-    {
-     "id": "rs-hp-07",
-     "type": "mcq",
-     "stem": "Why wasn't Prahlad harmed by the fire?",
-     "answer": "Vishnu protected him because of his devotion",
-     "choices": [
-      "He was wearing armour",
-      "The fire was not real",
-      "He ran away"
-     ],
-     "explain": "Prahlad's devotion was rewarded: Holika's shawl flew to him and Vishnu kept him safe."
-    },
-    {
-     "id": "rs-hp-08",
-     "type": "mcq",
-     "stem": "Why did Holika's gift fail her?",
-     "answer": "She misused it to do evil",
-     "choices": [
-      "It was too old",
-      "It was raining",
-      "Prahlad stole it on purpose"
-     ],
-     "explain": "A blessing used for bad purposes doesn't protect you — homework question c."
-    },
-    {
-     "id": "rs-hp-09",
-     "type": "mcq",
-     "stem": "How did Narasimha get round the king's boon?",
-     "answer": "At dusk, in a doorway, on his lap, with claws — not man or animal",
-     "choices": [
-      "With a sword at midday",
-      "By poisoning him",
-      "By flooding the palace"
-     ],
-     "explain": "Every condition of the boon was kept, yet the king was defeated."
-    },
-    {
-     "id": "rs-hp-10",
-     "type": "mcq",
-     "stem": "What do the Holi bonfires remember?",
-     "answer": "Holika burning: good beating evil",
-     "choices": [
-      "The burning of the Vedas",
-      "Shiva's third eye",
-      "The start of winter"
-     ],
-     "explain": "The bonfires on the night before Holi are called Holika Dahan."
-    },
-    {
-     "id": "rs-hp-11",
-     "type": "mcq",
-     "stem": "What do people throw at Holi?",
-     "answer": "Coloured powder and water",
-     "choices": [
-      "Rice",
-      "Gold coins",
-      "Flowers only"
-     ],
-     "explain": "Holi is the festival of colours, celebrating spring and good winning over evil."
-    },
-    {
-     "id": "rs-hp-12",
-     "type": "mcq",
-     "stem": "Which lesson does Holika show us best?",
-     "answer": "People can be led into doing bad things",
-     "choices": [
-      "Always trust your family whatever they ask",
-      "Fire is safe",
-      "Wealth brings happiness"
-     ],
-     "explain": "Holika did evil because her brother asked her to — homework question d."
-    },
-    {
-     "id": "rs-hp-13",
-     "type": "tf",
-     "stem": "The story teaches that people who show devotion to God are rewarded.",
-     "answer": true,
-     "explain": "Prahlad stayed devoted to Vishnu and was protected — homework question b."
-    },
-    {
-     "id": "rs-hp-14",
-     "type": "tf",
-     "stem": "In the story, Prahlad was burned and Holika survived.",
-     "answer": false,
-     "explain": "The other way round: Holika burned, and Prahlad was safe."
-    },
-    {
-     "id": "rs-hp-15",
-     "type": "explain",
-     "marks": 2,
-     "stem": "Explain how the story of Holika and Prahlad teaches Hindus about the battle of good versus evil.",
-     "markScheme": {
-      "acceptablePoints": [
-       {
-        "point": "good (Prahlad / Vishnu) wins over evil (Holika / the demon king)"
-       },
-       {
-        "point": "with an example: Holika burns while Prahlad is safe / Narasimha defeats the king"
-       },
-       {
-        "point": "Hindus remember this at Holi, e.g. Holika Dahan bonfires show evil being destroyed"
-       }
-      ],
-      "award": {
-       "2": "1 mark for each point, up to 2"
-      },
-      "modelAnswer": "In the story good beats evil: Holika, who tried to kill Prahlad, burns in the fire while Prahlad is safe, and Vishnu as Narasimha defeats the evil king. Hindus light bonfires at Holi to remember that good wins over evil."
-     }
-    },
-    {
-     "id": "rs-hp-16",
-     "type": "explain",
-     "marks": 2,
-     "stem": "Explain how the story of Holika and Prahlad teaches that people who show devotion to Brahman are rewarded.",
-     "markScheme": {
-      "acceptablePoints": [
-       {
-        "point": "Prahlad stayed devoted to / kept praying to Vishnu (God) even when ordered to stop"
-       },
-       {
-        "point": "he was rewarded by being protected / saved from the fire and the other attacks"
-       },
-       {
-        "point": "this teaches Hindus to keep their faith / be devoted even when it is hard"
-       }
-      ],
-      "award": {
-       "2": "1 mark for each point, up to 2"
-      },
-      "modelAnswer": "Prahlad kept praying to Vishnu even though his father ordered him to worship the king. Because of his devotion, Vishnu protected him from the fire and every attack — so Hindus learn that devotion to God is rewarded."
-     }
-    },
-    {
-     "id": "rs-hp-17",
-     "type": "explain",
-     "marks": 2,
-     "stem": "Explain how the story of Holika and Prahlad teaches about using your blessings in the right way, rather than for bad purposes.",
-     "markScheme": {
-      "acceptablePoints": [
-       {
-        "point": "Holika had a gift / blessing (safe from fire) but used it to try to kill Prahlad"
-       },
-       {
-        "point": "because she misused it, it failed her / she burned"
-       },
-       {
-        "point": "the king misused his boon too (to make people worship him) and was still defeated"
-       }
-      ],
-      "award": {
-       "2": "1 mark for each point, up to 2"
-      },
-      "modelAnswer": "Holika had a gift that kept her safe from fire, but she used it to try to kill Prahlad. Because she used her blessing for evil it failed her and she burned. The king also misused his boon and was defeated, so Hindus learn to use their blessings for good."
-     }
-    },
-    {
-     "id": "rs-hp-18",
-     "type": "explain",
-     "marks": 2,
-     "stem": "Explain how the story of Holika and Prahlad shows how people can be led into doing bad things.",
-     "markScheme": {
-      "acceptablePoints": [
-       {
-        "point": "Holika did evil because her brother (the king) told / persuaded her to"
-       },
-       {
-        "point": "she followed him instead of doing what was right / she was loyal to the wrong person"
-       },
-       {
-        "point": "the people were ordered to worship the king instead of God"
-       }
-      ],
-      "award": {
-       "2": "1 mark for each point, up to 2"
-      },
-      "modelAnswer": "Holika tried to kill Prahlad because her brother, the demon king, told her to. She followed him instead of doing what was right, which shows how people can be led into doing bad things by others."
-     }
-    },
-    {
-     "id": "rs-hp-19",
-     "type": "explain",
-     "marks": 4,
-     "stem": "Retell the story of Holika and Prahlad.",
-     "markScheme": {
-      "acceptablePoints": [
-       {
-        "point": "the demon king (Hiranyakashipu) wanted to be worshipped instead of God"
-       },
-       {
-        "point": "his son Prahlad stayed devoted to Vishnu"
-       },
-       {
-        "point": "Holika, safe from fire, sat in a bonfire with Prahlad"
-       },
-       {
-        "point": "Holika burned but Prahlad was saved"
-       },
-       {
-        "point": "Vishnu as Narasimha defeated the king"
-       }
-      ],
-      "award": {
-       "4": "one mark for each point, up to 4"
-      },
-      "modelAnswer": "The demon king Hiranyakashipu wanted everyone to worship him, but his son Prahlad stayed devoted to Vishnu. The king's sister Holika, who could not be burned, sat in a bonfire holding Prahlad, but Holika burned and Prahlad was saved. Then Vishnu came as Narasimha and defeated the king."
-     }
-    }
-   ]
-  },
-  {
    "id": "worship",
-   "number": 9,
-   "title": "Worship and key beliefs",
-   "source": "Extra: key words often in Year 7 Hinduism tests (puja, mandir, karma …), not from Finn's notes we've seen. Ours.",
-   "summary": "How Hindus worship (puja at home and in the mandir) and the key beliefs about the soul: karma, samsara, moksha and dharma.",
+   "number": 12,
+   "title": "Worship (extra)",
+   "source": "Extra: worship key words often in Year 7 Hinduism tests (puja, mandir, aarti, dharma, ahimsa), not in Finn's workbook. Ours. Karma, samsara and moksha are in “Karma, rebirth and moksha”.",
+   "summary": "How Hindus worship: puja at home and in the mandir, aarti, offerings — plus dharma (duty) and ahimsa (not harming).",
    "images": [],
    "facts": [
     "**Puja** is worship. Many Hindus do puja every day at a **shrine at home**, as well as at the **mandir** (temple).",
     "In puja, Hindus make offerings to the **murti** — flowers, fruit, sweets, water, incense — and ring a bell.",
     "In **aarti**, a tray with a flame (lamp) is waved in circles in front of the murti; worshippers pass their hands over the flame and then over their heads to receive God's blessing.",
-    "**Atman** is the soul. Hindus believe it is reborn again and again in a cycle called **samsara**.",
-    "**Karma**: every action has a result. Good actions bring good results (in this life or the next), bad actions bad results.",
-    "**Moksha** is the final goal: freedom from samsara, when the atman is united with Brahman.",
     "**Dharma** is your duty — doing the right thing in your life.",
     "**Ahimsa** means not harming any living thing; it is why many Hindus are vegetarian."
    ],
@@ -2950,18 +4074,6 @@
     [
      "shrine",
      "a special place for worship, often at home"
-    ],
-    [
-     "samsara",
-     "the cycle of birth, death and rebirth"
-    ],
-    [
-     "karma",
-     "actions and their results"
-    ],
-    [
-     "moksha",
-     "freedom from samsara; the soul joins Brahman"
     ],
     [
      "dharma",
@@ -3003,51 +4115,6 @@
       "puja"
      ],
      "explain": "A Hindu temple is a mandir."
-    },
-    {
-     "id": "rs-wk-03",
-     "type": "short",
-     "stem": "What is the cycle of birth, death and rebirth called?",
-     "answer": "samsara",
-     "accept": [
-      "sansara"
-     ],
-     "choices": [
-      "moksha",
-      "karma",
-      "dharma"
-     ],
-     "explain": "Samsara: the atman is reborn again and again."
-    },
-    {
-     "id": "rs-wk-04",
-     "type": "short",
-     "stem": "What is the word for actions and their results (good actions bring good results)?",
-     "answer": "karma",
-     "choices": [
-      "dharma",
-      "moksha",
-      "samsara"
-     ],
-     "explain": "Karma: every action has a result, in this life or the next."
-    },
-    {
-     "id": "rs-wk-05",
-     "type": "short",
-     "stem": "What is the word for freedom from samsara, when the soul joins Brahman?",
-     "answer": "moksha",
-     "accept": [
-      "mukti"
-     ],
-     "reject": [
-      "murti"
-     ],
-     "choices": [
-      "karma",
-      "dharma",
-      "samsara"
-     ],
-     "explain": "Moksha is the final goal of Hindus."
     },
     {
      "id": "rs-wk-06",
@@ -3116,25 +4183,6 @@
       "homework"
      ],
      "explain": "Flowers, fruit, sweets, water and incense are offered to the murti."
-    },
-    {
-     "id": "rs-wk-11",
-     "type": "mcq",
-     "stem": "What is the final goal for Hindus?",
-     "answer": "Moksha — freedom from samsara",
-     "choices": [
-      "To become rich",
-      "To be reborn as many times as possible",
-      "To build a mandir"
-     ],
-     "explain": "Moksha: the atman is freed from rebirth and united with Brahman."
-    },
-    {
-     "id": "rs-wk-12",
-     "type": "tf",
-     "stem": "Hindus believe that good actions bring good results, in this life or the next.",
-     "answer": true,
-     "explain": "That is karma."
     },
     {
      "id": "rs-wk-13",

@@ -75,4 +75,10 @@
     <text class="name" x="568" y="335" text-anchor="middle">Raised hand</text>
     <g class="letter"><circle cx="568" cy="330" r="10"/><text x="568" y="334.5" text-anchor="middle"></text></g>
   </g>
+  <g class="lbl" data-part="tiger-skin">
+    <line class="leader" x1="133" y1="400" x2="256" y2="396"/>
+    <circle class="dot" cx="256" cy="396" r="3.5"/>
+    <text class="name" x="92" y="405" text-anchor="middle">Tiger skin</text>
+    <g class="letter"><circle cx="92" cy="400" r="10"/><text x="92" y="404.5" text-anchor="middle"></text></g>
+  </g>
 </svg>

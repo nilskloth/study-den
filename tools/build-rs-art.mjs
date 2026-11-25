@@ -263,7 +263,7 @@ const files = {};
   b += SYM.pot(HANDS.ll[0] - 4, HANDS.ll[1] + 4) + hand(...HANDS.ll, skin);
   b += SYM.lotus(...HANDS.lr) + hand(...HANDS.lr, skin);
   b += swan(CX + 190, 440);
-  b += label("four-heads", "Four heads", [CX - 58, 150], [LX, 92]);
+  b += label("four-heads", "Four heads (3 seen)", [CX - 58, 150], [LX + 14, 92]);
   b += label("vedas", "The Vedas (book)", [HANDS.ul[0] - 14, HANDS.ul[1] - 22], [LX, 196]);
   b += label("kamandalu", "Water pot", [HANDS.ll[0] - 14, HANDS.ll[1] + 14], [LX, 330]);
   b += label("beard", "White beard", [CX, 200], [RX, 92]);
@@ -331,6 +331,7 @@ const files = {};
   b += label("trishul", "Trident (trishul)", [HANDS.ur[0] + 24, HANDS.ur[1] - 118], [RX, 100]);
   b += label("snake", "Snake", [CX + 62, 162], [RX, 200]);
   b += label("blessing", "Raised hand", [HANDS.lr[0] + 12, HANDS.lr[1] - 10], [RX, 330]);
+  b += label("tiger-skin", "Tiger skin", [CX - 74, 396], [LX, 400]);
   files.shiva = svg(b);
 }
 

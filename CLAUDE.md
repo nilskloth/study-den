@@ -300,11 +300,17 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
   `-label`; usage area `geography` (`--viz-10`); colour `--c-geography`.
 
 ## Secondary: RS revision (`views/secondary/revision.js` with `RS`, `#/secondary/rs[/learn/<id>|/label/<god>|/explain[/<id>]]`)
-- **Source:** Year 7 Religious Studies, Hinduism unit; end-of-unit assessment Fri 27 Nov 2026 (Arbor). Finn's notes (photo:
-  Brahman, murti, deities; table of Vaishnavism / Shaivism / Shaktism / Smartism) and Arbor homework titles (24 Sept: Brahma,
-  Vishnu, Shiva and their symbolism; 22 Oct: Holika and Prahlad, questions a–d). No worksheets yet, so notes and questions are
-  ours (`source` lines say which topic comes from where); Ganesha, Lakshmi and the worship key words are extra. The Arbor
-  brief links a BBC Bitesize quiz (bbc.co.uk can't be fetched from here).
+- **Source:** Year 7 Religious Studies, Hinduism unit; end-of-unit assessment Fri 27 Nov 2026 (Arbor). Finn's RS workbook
+  (photos, Sept–Nov 2026) and notes: beliefs about God (one or many?), karma and rebirth (class definitions of karma, atman,
+  samsara, reincarnation, moksha), his labelled Brahma / Vishnu / Shiva homework (the symbol meanings he wrote are used),
+  Shruti and Smriti, Holika and Prahlad (questions a–d), the four stages of life (ashramas), different groups of Hindus.
+  Topics are in class order (`ORDER` in the generator); questions and notes are ours (`source` lines say which page each
+  topic comes from); Ganesha, Lakshmi and Worship are marked "(extra)". Explain questions may carry a `tip` aimed at what
+  the workbook got wrong (one God or many, samsara/moksha, Shruti). The Arbor brief links a BBC Bitesize quiz (bbc.co.uk
+  can't be fetched from here). Nothing personal from the workbook (the baseline assessment's Islam/Christianity answers,
+  teacher comments) goes on the site.
+- **Question ids stay stable:** rs.json was built by a one-off generator (ids `rs-<prefix>-NN` counted per topic); when
+  editing rs.json by hand, add new questions at the end of a topic and never renumber, or Finn's progress is lost.
 - **Same trainer and format as science**, incl. `explain` questions (Longer answers; AI level `ks3-rs` → an RS-teacher
   prompt in `api/prompts.php`, else self-mark). Pictures from `tools/build-rs-art.mjs` (our own simple drawings, no
   input): `brahma`, `vishnu`, `shiva`, `ganesha`, `lakshmi` — symbols are `.lbl` parts, so each is a "Name the symbols"
